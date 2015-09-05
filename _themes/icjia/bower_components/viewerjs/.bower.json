@@ -20,12 +20,12 @@
   ],
   "homepage": "http://viewerjs.org/",
   "ignore": [],
-  "version": "0.5.8",
-  "_release": "0.5.8",
+  "version": "0.5.9",
+  "_release": "0.5.9",
   "_resolution": {
     "type": "version",
-    "tag": "v0.5.8",
-    "commit": "a60a12569d899cd591e15d5d8e75891595226e70"
+    "tag": "v0.5.9",
+    "commit": "67cc714c1680b9929219e983a7d75817bb32161b"
   },
   "_source": "git://github.com/kogmbh/ViewerJS_release.git",
   "_target": "~0.5.7",
