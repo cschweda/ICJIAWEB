@@ -1,0 +1,118 @@
+<style>
+/* pagination */
+.pagination {
+   border-top: 1px solid #ddd;
+   margin-top: 1.5em;
+   padding-top: 1em;
+   *zoom: 1;
+   font-family: 'Lato', sans-serif;
+}
+
+   .pagination:before,
+   .pagination:after {
+      content: " ";
+      display: table;
+   }
+
+   .pagination:after {
+      clear: both;
+   }
+
+   .pagination a {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 45%;
+      position: relative;
+      line-height: 1.4;
+   }
+
+      .pagination a:before,
+      .pagination a:after {
+         display: block;
+         position: absolute;
+         top: 0;
+      }
+
+   .pagination .older {
+      float: left;
+      padding-left: 0.85em;
+   }
+
+      .pagination .older:before {
+         content: "«";
+         left: 0;
+         -webkit-transition: left 0.24s ease;
+         -moz-transition: left 0.24s ease;
+         transition: left 0.24s ease;
+      }
+
+      .pagination .older:hover:before {
+         left: -0.25em;
+      }
+
+   .pagination .newer {
+      float: right;
+      text-align: right;
+      padding-right: 2em;
+   }
+
+      .pagination .newer:after {
+         content: "»";
+         right: 0;
+         -webkit-transition: right 0.24s ease;
+         -moz-transition: right 0.24s ease;
+         transition: right 0.24s ease;
+      }
+
+      .pagination .newer:hover:after {
+         right: -0.25em;
+      }
+
+   .pagination small {
+      font-size: 0.875em;
+   }
+
+</style>
+
+
+
+<h4 class="text-center" style="font-family: 'Lato', san-serif;">News Archive</h4>
+  <div class="separator-line"></div>
+
+
+  {{ entries:listing folder="news" limit="8" }}
+	    {{ if no_results }}
+		  <p class="sorry">
+			No journal posts have been posted yet.<br>
+			Check back soon.
+		  </p>
+	    {{ else }}
+      <h5 style="font-weight: 900; margin-top: 40px; line-height: 25px;"><span style="font-weight: 400; color: #777">{{ date }}</span> | <a href="{{ url }}">{{ displayTitle }}</a></h5>
+
+
+          {{ content }}
+
+          <hr/>
+        <!-- <div class="news-full-article-link">
+        <a href="{{ url }}">More&nbsp;<i class="fa fa-angle-double-right" style="margin-bottom: 0.365em; font-size: 10px"></i></a>
+      </div> -->
+	    {{ endif }}
+	{{ /entries:listing }}
+
+
+
+	{{ entries:pagination folder="news" limit="8" }}
+	    {{ if next_page || previous_page }}
+		  <div class="pagination clearfix">
+			{{ if next_page }}
+			    <a href="{{ next_page }}" class="older">Older</a>
+      {{else}}
+      &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+			{{ endif }}
+			{{ if previous_page }}
+			    <a href="{{ previous_page }}" class="newer">Newer&nbsp;</a>
+			{{ endif }}
+		  </div>
+	    {{ endif }}
+	{{ /entries:pagination }}

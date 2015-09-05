@@ -1,0 +1,21 @@
+<h4 class="text-center" style="font-family: 'Lato', san-serif;">Events</h4>
+  <div class="separator-line"></div>
+
+
+{{ entries:listing folder="events" show_future="true" show_past="false" limit="4" sort_dir="asc"}}
+
+      <div class="meeting">
+        <div class="meeting-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;{{ date }}</div>
+      <h5 style="font-weight: 900; line-height: 25px; ">
+        {{ if siteLink }}
+        <a href="{{ siteLink }}">
+          {{ title }}&nbsp;&raquo;
+        </a>
+        {{ else }}
+          {{ title }}
+        {{/if}}
+
+      </h5>
+      </div>
+
+{{ /entries:listing }}

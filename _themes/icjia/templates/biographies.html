@@ -1,0 +1,157 @@
+---
+breadcrumbs: true
+summary: Biographies of Authority Board Members and Staff
+---
+
+	{{ if taxonomy_name }}
+<div class="container">
+<div class="row">
+	<div class="col-md-2"></div>
+	<div class="col-md-9">
+
+
+
+		<div class="taxonomy-results">
+
+			<div class="article-about-the-author">
+				<h3 style="margin-bottom: 25px;">
+				About {{ taxonomy_name }}
+
+			</h3>
+
+
+				<p>
+
+
+
+			{{ entries:listing folder="biographies" conditions="title:{taxonomy_name}" }}
+
+			<img src="{{ transform src="{authorPhoto}" height="75"}}"
+					style="float: left; padding-right: 14px;" />
+				<p>	{{content}}</p>
+
+
+				{{if orgtitle}}
+				<p>
+					{{title}} is
+						{{if modifier == 'a'}}
+						an
+						{{else}}
+						{{modifier}}
+						{{endif}}
+						{{if organization == 'ICJIA'}}Authority{{else}}{{organization}}{{endif}} {{orgtitle}}.
+					&nbsp&nbsp|&nbsp&nbsp
+					{{endif}}
+
+				{{theme:partial src="author-social" use_context="true"}}
+
+
+
+			</p>
+
+				{{if academicBackground}}
+				<h4 class="h6">Academic Background</h4>
+				{{academicBackground}}
+				{{/if}}
+
+				{{if interestAreas}}
+				<h4 class="h6">Areas of Interest</h4>
+				{{interestAreas}}
+				{{/if}}
+
+
+			{{ /entries:listing }}
+
+
+			<!-- TODO: Add lightbox for author photo -->
+
+
+
+			</p>
+
+			</div>
+
+			<hr/>
+
+			<div class="taxonomy-results">
+
+
+
+
+				<h4 style="text-transform: uppercase; margin-bottom: 15px;">Articles</h4>
+				{{ entries:listing folder="articles" taxonomy="true" }}
+					{{ if no_results }}
+						<p class="sorry">
+							Nothing found for {{ taxonomy_name }}.
+						</p>
+					{{ else }}
+						{{ theme:partial src="article-snippet" use_context="true" }}
+					{{ endif }}
+				{{ /entries:listing }}
+			</div>
+		</div>
+
+	</div>
+
+</div>
+</div>
+
+{{else}}
+
+<div class="container">
+<div class="row">
+	<div class="col-md-3">
+</div>
+	<div class="col-md-9">
+
+
+
+
+
+<div class="default-view-tabs" style="margin-top: 0px">
+	<!-- <div class="tabbable-panel">
+			<div class="tabbable-line"> -->
+			<div>
+				<div>
+				<ul class="nav nav-tabs" id="article-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#authority-board" aria-controls="home" role="tab" data-toggle="tab" id="article-tab1">Authority Members</a></li>
+					<li role="presentation"><a href="#authority-staff" aria-controls="profile" role="tab" data-toggle="tab" id="article-tab2">Authority Staff</a></li>
+
+				</ul>
+
+
+<div class="tab-content" class="indent-left-15">
+	<div role="tabpanel" class="tab-pane active" id="authority-board">
+		<div style="height: 25px"></div>
+		{{theme:partial src="about-board-listing" use_context="true"}}
+
+
+</div><!-- //Tab: Overview -->
+
+
+
+<div role="tabpanel" class="tab-pane" id="authority-staff">
+<!-- ******* staff tab start ***************** -->
+
+
+
+{{theme:partial src="staff-listing" use_context="true"}}
+
+
+	<!-- ******* //staff tab end ***************** -->
+</div><!-- //Tab: Staff -->
+</div> <!-- //tab-content -->
+</div> <!-- //tabbable-line -->
+</div> <!-- //tabbable-panel -->
+</div> <!-- //article-view-tabs -->
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+{{endif}}

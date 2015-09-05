@@ -1,0 +1,23 @@
+<div class="container">
+<div class="row">
+	<div class="col-md-9">
+		<div class="article">
+			<h4>Category: {{ taxonomy_name|title }}</h4>
+      <hr/>
+
+			<div class="taxonomy-results">
+				{{ entries:listing folder="articles" taxonomy="true" }}
+					{{ if no_results }}
+						<p class="sorry">
+							Nothing found for {{ taxonomy_name }}.
+						</p>
+					{{ else }}
+						{{ theme:partial src="taxonomy-item" use_context="true" }}
+					{{ endif }}
+				{{ /entries:listing }}
+			</div>
+		</div>
+	</div>
+
+</div>
+</div>

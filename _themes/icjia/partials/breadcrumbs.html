@@ -1,0 +1,26 @@
+{{ if breadcrumbs == 'true' }}
+
+<section class="breadcrumbs hidden-print" style="">
+	<div class="container">
+		<div class="row" style="text-align: right">
+      <ol class="breadcrumb" style="display: inline;">
+        <li><a href="/">Home</a></li>
+        {{ nav:breadcrumbs include_home="no" }}
+            {{ if is_current }}
+                <li>{{ title|deslugify|truncate:50 }}</li>
+            {{ else }}
+
+
+
+                <li><a href="{{ url }}">{{ title }}</a></li>
+
+
+            {{ endif }}
+
+        {{ /nav:breadcrumbs }}
+      </ol>
+    </div>
+  </div>
+</section>
+
+{{/if}}

@@ -1,0 +1,103 @@
+---
+breadcrumbs: true
+---
+
+<div class="container">
+<div class="row">
+	<div class="col-md-1"></div>
+	<div class="col-md-9">
+
+
+
+			{{if taxonomy_name}}
+
+						<!-- <h1 class="h3">Keywords: {{ taxonomy_name|title }}</h1>
+			      <hr/> -->
+			<div class="taxonomy-results">
+				<h2 class="h4" style="text-transform: uppercase">Items tagged with "{{ taxonomy_name|title }}"</h2>
+				<hr/>
+				{{ entries:listing folder="datasets|news|articles|publications|grant-programs" taxonomy="true" }}
+					{{ if no_results }}
+						<!-- <p style="margin-left: 10px">
+							Nothing found.
+						</p> -->
+					{{ else }}
+						{{ theme:partial src="taxonomy-item" use_context="true" }}
+							<br/><br/>
+					{{ endif }}
+				{{ /entries:listing }}
+
+
+
+				{{ pages:listing folder="about|grants|research|systems|sites" taxonomy="true" }}
+					{{ if no_results }}
+						<!-- <p style="margin-left: 10px">
+							Nothing found.
+						</p> -->
+					{{ else }}
+						{{ theme:partial src="taxonomy-item" use_context="true" }}
+					{{ endif }}
+				{{ /pages:listing }}
+
+
+
+
+
+			</div>
+			{{ else }}
+			<h2 class="h3" style="border-bottom: 1px solid #ccc; padding-bottom: 5px; margin-bottom: 30px;">Available Subject Areas</h2>
+
+		<!--	<div class="text-center well white filter-group" style="font-family: 'Lato', sans-serif; color: #777; margin-bottom : 30px">
+				<a data-target="*" class="filter">SHOW ALL</a>&nbsp;|&nbsp;
+				<a data-target=".a" class="filter">A</a>&nbsp;|&nbsp;
+				<a data-target=".b" class="filter">B</a>&nbsp;|&nbsp;
+				<a data-target=".c" class="filter">C</a>&nbsp;|&nbsp;
+				<a data-target=".d" class="filter">D</a>&nbsp;|&nbsp;
+				<a data-target=".e" class="filter">E</a>&nbsp;|&nbsp;
+				<a data-target=".f" class="filter">F</a>&nbsp;|&nbsp;
+				<a data-target=".g" class="filter">G</a>&nbsp;|&nbsp;
+				<a data-target=".h" class="filter">H</a>&nbsp;|&nbsp;
+				<a data-target=".i" class="filter">I</a>&nbsp;|&nbsp;
+				<a data-target=".j" class="filter">J</a>&nbsp;|&nbsp;
+				<a data-target=".k" class="filter">K</a>&nbsp;|&nbsp;
+				<a data-target=".l" class="filter">L</a>&nbsp;|&nbsp;
+				<a data-target=".m" class="filter">M</a>&nbsp;|&nbsp;
+				<a data-target=".n" class="filter">N</a>&nbsp;|&nbsp;
+				<a data-target=".o" class="filter">O</a>&nbsp;|&nbsp;
+				<a data-target=".p" class="filter">P</a>&nbsp;|&nbsp;
+				<a data-target=".q" class="filter">Q</a>&nbsp;|&nbsp;
+				<a data-target=".r" class="filter">R</a>&nbsp;|&nbsp;
+				<a data-target=".s" class="filter">S</a>&nbsp;|&nbsp;
+				<a data-target=".t" class="filter">T</a>&nbsp;|&nbsp;
+				<a data-target=".u" class="filter">U</a>&nbsp;|&nbsp;
+				<a data-target=".v" class="filter">V</a>&nbsp;|&nbsp;
+				<a data-target=".w" class="filter">W</a>&nbsp;|&nbsp;
+				<a data-target=".x" class="filter">X</a>&nbsp;|&nbsp;
+				<a data-target=".y" class="filter">Y</a>&nbsp;|&nbsp;
+				<a data-target=".z" class="filter">Z</a>&nbsp;|&nbsp;
+			</div>-->
+
+			<div id="keyword-grid">
+
+    {{ taxonomy:listing type="area" folder="about|grants|research|systems|datasets|news|articles|publications|grant-programs|sites" show_past="true"  show_future="true" }}
+
+			<div class="keyword-single {{name|lower|firstletter:1}}" style="display: inline !important">
+        <a class="btn btn-primary btn-keyword btn-xs" href="/{{ slug }}" style="font-size: 12px">{{ name }}</a>
+			</div>
+
+
+
+
+    {{ /taxonomy:listing }}
+	</div>
+
+
+
+			{{/if}}
+
+
+	</div>
+
+
+</div>
+</div>

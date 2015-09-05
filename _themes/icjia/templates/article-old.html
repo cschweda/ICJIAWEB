@@ -1,0 +1,23 @@
+<div class="container-fluid">
+	<article class="icjiaArticle" style="margin-bottom: 20px">
+
+		{{ splash }}
+		<br/>
+		<h2>{{ title }}</h2>
+
+		<h6 class="published">
+			Published: {{ date }}
+		| Tags: {{ keywords_url_list }}</h6>
+		<h6>{{ authors_url_list }}</h6>
+
+
+		{{ content|widont }}
+
+		{{ technical_report }}
+		  {{ title }} - {{ pdf }}<br/>
+		{{ /technical_report }}
+
+
+
+	</article>
+</div>

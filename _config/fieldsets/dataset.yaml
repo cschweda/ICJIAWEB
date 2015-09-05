@@ -1,0 +1,163 @@
+title: Datasets
+
+fields:
+  _template:
+    type: hidden
+    default: dataset
+
+  datasetName:
+    type: text
+    required: true
+    display: Dataset name
+
+  juvenileAdult:
+    display: Juvenile / Adult
+    type: select
+    default:
+    options:
+      - Juvenile
+      - Adult
+      - Juvenile/Adult
+
+  geographicDesc:
+    type: text
+    required: false
+    display: Geographical description
+
+
+  agencyName:
+    type: text
+    required: false
+    display: Agency Name
+
+  agencyLink:
+    type: text
+    required: false
+    display: Agency Link
+
+  recKey:
+    type: text
+    required: false
+    display: Record Key
+    instructions: Legcy Access db ID for file hierarchy
+
+  datasetfilename:
+    type: text
+    required: false
+    display: Dataset filepath and filename
+    instructions: Note: Uploads from this administrator are upload to /assets/datasets/.
+
+  citationLink:
+    type: text
+    required: false
+    display: Citation Link
+
+  initialCategory:
+    type: text
+    required: false
+    display: Initial Category
+
+  technicalDocumentationLink:
+    type: text
+    required: false
+    display: Technical documentation link
+
+  timePeriodDesc:
+    type: text
+    required: false
+    display: Time Period description
+
+  keywords:
+    display: Keywords
+    required: false
+    type: suggest
+    create: true
+    max_items: 10
+    options:
+      - Aging
+      - Child Abuse
+      - Criminal Records
+      - Criminal Justice
+      - Corrections
+      - Court Services
+      - Defense
+      - Domestic Violence
+      - Forensic Sciences
+      - Gangs
+      - Human Services
+      - Human Trafficking
+      - Jail
+      - Juveniles
+      - Law Enforcement
+      - Offender Services
+      - Partnerships
+      - Prevention and Education
+      - Probation and Parole
+      - Prosecution
+      - Research and Evaluation
+      - Security
+      - Sexual Assault
+      - Substance Abuse
+      - Technology Improvement
+      - Training
+      - Treatment
+      - Victims
+
+  content:
+    display: Dataset description
+    required: true
+    default:
+    type: redactor
+
+  additionalNotes:
+    display: Additional notes
+    instructions: These notes are internal only.
+    type: redactor
+    required: false
+
+  summary:
+    display: Summary (for Search)
+    required: false
+    type: textarea
+    height: 100
+
+
+  positive_keywords:
+    display: Positive Search Keywords
+    required: false
+    default:
+    type: tags
+
+  negative_keywords:
+    display: Negative Search Keywords
+    required: false
+    default:
+    type: tags
+
+  super_positive_keywords:
+    display: Super positive Search Keywords (weighted heavily for search -- not visible on site)
+    required: false
+    default:
+    type: tags
+
+  super_negative_keywords:
+    display: Super negative Search Keywords (weighted heavily for search -- not visible on site)
+    required: false
+    default:
+    type: tags
+
+  file_upload_field:
+    type: replicator
+    instructions: |
+      File upload
+
+    sets:
+
+      file_upload:
+        display: Excel Upload
+        instructions: Upload Excel file here
+        fields:
+          fileitem:
+            type: file
+            allowed: [xls, xlsx]
+            destination: assets/datasets

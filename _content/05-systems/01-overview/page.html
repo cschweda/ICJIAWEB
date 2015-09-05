@@ -1,0 +1,96 @@
+---
+title: Overview
+_template: page
+_fieldset: page
+upload: ""
+splash: ""
+breadcrumbs: 'true'
+super_positive_keywords:
+  - ISU
+  - CLARIS
+  - MARS
+  - technology
+  - jenkins
+summary: 'The Information Systems Unit is charged with designing, developing, and operating advanced technology that can be used to help Illinois public safety agencies collect and share information. The Information Systems Unit maintains the Clandestine Lab Reporting Information System (CLARIS), the Enhanced Grants Management System  (EGMS), and InfoNet.'
+---
+<div class="container-fluid">
+	<div class="row">
+		  <div class="col-sm-12 col-md-3 col-lg-3 ">
+			<h1 class="h3" style="margin-top: 0px;border-bottom: 1px solid #ccc; padding-bottom: 5px;">Information Systems</h1>
+			<h2 class="h5" style="color: #777; margin-top: 0px; margin-bottom: 15px; ">Anthony Jenkins, Associate Director</h2>
+
+
+
+		</div>
+		<div class="col-sm-12 col-md-8 col-lg-8 ">
+			<p>The Information Systems Unit is charged with designing, developing, and operating advanced technology that can be used to help Illinois public safety agencies collect and share information.
+			</p>
+			<div class="default-view-tabs" style="margin-top: 20px">
+				<!-- <div class="tabbable-panel">
+					<div class="tabbable-line"> -->
+          <div>
+            <div>
+						<ul class="nav nav-tabs responsive" id="article-tabs" role="tablist">
+							<li role="presentation" class="active"><a href="#systems-overview" aria-controls="home" role="tab" data-toggle="tab" id="article-tab1">Overview</a></li>
+							<li role="presentation"><a href="#systems-staff" aria-controls="profile" role="tab" data-toggle="tab" id="article-tab2">Staff</a></li>
+						</ul>
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active" id="systems-overview">
+								<div class="">
+									<h2 class="h4" style="margin-top: 25px; border-bottom: 1px solid #ccc; padding-bottom: 5px;">Clandestine Lab Reporting Information System (CLARIS)</h2>
+
+									<p>The Authority created the Clandestine Lab Reporting Information System (CLARIS) with a $50,000 grant from the Bureau of Justice Statistics Office of Justice Programs. CLARIS is a web-based data collection system for reporting and analysis of methamphetamine lab seizure data used mainly by law enforcement agencies in Illinois.
+									</p>
+									<p>Data collected is submitted to Illinois State Police for analysis. This data is useful in determining, among other criteria, the types, numbers, and locations of laboratories seized, manufacturing trends, precursor and chemical sources, the number of children and law enforcement officers affected, and investigative leads. The data also helps agencies to justify and allocate current and future resources. Agencies also use CLARIS to file the required federal El Paso Intelligence Center (EPIC) reports, and to perform local monthly and annual statistical tabulations. This comprehensive information-sharing network helps stem the proliferation and sale of methamphetamine by more accurately pinpointing the sources of its production.
+									</p>
+									<h2 class="h4" style="margin-top: 25px;border-bottom: 1px solid #ccc; padding-bottom: 5px;">Enhanced Grants Management System</h2>
+									<p>The Enhanced Grants Management System is used by the Authority for fund planning and grant administration. The system eliminates redundancies, ensures enforcement of business rules, and generates more accurate grant reports. The system was created originally by the Pennsylvania Commission on Crime &amp; Delinquency to meet the state’s needs with $4.5 million in federal funding. The Authority received the system product and source code at no charge and tailored it to fit the Authority’s needs.
+									</p>
+									<h2 class="h4" style="margin-top: 25px;border-bottom: 1px solid #ccc; padding-bottom: 5px;"><a href="/systems/infonet">InfoNet</a></h2>
+									<p>InfoNet is a web-based data collection and reporting system used by victim service providers in Illinois. These providers use InfoNet to collect demographic information and report on services provided to victims of domestic and sexual violence. InfoNet is operated and managed by the Authority, while system use and requirements are collaboratively governed with the Illinois Coalition Against Domestic Violence, the Illinois Coalition Against Sexual Assault, the Illinois Department of Human Services, and Child Advocacy Centers of Illinois. The system serves 67 domestic violence programs, 34 sexual assault centers, and eight child advocacy centers.
+									</p>
+                  <a href="/systems/infonet" class="btn btn-default" role="button">Find out more about InfoNet&nbsp;
+                    <i class="fa fa-external-link"></i></a>
+								</div>
+								<!-- //indent-15 -->
+							</div>
+							<!-- //Tab: Overview -->
+							<div role="tabpanel" class="tab-pane" id="systems-staff">
+								<!-- ******* staff tab start ***************** -->
+              	{{ entries:listing folder="biographies" sort="sortField" conditions="role:Staff,unit:Information Systems"}}
+                {{ if !no_results }}
+								<div class="staff-list" style="margin-bottom: 25px;">
+									<h2 class="h5"><a href="/biographies/{{title|slugify}}">{{ title }}&nbsp;&raquo;</a>
+                      {{if degrees}}
+                      {{degrees}}
+                      , {{name}}
+                      {{/degrees}}
+                      {{endif}}
+                      {{if content}}
+                        |
+									<span style="color: #999"><a href="/biographies/{{title|slugify}}">Full Bio</a> <i class="fa fa-angle-double-right"></i></span></h2>
+									{{endif}}
+									<h3 class="h6" style="margin-top: -10px; color: #888; ">{{orgtitle}}
+                  {{theme:partial src="author-social" use_context="true"}}
+									</h3>
+
+
+								</div>
+								{{endif}}
+                 {{ /entries:listing }}
+								<!-- ******* //staff tab end ***************** -->
+							</div>
+							<!-- //Tab: Staff -->
+						</div>
+						<!-- //tab-content -->
+					</div>
+					<!-- //tabbable-line -->
+				</div>
+				<!-- //tabbable-panel -->
+			</div>
+			<!-- //article-view-tabs -->
+		</div>
+	</div>
+	<!-- //row -->
+</div>
+<!-- //container -->

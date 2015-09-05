@@ -1,0 +1,74 @@
+<div class="article-content">
+  {{ content|widont }}
+
+    <div class="article-keywords no-print" >
+
+      <h5 style="line-height: 1.4em">
+      Keywords: {{ keywords_sentence_url_list }}</h5>
+
+    </div>
+
+
+
+    {{entries:listing folder="biographies" conditions="title:{authors|option_list}"}}
+    {{if total_found}}
+    {{ if first}}
+    <span class="article-about-the-author">
+      <h6>
+      About the author{{if total_found>1}}s{{/if}}
+    </h6>
+    {{/if}}
+    {{/if}}
+    {{/entries:listing}}
+
+
+      <p>
+
+
+
+    {{ entries:listing folder="biographies" conditions="title:{authors|option_list}" }}
+    {{if total_found}}
+    {{if !first}}<hr/>{{/if}}
+
+      <p>{{if authorPhoto}}<img src="{{ transform src="{authorPhoto}" height="75"}}"
+          style="float: left; padding-right: 14px;" />{{endif}}	{{content}}</p>
+
+
+
+
+          <p style="margin-left: 0px">{{if orgtitle}}<a href="/authors/{{title|slugify}}">{{title}}</a> is
+  					{{if modifier == 'a'}}
+  					an
+  					{{else}}
+  					{{modifier}}
+  					{{endif}}
+  					Authority {{orgtitle}}.
+
+
+
+
+
+          <br/>
+          {{endif}}
+
+          {{theme:partial src="author-social" use_context="true"}}</p>
+
+
+
+
+      {{/if}}
+    {{ /entries:listing }}
+
+
+
+    </p>
+
+  </span>
+
+
+
+  <hr/>
+  <div class="article-disclaimer">
+    {{ disclaimer }}
+  </div>
+</div>

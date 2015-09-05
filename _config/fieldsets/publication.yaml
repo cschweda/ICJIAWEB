@@ -1,0 +1,145 @@
+title: Publication
+
+fields:
+  _template:
+    type: hidden
+    default: publication
+
+  area:
+    # display: Subject Area
+    # type: tags
+    # default: Criminal Justice System
+    instructions: If the tag doesn't appear, type a new area. For best results, please select only a single subject area.
+    default: Criminal Justice System
+    type: suggest
+    create: true
+    max_items: 2
+    taxonomy:
+      folder: articles|publications
+      type: area
+
+  pubtype:
+    default: Research Report
+    instructions: If the tag doesn't appear, type a new publication type. For best results, please select a single publication type.
+    type: suggest
+    create: true
+    max_items: 2
+    taxonomy:
+      folder: articles|publications
+      type: pubtype
+
+  pubstatatus:
+    display: Publication status
+    required: true
+    default:
+    type: select
+    options:
+      true: Active
+      false: Inactive
+
+  keywords:
+    display: Keywords
+    required: false
+    type: suggest
+    create: true
+    max_items: 10
+    options:
+      - Aging
+      - Child Abuse
+      - Criminal Records
+      - Criminal Justice
+      - Corrections
+      - Court Services
+      - Defense
+      - Domestic Violence
+      - Forensic Sciences
+      - Gangs
+      - Human Services
+      - Human Trafficking
+      - Jail
+      - Juveniles
+      - Law Enforcement
+      - Offender Services
+      - Partnerships
+      - Prevention and Education
+      - Probation and Parole
+      - Prosecution
+      - Research and Evaluation
+      - Security
+      - Sexual Assault
+      - Substance Abuse
+      - Technology Improvement
+      - Training
+      - Treatment
+      - Victims
+
+  summary:
+    display: Summary (for Search)
+    required: false
+    type: textarea
+    height: 100
+
+  content:
+    display: Abstract
+    required: true
+    default:
+    type: redactor
+
+  # puburl:
+  #   Display: Upload PDF
+  #   type: file
+  #   destination: assets/pdf
+  #   allowed: ['pdf']
+
+  puburl:
+    Display: URL Path
+    type: text
+    required:
+    default: /assets/pdf/
+
+  articleLink:
+    Display: URL of accompanying article
+    type: text
+    required:
+    default:
+
+
+  positive_keywords:
+    display: Positive Search Keywords
+    required: false
+    default:
+    type: tags
+
+  negative_keywords:
+    display: Negative Search Keywords
+    required: false
+    default:
+    type: tags
+
+  super_positive_keywords:
+    display: Super positive Search Keywords (weighted heavily for search -- not visible on site)
+    required: false
+    default:
+    type: tags
+
+  super_negative_keywords:
+    display: Super negative Search Keywords (weighted heavily for search -- not visible on site)
+    required: false
+    default:
+    type: tags
+
+  file_upload_field:
+    type: replicator
+    instructions: |
+      File upload
+
+    sets:
+
+      file_upload:
+        display: PDF / Word Upload
+        instructions: Upload PDF or Word file here
+        fields:
+          fileitem:
+            type: file
+            allowed: [pdf, doc, docx]
+            destination: assets/publications

@@ -1,0 +1,13 @@
+#Social media
+facebokContentType: 'article'
+facebookAppId: '658596667606445'
+facebookAuthorURL: 'https://www.facebook.com/ICJIA'
+socialMediaImage: 'http://www.icjia.state.il.us/assets/img/icjia-default.jpg'
+
+#default meta content
+
+defaultDescription: 'Created in 1983, the Illinois Criminal Justice Information Authority is a state agency dedicated to improving the administration of criminal justice.'
+
+defaultPageTitle: 'Illinois Criminal Justice Information Authority'
+defaultSiteName: 'Illinois Criminal Justice Information Authority'
+defaultKeywords: 'ICJIA, Criminal Justice, Illinois, Authority, Reform, Illinois Criminal Justice Information Authority'

@@ -1,0 +1,21 @@
+<script>
+
+$( ".track" ).on( "click", function() {
+	var href = $(this).attr('href');
+	var file_name1 = href.split(/[\\\/]/).pop();
+	ga('send', 'event', 'Downloads', 'Click', file_name1);
+	console.log('Download: ' + file_name1);
+
+});
+
+
+$( 'a[data-toggle="tab"]' ).on( "click", function() {
+	var href = $(this).attr('href');
+	var tab_name1 = href.split(/[\\\/]/).pop();
+	ga('send', 'event', 'Tab Click', 'Click', tab_name1);
+	console.log('Tab click: ' + tab_name1);
+
+});
+
+
+</script>

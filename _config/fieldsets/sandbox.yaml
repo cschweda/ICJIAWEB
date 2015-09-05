@@ -1,0 +1,12 @@
+title: Sandbox Page
+
+fields:
+  _template:
+    display: Sandbox
+    type: default-blank
+
+  content:
+    display: Page Content
+    required: false
+    default:
+    type: redactor

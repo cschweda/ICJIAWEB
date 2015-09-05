@@ -1,0 +1,167 @@
+---
+_fieldset: page
+_template: default-blank
+title: FOIA
+splash: ""
+upload: ""
+breadcrumbs: 'true'
+summary: The public may access ICJIA records and documentation by submitting a request pursuant to the Illinois Freedom of Information Act (FOIA) (5 ILCS 140). Access to, or copies of, public records may be obtained through the FOIA via an on-site records review at agency headquarters or agency duplication and mailing.
+positive_keywords:
+  - FOIA
+  - Freedom of Information Act
+---
+<div class="container-fluid">
+<div class="col-md-3">
+<h1 class="h3" style="padding-bottom: 5px; margin-top: 0px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;">FOIA Requests</h1>
+</div>
+<div class="col-md-8">
+
+
+
+<p>The public may access ICJIA records and documentation by submitting a request pursuant to the Illinois Freedom of Information Act (FOIA) (5 ILCS 140). Access to, or copies of, public records may be obtained through the FOIA via an on-site records review at agency headquarters or agency duplication and mailing. </p>
+
+<!--<p>
+Your request for information must be submitted via the online form provided, fax, U.S. mail or special carrier to:</p>
+Simeon Kim<br/>
+Associate General Counsel<br/>
+Illinois Criminal Justice Information Authority<br/>
+300 W. Adams St., Suite 200<br/>
+Chicago, IL 60606<br/>
+Fax: 312-793-8550<br/>
+<p>PLEASE NOTE: Criminal history and court records are not kept by ICJIA. Please do not submit FOIA requests for criminal history records or court records. Read FAQs for more information.</p>-->
+
+<div class="text-center" style="margin-top: 30px; margin-bottom: 30px;">
+
+  <a title="FOIA Request" class="btn btn-default" style='font-family: "Oswald", sans-serif;' href="/foia/">
+  Online FOIA Request <i class="fa fa-angle-double-right fa-lg"></i></a>
+
+</div>
+
+<p><strong>PLEASE NOTE: Criminal histories and court records cannot be requested through FOIA. See the FAQ below for more information on how to obtain these documents.</strong></p>
+
+
+
+
+<div class="default-view-tabs" style="margin-top: 20px;">
+  <!-- <div class="tabbable-panel">
+      <div class="tabbable-line"> -->
+      <div>
+        <div>
+        <ul class="nav nav-tabs responsive" id="article-tabs" role="tablist">
+          <li class="active" role="presentation"><a id="tab-overview" role="tab" aria-controls="home" href="#faq" data-toggle="tab">FAQ</a></li>
+            <li role="presentation"><a id="tab-documents" role="tab" aria-controls="profile" href="#documents" data-toggle="tab">Available Documents</a></li>
+            <li role="presentation"><a id="tab-fees" role="tab" aria-controls="profile" href="#contact" data-toggle="tab">For more information</a></li>
+
+
+
+
+
+
+
+
+
+
+
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane active" id="faq" role="tabpanel">
+              {{ theme:partial src="about-foia-faq"}}
+          </div>
+
+
+        <div class="tab-pane" id="documents">
+          {{theme:partial src="about-foia-documents"}}
+        </div>
+
+        <div class="tab-pane" id="fees">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Type of Duplication</th>
+                  <th>Fees (per copy)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Black and white, (letter or legal size) paper copies, up to and including 50 copies</td>
+                  <td>
+                    <strong>No Charge</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Black and white, (letter or legal size) paper copies, in excess of 50 copies</td>
+                  <td>
+                    <strong>$.15/page</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Color copies (any paper size) or black and white copies not on letter or legal size paper</td>
+                  <td>
+                    <strong>Reasonable cost of reproduction</strong>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+        </div>
+
+        <div class="tab-pane" id="contact" role="tabpanel">
+          <p>Your request for information must be submitted via the online form provided, fax, U.S. mail or special carrier to:</p>
+
+<p style="margin-left: 15px;">Simeon Kim<br>
+Associate General Counsel<br>
+Illinois Criminal Justice Information Authority<br>
+300 W. Adams St., Suite 200<br>
+Chicago, IL 60606<br>
+Fax: 312-793-8550</p>
+
+<p><strong>
+PLEASE NOTE: Criminal history and court records are not kept by ICJIA. Please do not submit FOIA requests for criminal history records or court records. Read FAQs for more information.</strong></p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div> <!-- //tab-content -->
+      </div> <!-- //tabbable-line -->
+      </div> <!-- //tabbable-panel -->
+      </div> <!-- //article-view-tabs -->
+
+
+
+</div>
+</div>
+
+
+<script>  $(document).ready(function() {
+
+
+
+      $( ".modal-trigger" ).on( "click", function(e) {
+        e.preventDefault();
+        var url=$(this).attr('href');
+        var title = $(this).attr('title');
+        console.log(url, title);
+        eModal.ajax(url, title);
+      });
+
+
+  });
+</script>

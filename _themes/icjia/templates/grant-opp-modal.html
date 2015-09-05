@@ -1,0 +1,97 @@
+<style>
+.strong {font-weight: 900}
+
+</style>
+{{entries:listing folder="grant-opportunities" show_future="true" conditions="title:{get_post:t}"}}
+
+<h4 class="h6">Summary:</h4>
+
+
+{{content}}
+
+<table class="table table-striped" style="font-size: 12px; border-bottom: 1px solid #ddd">
+<!--			<thead>
+
+				<tr>
+					<th colspan="2">
+						{{get_post:t}}
+
+					</th>
+				</tr>
+			</thead>-->
+			<tbody>
+
+				<tr>
+					<td width="25%" class="strong">
+						Deadline:
+					</td>
+					<td>
+            {{date}}
+					</td>
+				</tr>
+
+				<tr>
+					<td class="strong">
+						Contact:
+					</td>
+					<td>
+              <a href="{{contact}}" target="_blank">{{contact}}</a>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="strong">
+					Funding source:
+					</td>
+					<td>
+
+            {{fundingSource}}
+
+					</td>
+				</tr>
+
+
+        <tr>
+					<td class="strong">
+					ICJIA Grant:
+					</td>
+					<td>
+
+            {{if icjia == 'ICJIA'}}Yes, this is an ICJIA grant{{else}}No, this is not an ICJIA grant{{endif}}
+
+					</td>
+				</tr>
+
+        <tr>
+					<td class="strong">
+					Keywords
+					</td>
+					<td>
+
+          {{keywords_list}}
+
+					</td>
+				</tr>
+
+        <tr>
+          <td class="strong" >
+          Eligibility:
+          </td>
+          <td>
+
+        {{ eligibility_list}}
+
+          </td>
+        </tr>
+
+
+
+
+
+
+			</tbody>
+		</table>
+
+
+
+{{/entries:listing}}

@@ -1,0 +1,56 @@
+{{entries:listing folder="biographies" show_future="true" show_past="true" conditions="title:{get_post:t}"}}
+
+
+
+
+
+
+{{if authorPhoto}}
+<img src="{{ transform src="{authorPhoto}" height="75"}}"
+style="float: left; padding-right: 12px; margin-top: 12px; margin-bottom: 0px;" />
+{{else}}
+
+<!-- <img src="{{ transform src="/assets/img/biographies/default-head.jpg" height="75"}}"
+style="float: left; padding-right: 14px;" /> -->
+{{endif}}
+<p>	{{content}}</p>
+
+<!-- {{if !content}}<div style="height: 85px"></div>{{endif}} -->
+
+{{if role == 'Staff'}}
+{{if orgtitle}}
+  <p>{{title}} is {{modifier}} {{orgtitle}} at {{organization}}<br/>
+{{if phone}}  {{phone}}  |  {{endif}}
+  {{theme:partial src="author-social" use_context="true"}}</p>
+{{endif}}
+<hr/>
+  {{if academicBackground}}
+  <h4 class="h6">Academic Background</h4>
+  {{academicBackground}}
+  {{/if}}
+
+{{if interestAreas}}
+<h4 class="h6">Areas of Interest</h4>
+{{interestAreas}}
+{{/if}}
+
+{{if grantsManaged}}
+<h4 class="h6">Grants Managed</h4>
+{{grantsManaged}}
+{{/if}}
+{{endif}}
+
+
+
+
+
+<!-- TODO: Add lightbox for author photo -->
+
+
+
+</p>
+
+
+
+
+{{/entries:listing}}

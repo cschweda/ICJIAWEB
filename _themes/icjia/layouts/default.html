@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>ICJIA {{if title}}| {{ title }}{{endif}}</title>
+		<meta name="description" content="{{if summary}}{{summary|striptags}}{{else}}{{ defaultDescription }}{{endif}}">
+		<meta name="keywords" content="{{ if keywords }}{{keywords_list}}{{else}}{{defaultKeywords}}{{endif}}">
+		<meta name="date" content="{{ current_date }}">
+		<link rel="canonical" href="{{ permalink }}">
+
+
+		<!-- Facebook metatags -->
+				<meta property="og:title" content="{{ title }}" />
+				<meta property="og:site_name" content="{{ defaultSiteName }}"/>
+				<meta property="og:url" content="{{ permalink }}" />
+				<meta property="og:description" content="{{if summary }}{{ summary }} {{else}} {{defaultdescription }} {{endif}}" />
+				<meta property="fb:app_id" content="{{facebookAppId}}" />
+				<meta property="og:type" content="{{facebokContentType}}" />
+				<meta property="og:locale" content="en_US" />
+				<meta property="article:author" content="{{ facebookAuthorURL }}" />
+				<meta property="og:image" content="{{socialMediaImage}}" />
+		<!-- // Facebook metatags -->
+
+
+		<!-- Twitter metatags -->
+			<meta name="twitter:card" content="summary" />
+			<meta name="twitter:site" content="@ICJIA_Illinois" />
+			<meta name="twitter:title" content="{{title}}" />
+			<meta name="twitter:description" content="{{if summary }}{{ summary }} {{else}} {{defaultdescription }} {{endif}}" />
+			<meta name="twitter:image" content="{{socialMediaImage}}" />
+			<meta name="twitter:url" content="{{ permalink }}" />
+		<!-- //Twitter metatags -->
+
+
+
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="{{ theme:img src="icons/apple-icon-57x57.png"}}">
+<link rel="apple-touch-icon" sizes="60x60" href="{{ theme:img src="icons//apple-icon-60x60.png"}}">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ theme:img src="icons//apple-icon-72x72.png"}}">
+<link rel="apple-touch-icon" sizes="76x76" href="{{ theme:img src="icons//apple-icon-76x76.png"}}">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ theme:img src="icons//apple-icon-114x114.png"}}">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ theme:img src="icons//apple-icon-120x120.png"}}">
+<link rel="apple-touch-icon" sizes="144x144" href="{{ theme:img src="icons//apple-icon-144x144.png"}}">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ theme:img src="icons//apple-icon-152x152.png"}}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ theme:img src="icons//apple-icon-180x180.png"}}">
+<link rel="icon" type="image/png" sizes="192x192"  href="{{ theme:img src="icons//android-icon-192x192.png"}}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ theme:img src="icons//favicon-32x32.png"}}">
+<link rel="icon" type="image/png" sizes="96x96" href="{{ theme:img src="icons//favicon-96x96.png"}}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ theme:img src="icons//favicon-16x16.png"}}">
+<link rel="manifest" href="{{ theme:img src="icons//manifest.json"}}">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="{{ theme:img src="icons//ms-icon-144x144.png"}}">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+
+		<!-- styles -->
+
+		<link href="{{ theme:asset src='css/icjia.css' }}" rel="stylesheet" property="stylesheet">
+
+
+	  <link rel="alternate" type="application/rss+xml" href="/feed" title="{{ _site_name }} RSS Feed">
+
+		<!-- <link rel="stylesheet" property="stylesheet" href="{{theme:asset src='bower_components/font-awesome-bower/css/font-awesome.css'}}"> -->
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' property="stylesheet" type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' property="stylesheet" type='text/css'>
+
+		<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic' property="stylesheet" rel='stylesheet' type='text/css'>
+
+	<!--	<link href='http://fonts.googleapis.com/css?family=Raleway:500,600,700,800,100,400,300' rel='stylesheet' type='text/css'>-->
+
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic,400italic' rel='stylesheet' type='text/css'>
+
+
+		<script src="{{ theme:asset src='bower_components/modernizr/modernizr.js' }}"></script>
+
+		<script src="{{ theme:asset src='bower_components/jquery/dist/jquery.min.js' }}"></script>
+
+<!--
+		<script src="	https://code.jquery.com/jquery-1.11.3.min.js"></script>-->
+
+		<!-- Isotope filtering -->
+		<script src="{{theme:asset src='bower_components/isotope/dist/isotope.pkgd.js'}}"></script>
+
+		<!-- jasny bootstrap -->
+		<link href="{{theme:asset src='bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css'}}" rel="stylesheet">
+		<script src="{{theme:asset src='bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js'}}"></script>
+		<script src="{{theme:asset src='bower_components/jasny-bootstrap/js/offcanvas.js'}}"></script>
+
+
+		<script src="{{ theme:asset src='js/special/jquery.urlshortener.min.js'}}"></script>
+
+
+
+	</head>
+	<body data-spy="scroll" data-target=".bs-sidenav" data-offset="100">
+
+
+
+
+<div id="icjia-page-top"></div>
+
+			{{ theme:partial src="social" }}
+
+			{{ theme:partial src="navbar" }}
+
+			{{ theme:partial src="breadcrumbs"}}
+
+			<!-- ////////////////////////////////////////////////// content-start \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+			<div id="content-wrap">
+      {{ layout_content }}
+		</div>
+			<!-- ////////////////////////////////////////////////// content-end \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+
+	{{ theme:partial src="footer-dark" }}
+
+
+
+
+
+
+
+
+    <script src="{{ theme:asset src='bower_components/bootstrap/dist/js/bootstrap.js' }}"></script>
+    <script src="{{ theme:asset src='bower_components/jquery-easing-original/jquery.easing.js' }}"></script>
+
+		<!-- Highcharts -->
+    <script src="{{ theme:asset src='bower_components/highcharts-release/highcharts.src.js' }}"></script>
+    <script src="{{ theme:asset src='bower_components/highcharts-release/modules/exporting.js' }}"></script>
+
+
+    <script src="{{ theme:asset src='bower_components/readmore/readmore.js' }}"></script>
+
+
+		<script src="{{ theme:asset src='bower_components/bootstrap-tabcollapse/bootstrap-tabcollapse.js' }}"></script>
+
+		<!-- Progress bar from CSS-tricks -->
+		<script src="{{ theme:asset src='js/special/progressBar.js' }}"></script>
+
+		<link rel="stylesheet" property="stylesheet" href="{{ theme:asset src='bower_components/bx-slider.js/dist/jquery.bxslider.css'}}">
+		<script src="{{ theme:asset src='bower_components/bx-slider.js/dist/jquery.bxslider.js' }}"></script>
+
+		<!-- ICJIA js -->
+		<script src="{{ theme:asset src='js/icjia.js' }}"></script>
+
+		<!-- datatables -->
+		<link href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.css" property="stylesheet" rel="stylesheet">
+		<link href="//cdn.datatables.net/responsive/1.0.6/css/dataTables.responsive.css" property="stylesheet" rel="stylesheet">
+		<script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+		<script src="//cdn.datatables.net/responsive/1.0.6/js/dataTables.responsive.js"></script>
+
+
+		<!-- Bootstrap modal lightbox -->
+		<link href="{{ theme:asset src='bower_components/ekko-lightbox/dist/ekko-lightbox.min.css' }}" rel="stylesheet" property="stylesheet">
+		<script src="{{ theme:asset src='bower_components/ekko-lightbox/dist/ekko-lightbox.min.js' }}"></script>
+
+		<!-- https://github.com/saribe/eModal -->
+		<!--<script src="{{ theme:asset src='js/special/eModal.min.js' }}"></script>-->
+		<script src="//rawgit.com/saribe/eModal/master/dist/eModal.min.js"></script>
+
+		<!-- scrollto: https://github.com/flesler/jquery.scrollTo -->
+		<script src="{{ theme:asset src='js/special/jquery.scrollTo.min.js'}}"></script>
+
+
+
+		<!-- headroom.hs: https://github.com/WickyNilliams/headroom.js
+		<script src="{{ theme:asset src='bower_components/headroom.js/dist/jQuery.headroom.min.js' }}"></script> -->
+
+		<!-- Jasny -->
+		<link rel="stylesheet" property="stylesheet" href="{{ theme:asset src='bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css'}}">
+		<script src="{{ theme:asset src='bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js' }}"></script>
+
+
+
+
+		{{if jsFile}}
+			<script src="{{ theme:asset src='js/highcharts/{{jsFile}}'}}"></script>
+		{{/if}}
+
+
+
+
+{{theme:partial src="google-analytics"}}
+
+{{theme:partial src="google-tracking"}}
+
+
+
+
+
+
+
+
+
+	</body>
+</html>

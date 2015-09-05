@@ -1,0 +1,25 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+   <channel>
+      <atom:link href="http://www.icjia.state.il.us/feed" rel="self" type="application/rss+xml" />
+      <title><![CDATA[Illinois Criminal Justice Information Authority]]></title>
+      <link>{{ _site_url }}</link>
+      <description>Illinois Criminal Justice Information Authority</description>
+      <lastBuildDate>{{ entries:listing folder="news|articles" limit="1" }}{{ datestamp format="r" }}{{ /entries:listing }}</lastBuildDate>
+      <language>en-us</language>
+      <webMaster>christopher.schweda@illinois.gov (Christopher Schweda)</webMaster>
+      <copyright>Copyright {{ current_date format='Y' }}</copyright>
+      <ttl>3600</ttl>
+
+      {{ entries:listing folder="news|articles" limit="40" }}
+         <item>
+         <title><![CDATA[{{ title }}]]></title>
+         <link>{{ permalink }}</link>
+         <guid>{{ permalink }}</guid>
+         <category>{{_folder}}</category>
+         <pubDate>{{ datestamp format="r" }}</pubDate>
+         <description><![CDATA[{{ content|widont|truncate:200|striptags }}]]></description>
+         </item>
+      {{ /entries:listing }}
+   </channel>
+</rss>

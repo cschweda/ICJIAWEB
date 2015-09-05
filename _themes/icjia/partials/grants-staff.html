@@ -1,0 +1,44 @@
+{{ entries:listing folder="biographies" sort="sortField" conditions="role:Staff,unit:Federal and State Grants"}}
+  <div class="staff-list" style="margin-bottom: 35px;">
+    <h2 class="h5">{{ title }}
+      {{if degrees}}
+      {{degrees}}
+      , {{name}}
+      {{/degrees}}
+      {{endif}}
+
+      {{if content}}
+      &nbsp;&nbsp;|&nbsp;&nbsp;<span style="color: #999"><a href="/biographies/{{title|slugify}}">Full Bio</a>&nbsp;<i class="fa fa-angle-double-right"></i></span></h2>
+      {{endif}}
+
+    <h3 class="h6" style="margin-top: -10px; margin-bottom: 3px; color: #888; ">{{orgtitle}}
+
+    &nbsp;&nbsp;
+    {{if phone }}|&nbsp;&nbsp;<span style="color: #555;">{{phone}}</a>{{endif}}&nbsp;&nbsp;|&nbsp;&nbsp;{{theme:partial src="author-social" use_context="true"}}
+  </h3>
+
+
+
+    <h4 class="h6" style="font-size: 14px"></h4>
+
+    {{if grantsManaged}}
+
+
+    {{grantsManaged}}
+
+
+    {{endif}}
+
+    {{if academicBackground}}
+    <div style=" margin-bottom: 0; padding-bottom: 8px; color: #888; font-size: 14px; font-family: 'Oswald', sans-serif">Academic Background</div>
+
+    {{academicBackground}}
+
+    {{endif}}
+
+
+    {{if interestAreas}}{{interestAreas}}{{/if}}
+
+    <hr/>
+  </div>
+ {{ /entries:listing }}

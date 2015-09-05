@@ -1,0 +1,10 @@
+fields:
+  keywords:
+    display: Keywords
+    required: false
+    default:
+    type: tags
+  content:
+    type: redactor
+
+hide: true

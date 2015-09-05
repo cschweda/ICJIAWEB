@@ -1,0 +1,100 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <p style="margin-bottom: 20px">ICJIA maintains a clearinghouse of criminal justice and risk factor datasets collected by other state agencies. The most current data available is listed here, including associated rates that are calculated with census data and county-level estimates.  </p>
+
+      <hr/>
+
+      <table id="dataset-list-ajax" class="display" style="font-size: 12px;" cellspacing="0" width="100%">
+              <thead>
+                  <tr>
+                      <th>Last Updated</th>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Download</th>
+
+                      <th>Metadata</th>
+
+                  </tr>
+              </thead>
+
+              <tfoot>
+                  <tr>
+                    <th>Last Updated</th>
+                      <th>Title</th>
+                      <th>Category</th>
+
+                        <th>Download</th>
+                    <th>Metadata</th>
+                  </tr>
+              </tfoot>
+
+              <tbody>
+                {{entries:listing folder="datasets"}}
+                <tr>
+                  <td>{{date format="Y-M" }}</td>
+
+                  <td style="">
+
+                    {{title}}
+                    </td>
+
+                    <td style="">
+
+                      {{initialCategory}}
+                      </td>
+
+                      <td>
+
+                        {{ if datasetfilename }}
+                        <a type="button" style="font-size: 10px; text-transform: uppercase; font-family: 'Oswald', sans-serif;" class="btn btn-primary btn-xs" href="/{{datasetfilename}}">Download&nbsp;&nbsp;<i class="fa fa-caret-down" style="vertical-align: middle;margin-top: -0.425em"></i></a>
+                        {{endif}}
+                      </td>
+
+
+
+                  <td>
+                    <a type="button" style="font-size: 10px; text-transform: uppercase; font-family: 'Oswald', sans-serif;" class="btn btn-default btn-xs modal-trigger" title="{{title}}"  href="/research/display-dataset-modal?t={{title|urlencode}}">More info&nbsp;&nbsp;<i class="fa fa-external-link" style="vertical-align: middle;margin-top: -0.425em"></i></a>
+                  </td>
+                </tr>
+                {{/entries:listing}}
+
+              </tbody>
+          </table>
+
+
+
+      <script>
+        $(document).ready(function() {
+
+          function fnOpenClose(){
+
+            $( ".modal-trigger" ).on( "click", function(e) {
+              e.preventDefault();
+              var url=$(this).attr('href');
+              var title = $(this).attr('title');
+              console.log(url, title);
+              eModal.ajax(url, title);
+            });
+
+          }
+
+
+          $('#dataset-list-ajax').dataTable({
+            "order": [
+              [0, "desc"]
+            ],
+            "responsive": true,
+            "pageLength": 50,
+            "fnDrawCallback": function( oSettings ) {
+              console.log( 'DataTables has redrawn the table' );
+              fnOpenClose();
+          }
+          });
+        });
+      </script>
+
+    </div>
+    </div>
+  </div>

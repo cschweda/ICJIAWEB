@@ -1,0 +1,11 @@
+---
+email: sal.perri@illinois.gov
+first_name: Sal
+last_name: Perri
+password: ""
+password_hash: $2a$08$CygAttgYrXhZR3Hle/AFuezERtSp5gqP2IC7OY4nqLWvW6HTezx0W
+roles:
+  - member
+  - admin
+_uid: t3Xhf255bf7cd320b409svHp1Qf
+---

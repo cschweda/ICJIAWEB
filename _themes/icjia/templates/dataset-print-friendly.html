@@ -1,0 +1,23 @@
+<div class="container">
+<h2 class="h3" style="border-bottom: 1px solid #ccc; padding-bottom: 8px; margin-bottom: 20px">ICJIA Datasets</h3>
+{{entries:listing folder="datasets"}}
+
+<div class="dataset-print-friendly" style="border-bottom: 1px solid #ccc; margin-bottom: 10px;">
+{{date format="Y-M" }}<br/>
+{{title}}<br/>
+{{content}}<br/>
+
+{{if datasetfilename}}
+
+<a href="{{_site_url}}/{{datasetfilename}}" class="track">{{_site_url}}/{{datasetfilename}}</a>
+
+{{endif}}
+
+</div>
+
+
+
+
+{{/entries:listing}}
+
+</div>

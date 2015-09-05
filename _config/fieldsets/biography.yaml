@@ -1,0 +1,144 @@
+title: Biography
+
+fields:
+  _template:
+    type: hidden
+    default: biography
+
+  sortField:
+    display: Sort by (usually last name)
+    required: true
+    type: text
+
+  unit:
+    display: Unit
+    required: false
+    type: select
+    options:
+      - ' '
+      - Office of Administrative Services
+      - Office of the Executive Director
+      - Office of Public Information
+      - Federal and State Grants
+      - Information Systems
+      - Research and Analysis
+      - Office of General Counsel
+      - Human Resources
+      - Office of Fiscal Management
+
+
+  role:
+    display: Authority Role
+    type: select
+    options:
+      - Staff
+      - Board
+
+  modifier:
+    display: Title Modifier
+    type: select
+    default:
+    options:
+      - ' '
+      - a
+      - an
+      - the
+      - ,
+
+  orgtitle:
+    display: Organization Title
+    required: false
+    default:
+    type: text
+
+  organization:
+    display: Organization
+    default: ICJIA
+    required: true
+    type: select
+    options:
+      - Authority
+      - Adult Redeploy
+
+
+
+  authorPhoto:
+    type: file
+    display: Photo
+    destination: assets/img/biographies/
+    allowed: ['jpg','jpeg','png']
+
+  content:
+    display: Biography
+    required: false
+    default:
+    type: redactor
+
+  interestAreas:
+    display: Areas of Interest
+    required: false
+    type: redactor
+
+  grantsManaged:
+    display: Grants Managed
+    required: false
+    type: redactor
+
+  academicBackground:
+    display: Academic Background
+    required: false
+    type: redactor
+
+  degrees:
+    display: Academic Degree(s)
+    required: false
+    type: tags
+
+  twitterURL:
+    display: Twitter URL
+    required: false
+    default:
+    type: text
+
+  facebookURL:
+    display: Facebook URL
+    required: false
+    default:
+    type: text
+
+  email:
+    display: Email
+    required: false
+    default:
+    type: text
+
+  phone:
+    display: Phone
+    required: false
+    default:
+    type: text
+
+
+  positive_keywords:
+    display: Positive Search Keywords
+    required: false
+    default:
+    type: tags
+
+  negative_keywords:
+    display: Negative Search Keywords
+    required: false
+    default:
+    type: tags
+
+  super_positive_keywords:
+    display: Super positive Search Keywords (weighted heavily for search -- not visible on site)
+    required: false
+    default:
+    type: tags
+
+  super_negative_keywords:
+    display: Super negative Search Keywords (weighted heavily for search -- not visible on site)
+    required: false
+    default:
+    type: tags

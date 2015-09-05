@@ -1,0 +1,131 @@
+title: Grant Program
+
+fields:
+  _template:
+    type: hidden
+    default: grant-program-display
+
+
+
+
+  keywords:
+    display: Keywords
+    required: false
+    type: suggest
+    create: true
+    max_items: 10
+    options:
+      - Aging
+      - Child Abuse
+      - Criminal Records
+      - Criminal Justice
+      - Corrections
+      - Court Services
+      - Defense
+      - Domestic Violence
+      - Forensic Sciences
+      - Gangs
+      - Human Services
+      - Human Trafficking
+      - Jail
+      - Juveniles
+      - Law Enforcement
+      - Offender Services
+      - Partnerships
+      - Prevention and Education
+      - Probation and Parole
+      - Prosecution
+      - Research and Evaluation
+      - Security
+      - Sexual Assault
+      - Substance Abuse
+      - Technology Improvement
+      - Training
+      - Treatment
+      - Victims
+
+  granttype:
+    display: Grant Type
+    required: false
+    type: select
+    options:
+      - Federal
+      - State
+      - Local
+
+  grantstatus:
+    display: Grant Status
+    required: false
+    type: select
+    options:
+      - Current
+      - Archived
+
+
+  breadcrumbs:
+    display: Display breadcrumbs?
+    type: select
+    options:
+      true: Yes, display the breadcrumbs
+      false: No, do not display the breadcrumbs
+
+  summary:
+    display: Summary (for search)
+    required: false
+    default:
+    type: redactor
+
+
+  content:
+    display: Grant Description
+    required: false
+    default:
+    type: redactor
+
+  # attachmentAKicker:
+  #   display: Attachment A kicker text
+  #   required: false
+  #   type: select
+  #   options:
+  #     - PROGRAM ALLOCATIONS BY FEDERAL FISCAL YEAR
+  #     - PROGRAM ALLOCATIONS BY STATE FISCAL YEAR
+
+  attachmentA:
+    display: Attachment A HTML
+    required: false
+    type: textarea
+    height: 300
+
+  programLink:
+    display: Link to program webpage/website
+    required: false
+    type: text
+
+  programLinkText:
+    display: Text to display for the link to program webpage/website
+    required: false
+    type: text
+
+  positive_keywords:
+    display: Positive Search Keywords
+    required: false
+    default:
+    type: tags
+
+  negative_keywords:
+    display: Negative Search Keywords
+    required: false
+    default:
+    type: tags
+
+  super_positive_keywords:
+    display: Super positive Search Keywords (weighted heavily for search -- not visible on site)
+    required: false
+    default:
+    type: tags
+
+  super_negative_keywords:
+    display: Super negative Search Keywords (weighted heavily for search -- not visible on site)
+    required: false
+    default:
+    type: tags

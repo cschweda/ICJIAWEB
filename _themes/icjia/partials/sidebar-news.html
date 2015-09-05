@@ -1,0 +1,23 @@
+<h4 class="text-center" style="font-family: 'Lato', san-serif;">Latest News</h4>
+  <div class="separator-line"></div>
+
+
+  {{ entries:listing folder="news" limit="3" }}
+	    {{ if no_results }}
+		  <p class="sorry">
+			No news is good news.<br>
+			Check back soon.
+		  </p>
+	    {{ else }}
+
+      <h5 style="font-weight: 900; margin-top: 40px; line-height: 25px;"><span style="font-weight: 400; color: #666">{{ date }}</span> // <a href="{{ url }}">{{ displayTitle }}</a></h5>
+
+
+
+
+
+
+
+
+	    {{ endif }}
+	{{ /entries:listing }}

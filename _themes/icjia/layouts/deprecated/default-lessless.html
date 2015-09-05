@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>{{ defaultPageTitle }}</title>
+		<meta name="description" content="{{ defaultDescription }}">
+		<meta name="keywords" content="{{ keywords_list }}">
+		<meta name="date" content="{{ date }}">
+		<link rel="canonical" href="{{ permalink }}">
+
+
+		<!-- Facebook metatags -->
+				<meta property="og:title" content="{{ title }}" />
+				<meta property="og:site_name" content="{{ defaultSiteName }}"/>
+				<meta property="og:url" content="{{ permalink }}" />
+				<meta property="og:description" content="{{ defaultDescription }}" />
+				<meta property="fb:app_id" content="{{facebookAppId}}" />
+				<meta property="og:type" content="{{facebokContentType}}" />
+				<meta property="og:locale" content="en_US" />
+				<meta property="article:author" content="{{ facebookAuthorURL }}" />
+				<meta property="og:image" content="{{socialMediaImage}}" />
+		<!-- // Facebook metatags -->
+
+
+
+
+
+
+
+
+		<!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="{{ theme:img src="favicon.png" }}">
+
+		<!-- To prevent search engines from indexing a page, set noindex to true in your Front Matter. -->
+		{{ if noindex }}<meta name="robots" content="noindex">{{ endif }}
+
+		<!-- styles -->
+
+
+		
+		<link href="{{ theme:asset src='bower_components/bootstrap/dist/css/bootstrap.css' }}" rel="stylesheet">
+		<link href="{{ theme:asset src='css/icjia.css' }}" rel="stylesheet">
+
+
+
+
+
+
+
+
+	  <link rel="alternate" type="application/rss+xml" href="/feed" title="{{ _site_name }} RSS Feed">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+		<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+
+		<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+		<link href='http://fonts.googleapis.com/css?family=Raleway:500,600,700,800,100,400,300' rel='stylesheet' type='text/css'>
+
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic,400italic' rel='stylesheet' type='text/css'>
+
+
+		<script src="{{ theme:asset src='bower_components/modernizr/modernizr.js' }}"></script>
+		<script src="{{ theme:asset src='bower_components/jquery/dist/jquery.js' }}"></script>
+		<script src="{{ theme:asset src='js/progressBar.js' }}"></script>
+
+
+    <link rel="stylesheet" href="{{ theme:asset src='bower_components/bx-slider.js/dist/jquery.bxslider.css'}}">
+		<script src="{{ theme:asset src='bower_components/bx-slider.js/dist/jquery.bxslider.js' }}"></script>
+
+
+	</head>
+	<body>
+
+
+
+    <div class="page">
+
+
+  {{ theme:partial src="social" }}
+  {{ theme:partial src="navbar" }}
+
+
+
+
+
+
+<div id="page-top" class="page">
+          {{ layout_content }}
+</div>
+
+
+{{ theme:partial src="footer" }}
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <script src="{{ theme:asset src='bower_components/bootstrap/dist/js/bootstrap.js' }}"></script>
+    <script src="{{ theme:asset src='bower_components/jquery-easing-original/jquery.easing.js' }}"></script>
+    <script src="{{ theme:asset src='bower_components/highcharts-release/highcharts.src.js' }}"></script>
+    <script src="{{ theme:asset src='bower_components/highcharts-release/modules/exporting.js' }}"></script>
+    <script src="{{ theme:asset src='bower_components/readmore/readmore.js' }}"></script>
+
+		  <script src="{{ theme:asset src='bower_components/bootstrap-tabcollapse/bootstrap-tabcollapse.js' }}"></script>
+
+
+  	<script src="{{ theme:asset src='js/icjia.js' }}"></script>
+
+{{if jsFile}}
+			<script src="{{ theme:asset src='js/{{jsFile}}'}}"></script>
+{{/if}}
+
+
+<script>
+
+// $('#article-tab1, #article-tab2').click(function (e) {
+//
+//   progressBarInit();
+// })
+
+
+</script>
+
+
+
+
+
+
+	</body>
+</html>

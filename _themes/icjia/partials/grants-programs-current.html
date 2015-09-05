@@ -1,0 +1,79 @@
+
+
+
+
+
+
+<h3 style="margin-top: 0; padding-top: 0; margin-bottom: 20px;" id="federal-programs">Federal Programs</h3>
+
+{{ entries:listing folder="grant-programs" conditions="granttype:Federal,grantstatus:Current" sort_by="title"}}
+
+
+    {{if !no_results}}
+    <div style="margin-left: 25px; margin-bottom: 60px" class="" id="{{title|slugify}}">
+    <h5 style="padding-bottom: 6px; border-bottom: 1px solid #ccc; color: #555">{{title}}</h5>
+    <!-- <div class="grant-expander"> -->
+    {{ content|widont }}
+  <!-- </div> -->
+  {{if attachmentA}}
+  <h6>Program allocations by fiscal year:</h6>
+
+  {{attachmentA}}
+  {{endif}}
+  </div>
+
+    {{else}}
+
+
+
+
+
+    {{endif}}
+
+{{ /entries:listing }}
+
+
+<h3 style="margin-top: 50px; margin-bottom: 20px" id="state-programs">State Programs</h3>
+
+{{ entries:listing folder="grant-programs" conditions="granttype:State,grantstatus:Current" sort_by="title"}}
+
+
+    {{if !no_results}}
+
+    <div style="margin-left: 25px; margin-bottom: 60px" id="{{title|slugify}}" class="">
+    <h5 style="padding-bottom: 6px; border-bottom: 1px solid #ccc; color: #555">{{title}}  {{if programLink}}
+
+      &nbsp;&nbsp;|&nbsp;&nbsp;<a href="{{programLink}}" class="" role="button">{{programLinkText}}
+        <i class="fa fa-external-link"></i></a>
+
+        {{endif}}</h5>
+    <!-- <div class="grant-expander"> -->
+    {{ content|widont }}
+
+
+    {{if attachmentA}}
+    <h6>Program allocations by fiscal year:</h6>
+
+    {{attachmentA}}
+    {{endif}}
+
+
+
+  <!-- </div> -->
+  </div>
+
+    {{else}}
+
+
+
+
+
+    {{endif}}
+
+{{ /entries:listing }}
+
+<hr/>
+
+<div class="text-center">
+<p>For a complete list of grant programs, please see our <a href="/grant-programs">grant program archive</a>.</p>
+</div>

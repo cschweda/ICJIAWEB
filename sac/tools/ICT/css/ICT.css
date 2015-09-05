@@ -1,0 +1,184 @@
+body {
+	font-family:Arial,Helvetica,sans-serif;
+	font-size: 90%
+} 
+#main_heading {
+	color: rgb(57,78,121);
+	margin-bottom:35px;
+}
+
+
+.tabs {
+	margin: 0;
+	padding: 0;	
+	zoom : 1;
+}
+.tabs li {
+	float: left;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.tabs:first-child {
+	margin-left: 20px;
+}
+.tabs a {
+	display: block;
+	text-decoration: none;
+	padding: 3px 5px;
+	background-color: rgb(232,232,232);
+	margin-right: 5px;
+	border: 1px solid rgb(153,153,153);
+	margin-bottom: -1px;
+	color: rgb(153,153,153);
+	
+}
+.tabs .active {
+	border-bottom: 1px solid white;
+	background-color: white;
+	color: rgb(51,72,115);
+	position: relative;
+}
+
+.tabs .TabLink {
+	background-color: white;
+	color: rgb(51,72,115);
+	position: relative;
+}
+
+
+
+
+.panelContainer {
+	clear: both;
+	margin-bottom: 25px;	
+	margin-left:20px;
+	margin-right:20px;
+	border: 1px solid rgb(153,153,153);	
+	background-color: white;
+	padding: 10px;
+}
+
+.panel h2 {
+	color: rgb(57,78,121);
+	text-shadow: none;		
+}
+.panel p {
+	color: black;	
+}
+
+
+
+
+table,th, td {
+	border: 1px solid black;
+}
+
+
+table {
+	border-collapse:collapse;
+}
+
+.GroupTitle {
+	font-weight:bold;
+}
+#table_demographics {
+	width:350px;
+}
+
+
+#DemographicsChartsDiv {
+	width:350px;
+	clear:both;
+}
+
+.Results_Table {
+	width:550px;
+	overflow: scroll;
+}
+
+
+
+.LeftColumn { 
+	float:left;
+}
+.RightColumn {
+	clear:both;
+	width:550px;  
+}
+.clear {
+	clear:both;
+}
+
+
+
+.Results_Table tr  {
+	display:none;
+}
+.NumericData {
+	text-align:center;
+	width: 60px;
+}
+.FilterValue_Hide {
+	/*visibility:hidden;*/
+	font-size:0px;
+}
+.TableNotes {
+	font-size: 80%;
+}
+
+h3  a{
+	font-weight: bold;
+}
+
+.ColumnChartControlArea {
+	text-align: right;
+	
+}
+
+#ICJIA_logo {
+float:right;
+border:none;
+}
+
+#Grant_Info  {
+	font-size:90%;
+	margin-left:20px;
+	margin-right:20px;
+}
+
+
+not(.LeftmostColumn) {
+	text-align:center;
+}
+
+#cohort_form input {
+	margin-left: 20px;
+}
+
+#tool_desc {
+	padding-left: 20px;
+	padding-right: 20px;
+	
+}
+
+#wrapper {
+	background-color:rgb(255,255,255);
+
+}
+
+.CohortDescription, .CohortDescriptionExtra{
+	width:490px;
+}	
+
+.ResultsTab {
+	display:none;
+}
+
+@media print {
+	.panel {display:block !important;}
+	.menu-stripe, .grid_1 {	display:none;}
+	#about, .ResultsHeader {page-break-before: always;}
+	#accordion > * {display:block !important;}
+	.ui-widget-content {border:0px !important;}
+}

@@ -1,0 +1,129 @@
+title: Grant Opportunity
+
+fields:
+  _template:
+    type: hidden
+    default: grant-opportunity-display
+
+  fundingSource:
+    display: Funding Source
+    type: text
+
+
+  keywords:
+    display: Keywords
+    required: false
+    type: suggest
+    create: true
+    max_items: 10
+    options:
+      - Aging
+      - Child Abuse
+      - Criminal Records
+      - Criminal Justice
+      - Corrections
+      - Court Services
+      - Defense
+      - Domestic Violence
+      - Forensic Sciences
+      - Gangs
+      - Human Services
+      - Human Trafficking
+      - Jail
+      - Juveniles
+      - Law Enforcement
+      - Offender Services
+      - Partnerships
+      - Prevention and Education
+      - Probation and Parole
+      - Prosecution
+      - Research and Evaluation
+      - Security
+      - Sexual Assault
+      - Substance Abuse
+      - Technology Improvement
+      - Training
+      - Treatment
+      - Victims
+
+
+
+  eligibility:
+    display: Eligibility
+    required: false
+    type: suggest
+    create: true
+    max_items: 5
+    options:
+      - State Agency
+      - Local Agency
+      - Not for Profit
+      - Tribal
+      - Educational Institution
+
+
+  grantAmount:
+    display: Amount
+    type: text
+
+  fundingSource:
+    display: Funding Source
+    type: text
+
+  contact:
+    display: Contact URL
+    type: text
+    required: false
+
+  content:
+    display: Content
+    type: redactor
+
+  icjiagrant:
+    display: Is this an ICJIA grant?
+    type: select
+    options:
+      - NON-ICJIA
+      - ICJIA
+
+  summary:
+    display: Summary (for Search)
+    required: false
+    type: textarea
+    height: 100
+
+  status:
+    display: Grant status
+    type: select
+    options:
+      - open
+      - closed
+
+  positive_keywords:
+    display: Positive Search Keywords
+    required: false
+    default:
+    type: tags
+
+  negative_keywords:
+    display: Negative Search Keywords
+    required: false
+    default:
+    type: tags
+
+  super_positive_keywords:
+    display: Super positive Search Keywords (weighted heavily for search -- not visible on site)
+    required: false
+    default:
+    type: tags
+
+  super_negative_keywords:
+    display: Super negative Search Keywords (weighted heavily for search -- not visible on site)
+    required: false
+    default:
+    type: tags
+
+
+
+
+hide: true

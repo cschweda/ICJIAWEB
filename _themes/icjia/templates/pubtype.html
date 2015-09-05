@@ -1,0 +1,52 @@
+---
+breadcrumbs: true
+---
+
+
+
+<div class="container">
+<div class="row">
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
+
+		<div class="article">
+
+
+			<div class="taxonomy-results">
+
+				{{if taxonomy_name}}
+				<h4>Publication type: {{ taxonomy_name|title }}</h4>
+	      <hr/>
+				{{ entries:listing folder="publications|articles" taxonomy="true" }}
+					{{ if no_results }}
+						<p class="sorry">
+							Nothing found for {{ taxonomy_name }}.
+						</p>
+					{{ else }}
+						{{ theme:partial src="taxonomy-item" use_context="true" }}
+					{{ /if }}
+				{{ /entries:listing }}
+
+				{{ else }}
+				<h2 class="h3">Available Publication Types</h2>
+
+
+				{{ taxonomy:listing type="pubtype" folder="publications|articles" }}
+					<a class="btn btn-primary btn-keyword" href="/{{ slug }}">{{ name }}</a>
+
+
+
+
+			{{ /taxonomy:listing }}
+
+
+
+				{{/if}}
+
+
+			</div>
+		</div>
+	</div>
+
+</div>
+</div>

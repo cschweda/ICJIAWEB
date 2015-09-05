@@ -1,0 +1,34 @@
+<style>
+.keyword-folder a {font-size: 12px}
+ .keyword-folder.articles a {color: #fff; background: #fe8869; padding: 3px 5px 3px 5px}
+ .keyword-folder.publications a {color: #fff; background: #466c8c; padding: 3px 5px 3px 5px}
+  .keyword-folder.news a {color: #444; background: #fff; padding: 3px 5px 3px 5px; border: 1px solid #bbb;}
+</style>
+
+
+<div class="news-item-old {{ if first }}first{{ endif }} {{ if segment_2 === 'categories' }} read-more {{endif}}" >
+	<h3 class="h5">
+	<span style="text-transform: uppercase; color: #777" class="keyword-folder {{_folder|deslugify}}"><a href="/{{_folder}}">{{_folder|deslugify}}</a></span>&nbsp;&nbsp;|&nbsp;&nbsp;
+	{{ if use_context }}<a href="{{ url }}">{{ endif }}{{ title|widont }}{{ if use_context }}</a>{{ endif }}
+</h3>
+{{ if date}}
+<h6 style="color: #777; padding-bottom: 0;">
+	 Published: {{ date }}
+</h6>
+{{endif}}
+<div style="margin-left: 10px; ">
+{{ summary|widont }}
+
+</div>
+{{ if _folder == 'publications'}}
+<div class="text-center" style="padding: 15px 0 15px 0">
+	<a href="{{puburl}}">{{title}}&nbsp;&nbsp;<i class="fa fa-file-pdf-o"></i></a>
+</div>
+
+{{endif}}
+
+
+
+<hr/>
+
+</div>

@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="col-md-3"></div>
+  <div class="col-md-8">
+
+
+
+{{ if {raven:success} }}
+  <h1>Thanks!</h1>
+{{ else }}
+
+  <h1>{{ title }}</h1>
+  {{ content }}
+
+  {{ raven:errors }}
+
+    {{ if missing }}
+    <div class="error-block">
+      <h2>Missing fields:</h2>
+      <ul>
+        {{ missing }}
+          <li><strong>{{ field }}</strong></li>
+        {{ /missing }}
+      </ul>
+    </div>
+    {{ endif }}
+
+    {{ if invalid }}
+    <div class="error-block">
+      <h2>Invalid fields:</h2>
+      <ul>
+        {{ invalid }}
+          <li><strong>{{ field }}</strong>: {{ message }}</li>
+        {{ /invalid }}
+      </ul>
+    </div>
+    {{ endif }}
+
+  {{ /raven:errors }}
+
+  {{ raven:form formset="example" attr="class:example" }}
+
+    <label for="name">Your humble name</label>
+    <input type="text" name="name" value="" /><br>
+
+    <label for="email">Your electronic mail address</label>
+    <input type="email" name="email" value="" /><br>
+
+    <label for="years">Years you too have been stranded</label>
+    <input type="text" name="years" value="" /><br>
+
+    <input type="submit" value="Submit" />
+
+  {{ /raven:form }}
+
+{{ endif }}
+
+</div>
+</div>

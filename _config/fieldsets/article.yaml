@@ -1,0 +1,211 @@
+title: Article
+
+fields:
+  _template:
+    type: hidden
+    default: article
+
+
+  splash:
+    display: Splash Photo
+    type: file
+    allowed: [png, jpg, jpeg]
+    destination: assets/img/splash/
+
+  authors:
+    display: Authors
+    required: false
+    type: tags
+
+
+  # related:
+  #   display: Related Articles
+  #   type: suggest
+  #   create: false
+  #   max_items: 3
+  #   content:
+  #     folder: articles
+  #     label: title
+  #     value: title
+
+# Subject Areas:
+# - Prevention/Intervention
+# - Law enforcement
+# - Prosecution and courts
+# - Community Corrections
+# - Jails and Prisons
+# - Victims
+# - Criminal Justice System
+
+
+
+  area:
+    display: Subject Area
+    required: false
+    default:
+    type: tags
+
+  pubtype:
+    display: Publication Type
+    required: false
+    default:
+    type: tags
+
+
+  keywords:
+    display: Keywords
+    required: false
+    type: suggest
+    create: true
+    max_items: 10
+    options:
+      - Aging
+      - Child Abuse
+      - Criminal Records
+      - Criminal Justice
+      - Corrections
+      - Court Services
+      - Defense
+      - Domestic Violence
+      - Forensic Sciences
+      - Gangs
+      - Human Services
+      - Human Trafficking
+      - Jail
+      - Juveniles
+      - Law Enforcement
+      - Offender Services
+      - Partnerships
+      - Prevention and Education
+      - Probation and Parole
+      - Prosecution
+      - Research and Evaluation
+      - Security
+      - Sexual Assault
+      - Substance Abuse
+      - Technology Improvement
+      - Training
+      - Treatment
+      - Victims
+
+  teaser:
+    display: Teaser
+    required: false
+    type: textarea
+    height: 100
+
+  summary:
+    display: Summary (for Search)
+    required: false
+    type: textarea
+    height: 100
+
+  paragraphType:
+    display: Paragraphs Indent or Block
+    type: select
+    default:
+    options:
+      - indent
+      - block
+
+  leftColumn:
+    display: Left column content
+    type: redactor
+    height: 200
+    default:
+
+  content:
+    display: Page Content
+    required: false
+    default:
+    type: redactor
+
+
+  disclaimer:
+    display: Disclaimer
+    type: redactor
+
+  jsFile:
+    display: Javascript file link
+    type: text
+
+  tabviz:
+    display: Display tabs?
+    type: select
+    options:
+      true: Yes, display the tabs
+      false: No, do not display the tabs
+
+  tab1:
+    display: Tab 1 text
+    default: Overview
+    type: text
+
+  tab2:
+    display: Tab 2 text
+    default: Full Report
+    type: text
+
+  pdf_uploads:
+      display: PDF paths
+      type: replicator
+      sets:
+        report_set:
+                display: PDF Link
+                fields:
+                    title:
+                        display: PDF Title
+                        required: true
+                        type: text
+                    pdf:
+                        type: text
+                        display: Path /assets/articles/
+                        required:
+                        default: /assets/articles/
+
+
+
+
+  positive_keywords:
+    display: Positive Search Keywords
+    required: false
+    default:
+    type: tags
+
+  negative_keywords:
+    display: Negative Search Keywords
+    required: false
+    default:
+    type: tags
+
+  super_positive_keywords:
+    display: Super positive Search Keywords (weighted heavily for search -- not visible on site)
+    required: false
+    default:
+    type: tags
+
+  super_negative_keywords:
+    display: Super negative Search Keywords (weighted heavily for search -- not visible on site)
+    required: false
+    default:
+    type: tags
+
+
+  # excel_uploads:
+  #     display: Excel Uploads
+  #     type: replicator
+  #     sets:
+  #       report_set:
+  #               display: Excel Upload
+  #               fields:
+  #                   title:
+  #                       display: Excel Title
+  #                       required: true
+  #                       type: text
+  #                   excel:
+  #                       type: file
+  #                       allowed: [ppt, pptx]
+  #                       destination: assets/excel/reports
+
+
+hide: true

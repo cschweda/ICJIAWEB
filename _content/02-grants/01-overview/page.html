@@ -1,0 +1,272 @@
+---
+title: Overview
+_template: page
+_fieldset: page
+upload: ""
+super_positive_keywords:
+  - FSGU
+  - grants
+  - funding
+  - VAWA
+  - Byrne
+  - JAG
+  - MVTPC
+  - FAQ
+  - Frequently Asked Questions
+  - VOCA
+  - victims
+summary: The Federal and State Grants Unit oversees federal and state assistance programs administered by the Authority. The unit is responsible for developing, implementing, and monitoring state and local programs. These tasks include planning, program development, technical assistance, coordination, and administration.
+breadcrumbs: 'true'
+---
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 col-md-3 col-lg-3 ">
+      <h1 class="h3" style="padding-bottom: 5px; margin-top: 0px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;">Federal and State Grants</h1>
+      <!--<h2 class="h5" style="color: #777; margin-top: -30px; margin-bottom: 15px; ">Dr. Megan Alderden, Associate Director</h3>-->
+      <!-- <div class="text-center well" style="margin-top: 40px">
+
+
+
+
+                </div>
+
+
+         </div> -->
+
+         <div class="bs-sidebar hidden-print" role="complementary" data-offset-bottom="400" data-offset-top="90" data-spy="affix">
+           <div class="nav bs-sidenav well" style="margin-top: 30px;">
+
+             <h3 class="h5" style="padding-bottom: 8px; text-transform: uppercase; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;">ICJIA Grant opportunities</h3>
+
+               {{entries:listing folder="grant-opportunities" show_past="false" show_future="true" conditions="icjiagrant:ICJIA"}}
+
+               {{ if no_results }}
+                   <p class="text-center">
+                       There are no Authority grant opportunities available at this time.
+                   </p>
+               {{ else }}
+               <h4 class="h6">
+                 <a href="{{url}}">{{title}}</a></h4>
+                 <p>Deadline: {{date}}</p>
+
+               {{if !last}}
+
+               <hr>
+
+               {{endif}}
+               {{endif}}
+
+
+
+
+
+               {{/entries:listing}}
+
+
+
+
+           </div>
+         </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+    <div class="col-sm-12 col-md-9 col-lg-9">
+
+
+
+
+
+        	  <p>The Federal & State Grants Unit oversees federal and state assistance programs administered by the Authority. The unit is responsible for developing, implementing, and monitoring state and local programs. These tasks include planning, program development, technical assistance, coordination, and administration.</p>
+
+            <p>For more information about ICJIA administered grant programs, please call the Authority, 312-793-8550 or email <a href="mailto: cja.grantsunit@illinois.gov">cja.grantsunit@illinois.gov</a>.</p>
+
+            <hr>
+
+
+            <div class="tabbable responsive">
+            <div class="default-view-tabs" style="margin-top: 20px;">
+          		<!-- <div class="tabbable-panel">
+          				<div class="tabbable-line"> -->
+                  <div>
+                    <div>
+                    <ul class="nav nav-tabs responsive" id="FSGU-tabs" role="tablist">
+                      <li role="presentation"><a id="article-tab3" role="tab" aria-controls="profile" href="#grant-programs" data-toggle="tab">Current Programs</a></li>
+
+                        <li role="presentation"><a id="article-tab2" role="tab" aria-controls="home" href="#grant-opportunities" data-toggle="tab">Opportunities</a></li>
+
+                            <li role="presentation"><a id="article-tab1" role="tab" aria-controls="home" href="#grant-resources" data-toggle="tab">Resources</a></li>
+
+                        <li role="presentation"><a id="article-tab4" role="tab" aria-controls="home" href="#grant-faqs" data-toggle="tab">FAQ</a></li>
+
+                        <li role="presentation"><a id="article-tab5" role="tab" aria-controls="home" href="#grant-staff" data-toggle="tab">Staff</a></li>
+
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+
+
+            <div class="tab-content" style="margin-top: 30px;">
+            	<div class="tab-pane active" id="grant-programs" role="tabpanel">
+
+                <div class="well text-center" style="margin-bottom: 30px; font-weight: 700">
+                <p >The following programs are currently managed by the Authority. For a complete list of all current and past grant programs, please see the <a href="/grant-programs">grant archive</a>.</p>
+
+              </div>
+                  {{ theme:partial src="grants-programs-current"}}
+
+
+
+
+
+        	   </div><!-- //Tab: programs -->
+
+
+
+
+
+          <div class="tab-pane" id="grant-faqs" role="tabpanel">
+
+
+
+
+
+          {{ theme:partial src="grants-faq"}}
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+          </div><!-- //Tab: faq -->
+
+
+
+          <div class="tab-pane" id="grant-staff">
+            {{ theme:partial src="grants-staff"}}
+          </div>
+
+
+
+          <div class="tab-pane" id="grant-resources" role="tabpanel">
+            <!-- ******* resources tab start ***************** -->
+
+          {{theme:partial src="grants-resources"}}
+
+
+
+              <!-- ******* //resources tab end ***************** -->
+          </div><!-- //Tab: Resources -->
+
+
+          <div class="tab-pane" id="grant-opportunities" role="tabpanel">
+            <!-- ******* opportunities tab start ***************** -->
+
+
+
+
+
+            {{theme:partial src="grants-opportunities"}}
+
+
+
+
+
+
+
+              <!-- ******* //opportunities tab end ***************** -->
+          </div><!-- //Tab: Opportunities -->
+
+
+
+        </div> <!-- //tab-content -->
+      </div> <!-- //tabbable-line -->
+    </div> <!-- //tabbable-panel -->
+  </div> <!-- //article-view-tabs -->
+
+
+
+</div>
+
+    </div>
+  </div> <!-- //row -->
+ <!-- //container -->
+ </div>
+
+<script>
+
+
+
+
+$(document).ready(function() {
+
+
+  $('#grant-opps-table').dataTable({
+      "order": [[ 0, "asc" ]],
+      "responsive": true,
+      "fnDrawCallback": function( oSettings ) {
+        console.log( 'DataTables has redrawn the table' );
+        fnOpenClose();
+    }
+  });
+
+  function fnOpenClose(){
+
+    $( ".modal-trigger" ).on( "click", function(e) {
+      e.preventDefault();
+      var url=$(this).attr('href');
+      var title = $(this).attr('title');
+      console.log(url, title);
+      eModal.ajax(url, title);
+    });
+
+
+  }
+
+	$('.grant-expander').readmore({
+		speed: 175,
+		collapsedHeight: 91,
+		moreLink: '<a href="#"><span class="expand-style">More  <i class="fa fa-angle-double-down"></i></span></a>',
+		lessLink: '<a href="#"><span class="expand-style"><i class="fa fa-angle-double-up"></i>  </span></a>',
+		afterToggle: function() {
+			progressBarInit();
+		}
+	});
+
+
+  $(".tabbable.responsive").resptabs();
+
+
+
+
+
+});
+</script>

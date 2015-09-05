@@ -1,0 +1,135 @@
+<style>
+.nav-tabs li {font-family: 'Oswald', sans-serif; font-size: 20px; text-transform: uppercase;}
+.bs-sidebar ul li {font-size: 20px}
+
+
+{{if paragraphType == 'indent'}}
+p {text-indent: 1.5em}
+p.drop {text-indent: 0;}
+{{endif}}
+</style>
+
+
+
+
+
+{{ theme:partial src="research-article-progress-bar" }}
+
+
+	{{ if splash }}
+		{{ theme:partial src="site-splash"}}
+	{{/if}}
+
+<div class="container-fluid">
+
+
+	<div class="col-md-3 no-print" style="margin-top: 50px;">
+		  <div class="bs-sidebar hidden-print" role="complementary" data-spy="affix" data-offset-top="400" data-offset-bottom="350">
+
+				<ul class="nav bs-sidenav" style="border: 0px;">
+
+					<li >
+
+
+
+					{{leftColumn}}
+
+
+					</li>
+				</ul>
+
+				{{theme:partial src="research-article-social-sidebar"}}
+			</div>
+	</div>
+<!--/left-->
+
+
+
+
+
+<div class="col-md-7" id="content">
+
+	<div class="article">
+		<span class="article-publication-type">
+			{{ pubtype_url_list }}
+		</span>
+		&nbsp;|&nbsp;
+		<span class="article-subject-area">{{ area_url_list }}</span>
+		<h1 class="article-headline">{{ title }}</h1>
+		<div class="article-teaser">{{ teaser }}</div>
+
+
+
+		<div style="border-bottom: 1px solid #aaa; padding-bottom: 6px; width: 100%">
+		{{if authors}}	<span class="article-author">
+				{{ authors_sentence_url_list }}
+			</span>
+			&nbsp;|&nbsp;{{endif}}
+			<span class="article-date">{{date}}</span>
+
+		</div>
+
+
+
+<div>
+  <!-- Nav tabs -->
+	{{ if tabviz == 'true'}}
+  <ul class="nav nav-tabs" role="tablist" style="margin-top: 25px">
+    <li role="presentation" class="active">
+			<a href="#{{tab1|slugify}}" aria-controls="home" role="tab" data-toggle="tab" class="show-toc no-print">{{tab1}}</a>
+		</li>
+    <li role="presentation">
+			<a href="#{{tab2|slugify}}" aria-controls="profile" role="tab" data-toggle="tab" class="hide-toc no-print">{{tab2}}</a>
+		</li>
+
+  </ul>
+	{{endif}}
+
+  <!-- Tab panes -->
+	{{ if tabviz == 'true'}}
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="{{tab1|slugify}}">{{theme:partial src="research-article-main-content"}}</div>
+    <div role="tabpanel" class="tab-pane" id="{{tab2|slugify}}">
+			{{ if pdf_uploads:0}}
+		{{pdf_uploads}}
+		<div style="margin-top: 30px; border-bottom: 1px solid #ccc;">
+		<h4 class="text-center" style="margin-top: 30px">{{title}}</h4>
+		<div class="text-center" style="margin-top: 20px; margin-botton: 20px">
+		<a href="{{pdf}}" class="btn btn-default track" role="button">Download&nbsp;&nbsp;<i class="fa fa-file-pdf-o" style="margin-bottom: 0.3em"></i></a>
+	</div>
+
+		<iframe style="margin-top: 35px; margin-bottom: 40px" src="/ViewerJS/#..{{pdf}}" width='100%' height='400' allowfullscreen webkitallowfullscreen></iframe>
+
+	</div>
+		{{/pdf_uploads}}
+		{{else}}
+		No downloads available
+		{{endif}}
+
+		</div>
+
+  </div> <!-- //tab-content -->
+{{else}}
+{{theme:partial src="research-article-main-content"}}
+
+
+{{endif}}
+</div>
+
+
+
+
+
+
+
+
+
+
+	</div>
+	<!-- article -->
+
+	<div style="height: 50px"></div>
+
+</div>
+<!-- col-md-7 -->
+</div>

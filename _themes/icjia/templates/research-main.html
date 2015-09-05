@@ -1,0 +1,208 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+      <h1 class="h3" style="margin-top: 0px;border-bottom: 1px solid #ccc; padding-bottom: 5px;">Research & Analysis Unit</h1>
+      <h2 class="h5" style="color: #777; margin-bottom: 15px; ">
+        <a href="/biographies/megan-alderden">Dr. Megan Alderden</a>, Associate Director</h3>
+
+
+
+
+
+
+
+
+    </div>
+    <div class="col-md-8">
+
+
+
+
+        	  <p>Welcome to the Research & Analysis Unit of the Illinois Criminal Justice Information Authority. The Research & Analysis Unit serves as Illinois' Statistical Analysis Center (SAC). State SACs provide objective analysis of criminal justice data for informing statewide policy and practice. The Illinois SAC is affiliated with and supported by the Justice Research and Statistics Association (JRSA), a national nonprofit organization that promotes collaboration and exchange of information among state SACs, and acts as a liaison between state agencies and the U.S. Department of Justice.</p>
+            <div class="tabbable responsive">
+            <div class="default-view-tabs" style="margin-top: 20px">
+          		<div class="tabbable-panel">
+          				<div class="tabbable-line">
+                    <ul class="nav nav-tabs responsive" id="article-tabs" role="tablist">
+                      <li role="presentation"><a href="#overview" aria-controls="home" role="tab" data-toggle="tab" id="article-tab1">Overview</a></li>
+                        <li role="presentation"><a href="#staff" aria-controls="profile" role="tab" data-toggle="tab" id="article-tab2">Staff</a></li>
+
+
+                          <li role="presentation"><a href="#articles" aria-controls="profile" role="tab" data-toggle="tab" id="articles_tab">articles</a></li>
+
+                        <!-- <li><a href="#publications" data-toggle="tab" data-tab-url="/research/display-publications">Publications</a></li> -->
+
+                          <!-- <li><a href="#data" data-toggle="tab" data-tab-url="/research/display-dataset"  id="data-tab">Data</a></li> -->
+
+                          <li><a href="#publications" data-toggle="tab" >Publications</a></li>
+
+                          <li><a href="#data" data-toggle="tab" id="data-tab">Data</a></li>
+
+                            <li><a href="#tools" data-toggle="tab" id="data-tab">Tools</a></li>
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+
+
+            <div class="tab-content" class="indent-left-15">
+            	<div role="tabpanel" class="tab-pane active" id="overview">
+
+            <div class="">
+            <h2 class="h4" style="margin-top: 25px; border-bottom: 1px solid #ccc; padding-bottom: 5px;">The Research and Evaluation Center</h2>
+            <h3 class="h6" style="color: #777; margin-bottom: 15px; ">
+              <a href="/biographies/jessica-reichert">Jessica Reichert</a>, Manager
+            </h3>
+              <p>The Research and Evaluation Center conducts applied research and evaluation projects that examine critical criminal and juvenile justice topics and criminal justice program implementation and outcomes in Illinois. Staff collect data through multiple research methods, conduct advanced statistical analyses, and summarize findings in publications that aim to inform policy and practice. The center also conducts presentations and offers technical assistance to help state and local programs and initiatives use data to inform and improve their work.</p>
+
+              <h2 class="h4" style="margin-top: 25px;border-bottom: 1px solid #ccc; padding-bottom: 5px;">Criminal Justice Clearinghouse & Analysis Center</h2>
+              <h3 class="h6" style="color: #777; margin-bottom: 15px">
+                <a href="/biographies/christine-devitt-westley">Christine Devitt Westley</a>, Manager
+                </h3>
+              <p>The Criminal Justice Clearinghouse & Analysis Center continually collects, analyzes, and disseminates statistical information on a variety of crime, and criminal and juvenile justice system indicators. The center maintains a repository of criminal justice data in Illinois, much of which is available online and accessible through online analytical tools. In addition to maintaining data, center staff are responsible for performing trend and statistical analyses of statewide criminal justice data, conducting in-house recidivism studies, and providing technical assistance to outside researchers regarding the analysis and interpretation of the data maintained by the center. The center conducts conducting periodic quality audits of criminal history records maintained by Illinois State Police in the state central repository. In addition, in partnership with the Illinois State Police, the center assists in the dissemination of state criminal history record information data for research purposes.</p>
+
+              <h2 class="h4" style="margin-top: 25px;border-bottom: 1px solid #ccc; padding-bottom: 5px;">Center for Sponsored Research & Program Development</h2>
+                <h3 class="h6" style="color: #777; margin-bottom: 15px">Tracy Hahn, Manager</h3>
+
+              <p>The Center for Sponsored Research & Program Development secures experts in the field to conduct research and evaluate programs that inform policy, support evidence-based practices, and guide decision-making. Staff review and select programs and other priority criminal justice-related topics viable for evaluation and further research. Researchers are selected through a competitive process and are awarded federal grant subcontracts to conduct studies. The center also provides technical assistance to programs supported with Authority-administered grant funds as they refine program objectives, develop data collection tools, and assess program performance. </p>
+
+
+
+
+
+            </div><!-- //indent-15 -->
+
+        	</div><!-- //Tab: Overview -->
+
+
+
+        	<div role="tabpanel" class="tab-pane" id="staff">
+            <!-- ******* staff tab start ***************** -->
+
+              	{{ entries:listing folder="biographies" sort="sortField" conditions="role:Staff,unit:Research and Analysis"}}
+                  <div class="staff-list" style="margin-bottom: 25px;">
+                    <h2 class="h5">{{ title }}
+                      {{if degrees}}
+                      {{degrees}}
+                      , {{name}}
+                      {{/degrees}}
+                      {{endif}}
+
+                      {{if content}}
+                      &nbsp;&nbsp;|&nbsp;&nbsp;<span style="color: #999"><a href="/biographies/{{title|slugify}}">Full Bio</a>&nbsp;<i class="fa fa-angle-double-right"></i></span></h2>
+                      {{endif}}
+
+                      <h3 class="h6" style="margin-top: -10px; margin-bottom: 3px; color: #888; ">{{orgtitle}}
+
+                      &nbsp;
+                      {{if phone }}|&nbsp;&nbsp;<span style="color: #555;">{{phone}}</a>{{endif}}&nbsp;&nbsp;|&nbsp;&nbsp;{{theme:partial src="author-social" use_context="true"}}
+                    </h3>
+
+                    {{if academicBackground}}{{academicBackground}}{{/if}}
+
+                    {{if interestAreas}}{{interestAreas}}{{/if}}
+
+
+                  </div>
+                 {{ /entries:listing }}
+
+
+
+
+              <!-- ******* //staff tab end ***************** -->
+          </div><!-- //Tab: Staff -->
+
+          <div class="tab-pane" id="publications">
+            <h5>Loading publications...<i class="fa fa-circle-o-notch fa-spin"></i></h5>
+          </div>
+
+
+
+
+
+
+          <div role="tabpanel" class="tab-pane" id="articles">
+            <!-- ******* data tab start ***************** -->
+            {{ entries:listing folder="articles" limit="10" }}
+                {{ if no_results }}
+                <p class="sorry">
+
+                Check back soon.
+                </p>
+                {{ else }}
+                  {{ theme:partial src="article-snippet" use_context="true" }}
+                {{ endif }}
+            {{ /entries:listing }}
+
+            <!-- ******* //data tab end ***************** -->
+          </div><!-- //Tab: data -->
+
+
+          <div role="tabpanel" class="tab-pane" id="data">
+            <!-- ******* data tab start ***************** -->
+            <h5>Loading datasets...<i class="fa fa-circle-o-notch fa-spin"></i></h5>
+            <!-- ******* //data tab end ***************** -->
+          </div><!-- //Tab: data -->
+
+
+          <div role="tabpanel" class="tab-pane" id="tools">
+            <!-- ******* tools tab start ***************** -->
+
+          {{theme:partial src="research-tools"}}
+
+            <!-- ******* //tools tab end ***************** -->
+          </div><!-- //Tab: tools -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div> <!-- //tab-content -->
+      </div> <!-- //tabbable-line -->
+    </div> <!-- //tabbable-panel -->
+  </div> <!-- //article-view-tabs -->
+
+</div>
+
+
+
+    </div>
+  </div> <!-- //row -->
+</div> <!-- //container -->
+
+<script>
+$(document).ready(function() {
+
+
+  //Background AJAX load
+  var loadurl="/research/display-dataset";
+  var targ="#data"
+  $.get(loadurl, function(data) {
+      $(targ).html(data)
+  });
+
+  var loadurl2="/research/display-publications";
+  var targ2="#publications"
+  $.get(loadurl2, function(data) {
+      $(targ2).html(data)
+  });
+
+
+    $(".tabbable.responsive").resptabs();
+});
+</script>

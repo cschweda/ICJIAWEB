@@ -1,0 +1,45 @@
+---
+_fieldset: page
+title: Publications
+splash: ""
+upload: ""
+breadcrumbs: 'true'
+_template: page
+summary: Research and Analysis publications.
+---
+
+<style>
+
+ ul#categoryFilterOptions {list-style-type: }
+
+ ul#categoryFilterOptions li { display: inline; }
+
+a.btn { font-family: 'Oswald', sans-serif !important; font-size: 12px; text-transform: uppercase; }
+
+
+</style>
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-sm-12 col-md-1 col-lg-1"></div>
+    <div class="col-sm-12 col-md-10 col-lg-10">
+
+      <h1 class="h2" style="border-bottom: 1px solid #ccc; padding-bottom: 8px; margin-bottom: 20px">Research and Analysis Publications</h1>
+
+        <div style="margin-bottom: 30px; font-size: 14px">
+        <i class="fa fa-caret-left"></i>&nbsp;&nbsp;<a href="/research">Back to R&A Overview</a>
+      </div>
+
+
+<div class="text-center" id="target">
+<h6 style="margin-top: 100px; margin-bottom: 100px;">Loading publications&nbsp;<i class="fa fa-refresh fa-spin"></i></h6>
+</div>
+</div>
+</div>
+</div>
+
+
+<script>
+
+$("#target").load("/research/display-publications");
+
+</script>

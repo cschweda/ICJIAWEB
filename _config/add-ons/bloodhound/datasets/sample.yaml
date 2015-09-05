@@ -1,0 +1,39 @@
+# This is a sample dataset to show you how they work, note that we're only
+# overriding the things that we want to for this dataset. All other values for
+# settings will be pulled from the global config and the default values that
+# come with Bloodhound out-of-the-box.
+min_characters: 2
+# log successful searches as `info`-level messages?
+log_successful_searches: true
+
+# log failed searches as `warn`-level messages?
+log_failed_searches: true
+
+folders: grant-programs|grant-opportunities|biographies|news|systems|articles|publications|grants|about|research|events|redeploy|ilfvcc|datasets|drone|sites
+limit: 75
+type: all
+include_properties:
+  - title
+  - summary
+  - content
+  - positive_keywords
+  - negative_keywords
+  - super_positive_keywords
+  - super_negative_keywords
+property_weights:
+  title: 2
+  keywords: 4
+  content: 6
+  positive_keywords: 3
+  negavite_keywords: -3
+  super_positive_keywords: 8
+  super_negative_keywords: -8
+query_cache_length: on cache update
+use_stemming: true
+use_alternates: true
+#since: December 31, 1999
+show_future: true
+include_content: true
+# folders to exclude in this search (exclude multiple folders at one time by
+# pipe-delimiting them)
+exclude: search

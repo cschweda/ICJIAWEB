@@ -1,0 +1,29 @@
+{
+  "name": "yawa",
+  "version": "0.0.0",
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "bootstrap": "~3.3.5",
+    "jquery": "1.11.3",
+    "readmore": "~2.0.5",
+    "jquery-easing-original": "~1.3.1",
+    "highcharts-release": "~4.1.3",
+    "font-awesome-bower": "~4.3.0",
+    "jquery-mockjax": "latest",
+    "headroom.js": "~0.7.0",
+    "jquery.peekABar": "~1.0.1"
+  },
+  "devDependencies": {
+    "Hover": "~2.0.2",
+    "bootstrap-tabcollapse": "~0.2.6",
+    "bx-slider.js": "~4.2.3",
+    "ekko-lightbox": "~3.3.2",
+    "headroom.js": "~0.7.0",
+    "isotope": "~2.2.1",
+    "jasny-bootstrap": "~3.1.3",
+    "quick-event-tracking": "*",
+    "slick-carousel": "~1.5.0",
+    "viewerjs": "~0.5.7",
+    "yamm3": "~1.1.0"
+  }
+}

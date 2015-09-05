@@ -1,0 +1,37 @@
+
+<h4 class="text-center" style="font-family: 'Lato', san-serif;">News</h4>
+  <div class="separator-line"></div>
+
+
+  {{ entries:listing folder="news" limit="6" show_past="true" show_future="false"}}
+	    {{ if no_results }}
+		  <p class="sorry">
+			No news is good news.<br>
+			Check back soon.
+		  </p>
+	    {{ else }}
+
+
+
+
+      <div class="news-item">
+      <h5 style="font-weight: 900; margin-top: 40px; line-height: 25px;"><span style="font-weight: 400; color: #666">{{ date }}</span> | <a href="{{ url }}">{{ displayTitle }}</a></h5>
+
+          <div class="expander-news">
+          {{ content|widont }}
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+	    {{ endif }}
+	{{ /entries:listing }}
+
+  <div class="text-center" style="margin-top: 50px">
+  <a class="btn btn-default" href="/news" role="button" style="text-transform: uppercase; font-family: 'Lato'; color: #000; margin-bottom: 20px;">News Archive&nbsp;&raquo;</a>
+  </div>

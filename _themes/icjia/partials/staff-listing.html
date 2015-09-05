@@ -1,0 +1,35 @@
+{{ entries:listing folder="biographies" sort="sortField" conditions="role: Staff"}}
+	<div class="staff-list" style="margin-top: 35px; margin-bottom: 35px;">
+		<h2 class="h5">
+			<a href="{{url}}" target="_blank">
+				{{ title }}
+			</a>&nbsp;{{if orgtitle}}|&nbsp;<span style="color: #777">&nbsp;{{orgtitle}}</span>{{endif}}
+
+
+		</h2>
+
+
+
+		<h3 class="h6" style="margin-top: -10px">
+			<!-- {{ if unit == "Federal and State Grants"}}
+			<a href="/grants">{{unit}}</a>
+			{{elseif unit == "Research and Analysis"}}
+			<a href="/research">{{unit}}</a>
+			{{elseif unit == "Information Systems"}}
+			<a href="/systems">{{unit}}</a>
+			{{endif}} -->
+			{{if unit }}
+			<span style="color: #888;">{{unit}}</span>
+			{{endif}}
+
+			{{if organization == 'Adult Redeploy'}}
+			<span style="color: #888;">Adult Redeploy</span>
+			{{endif}}
+			&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			{{if phone }}<span style="color: #555;">{{phone}}</a>{{else}}<span style="color: #555;">(312) 793-8550</a>{{endif}}&nbsp;&nbsp;&nbsp;|&nbsp;{{theme:partial src="author-social" use_context="true"}}
+		</h3>
+
+
+
+	</div>
+ {{ /entries:listing }}

@@ -1,0 +1,94 @@
+
+
+<div class="text-center well filter-group" style="font-family: 'Lato', sans-serif; color: #777; margin-bottom : 30px">
+  <a data-target="*" class="filter active-selection">ALL GRANTS</a>&nbsp;|&nbsp;
+  <a data-target=".Current" class="filter">CURRENT</a>&nbsp;|&nbsp;
+  <a data-target=".Archived" class="filter">ARCHIVED</a>
+</div>
+
+
+
+<div id="grant-grid">
+
+<h4 style="margin-top: 0; padding-top: 0;" id="federal-programs" class="grant-single Current Archived header">Federal Programs</h4>
+
+
+
+{{ entries:listing folder="grant-programs" conditions="granttype:Federal" sort_by="title"}}
+
+    {{if !no_results}}
+    <div style="margin-left: 25px; margin-bottom: 60px" class="grant-single {{grantstatus}}" id="{{title|slugify}}">
+    <h5 style="padding-bottom: 6px; border-bottom: 1px solid #ccc; color: #555">{{title}}</h5>
+    <!-- <div class="grant-expander"> -->
+      <div style="text-transform: uppercase; margin-bottom: 10px; font-size: 12px; font-weight: 900; color: #888; font-family: 'Lato', sans-serif">Status: {{grantstatus}}</div>
+
+    {{ content|widont }}
+  <!-- </div> -->
+  {{if attachmentA}}
+  <h6>Program allocations by fiscal year:</h6>
+
+  {{attachmentA}}
+  {{endif}}
+  </div>
+
+
+
+    {{endif}}
+
+{{ /entries:listing }}
+
+
+<h4 style="margin-top: 0; padding-top: 0;" id="state-programs" class="grant-single Current Archived header">State Programs</h4>
+
+
+
+{{ entries:listing folder="grant-programs" conditions="granttype:State" sort_by="title"}}
+
+    {{if !no_results}}
+    <div style="margin-left: 25px; margin-bottom: 60px" class="grant-single {{grantstatus}}" id="{{title|slugify}}">
+    <h5 style="padding-bottom: 6px; border-bottom: 1px solid #ccc; color: #555">{{title}}</h5>
+    <!-- <div class="grant-expander"> -->
+    <div style="margin-bottom: 10px; font-size: 12px; font-weight: 900; color: #666; font-family: 'Lato', sans-serif">Status: {{grantstatus}}</div>
+    {{ content|widont }}
+  <!-- </div> -->
+  {{if attachmentA}}
+  <h6>Program allocations by fiscal year:</h6>
+
+  {{attachmentA}}
+  {{endif}}
+  </div>
+
+
+
+    {{endif}}
+
+{{ /entries:listing }}
+
+
+
+
+
+
+
+</div>
+
+
+<script>
+var $container = $('#grant-grid');
+
+$container.isotope({
+  itemSelector: '.grant-single',
+  layoutMode: 'vertical'
+});
+
+$('.filter-group').on('click', 'a', function() {
+  var filterValue = $(this).attr('data-target');
+  //alert(filterValue);
+  $container.isotope({
+    filter: filterValue
+  });
+  $(".filter-group a").removeClass("active-selection");
+  $(this).addClass("active-selection");
+  	progressBarInit();
+});
+</script>

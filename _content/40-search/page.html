@@ -1,0 +1,81 @@
+---
+_fieldset: page
+title: Search
+splash: ""
+upload: ""
+breadcrumbs: 'true'
+_template: search
+---
+
+
+<div class="text-center" style="margin-bottom: 30px">
+
+<form role="form" class="form-inline" action="/search" method="GET">
+  <div class="form-group">
+    <label class="sr-only" for="searchField">Search</label>
+    <div class="input-group" style="width: 400px" >
+
+      <input type="text" class="form-control" id="searchField" value="{{ get:query }}" name="query" placeholder="Search ICJIA">
+
+    </div>
+  </div>
+  <button type="submit" class="btn btn-default">Search</button>
+</form>
+
+</div>
+
+
+{{ bloodhound:search dataset="sample" }}
+   {{ if not_enough_characters }}
+   <div class="text-center">
+      <p>Please type a couple more characters.</p>
+    </div>
+   {{ elseif no_results }}
+   <div class="text-center">
+      <p><strong>Sorry, no results were found for <em>{{ _query }}</em></strong>.</p>
+      <div class="" style="margin-top: 20px">
+        <hr/>
+        <h2 class="h5">Can't find what you're looking for?</h2> <p>Try <a href="/keywords">searching by keyword</a> or <a href="/area">subject area</a>.</p> <p>Authority publications are <a href="/publications">available here</a>.</p>
+        <p>Grant opportunities are <a href="/grant-opportunities">available here</a>
+
+    </div>
+    </div>
+   {{ elseif no_query }}
+      <!-- no query, show nothing -->
+   {{ else }}
+      <!-- results! glorious results! -->
+      {{ if first }}
+
+      <div class="text-center" style="margin-bottom: 45px">
+         <h2 class="h5">Here’s what we found for <em>{{ _query }}</em>:<h2>
+      </div>
+
+      {{ endif }}
+
+
+         <h4 class="h6"><a href="{{ url }}">{{ title }}</a>&nbsp|&nbsp;{{_folder|deslugify}}&nbsp;</h4>
+
+         <p style="margin-left: 15px; margin-bottom: 20px">
+         {{if summary}}
+
+           {{summary|striptags}}...
+
+          {{elseif content}}
+            {{ content|striptags|truncate:150 }}
+
+          {{else}}
+            No summary available
+          {{endif}}
+        </p>
+
+
+      {{ if last }}
+
+      {{ endif }}
+   {{ endif }}
+{{ /bloodhound:search }}
+<!-- <hr/>
+<div class="text-center" style="margin-top: 20px">
+  <p>Can't find what you're looking for?</p> <p>Try <a href="/keywords">searching by keyword</a> or <a href="/area">subject area</a>. Authority publications are <a href="/publications">available here</a>.</p> -->
+
+</div>

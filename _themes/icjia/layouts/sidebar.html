@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>{{ defaultPageTitle }}</title>
+		<meta name="description" content="{{ defaultDescription }}">
+		<meta name="keywords" content="{{ keywords_list }}">
+		<meta name="date" content="{{ date }}">
+		<link rel="canonical" href="{{ permalink }}">
+
+
+		<!-- Facebook metatags -->
+				<meta property="og:title" content="{{ title }}" />
+				<meta property="og:site_name" content="{{ defaultSiteName }}"/>
+				<meta property="og:url" content="{{ permalink }}" />
+				<meta property="og:description" content="{{ defaultDescription }}" />
+				<meta property="fb:app_id" content="{{facebookAppId}}" />
+				<meta property="og:type" content="{{facebokContentType}}" />
+				<meta property="og:locale" content="en_US" />
+				<meta property="article:author" content="{{ facebookAuthorURL }}" />
+				<meta property="og:image" content="{{socialMediaImage}}" />
+		<!-- // Facebook metatags -->
+
+
+
+
+
+
+
+
+		<!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="{{ theme:img src="favicon.png" }}">
+
+		<!-- To prevent search engines from indexing a page, set noindex to true in your Front Matter. -->
+		{{ if noindex }}<meta name="robots" content="noindex">{{ endif }}
+
+		<!-- styles -->
+
+		<link href="{{ theme:asset src='css/icjia.css' }}" rel="stylesheet" property="stylesheet">
+
+
+	  <link rel="alternate" type="application/rss+xml" href="/feed" title="{{ _site_name }} RSS Feed">
+		<link rel="stylesheet" property="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+		<link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' property="stylesheet" type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' property="stylesheet" type='text/css'>
+
+		<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic' property="stylesheet" rel='stylesheet' type='text/css'>
+
+	<!--	<link href='http://fonts.googleapis.com/css?family=Raleway:500,600,700,800,100,400,300' rel='stylesheet' type='text/css'>-->
+
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic,400italic' rel='stylesheet' type='text/css'>
+
+
+		<script src="{{ theme:asset src='bower_components/modernizr/modernizr.js' }}"></script>
+		<script src="{{ theme:asset src='bower_components/jquery/dist/jquery.js' }}"></script>
+
+
+
+
+
+
+	</head>
+	<body>
+
+
+
+
+<div id="icjia-page-top"></div>
+
+			{{ theme:partial src="social" }}
+
+			{{ theme:partial src="navbar" }}
+
+
+
+			<!-- ////////////////////////////////////////////////// content-start \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+      {{ layout_content }}
+	
+			<!-- ////////////////////////////////////////////////// content-end \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+
+	{{ theme:partial src="footer-dark" }}
+
+
+
+
+
+
+
+
+    <script src="{{ theme:asset src='bower_components/bootstrap/dist/js/bootstrap.js' }}"></script>
+    <script src="{{ theme:asset src='bower_components/jquery-easing-original/jquery.easing.js' }}"></script>
+
+		<!-- Highcharts -->
+    <script src="{{ theme:asset src='bower_components/highcharts-release/highcharts.src.js' }}"></script>
+    <script src="{{ theme:asset src='bower_components/highcharts-release/modules/exporting.js' }}"></script>
+
+
+    <script src="{{ theme:asset src='bower_components/readmore/readmore.js' }}"></script>
+
+
+		<script src="{{ theme:asset src='bower_components/bootstrap-tabcollapse/bootstrap-tabcollapse.js' }}"></script>
+
+		<!-- Progress bar from CSS-tricks -->
+		<script src="{{ theme:asset src='js/special/progressBar.js' }}"></script>
+
+		<!-- datatables -->
+		<link href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.css" property="stylesheet" rel="stylesheet">
+		<link href="//cdn.datatables.net/responsive/1.0.6/css/dataTables.responsive.css" property="stylesheet" rel="stylesheet">
+		<script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+		<script src="//cdn.datatables.net/responsive/1.0.6/js/dataTables.responsive.js"></script>
+
+
+		<!-- Bootstrap modal lightbox -->
+		<link href="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.3.0/ekko-lightbox.min.css" rel="stylesheet" property="stylesheet">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.3.0/ekko-lightbox.min.js"></script>
+
+		<!-- https://github.com/saribe/eModal -->
+		<script src="//rawgit.com/saribe/eModal/master/dist/eModal.min.js"></script>
+
+		<!-- scrollto: https://github.com/flesler/jquery.scrollTo -->
+		<script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.0/jquery.scrollTo.min.js"></script>
+
+		<link rel="stylesheet" property="stylesheet" href="{{ theme:asset src='bower_components/bx-slider.js/dist/jquery.bxslider.css'}}">
+		<script src="{{ theme:asset src='bower_components/bx-slider.js/dist/jquery.bxslider.js' }}"></script>
+
+		<!-- headroom.hs: https://github.com/WickyNilliams/headroom.js
+		<script src="{{ theme:asset src='bower_components/headroom.js/dist/jQuery.headroom.min.js' }}"></script> -->
+
+
+
+		<!-- Charting js (if necessary) -->
+		{{if jsFile}}
+			<script src="{{ theme:asset src='js/highcharts/{{jsFile}}'}}"></script>
+		{{/if}}
+
+		<!-- ICJIA js -->
+		<script src="{{ theme:asset src='js/icjia.js' }}"></script>
+
+
+
+
+
+
+
+		<!--<script>
+		//$('body').scrollspy({selector:'.scrollclass',offset:90});
+
+	</script>-->
+
+
+
+
+
+
+	</body>
+</html>

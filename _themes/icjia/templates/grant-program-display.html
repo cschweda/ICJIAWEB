@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-7">
+      <h2 class="h6" style="color: #999; text-transform: uppercase">{{granttype}} program</h2>
+      <h3 class="h4" style="border-bottom: 1px solid #ccc; padding-bottom: 8px; margin-bottom: 20px">{{title}} {{if programLink}}
+
+        &nbsp;&nbsp;|&nbsp;&nbsp;<a href="{{programLink}}" class="" role="button">{{programLinkText}}
+          <i class="fa fa-external-link"></i></a>
+
+          {{endif}}</h3>
+      {{content}}
+
+
+
+
+
+      {{if attachmentA}}
+      <h3 class="h6">Program allocations by fiscal year:</h6>
+
+      {{attachmentA}}
+      {{endif}}
+
+
+
+
+      <p style="margin-top: 20px">For more information about ICJIA administered grant programs, please call the Authority, 312-793-8550 or email
+        <a href="mailto: cja.grantsunit@illinois.gov">cja.grantsunit@illinois.gov</a></p>
+    </div>
+  </div>
+</div>

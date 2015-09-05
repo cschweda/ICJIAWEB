@@ -1,0 +1,55 @@
+<table id="grant-opps-table" class="display" style="font-size: 12px;" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Deadline</th>
+                <th>Title</th>
+                <th>Funding Source</th>
+
+                <th>Amount</th>
+                <th>More</th>
+
+            </tr>
+        </thead>
+
+        <tfoot>
+          <tr>
+              <th>Deadline</th>
+              <th>Title</th>
+              <th>Funding Source</th>
+
+              <th>Amount</th>
+              <th>More</th>
+
+          </tr>
+        </tfoot>
+
+        <tbody>
+        {{entries:listing folder="grant-opportunities" show_past="false" show_future="true"}}
+          <tr>
+            <td>{{date format="Y-M" }}</td>
+            <td style="text-transform: uppercase">{{title}}</td>
+            <td style="">
+
+              {{fundingSource}}
+            </td>
+
+
+
+            <td style="">
+
+              {{grantAmount}}
+            </td>
+
+
+
+            <td>
+
+                <a type="button" style="font-size: 10px; text-transform: uppercase; font-family: 'Oswald', sans-serif;" class="btn btn-default btn-xs modal-trigger" title="{{title}}"  href="/grants/display-grant?t={{title|urlencode}}">More info&nbsp;&nbsp;<i class="fa fa-external-link" style="vertical-align: middle;margin-top: -0.425em"></i></a>
+
+
+            </td>
+          </tr>
+          {{/entries:listing}}
+
+        </tbody>
+    </table>

@@ -1,0 +1,35 @@
+<div class="article-snippet white">
+
+	<span style="text-transform: uppercase; color: #777"><strong>{{_folder}}</strong></span>
+
+	<h5>
+		{{ if use_context }}<a href="{{ url }}">{{ endif }}{{ title|widont }}{{ if use_context }}</a>{{ endif }}
+	</h5>
+	<h6 class="published">
+		{{ date }}
+	| {{ pubtype_url_list }}
+	| {{ area_url_list }}</h6>
+
+
+
+<div style="margin-left: 10px; ">
+	{{if splash}}
+	<img src="{{ transform src="{splash}" width="125"}}"
+			style="float: left; padding-right: 14px;" />
+	{{endif}}{{ teaser }}
+
+</div>
+
+{{if authors}}
+<h6 class="published">
+	By {{ authors_sentence_url_list|title }}</h6>
+
+	{{ else}}
+
+	<div style="height: 50px"></div>
+
+{{endif}}
+
+</div>
+
+<hr/>

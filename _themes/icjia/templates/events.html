@@ -1,0 +1,41 @@
+---
+breadcrumbs: true
+---
+
+<div class="container">
+<div class="row">
+  <div class="col-md-4">
+  </div>
+
+  <div class="col-md-6" style="padding-right: 30px; border-right: 0px dotted #ccc;">
+
+    <h4 class="text-center" style="font-family: 'Lato', san-serif;">Events</h4>
+      <div class="separator-line"></div>
+
+
+    {{ entries:listing folder="events" show_future="true" show_past="true" group_by_date="Y" sort_dir="desc"}}
+
+          <div class="meeting">
+            <div class="meeting-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;{{ date format="l F n, Y" }}</div>
+          <h5 style="font-weight: 900; line-height: 25px; ">
+            {{ if siteLink }}
+            <a href="{{ siteLink }}">
+              {{ title }}&nbsp;&raquo;
+            </a>
+            {{ else }}
+              {{ title }}
+            {{/if}}
+
+          </h5>
+          </div>
+
+    {{ /entries:listing }}
+
+
+
+  </div>
+
+
+
+</div>
+</div>

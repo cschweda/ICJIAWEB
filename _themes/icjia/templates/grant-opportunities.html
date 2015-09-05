@@ -1,0 +1,99 @@
+---
+breadcrumbs: 'true'
+_template: default-blank
+---
+
+
+ <div class="container">
+   <div class="col-md-1"></div>
+   <div class="col-md-10">
+
+     <h2 class="h3" style="border-bottom: 1px solid #ccc; padding-bottom: 5px; margin-bottom: 50px">Grant Opportunities</h2>
+
+      <table id="grant-table" class="display" style="font-size: 12px;" cellspacing="0" width="100%">
+              <thead>
+                  <tr>
+                      <th>Deadline</th>
+                      <th>Title</th>
+                      <th>Funding Source</th>
+
+                      <th>Amount</th>
+                      <th>More</th>
+
+                  </tr>
+              </thead>
+
+              <tfoot>
+                <tr>
+                    <th>Deadline</th>
+                    <th>Title</th>
+                    <th>Funding Source</th>
+
+                    <th>Amount</th>
+                    <th>More</th>
+
+                </tr>
+              </tfoot>
+
+              <tbody>
+              {{entries:listing folder="grant-opportunities" show_past="false" show_future="true"}}
+                <tr>
+                  <td>{{date format="Y-M" }}</td>
+                  <td style="text-transform: uppercase">{{title}}</td>
+                  <td style="">
+
+                    {{fundingSource}}
+                  </td>
+
+
+
+                  <td style="">
+
+                    {{grantAmount}}
+                  </td>
+
+
+
+                  <td>
+
+                      <a type="button" style="font-size: 10px; text-transform: uppercase; font-family: 'Oswald', sans-serif;" class="btn btn-default btn-xs modal-trigger" title="{{title}}"  href="/grants/display-grant?t={{title|urlencode}}">More info&nbsp;&nbsp;<i class="fa fa-external-link" style="vertical-align: middle;margin-top: -0.425em"></i></a>
+
+
+                  </td>
+                </tr>
+                {{/entries:listing}}
+
+              </tbody>
+          </table>
+        </div>
+    </div>
+
+  <script>
+    $(document).ready(function() {
+
+      function fnOpenClose(){
+
+        $( ".modal-trigger" ).on( "click", function(e) {
+          e.preventDefault();
+          var url=$(this).attr('href');
+          var title = $(this).attr('title');
+          console.log(url, title);
+          eModal.ajax(url, title);
+        });
+
+      }
+
+
+      $('#grant-table').dataTable({
+        "order": [
+          [0, "desc"]
+        ],
+        "responsive": true,
+        "pageLength": 50,
+        "fnDrawCallback": function( oSettings ) {
+          console.log( 'DataTables has redrawn the table' );
+          fnOpenClose();
+      }
+      });
+    });
+  </script>

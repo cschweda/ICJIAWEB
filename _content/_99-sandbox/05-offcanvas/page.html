@@ -1,0 +1,157 @@
+---
+_fieldset: page
+title: offcanvas
+_template: default-blank
+upload: ""
+_layout: default-non-icjia
+---
+<style>
+#icjia-button-bar, #site-title {display: none}
+.offCanvasButton {position: absolute; top: 19px; left: 10px; background: #fff}
+#icjia-logo {position: absolute; top: 10px; left: 60px}
+#site-title {position: absolute; top: 24px; left: 100px; font-size: 16px; font-weight: 900}
+
+
+
+#nav.affix {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+#myNavmenu, .dropdown-header {font-family: 'Lato', sans-serif;}
+</style>
+
+{{theme:partial src="icjia-off-canvas-menu"}}
+
+
+
+<div class="container-fluid no-print" style="margin:0;padding:0; margin-top: 00px">
+  <div class="featured-container" style="margin:0;padding:0">
+    <div class="featured-well full-width" style="background-image: url('/assets/img/splash/prison2.jpg')">
+      <div class="featured-tall">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="nav-wrapper" style="background: #fff; position: relative" >
+    <div id="nav" class="navbar navbar-default icjia-main" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" style="z-index: 50000">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+
+
+
+
+
+            <div id="icjia-button-bar" >
+                <a type="button" style="background: #082e6f; color: #fff; font-size: 10px" class="offCanvasButton btn btn-sm btn-default" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+                  <i class="fa fa-bars fa-2x" ></i>
+                &nbsp;&nbsp; ICJIA</a>
+
+
+            </div>
+
+
+            <div id="site-title">
+              ADULT REDEPLOY ILLINOIS
+            </div>
+
+
+
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+
+            <li><a href="/">Home</a></li>
+
+
+            <li><a href="/">Oversight</a></li>
+
+
+
+
+              <li><a href="/">Tools</a></li>
+
+              <li><a href="/">Publications</a></li>
+
+
+              <li><a href="/">Contact</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+            <li class="dropdown " data-animate="animated fadeInUp" style="z-index:500;"> <a href="#" class="dropdown-toggle " data-toggle="dropdown"> <i class="fa fa-search"> </i> </a>
+            <ul class="dropdown-menu animated bounceInDown">
+              <li id="dropdownForm">
+                <div class="dropdown-form">
+                  <form class=" form-inline" action="/search" method="GET" name="searchForm" id="searchForm">
+                    <div class="input-group " style="padding: 4px 8px 4px 8px ">
+                      <input type="text" id="query" name="query" class="form-control" style="width: 200px" placeholder="search..." />
+                      <span class="input-group-btn"> <input type="submit" class="btn btn-theme-bg" id="siteSearchButton" value="Go!" /> </span>
+                    </div>
+                    <!--input group-->
+                  </form>
+                  <!--form-->
+                </div>
+                <!--.dropdown form--> </li>
+                <!--.drop form search-->
+              </ul>
+              <!--.drop menu-->
+            </li><!--nav search form-->
+
+
+
+
+          </ul>
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+</div>
+
+
+<div style="height: 1000px"></div>
+
+
+<script>
+
+
+
+$("#nav").on('affixed.bs.affix', function() {
+  $('#nav').addClass('outline', 1000);
+  console.log('fixed')
+  $('#site-title').fadeIn();
+  $('#icjia-button-bar').fadeIn();
+});
+
+// Not affixed
+$("#nav").on('affixed-top.bs.affix', function() {
+  $('#nav').removeClass('outline', 1000);
+  console.log('not fixed')
+  $('#site-title').fadeOut();
+  $('#icjia-button-bar').fadeOut();
+});
+
+
+
+
+</script>

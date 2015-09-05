@@ -1,0 +1,38 @@
+---
+breadcrumbs: true
+---
+
+<div class="container">
+  <div class="col-md-2"></div>
+
+  <div class="col-md-9">
+
+<div style="color: #555; text-transform: uppercase;">
+{{pubtype_list}}</div>
+<h2 class="h3" style="margin-top: 0; padding-top: 5px;border-bottom: 1px solid #ccc; padding-bottom: 8px">{{title}} </h2>
+<h3 class="h5" style="color: #555; font-size: 14px; text-transform: uppercase">Published: {{date format="F, Y"}}</h3>
+
+<div style="margin-left: 15px">
+
+{{ content|widont }}
+
+
+
+
+</div>
+
+<div class="text-center" style="margin-top: 30px;">
+
+  {{if puburl}}
+
+  <a class="btn btn-primary track" href="{{puburl}}"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Download PDF&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
+
+  {{endif}}
+
+  {{if articleLink}}
+    <a class="btn btn-primary" href="{{articleLink}}">Read article&nbsp;&nbsp;<i class="fa fa-caret-right"></i></a>
+  {{endif}}
+
+</div>
+</div>
+</div>

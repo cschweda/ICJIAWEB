@@ -1,0 +1,116 @@
+---
+breadcrumbs: true
+title: Authors
+---
+
+
+<div class="container">
+<div class="row">
+	<div class="col-md-2"></div>
+	<div class="col-md-9">
+		{{if taxonomy_name}}
+		<div class="taxonomy-results">
+
+			<div class="article-about-the-author">
+				<h3 style="margin-bottom: 25px; border-bottom: 1px solid #ccc; padding-bottom: 8px">
+				{{ taxonomy_name }}
+
+			</h3>
+
+
+				<p>
+
+
+
+			{{ entries:listing folder="biographies" conditions="title:{taxonomy_name}" }}
+
+
+			{{if authorPhoto}}
+			<img src="{{ transform src="{authorPhoto}" height="75"}}"
+			    style="float: left; padding-right: 14px;" />
+			{{else}}
+
+			<!-- <img src="{{ transform src="/assets/img/biographies/default-head.jpg" height="75"}}"
+			    style="float: left; padding-right: 14px;" /> -->
+			{{endif}}
+
+
+
+				<p>	{{content}}</p>
+
+
+					{{if orgtitle}}
+				<p>{{title}} is
+					{{if modifier == 'a'}}
+					an
+					{{else}}
+					{{modifier}}
+					{{endif}}
+					{{if organization == 'ICJIA'}}Authority{{else}}{{organization}}{{endif}} {{orgtitle}}.
+				</p>
+				{{ endif}}
+
+					<p>
+				{{theme:partial src="author-social" use_context="true"}}</p>
+
+				{{if academicBackground}}
+				<h4 class="h6">Academic Background</h4>
+				{{academicBackground}}
+				{{/if}}
+
+				{{if interestAreas}}
+				<h4 class="h6">Areas of Interest</h4>
+				{{interestAreas}}
+				{{/if}}
+
+
+			{{ /entries:listing }}
+
+
+			<!-- TODO: Add lightbox for author photo -->
+
+
+
+			</p>
+
+			</div>
+
+			<hr/>
+
+			<div class="taxonomy-results">
+
+
+
+
+				<h4 style="text-transform: uppercase; margin-bottom: 15px;">Articles</h4>
+				{{ entries:listing folder="articles" taxonomy="true" }}
+					{{ if no_results }}
+						<p class="sorry">
+							Nothing found for {{ taxonomy_name }}.
+						</p>
+					{{ else }}
+						{{ theme:partial src="article-snippet" use_context="true" }}
+					{{ endif }}
+				{{ /entries:listing }}
+			</div>
+		</div>
+
+		{{else}}
+
+		<h2 class="h5">ICJIA Article Authors</h2>
+		<ul>
+		{{ taxonomy:listing type="authors" folder="articles" show_past="true"  show_future="true" }}
+
+        <li><a href="/{{ slug }}">{{ name }}</a></li>
+
+
+
+
+    {{ /taxonomy:listing }}
+	</ul>
+
+		{{endif}}
+	</div>
+
+</div>
+</div>

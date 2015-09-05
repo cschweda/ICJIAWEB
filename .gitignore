@@ -1,0 +1,43 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Statamic files #
+######################
+_cache/*
+!_cache/index.html
+_logs/*
+!_logs/index.html
+
+# ICJIA-specific #
+##################
+assets/pdf/*
+assets/excel/*
+assets/webinar/*
+assets/word/*
+redeploy/*
+#cjreform2015/*
+#drone/*
+allsites2014/*
+allsites2015/*
+claris/*
+default/*
+coe/*
+egmis/*
+integrated2013/*
+IERTF/*
+ILFVCC/*
+leadership2013/*
+mars/*
+sac/instantatlas/*
+spac/*
+spacadmin/*
+training2014/*
+VAWAMDTRFA/*
+assets/img/resized/victims-s-w125-h125-q100-m1440527206.jpg
