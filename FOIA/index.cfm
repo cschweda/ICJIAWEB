@@ -86,154 +86,149 @@
 
 
 
-		<div id="nav-wrapper" style="background: #fff; position: relative">
-			<div id="nav" class="navbar navbar-default yamm" role="navigation">
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" style="z-index: 50000">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
 
+		<div id="nav-wrapper" style="background: #fff; position: relative" >
+		    <div id="nav" class="navbar navbar-default icjia-main" role="navigation">
+		      <div class="container-fluid">
+		        <div class="navbar-header">
+		          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" style="z-index: 50000">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </button>
 
 
 
-						<div id="nav-logo" class="">
 
+		          <div id="nav-logo" class="">
 
-							<a href="/">
-								<!-- <img id="logo" src="img/logo-icjia-small-blue.png" class="logo-spacer"> -->
-								<img id="logo" src="/_themes/icjia/img/logo-icjia-small-blue-3.png" style="height: 70px; margin-right: 10px; float: left" class="logo-spacer">
 
-							</a>
+		        <a href="/">
+		          <!-- <img id="logo" src="{{assets}}img/logo-icjia-small-blue.png" class="logo-spacer"> -->
+		          <img id="logo" src="{{ theme:asset src='img/logo-icjia-small-blue-3.png' }}" style="height: 70px; margin-right: 10px; float: left" class="logo-spacer" alt="ICJIA logo">
 
-							<span class="text-identity" style="color: #000; float: left; font-weight: 700; margin-top: 10px;">Illinois Criminal Justice
-								<br/>Information Authority</span>
+		        </a>
 
-							<div style="clear: both"></div>
+		          <span class="text-identity" style="color: #000; float: left; font-weight: 700; margin-top: 10px;">Illinois Criminal Justice<br/>Information Authority</span>
 
-						</div>
+		          <div style="clear: both"></div>
 
+		        </div>
 
 
-					</div>
-					<div id="navbar" class="navbar-collapse collapse">
-						<ul class="nav navbar-nav navbar-right">
 
+		        </div>
+		        <div id="navbar" class="navbar-collapse collapse">
+		          <ul class="nav navbar-nav navbar-right">
 
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li class="dropdown-header">
-										2014 Annual Report
-									</li>
-									<li style="margin-bottom: -20px; padding-bottom: 0">
-										<a href="#"><i class="fa fa-download fa-fw" ></i> Download the report</a>&nbsp;
-									</li>
+		            <li><a href="/">Home</a></li>
 
-									<li class="divider"></li>
-									<li class="dropdown-header">
-										About
-									</li>
-									<li>
-										<a href="/about">About the Authority</a>
-									</li>
-									<li>
-										<a href="/news">Latest news</a>
-									</li>
-									<li>
-										<a href="/about/employment">Employment</a>
-									</li>
 
-									<li>
-										<a href="/about/contact">Contact Us</a>
-									</li>
+		            <li class="dropdown">
+		                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+		                <ul class="dropdown-menu">
 
-									<li>
-										<a href="/systems">Information Systems</a>
-									</li>
 
+		                    <li class="dropdown-header">
+		                        About
+		                    </li>
+		                    <li>
+		                        <a href="/about/overview">Overview</a>
+		                    </li>
 
 
+		                        <li>
+		                            <a href="/biographies">Members & Staff</a>
+		                        </li>
+		                        <li>
+		                          <a href="/about/overview#tab_meeting-materials">Meeting Materials</a>
+		                      </li>
+		                    <li>
+		                        <a href="/news">News</a>
+		                    </li>
 
-								</ul>
-							</li>
 
+		                    <li class="divider"></li>
 
+		                    <li>
+		                        <a href="/systems/overview">Information Systems</a>
+		                    </li>
 
 
 
+		                    <li>
+		                        <a href="/about/foia">FOIA Requests</a>
+		                    </li>
 
+		                    <li>
+		                        <a href="/about/employment">Employment</a>
+		                    </li>
 
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" title=" ">Grants <b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li class="dropdown-header">
-										Authority Grant Information
-									</li>
-									<li>
-										<a href="/grants">About Federal & State Grants</a>
-									</li>
 
 
+		                      <li class="divider"></li>
 
-								</ul>
-							</li>
+		                      <li class="dropdown-header">
+		                          2014 Annual Report
+		                      </li>
+		                      <li style="margin-bottom: -20px; padding-bottom: 0">
+		                        <a href="/assets/pdf/AnnualReport/AnnualReportFY14.pdf" class="track"><i class="fa fa-download fa-fw" ></i> Download</a>&nbsp;
+		                      </li>
 
 
 
+		                </ul>
+		            </li>
 
 
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" title=" ">Research <b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li class="dropdown-header">
-										Statistical Analysis Center (SAC)
-									</li>
-									<li>
-										<a href="/research#tab_overview">About Research & Analysis</a>
-									</li>
 
-									<li>
-										<a href="/research#tab_staff">Research Staff</a>
-									</li>
 
-									<li>
-										<a href="/research/publications">Publications</a>
-									</li>
 
-									<li>
-										<a href="/research#tab_articles">Articles</a>
-									</li>
 
-									<li>
-										<a href="/research#tab_data">Data</a>
-									</li>
 
-									<li>
-										<a href="/research#tab_tools">Tools</a>
-									</li>
+		            <li class="dropdown">
+		                <a href="#" class="dropdown-toggle" data-toggle="dropdown" title=" ">Grants <b class="caret"></b></a>
+		                <ul class="dropdown-menu">
+		                  <li class="dropdown-header">
+		                      Grants
+		                  </li>
+		                  <li>
+		                      <a href="/grants/overview#tab_grant-programs">Overview</a>
+		                  </li>
 
+		                  <li>
+		                      <a href="/grants/overview#tab_grant-programs">Current Programs</a>
+		                  </li>
 
 
 
 
+		                  <li>
+		                      <a href="/grants/overview#tab_grant-opportunities">Grant Opportunities</a>
+		                  </li>
 
-								</ul>
-							</li>
 
-							<!-- <li><a href="http://www.icjia.state.il.us/redeploy">Reform Commission</a></li> -->
 
+		                  <li>
+		                      <a href="/grants/overview#tab_grant-resources">Resources</a>
+		                  </li>
 
+		                    <li class="divider"></li>
 
-							<li><a href="http://www.icjia.state.il.us/redeploy">Adult Redeploy</a></li>
+		                    <li>
 
-							<li><a href="http://www.ilfvcc.org">Family Violence</a></li>
+		                        <a href="/grant-programs">Program Archive</a>
+		                    </li>
 
+		                  <li>
 
+		                      <a href="/grants/overview#tab_grant-faqs">FAQ</a>
+		                  </li>
 
+		                  <li>
+		                      <a href="/grants/overview#tab_grant-staff">Unit Staff</a>
+		                  </li>
 
 
 
@@ -241,38 +236,118 @@
 
 
 
-							<li class="dropdown " data-animate="animated fadeInUp" style="z-index:500;">
-								<a href="#" class="dropdown-toggle " data-toggle="dropdown"> <i class="fa fa-search"> </i> </a>
-								<ul class="dropdown-menu animated bounceInDown">
-									<li id="dropdownForm">
-										<div class="dropdown-form">
-											<form class=" form-inline" method="post" name="searchForm" id="searchForm">
-												<div class="input-group " style="padding: 4px 8px 4px 8px ">
-													<input type="text" id="siteSearchTerm" class="form-control" style="width: 200px" placeholder="search..." />
-													<span class="input-group-btn">
-														<input type="submit" class="btn btn-theme-bg" id="siteSearchButton" value="Go!" /> </span>
-												</div>
-												<!--input group-->
-											</form>
-											<!--form-->
-										</div>
-										<!--.dropdown form-->
-									</li>
-									<!--.drop form search-->
-								</ul>
-								<!--.drop menu-->
-							</li>
-							<!--nav search form-->
 
+		                    <li class="divider"></li>
 
 
+		                  <li>
+		                      <a href="/sites/mvtpc">Motor Vehicle Theft Prevention Council</a>
 
-						</ul>
+		                  </li>
 
-					</div>
-					<!--/.nav-collapse -->
-				</div>
-			</div>
+
+
+
+		                </ul>
+		            </li>
+
+
+
+
+
+		            <li class="dropdown">
+		                <a href="#" class="dropdown-toggle" data-toggle="dropdown" title=" ">Research <b class="caret"></b></a>
+		                <ul class="dropdown-menu">
+		                  <li class="dropdown-header">
+		                      Statistical Analysis Center (SAC)
+		                  </li>
+		                  <li>
+		                      <a href="{{_site_root}}research/overview#tab_research-overview">Overview</a>
+		                  </li>
+
+
+
+		                  <li>
+		                      <a href="{{_site_root}}research/publications">Publications</a>
+		                  </li>
+
+		                  <li>
+		                      <a href="{{_site_root}}articles">Articles</a>
+		                  </li>
+
+		                  <li>
+		                      <a href="{{_site_root}}research/overview#tab_research-staff">Staff</a>
+		                  </li>
+
+		                  <li class="divider"></li>
+
+		                  <li class="dropdown-header">
+		                      Tools and Data
+		                  </li>
+
+
+		                  <li>
+		                      <a href="{{_site_root}}research/overview#tab_research-tools">Crime & Risk Factor Data Tools</a>
+		                  </li>
+
+
+
+		                  <li>
+		                      <a href="{{_site_root}}research/overview#tab_research-data">Downloadable Datasets</a>
+		                  </li>
+
+
+
+
+
+
+
+
+		                </ul>
+		            </li>
+
+
+
+
+		            <li><a href="/redeploy">Adult Redeploy</a></li>
+
+		              <li><a href="http://www.ilfvcc.org">Family Violence</a></li>
+
+
+
+
+
+
+
+
+
+		            <li class="dropdown " data-animate="animated fadeInUp" style="z-index:500;"> <a href="#" class="dropdown-toggle " data-toggle="dropdown"> <i class="fa fa-search" style="margin-bottom: .3em"> </i> </a>
+		            <ul class="dropdown-menu animated bounceInDown">
+		              <li id="dropdownForm">
+		                <div class="dropdown-form">
+		                  <form class=" form-inline" action="/search" method="GET" name="searchForm" id="searchForm">
+		                    <div class="input-group " style="padding: 4px 8px 4px 8px ">
+		                      <input type="text" id="query" name="query" class="form-control" style="width: 200px" placeholder="search..." />
+		                      <span class="input-group-btn"> <input type="submit" class="btn btn-theme-bg" id="siteSearchButton" value="Go!" /> </span>
+		                    </div>
+		                    <!--input group-->
+		                  </form>
+		                  <!--form-->
+		                </div>
+		                <!--.dropdown form--> </li>
+		                <!--.drop form search-->
+		              </ul>
+		              <!--.drop menu-->
+		            </li><!--nav search form-->
+
+
+
+
+		          </ul>
+
+		        </div><!--/.nav-collapse -->
+		      </div>
+		    </div>
 		</div>
 
 
@@ -589,23 +664,88 @@
 		<!-- //END PAGE CONTENT -->
 
 		<!-- ICJIA Footer -->
-		<footer>
-			<div class="container-fluid" style="margin-top: 80px;">
-				<div class="row">
-					<!-- col #1 -->
-					<div class="col-md-12">
-						<div style="border-top: 1px solid #ccc; width: 100%; margin-bottom: 20px;"></div>
-					</div>
-				</div>
-				<div class="container text-center" style="font-size: 12px; margin-bottom: 20px;">
-					&copy; 2015
-					<a href="##" target="_blank"> iIllinois Criminal Justice Information Authority </a> &nbsp;|&nbsp;
-					<a href="/about/privacy" class="fsize11"> Privacy Policy </a> &nbsp;|&nbsp;
-					<a href="/about/contact" class="fsize11"> Contact </a> &nbsp;|&nbsp;
-					<a href="/about/foia" class="fsize11"> FOIA </a>
-				</div>
-			</div>
+		<footer class="no-print">
+
+
+		<div style="margin: 0; background: #1f3641; padding: 0;">
+
+
+		  <div class="container" style="padding: 40px 0 60px 0">
+
+		    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3" style="padding-top: 10px;">
+
+		        <h3 class="h4" style="color: #fff; text-transform: uppercase">About the Authority</h3>
+
+		        <ul>
+		          <li><a href="/about">Overview</a></li>
+		          <li><a href="/grants">Federal and State Grants</a></li>
+		          <li><a href="/research">Research and Analysis</a></li>
+		            <li><a href="/about/employment">Employment</a></li>
+		          <li><a href="/faq">Frequently Asked Questions</a></li>
+		          <li><a href="/statutesearch">Illinois Criminal Statute Search</a></li>
+
+		          <li><a href="/about/contact">Contact</a></li>
+		        </ul>
+
+
+
+		    </div>
+
+
+		  <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5" style="padding-top: 10px;">
+
+		        <h3 class="h4" style="color: #fff; text-transform: uppercase">Associate Sites</h3>
+
+		        <ul>
+		          <li><a href="/redeploy">Adult Redeploy Illinois</a></li>
+		          <li><a href="http://www.illinoiscenterofexcellence.org/">Illinois Center of Excellence for Behavioral Health and Justice</a></li>
+		          <li><a href="/cjreform2015">Illinois Commission on Criminal Justice and Sentencing Reform</a></li>
+		          <li><a href="http://www.ilfvcc.org">Illinois Family Violence Coordinating Councils</a></li>
+		          <li><a href="/spac">Illinois Sentencing Policy Advisory Council</a></li>
+		          <li><a href="/sites/mvtpc">Motor Vehicle Theft Prevention Council</a></li>
+
+		        </ul>
+
+		    </div>
+
+
+
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="padding-top: 10px;" >
+		  <div style="text-align: center">
+		  <h3 class="h4" style="color: #fff; text-transform: uppercase">Sign up for the CJ Dispatch </h3>
+
+
+		  <a href="http://visitor.r20.constantcontact.com/manage/optin?v=001MqUcqqvjwLCJXlLMSWbTe3zHHmEQgFeBuHvBcJWTbwgrxFbDSGx4HSUPpI6DJWMUPgbljtLxffqIcGFTgCnr-auak88ybvRxpoJlTMGPtZs%3D" class="btn btn-primary">Subscribe Now</a>
+
+
+		  <div style="margin-top: 15px;">
+		    <a href="http://www.facebook.com/ICJIA"><i class="fa fa-facebook-official fa-2x" ></i></a>
+		    &nbsp;
+		    <a href="http://www.twitter.com/ICJIA_Illinois"><i class="fa fa-twitter-square fa-2x"></i></a>
+		    &nbsp;
+		    <a href="https://www.youtube.com/channel/UCtZMzk8D3P4OixYTwsfPeKA"><i class="fa fa-youtube-square fa-2x"></i></a>
+		    &nbsp;
+		    <a href="/feed"><i class="fa fa-rss-square fa-2x"></i></a>
+		    &nbsp;
+
+		    <a href="/about/contact"><i class="fa fa-envelope fa-2x" style="margin-bottom: 0.15em"></i></a>
+
+		  </div>
+
+		  <div style="color: #fff; font-family: 'Lato', sans-serif; margin-top: 15px; font-size: 13px;">
+		    &copy; {{ current_date format="Y"}}
+		    <a href="/" target="_blank"> Illinois Criminal Justice Information Authority </a>
+
+		</div>
+
+		</div>
+		</div>
+		</div>
+		</div>
 		</footer>
+
+		<!-- /ICJIA Footer -->
+
 
 		<!-- /ICJIA Footer -->
 
