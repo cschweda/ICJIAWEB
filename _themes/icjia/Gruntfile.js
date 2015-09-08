@@ -7,12 +7,6 @@ module.exports = function(grunt) {
 			options: {
 				separator: ';',
 			},
-			reduceViolence: {
-				src: [
-					'js/reduceViolence/*.js'
-				],
-				dest: 'js/reduceViolence.js',
-			},
 			dist: {
 				src: [
 					'js/app/*.js'
