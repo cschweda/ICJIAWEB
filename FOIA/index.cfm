@@ -105,8 +105,8 @@
 
 
 		        <a href="/">
-		          <!-- <img id="logo" src="{{assets}}img/logo-icjia-small-blue.png" class="logo-spacer"> -->
-		          <img id="logo" src="{{ theme:asset src='img/logo-icjia-small-blue-3.png' }}" style="height: 70px; margin-right: 10px; float: left" class="logo-spacer" alt="ICJIA logo">
+		          <!-- <img id="logo" src="/assets/img/logo-icjia-small-blue.png" class="logo-spacer"> -->
+		          <img id="logo" src="/_themes/icjia/img/logo-icjia-small-blue-3.png" style="height: 70px; margin-right: 10px; float: left" class="logo-spacer" alt="ICJIA logo">
 
 		        </a>
 
@@ -664,7 +664,7 @@
 		<!-- //END PAGE CONTENT -->
 
 		<!-- ICJIA Footer -->
-		<footer class="no-print">
+		<footer class="no-print" style="margin-top: 50px">
 
 
 		<div style="margin: 0; background: #1f3641; padding: 0;">
