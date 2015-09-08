@@ -18,7 +18,10 @@ module.exports = function(grunt) {
 		uglify: {
 			target: {
 				options: {
-					sourceMap: true
+					sourceMap: true,
+					compress: {
+						drop_console: true
+					}
 				},
 				files: {
 					'js/<%= pkg.name %>.js': ['js/<%= pkg.name %>.js']
