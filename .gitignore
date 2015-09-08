@@ -22,8 +22,8 @@ assets/excel/*
 assets/webinar/*
 assets/word/*
 redeploy/*
-#cjreform2015/*
-#drone/*
+cjreform2015/*
+drone/*
 allsites2014/*
 allsites2015/*
 claris/*
@@ -40,6 +40,7 @@ mars/*
 sac/instantatlas/*
 spac/*
 spacadmin/*
+strategy2010/*
 training2014/*
 VAWAMDTRFA/*
 assets/img/resized/victims-s-w125-h125-q100-m1440527206.jpg
