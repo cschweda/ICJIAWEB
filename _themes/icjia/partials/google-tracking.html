@@ -1,6 +1,10 @@
 {{ if !disable_analytics }}
 
+
+
 <script>
+
+// Add downloaded files to analytics reporting
 
 $( ".track" ).on( "click", function() {
 	var href = $(this).attr('href');
@@ -9,6 +13,8 @@ $( ".track" ).on( "click", function() {
 	console.log('Download: ' + file_name1);
 
 });
+
+// Add tab toggling to analytics reporting
 
 
 $( 'a[data-toggle="tab"]' ).on( "click", function() {
