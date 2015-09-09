@@ -262,21 +262,21 @@
 		                      Statistical Analysis Center (SAC)
 		                  </li>
 		                  <li>
-		                      <a href="{{_site_root}}research/overview#tab_research-overview">Overview</a>
+		                      <a href="/research/overview#tab_research-overview">Overview</a>
 		                  </li>
 
 
 
 		                  <li>
-		                      <a href="{{_site_root}}research/publications">Publications</a>
+		                      <a href="/research/publications">Publications</a>
 		                  </li>
 
 		                  <li>
-		                      <a href="{{_site_root}}articles">Articles</a>
+		                      <a href="/articles">Articles</a>
 		                  </li>
 
 		                  <li>
-		                      <a href="{{_site_root}}research/overview#tab_research-staff">Staff</a>
+		                      <a href="/research/overview#tab_research-staff">Staff</a>
 		                  </li>
 
 		                  <li class="divider"></li>
@@ -380,7 +380,11 @@
 				<div class="col-md-9">
 
 
+					<div class="text-center well" style="margin-botton: 35px">
 
+						<p><strong>For more information about the Authority's FOIA process, please see the <a href="foia-request.cfm">FOIA guidelines</a>.</strong></p>
+
+					</div>
 
 
 
