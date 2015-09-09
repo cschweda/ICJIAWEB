@@ -6,3 +6,5 @@
 
 # Just an example use case
 # enable_analytics: no
+
+disable_analytics: true
