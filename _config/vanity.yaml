@@ -94,3 +94,7 @@
 /office-of-general-counsel:
     url: /biographies#tab_authority-staff
     type: 301
+
+/contact:
+    url: /about/contact
+    type: 301
