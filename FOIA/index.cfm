@@ -380,9 +380,9 @@
 				<div class="col-md-9">
 
 
-					<div class="text-center well" style="margin-botton: 35px">
+					<div class="text-center well" style="margin-bottom: 35px">
 
-						<p><strong>For more information about the Authority's FOIA process, please see the <a href="foia-request.cfm">FOIA guidelines</a>.</strong></p>
+						<p><strong>For more information about the Authority's FOIA process, please see the <a href="/about/foia">FOIA guidelines</a>.</strong></p>
 
 					</div>
 
