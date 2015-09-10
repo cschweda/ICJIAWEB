@@ -23,7 +23,7 @@ p.drop {text-indent: 0;}
 <div class="container-fluid">
 
 
-	<div class="col-md-3 no-print" style="margin-top: 50px;">
+	<div class="col-md-3 no-print hidden-xs" style="margin-top: 50px;">
 		  <div class="bs-sidebar hidden-print" role="complementary" data-spy="affix" data-offset-top="400" data-offset-bottom="350">
 
 				<ul class="nav bs-sidenav" style="border: 0px;">
@@ -74,6 +74,7 @@ p.drop {text-indent: 0;}
 <div>
   <!-- Nav tabs -->
 	{{ if tabviz == 'true'}}
+	
   <ul class="nav nav-tabs" role="tablist" style="margin-top: 25px">
     <li role="presentation" class="active">
 			<a href="#{{tab1|slugify}}" aria-controls="home" role="tab" data-toggle="tab" class="show-toc no-print">{{tab1}}</a>
