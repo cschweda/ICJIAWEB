@@ -618,7 +618,7 @@ $(document).ready(function() {
 	$('body').prepend(
 		'<a href="javascript:void(0);" class="back-to-top">Back to Top</a>');
 
-	var amountScrolled = 150;
+	var amountScrolled = 450;
 
 	var socialbar = 150;
 
@@ -634,8 +634,6 @@ $(document).ready(function() {
 		} else {
 			$('.prepbootstrap-sharing-container').fadeOut('slow');
 		}
-
-
 
 	});
 
