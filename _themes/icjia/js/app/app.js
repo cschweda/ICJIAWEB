@@ -618,7 +618,9 @@ $(document).ready(function() {
 	$('body').prepend(
 		'<a href="javascript:void(0);" class="back-to-top">Back to Top</a>');
 
-	var amountScrolled = 500;
+	var amountScrolled = 250;
+
+	var socialbar = 250;
 
 	$(window).scroll(function() {
 		if ($(window).scrollTop() > amountScrolled) {
@@ -626,6 +628,15 @@ $(document).ready(function() {
 		} else {
 			$('a.back-to-top').fadeOut('slow');
 		}
+
+		if ($(window).scrollTop() > socialbar) {
+			$('.prepbootstrap-sharing-container').fadeIn('slow');
+		} else {
+			$('.prepbootstrap-sharing-container').fadeOut('slow');
+		}
+
+
+
 	});
 
 	$('a.back-to-top').click(function() {
