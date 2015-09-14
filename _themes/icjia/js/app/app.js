@@ -616,7 +616,8 @@ $(document).ready(function() {
 
 
 	$('body').prepend(
-		'<a href="javascript:void(0);" class="back-to-top">Back to Top</a>');
+		'<a href="javascript:void(0);" class="back-to-top" style="display: none">Back to Top</a>'
+	);
 
 	var amountScrolled = 550;
 
@@ -624,9 +625,9 @@ $(document).ready(function() {
 
 	$(window).scroll(function() {
 		if ($(window).scrollTop() > amountScrolled) {
-			$('a.back-to-top').fadeIn('slow');
+			$('a.back-to-top').fadeIn('fast');
 		} else {
-			$('a.back-to-top').fadeOut('slow');
+			$('a.back-to-top').fadeOut('fast');
 		}
 
 		if ($(window).scrollTop() > socialbar) {
