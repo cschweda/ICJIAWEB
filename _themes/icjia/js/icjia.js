@@ -618,9 +618,9 @@ $(document).ready(function() {
 	$('body').prepend(
 		'<a href="javascript:void(0);" class="back-to-top">Back to Top</a>');
 
-	var amountScrolled = 250;
+	var amountScrolled = 200;
 
-	var socialbar = 250;
+	var socialbar = 200;
 
 	$(window).scroll(function() {
 		if ($(window).scrollTop() > amountScrolled) {
