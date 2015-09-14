@@ -82,7 +82,7 @@
 
 
 
-		<script src="	https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<!--<script src="	https://code.jquery.com/jquery-1.11.3.min.js"></script>-->
 
 
 
@@ -99,7 +99,6 @@
 
 
 
-
 		<link href="{{theme:asset src='bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css'}}" rel="stylesheet">
 		<link rel="stylesheet" property="stylesheet" href="{{ theme:asset src='bower_components/bx-slider.js/dist/jquery.bxslider.min.css'}}">
 		<link href="{{ theme:asset src='bower_components/ekko-lightbox/dist/ekko-lightbox.min.css' }}" rel="stylesheet" property="stylesheet">
@@ -109,8 +108,6 @@
 
 	</head>
 	<body data-spy="scroll" data-target=".bs-sidenav" data-offset="100">
-
-
 
 
 <div id="icjia-page-top"></div>
@@ -126,6 +123,8 @@
       {{ layout_content }}
 		</div>
 			<!-- ////////////////////////////////////////////////// content-end \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
 
 
 
@@ -195,7 +194,50 @@
 
 
 
+{{ if socialsidebar}}
 
+<script type="text/javascript">
+    jQuery(function($) {
+        // open a popup window at the center of the screen
+        function open_popup(url, width, height, scroll) {
+            var left = ($(window).width() - width) / 2,
+                top = ($(window).height() - height) / 2,
+                opts = 'status=1,' + (scroll ? 'scrollbars=1,' : '') + 'width=' + width + ',height=' + height + ',top=' + top + ',left=' + left;
 
+            window.open(url, "", opts);
+        }
+
+        // add the sharing container on the page
+        $('<div class="prepbootstrap-sharing-container"></div>')
+            .appendTo(document.body)
+            .append(
+                $('<div class="sharing-item sharing-fb"><i style="color: #fff;" class="fa fa-facebook-official"></i></div>').click(function () {
+                    open_popup(
+                        "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(document.location.href),
+                        600,
+                        350
+                    );
+                }),
+                $('<div class="sharing-item sharing-gp"><i style="color: #fff;" class="fa fa-google-plus-square"></i></div>').click(function () {
+                    open_popup(
+                        "https://plus.google.com/share?url=" + encodeURIComponent(document.location.href),
+                        500,
+                        500
+                    );
+                }),
+                $('<div class="sharing-item sharing-tw"><i style="color: #fff;" class="fa fa-twitter-square"></i></div>').click(function () {
+                    open_popup(
+                        "https://twitter.com/share?url=" + encodeURIComponent(document.location.href) +
+                            "&text=" + encodeURIComponent($(document).find("title").text()),
+                        575,
+                        400,
+                        true
+                    );
+                })
+            );
+    });
+</script>
+
+{{endif}}
 	</body>
 </html>
