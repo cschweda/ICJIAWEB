@@ -218,14 +218,7 @@
                         350
                     );
                 }),
-                $('<div class="sharing-item sharing-gp"><i style="color: #fff;" class="fa fa-google-plus-square"></i></div>').click(function () {
-                    open_popup(
-                        "https://plus.google.com/share?url=" + encodeURIComponent(document.location.href),
-                        500,
-                        500
-                    );
-                }),
-                $('<div class="sharing-item sharing-tw"><i style="color: #fff;" class="fa fa-twitter-square"></i></div>').click(function () {
+								$('<div class="sharing-item sharing-tw"><i style="color: #fff;" class="fa fa-twitter-square"></i></div>').click(function () {
                     open_popup(
                         "https://twitter.com/share?url=" + encodeURIComponent(document.location.href) +
                             "&text=" + encodeURIComponent($(document).find("title").text()),
@@ -233,7 +226,18 @@
                         400,
                         true
                     );
+                }),
+								$('<div class="sharing-item sharing-li"><i style="color: #fff;" class="fa fa-linkedin-square"></i></div>').click(function () {
+                    open_popup(
+                        "https://www.linkedin.com/shareArticle?mini=true&url=" +
+                            encodeURIComponent(document.location.href) +
+                            "&title=" + encodeURIComponent($(document).find("title").text()),
+                        750,
+                        400,
+                        true
+                    );
                 })
+
             );
     });
 </script>
