@@ -618,7 +618,7 @@ $(document).ready(function() {
 	$('body').prepend(
 		'<a href="javascript:void(0);" class="back-to-top">Back to Top</a>');
 
-	var amountScrolled = 450;
+	var amountScrolled = 550;
 
 	var socialbar = 150;
 
