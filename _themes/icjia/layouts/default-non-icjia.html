@@ -16,7 +16,7 @@
 				<meta property="og:title" content="{{ title }}" />
 				<meta property="og:site_name" content="{{ defaultSiteName }}"/>
 				<meta property="og:url" content="{{ permalink }}" />
-				<meta property="og:description" content="{{ defaultDescription }}" />
+				<meta property="og:description" content="{{if summary}}{{summary|striptags}}{{else}}{{ defaultDescription }}{{endif}}" />
 				<meta property="fb:app_id" content="{{facebookAppId}}" />
 				<meta property="og:type" content="{{facebokContentType}}" />
 				<meta property="og:locale" content="en_US" />
