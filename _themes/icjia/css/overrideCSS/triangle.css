@@ -1,0 +1,104 @@
+article {
+  width: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+article header {
+  width: 100%;
+  position: relative;
+  background: #3E423A;
+}
+article header h1 {
+  padding: 25px 0 15px;
+  margin: 0;
+  color: #F4F7D9;
+  text-align: center;
+}
+article header h4 {
+  padding: 0 0 15px 0;
+  margin: 0;
+  color: #F4F7D9;
+  text-align: left;
+  width: 80%;
+  margin: auto;
+  position: relative;
+  font-weight: 300;
+}
+article #container {
+  width: 100%;
+  border-top: 10px solid #3E423A;
+}
+article #container .content-25 {
+  width: 25%;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  border-left: 5px dotted #F4F7D9;
+  border-right: 5px dotted #F4F7D9;
+}
+article #container .content-25 .triangle {
+  width: 0;
+  height: 0;
+  position: relative;
+  display: inline-block;
+}
+article #container .content-25 .up {
+  border-left: solid transparent;
+  border-right: solid transparent;
+  border-bottom: solid #F4F7D9;
+}
+article #container .content-25 .down {
+  border-left: solid transparent;
+  border-right: solid transparent;
+  border-top: solid #F4F7D9;
+}
+article #container .content-25 .left {
+  border-top: solid transparent;
+  border-right: solid #F4F7D9;
+  border-bottom: solid transparent;
+}
+article #container .content-25 .right {
+  border-top: solid transparent;
+  border-left: solid #F4F7D9;
+  border-bottom: solid transparent;
+}
+article #container .content-25 .topleft {
+  border-top: solid #F4F7D9;
+  border-right: solid transparent;
+}
+article #container .content-25 .topright {
+  border-top: solid #F4F7D9;
+  border-left: solid transparent;
+}
+article #container .content-25 .bottomleft {
+  border-bottom: solid #F4F7D9;
+  border-right: solid transparent;
+}
+article #container .content-25 .bottomright {
+  border-bottom: solid #F4F7D9;
+  border-left: solid transparent;
+}
+article .bluish {
+  background: #417378;
+}
+article .bluishgreen {
+  background: #A4CFBE;
+}
+article footer {
+  width: 100%;
+  position: relative;
+  background: #3E423A;
+}
+article footer h1 {
+  padding: 25px 0 15px;
+  margin: 0;
+  color: #F4F7D9;
+  text-align: center;
+}
+article footer h1 .github-link {
+  font-size: 1rem;
+}
+article footer h1 .github-link a {
+  color: #A4CFBE;
+}

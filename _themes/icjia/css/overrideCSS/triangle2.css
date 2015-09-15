@@ -1,0 +1,157 @@
+/*Responsive CSS triangles. Resize the Result section to see the triangles in action.*/
+
+
+
+/*Up pointing*/
+.triangle-up {
+    width: 10%;
+    height: 0;
+    padding-left:10%;
+    padding-bottom: 10%;
+    overflow: hidden;
+}
+.triangle-up:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    margin-left:-500px;
+    border-left: 500px solid transparent;
+    border-right: 500px solid transparent;
+    border-bottom: 500px solid #4679BD;
+}
+
+/*Right pointing*/
+.triangle-right {
+    width: 0;
+    height: 0;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    overflow: hidden;
+}
+.triangle-right:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top:-500px;
+    margin-left: -500px;
+
+    border-top: 500px solid transparent;
+    border-bottom: 500px solid transparent;
+    border-left: 500px solid #4679BD;
+}
+
+/*Down pointing*/
+.triangle-down {
+    width: 10%;
+    height: 0;
+    padding-left:10%;
+    padding-top: 10%;
+    overflow: hidden;
+}
+.triangle-down:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    margin-left:-500px;
+    margin-top:-500px;
+
+    border-left: 500px solid transparent;
+    border-right: 500px solid transparent;
+    border-top: 500px solid #4679BD;
+}
+
+/*Left pointing*/
+.triangle-left {
+    width: 5%;
+    height: 0;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    overflow: hidden;
+}
+.triangle-left:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top:-500px;
+
+    border-top: 500px solid transparent;
+    border-bottom: 500px solid transparent;
+    border-right: 500px solid #4679BD;
+}
+
+/*Up-right pointing*/
+.triangle-up-right {
+    width: 0;
+    height: 0;
+    padding-left:10%;
+    padding-top: 10%;
+    overflow: hidden;
+}
+.triangle-up-right:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    margin-left:-500px;
+    margin-top:-500px;
+
+    border-left: 500px solid transparent;
+    border-top: 500px solid #4679BD;
+}
+
+/*Down-right pointing*/
+.triangle-down-right {
+    width: 10%;
+    height: 0;
+    padding-top: 10%;
+    overflow: hidden;
+}
+.triangle-down-right:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top:-500px;
+
+    border-top: 500px solid transparent;
+    border-right: 500px solid #4679BD;
+}
+
+/*Down-left pointing*/
+.triangle-down-left {
+    width: 10%;
+    height: 0;
+    padding-bottom: 10%;
+    overflow: hidden;
+}
+.triangle-down-left:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-right: 500px solid transparent;
+    border-bottom: 500px solid #4679BD;
+}
+
+/*Up-left pointing*/
+.triangle-up-left {
+    width: 0;
+    height: 0;
+    padding-bottom: 10%;
+    padding-left: 10%;
+    overflow: hidden;
+}
+.triangle-up-left:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    margin-left: -500px;
+    border-bottom: 500px solid transparent;
+    border-left: 500px solid #4679BD;
+}
