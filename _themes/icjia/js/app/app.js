@@ -211,59 +211,55 @@ $('.scrollclass').click(function() {
 /* --------------------------------- Social media ------------------------------------*/
 
 
-function fbs_click(u, t) {
-	//u = location.href;
-	//t = document.title;
-	console.log('facebook url: ' + u);
-	console.log('facebook title: ' + t);
-	window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(u) +
-		'&t=' + encodeURIComponent(t), 'sharer',
-		'toolbar=0,status=0,width=626,height=436');
-	return false;
-}
+// function fbs_click(u, t) {
+// 	//u = location.href;
+// 	//t = document.title;
+// 	console.log('facebook url: ' + u);
+// 	console.log('facebook title: ' + t);
+// 	window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(u) +
+// 		'&t=' + encodeURIComponent(t), 'sharer',
+// 		'toolbar=0,status=0,width=626,height=436');
+// 	return false;
+// }
+//
+// function twitter_click(t, u) {
+//
+// 	window.open('http://twitter.com/share?text=' + encodeURIComponent(t) +
+// 		'&url=' +
+// 		encodeURIComponent(u),
+// 		'sharer',
+// 		'toolbar=0,status=0,width=626,height=436');
+// 	return false;
+//
+// }
 
-function twitter_click(t, u) {
-
-	window.open('http://twitter.com/share?text=' + encodeURIComponent(t) +
-		'&url=' +
-		encodeURIComponent(u),
-		'sharer',
-		'toolbar=0,status=0,width=626,height=436');
-	return false;
-
-
-
-	//var u = 'http://www.icjia.org';
-
-
-	// jQuery.urlShortener({
-	// 	longUrl: u,
-	// 	success: function(shortUrl) {
-	// 		console.log(shortUrl);
-	// 		window.open('http://twitter.com/share?text=' + encodeURIComponent(t) +
-	// 			'&url=' +
-	// 			encodeURIComponent(shortUrl),
-	// 			'sharer',
-	// 			'toolbar=0,status=0,width=626,height=436');
-	// 		return false;
-	//
-	// 	},
-	// 	error: function(err) {
-	// 		console.log(JSON.stringify(err));
-	// 		window.open('http://twitter.com/share?text=' + encodeURIComponent(t) +
-	// 			'&url=' +
-	// 			encodeURIComponent(u),
-	// 			'sharer',
-	// 			'toolbar=0,status=0,width=626,height=436');
-	// 		return false;
-	//
-	//
-	// 	}
-	// });
+//var u = 'http://www.icjia.org';
 
 
-
-}
+// jQuery.urlShortener({
+// 	longUrl: u,
+// 	success: function(shortUrl) {
+// 		console.log(shortUrl);
+// 		window.open('http://twitter.com/share?text=' + encodeURIComponent(t) +
+// 			'&url=' +
+// 			encodeURIComponent(shortUrl),
+// 			'sharer',
+// 			'toolbar=0,status=0,width=626,height=436');
+// 		return false;
+//
+// 	},
+// 	error: function(err) {
+// 		console.log(JSON.stringify(err));
+// 		window.open('http://twitter.com/share?text=' + encodeURIComponent(t) +
+// 			'&url=' +
+// 			encodeURIComponent(u),
+// 			'sharer',
+// 			'toolbar=0,status=0,width=626,height=436');
+// 		return false;
+//
+//
+// 	}
+// });
 
 
 
@@ -275,31 +271,31 @@ function twitter_click(t, u) {
  * detect IE
  * returns version of IE or false, if browser is not Internet Explorer
  */
-function detectIE() {
-	var ua = window.navigator.userAgent;
-
-	var msie = ua.indexOf('MSIE ');
-	if (msie > 0) {
-		// IE 10 or older => return version number
-		return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
-	}
-
-	var trident = ua.indexOf('Trident/');
-	if (trident > 0) {
-		// IE 11 => return version number
-		var rv = ua.indexOf('rv:');
-		return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
-	}
-
-	var edge = ua.indexOf('Edge/');
-	if (edge > 0) {
-		// IE 12 => return version number
-		return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
-	}
-
-	// other browser
-	return false;
-}
+// function detectIE() {
+// 	var ua = window.navigator.userAgent;
+//
+// 	var msie = ua.indexOf('MSIE ');
+// 	if (msie > 0) {
+// 		// IE 10 or older => return version number
+// 		return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+// 	}
+//
+// 	var trident = ua.indexOf('Trident/');
+// 	if (trident > 0) {
+// 		// IE 11 => return version number
+// 		var rv = ua.indexOf('rv:');
+// 		return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+// 	}
+//
+// 	var edge = ua.indexOf('Edge/');
+// 	if (edge > 0) {
+// 		// IE 12 => return version number
+// 		return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+// 	}
+//
+// 	// other browser
+// 	return false;
+// }
 
 
 /* --------------------------------- Tab collapse ------------------------------------*/
@@ -610,7 +606,7 @@ $(function() {
 
 
 
-/* -------------------- Back to top fade in -------------------------*/
+/* -------------------- Back to top fade in / social sidebar fade in -------------------------*/
 
 $(document).ready(function() {
 
@@ -621,7 +617,7 @@ $(document).ready(function() {
 
 	var amountScrolled = 550;
 
-	var socialbar = 150;
+	var socialbar = 200;
 
 	$(window).scroll(function() {
 		if ($(window).scrollTop() > amountScrolled) {
