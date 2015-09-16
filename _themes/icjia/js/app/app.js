@@ -180,8 +180,8 @@ $(document).ready(function() {
 	// Not affixed
 	$("#nav").on('affixed-top.bs.affix', function() {
 		$('#nav').removeClass('outline', 1000);
-		$('#logo').addClass('logo-spacer', 1000)
-			//$('#logo').hide();
+		$('#logo').addClass('logo-spacer', 1000);
+		//$('#logo').hide();
 	});
 });
 
