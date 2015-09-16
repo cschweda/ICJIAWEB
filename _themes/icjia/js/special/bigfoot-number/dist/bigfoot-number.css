@@ -1,7 +1,7 @@
 .bigfoot-footnote__button {
   position: relative;
   z-index: 5;
-  top: -0.1em;
+  top: -0.4em;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   display: inline-block;
@@ -39,6 +39,7 @@
   content: '';
   display: table;
   clear: both;
+  color: #fff;
 }
 
 .bigfoot-footnote__button__circle {
