@@ -109,6 +109,8 @@
 		<link rel="stylesheet" property="stylesheet" href="{{ theme:asset src='bower_components/bx-slider.js/dist/jquery.bxslider.min.css'}}">
 		<link href="{{ theme:asset src='bower_components/ekko-lightbox/dist/ekko-lightbox.min.css' }}" rel="stylesheet" property="stylesheet">
 
+		<link href="{{ theme:asset src='js/special/bigfoot/dist/bigfoot-default.css' }}" rel="stylesheet" property="stylesheet">
+
 
 
 
@@ -159,6 +161,9 @@
 		<!-- Progress bar from CSS-tricks -->
 		<script src="{{ theme:asset src='js/special/progressBar.js' }}"></script>
 
+		<!-- Bigfoot footnotes -->
+		<script src="{{ theme:asset src='js/special/bigfoot/dist/bigfoot.min.js' }}"></script>
+
 		<script src="{{ theme:asset src='bower_components/bx-slider.js/dist/jquery.bxslider.min.js' }}"></script>
 
 		<!-- ICJIA js -->
@@ -198,6 +203,10 @@
 {{theme:partial src="google-tracking"}}
 
 {{theme:partial src="sticky-social-sidebar"}}
+
+<script type="text/javascript">
+    $.bigfoot();
+</script>
 
 
 

@@ -5,6 +5,7 @@
 
 {{if paragraphType == 'indent'}}
 p {text-indent: 1.5em}
+.bigfoot-footnote__content p {text-indent: 0;}
 p.drop {text-indent: 0;}
 {{endif}}
 </style>
@@ -74,7 +75,7 @@ p.drop {text-indent: 0;}
 <div>
   <!-- Nav tabs -->
 	{{ if tabviz == 'true'}}
-	
+
   <ul class="nav nav-tabs" role="tablist" style="margin-top: 25px">
     <li role="presentation" class="active">
 			<a href="#{{tab1|slugify}}" aria-controls="home" role="tab" data-toggle="tab" class="show-toc no-print">{{tab1}}</a>
