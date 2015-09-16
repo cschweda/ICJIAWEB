@@ -643,3 +643,8 @@ $(document).ready(function() {
 
 
 });
+
+
+/* Markdown footnotes: BigfootJS */
+
+$.bigfoot();
