@@ -1,16 +1,17 @@
 .bigfoot-footnote__button {
+  
   position: relative;
   z-index: 5;
-  top: -0.5em;
+  top: -0.4em;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   display: inline-block;
   padding: 0.35em;
-  margin: 0 0.1em 0 0.2em;
+  margin: 0 0 0 -0.15em;
   border: none;
   border-radius: 0.3em;
   cursor: pointer;
-  background-color: #ddd;
+  background-color: #fff;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   font-size: 2rem;
@@ -256,7 +257,7 @@
   border-radius: 0.475em;
 }
 .bigfoot-footnote__button:after {
-  font-family: 'Lato', sans-serif;
+
   font-weight: 900;
   content: attr(data-footnote-number);
   position: absolute;
@@ -266,9 +267,9 @@
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   display: block;
-  font-size: 0.5em;
+  font-size: 0.8em;
   font-weight: bold;
-  color: rgba(110, 110, 110, 0.9);
+  color: #466c8c;
   -webkit-transition: color 0.25s ease;
           transition: color 0.25s ease;
 }

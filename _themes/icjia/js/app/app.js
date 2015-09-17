@@ -645,6 +645,12 @@ $(document).ready(function() {
 });
 
 
-/* Markdown footnotes: BigfootJS */
+/* Markdown footnotes: BigfootJS: http://www.bigfootjs.com/ */
 
-$.bigfoot();
+$.bigfoot({
+
+		// leave original footnotes intact
+		actionOriginalFN: 'ignore'
+	}
+
+);
