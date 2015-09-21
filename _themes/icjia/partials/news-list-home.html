@@ -3,7 +3,7 @@
   <div class="separator-line"></div>
 
 
-  {{ entries:listing folder="news" limit="6" show_past="true" show_future="false"}}
+  {{ entries:listing folder="news|press" limit="6" show_past="true" show_future="false"}}
 	    {{ if no_results }}
 		  <p class="sorry">
 			No news is good news.<br>
@@ -15,7 +15,7 @@
 
 
       <div class="news-item">
-      <h5 style="font-weight: 900; margin-top: 40px; line-height: 25px;"><span style="font-weight: 400; color: #666">{{ date }}</span> | <a href="{{ url }}">{{ displayTitle }}</a></h5>
+      <h5 style="font-weight: 900; margin-top: 40px; line-height: 25px;"><span style="font-weight: 400; color: #666">{{ date }}</span> | <a href="{{ url }}">{{if displayTitle}}{{ displayTitle }}{{else}}{{title}}{{endif}}</a></h5>
 
           <div class="expander-news">
           {{ content|widont }}

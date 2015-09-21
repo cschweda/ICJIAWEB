@@ -81,14 +81,14 @@
   <div class="separator-line"></div>
 
 
-  {{ entries:listing folder="news" limit="8" }}
+  {{ entries:listing folder="news|press" limit="8" }}
 	    {{ if no_results }}
 		  <p class="sorry">
 			No journal posts have been posted yet.<br>
 			Check back soon.
 		  </p>
 	    {{ else }}
-      <h5 style="font-weight: 900; margin-top: 40px; line-height: 25px;"><span style="font-weight: 400; color: #777">{{ date }}</span> | <a href="{{ url }}">{{ displayTitle }}</a></h5>
+      <h5 style="font-weight: 900; margin-top: 40px; line-height: 25px;"><span style="font-weight: 400; color: #777">{{ date }}</span> | <a href="{{ url }}">{{if displayTitle}}{{ displayTitle }}{{else}}{{title}}{{endif}}</a></h5>
 
 
           {{ content }}
