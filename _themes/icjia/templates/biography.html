@@ -25,7 +25,10 @@ breadcrumbs: true
 <img src="{{ transform src="{authorPhoto}" height="125"}}"
     style="float: left; padding-right: 14px;" />
 {{endif}}
-  <p>	{{content}}</p>
+  <p>
+
+		{{content}}
+
 
 
 
@@ -41,6 +44,11 @@ breadcrumbs: true
 				{{if phone}}{{phone}}{{else}}(312) 793-8550{{endif}}&nbsp;&nbsp;
   		{{theme:partial src="author-social" use_context="true"}}</p>
 		{{endif}}
+
+		{{if !content}}
+		<div style="height: 60px"></div>
+
+			{{endif}}</p>
 
   		{{if academicBackground}}
   		<h4 class="h6">Academic Background</h4>
