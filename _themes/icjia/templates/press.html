@@ -1,0 +1,58 @@
+---
+breadcrumbs: true
+---
+
+<div class="container">
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-9">
+    <h2 class="h3" style="text-transform: uppercase; margin-bottom: 30px; border-bottom: 1px #ccc solid; padding-bottom: 8px;">Press Releases and Media Advisories</h2>
+	{{ entries:listing folder="press" }}
+	    {{ if no_results }}
+		  <p class="sorry">
+
+			Check back soon.
+		  </p>
+	    {{ else }}
+      <div class="article-snippet white">
+
+
+
+        <h5>
+          {{ if use_context }}<a href="{{ url }}">{{ endif }}{{ title|widont }}{{ if use_context }}</a>{{ endif }}
+        </h5>
+
+
+
+
+      <div style="margin-left: 10px; ">
+        {{if splash}}
+        <a href="{{ url }}">
+        <img src="{{ transform src="{splash}" width="125"}}"
+            style="float: left; padding-right: 14px;" />
+          </a>
+        {{endif}}{{ summary }}
+
+      </div>
+
+
+
+
+        <div style="height: 50px"></div>
+
+
+
+      </div>
+
+      <hr/>
+
+	    {{ endif }}
+	{{ /entries:listing }}
+
+
+  </div>
+
+
+
+</div>
+</div>
