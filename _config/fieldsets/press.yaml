@@ -11,6 +11,12 @@ fields:
     default:
     type: tags
 
+  splash:
+     display: Splash Photo for Facebook. Leave blank for default ICJIA photo
+     type: file
+     allowed: [png, jpg, jpeg]
+     destination: assets/img/splash/
+
   upload:
     type: file
     destination: assets/press/
