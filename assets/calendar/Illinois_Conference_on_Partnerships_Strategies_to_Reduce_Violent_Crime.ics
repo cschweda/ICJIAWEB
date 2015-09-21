@@ -1,0 +1,56 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 14.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:PUBLISH
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+BEGIN:VTIMEZONE
+TZID:Central Standard Time
+BEGIN:STANDARD
+DTSTART:16011104T020000
+RRULE:FREQ=YEARLY;BYDAY=1SU;BYMONTH=11
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010311T020000
+RRULE:FREQ=YEARLY;BYDAY=2SU;BYMONTH=3
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+CLASS:PUBLIC
+CREATED:20150917T152412Z
+DESCRIPTION:This conference will provide local law enforcement and governme
+	nt units with promising approaches to serious crimes\, including high leve
+	ls of gun violence.
+DTEND;TZID="Central Standard Time":20151105T133000
+DTSTAMP:20150917T151954Z
+DTSTART;TZID="Central Standard Time":20151104T083000
+LAST-MODIFIED:20150917T152412Z
+LOCATION:Peoria\, Illinois Marriot http://www.marriott.com/hotels/travel/pi
+	amc-peoria-marriott-pere-marquette/
+PRIORITY:5
+SEQUENCE:0
+SUMMARY;LANGUAGE=en-us:Illinois Conference on Partnerships & Strategies to 
+	Reduce Violent Crime November 4-5\, 2015
+TRANSP:OPAQUE
+UID:040000008200E00074C5B7101A82E00800000000A095826532F1D001000000000000000
+	010000000F9EF7C65E02385418083D965B4C533C6
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//E
+	N">\n<HTML>\n<HEAD>\n<META NAME="Generator" CONTENT="MS Exchange Server ve
+	rsion 14.02.5004.000">\n<TITLE></TITLE>\n</HEAD>\n<BODY>\n<!-- Converted f
+	rom text/rtf format -->\n\n<P DIR=LTR><SPAN LANG="en-us"><FONT FACE="Calib
+	ri">T</FONT></SPAN><SPAN LANG="en-us"><FONT FACE="Calibri">he Illinois Con
+	ference on Partnerships &amp\; Strategies to Reduce Violent Crime will pro
+	vide local law enforcement and government units with promising approaches 
+	to serious crimes\, including high levels of gun violence. Participating j
+	urisdictions should  consist of a multi-disciplinary team willing to work
+	 and learn together from national and local subject-matter experts. Partic
+	ipating jurisdictions may be eligible for future funding and technical ass
+	istance for developing and implementing these focused and collaborative st
+	rategies.</FONT></SPAN></P>\n\n</BODY>\n</HTML>
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+X-MICROSOFT-CDO-IMPORTANCE:1
+END:VEVENT
+END:VCALENDAR
