@@ -148,10 +148,6 @@
     <script src="{{ theme:asset src='bower_components/bootstrap/dist/js/bootstrap.min.js' }}"></script>
     <script src="{{ theme:asset src='bower_components/jquery-easing-original/jquery.easing.min.js' }}"></script>
 
-		<!-- Highcharts -->
-    <script src="{{ theme:asset src='bower_components/highcharts-release/highcharts.src.js' }}"></script>
-    <script src="{{ theme:asset src='bower_components/highcharts-release/modules/exporting.js' }}"></script>
-
 
     <script src="{{ theme:asset src='bower_components/readmore/readmore.js' }}"></script>
 
@@ -192,7 +188,9 @@
 
 
 		{{if jsFile}}
-			<script src="{{ theme:asset src='js/highcharts/{{jsFile}}'}}"></script>
+		<script src="{{ theme:asset src='bower_components/highcharts-release/highcharts.src.js' }}"></script>
+    <script src="{{ theme:asset src='bower_components/highcharts-release/modules/exporting.js' }}"></script>
+		<script src="{{ theme:asset src='js/highcharts/{{jsFile}}'}}"></script>
 		{{/if}}
 
 
