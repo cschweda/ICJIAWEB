@@ -403,7 +403,7 @@
 }
 
 /* X */
-.strp-window-skin-strip .strp-close .strp-close-icon { background-image: url('strip-skins/strip/close.svg'); opacity: .8; }
+.strp-window-skin-strip .strp-close .strp-close-icon { background-image: url('strip-skins/strip/close.png'); opacity: .8; }
 .strp-window-skin-strip .strp-close:hover .strp-close-icon { opacity: 1; }
 /* iOS 8.4.1 bug: when opacity changes it'll require 2 taps
    force a single opacity to fix this

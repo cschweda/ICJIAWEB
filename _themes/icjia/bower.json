@@ -9,7 +9,8 @@
     "jquery": "~1.11.3",
     "jquery-easing-original": "~1.3.1",
     "modernizr": "~2.8.3",
-    "readmore": "~2.0.5"
+    "readmore": "~2.0.5",
+    "strip": "~1.6.1"
   },
   "devDependencies": {
     "Hover": "~2.0.2",
