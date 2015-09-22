@@ -5,13 +5,13 @@
       <title><![CDATA[Illinois Criminal Justice Information Authority]]></title>
       <link>{{ _site_url }}</link>
       <description>Illinois Criminal Justice Information Authority</description>
-      <lastBuildDate>{{ entries:listing folder="news|articles" limit="1" }}{{ datestamp format="r" }}{{ /entries:listing }}</lastBuildDate>
+      <lastBuildDate>{{ entries:listing folder="news|articles|press" limit="1" sort_dir="desc"}}{{ datestamp format="r" }}{{ /entries:listing }}</lastBuildDate>
       <language>en-us</language>
       <webMaster>christopher.schweda@illinois.gov (Christopher Schweda)</webMaster>
       <copyright>Copyright {{ current_date format='Y' }}</copyright>
       <ttl>3600</ttl>
 
-      {{ entries:listing folder="news|articles" limit="40" }}
+      {{ entries:listing folder="news|articles|press" limit="25" sort_dir="desc"}}
          <item>
          <title><![CDATA[{{ title }}]]></title>
          <link>{{ permalink }}</link>
