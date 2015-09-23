@@ -23,7 +23,7 @@ include_properties:
 property_weights:
   title: 2
   keywords: 4
-  content: 5
+  content: 6
   positive_keywords: 3
   negavite_keywords: -3
   super_positive_keywords: 8
