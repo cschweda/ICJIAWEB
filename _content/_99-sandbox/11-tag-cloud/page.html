@@ -1,35 +1,6 @@
 ---
 _fieldset: sandbox
-title: Tag Cloud
+title: Variables
 _template: default-blank
 breadcrumbs: true
 ---
-
-
-<!-- <div id="tag-cloud">
-  {{ taxonomy:listing from="articles" type="keywords" }}
-  <span>
-    <a href="{{ url }}" title="{{entries:listing folder='articles' conditions='keywords:{name}'}}{{ if first }}{{ total_results }}{{endif}}{{ /entries:listing }}">{{ name|title }}</a>
-  </span>
-  {{ /taxonomy:listing }}
-</div>
-
-
-<script>
-  $(document).ready(function() {
-    function processCloud(id, max) {
-      var cloud = document.getElementById(id);
-      if (!cloud) return;
-      var tags = cloud.getElementsByTagName("a");
-      for (var i = 0; i < tags.length; i++) {
-        var tag = tags[i];
-        var title = tag.getAttribute("title");
-        var f = title.substring(title.indexOf(":") + 1);
-        var fontSize = (150.0 * (1.0 + (1.5 * f - max / 2) / max)) + "px";
-        tag.style.fontSize = fontSize;
-        console.log(tag);
-      }
-    };
-    processCloud("tag-cloud", 30);
-  });
-</script> -->
