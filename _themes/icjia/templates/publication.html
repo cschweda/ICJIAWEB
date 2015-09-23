@@ -21,11 +21,23 @@ breadcrumbs: true
 
 </div>
 
+
 <div class="text-center" style="margin-top: 30px;">
 
   {{if puburl}}
 
-  <a class="btn btn-primary track" href="{{puburl}}"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Download PDF&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
+  <a class="btn btn-primary track" href="{{puburl}}"><i class="fa fa-file-pdf-o"></i>&nbsp;&nbsp;Download&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
+
+
+
+
+
+  <iframe style="margin-top: 35px; margin-bottom: 40px" src="/ViewerJS/#..{{puburl}}" width='100%' height='400' allowfullscreen webkitallowfullscreen></iframe>
+
+
+
+
+
 
   {{endif}}
 
