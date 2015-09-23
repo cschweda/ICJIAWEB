@@ -17,7 +17,7 @@ title: Keywords
 			<div class="taxonomy-results">
 				<h2 class="h4" style="text-transform: uppercase">Items tagged with "{{ taxonomy_name|title }}"</h2>
 				<hr/>
-				{{ entries:listing folder="datasets|news|articles|publications|grant-programs" taxonomy="true" }}
+				{{ entries:listing folder="datasets|news|articles|press|publications|grant-programs" taxonomy="true" }}
 					{{ if no_results }}
 						<!-- <p style="margin-left: 10px">
 							Nothing found.
@@ -30,7 +30,7 @@ title: Keywords
 
 
 
-				{{ pages:listing folder="about|grants|research|systems|sites" taxonomy="true" }}
+				{{ pages:listing folder="about*|grants*|research*|systems*|sites*" taxonomy="true" }}
 					{{ if no_results }}
 						<!-- <p style="margin-left: 10px">
 							Nothing found.
@@ -80,7 +80,7 @@ title: Keywords
 
 			<div id="keyword-grid">
 
-    {{ taxonomy:listing type="keywords" folder="about|grants|research|systems|datasets|news|articles|publications|grant-programs|sites" show_past="true"  show_future="true" }}
+    {{ taxonomy:listing type="keywords" folder="about|grants|research|systems*|press|datasets|news|articles|publications|grant-programs|sites*" show_past="true"  show_future="true" }}
 
 			<div class="keyword-single {{name|lower|firstletter:1}}" style="display: inline !important">
         <a class="btn btn-primary btn-keyword btn-xs" href="/{{ slug }}" style="font-size: 12px">{{ name }}</a>
