@@ -1,8 +1,8 @@
-{{ entries:listing folder="news|articles" limit="1000" }}
+{{ entries:listing folder="news|press|articles" limit="1000" }}
   <url>
     <loc>{{ _site_url }}{{ url }}</loc>
     <lastmod>{{ datestamp format="Y-m-d" }}</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 {{ /entries:listing }}
@@ -10,7 +10,7 @@
   <url>
     <loc>{{ _site_url }}{{ url }}</loc>
     <lastmod>{{ last_modified format="Y-m-d" }}</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 {{ /nav }}
