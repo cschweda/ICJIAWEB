@@ -16,12 +16,12 @@ $( ".track" ).on( "click", function() {
 
 // Google tracking for embeddeded PDF files
 
-$('.publication-embed').load(function () {
-	var src = $(this).attr('src');
- 	var file_name1 = src.split(/[\\\/]/).pop();
-	ga('send', 'event', 'Embed', 'Click', file_name1);
- 	console.log('Publication embed: ' + file_name1);
- });
+// $('.publication-embed').load(function () {
+// 	var src = $(this).attr('src');
+//  	var file_name1 = src.split(/[\\\/]/).pop();
+// 	ga('send', 'event', 'Embed', 'Click', file_name1);
+//  	console.log('Publication embed: ' + file_name1);
+//  });
 
 
 // Add tab toggling to analytics reporting
