@@ -16,6 +16,8 @@ table {
 	border-width: 1px;
 	border-color: #666666;
 	border-collapse: collapse;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 table th {
 	border-width: 1px;

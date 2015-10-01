@@ -76,7 +76,7 @@
 	</table>
 	
 	<table id="datatable_populationByAge" class="Population trendTable">
-	<caption class="TableTitle">Circuit Population By Age</caption>
+	<caption class="TableTitle">Population By Age</caption>
 		<thead>
 			<th>Age Group</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -100,7 +100,7 @@
 	</table>
 	
 	<table id="datatable_populationBySex" class="Population trendTable">
-	<caption class="TableTitle">Circuit Population By Sex</caption>
+	<caption class="TableTitle">Population By Sex</caption>
 		<thead>
 			<th>Sex</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -124,7 +124,7 @@
 	</table>
 	
 	<table id="datatable_populationByRace" class="Population trendTable">
-	<caption class="TableTitle">Circuit Population By Race</caption>
+	<caption class="TableTitle">Population By Race</caption>
 		<thead>
 			<th>Race</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -147,7 +147,7 @@
 		</cfoutput>
 		
 	<table id="datatable_populationByRaceEth" class="Population trendTable">
-	<caption class="TableTitle">Circuit Population By Race/Ethnicity</caption>
+	<caption class="TableTitle">Population By Race/Ethnicity</caption>
 		<thead>
 			<th>Race/Ethnicity</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">

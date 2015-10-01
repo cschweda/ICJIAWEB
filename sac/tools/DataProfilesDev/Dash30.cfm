@@ -87,7 +87,7 @@
 
 
 <h1>Adult Prison Admission Profile for <cfoutput>#GeographyName#</cfoutput></h1>
-<p>Description of what IDOC is, what prison is, cat pictures, etc.</p>
+<p>Description of what IDOC is, what prison is, links, etc.</p>
 <div id="PrisonAdmitsByAdmitTypeSection">
 	<h2>Prison Admissions By Admission Type</h2>
 	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.</p>
@@ -114,10 +114,17 @@
 		</tr>
 		</cfoutput>
 	</table>
+	
+	<p><span class="ListCaveats">New court admissions to prison are usually the result of sentencing for crimes commited in the county. Technical violation admissions are the result of the offender violating conditions of their parole or mandatory supervised release. A violation may be a new arrest or offense committed. At the county and judicial circuit, new court admissions are more useful to examine as they are usually the result of crimes committed within the county or circuit. </span>
+	<span class="ListIntroText">From <cfoutput>#MinMaxYears.MinYear#</cfoutput> to <cfoutput>#MinMaxYears.MaxYear#</cfoutput>, </span></p>
+	<ul class="PercentChangeList" id="PrisonAdmitsByAdmitTypeCountList"></ul>
+		
+	
 	<div id="TimeSeriesContainer_PrisonAdmitsByType" class="HC_TimeSeries DataTableBefore" style="min-width: 310px; min-height: 500px; margin: 0 auto"></div>
-	<div id="piecontainer-11" class="HC_Pie FirstChart DataTableBefore" style="height: 400px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer-22" class="HC_Pie LastChart DataTableBefore" style="height: 400px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer-11" class="HC_Pie FirstChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer-22" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
 </div>
+
 
 <hr><hr>
 <cfif #CountyCount.NumCounties# GT 1 AND #SelectedICJIANumber# GT 102><!---Only outputting this for Circuits with more than one county--->
@@ -149,15 +156,15 @@
 	</table>
 
 <!---output an empty list for circuits with more than one county. This will be filled in with descriptives of the table with javascript--->
-	<cfif #CountyCount.NumCounties# GT 1>
-		<span class="ListIntroText">From <cfoutput>#MinMaxYears.MinYear#</cfoutput> to <cfoutput>#MinMaxYears.MaxYear#</cfoutput>, </span>
-		<ul class="PercentChangeList" id="PrisonAdmissionsCountList"></ul>		
-	</cfif>
+
+	<span class="ListIntroText">From <cfoutput>#MinMaxYears.MinYear#</cfoutput> to <cfoutput>#MinMaxYears.MaxYear#</cfoutput>, </span>
+	<ul class="PercentChangeList" id="PrisonAdmitsByCountyCountList"></ul>		
+
 
 	<div id="TimeSeriesContainer1" class="HC_TimeSeries DataTableBefore" style="min-width: 310px; min-height: 500px; margin: 0 auto"></div>
 	<cfif #CountyCount.NumCounties# GT 1>
-	<div id="piecontainer1" class="HC_Pie LastChart DataTableBefore" style="height: 400px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer2" class="HC_Pie LastChart Population_Total" style="height: 400px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer1" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer2" class="HC_Pie LastChart Population_Total" style="height: 300px; width: 400px; display: inline-block"></div>
 	</cfif>
 	<hr><hr>
 </div>
@@ -175,17 +182,28 @@
 			</cfloop>
 		</thead>
 		<cfoutput query="NewPrisonAdmitsByCounty_Rate">
-		<tr><td class="Geography">#GeographyName#</td>	
+		<tr class="DataRow"><td class="Geography">#GeographyName#</td>	
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 				<cfset YearConcat = NewPrisonAdmitsByCounty_Rate["FY" & YearLoop][NewPrisonAdmitsByCounty_Rate.CurrentRow]>
-				<td>#YearConcat#</td>
+				<cfif YearConcat IS NOT ''><cfSet YearConcat = YearConcat></cfif>
+				<cfif #YearLoop# EQ #MinMaxYears.MinYear#>
+					<td class="FirstYear">#YearConcat#</td>
+					<cfelseif #YearLoop# EQ #MinMaxYears.MaxYear#>
+					<td class="LastYear">#YearConcat#</td>
+					<cfelse><td>#YearConcat#</td>
+					</cfif>
 			</cfloop>
 		</tr>
 		</cfoutput>
 	</table>
+	
+<p><span class="ListIntroText">From <cfoutput>#MinMaxYears.MinYear#</cfoutput> to <cfoutput>#MinMaxYears.MaxYear#</cfoutput>, </span></p>
+<ul class="PercentChangeList" id="PrisonAdmitssByCountyRateList"></ul>		
+		
 <div id="TimeSeriesContainer2" class="HC_TimeSeries DataTableBefore" style="min-width: 310px; min-height: 500px; margin: 0 auto"></div>	
 </div>
 <hr><hr>
+
 
 <div id = "PrisonAdmitsByAge">
 <h2>New Court Prison Admissions By Age</h2>
@@ -208,8 +226,8 @@
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="piecontainer3" class="HC_Pie LastChart DataTableBefore" style="height: 400px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer4" class="HC_Pie LastChart Population_ByAge" style="height: 400px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer3" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer4" class="HC_Pie LastChart Population_ByAge" style="height: 300px; width: 400px; display: inline-block"></div>
 </div>
 <hr><hr>
 
@@ -234,8 +252,8 @@
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="piecontainer5" class="HC_Pie LastChart DataTableBefore" style="height: 400px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer6" class="HC_Pie LastChart Population_BySex" style="height: 400px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer5" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer6" class="HC_Pie LastChart Population_BySex" style="height: 300px; width: 400px; display: inline-block"></div>
 	
 </div>
 <hr><hr>
@@ -261,8 +279,8 @@
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="piecontainer9" class="HC_Pie LaststChart DataTableBefore" style="height: 400px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer10" class="HC_Pie LastChart Population_ByRaceEth" style="height: 400px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer9" class="HC_Pie LaststChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer10" class="HC_Pie LastChart Population_ByRaceEth" style="height: 300px; width: 400px; display: inline-block"></div>
 	
 </div>
 <hr><hr>
@@ -289,8 +307,8 @@
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="piecontainer7" class="HC_Pie FirstChart DataTableBefore" style="height: 400px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer8" class="HC_Pie LastChart DataTableBefore" style="height: 400px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer7" class="HC_Pie FirstChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer8" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
 	
 </div>
 <hr><hr>

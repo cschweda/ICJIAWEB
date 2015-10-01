@@ -40,38 +40,42 @@ $(document).ready(function() {
 			if ($(this).hasClass('DataTableAfter')) {	
 				var dataTable_id = $(this).nextAll('table').prop('id');
 				var chartTitleText = $(this).nextAll('table').find('caption').text(); //get title from caption and specific th text
-				var unitText = chartTitleText;
+				if (chartTitleText.indexOf('by') > 0) {
+					var unitText = chartTitleText.substring(0,chartTitleText.indexOf('by')-1)
+				} else {var unitText = chartTitleText};
 			};  
 			if ($(this).hasClass('DataTableBefore')) {	
 				var dataTable_id = $(this).prevAll('table').prop('id');
 				var chartTitleText = $(this).prevAll('table').find('caption').text(); //get title from caption and specific th text
-				var unitText = chartTitleText;
+				if (chartTitleText.indexOf('by') >0 ) {
+					var unitText = chartTitleText.substring(0,chartTitleText.indexOf('by')-1)
+				} else {var unitText = chartTitleText};
 			}; 	
 			if ($(this).hasClass('Population_Total')) {	
 				var dataTable_id = 'datatable_populationTotal';
 				var chartTitleText = $('#datatable_populationTotal').find('caption').text();
-				var unitText = 'people';
+				var unitText = 'People';
 				//get title from caption and specific th text
 			}; 	
 			if ($(this).hasClass('Population_ByAge')) {	
 				var dataTable_id = 'datatable_populationByAge';
 				var chartTitleText = $('#datatable_populationByAge').find('caption').text(); //get title from caption and specific th text
-				var unitText = 'people';
+				var unitText = 'People';
 			}; 	
 			if ($(this).hasClass('Population_BySex')) {	
 				var dataTable_id = 'datatable_populationBySex';
 				var chartTitleText = $('#datatable_populationBySex').find('caption').text(); //get title from caption and specific th text
-				var unitText = 'people';
+				var unitText = 'People';
 			}; 
 			if ($(this).hasClass('Population_ByRace')) {	
 				var dataTable_id = 'datatable_populationByRace';
 				var chartTitleText = $('#datatable_populationByRace').find('caption').text(); //get title from caption and specific th text
-				var unitText = 'people';
+				var unitText = 'People';
 			}; 
 			if ($(this).hasClass('Population_ByRaceEth')) {	
 				var dataTable_id = 'datatable_populationByRaceEth';
 				var chartTitleText = $('#datatable_populationByRaceEth').find('caption').text(); //get title from caption and specific th text
-				var unitText = 'people';
+				var unitText = 'People';
 			}; 
 			var columnNum = 0;  //used to find last column in table
 			var dataYear = $('#' + dataTable_id + ' th').last().text();  //get year for columns
@@ -94,7 +98,7 @@ $(document).ready(function() {
 				},
 				tooltip: {
 					formatter: function () {
-						return '<b>' + this.series.name + '</b><br/>' +
+						return '<b>' + this.point.name + '</b><br/>' +
 						Highcharts.numberFormat(this.point.y,0,'.',',') + ' ' + unitText;
 					}
 				},
@@ -176,7 +180,7 @@ $(document).ready(function() {
 			var dataTable_id = $(this).prevAll('table').prop('id');
 			var chartTitleText = $(this).prevAll('table').find('caption').text() 
 				+', ' + $(this).prevAll('table').find('th').last().text();	//get title from caption and the last th element 
-				
+			var unitText = chartTitleText.substring(0,chartTitleText.indexOf('by')-1);	
 			var values = getSingleColumnDataIntoString(dataTable_id,columnNum);
 			var valuesString = "[" + values + "]";
 			$(container_id).highcharts({
@@ -200,8 +204,8 @@ $(document).ready(function() {
 				},
 				tooltip: {
 					formatter: function () {
-						return '<b>' + this.series.name + '</b><br/>' +
-							Highcharts.numberFormat(this.point.y,0,'.',',') + ' ' + this.point.name;
+						return '<b>' + this.point.name + '</b><br/>' +
+							Highcharts.numberFormat(this.point.y,0,'.',',') + ' ' + unitText;
 					}
 				}
 			});

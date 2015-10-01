@@ -87,7 +87,7 @@
 
 
 <h1>Adult Prison Exits Profile for <cfoutput>#GeographyName#</cfoutput></h1>
-<p>Description of what IDOC is, what prison is, cat pictures, etc.</p>
+<p>Description of what IDOC is, what prison is, links, etc.</p>
 
 <div id="PrisonExitsByExitTypeSection">
 	<h2>Prison Exits by Exit Type</h2>
@@ -104,7 +104,7 @@
 		<tr class="DataRow"><td class="Indicator">#SubCatDesc#</td>	
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 				<cfset YearConcat = PrisonExitsByExitTypeCount["FY" & YearLoop][PrisonExitsByExitTypeCount.CurrentRow]>
-				<cfif YearConcat IS NOT ''><cfSet YearConcat = Int(YearConcat)></cfif>
+				<cfif YearConcat IS NOT ''><cfSet YearConcat = YearConcat></cfif>
 				<cfif #YearLoop# EQ #MinMaxYears.MinYear#>
 					<td class="FirstYear">#YearConcat#</td>
 					<cfelseif #YearLoop# EQ #MinMaxYears.MaxYear#>
@@ -116,8 +116,8 @@
 		</cfoutput>
 	</table>
 	<div id="TimeSeriesContainer_PrisonExitsByType" class="HC_TimeSeries DataTableBefore" style="min-width: 310px; min-height: 500px; margin: 0 auto"></div>
-	<div id="piecontainer-11" class="HC_Pie FirstChart DataTableBefore" style="height: 400px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer-22" class="HC_Pie LastChart DataTableBefore" style="height: 400px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer-11" class="HC_Pie FirstChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer-22" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
 </div>
 
 
@@ -160,8 +160,8 @@
 
 	<div id="TimeSeriesContainer1" class="HC_TimeSeries DataTableBefore" style="min-width: 310px; min-height: 500px; margin: 0 auto"></div>
 	<cfif #CountyCount.NumCounties# GT 1>
-	<div id="piecontainer1" class="HC_Pie LastChart DataTableBefore" style="height: 400px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer2" class="HC_Pie LastChart Population_Total" style="height: 400px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer1" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer2" class="HC_Pie LastChart Population_Total" style="height: 300px; width: 400px; display: inline-block"></div>
 	</cfif>
 	<hr><hr>
 </div>
@@ -218,8 +218,8 @@
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="piecontainer3" class="HC_Pie LastChart DataTableBefore" style="height: 400px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer4" class="HC_Pie LastChart Population_ByAge" style="height: 400px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer3" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer4" class="HC_Pie LastChart Population_ByAge" style="height: 300px; width: 400px; display: inline-block"></div>
 </div>
 <hr><hr>
 
@@ -248,8 +248,8 @@
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="piecontainer5" class="HC_Pie LastChart DataTableBefore" style="height: 400px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer6" class="HC_Pie LastChart Population_BySex" style="height: 400px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer5" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer6" class="HC_Pie LastChart Population_BySex" style="height: 300px; width: 400px; display: inline-block"></div>
 	
 </div>
 <hr><hr>
@@ -277,8 +277,8 @@
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="piecontainer9" class="HC_Pie LaststChart DataTableBefore" style="height: 400px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer10" class="HC_Pie LastChart Population_ByRaceEth" style="height: 400px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer9" class="HC_Pie LaststChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer10" class="HC_Pie LastChart Population_ByRaceEth" style="height: 300px; width: 400px; display: inline-block"></div>
 	
 </div>
 <hr><hr>
@@ -307,8 +307,8 @@
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="piecontainer7" class="HC_Pie FirstChart DataTableBefore" style="height: 400px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer8" class="HC_Pie LastChart DataTableBefore" style="height: 400px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer7" class="HC_Pie FirstChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer8" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
 	
 </div>
 <hr><hr>
