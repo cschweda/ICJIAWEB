@@ -42,6 +42,19 @@ fields:
     required: false
     default:
     type: redactor
+    
+  siteDisplay:
+    display: Display news item on which site(s)?
+    required: true
+    type: suggest
+    create: false
+    max_items: 4
+    default:
+      -ICJIA
+    options:
+      - ICJIA
+      - ARI
+      - ILFVCC
 
   content:
     display: Page Content
