@@ -1,8 +1,10 @@
 ---
 title: 'ILFVCC Home'
 _template: default-blank
+_layout: default-ilfvcc
 upload: ""
-breadcrumbs: "true"
+breadcrumbs: "false"
+overrideCSS: ilfvcc.css
 super_positive_keywords:
   - ilfvcc
   - family
@@ -10,13 +12,64 @@ super_positive_keywords:
 summary: Illinois Family Violence Coordinating Councils homepage
 ---
 
-<div class="container">
+{{theme:partial src="icjia-off-canvas-menu"}}
+
+<div id="nav-wrapper-rvc" class="" style="margin-bottom: 0; background: #fff; position: relative">
+	<div id="nav" class="navbar navbar-default outline navbar-fixed-top non-icjia headroom--unpinned" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" style="z-index: 50000">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<div id="icjia-button-bar">
+					<a type="button" style="background: #082e6f; color: #fff; font-size: 10px; font-weight: 900" class="offCanvasButton btn btn-sm btn-default" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+					<i class="fa fa-bars fa-2x" style="margin-bottom: .15em"></i>
+					<!-- <span style="font-size: 12px; padding-left: 2px;">ICJIA</span> -->
+        </a>
+				</div>
+				<div id="site-title">
+					Illinois Family Violence Coordinating Councils
+				</div>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right" style="margin-right: 10px">
+
+					<li class="dropdown " data-animate="animated fadeInUp" style="z-index:500;"> <a href="#" class="dropdown-toggle " data-toggle="dropdown"> <i class="fa fa-search" style="margin-bottom: .3em"> </i> </a>
+					<ul class="dropdown-menu animated bounceInDown">
+						<li id="dropdownForm">
+						<div class="dropdown-form">
+							<form class=" form-inline" action="/search" method="GET" name="searchForm" id="searchForm">
+								<div class="input-group " style="padding: 4px 8px 4px 8px ">
+									<input id="query" name="query" class="form-control" style="width: 200px" placeholder="search..." type="text">
+									<span class="input-group-btn"> <input class="btn btn-theme-bg" id="siteSearchButton" value="Search!" type="submit"> </span>
+								</div>
+								<!--input group-->
+							</form>
+							<!--form-->
+						</div>
+						<!--.dropdown form-->
+						</li>
+						<!--.drop form search-->
+					</ul>
+					<!--.drop menu-->
+					</li>
+					<!--nav search form-->
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container" style="margin-top: 100px">
 
 <div class="col-md-12 well">
 
 
   <div class="col-md-5">
-    <div class="text-center"><h4 style="color: #444;"><span class="foobar"></span></h4></div>
+    <div class="text-center"><h4 style="color: #444;"><span class="foobar">&nbsp;</span></h4></div>
     <div id="map-container-2" style="margin-top: -15px"></div>
   </div>
 
