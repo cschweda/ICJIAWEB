@@ -15,6 +15,11 @@
     url: /grants/overview
     type: 301
 
+/ilfvcc:
+    url: /ilfvcc/home
+    type: 301
+
+
 /research:
     url: /research/overview
     type: 301

@@ -1,13 +1,14 @@
 ---
-_fieldset: page
-title: Map test
+title: 'ILFVCC Home'
 _template: default-blank
 upload: ""
 breadcrumbs: "true"
-_layout: default-ilfvcc
+super_positive_keywords:
+  - ilfvcc
+  - family
+  - circuit
+summary: Illinois Family Violence Coordinating Councils homepage
 ---
-
-
 
 <div class="container">
 
@@ -20,7 +21,9 @@ _layout: default-ilfvcc
   </div>
 
 <div class="col-md-7">
-  <div id="circuit-info"></div>
+  <div class="text-center">
+  <h4><span id="circuit-info"></span></h4>
+</div>
 </div>
 
 </div>
@@ -49,14 +52,21 @@ _layout: default-ilfvcc
                 url="/circuits/circuit-" + circuit
                 //$('.foobar').html(data.label + ' ID: ' + data.id + ' Circuit: ' + circuit);
                 suffix = ordinal_suffix_of(circuit);
-                $('.foobar').html(data.label + ' County ' + ' | ' + suffix + ' Circuit');
+                if (circuit == '100') {
+                  label = 'Cook County | Cook';
+                } else {
+                  label = data.label + ' County ' + ' | ' + suffix + ' Circuit';
+                }
+
+                $('.foobar').html(label);
 
             },
 
             "entityClick": function(evt, data) {
                 circuit=data.value / 10;
+
                 $('#circuit-info').html('<div style="text-align: center; margin-top: 300px"><h5>Loading circuit information ...&nbsp;&nbsp;<i class="fa fa-spinner fa-spin"></i></h5></div>')
-                $('#circuit-info').load('/grants/display-grant?t=Drug+Abuse+Prevention+Intervention+Research+%28R01%29')
+                $('#circuit-info').html('/ilfvcc/display-circuit?t=circuit-' + circuit)
             },
         }
   });
