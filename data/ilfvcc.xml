@@ -1,0 +1,162 @@
+<map showlabels="1"
+showtooltip="1"
+showshadow="0"
+showbevel="1"
+basefont="Ariel"
+basefontsize="10"
+exportenabled="0"
+showexportdatamenuitem="0"
+showprintmenuitem="0"
+animation="1"
+exposehoverevent="1"
+showcanvasborder="0"
+bgalpha="10,15"
+bgcolor="a5a5a5"
+canvasbgcolor="375277,E9E9E9"
+fillcolor="CAD3DB"
+hovercolor="E6EAEE"
+tooltipbgcolor="FFFFFF"
+tooltipbordercolor="CAD3DB"
+basefontcolor="000000"
+bordercolor="FFFFFF"
+canvasbordercolor="375277"
+canvasborderalpha="40"
+showLabels="0"
+showLegend="0">
+
+<colorRange>
+
+        <color minValue="1" maxValue="10" displayValue="Circuit 1" color="571F4E" />
+				<color minValue="11" maxValue="20" displayValue="Circuit 2" color="76486E" />
+				<color minValue="21" maxValue="30" displayValue="Circuit 3" color="94708E" />
+				<color minValue="31" maxValue="40" displayValue="Circuit 4" color="AF3B6E" />
+				<color minValue="41" maxValue="50" displayValue="Circuit 5" color="C2AEBF" />
+				<color minValue="51" maxValue="60" displayValue="Circuit 6" color="E0D6DF" />
+				<color minValue="61" maxValue="70" displayValue="Circuit 7" color="748CAB" />
+				<color minValue="71" maxValue="80" displayValue="Circuit 8" color="92499C" />
+				<color minValue="81" maxValue="90" displayValue="Circuit 9" color="A66AAE" />
+				<color minValue="91" maxValue="100" displayValue="Circuit 10" color="851E9E" />
+				<color minValue="101" maxValue="110" displayValue="Circuit 11" color="B34CCC" />
+				<color minValue="111" maxValue="120" displayValue="Circuit 12" color="E17AFA" />
+				<color minValue="121" maxValue="130" displayValue="Circuit 13" color="1D2D44" />
+				<color minValue="131" maxValue="140" displayValue="Circuit 14" color="3E5C76" />
+				<color minValue="141" maxValue="150" displayValue="Circuit 15" color="aabbcc" />
+				<color minValue="151" maxValue="160" displayValue="Circuit 16" color="aabbcc" />
+				<color minValue="161" maxValue="170" displayValue="Circuit 17" color="aabbcc" />
+				<color minValue="171" maxValue="180" displayValue="Circuit 18" color="aabbcc" />
+				<color minValue="181" maxValue="190" displayValue="Circuit 19" color="aabbcc" />
+				<color minValue="191" maxValue="200" displayValue="Circuit 20" color="aabbcc" />
+				<color minValue="201" maxValue="210" displayValue="Circuit 20" color="aabbcc" />
+				<color minValue="211" maxValue="220" displayValue="Circuit 20" color="aabbcc" />
+				<color minValue="221" maxValue="230" displayValue="Circuit 20" color="aabbcc" />
+
+</colorRange>
+
+
+<data>
+		<entity id='001' value='80' toolText="Adams County{br}8th Circuit"/>
+		<entity id='003' value='100'  toolText=" County{br} 10th Circuit"/>
+		<entity id='005' value='30'  toolText=" County{br} 3rd Circuit"/>
+		<entity id='007' value='170'  toolText=" County{br} 17th Circuit"/>/>
+		<entity id='009' value='80'  toolText=" County{br} 8th Circuit"/>/>
+		<entity id='011' value='130'  toolText=" County{br} Circuit"/>
+		<entity id='013' value='80'  toolText=" County{br} 8th Circuit"/>/>
+		<entity id='015' value='150'  toolText=" County{br} Circuit"/>
+		<entity id='017' value='80'  toolText=" County{br} 8th Circuit"/>/>
+		<entity id='019' value='60'  toolText=" County{br} 6th Circuit"/>/>
+		<entity id='021' value='40'  toolText=" County{br} 4th Circuit"/>/>
+		<entity id='023' value='50'  toolText=" County{br} Circuit"/>
+		<entity id='025' value='40'  toolText=" County{br} 4th Circuit"/>/>
+		<entity id='027' value='40'  toolText=" County{br} 4th Circuit"/>/>
+		<entity id='029' value='50'  toolText=" County{br} Circuit"/>
+		<entity id='031' value='1000'  toolText="Cook County{br} Cook County"/>
+		<entity id='033' value='200'  toolText=" County{br} 20th Circuit"/>"/>
+		<entity id='035' value='50'  toolText=" County{br} Circuit"/>
+		<entity id='037' value='230'  toolText=" County{br} Circuit"/>
+		<entity id='039' value='60'  toolText=" County{br} 6th Circuit"/>/>
+		<entity id='041' value='60'  toolText=" County{br} 6th Circuit"/>/>
+		<entity id='043' value='180'  toolText=" County{br} Circuit"/>
+		<entity id='045' value='50'  toolText=" County{br} Circuit"/>
+		<entity id='047' value='200'  toolText=" County{br} 20th Circuit"/>"/>
+		<entity id='049' value='40'  toolText=" County{br} 4th Circuit"/>/>
+		<entity id='051' value='40'  toolText=" County{br} 4th Circuit"/>/>
+		<entity id='053' value='110'  toolText=" County{br} Circuit"/>
+		<entity id='055' value='200'  toolText=" County{br} 20th Circuit"/>"/>
+		<entity id='057' value='90'  toolText=" County{br} Circuit"/>
+		<entity id='059' value='200'  toolText=" County{br} 20th Circuit"/>"/>
+		<entity id='061' value='70'  toolText=" County{br} 7th Circuit"/>
+		<entity id='063' value='130'  toolText=" County{br} Circuit"/>
+		<entity id='065' value='200'  toolText=" County{br} 20th Circuit"/>"/>
+		<entity id='067' value='90'  toolText=" County{br} Circuit"/>
+		<entity id='069' value='200'  toolText=" County{br} 20th Circuit"/>"/>
+		<entity id='071' value='90'  toolText=" County{br} Circuit"/>
+		<entity id='073' value='140'  toolText=" County{br} Circuit"/>
+		<entity id='075' value='210'  toolText=" County{br} Circuit"/>
+		<entity id='077' value='100'  toolText=" County{br} 10th Circuit"/>
+		<entity id='079' value='40'  toolText=" County{br} 4th Circuit"/>/>
+		<entity id='081' value='200'  toolText=" County{br} 20th Circuit"/>"/>
+		<entity id='083' value='70'  toolText=" County{br} 7th Circuit"/>
+		<entity id='085' value='150'  toolText=" County{br} Circuit"/>
+		<entity id='087' value='100'  toolText=" County{br} 10th Circuit"/>
+		<entity id='089' value='160'  toolText=" County{br} Circuit"/>
+		<entity id='091' value='210'  toolText=" County{br} Circuit"/>
+		<entity id='093' value='230'  toolText=" County{br} Circuit"/>
+		<entity id='095' value='90'  toolText=" County{br} Circuit"/>
+		<entity id='097' value='190'  toolText=" County{br} Circuit"/>
+		<entity id='099' value='130'  toolText=" County{br} Circuit"/>
+		<entity id='101' value='200'  toolText=" County{br} 20th Circuit"/>"/>
+		<entity id='103' value='150'  toolText=" County{br} Circuit"/>
+		<entity id='105' value='110'  toolText=" County{br} Circuit"/>
+		<entity id='107' value='110'  toolText=" County{br} Circuit"/>
+		<entity id='109' value='90'  toolText=" County{br} Circuit"/>
+		<entity id='111' value='220'  toolText=" County{br} Circuit"/>
+		<entity id='113' value='110'  toolText=" County{br} Circuit"/>
+		<entity id='115' value='60'  toolText=" County{br} 6th Circuit"/>/>
+		<entity id='117' value='70'  toolText=" County{br} 7th Circuit"/>
+		<entity id='119' value='30'  toolText=" County{br} 3rd Circuit"/>
+		<entity id='121' value='40'  toolText=" County{br} 4th Circuit"/>/>
+		<entity id='123' value='100'  toolText=" County{br} 10th Circuit"/>
+		<entity id='125' value='80'  toolText=" County{br} 8th Circuit"/>/>
+		<entity id='127' value='100'  toolText=" County{br} 10th Circuit"/>
+		<entity id='129' value='80'  toolText=" County{br} 8th Circuit"/>/>
+		<entity id='131' value='140'  toolText=" County{br} Circuit"/>
+		<entity id='133' value='200'  toolText=" County{br} 20th Circuit"/>"/>
+		<entity id='135' value='40'  toolText=" County{br} 4th Circuit"/>/>
+		<entity id='137' value='70'  toolText=" County{br} 7th Circuit"/>
+		<entity id='139' value='60'  toolText=" County{br} 6th Circuit"/>/>
+		<entity id='141' value='150'  toolText=" County{br} Circuit"/>
+		<entity id='143' value='100'  toolText=" County{br} 10th Circuit"/>
+		<entity id='145' value='200'  toolText=" County{br} 20th Circuit"/>"/>
+		<entity id='147' value='60'  toolText=" County{br} 6th Circuit"/>/>
+		<entity id='149' value='80'  toolText=" County{br} 8th Circuit"/>/>
+		<entity id='151' value='100'  toolText=" County{br} 10th Circuit"/>
+		<entity id='153' value='100'  toolText=" County{br} 10th Circuit"/>
+		<entity id='155' value='100'  toolText=" County{br} 10th Circuit"/>
+		<entity id='157' value='200'  toolText=" County{br} 20th Circuit"/>"/>
+		<entity id='159' value='200'  toolText=" County{br} 20th Circuit"/>"/>
+		<entity id='161' value='140'  toolText=" County{br} Circuit"/>
+		<entity id='163' value='200'  toolText=" County{br} 20th Circuit"/>"/>
+		<entity id='165' value='100'  toolText=" County{br} 10th Circuit"/>
+		<entity id='167' value='70'  toolText=" County{br} 7th Circuit"/>
+		<entity id='169' value='80'  toolText=" County{br} 8th Circuit"/>/>
+		<entity id='171' value='70'  toolText=" County{br} 7th Circuit"/>
+		<entity id='173' value='40'  toolText=" County{br} 4th Circuit"/>/>
+		<entity id='175' value='100'  toolText=" County{br} 10th Circuit"/>
+		<entity id='177' value='150'  toolText=" County{br} Circuit"/>
+		<entity id='179' value='100'  toolText=" County{br} 10th Circuit"/>
+		<entity id='181' value='100'  toolText=" County{br} 10th Circuit"/>
+		<entity id='183' value='50'  toolText=" County{br} Circuit"/>
+		<entity id='185' value='200'  toolText=" County{br} 20th Circuit"/>"/>
+		<entity id='187' value='90'  toolText=" County{br} Circuit"/>
+		<entity id='189' value='200'  toolText=" County{br} 20th Circuit"/>"/>
+		<entity id='191' value='200'  toolText=" County{br} 20th Circuit"/>"/>
+		<entity id='193' value='200'  toolText=" County{br} 20th Circuit"/>"/>
+		<entity id='195' value='140'  toolText=" County{br} Circuit"/>
+		<entity id='197' value='120'  toolText=" County{br} Circuit"/>
+		<entity id='199' value='100'  toolText=" County{br} 10th Circuit"/>
+		<entity id='201' value='170'  toolText=" County{br} 17th Circuit"/>/>
+		<entity id='203' value='110'  toolText=" County{br} Circuit"/>
+	</data>
+
+
+</map>

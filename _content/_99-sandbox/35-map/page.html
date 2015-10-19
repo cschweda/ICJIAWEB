@@ -1,0 +1,66 @@
+---
+_fieldset: page
+title: Map test
+_template: default-blank
+upload: ""
+breadcrumbs: "true"
+---
+
+
+
+<div class="container">
+
+<div class="col-md-12 well">
+
+
+  <div class="col-md-4">
+    <div class="foobar"></div>
+    <div id="map-container-2" ></div>
+  </div>
+<div class="col-md-1"></div>
+<div class="col-md-4">
+  <div id="circuit-info"></div>
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+
+(function () {
+
+  $("#map-container-2").insertFusionCharts({
+      type: "maps/illinois",
+      width: "400",
+      height: "700",
+      dataFormat: "XMLURL",
+      dataSource: "/data/ilfvcc.xml",
+      loadMessage: "Loading Illinois circuit data. Please wait.",
+      events: {
+            "entityRollover": function(evt, data) {
+                circuit=data.value / 10;
+                url="/circuits/circuit-" + circuit
+                $('.foobar').html(data.label + ' ID: ' + data.id + ' Circuit: ' + circuit);
+
+            },
+
+            "entityClick": function(evt, data) {
+                $('#circuit-info').load('')
+            },
+        }
+  });
+
+
+}());
+
+
+
+
+
+
+</script>
