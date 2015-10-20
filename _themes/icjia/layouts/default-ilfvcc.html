@@ -62,15 +62,11 @@
 
 		<!-- styles -->
 
-		<link href="{{ theme:asset src='css/icjia.css' }}" rel="stylesheet" property="stylesheet">
+		<link href="{{ theme:asset src='css/ilfvcc.css' }}" rel="stylesheet" property="stylesheet">
 
 		<!-- Charting js (if necessary) -->
 
-		{{ if overrideCSS}}
 
-		<link href="{{ theme:asset src='css/overrideCSS/{{overrideCSS}}' }}" rel="stylesheet" property="stylesheet">
-
-		{{ endif}}
 
 
 
@@ -129,6 +125,12 @@
 
 <div id="icjia-page-top"></div>
 
+
+{{ theme:partial src="social" }}
+
+{{theme:partial src="icjia-off-canvas-menu"}}
+
+{{ theme:partial src="navbar-ilfvcc" }}
 
 
 

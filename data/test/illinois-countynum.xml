@@ -1,25 +1,20 @@
-<map showlabels="1" 
-showtooltip="1" 
-showshadow="0" 
-showbevel="1" 
-basefont="Verdana" 
-basefontsize="10" 
-exportenabled="1" 
-showexportdatamenuitem="1" 
-showprintmenuitem="1" 
-animation="0" 
-exposehoverevent="1" 
-showcanvasborder="1" 
-bgalpha="10,15" 
-bgcolor="375277,E9E9E9" 
-canvasbgcolor="375277,E9E9E9" 
-fillcolor="CAD3DB" 
-hovercolor="E6EAEE" 
-tooltipbgcolor="FFFFFF" 
-tooltipbordercolor="CAD3DB" 
-basefontcolor="000000" 
-bordercolor="FFFFFF" 
-canvasbordercolor="375277" 
+<map showlabels="1"
+showtooltip="1"
+showshadow="0"
+showbevel="1"
+basefont="Verdana"
+basefontsize="10"
+exportenabled="1"
+showexportdatamenuitem="1"
+showprintmenuitem="1"
+animation="0"
+exposehoverevent="1"
+showcanvasborder="1"
+tooltipbgcolor="FFFFFF"
+tooltipbordercolor="CAD3DB"
+basefontcolor="000000"
+bordercolor="FFFFFF"
+canvasbordercolor="375277"
 canvasborderalpha="40">
 	 <data>
         <entity id='001' link='j-myJS-001'/>
@@ -125,6 +120,6 @@ canvasborderalpha="40">
         <entity id='201' link='j-myJS-201'/>
         <entity id='203' link='j-myJS-203'/>
     </data>
-	
-	
+
+
 </map>

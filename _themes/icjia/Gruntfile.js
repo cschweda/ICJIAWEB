@@ -39,7 +39,8 @@ module.exports = function(grunt) {
 					optimization: 2
 				},
 				files: {
-					"css/icjia.css": "less/main.less" // destination file and source file
+					"css/icjia.css": "less/main.less",
+					"css/ilfvcc.css": "less/ilfvcc-main.less" // destination file and source file
 				}
 			}
 		},
