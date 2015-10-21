@@ -1,10 +1,9 @@
 ---
 title: 'ILFVCC Home'
 _template: default-blank
-_layout: default-ilfvcc
+_layout: ilfvcc-default
 upload: ""
 breadcrumbs: "false"
-overrideCSS: ilfvcc.css
 super_positive_keywords:
   - ilfvcc
   - family
@@ -14,7 +13,7 @@ summary: Illinois Family Violence Coordinating Councils Home
 
 <div style="background-color: #fff">
 
-<div class="container" style="margin-top: 100px">
+<div class="container" style="margin-top: 50px">
 
 <div class="col-md-12">
 
@@ -69,7 +68,7 @@ summary: Illinois Family Violence Coordinating Councils Home
             "entityClick": function(evt, data) {
                 circuit=data.value / 10;
 
-                $('#circuit-info').html('<div style="text-align: center; margin-top: 300px"><h5>Loading circuit information ...&nbsp;&nbsp;<i class="fa fa-spinner fa-spin"></i></h5></div>')
+                $('#circuit-info').html('<div style="text-align: center;"><h5>Loading circuit information ...&nbsp;&nbsp;<i class="fa fa-spinner fa-spin"></i></h5></div>')
                 $('#circuit-info').html('/ilfvcc/display-circuit?t=circuit-' + circuit)
             },
         }
