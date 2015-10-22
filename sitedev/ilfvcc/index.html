@@ -15,7 +15,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/modern-business.css" rel="stylesheet">
+    <link href="css/ilfvcc.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -47,11 +47,6 @@
         }
     }
 
-    .navbar-default {
-    background-color: transparent;
-    border-color: #e7e7e7;
-}
-
 
 
 
@@ -61,6 +56,7 @@
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: #000;
+
 }
 
 .navbar-custom .navbar-brand {
@@ -116,6 +112,58 @@
     color: #fff;
 }
 
+
+
+@media(min-width:768px){
+    nav.before-color{
+        background-color: rgba(255,255,255,0);
+        padding: 15px 0;
+
+
+    }
+    nav.after-color{
+        background-color: rgba(255,255,255,.95);
+        padding: 0px 0;
+        z-index: 1000;
+        box-shadow: 0px 1px 5px rgba(0,0,0,0.302);
+        -webkit-box-shadow: 0px 1px 5px rgba(0,0,0,0.302);
+    }
+    nav.before-color.navbar-default .navbar-brand{
+    color:#fff;
+    font-size: 35px;
+    font-weight: 400;
+}
+    nav.after-color.navbar-default .navbar-brand{
+    color:#000;
+    font-size: 35px;
+    font-weight: 400;
+}
+    nav.before-color .navbar-nav>li>a{
+        color:#fff;
+    }
+
+    nav.after-color .navbar-nav>li>a{
+        color:#333;
+    }
+    .nav>li>a {
+        position: relative;
+        display: block;
+        padding: 15px 11px;
+
+    }
+    nav.before-color .nav>li{
+        border-left: 1px solid transparent;
+    }
+    nav.after-color .nav>li{
+        border-left: 1px solid rgba(0,0,0,0.1);
+    }
+}
+
+
+
+
+
+
 @media(min-width:768px) {
     .navbar-custom {
         padding: 20px 0;
@@ -130,10 +178,14 @@
     .navbar-custom.top-nav-collapse {
         padding: 0;
         border-bottom: 1px solid rgba(255,255,255,.3);
-        /*background: #942D8C;*/
-        background: transparent;
+        background: #fff;
+        /*background: transparent;*/
     }
 }
+
+
+
+
 
 .intro {
     display: table;
@@ -142,7 +194,7 @@
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/ilfvcc-hero-02.jpg) no-repeat bottom center scroll;
+    background: url(/sitedev/ilfvcc/img/intro-bg.jpg) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -188,6 +240,8 @@
 
 
 
+
+
     </style>
 
 </head>
@@ -205,12 +259,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand page-scroll" href="#page-top">ILLINOIS FAMILY VIOLENCE COORDINATING COUNCILS</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav pull-right">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a  href="#page-top"></a>
@@ -389,8 +443,15 @@
     $(window).scroll(function() {
         if ($(".navbar").offset().top > 50) {
             $(".navbar-fixed-top").addClass("top-nav-collapse");
+
+            $(".navbar-fixed-top").addClass("after-color");
+            $(".navbar-fixed-top").removeClass("before-color");
+
         } else {
             $(".navbar-fixed-top").removeClass("top-nav-collapse");
+            $(".navbar-fixed-top").addClass("before-color");
+            $(".navbar-fixed-top").removeClass("after-color");
+
         }
     });
 
