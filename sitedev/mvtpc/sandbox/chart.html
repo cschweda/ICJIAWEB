@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Chart</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="date" content="Fri, 06 February 2015 ">
+		<meta name="keywords" content="">
+		<meta name="copyright" content="(c) 2015 by the Illinois Motor Vehicle Theft Prevention Council">
+		<link rel="canonical" href="/sandbox/chart.hbs">
+
+
+		<link rel="stylesheet" href="../styles/266a4b38.vendor.css">
+
+		<link rel="stylesheet" href="../styles/b4539105.main.css">
+
+		<script src="../scripts/vendor/81b1549c.modernizr.js"></script>
+
+		<link rel="stylesheet" href="../styles/fontawesome/css/fontawesome.css">
+
+
+
+
+		<!-- Google Fonts -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900">
+		<!-- End Google Fonts -->
+
+		<script src="../scripts/55f0155f.jquery.js"></script>
+
+
+		<script src="../scripts/d5e3faac.fusioncharts.js"></script>
+
+
+		<!-- Content -->
+
+		
+<!-- Navbar component
+================================================== -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div id="navContainer" class="container">
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only"> Toggle navigation </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> </button>
+      <a class="navbar-brand" href="/sitedev/mvtpc/"> <img src="../images/mvtpc-banner02.png" style="margin-top: -41px"> </a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li> <a href="/sitedev/mvtpc/" class="navLink menuTop"> Home </a> </li>
+        <li class="dropdown"> <a href="#" class="dropdown-toggle menuTop" data-toggle="dropdown"> About <b class="caret"> </b> </a>
+          <ul class="dropdown-menu">
+            <li> <a href="/sitedev/mvtpc/about/" class="navLink"> About the MVTPC </a> </li>
+            <li> <a href="/sitedev/mvtpc/about/members.html" class="navLink"> MVTPC board </a> </li>
+            <li> <a href="/sitedev/mvtpc/about/meetings.html" class="navLink"> MVTPC meetings </a> </li>
+            <li> <a href="/sitedev/mvtpc/about/contact.html" class="navLink"> Contact us </a> </li>
+          </ul> </li>
+
+
+          <li class="dropdown"> <a href="#" class="dropdown-toggle menuTop" data-toggle="dropdown"> Partnerships <b class="caret"> </b> </a>
+            <ul class="dropdown-menu">
+              <li> <a href="/sitedev/mvtpc/partnerships/nicb.html" class="navLink"> NICB </a> </li>
+              <li> <a href="/sitedev/mvtpc/partnerships/aia.html" class="navLink"> Annual Insurance Association </a> </li>
+
+            </ul> </li>
+          <li> <a href="/sitedev/mvtpc/data" class="navLink menuTop"> Data </a> </li>
+          <li> <a href="/sitedev/mvtpc/publications" class="navLink menuTop"> Publications </a> </li>
+          <li> <a href="/sitedev/mvtpc/public-awareness" class="navLink menuTop"> Public Awareness </a> </li>
+
+          <li class="dropdown" data-animate="animated fadeInUp" style="z-index:500"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-search"> </i> </a>
+            <ul class="dropdown-menu animated bounceInDown">
+              <li id="dropdownForm">
+                <div class="dropdown-form">
+                  <form class="form-inline" method="post" name="searchForm" id="searchForm">
+                    <div class="input-group" style="padding: 4px 8px 4px 8px">
+                      <input type="text" id="siteSearchTerm" class="form-control" style="width: 200px" placeholder="search...">
+                      <span class="input-group-btn"> <input type="submit" class="btn btn-theme-bg" id="siteSearchButton" value="Go!"> </span>
+                    </div>
+                    <!--input group-->
+                  </form>
+                  <!--form-->
+                </div>
+                <!--.dropdown form--> </li>
+                <!--.drop form search-->
+              </ul>
+              <!--.drop menu--> </li>
+              <!--nav search form-->
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+      </nav>
+
+
+		
+
+<!-- Breadcrumb -->
+<section class="breadcrumbs hidden-print">
+	<div class="container">
+		<div class="row" style="text-align: right">
+
+
+			<ol class="breadcrumb" style="display: inline"><li><a href="../">Home</a></li><li><a href="../sandbox">Sandbox</a></li><li>chart</li></ol>
+
+			 |&nbsp;&nbsp;&nbsp;&nbsp;
+			<div style="display: inline" id="printPage">
+				<a href="#"> <i class="fa fa-print"> </i> &nbsp;&nbsp;Print page </a> &nbsp;&nbsp;
+			</div>
+		</div>
+	</div>
+	<div style="clear: both">
+	</div>
+</section>
+<!-- //Breadcrumb -->
+
+<div class="page-top">
+
+				
+
+
+<div id="#chartContainer2"></div>
+
+<script>
+
+
+$("#chartContainer2").insertFusionCharts({
+  type: "MSColumn2D",
+  width: "600",
+  height: "300",
+  dataFormat: "json",
+  dataSource: {
+     "chart":{
+      "caption":"Sales by Country",
+      "bgcolor":"ffffff,ffffff",
+      "showlabels":"1",
+      "showvalues":"0",
+      "showborder":"0",
+      "decimals":"0",
+      "numberprefix":"$"
+     },
+     "categories":[
+      {
+       "category":[
+        {
+           "label":"Austria"
+        },
+        {
+           "label":"Brazil"
+        },
+        {
+           "label":"France"
+        },
+        {
+           "label":"Germany"
+        },
+        {
+           "label":"USA"
+        }
+       ]
+      }
+     ],
+     "dataset":[
+      {
+       "seriesname":"2011",
+       "color":"AFD8F8",
+       "data":[
+        {
+           "value":"25601.34"
+        },
+        {
+           "value":"20148.82"
+        },
+        {
+           "value":"17372.76"
+        },
+        {
+           "value":"35407.15"
+        },
+        {
+           "value":"38105.68"
+        }
+       ]
+      },
+      {
+       "seriesname":"2012",
+       "color":"F6BD0F",
+       "data":[
+        {
+           "value":"57401.85"
+        },
+        {
+           "value":"41941.19"
+        },
+        {
+           "value":"45263.37"
+        },
+        {
+           "value":"117320.16"
+        },
+        {
+           "value":"114845.27"
+        }
+       ]
+      },
+      {
+       "seriesname":"2013",
+       "color":"8BBA00",
+       "data":[
+        {
+           "value":"45000.65"
+        },
+        {
+           "value":"44835.76"
+        },
+        {
+           "value":"18722.18"
+        },
+        {
+           "value":"77557.31"
+        },
+        {
+           "value":"92633.68"
+        }
+       ]
+      }
+     ]
+  }
+});
+
+</script>
+
+
+</div><!-- //page-top -->
+
+
+		<!-- MVTPC Footer -->
+<footer>
+	<div class="container">
+		<div class="row">
+			<!-- col #1 -->
+			<div class="col-md-12">
+				<div style="border-top: 1px solid #ccc; width: 100%; margin-bottom: 20px"></div>
+			</div>
+		</div>
+		<div class="container text-center" style="font-size: 12px; margin-bottom: 20px">
+			&copy; 2014
+			<a href="##" target="_blank"> Illinois Criminal Justice Information Authority </a> -
+			<a href="page-privacy.html" class="fsize11"> Privacy Policy </a>
+		</div>
+	</div>
+</footer>
+<!-- /MVTPC Footer -->
+
+
+
+
+
+
+		<script src="../scripts/abda8436.boostrap.js"></script>
+
+
+
+		<script src="../scripts/9f6fe36a.main.js"></script>
+
+
+		<script>
+		//Google Analytics
+			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+			e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+			e.src='//www.google-analytics.com/analytics.js';
+			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+			ga('create','UA-XXXXX-X');ga('send','pageview');
+
+		//jQuery to collapse the navbar on scroll
+		$(window).scroll(function() {
+			if ($(".navbar").offset().top > 50) {
+				$(".navbar-fixed-top").addClass("top-nav-collapse");
+				$("#navContainer").removeClass("container");
+				// $(".navbar-collapse > ul").removeClass("pull-right");
+
+				$( ".top-bar" ).fadeOut(100);
+				$( "a.navbar-brand" ).html('<img src="../images/mvtpc-brand-new4.png" style="margin-top: -15px;" >');
+
+				$(".navbar-default .navbar-nav > .active > a").css({
+					"background-color": "#aa3c3e",
+					"color": "#fff"
+				});
+
+
+
+
+
+			} else {
+				$(".navbar-fixed-top").removeClass("top-nav-collapse");
+
+				$("#navContainer").addClass("container");
+				//$(".navbar-collapse > ul").addClass("pull-right");
+				$(".navbar-default .navbar-nav > .active > a").css({
+					"background-color": "#fff",
+					"color": "#222"
+				});
+				$( ".top-bar" ).fadeIn(100);
+				$( "a.navbar-brand" ).html('<img src="../images/mvtpc-banner02.png" style="margin-top: -41px">').fadeIn( 400 );
+
+			}
+		});
+		</script>
+
+
+
+
+<!--
+
+(c) 2015 by the Illinois Motor Vehicle Theft Prevention Council
+
+Page created: Friday, 06 February 2015 // Last updated: Friday, 06 February 2015 12:07:15 -0600.
+
+
+-->
+
+
+
+</head></html>
