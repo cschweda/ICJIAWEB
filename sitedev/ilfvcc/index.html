@@ -100,6 +100,7 @@
    color: #444;
 }
 
+.navbar-brand {display: none}
 
 
 
@@ -209,9 +210,11 @@
     font-size: 18px;
 }
 
+
+
 @media(min-width:768px) {
     .intro {
-        height: 100%;
+        height: 400px;
         padding: 0;
     }
 
@@ -229,6 +232,10 @@
     }
 }
 
+.heavy {font-weight: 900}
+.spaced {letter-spacing: .15em}
+.thin {font-weight: 300; color: #863e87}
+.thinnav {font-weight: 400; color: #863e87}
 
 .tab-pane {padding-top: 25px;}
 
@@ -254,7 +261,7 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand page-scroll" href="#page-top">Illinois Family Violence Coordinating Councils</a>
+                  <a class="navbar-brand page-scroll" href="#page-top"><span class="">ILLINOIS</span>&nbsp;&nbsp;<span class="thinnav">Family Violence Coordinating Councils</span></a>
               </div>
 
               <!-- Collect the nav links, forms, and other content for toggling -->
@@ -293,7 +300,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">Illinois Family Violence Coordinating Councils</h1>
+                        <h1 class="brand-heading"><span class="heavy spaced">ILLINOIS</span> <span class="thin">Family Violence Coordinating Councils</span></h1>
                         <p class="intro-text"></p>
 
                     </div>
@@ -442,7 +449,8 @@
     //jQuery to collapse the navbar on scroll
     $(window).scroll(function() {
         if ($(".navbar").offset().top > 50) {
-          
+
+            $(".navbar-brand").show();
             $(".navbar-fixed-top").addClass("top-nav-collapse");
             $(".navbar-fixed-top").addClass("after-color");
             $(".navbar-fixed-top").removeClass("before-color");
@@ -451,6 +459,7 @@
 
 
         } else {
+          $(".navbar-brand").hide();
 
             $(".navbar-fixed-top").removeClass("top-nav-collapse");
             $(".navbar-fixed-top").addClass("before-color");
