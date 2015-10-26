@@ -103,7 +103,6 @@
    color: #444;
 }
 
-.navbar-brand {display: none}
 
 
 
@@ -296,6 +295,8 @@ nav.before-color .navbar-nav>li>a:hover {
 .col-hero3 {background: #9A6EFF}
 .col-hero1 .content, .col-hero2 .content, .col-hero3 .content {padding: 25px 35px 25px 35px}
 
+#myTab {font-family: 'Lato', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 22px}
+
 
     </style>
 
@@ -354,7 +355,7 @@ nav.before-color .navbar-nav>li>a:hover {
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="brand-heading"><span class="heavy spaced" style="color: #bbb">ILLINOIS</span>&nbsp;|&nbsp;<span class="thin" style="text-transform: uppercase; color: #fff">Family Violence Coordinating Councils</span></h1>
+                        <h1 class="brand-heading"><span class="heavy spaced" style="color: #aaa">ILLINOIS</span>&nbsp;|&nbsp;<span class="thin" style="text-transform: uppercase; color: #fff">Family Violence Coordinating Councils</span></h1>
                         <p class="intro-text"></p>
 
                     </div>
@@ -470,16 +471,13 @@ nav.before-color .navbar-nav>li>a:hover {
 
 
 
-
-
-
         <!-- Service Tabs -->
         <section id="service-tabs">
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-12">
 
-                <ul id="myTab" class="nav nav-tabs nav-justified" style="font-family: 'Lato', sans-serif; font-weight: 900; text-transform: uppercase;">
+                <ul id="myTab" class="nav nav-tabs nav-justified" style="">
                   <li class="active"><a href="#about-the-ilfvcc" data-toggle="tab">About the ILFVCC</a>
                   </li>
                     <li><a href="#find-a-council" data-toggle="tab">Find a Council</a>
@@ -542,7 +540,7 @@ nav.before-color .navbar-nav>li>a:hover {
     $(window).scroll(function() {
         if ($(".navbar").offset().top > 50) {
 
-            $(".navbar-brand").show();
+            // $(".navbar-brand").show();
             $(".navbar-fixed-top").addClass("top-nav-collapse");
             $(".navbar-fixed-top").addClass("after-color");
             $(".navbar-fixed-top").removeClass("before-color");
@@ -551,7 +549,7 @@ nav.before-color .navbar-nav>li>a:hover {
 
 
         } else {
-          $(".navbar-brand").hide();
+          // $(".navbar-brand").hide();
 
             $(".navbar-fixed-top").removeClass("top-nav-collapse");
             $(".navbar-fixed-top").addClass("before-color");
