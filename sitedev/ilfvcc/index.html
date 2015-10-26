@@ -107,7 +107,10 @@
 
 
 
+nav.before-color .navbar-nav>li>a:hover {
+    color: #7e4eec;
 
+}
 
 @media(min-width:768px){
     nav.before-color{
@@ -142,6 +145,13 @@
     nav.after-color .navbar-nav>li>a{
         color:#333;
     }
+
+
+    nav.after-color .navbar-nav>li>a:hover{
+        color:#fff;
+        background: #7e4eec;
+    }
+
     .nav>li>a {
         position: relative;
         display: block;
@@ -217,7 +227,7 @@
 
 @media(min-width:768px) {
     .intro {
-        height: 450px;
+        height: 550px;
         padding: 0;
     }
 
@@ -241,6 +251,50 @@
 .thinnav {font-weight: 700; color: #7e4eec}
 
 .tab-pane {padding-top: 25px;}
+
+
+
+.row-flex, .row-flex > div[class*='col-'] {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex:1 1 auto;
+}
+
+.row-flex-wrap {
+	-webkit-flex-flow: row wrap;
+    align-content: flex-start;
+    flex:0;
+}
+
+.row-flex > div[class*='col-'], .container-flex > div[class*='col-'] {
+	 margin:-.2px; /* hack adjust for wrapping */
+}
+
+.container-flex > div[class*='col-'] div,.row-flex > div[class*='col-'] div {
+	width:100%;
+}
+
+
+.flex-col {
+    display: flex;
+    display: -webkit-flex;
+    flex: 1 100%;
+	flex-flow: column nowrap;
+}
+
+.flex-grow {
+	display: flex;
+    -webkit-flex: 2;
+    flex: 2;
+}
+
+.col-hero1  {background: #4A259F; color: #fff}
+.col-hero2 {background: #7E4EEC; color: #fff}
+.col-hero3 {background: #9A6EFF}
+.col-hero1 .content, .col-hero2 .content, .col-hero3 .content {padding: 25px 35px 25px 35px}
 
 
 
@@ -303,7 +357,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="brand-heading"><span class="heavy spaced">ILLINOIS</span>&nbsp;|&nbsp;<span class="thin" style="text-transform: uppercase">Family Violence Coordinating Councils</span></h1>
+                        <h1 class="brand-heading"><span class="heavy spaced" style="color: #ccc">ILLINOIS</span>&nbsp;|&nbsp;<span class="thin" style="text-transform: uppercase; color: #fff">Family Violence Coordinating Councils</span></h1>
                         <p class="intro-text"></p>
 
                     </div>
@@ -382,6 +436,46 @@
       </div>
     </section>
 -->
+
+
+
+<div class="">
+  <div class="row row-flex row-flex-wrap">
+
+	<div class="col-md-4" style="padding: 0; margin: 0">
+      <div class="col-hero1">
+        <div class="content">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+        dicta sunt explicabo.
+
+      </div>
+    </div>
+    <div class="col-hero2">
+      <div class="content">
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+      totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+      dicta sunt explicabo.
+
+    </div>
+  </div>
+  <div class="col-hero3">
+    <div class="content">
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+    dicta sunt explicabo.
+
+  </div>
+</div>
+
+  </div><!--/row-->
+</div><!--/container-->
+
+
+
+
+
+
         <!-- Service Tabs -->
         <section id="service-tabs">
         <div class="container">
