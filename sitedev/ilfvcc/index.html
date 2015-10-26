@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Modern Business - Start Bootstrap Template</title>
+    <title>Illinois Family Violence Coordinating Councils</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -44,73 +44,64 @@
 
         .top-nav-collapse {
             padding: 0;
+            font-size: 12px;
         }
     }
 
 
 
 
-.navbar-custom {
+.navbar-default {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: #000;
 
+
 }
 
-.navbar-custom .navbar-brand {
-    font-weight: 700;
+.navbar-default .navbar-brand {
+    font-weight: 900;
+
 }
 
-.navbar-custom .navbar-brand:focus {
+.navbar-default .navbar-brand {
+    color: #000;
+
+}
+
+.navbar-default.small-font {
+    font-size: 14px;
+}
+
+.navbar-default .navbar-brand:focus {
     outline: 0;
 }
 
-.navbar-custom .navbar-brand .navbar-toggle {
+.navbar-default .navbar-brand .navbar-toggle {
     padding: 4px 6px;
-    font-size: 16px;
+    font-size: 14px;
     color: #fff;
 }
 
-.navbar-custom .navbar-brand .navbar-toggle:focus,
-.navbar-custom .navbar-brand .navbar-toggle:active {
+
+.navbar-default .navbar-brand .navbar-toggle:focus,
+.navbar-default .navbar-brand .navbar-toggle:active {
     outline: 0;
 }
 
-.navbar-custom a {
+.navbar-default a {
     color: #fff;
 }
 
-.navbar-custom .nav li a {
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
+.navbar-brand.dark {
+
+   color: #444;
 }
 
-.navbar-custom .nav li a:hover {
-    outline: 0;
-    color: rgba(255,255,255,.8);
-    background-color: transparent;
-}
 
-.navbar-custom .nav li a:focus,
-.navbar-custom .nav li a:active {
-    outline: 0;
-    background-color: transparent;
-}
 
-.navbar-custom .nav li.active {
-    outline: 0;
-}
-
-.navbar-custom .nav li.active a {
-    background-color: rgba(255,255,255,.3);
-}
-
-.navbar-custom .nav li.active a:hover {
-    color: #fff;
-}
 
 
 
@@ -124,22 +115,24 @@
     nav.after-color{
         background-color: rgba(255,255,255,.95);
         padding: 0px 0;
-        z-index: 1000;
         box-shadow: 0px 1px 5px rgba(0,0,0,0.302);
         -webkit-box-shadow: 0px 1px 5px rgba(0,0,0,0.302);
     }
     nav.before-color.navbar-default .navbar-brand{
     color:#fff;
-    font-size: 35px;
-    font-weight: 400;
+    /*font-size: 25px;*/
+    font-weight: 700;
+    font-size: 14px;
 }
     nav.after-color.navbar-default .navbar-brand{
     color:#000;
-    font-size: 35px;
-    font-weight: 400;
+
+    font-weight: 700;
+    font-size: 12px;
 }
     nav.before-color .navbar-nav>li>a{
         color:#fff;
+        font-size: 12px;
     }
 
     nav.after-color .navbar-nav>li>a{
@@ -163,19 +156,18 @@
 
 
 
-
 @media(min-width:768px) {
-    .navbar-custom {
+    .navbar-default {
         padding: 20px 0;
         border-bottom: 0;
         letter-spacing: 1px;
         background: 0 0;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -webkit-transition: background .2s ease-in-out,padding .2s ease-in-out;
+        -moz-transition: background .2s ease-in-out,padding .2s ease-in-out;
+        transition: background .2s ease-in-out,padding .2s ease-in-out;
     }
 
-    .navbar-custom.top-nav-collapse {
+    .navbar-default.top-nav-collapse {
         padding: 0;
         border-bottom: 1px solid rgba(255,255,255,.3);
         background: #fff;
@@ -191,10 +183,10 @@
     display: table;
     width: 100%;
     height: auto;
-    padding: 100px 0;
+    padding: 50px 0;
     text-align: center;
     color: #fff;
-    background: url(/sitedev/ilfvcc/img/intro-bg.jpg) no-repeat bottom center scroll;
+    background: url(/sitedev/ilfvcc/img/bg-neutral.jpg) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -208,7 +200,9 @@
 }
 
 .intro .intro-body .brand-heading {
-    font-size: 60px;
+    font-size: 30px;
+    font-weight: 300;
+    font-family: lato, sans-serif;
 }
 
 .intro .intro-body .intro-text {
@@ -227,7 +221,7 @@
 
     .brand-heading {
       margin-top: 150px;
-        font-size: 50px;
+        font-size: 30px;
     }
 
     .intro .intro-body .intro-text {
@@ -236,7 +230,7 @@
 }
 
 
-
+.tab-pane {padding-top: 25px;}
 
 
 
@@ -250,41 +244,46 @@
 
     <!-- Navigation -->
     <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">ILLINOIS FAMILY VIOLENCE COORDINATING COUNCILS</a>
-            </div>
+    <nav id="mainNav" class="navbar navbar-default before-color navbar-fixed-top">
+          <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand page-scroll" href="#page-top">Illinois Family Violence Coordinating Councils</a>
+              </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav pull-right">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a  href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right">
+                      <li>
+                          <a class="page-scroll" href="#about">Home</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#services">Projects</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#portfolio">Partners</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#portfolio">Archive</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#portfolio">Resources</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#contact">Contact</a>
+                      </li>
+                  </ul>
+              </div>
+              <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.container-fluid -->
+      </nav>
 
 
 
@@ -392,6 +391,7 @@
                 <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade " id="find-a-council">
                         <h4>Find a Council</h4>
+
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
                     </div>
@@ -402,7 +402,7 @@
                     </div>
                     <div class="tab-pane fade active in" id="about-the-ilfvcc">
                         <h4>About the ILFVCC</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
+                        <img src='/sitedev/ilfvcc/img/logo-placeholder-large.jpg' width='150' style="float: left; padding-right: 10px; margin-top: 10px; padding-bottom: 0px"><p>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
                     </div>
                     <div class="tab-pane fade" id="service-four">
@@ -424,7 +424,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Copyright &copy;2015 Illinois Criminal Justice Information Authority </p>
                 </div>
             </div>
         </footer>
@@ -442,15 +442,23 @@
     //jQuery to collapse the navbar on scroll
     $(window).scroll(function() {
         if ($(".navbar").offset().top > 50) {
+          
             $(".navbar-fixed-top").addClass("top-nav-collapse");
-
             $(".navbar-fixed-top").addClass("after-color");
             $(".navbar-fixed-top").removeClass("before-color");
 
+            // $(".navbar-brand").addClass("dark");
+
+
         } else {
+
             $(".navbar-fixed-top").removeClass("top-nav-collapse");
             $(".navbar-fixed-top").addClass("before-color");
             $(".navbar-fixed-top").removeClass("after-color");
+
+            // $(".navbar-brand").removeClass("dark");
+
+
 
         }
     });
