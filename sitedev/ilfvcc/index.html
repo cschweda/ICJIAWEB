@@ -307,6 +307,24 @@ nav.before-color .navbar-nav>li>a:hover {
 #myTab {font-family: 'Lato', sans-serif; font-weight: 900; text-transform: uppercase; font-size: 22px}
 
 
+
+.tab-pane {padding: 15px 10px 15px 10px}
+
+
+/* ----------------------------- footer ----------------------------------*/
+
+#content-wrap {padding-bottom: 50px}
+footer {margin-top: 0px;}
+footer ul {margin: 0; padding: 0}
+footer ul li { font-family: 'Lato', sans-serif;list-style:none;}
+footer ul a {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+
+}
+
+
+
     </style>
 
 </head>
@@ -489,7 +507,7 @@ nav.before-color .navbar-nav>li>a:hover {
                 <ul id="myTab" class="nav nav-tabs nav-justified" style="">
                   <li class="active"><a href="#about-the-ilfvcc" data-toggle="tab">About the ILFVCC</a>
                   </li>
-                    <li><a href="#find-a-council" data-toggle="tab">Find a Council</a>
+                    <li><a href="#find-a-council" data-toggle="tab">Find a Council Near You</a>
                     </li>
                     <li class=""><a href="#news-and-events" data-toggle="tab">News & Events</a>
                     </li>
@@ -504,12 +522,12 @@ nav.before-color .navbar-nav>li>a:hover {
                         <div class="col-md-12">
 
 
-                          <div class="col-md-4">
+                          <div class="col-md-6">
                             <div class="text-center"><h4 style="color: #444;"><span class="foobar">&nbsp;</span></h4></div>
-                            <div id="map-container-2"></div>
+                            <div id="map-container-2" style="height: 500px"></div>
                           </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                           <div class="text-center">
                           <h4><span id="circuit-info"></span></h4>
                         </div>
@@ -530,9 +548,16 @@ nav.before-color .navbar-nav>li>a:hover {
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
                     </div>
                     <div class="tab-pane fade active in" id="about-the-ilfvcc">
-                        <h4>About the ILFVCC</h4>
-                        <img src='/sitedev/ilfvcc/img/logo-placeholder-large.jpg' width='150' style="float: left; padding-right: 10px; margin-top: 10px; padding-bottom: 0px"><p>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
+
+                        <img src='/sitedev/ilfvcc/img/logo-placeholder-large.jpg' width='200' style="float: left; padding-right: 20px; margin-top: 10px; padding-bottom: 0px"><p>
+                          <p>Family Violence Coordinating Councils, at both the state and local/circuit levels, provide a forum to improve the institutional, professional and community response to family violence including child abuse, domestic abuse, and elder abuse. Councils provide professional education and prevention; coordinate interventions and services for victims and perpetrators; and contribute to both the improvement of the legal system and the administration of justice.</p>
+                          <p>Initiated under the auspices of the Illinois Supreme Court in 1990, Illinois is one of the few states that has a systematically organized, statewide infrastructure that operates at both the state and local levels.  Since the 1970's, a comprehensive, coordinated approach to preventing family violence has been promoted as the most efficient and effective way to penetrate systems and mobilize them for the greatest change.</p>
+
+                          <p>Annually, up to 15,000 professionals from across Illinois participate in trainings and council projects. These include family violence training and education of criminal justice and community professionals; development of criminal justice procedures, protocols, and services related to family violence; and the facilitation of coordinated community response to family violence in local areas. These Local Councils provide opportunities for communication between criminal justice professionals and community service providers as well as encourage the sharing of information and resources, thereby providing for development of a network of safety and assistance for family violence victims. </p>
+                          <p>
+                            Chief and circuit judges convene and chair the 23 local councils in all 102 counties in Illinois which are composed of policy-level decision makers who represent agencies and services to help intervene and prevent family violence.
+                          </p>
+
                     </div>
                     <div class="tab-pane fade" id="service-four">
                         <h4>Service Four</h4>
@@ -547,17 +572,90 @@ nav.before-color .navbar-nav>li>a:hover {
     </section>
 
 
-    <div class="container">
-        <footer>
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p>Copyright &copy;2015 Illinois Criminal Justice Information Authority </p>
-                </div>
-            </div>
-        </footer>
+    <footer class="no-print">
+
+
+  <div style="margin: 0; background: #1f3641; padding: 0;">
+
+
+    <div class="container" style="padding: 40px 0 60px 0">
+
+      <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3" style="padding-top: 10px;">
+
+          <h3 class="h4" style="color: #fff; text-transform: uppercase">About the Authority</h3>
+
+          <ul>
+            <li><a href="/about">Overview</a></li>
+            <li><a href="/grants">Federal and State Grants</a></li>
+            <li><a href="/research">Research and Analysis</a></li>
+              <li><a href="/about/employment">Employment & Internships</a></li>
+            <li><a href="/faq">Frequently Asked Questions</a></li>
+            <li><a href="/statutesearch">Illinois Criminal Statute Search</a></li>
+
+            <li><a href="/about/contact">Contact</a></li>
+          </ul>
+
+
+
+      </div>
+
+
+    <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5" style="padding-top: 10px;">
+
+          <h3 class="h4" style="color: #fff; text-transform: uppercase">Associate Sites</h3>
+
+          <ul>
+            <li><a href="/redeploy">Adult Redeploy Illinois</a></li>
+            <li><a href="http://www.illinoiscenterofexcellence.org/">Illinois Center of Excellence for Behavioral Health and Justice</a></li>
+            <li><a href="/cjreform2015">Illinois Commission on Criminal Justice and Sentencing Reform</a></li>
+            <li><a href="http://www.ilfvcc.org">Illinois Family Violence Coordinating Councils</a></li>
+            <li><a href="/spac">Illinois Sentencing Policy Advisory Council</a></li>
+            <li><a href="/sites/mvtpc">Motor Vehicle Theft Prevention Council</a></li>
+
+          </ul>
+
+      </div>
+
+
+
+  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="padding-top: 10px;" >
+    <div style="text-align: center">
+    <h3 class="h4" style="color: #fff; text-transform: uppercase">Sign up for the CJ Dispatch </h3>
+
+
+    <a href="http://visitor.r20.constantcontact.com/manage/optin?v=001MqUcqqvjwLCJXlLMSWbTe3zHHmEQgFeBuHvBcJWTbwgrxFbDSGx4HSUPpI6DJWMUPgbljtLxffqIcGFTgCnr-auak88ybvRxpoJlTMGPtZs%3D" class="btn btn-primary">Subscribe Now</a>
+
+
+    <div style="margin-top: 15px;">
+      <a href="http://www.facebook.com/ICJIA"><i class="fa fa-facebook-official fa-2x" ></i></a>
+      &nbsp;
+      <a href="http://www.twitter.com/ICJIA_Illinois"><i class="fa fa-twitter-square fa-2x"></i></a>
+      &nbsp;
+      <a href="https://www.youtube.com/channel/UCtZMzk8D3P4OixYTwsfPeKA"><i class="fa fa-youtube-square fa-2x"></i></a>
+      &nbsp;
+      <a href="/feed"><i class="fa fa-rss-square fa-2x"></i></a>
+      &nbsp;
+
+      <a href="/about/contact"><i class="fa fa-envelope fa-2x" style="margin-bottom: 0.15em"></i></a>
 
     </div>
-    <!-- /.container -->
+
+    <div style="color: #fff; font-family: 'Lato', sans-serif; margin-top: 15px; font-size: 13px;">
+      <p style="font-size: 11px">(312) 793-8550 - Fax: (312) 793-8422 - <a href="mailto: cja.irc@illinois.gov">cja.irc@illinois.gov</a></p>
+      <p>&copy; 2015
+      <a href="/" target="_blank"> Illinois Criminal Justice Information Authority </a></p>
+
+
+  </div>
+
+  </div>
+  </div>
+  </div>
+  </div>
+  </footer>
+
+  <!-- /ICJIA Footer -->
+
 
 
 
@@ -608,7 +706,6 @@ nav.before-color .navbar-nav>li>a:hover {
     <script>
 
 
-    (function () {
 
       $("#map-container-2").insertFusionCharts({
           type: "maps/illinois",
@@ -643,8 +740,6 @@ nav.before-color .navbar-nav>li>a:hover {
             }
       });
 
-
-    }());
 
 
     function ordinal_suffix_of(i) {
