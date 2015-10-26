@@ -1,0 +1,29 @@
+
+
+@media(min-width:767px) {
+  .navbar {
+    padding: 28px 0;
+    -webkit-transition: background .3s ease-in-out,padding .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out,padding .3s ease-in-out;
+    transition: background .3s ease-in-out,padding .3s ease-in-out;
+  }
+
+  .navbar-default .navbar-nav {font-weight: bold; color: #222}
+
+  .navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .active > a:focus {
+    color: #aa3c3e;
+    background-color: #fff;
+
+  }
+
+  .top-nav-collapse {
+    /* Customize the look and feel of the collapsed top nav here */
+    padding: 0;
+    -webkit-box-shadow: 5px 4px 12px -0px rgba(130,126,130,.37);
+    -moz-box-shadow: 5px 4px 12px -0px rgba(130,126,130,.37);
+    box-shadow: 5px 4px 12px -0px rgba(130,126,130,.37);
+
+  }
+}

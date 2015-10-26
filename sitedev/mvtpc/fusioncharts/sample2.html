@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>FusionCharts - Building Map : US Map with states - jsFiddle demo by fusioncharts</title>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+  <!-- Building US Map with states.
+  A simple US map with legend showing statewise annual sales (Last year).
+-->
+
+<div id="chart-container">Adult Redeploy 2015 Statewide Sites</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+<script type="text/javascript" src="fusioncharts.js"></script>
+
+
+
+<script type="text/javascript" src="fusioncharts.charts.js"></script>
+
+
+
+<script type="text/javascript" src="fusioncharts.maps.js"></script>
+
+
+<script type="text/javascript" src="fusioncharts.jqueryplugin.js"></script>
+
+<script type="text/javascript" src="fusioncharts.illinois.js"></script>
+
+
+<script>
+$("#chart-container").insertFusionCharts({
+  type: "MSColumn2D",
+  width: "600",
+  height: "300",
+  dataFormat: "json",
+  dataSource: {
+     "chart":{
+      "caption":"Sales by Country",
+      "bgcolor":"ffffff,ffffff",
+      "showlabels":"1",
+      "showvalues":"0",
+      "showborder":"0",
+      "decimals":"0",
+      "numberprefix":"$"
+     },
+     "categories":[
+      {
+       "category":[
+        {
+           "label":"Austria"
+        },
+        {
+           "label":"Brazil"
+        },
+        {
+           "label":"France"
+        },
+        {
+           "label":"Germany"
+        },
+        {
+           "label":"USA"
+        }
+       ]
+      }
+     ],
+     "dataset":[
+      {
+       "seriesname":"2011",
+       "color":"AFD8F8",
+       "data":[
+        {
+           "value":"25601.34"
+        },
+        {
+           "value":"20148.82"
+        },
+        {
+           "value":"17372.76"
+        },
+        {
+           "value":"35407.15"
+        },
+        {
+           "value":"38105.68"
+        }
+       ]
+      },
+      {
+       "seriesname":"2012",
+       "color":"F6BD0F",
+       "data":[
+        {
+           "value":"57401.85"
+        },
+        {
+           "value":"41941.19"
+        },
+        {
+           "value":"45263.37"
+        },
+        {
+           "value":"117320.16"
+        },
+        {
+           "value":"114845.27"
+        }
+       ]
+      },
+      {
+       "seriesname":"2013",
+       "color":"8BBA00",
+       "data":[
+        {
+           "value":"45000.65"
+        },
+        {
+           "value":"44835.76"
+        },
+        {
+           "value":"18722.18"
+        },
+        {
+           "value":"77557.31"
+        },
+        {
+           "value":"92633.68"
+        }
+       ]
+      }
+     ]
+  }
+});
+</script>
+
+
+</body>
+
+
+</html>
