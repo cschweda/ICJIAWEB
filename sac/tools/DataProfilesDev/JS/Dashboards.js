@@ -224,6 +224,9 @@ $(document).ready(function() {
 		Each table data row will be used to output a list item underneath the table.
 	*/
 		var subject = $(this).find('td:first').text();
+		if (subject.indexOf("Circuit") == -1) {
+			subject = subject + " County"
+		}
 		var firstPoint = $(this).find('.FirstYear').text();
 		var lastPoint = $(this).find('.LastYear').text();
 		if (firstPoint=="NA" || lastPoint=="NA" || firstPoint < 20 || lastPoint < 20) {
@@ -234,10 +237,13 @@ $(document).ready(function() {
 				if (PercentChange < 0 ) {var changeText = "decrease"};
 				if (PercentChange > 0 ) {var changeText = "increase"};
 				if (PercentChange == 0 ) {var changeText = "change"};
-				var outText = 'had a '+ Math.abs(PercentChange) + " percent " + changeText;
+				var outText = ' had a '+ Math.abs(PercentChange) + " percent " + changeText;
 		};
 		var list_id = $(this).parent().parent().nextAll('ul').prop('id');
 		var captionText = $(this).parent().parent().find('caption').text().toLowerCase(); 
-		$('#'+list_id).append('<li>'+  subject + ' County '+ outText +' in ' +captionText +'.</li>');
+		if (captionText.indexOf("rates") != -1) {
+			captionText= "the " + captionText.slice(0,-1)
+		}
+		$('#'+list_id).append('<li>'+  subject + outText +' in ' +captionText +'.</li>');
 	});
 }); <!--end document ready-->
