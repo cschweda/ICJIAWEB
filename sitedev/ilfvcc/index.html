@@ -30,6 +30,15 @@
     <!-- vertical tabs -->
       <link href="bootstrap-vertical-tabs-master/bootstrap.vertical-tabs.min.css" rel="stylesheet" type="text/css">
 
+
+      <!-- jQuery -->
+      <script src="js/jquery.js"></script>
+
+      <script type="text/javascript" src="vendor/fusioncharts-suite-xt/js/fusioncharts.js"></script>
+      <script type="text/javascript" src="vendor/fusioncharts-suite-xt/js/themes/fusioncharts.theme.ocean.js"></script>
+
+      <script type="text/javascript" src="vendor/fusioncharts-jquery-plugin-master/package/fusioncharts-jquery-plugin.min.js"></script>
+
     <style>
 
     #service-panels {background: #eee;}
@@ -489,10 +498,31 @@ nav.before-color .navbar-nav>li>a:hover {
 
                 <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade " id="find-a-council">
-                        <h4>Find a Council</h4>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
+
+
+                        <div class="col-md-12">
+
+
+                          <div class="col-md-4">
+                            <div class="text-center"><h4 style="color: #444;"><span class="foobar">&nbsp;</span></h4></div>
+                            <div id="map-container-2"></div>
+                          </div>
+
+                        <div class="col-md-6">
+                          <div class="text-center">
+                          <h4><span id="circuit-info"></span></h4>
+                        </div>
+                        </div>
+
+                        </div>
+
+
+
+
+
+
+
                     </div>
                     <div class="tab-pane fade" id="news-and-events">
                         <h4>News & Events</h4>
@@ -529,8 +559,7 @@ nav.before-color .navbar-nav>li>a:hover {
     </div>
     <!-- /.container -->
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -572,6 +601,71 @@ nav.before-color .navbar-nav>li>a:hover {
             event.preventDefault();
         });
     });
+    </script>
+
+
+
+    <script>
+
+
+    (function () {
+
+      $("#map-container-2").insertFusionCharts({
+          type: "maps/illinois",
+          width: "500",
+          height: "500",
+          dataFormat: "XMLURL",
+          dataSource: "/data/ilfvcc.xml",
+          loadMessage: "Loading Illinois circuit data. Please wait.",
+          events: {
+                "entityRollover": function(evt, data) {
+                    circuit=data.value / 10;
+
+                    url="/circuits/circuit-" + circuit
+                    //$('.foobar').html(data.label + ' ID: ' + data.id + ' Circuit: ' + circuit);
+                    suffix = ordinal_suffix_of(circuit);
+                    if (circuit == '100') {
+                      label = 'Cook County | Cook';
+                    } else {
+                      label = data.label + ' County ' + ' | ' + suffix + ' Circuit';
+                    }
+
+                    $('.foobar').html(label);
+
+                },
+
+                "entityClick": function(evt, data) {
+                    circuit=data.value / 10;
+
+                    $('#circuit-info').html('<div style="text-align: center;"><h5>Loading circuit information ...&nbsp;&nbsp;<i class="fa fa-spinner fa-spin"></i></h5></div>')
+                    $('#circuit-info').html('/ilfvcc/display-circuit?t=circuit-' + circuit)
+                },
+            }
+      });
+
+
+    }());
+
+
+    function ordinal_suffix_of(i) {
+        var j = i % 10,
+            k = i % 100;
+        if (j == 1 && k != 11) {
+            return i + "st";
+        }
+        if (j == 2 && k != 12) {
+            return i + "nd";
+        }
+        if (j == 3 && k != 13) {
+            return i + "rd";
+        }
+        return i + "th";
+    }
+
+
+
+
+
     </script>
 
 

@@ -1,0 +1,135 @@
+<map 
+animation="0" 
+showBevel="0" 
+includeValueInLabels="0" 
+    baseFontSize="9" 
+	showToolTip="1" 
+	showLabels='0' 
+	includeNameInLabels='1'
+	showMarkerLabels='1' 
+	fontBold='1' 
+	hoverColor="cccccc"
+	exportenabled="1" 
+showexportdatamenuitem="1" 
+showprintmenuitem="1" 
+	useHoverColor='0' 
+	hoverOnEmpty='0' 
+	borderColor="777777" legendPosition="RIGHT" connectorColor="ffffff" fillColor='F1f1f1'>
+<colorRange>
+        <color minValue="0" maxValue="500" displayValue="ARI SFY15 sites" color="005ce6" />
+        <color minValue="500" maxValue="1000" displayValue="Planning sites" color="bee8ff" />
+        
+</colorRange>
+<data>
+     
+        
+		<entity id='001' displayValue=' '  />
+		<entity id='003' displayValue=' '  />
+		<entity id='005' displayValue=' '  />
+		<entity id='007' displayValue='Boone' value="10"  toolText='Boone' />
+		<entity id='009'  displayValue=' '  />
+		<entity id='011'  displayValue=' '  />
+		<entity id='013'  displayValue=' '  />
+		<entity id='015'  displayValue=' '  />
+		<entity id='017'  displayValue=' '  />
+		<entity id='019'  displayValue=' '  />
+		<entity id='021'  displayValue='Christian' value="10"  toolText='Christian'  />
+		<entity id='023'  displayValue=' '  />
+		<entity id='025'  displayValue=' '  />
+		<entity id='027'  displayValue=' '  />
+		<entity id='029'  displayValue=' '  />
+		<entity id='031'  displayValue='Cook' value="10"  toolText='Cook' />
+		<entity id='033'  displayValue='Crawford' value="10"  toolText='Crawford'  />
+		<entity id='035'  displayValue=' '  />
+		<entity id='037'  displayValue=' '  />
+		<entity id='039'  displayValue=' '  />
+		<entity id='041'  displayValue=' '  />
+		<entity id='043'  displayValue='DuPage' value="10"  toolText='DuPage'  />
+		<entity id='045'  displayValue=' '  />
+		<entity id='047'  displayValue='Edwards' value="10"  toolText='Edwards'  />
+		<entity id='049'  displayValue='Effingham' value="10"  toolText='Effingham'  />
+		<entity id='051'  displayValue=' '  />
+		<entity id='053'  displayValue=' '  />
+		<entity id='055'  displayValue='Franklin' value="10"  toolText='Franklin'  />
+		<entity id='057'  displayValue='Fulton' value="10"  toolText='Fulton'  />
+		<entity id='059'  displayValue='Gallatin' value="10"  toolText='Gallatin'  />
+		<entity id='061'  displayValue=' '  />
+		<entity id='063'  displayValue='Grundy' value="10"  toolText='Grundy' />
+		<entity id='065'  displayValue='Hamilton' value="10"  toolText='Hamilton'  />
+		<entity id='067'  displayValue='Hancock' value="10"  toolText='Hancock'  />
+		<entity id='069'  displayValue='Hardin' value="10"  toolText='Hardin'  />
+		<entity id='071'  displayValue='Henderson' value="10"  toolText='Henderson'  />
+		<entity id='073'  displayValue=' '  />
+		<entity id='075'  displayValue=' '  />
+		<entity id='077'  displayValue=' '  />
+		<entity id='079'  displayValue=' '  />
+		<entity id='081'  displayValue='Jefferson' value="10"  toolText='Jefferson'  />
+		<entity id='083'  displayValue='Jersey' value="10"  toolText='Jersey'  />
+		<entity id='085'  displayValue=' '  />
+		<entity id='087'  displayValue=' '  />
+		<entity id='089'  displayValue='Kane' value="10"  toolText='Kane'  />
+		<entity id='091'  displayValue='Kankakee' value="10"  toolText='Kankakee'  />
+		<entity id='093'  displayValue=' '  />
+		<entity id='095'  displayValue='Knox' value="10"  toolText='Knox'  />
+		<entity id='097'  displayValue='Lake' value="10"  toolText='Lake'  />
+		<entity id='099'  displayValue='LaSalle' value="10"  toolText='LaSalle'  />
+		<entity id='101'  displayValue='Lawrence' value="10"  toolText='Lawrence'  />
+		<entity id='103'  displayValue=' '  />
+		<entity id='105'  displayValue=' '  />
+		<entity id='107'  displayValue=' '  />
+		<entity id='109'  displayValue='McDonough' value="10"  toolText='McDonough'  />
+		<entity id='111'  displayValue=' '  />
+		<entity id='113'  displayValue='McLean' value="10"  toolText='McLean'  />
+		<entity id='115'  displayValue='Macon' value="10"  toolText='Macon'  />
+		<entity id='117'  displayValue=' '  />
+		<entity id='119'  displayValue='Madison' value="10"  toolText='Madison'  />
+		<entity id='121'  displayValue=' '  />
+		<entity id='123'  displayValue=' '  />
+		<entity id='125'  displayValue=' '  />
+		<entity id='127'  displayValue=' '  />
+		<entity id='129'  displayValue=' ' />
+		<entity id='131'  displayValue=' ' />
+		<entity id='133'  displayValue='Monroe' value="10"  toolText='Monroe' />
+		<entity id='135'  displayValue=' ' />
+		<entity id='137'  displayValue=' ' />
+		<entity id='139'  displayValue=' ' />
+		<entity id='141'  displayValue=' ' />
+		<entity id='143'  displayValue='Peoria' value="10"  toolText='Peoria' />
+		<entity id='145'  displayValue=' ' />
+		<entity id='147'  displayValue=' ' />
+		<entity id='149'  displayValue=' '  />
+		<entity id='151'  displayValue=' ' />
+		<entity id='153'  displayValue=' ' />
+		<entity id='155'  displayValue=' ' />
+		<entity id='157'  displayValue='Randolph' value="10"  toolText='Randolph' />
+		<entity id='159'  displayValue='Richland' value="10"  toolText='Richland' />
+		<entity id='161'  displayValue=' ' />
+		<entity id='163'  displayValue='St. Clair' value="10"  toolText='St. Clair' />
+		<entity id='165'  displayValue=' ' />
+		<entity id='167'  displayValue='Sangamon' value="10"  toolText='Sangamon' />
+		<entity id='169'  displayValue=' ' />
+		<entity id='171'  displayValue=' ' />
+		<entity id='173'  displayValue=' ' />
+		<entity id='175'  displayValue=' ' />
+		<entity id='177'  displayValue=' ' />
+		<entity id='179'  displayValue=' ' />
+		<entity id='181'  displayValue=' ' />
+		<entity id='183'  displayValue=' ' />
+		<entity id='185'  displayValue='Wabash' value="10"  toolText='Wabash' />
+		<entity id='187'  displayValue='Warren' value="10"  toolText='Warren' />
+		<entity id='189'  displayValue=' ' />
+		<entity id='191'  displayValue='Wayne' value="10"  toolText='Wayne' />
+		<entity id='193' displayValue='White' value="10"  toolText='White' />
+		<entity id='195'  displayValue=' ' />
+		<entity id='197'  displayValue='Will' value="10"  toolText='Will' />
+		<entity id='199'  displayValue=' ' />
+		<entity id='201'  displayValue='Winnebago' value="10"  toolText='Winnebago' />
+		<entity id='203'  displayValue=' ' />
+		
+		
+		
+		
+		
+</data>
+</map>
+
