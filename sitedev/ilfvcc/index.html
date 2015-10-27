@@ -27,8 +27,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- vertical tabs -->
-      <link href="bootstrap-vertical-tabs-master/bootstrap.vertical-tabs.min.css" rel="stylesheet" type="text/css">
+
 
 
       <!-- jQuery -->
@@ -145,6 +144,11 @@ nav.before-color .navbar-nav>li>a:hover {
     font-weight: 700;
     font-size: 12px;
 }
+
+
+  nav.after-color .thinnav {color: #662ee6}
+
+
     nav.before-color .navbar-nav>li>a{
         color:#fff;
         font-size: 12px;
@@ -256,9 +260,9 @@ nav.before-color .navbar-nav>li>a:hover {
 .heavy {font-weight: 900}
 .spaced {letter-spacing: .15em}
 .thin {font-weight: 700; color: #7e4eec}
-.thinnav {font-weight: 700; color: #7e4eec}
+.thinnav {font-weight: 700; color: #b093f1}
 
-.tab-pane {padding-top: 25px;}
+.tab-pane {padding-top: 35px;}
 
 
 
@@ -308,7 +312,8 @@ nav.before-color .navbar-nav>li>a:hover {
 
 
 
-.tab-pane {padding: 15px 10px 15px 10px}
+.tab-pane {padding: 35px 10px 35px 10px}
+#foobar {font-weight: 900; font-size: 18px}
 
 
 /* ----------------------------- footer ----------------------------------*/
@@ -323,7 +328,8 @@ footer ul a {
 
 }
 
-
+#debug-box {display: none}
+.display-panel{display: none}
 
     </style>
 
@@ -505,32 +511,42 @@ footer ul a {
             <div class="col-lg-12">
 
                 <ul id="myTab" class="nav nav-tabs nav-justified" style="">
-                  <li class="active"><a href="#about-the-ilfvcc" data-toggle="tab">About the ILFVCC</a>
+                  <li class="active"><a href="#find-a-council" data-toggle="tab">Find a Council Near You</a>
                   </li>
-                    <li><a href="#find-a-council" data-toggle="tab">Find a Council Near You</a>
-                    </li>
+                  <li ><a href="#about-the-ilfvcc" data-toggle="tab">About the ILFVCC</a>
+                  </li>
+
                     <li class=""><a href="#news-and-events" data-toggle="tab">News & Events</a>
                     </li>
 
                 </ul>
 
                 <div id="myTabContent" class="tab-content">
-                    <div class="tab-pane fade " id="find-a-council">
+                    <div class="tab-pane fade active in" id="find-a-council">
 
 
 
                         <div class="col-md-12">
 
 
-                          <div class="col-md-6">
-                            <div class="text-center"><h4 style="color: #444;"><span class="foobar">&nbsp;</span></h4></div>
-                            <div id="map-container-2" style="height: 500px"></div>
+                          <div class="col-md-6 text-center">
+                              <div id="foobar">&nbsp;</div>
+                            <div id="map-container-2"></div>
                           </div>
 
-                        <div class="col-md-4">
-                          <div class="text-center">
-                          <h4><span id="circuit-info"></span></h4>
-                        </div>
+                        <div class="col-md-6">
+
+
+                          <div class="panel panel-default display-panel">
+                            <div class="panel-heading" style="font-weight: 900; font-size: 20px">
+                                CIRCUIT HEADING HERE
+                              </div>
+                            <div class="panel=body" style="padding-left: 15px; padding-right: 15px; font-size: 14px">
+                            <div id="circuit-info"></div>
+                          </div>
+                          </div>
+
+
                         </div>
 
                         </div>
@@ -547,7 +563,7 @@ footer ul a {
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repudiandae fugiat illo cupiditate excepturi esse officiis consectetur, laudantium qui voluptatem. Ad necessitatibus velit, accusantium expedita debitis impedit rerum totam id. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quibusdam recusandae illum, nesciunt, architecto, saepe facere, voluptas eum incidunt dolores magni itaque autem neque velit in. At quia quaerat asperiores.</p>
                     </div>
-                    <div class="tab-pane fade active in" id="about-the-ilfvcc">
+                    <div class="tab-pane fade" id="about-the-ilfvcc">
 
                         <img src='/sitedev/ilfvcc/img/logo-placeholder-large.jpg' width='200' style="float: left; padding-right: 20px; margin-top: 10px; padding-bottom: 0px"><p>
                           <p>Family Violence Coordinating Councils, at both the state and local/circuit levels, provide a forum to improve the institutional, professional and community response to family violence including child abuse, domestic abuse, and elder abuse. Councils provide professional education and prevention; coordinate interventions and services for victims and perpetrators; and contribute to both the improvement of the legal system and the administration of justice.</p>
@@ -710,7 +726,7 @@ footer ul a {
       $("#map-container-2").insertFusionCharts({
           type: "maps/illinois",
           width: "500",
-          height: "500",
+          height: "750",
           dataFormat: "XMLURL",
           dataSource: "/data/ilfvcc.xml",
           loadMessage: "Loading Illinois circuit data. Please wait.",
@@ -718,24 +734,27 @@ footer ul a {
                 "entityRollover": function(evt, data) {
                     circuit=data.value / 10;
 
-                    url="/circuits/circuit-" + circuit
-                    //$('.foobar').html(data.label + ' ID: ' + data.id + ' Circuit: ' + circuit);
+
                     suffix = ordinal_suffix_of(circuit);
                     if (circuit == '100') {
                       label = 'Cook County | Cook';
                     } else {
                       label = data.label + ' County ' + ' | ' + suffix + ' Circuit';
+                      // label = suffix + ' Circuit';
                     }
 
-                    $('.foobar').html(label);
+                    $('#foobar').html(label);
 
                 },
 
                 "entityClick": function(evt, data) {
                     circuit=data.value / 10;
+                    displayURL='/sitedev/ilfvcc/data/display-circuit.php?c=circuit-' + circuit;
 
-                    $('#circuit-info').html('<div style="text-align: center;"><h5>Loading circuit information ...&nbsp;&nbsp;<i class="fa fa-spinner fa-spin"></i></h5></div>')
-                    $('#circuit-info').html('/ilfvcc/display-circuit?t=circuit-' + circuit)
+                    $('#circuit-info').html('<div style="text-align: center;"><h5>Loading circuit information ...&nbsp;&nbsp;<i class="fa fa-spinner fa-spin"></i></h5></div>');
+                    $('#circuit-info').load(displayURL);
+                    $('.display-panel').show();
+
                 },
             }
       });
