@@ -50,7 +50,7 @@ h1,h2,h3,h4,h5,h6 {
 /* Home Page Carousel */
 
 header.carousel {
-    height: 50%;
+    height: 500px;
 }
 
 header.carousel .item,

@@ -38,6 +38,13 @@
 
       <script type="text/javascript" src="vendor/fusioncharts-jquery-plugin-master/package/fusioncharts-jquery-plugin.min.js"></script>
 
+
+
+
+
+
+
+
     <style>
 
     #service-panels {background: #eee;}
@@ -331,6 +338,21 @@ footer ul a {
 #debug-box {display: none}
 .display-panel{display: none}
 
+
+
+@media screen and (min-width: 768px) {
+.carousel-caption {
+    right: 10%;
+    left: 10%;
+    padding-bottom: 50px;
+
+}
+}
+
+.section-content {padding-top: 50px; padding-bottom: 50px}
+#about-the-ifvcc {background: #51446C; color: #fff}
+
+
     </style>
 
 </head>
@@ -382,10 +404,13 @@ footer ul a {
 
 
 
+
+
+
     <!-- Intro Header -->
-    <header class="intro" style="margin-top: -50px">
+    <!-- <header class="intro" style="margin: 0; padding: 0; width: 100%; margin-top: -50px; ">
         <div class="intro-body">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="brand-heading"><span class="heavy spaced" style="color: #aaa">ILLINOIS</span>&nbsp;|&nbsp;<span class="thin" style="text-transform: uppercase; color: #fff">Family Violence Coordinating Councils</span></h1>
@@ -395,87 +420,58 @@ footer ul a {
                 </div>
             </div>
         </div>
+    </header> -->
+
+    <header id="myCarousel" class="carousel slide" style="margin-top: -50px">
+        <!-- Indicators -->
+        <!-- <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+
+        </ol> -->
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('img/slider1.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2><span class="heavy spaced" style="color: #aaa">ILLINOIS</span>&nbsp;|&nbsp;<span class="thin" style="text-transform: uppercase; color: #fff">Family Violence Coordinating Councils</span></h2>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('img/slider1.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2><span class="heavy spaced" style="color: #aaa">ILLINOIS</span>&nbsp;|&nbsp;<span class="thin" style="text-transform: uppercase; color: #fff">Family Violence Coordinating Councils</span></h2>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
     </header>
 
-<!--
-<section id="service-panels" >
-    <div class="container">
 
-        <div class="row">
 
-            <div class="col-md-3 col-sm-6">
-                <div class="panel panel-default text-center">
-                    <div class="panel-heading">
-                        <span class="fa-stack fa-5x">
-                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                              <i class="fa fa-tree fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </div>
-                    <div class="panel-body">
-                        <h4>Service One</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <a href="#" class="btn btn-primary">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="panel panel-default text-center">
-                    <div class="panel-heading">
-                        <span class="fa-stack fa-5x">
-                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                              <i class="fa fa-car fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </div>
-                    <div class="panel-body">
-                        <h4>Service Two</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <a href="#" class="btn btn-primary">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="panel panel-default text-center">
-                    <div class="panel-heading">
-                        <span class="fa-stack fa-5x">
-                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                              <i class="fa fa-support fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </div>
-                    <div class="panel-body">
-                        <h4>Service Three</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <a href="#" class="btn btn-primary">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="panel panel-default text-center">
-                    <div class="panel-heading">
-                        <span class="fa-stack fa-5x">
-                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                              <i class="fa fa-database fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </div>
-                    <div class="panel-body">
-                        <h4>Service Four</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <a href="#" class="btn btn-primary">Learn More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-    </section>
--->
+
 
 
 
 <div class="">
   <div class="row row-flex row-flex-wrap">
 
-	<div class="col-md-4" style="padding: 0; margin: 0">
+	<div class="col-md-12" style="padding: 0; margin: 0">
       <div class="col-hero1">
         <div class="content">
+          <h2 class="h3" style="text-transform: uppercase; font-weight: 900; margin-bottom: 8px">Find a Council</h2>
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
         dicta sunt explicabo.
@@ -484,6 +480,7 @@ footer ul a {
     </div>
     <div class="col-hero2">
       <div class="content">
+        <h2 class="h3" style="text-transform: uppercase; font-weight: 900; margin-bottom: 8px">About the IFVCC</h2>
       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
       totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
       dicta sunt explicabo.
@@ -492,20 +489,43 @@ footer ul a {
   </div>
   <div class="col-hero3">
     <div class="content">
+      <h2 class="h3" style="text-transform: uppercase; font-weight: 900; margin-bottom: 8px">News & Events</h2>
     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
     totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
     dicta sunt explicabo.
 
   </div>
 </div>
+</div>
+  </div>
+</div>
 
-  </div><!--/row-->
-</div><!--/container-->
+<section id="find-a-council">
+  <div class="container section-content">
+
+    <div class="col-md-6 text-center">
+      <div id="foobar">&nbsp;</div>
+      <div id="map-container-2"></div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="panel panel-default display-panel">
+        <div class="panel-heading" style="font-weight: 900; font-size: 20px">
+          CIRCUIT HEADING HERE
+        </div>
+        <div class="panel=body" style="padding-left: 15px; padding-right: 15px; font-size: 14px">
+          <div id="circuit-info"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
 
         <!-- Service Tabs -->
-        <section id="service-tabs">
+        <!-- <section id="service-tabs">
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-12">
@@ -513,7 +533,7 @@ footer ul a {
                 <ul id="myTab" class="nav nav-tabs nav-justified" style="">
                   <li class="active"><a href="#find-a-council" data-toggle="tab">Find a Council Near You</a>
                   </li>
-                  <li ><a href="#about-the-ilfvcc" data-toggle="tab">About the ILFVCC</a>
+                  <li ><a href="#about-the-ilfvcc" data-toggle="tab">About the IFVCC</a>
                   </li>
 
                     <li class=""><a href="#news-and-events" data-toggle="tab">News & Events</a>
@@ -585,11 +605,44 @@ footer ul a {
             </div>
         </div>
       </div>
+    </section> -->
+
+
+
+    <section id="about-the-ifvcc">
+      <div class="container section-content">
+
+        <div class="col-md-7">
+          <h2 class="h3" style="text-transform: uppercase; font-weight: 900; border-bottom: 1px solid #fff; padding-bottom: 8px; margin-bottom: 20px">About the IFVCC</h2>
+
+          <img src='/sitedev/ilfvcc/img/logo-placeholder-large.jpg' width='200' style="float: left; padding-right: 20px; margin-top: 10px; padding-bottom: 0px"><p>
+            <p>Family Violence Coordinating Councils, at both the state and local/circuit levels, provide a forum to improve the institutional, professional and community response to family violence including child abuse, domestic abuse, and elder abuse. Councils provide professional education and prevention; coordinate interventions and services for victims and perpetrators; and contribute to both the improvement of the legal system and the administration of justice.</p>
+            <p>Initiated under the auspices of the Illinois Supreme Court in 1990, Illinois is one of the few states that has a systematically organized, statewide infrastructure that operates at both the state and local levels.  Since the 1970's, a comprehensive, coordinated approach to preventing family violence has been promoted as the most efficient and effective way to penetrate systems and mobilize them for the greatest change.</p>
+
+            <p>Annually, up to 15,000 professionals from across Illinois participate in trainings and council projects. These include family violence training and education of criminal justice and community professionals; development of criminal justice procedures, protocols, and services related to family violence; and the facilitation of coordinated community response to family violence in local areas. These Local Councils provide opportunities for communication between criminal justice professionals and community service providers as well as encourage the sharing of information and resources, thereby providing for development of a network of safety and assistance for family violence victims. </p>
+            <p>
+              Chief and circuit judges convene and chair the 23 local councils in all 102 counties in Illinois which are composed of policy-level decision makers who represent agencies and services to help intervene and prevent family violence.
+            </p>
+
+        </div>
+
+        <div class="col-md-5">
+          <h2 class="h3" style="text-transform: uppercase; font-weight: 900; border-bottom: 1px solid #fff; padding-bottom: 8px; margin-bottom: 20px">News & Events</h2>
+        </div>
+
+      </div>
     </section>
 
 
-    <footer class="no-print">
 
+
+
+
+
+
+
+
+<footer class="no-print">
 
   <div style="margin: 0; background: #1f3641; padding: 0;">
 
@@ -670,7 +723,7 @@ footer ul a {
   </div>
   </footer>
 
-  <!-- /ICJIA Footer -->
+
 
 
 
@@ -782,6 +835,12 @@ footer ul a {
 
     </script>
 
+
+    <script>
+        $('.carousel').carousel({
+            interval: 12000 //changes the speed
+        })
+        </script>
 
 
 </body>
