@@ -155,6 +155,11 @@ nav.before-color .navbar-nav>li>a:hover {
 }
 
 
+/*nav.after-color #icjia-button-bar a { padding: 3px 4px 1px 5px}*/
+nav.after-color #icjia-button-bar a i {color: #aaa; }
+
+.navbar-brand {display: none}
+
   nav.after-color .thinnav {color: #662ee6}
 
 
@@ -269,7 +274,7 @@ nav.before-color .navbar-nav>li>a:hover {
 .heavy {font-weight: 900}
 .spaced {letter-spacing: .15em}
 .thin {font-weight: 700; color: #7e4eec}
-.thinnav {font-weight: 700; color: #b093f1}
+.thinnav {font-weight: 700; color: #fff}
 
 .tab-pane {padding-top: 35px;}
 
@@ -635,12 +640,18 @@ footer ul a {
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                   </button>
-                  <div id="icjia-button-bar" style="margin-top: 9px; display: inline; float: left;">
-          					<a type="button" style="border: none; background: #082e6f; color: #fff; font-size: 10px; font-weight: 900" class="offCanvasButton btn btn-sm btn-default" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+                  <!-- <div id="icjia-button-bar" style="margin-top: 9px; display: inline; float: left;">
+          					<a type="button" class="icjia-trigger offCanvasButton btn btn-sm btn-default" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
           					<i class="fa fa-bars fa-2x" style="margin-bottom: .15em"></i>
-          					<!-- <span style="font-size: 12px; padding-left: 2px;">ICJIA</span> -->
+          					<span style="font-size: 10px; padding-left: 2px; margin-bottom: -2em">ICJIA</span>
                   </a>&nbsp;&nbsp;&nbsp;&nbsp;
-          				</div>
+          				</div> -->
+                  <div id="icjia-button-bar" style="margin-top: 9px; margin-right: 12px; display: inline; float: left;">
+                    <a type="button" style="background: transparent; color: #fff; font-size: 10px; font-weight: 900" class="offCanvasButton btn btn-sm btn-default" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+                    <i class="fa fa-bars" style="font-size: 15px; margin-bottom: .15em"></i>
+                    <span class="icjia-trigger-text" style="font-size: 15px; padding-left: 2px; margin-bottom: .15em">ICJIA</span></a>
+                  </div>
+
                   <a class="navbar-brand page-scroll" href="#page-top"><span class="">ILLINOIS</span>&nbsp;|&nbsp;<span class="thinnav">Family Violence Coordinating Councils</span></a>
               </div>
 
@@ -1035,7 +1046,8 @@ footer ul a {
     $(window).scroll(function() {
         if ($(".navbar").offset().top > 50) {
 
-            // $(".navbar-brand").show();
+            $(".navbar-brand").show();
+            $(".icjia-trigger-text").hide();
             $(".navbar-fixed-top").addClass("top-nav-collapse");
             $(".navbar-fixed-top").addClass("after-color");
             $(".navbar-fixed-top").removeClass("before-color");
@@ -1044,8 +1056,8 @@ footer ul a {
 
 
         } else {
-          // $(".navbar-brand").hide();
-
+            $(".navbar-brand").hide();
+            $(".icjia-trigger-text").show();
             $(".navbar-fixed-top").removeClass("top-nav-collapse");
             $(".navbar-fixed-top").addClass("before-color");
             $(".navbar-fixed-top").removeClass("after-color");
