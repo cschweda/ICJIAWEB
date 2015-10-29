@@ -4,9 +4,7 @@
 <html>
 <head>
 	
-	<title>Illinois Criminal Justice Cohorts - Criminal History and Recidivism</title>
-	<link rel="stylesheet" type="text/css" href="css/ICT.css" >
-	
+
 	<!--
 	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
@@ -112,7 +110,6 @@ table {
 	border-collapse: collapse;
 	margin-top: 30px;
 	margin-bottom: 30px;
-	display: inline;
 }
 table th {
 	border-width: 1px;
