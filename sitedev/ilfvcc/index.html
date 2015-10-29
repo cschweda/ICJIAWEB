@@ -155,8 +155,10 @@ nav.before-color .navbar-nav>li>a:hover {
 }
 
 
+
 /*nav.after-color #icjia-button-bar a { padding: 3px 4px 1px 5px}*/
 nav.after-color #icjia-button-bar a i {color: #aaa; }
+nav.after-color #icjia-button-bar a:hover i {color: #fff; }
 
 .navbar-brand {display: none}
 
@@ -410,6 +412,7 @@ footer ul a {
 }*/
 
 
+a#trigger-button:hover {background: #141977 !important; color: #fff !important }
 
     </style>
 
@@ -435,7 +438,6 @@ footer ul a {
 </head>
 
 <body>
-
 
 
 
@@ -647,9 +649,12 @@ footer ul a {
                   </a>&nbsp;&nbsp;&nbsp;&nbsp;
           				</div> -->
                   <div id="icjia-button-bar" style="margin-top: 9px; margin-right: 12px; display: inline; float: left;">
-                    <a type="button" style="background: transparent; color: #fff; font-size: 10px; font-weight: 900" class="offCanvasButton btn btn-sm btn-default" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+                    <a type="button" id="trigger-button" style="background: transparent; color: #fff; font-size: 10px; font-weight: 900" class="offCanvasButton btn btn-sm btn-default" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
                     <i class="fa fa-bars" style="font-size: 15px; margin-bottom: .15em"></i>
-                    <span class="icjia-trigger-text" style="font-size: 15px; padding-left: 2px; margin-bottom: .15em">ICJIA</span></a>
+                  <span class="icjia-trigger-text" style="font-size: 15px; padding-left: 2px; margin-bottom: .15em">ICJIA</span>
+
+
+                  </a>
                   </div>
 
                   <a class="navbar-brand page-scroll" href="#page-top"><span class="">ILLINOIS</span>&nbsp;|&nbsp;<span class="thinnav">Family Violence Coordinating Councils</span></a>
@@ -703,7 +708,7 @@ footer ul a {
         </div>
     </header> -->
 
-    <header id="myCarousel" class="carousel slide" style="margin-top: -50px">
+    <header id="myCarousel" class="carousel slide" style="margin-top: -50px; border-top: 2px solid #666">
         <!-- Indicators -->
         <!-- <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -759,7 +764,7 @@ footer ul a {
         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
         dicta sunt explicabo.</p>
         <div class="text-center">
-        <a class="btn btn-default heavy scrollclass" data-target="#find-a-council" style="pointer" role="button">Find out More</a>
+        <a class="btn btn-default heavy scrollclass" data-target="#find-a-council" style="pointer" role="button">Find out More&nbsp;&nbsp;<i class="fa fa-angle-double-down" style="font-weight: 900"></i></a>
       </div>
 
       </div>
@@ -771,7 +776,7 @@ footer ul a {
       totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
       dicta sunt explicabo.</p>
       <div class="text-center">
-      <a class="btn btn-default heavy scrollclass" data-target="#about-the-ifvcc" style="pointer" role="button">Find out More</a>
+      <a class="btn btn-default heavy scrollclass" data-target="#about-the-ifvcc" style="pointer" role="button">Find out More&nbsp;&nbsp;<i class="fa fa-angle-double-down" style="font-weight: 900"></i></a>
     </div>
 
     </div>
@@ -783,7 +788,7 @@ footer ul a {
     totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
     dicta sunt explicabo.</p>
     <div class="text-center">
-    <a class="btn btn-default heavy scrollclass" data-target="#about-the-ifvcc" style="pointer" role="button">Find out More</a>
+    <a class="btn btn-default heavy scrollclass" data-target="#about-the-ifvcc" style="pointer" role="button">Find out More&nbsp;&nbsp;<i class="fa fa-angle-double-down" style="font-weight: 900"></i></a>
     </div>
   </div>
 </div>
