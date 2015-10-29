@@ -39,6 +39,8 @@
       <script type="text/javascript" src="vendor/fusioncharts-jquery-plugin-master/package/fusioncharts-jquery-plugin.min.js"></script>
 
 
+      <!-- scrollto: https://github.com/flesler/jquery.scrollTo -->
+		    <script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.0/jquery.scrollTo.min.js"></script>
 
 
 
@@ -350,7 +352,33 @@ footer ul a {
 }
 
 .section-content {padding-top: 50px; padding-bottom: 50px}
+/*#about-the-ifvcc {background: #51446C; color: #fff}*/
+
 #about-the-ifvcc {background: #51446C; color: #fff}
+
+.firstcharacter { float: left; color: #ccc; font-size: 75px; line-height: 60px; padding-top: 4px; padding-right: 8px; padding-left: 3px; }
+
+.btn{
+
+	background: transparent;
+	color: #F2F2F2;
+
+  -webkit-border-radius: 0;
+	-moz-border-radius:    0;
+	border-radius:         0;
+
+	/* CSS Transition */
+	-webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-moz-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-ms-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-o-transition: background .2s ease-in-out, border .2s ease-in-out;
+	transition: background .2s ease-in-out, border .2s ease-in-out;
+
+}
+
+.btn.heavy {font-weight: 700}
+
+
 
 
     </style>
@@ -471,29 +499,37 @@ footer ul a {
 	<div class="col-md-12" style="padding: 0; margin: 0">
       <div class="col-hero1">
         <div class="content">
-          <h2 class="h3" style="text-transform: uppercase; font-weight: 900; margin-bottom: 8px">Find a Council</h2>
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+          <h2 class="h3 text-center" style="text-transform: uppercase; font-weight: 900; margin-bottom: 8px">Find a Council</h2>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-        dicta sunt explicabo.
+        dicta sunt explicabo.</p>
+        <div class="text-center">
+        <a class="btn btn-default heavy scrollclass" data-target="#find-a-council" style="pointer" role="button">Find out More</a>
+      </div>
 
       </div>
     </div>
     <div class="col-hero2">
       <div class="content">
-        <h2 class="h3" style="text-transform: uppercase; font-weight: 900; margin-bottom: 8px">About the IFVCC</h2>
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+        <h2 class="h3 text-center" style="text-transform: uppercase; font-weight: 900; margin-bottom: 8px">About the IFVCC</h2>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
       totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-      dicta sunt explicabo.
+      dicta sunt explicabo.</p>
+      <div class="text-center">
+      <a class="btn btn-default heavy scrollclass" data-target="#about-the-ifvcc" style="pointer" role="button">Find out More</a>
+    </div>
 
     </div>
   </div>
   <div class="col-hero3">
     <div class="content">
-      <h2 class="h3" style="text-transform: uppercase; font-weight: 900; margin-bottom: 8px">News & Events</h2>
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+      <h2 class="h3 text-center" style="text-transform: uppercase; font-weight: 900; margin-bottom: 8px">News & Events</h2>
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
     totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-    dicta sunt explicabo.
-
+    dicta sunt explicabo.</p>
+    <div class="text-center">
+    <a class="btn btn-default heavy scrollclass" data-target="#about-the-ifvcc" style="pointer" role="button">Find out More</a>
+    </div>
   </div>
 </div>
 </div>
@@ -503,12 +539,28 @@ footer ul a {
 <section id="find-a-council">
   <div class="container section-content">
 
+    <div class="col-md-12">
+        <h2 class="h3" style="text-transform: uppercase; font-weight: 900; border-bottom: 1px solid #ccc; padding-bottom: 8px; margin-bottom: 40px">Find a Council</h2>
+    </div>
+
     <div class="col-md-6 text-center">
+
+
       <div id="foobar">&nbsp;</div>
       <div id="map-container-2"></div>
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-6" >
+
+
+      <div id="map-instructions" class="text-center">
+
+        <img src='/sitedev/ilfvcc/img/logo-placeholder-large.jpg' width='200' style='margin-top: 50px; margin-bottom: 50px'>
+        <h2 class="h3">Select a county to view circuit information</h2>
+      </div>
+
+
+
       <div class="panel panel-default display-panel">
         <div class="panel-heading" style="font-weight: 900; font-size: 20px">
           CIRCUIT HEADING HERE
@@ -615,8 +667,11 @@ footer ul a {
         <div class="col-md-7">
           <h2 class="h3" style="text-transform: uppercase; font-weight: 900; border-bottom: 1px solid #fff; padding-bottom: 8px; margin-bottom: 20px">About the IFVCC</h2>
 
-          <img src='/sitedev/ilfvcc/img/logo-placeholder-large.jpg' width='200' style="float: left; padding-right: 20px; margin-top: 10px; padding-bottom: 0px"><p>
-            <p>Family Violence Coordinating Councils, at both the state and local/circuit levels, provide a forum to improve the institutional, professional and community response to family violence including child abuse, domestic abuse, and elder abuse. Councils provide professional education and prevention; coordinate interventions and services for victims and perpetrators; and contribute to both the improvement of the legal system and the administration of justice.</p>
+          <!-- <img src='/sitedev/ilfvcc/img/logo-placeholder-large.jpg' width='200' style="float: left; padding-right: 20px; margin-top: 10px; padding-bottom: 0px">
+ -->
+
+          <p>
+            <p><span class="firstcharacter">F</span>amily Violence Coordinating Councils, at both the state and local/circuit levels, provide a forum to improve the institutional, professional and community response to family violence including child abuse, domestic abuse, and elder abuse. Councils provide professional education and prevention; coordinate interventions and services for victims and perpetrators; and contribute to both the improvement of the legal system and the administration of justice.</p>
             <p>Initiated under the auspices of the Illinois Supreme Court in 1990, Illinois is one of the few states that has a systematically organized, statewide infrastructure that operates at both the state and local levels.  Since the 1970's, a comprehensive, coordinated approach to preventing family violence has been promoted as the most efficient and effective way to penetrate systems and mobilize them for the greatest change.</p>
 
             <p>Annually, up to 15,000 professionals from across Illinois participate in trainings and council projects. These include family violence training and education of criminal justice and community professionals; development of criminal justice procedures, protocols, and services related to family violence; and the facilitation of coordinated community response to family violence in local areas. These Local Councils provide opportunities for communication between criminal justice professionals and community service providers as well as encourage the sharing of information and resources, thereby providing for development of a network of safety and assistance for family violence victims. </p>
@@ -807,6 +862,7 @@ footer ul a {
                     $('#circuit-info').html('<div style="text-align: center;"><h5>Loading circuit information ...&nbsp;&nbsp;<i class="fa fa-spinner fa-spin"></i></h5></div>');
                     $('#circuit-info').load(displayURL);
                     $('.display-panel').show();
+                    $('#map-instructions').hide();
 
                 },
             }
@@ -840,6 +896,18 @@ footer ul a {
         $('.carousel').carousel({
             interval: 12000 //changes the speed
         })
+
+
+        $('.scrollclass').click(function() {
+        	$('body').scrollTo($(this).data('target'), {
+        		duration: 1200,
+        		offset: -50
+        	});
+        });
+
+
+
+
         </script>
 
 

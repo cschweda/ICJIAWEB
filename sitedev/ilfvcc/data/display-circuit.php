@@ -10,7 +10,8 @@ h2.h5 {font-weight: 700}
 
 
 <h2 class="h5 rule">Counties Served</h2>
-<p>
+<img src='/sitedev/ilfvcc/img/logo-placeholder-large.jpg' width='75' style="float: left; padding-right: 20px; margin-top: 10px; padding-bottom: 0px">
+<p style="margin-bottom: 30px">
 Christian, Clay, Clinton, Effingham, Fayette, Jasper, Marion, Montgomery, Shelby</p>
 
 <h2 class="h5 rule">Council Chairs</h2>
