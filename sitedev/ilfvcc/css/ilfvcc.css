@@ -146,9 +146,22 @@ nav.before-color .navbar-nav>li>a:hover {
     nav.after-color{
         background-color: rgba(255,255,255,.95);
         padding: 0px 0;
-        box-shadow: 0px 1px 5px rgba(0,0,0,0.302);
-        -webkit-box-shadow: 0px 1px 5px rgba(0,0,0,0.302);
+
     }
+
+    nav.after-color.nav-shadow {
+      box-shadow: 0px 1px 5px rgba(0,0,0,0.302);
+      -webkit-box-shadow: 0px 1px 5px rgba(0,0,0,0.302);
+    }
+
+    nav.after-color.nav-border {
+      border-bottom: 0px solid #aaa;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+    }
+
+
+
     nav.before-color.navbar-default .navbar-brand{
     color:#fff;
     /*font-size: 25px;*/
@@ -441,7 +454,7 @@ a#trigger-button:hover {background: #141977 !important; color: #fff !important }
 
 /******* breadcrumbs ***********************/
 
-section.breadcrumbs {width: 100%; margin-bottom: 30px; margin-top: 5px; background: #71558f; padding-top: 2px; padding-bottom: 2px}
+section.breadcrumbs {width: 100%; margin-bottom: 30px; margin-top: 0px; background: #71558f; padding-top: 2px; padding-bottom: 2px}
 .breadcrumb {
               font-family: 'Lato';
               font-weight: 700;

@@ -271,7 +271,7 @@
 
     <!-- Navigation -->
     <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default after-color top-nav-collapse navbar-fixed-top">
+    <nav id="mainNav" class="navbar navbar-default after-color top-nav-collapse navbar-fixed-top nav-border">
           <div class="container-fluid">
               <!-- Brand and toggle get grouped for better mobile display -->
               <div class="navbar-header">
@@ -582,9 +582,7 @@ In 2014, IFVCC was awarded a renewal of the Arrest Grant, which allows for addit
 
 
     <script>
-        $('.carousel').carousel({
-            interval: 10000 //changes the speed
-        })
+
 
 
         $('.scrollclass').click(function() {
@@ -600,8 +598,30 @@ In 2014, IFVCC was awarded a renewal of the Arrest Grant, which allows for addit
         </script>
 
         <script>
-        // $(".navbar-brand").show();
-        // $(".icjia-trigger-text").hide();
+
+
+        //jQuery to collapse the navbar on scroll
+        $(window).scroll(function() {
+            if ($(".navbar").offset().top > 20) {
+
+
+              $(".navbar-fixed-top").addClass("nav-shadow");
+              $(".navbar-fixed-top").removeClass("nav-border");
+
+                // $(".navbar-brand").addClass("dark");
+
+
+            } else {
+                $(".navbar-fixed-top").removeClass("nav-shadow");
+              $(".navbar-fixed-top").addClass("nav-border");
+
+
+                // $(".navbar-brand").removeClass("dark");
+
+
+
+            }
+        });
         </script>
 
 
