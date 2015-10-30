@@ -160,6 +160,9 @@ nav.before-color .navbar-nav>li>a:hover {
       -webkit-box-shadow: none;
     }
 
+    .navbar.ilfvcc-border {
+      border-top: 1px solid #7e4eec;
+    }
 
 
     nav.before-color.navbar-default .navbar-brand{
