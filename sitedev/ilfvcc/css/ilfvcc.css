@@ -136,6 +136,10 @@ nav.before-color .navbar-nav>li>a:hover {
 
 }
 
+
+
+
+
 @media(min-width:768px){
     nav.before-color{
         background-color: rgba(255,255,255,0);
@@ -143,8 +147,19 @@ nav.before-color .navbar-nav>li>a:hover {
 
 
     }
+
+
+
+
+
     nav.after-color{
         background-color: rgba(255,255,255,.95);
+        padding: 0px 0;
+
+    }
+
+    nav.after-color.internal-page{
+        background-color: #eee;
         padding: 0px 0;
 
     }
@@ -155,13 +170,13 @@ nav.before-color .navbar-nav>li>a:hover {
     }
 
     nav.after-color.nav-border {
-      border-bottom: 0px solid #aaa;
+      border-bottom: 1px solid #aaa;
       box-shadow: none;
       -webkit-box-shadow: none;
     }
 
     .navbar.ilfvcc-border {
-      border-top: 1px solid #7e4eec;
+      border-top: 1px solid #666;
     }
 
 
@@ -256,7 +271,26 @@ nav.after-color .thinnav {color: #662ee6}
 }
 
 
+nav.before-color .nav>li.active a{
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #aaa;
+  }
 
+  nav.before-color .nav>li.active a:hover{
+    background-color: transparent;
+    color: #bbb;
+    border: 1px solid #fff;
+    }
+
+
+    nav.after-color .nav>li.active a{
+        background-color: #fff;
+      }
+
+      nav.after-color .nav>li.active a:hover{
+      
+        }
 
 
 
@@ -457,7 +491,7 @@ a#trigger-button:hover {background: #141977 !important; color: #fff !important }
 
 /******* breadcrumbs ***********************/
 
-section.breadcrumbs {width: 100%; margin-bottom: 30px; margin-top: 0px; background: #71558f; padding-top: 2px; padding-bottom: 2px}
+section.breadcrumbs {width: 100%; margin-bottom: 30px; margin-top: 2px; background: #71558f; padding-top: 2px; padding-bottom: 2px}
 .breadcrumb {
               font-family: 'Lato';
               font-weight: 700;
