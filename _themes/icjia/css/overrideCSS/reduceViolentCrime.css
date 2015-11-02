@@ -151,6 +151,8 @@ section#registration p {font-family: 'Lato', sans-serif; color: #666}
 section#registration p.contact {margin-bottom: 30px; color: #333}
 section#registration p.disclaimer {color: #aaa; font-size: 12px}
 
+section#packet-downloads {background-color: #eee;}
+section#packet-downloads {font-family: 'Lato', sans-serif; color: #666}
 
 footer {margin-top: -50px}
 
@@ -220,3 +222,6 @@ span.register-now:hover {
   #site-title {display: none;}
 
 }
+
+
+/*.firstcharacter { float: left; color: #082e6f; font-size: 75px; line-height: 60px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: 'Lato', sans-serif; }*/
