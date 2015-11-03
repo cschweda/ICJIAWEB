@@ -198,7 +198,7 @@ nav.before-color .navbar-nav>li>a:hover {
 nav.after-color #icjia-button-bar a i {color: #aaa; }
 nav.after-color #icjia-button-bar a:hover i {color: #fff;}
 
-.navbar-brand {display: none}
+/*.navbar-brand {display: none}*/
 nav.after-color .thinnav {color: #662ee6}
 nav.after-color .icjia-trigger-text {
     color:#555;
