@@ -269,9 +269,9 @@
 
 
     <!-- Main Navigation -->
-    <nav id="mainNav" class="navbar navbar-default ilfvcc-border after-color internal-page top-nav-collapse navbar-fixed-top nav-border">
+    <nav id="mainNav" class="navbar navbar-default before-color internal-page navbar-fixed-top">
           <div class="container">
-              <!-- Brand and toggle get grouped for better mobile display -->
+            
               <div class="navbar-header">
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                       <span class="sr-only">Toggle navigation</span>
@@ -280,15 +280,15 @@
                       <span class="icon-bar"></span>
                   </button>
                   <!-- <div id="icjia-button-bar" style="margin-top: 9px; display: inline; float: left;">
-                    <a type="button" class="icjia-trigger offCanvasButton btn btn-sm btn-default" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
-                    <i class="fa fa-bars fa-2x" style="margin-bottom: .15em"></i>
-                    <span style="font-size: 10px; padding-left: 2px; margin-bottom: -2em">ICJIA</span>
+          					<a type="button" class="icjia-trigger offCanvasButton btn btn-sm btn-default" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+          					<i class="fa fa-bars fa-2x" style="margin-bottom: .15em"></i>
+          					<span style="font-size: 10px; padding-left: 2px; margin-bottom: -2em">ICJIA</span>
                   </a>&nbsp;&nbsp;&nbsp;&nbsp;
-                  </div> -->
+          				</div> -->
                   <div id="icjia-button-bar" style="margin-top: 9px; margin-right: 12px; display: inline; float: left;">
                     <a type="button" id="trigger-button" style="background: transparent; color: #fff; font-size: 10px; font-weight: 900" class="offCanvasButton btn btn-sm btn-default" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
-                    <i class="fa fa-bars" style="font-size: 14px; margin-bottom: .15em"></i>
-                  <span class="icjia-trigger-text" style="font-size: 14px; padding-left: 2px; margin-bottom: .15em">ICJIA</span>
+                    <i class="fa fa-bars" style="font-size: 12px; margin-bottom: .15em"></i>
+                  <span class="icjia-trigger-text" style="font-size: 12px; padding-left: 2px; margin-bottom: .15em">ICJIA</span>
 
 
                   </a>
@@ -300,10 +300,10 @@
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
-                      <li>
+                      <li class="active">
                           <a  href="/sitedev/ilfvcc">Home</a>
                       </li>
-                      <li class="active">
+                      <li>
                           <a  href="/sitedev/ilfvcc/projects.html">Projects</a>
                       </li>
                       <li>
@@ -329,6 +329,7 @@
 
 
 
+
     <!-- Intro Header -->
     <!-- <header class="intro" style="margin: 0; padding: 0; width: 100%; margin-top: -50px; ">
         <div class="intro-body">
@@ -344,7 +345,7 @@
         </div>
     </header> -->
 
-    <header id="myCarousel" class="carousel slide" style="border-top: 2px solid #666">
+    <header id="myCarousel" class="carousel slide" style="margin-top: -50px; border-top: 2px solid #666">
         <!-- Indicators -->
         <!-- <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -717,23 +718,23 @@
     $(window).scroll(function() {
         if ($(".navbar").offset().top > 10) {
 
-            // $(".navbar-brand").show();
-            // $(".icjia-trigger-text").hide();
-            // $(".navbar-fixed-top").addClass("top-nav-collapse");
-            // $(".navbar-fixed-top").addClass("after-color");
-            // $(".navbar-fixed-top").removeClass("before-color");
-            // $(".navbar-fixed-top").addClass("nav-shadow");
+            $(".navbar-brand").show();
+            $(".icjia-trigger-text").hide();
+            $(".navbar-fixed-top").addClass("top-nav-collapse");
+            $(".navbar-fixed-top").addClass("after-color");
+            $(".navbar-fixed-top").removeClass("before-color");
+            $(".navbar-fixed-top").addClass("nav-shadow");
 
             // $(".navbar-brand").addClass("dark");
 
 
         } else {
-            // $(".navbar-brand").hide();
-            // $(".icjia-trigger-text").show();
-            // $(".navbar-fixed-top").removeClass("top-nav-collapse");
-            // $(".navbar-fixed-top").addClass("before-color");
-            // $(".navbar-fixed-top").removeClass("after-color");
-            // $(".navbar-fixed-top").removeClass("nav-shadow");
+            $(".navbar-brand").hide();
+            $(".icjia-trigger-text").show();
+            $(".navbar-fixed-top").removeClass("top-nav-collapse");
+            $(".navbar-fixed-top").addClass("before-color");
+            $(".navbar-fixed-top").removeClass("after-color");
+            $(".navbar-fixed-top").removeClass("nav-shadow");
 
             // $(".navbar-brand").removeClass("dark");
 
