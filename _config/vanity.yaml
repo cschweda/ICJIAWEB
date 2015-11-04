@@ -19,6 +19,9 @@
     url: /ilfvccdev/home
     type: 301
 
+/statute:
+    url: /statutesearch
+    type: 301
 
 /research:
     url: /research/overview
