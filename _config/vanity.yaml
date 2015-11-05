@@ -15,9 +15,9 @@
     url: /grants/overview
     type: 301
 
-/ilfvccdev:
-    url: /ilfvccdev/home
-    type: 301
+# /ilfvccdev:
+#     url: /ilfvccdev/home
+#     type: 301
 
 /statute:
     url: /statutesearch
