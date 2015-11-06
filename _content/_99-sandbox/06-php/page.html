@@ -11,10 +11,14 @@ breadcrumbs: 'true'
 
 {{ foo }}
 
+<!-- tag necessary for statamic to render the php -->
+
+
 
 <?php
+$a = new \DateTime('2013-12-19');
+$b = new \DateTime;
 
-// Show all information, defaults to INFO_ALL
-phpinfo();
+echo $a->diff($b)->days; // => 1
 
 ?>

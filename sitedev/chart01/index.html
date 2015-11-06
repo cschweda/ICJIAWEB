@@ -1,0 +1,285 @@
+<html>
+
+<head>
+
+
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+  crossorigin="anonymous">
+
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+
+
+  <div class="container">
+    <div class="col-md-12">
+      <div class="text-center well">
+        Variable 1:
+        <select id="var1">
+          <option value="A">Value A</option>
+          <option value="B">Value B</option>
+
+
+        </select>
+
+        &nbsp;&nbsp;&nbsp; Variable 2:
+
+        <select id="var2">
+          <option value="1">Value 1</option>
+          <option value="2">Value 2</option>
+          <option value="3">Value 3</option>
+
+        </select>
+
+        &nbsp;&nbsp;&nbsp;
+
+        <a class="btn btn-sm btn-default" id="chart-select-button">Select</a>
+
+        <br/>
+
+
+
+
+
+
+      </div>
+
+
+
+      <div class="text-center" id="chart-container"></div>
+      <div id="text-container"></div>
+
+
+
+
+
+
+    </div>
+
+  </div>
+  </div>
+
+  <script>
+    $("#chart-select-button").on("click", function() {
+      var1 = $("#var1 option:selected").val();
+      var2 = $("#var2 option:selected").val();
+      //$('.debug').html('Selected: ' + var1 + ' ' + var2);
+      drawChart(var1, var2);
+    });
+
+
+    function drawChart(var1, var2) {
+      myTitle = '';
+      myTItle = '';
+      var chart = new Highcharts.Chart({
+        chart: {
+          renderTo: 'chart-container'
+        },
+        title: {
+          text: 'Default Title'
+        },
+        xAxis: {
+          categories: ['Apples', 'Oranges', 'Pears', 'Bananas', 'Plums'] // default x-axis
+        },
+        tooltip: {
+          formatter: function() {
+            var s;
+            if (this.point.name) { // the pie chart
+              s = '' +
+                this.point.name + ': ' + this.y + ' fruits';
+            } else {
+              s = '' +
+                this.x + ': ' + this.y;
+            }
+            return s;
+          }
+        },
+        labels: {
+          items: [{
+            html: 'Total fruit consumption',
+            style: {
+              left: '40px',
+              top: '8px',
+              color: 'black'
+            }
+          }]
+        },
+        series: []
+      });
+
+
+      var myData;
+      var myCategories=[];
+      var myChartPermutation = var1 + var2;
+
+
+
+      // TODO: Change IF/THEN to CASE/SWITCH
+
+      if (myChartPermutation == 'A1') {
+        myData = [{
+          type: 'line',
+          name: 'Tokyo',
+          data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+        }, {
+          type: 'line',
+          name: 'New York',
+          data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
+        }, {
+          type: 'line',
+          name: 'Berlin',
+          data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
+        }, {
+          type: 'line',
+          name: 'London',
+          data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+        }];
+
+        myCategories = ['One', 'Two', 'Three','Four', 'Five']; // override default categories
+
+        myText =
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel blandit tellus. Pellentesque feugiat lectus non magna sollicitudin aliquam. Sed eu ex aliquam, lacinia quam quis, sollicitudin tellus. Integer gravida, massa vitae dapibus lacinia, purus ante blandit velit, id vulputate arcu tortor sed ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus feugiat pellentesque magna, ut tincidunt est dictum eu. Maecenas accumsan sed erat ut hendrerit. Nunc ligula dui, luctus vel nisl nec, tincidunt commodo nibh.";
+
+        myTitle = 'Chart A1';
+
+
+
+      }
+
+      if (myChartPermutation == 'A2') {
+        myData = [{
+          type: 'column',
+          name: 'Jane',
+          data: [6, 1, 11, 33, 41]
+        }, {
+          type: 'column',
+          name: 'John',
+          data: [21, 3, 5, 7, 6]
+        }, {
+          type: 'column',
+          name: 'Joe',
+          data: [46, 3, 37, 9, 0]
+        }];
+
+        myText =
+          "Dapibus lacinia, purus ante blandit velit, id vulputate arcu tortor sed ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus feugiat pellentesque magna, ut tincidunt est dictum eu. Maecenas accumsan sed erat ut hendrerit. Nunc ligula dui, luctus vel nisl nec, tincidunt commodo nibh.";
+
+        myTitle = 'Chart A2';
+
+      }
+
+
+      if (myChartPermutation == 'A3') {
+        myData = [{
+          type: 'line',
+          name: 'Tokyo',
+          data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+        }, {
+          type: 'line',
+          name: 'New York',
+          data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
+        }, {
+          type: 'line',
+          name: 'Berlin',
+          data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
+        }, {
+          type: 'line',
+          name: 'London',
+          data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+        }];
+
+        myText =
+          "Loacinia, purus ante blandit velit, id vulputate arcu tortor sed ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus feugiat pellentesque magna, ut tincidunt est dictum eu. Maecenas accumsan sed erat ut hendrerit. Nunc ligula dui, luctus vel nisl nec, tincidunt commodo nibh.";
+
+        myTitle = 'Chart A3';
+      }
+
+
+
+      if (myChartPermutation == 'B1') {
+        myData = [{
+          type: 'column',
+          name: 'Jane',
+          data: [5, 6, 3, 5, 3]
+        }, {
+          type: 'column',
+          name: 'John',
+          data: [8, 1, 3, 8, 1]
+        }];
+
+        myText =
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel blandit tellus. Pellentesque feugiat lectus non magna sollicitudin aliquam. Sed eu ex aliquam, lacinia quam quis, sollicitudin tellus. Integer gravida, massa vitae dapibus lacinia, purus ante blandit velit, id vulputate arcu tortor sed ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus feugiat pellentesque magna, ut tincidunt est dictum eu. Maecenas accumsan sed erat ut hendrerit. Nunc ligula dui, luctus vel nisl nec, tincidunt commodo nibh.";
+
+        myTitle = 'Chart B1';
+      }
+
+
+      if (myChartPermutation == 'B2') {
+        myData = [{
+          type: 'pie',
+          name: 'Jane',
+          data: [5, 6, 3, 5, 3]
+        }];
+
+        myText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel blandit tellus. Pellentesque feugiat lectus non magna sollicitudin aliquam.";
+
+        myTitle = 'Chart B2';
+      }
+
+      if (myChartPermutation == 'B3') {
+        myData = [{
+          type: 'column',
+          name: 'Jane',
+          data: [51, 1, 30, 50, 30]
+        }, {
+          type: 'column',
+          name: 'John',
+          data: [8, 1, 3, 8, 1]
+        }];
+
+        myText =
+          "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus feugiat pellentesque magna, ut tincidunt est dictum eu. Maecenas accumsan sed erat ut hendrerit. Nunc ligula dui, luctus vel nisl nec, tincidunt commodo nibh.";
+
+        myTitle = 'Chart B3';
+
+
+
+
+      }
+
+
+      // loop through data in series
+      for (var i in myData) {
+        chart.addSeries(myData[i], false); // set to false to stop redraw
+      }
+
+      // if custom categories, override default
+      if (myCategories.length > 0) {
+          chart.xAxis[0].setCategories(myCategories);
+      }
+
+      // set chart title
+      chart.setTitle({
+        text: myTitle
+      });
+
+      // draw chart in chart-container
+      chart.redraw();
+
+      // add explanatory text
+      $('#text-container').html(myText);
+
+
+    }
+  </script>
+
+</body>
+
+</html>
