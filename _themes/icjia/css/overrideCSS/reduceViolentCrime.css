@@ -146,12 +146,12 @@ section#about p {font-family: 'Lato', sans-serif; color: #777}
 section#who-is-it-for{background-color: #263A58; color: #fff}
 section#who-is-it-for p, section#who-is-it-for ul li {font-family: 'Lato', sans-serif;}
 
-section#registration {background-color: #fff;}
+section#registration {background-color: #eee;}
 section#registration p {font-family: 'Lato', sans-serif; color: #666}
 section#registration p.contact {margin-bottom: 30px; color: #333}
 section#registration p.disclaimer {color: #aaa; font-size: 12px}
 
-section#packet-downloads {background-color: #eee;}
+section#packet-downloads {background-color: #fff;}
 section#packet-downloads {font-family: 'Lato', sans-serif; color: #666; padding-bottom: 30px}
 
 footer {margin-top: -50px}
