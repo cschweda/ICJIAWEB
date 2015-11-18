@@ -1,6 +1,6 @@
 <?php
 
-header("Location: /IERTF");
+header("Location: IERTF Final Report.pdf");
 die();
 
 ?>
