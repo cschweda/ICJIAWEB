@@ -3,24 +3,73 @@ _fieldset: page
 title: Conference on Illinois Partnerships and Strategies to Reduce Violent Crime
 _template: default-blank
 upload: ""
-_layout: default-non-icjia
+_layout: default
 
 ---
 
-{{ entries:listing folder="news" conditions="siteDisplay:ARI" sort_dir="desc"}}
+<div style="height: 100px"></div>
 
-  {{date}}{{title}}
+<h3>News</h3>
+
+{{ entries:listing folder="news" conditions="siteDisplay:ICJIA" limit="10" sort_dir="desc"}}
+
+<div class="news-entry">
+
+  <span class="addNewLabel" data-postType="news" data-postDate="{{date format='Y-m-d'}}">{{date}}</span>
+  <br/>
+  {{title}}
+</div>
 
 
 <br/>
 
 {{ /entries:listing }}
 
-<h3>Date computation</h3>
-
- {{date_calc method="subDays" value="5" format="Y-m-d" }}
+<h3>Articles</h3>
 
 
- {{now}}
+{{ entries:listing folder="articles" sort_dir="desc"}}
 
- {{now + 5}}
+<div>
+
+  <span class="addNewLabel" data-postType="article" data-postDate="{{date format='Y-m-d'}}">{{date}}</span>
+  <br/>
+  {{title}}
+</div>
+
+
+<br/>
+
+{{ /entries:listing }}
+
+
+
+<script>
+
+// $(function() {
+//
+// var daysToShowNewLabelforNews = 20;
+// var daysToShowNewLabelforArticles=60;
+//
+// $('.addNewLabel[data-postDate]').each(function(){
+//   var $postDate = moment($(this).attr('data-postDate'));
+//   var $postType = $(this).attr('data-postType');
+//   var diffInDays = moment().diff($postDate, 'days');
+//
+// if ($postType=='news') {
+//   if (diffInDays <= daysToShowNewLabelforNews) {
+//     $(this).prepend('<img src="/assets/img/ajax-loader.gif"> ');
+//   }
+// }
+//
+// if ($postType=='article') {
+//   if (diffInDays <= daysToShowNewLabelforArticles) {
+//     $(this).prepend('<img src="/assets/img/ajax-loader.gif"> ');
+//   }
+// }
+//
+// });
+//
+// })();
+
+</script>

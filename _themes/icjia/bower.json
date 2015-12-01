@@ -25,7 +25,8 @@
     "share-button": "~0.5.0",
     "slick-carousel": "~1.5.0",
     "viewerjs": "~0.5.7",
-    "yamm3": "~1.1.0"
+    "yamm3": "~1.1.0",
+    "moment": "~2.10.6"
   },
   "resolutions": {
     "jquery": "2.1.4"

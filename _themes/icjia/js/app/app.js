@@ -642,6 +642,33 @@ $(document).ready(function() {
 	});
 
 
+
+	var daysToShowNewLabelforNews = 20;
+	var daysToShowNewLabelforArticles = 45;
+	var newLabel =
+		'<span style="background: #fe8869; color: #fff; border: 0px solid #ccc; padding: 4px; font-family: Lato, sans-serif">NEW</span>&nbsp;&nbsp;';
+
+	$('.addNewLabel[data-postDate]').each(function() {
+		var $postDate = moment($(this).attr('data-postDate'));
+		var $postType = $(this).attr('data-postType');
+		var diffInDays = moment().diff($postDate, 'days');
+
+		if ($postType == 'news') {
+			if (diffInDays <= daysToShowNewLabelforNews) {
+				$(this).prepend(newLabel);
+			}
+		}
+
+		if ($postType == 'article') {
+			if (diffInDays <= daysToShowNewLabelforArticles) {
+				$(this).prepend(newLabel);
+			}
+		}
+
+	});
+
+
+
 });
 
 
