@@ -643,7 +643,7 @@ $(document).ready(function() {
 
 
 
-	var daysToShowNewLabelforNews = 20;
+	var daysToShowNewLabelforNews = 10;
 	var daysToShowNewLabelforArticles = 45;
 	var newLabel =
 		'<span style="font-weight: 700; background: #fe8869; color: #fff; border: 0px solid #ccc; padding: 4px; font-family: Lato, sans-serif">NEW</span>&nbsp;&nbsp;';
