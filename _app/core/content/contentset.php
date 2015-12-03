@@ -346,7 +346,9 @@ class ContentSet
 
                             } elseif ($instructions['type'] == "has_none") {
 
-                                if (empty(array_diff($values, $field))) {
+                                $check = array_diff($values, $field);
+                                
+                                if (! $check) {
                                     throw new Exception("Does not fit condition", 0);
                                 }
                                 
@@ -901,6 +903,8 @@ class ContentSet
         // iteration memory
         $last_date = null;
 
+        $add_list_helpers = Config::get('enable_list_helpers', true);
+
         // loop through content, supplementing each record with data
         foreach ($this->content as $content_key => $data) {
 
@@ -962,7 +966,7 @@ class ContentSet
                 if (is_array($value) && isset($value[0]) && ! is_array($value[0])) {
 
                     // list helpers
-                    if ($context['list_helpers']) {
+                    if ($add_list_helpers && $context['list_helpers']) {
                         // make automagic lists
                         $data[$key . "_list"]                    = join(", ", $value);
                         $data[$key . "_spaced_list"]             = join(" ", $value);
@@ -1004,7 +1008,7 @@ class ContentSet
                 
                 // merge them all together
                 $this->content[$content_key] = $data + $folder_data + $all_config;
-		    } else {
+            } else {
                 $this->content[$content_key] = $data;
             }
         }

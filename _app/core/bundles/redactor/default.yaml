@@ -6,10 +6,7 @@
 #
 #########################################################################
 
-# Automatically resize to show all written content
-autoresize: true
-
-# Order and choose your buttons. Use '|' for a vertical seperator
+# Order and choose your buttons
 buttons:
   - formatting
   - bold
@@ -27,17 +24,14 @@ buttons:
   - horizontalrule
   - fontcolor
   - backcolor
-  - alignleft
-  - aligncenter
-  - alignright
-  - justify
+  - alignment
   - html
-  
+
 # Turn on/off cleanup on paste
-cleanup: true
+cleanOnPaste: true
 
 # Automatically replace divs with paragraphs
-convertDivs: true
+replaceDivs: true
 
 # Automatically turn image links into <img> tags
 convertImageLinks: false
@@ -48,14 +42,11 @@ convertLinks: true
 # Automatically embed YouTube and Vimeo links
 convertVideoLinks: false
 
-# Turn on email tab in link modal window
-linkEmail: true
-
 # Set a default margin around images
 imageFloatMargin: 10px
 
 # Set the formatting tags available
-formattingTags:
+formatting:
   - p
   - blockquote
   - pre
@@ -68,7 +59,7 @@ formattingTags:
 minHeight: 150
 
 # Turn on/off paragraph formatting
-paragraphy: true
+paragraphize: true
 
 # Turn on/off keypress shortcuts
 shortcuts: true

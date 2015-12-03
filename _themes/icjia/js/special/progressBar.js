@@ -76,7 +76,7 @@ $(document).ready(function() {
 
 
 /*
-Function to initialize the progress bar.
+Function to (re)initialize the progress bar.
 This is called if elements on the page are expanded (e.g., the bios on the 'Commission' page)
 */
 

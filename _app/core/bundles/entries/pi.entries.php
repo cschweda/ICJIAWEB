@@ -187,7 +187,7 @@ class Plugin_entries extends Plugin
         }
 
         // get the content
-        $content = $content_set->get(preg_match(Pattern::USING_CONTENT, $this->content));
+        $content = $content_set->get(preg_match(Pattern::USING_CONTENT, $this->content), false);
 
         // set up iterator variables
         $current_found = false;
@@ -267,7 +267,7 @@ class Plugin_entries extends Plugin
         }
 
         // get the content
-        $content = $content_set->get(preg_match(Pattern::USING_CONTENT, $this->content));
+        $content = $content_set->get(preg_match(Pattern::USING_CONTENT, $this->content), false);
 
         // set up iterator variables
         $previous_data = null;
@@ -548,14 +548,22 @@ class Plugin_entries extends Plugin
             $content_set->supplement(array('total_found' => $total_entries) + $settings);
 
             // sort
-            $content_set->multisort($settings['sort']);            
+            $content_set->multisort($settings['sort']);
+
+            // additional post-sort supplement
+            $additional_supplementation = array();
             
-            // post-sort supplement
-            $content_set->supplement(array(
-                'date_offset'   => $this->fetchParam('date_offset', null, null, false, false),
-                'group_by_date' => trim($this->fetchParam("group_by_date", null, null, false, false)
-                )
-            ), true);
+            if ($date_offset = $this->fetchParam('date_offset', null, null, false, false)) {
+                $additional_supplementation[] = $date_offset;
+            }
+
+            if ($group_by_date = trim($this->fetchParam("group_by_date", null, null, false, false))) {
+                $additional_supplementation[] = $group_by_date;   
+            }
+
+            if ( ! empty($additional_supplementation)) {
+                $content_set->supplement($additional_supplementation, true);
+            }
 
             // store content as blink content for future use
             $this->blink->set($content_hash, $content_set->extract());

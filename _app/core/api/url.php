@@ -245,7 +245,7 @@ class URL
 
     public static function fromPath($path)
     {
-        $url = Path::clean('/'.$path);
+        $url = Path::clean(Url::assemble($path));
         return preg_replace('/\/page$/', '', $url);
     }
 }

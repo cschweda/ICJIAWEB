@@ -1,0 +1,197 @@
+---
+_fieldset: page
+title: Default ICJIA page
+_template: default-blank
+upload: ""
+_layout: default
+breadcrumbs: true
+---
+
+
+  <style>
+    .nav-tabs li {
+      font-family: 'Oswald', sans-serif;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+
+    .bs-sidebar ul li {
+      font-size: 20px
+    }
+
+    p {
+      text-indent: 1.5em
+    }
+
+    .bigfoot-footnote__content p {
+      text-indent: 0;
+    }
+
+    p.drop {
+      text-indent: 0;
+    }
+  </style>
+
+
+
+<!--
+
+Top page reading progress bar. This block can be deleted if desired.
+
+See progressBar.js below
+
+If page elements are added or removed, re-run progressBarInit() to sync the bar back up with the current window.
+
+Example:
+
+$('.expander-news').readmore({
+  speed: 175,
+  collapsedHeight: 91,
+  afterToggle: function() {
+    progressBarInit();
+
+  }
+
+
+-->
+
+<div class="container-fluid no-print" id="article-top">
+  <progress value="0" id="progressBar" class="flat">
+    <div class="progress-container">
+      <span class="progress-bar"></span>
+    </div>
+  </progress>
+</div>
+
+
+
+
+
+
+  <div class="container-fluid">
+
+
+<!-- 3-column Table of Contents -->
+    <div class="col-md-3 no-print hidden-xs" style="margin-top: 50px;">
+      <!--
+
+      Information about Bootstrap scrollspy, affix, and offsets:
+
+      http://getbootstrap.com/javascript/#scrollspy
+      http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-affix.php
+      http://www.w3schools.com/bootstrap/bootstrap_affix.asp
+
+    -->
+
+
+
+      <div class="bs-sidebar hidden-print" role="complementary" data-spy="affix" data-offset-top="55" data-offset-bottom="475">
+
+        <ul class="nav bs-sidenav" style="border: 0px;">
+
+          <li>
+
+            <h5 style="color: rgb(68, 68, 68); text-transform: uppercase; padding-bottom: 8px; font-weight: 900; margin-bottom: 10px; margin-left: 10px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;">Contents</h5>
+            <ul class="nav">
+
+              <!--
+
+              icjia.js below contains basic site scripts.
+
+              See lines 188-193 for specific scroll-to behavior (and offset for top menu bar).
+
+              Here's the scrolling code:
+
+              $('.scrollclass').click(function() {
+              	$('body').scrollTo($(this).data('target'), {
+              		duration: 1200,
+              		offset: -90
+              	});
+              });
+
+              Requires: scrollTo.js below
+
+              If a different duration or offset is required, create a new scrolling class and add script to the page.
+
+            -->
+
+
+
+              <li><a class="scrollclass" data-target="#article-top">Introduction</a></li>
+
+              <!--
+
+              This first link to the very top of the page (#article-top above) instead of #overview.
+
+              I thought it made more sense to scroll to the article top instead of the first headline. Feel free to change.
+
+              -->
+
+
+              <li><a class="scrollclass" data-target="#key-findings">Key findings</a></li>
+              <li><a class="scrollclass" data-target="#implications-for-policy-and-practice">Implications for policy and practice</a></li>
+            </ul>
+
+
+          </li>
+        </ul>
+
+
+      </div>
+    </div>
+    <!--/left-->
+
+
+
+
+    <!-- 7-column body content. For more info on Bootstrap's grid, see: http://getbootstrap.com/css/#grid -->
+    <div class="col-md-7" id="content">
+
+      <div class="article">
+
+
+
+
+
+
+              <div class="article-content">
+
+                <h2 id="overview">Overview</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin eros scelerisque ligula aliquam, vitae aliquet massa varius. Sed a pellentesque est. Etiam in vestibulum libero, a elementum justo. Donec commodo lobortis commodo. Aenean mollis mattis aliquet. Nunc eget dictum dui. Aenean nec lectus quis sem tempor pulvinar. Pellentesque venenatis sem nec efficitur laoreet. Sed ut odio purus. Donec luctus, augue vel pellentesque rutrum, est ex feugiat tortor, non maximus elit orci ac eros. Aenean vulputate orci non leo tempor, ut luctus lorem vehicula. Vestibulum egestas quis felis nec mollis. Sed viverra vitae ligula et pellentesque. Nam et lorem libero. Curabitur sit amet egestas lorem. Nam eu sem vitae eros maximus ornare quis sit amet neque. In in ligula nulla. Cras convallis dignissim libero laoreet condimentum. Aenean a aliquam urna. Nulla suscipit ipsum vel augue fringilla pretium. Nullam lobortis auctor lectus fringilla cursus. In interdum mi at cursus vulputate. Curabitur eget est lacus. Morbi at lorem lectus. Nam tincidunt efficitur erat. Aenean fringilla, neque eu tempus dictum, lacus elit consequat ligula, vel tempor nisi mi ut magna. Vivamus in molestie tellus, eget volutpat mi. Proin dapibus viverra eleifend. Cras et dignissim eros. Duis varius lobortis fringilla. Praesent gravida purus justo, et posuere ipsum finibus nec. Quisque tincidunt pharetra mauris, nec sagittis nisi dignissim malesuada. Etiam feugiat elementum nulla ut semper. Ut nec nisi a urna viverra scelerisque sed eu urna. Phasellus aliquam ac nisl in ullamcorper. Pellentesque sit amet ultricies libero, at bibendum enim. Integer euismod suscipit elit, tincidunt blandit nisl. Integer a ultrices turpis. Phasellus laoreet, erat vel euismod fermentum, diam lorem facilisis felis, nec imperdiet urna orci et nibh. Morbi nec nisl erat. Morbi et dignissim leo. Phasellus vel est luctus, ultricies diam ac, finibus sem. Maecenas est arcu, fermentum sit amet porta at, porttitor in nunc. In hac habitasse platea dictumst. Suspendisse potenti. Proin a egestas mauris. Cras lobortis egestas sem quis lobortis. Quisque sit amet faucibus ligula, vitae lobortis felis. Mauris vestibulum odio vel nunc cursus vulputate. Proin risus risus, placerat et dignissim et, pharetra ut diam. Integer cursus, quam dapibus molestie mollis, eros mi auctor justo, nec lacinia dui eros quis leo. Integer tempus arcu at tellus rhoncus ornare.</p>
+
+
+
+
+
+                <h2 id="key-findings">Key&nbsp;findings</h2>
+
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin eros scelerisque ligula aliquam, vitae aliquet massa varius. Sed a pellentesque est. Etiam in vestibulum libero, a elementum justo. Donec commodo lobortis commodo. Aenean mollis mattis aliquet. Nunc eget dictum dui. Aenean nec lectus quis sem tempor pulvinar. Pellentesque venenatis sem nec efficitur laoreet. Sed ut odio purus. Donec luctus, augue vel pellentesque rutrum, est ex feugiat tortor, non maximus elit orci ac eros. Aenean vulputate orci non leo tempor, ut luctus lorem vehicula. Vestibulum egestas quis felis nec mollis. Sed viverra vitae ligula et pellentesque. Nam et lorem libero. Curabitur sit amet egestas lorem. Nam eu sem vitae eros maximus ornare quis sit amet neque. In in ligula nulla. Cras convallis dignissim libero laoreet condimentum. Aenean a aliquam urna. Nulla suscipit ipsum vel augue fringilla pretium. Nullam lobortis auctor lectus fringilla cursus. In interdum mi at cursus vulputate. Curabitur eget est lacus. Morbi at lorem lectus. Nam tincidunt efficitur erat. Aenean fringilla, neque eu tempus dictum, lacus elit consequat ligula, vel tempor nisi mi ut magna. Vivamus in molestie tellus, eget volutpat mi. Proin dapibus viverra eleifend. Cras et dignissim eros. Duis varius lobortis fringilla. Praesent gravida purus justo, et posuere ipsum finibus nec. Quisque tincidunt pharetra mauris, nec sagittis nisi dignissim malesuada. Etiam feugiat elementum nulla ut semper. Ut nec nisi a urna viverra scelerisque sed eu urna. Phasellus aliquam ac nisl in ullamcorper. Pellentesque sit amet ultricies libero, at bibendum enim. Integer euismod suscipit elit, tincidunt blandit nisl. Integer a ultrices turpis. Phasellus laoreet, erat vel euismod fermentum, diam lorem facilisis felis, nec imperdiet urna orci et nibh. Morbi nec nisl erat. Morbi et dignissim leo. Phasellus vel est luctus, ultricies diam ac, finibus sem. Maecenas est arcu, fermentum sit amet porta at, porttitor in nunc. In hac habitasse platea dictumst. Suspendisse potenti. Proin a egestas mauris. Cras lobortis egestas sem quis lobortis. Quisque sit amet faucibus ligula, vitae lobortis felis. Mauris vestibulum odio vel nunc cursus vulputate. Proin risus risus, placerat et dignissim et, pharetra ut diam. Integer cursus, quam dapibus molestie mollis, eros mi auctor justo, nec lacinia dui eros quis leo. Integer tempus arcu at tellus rhoncus ornare.</p>
+
+
+
+
+                <h2 id="implications-for-policy-and-practice">Implications for policy and&nbsp;practice</h2>
+
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin eros scelerisque ligula aliquam, vitae aliquet massa varius. Sed a pellentesque est. Etiam in vestibulum libero, a elementum justo. Donec commodo lobortis commodo. Aenean mollis mattis aliquet. Nunc eget dictum dui. Aenean nec lectus quis sem tempor pulvinar. Pellentesque venenatis sem nec efficitur laoreet. Sed ut odio purus. Donec luctus, augue vel pellentesque rutrum, est ex feugiat tortor, non maximus elit orci ac eros. Aenean vulputate orci non leo tempor, ut luctus lorem vehicula. Vestibulum egestas quis felis nec mollis. Sed viverra vitae ligula et pellentesque. Nam et lorem libero. Curabitur sit amet egestas lorem. Nam eu sem vitae eros maximus ornare quis sit amet neque. In in ligula nulla. Cras convallis dignissim libero laoreet condimentum. Aenean a aliquam urna. Nulla suscipit ipsum vel augue fringilla pretium. Nullam lobortis auctor lectus fringilla cursus. In interdum mi at cursus vulputate. Curabitur eget est lacus. Morbi at lorem lectus. Nam tincidunt efficitur erat. Aenean fringilla, neque eu tempus dictum, lacus elit consequat ligula, vel tempor nisi mi ut magna. Vivamus in molestie tellus, eget volutpat mi. Proin dapibus viverra eleifend. Cras et dignissim eros. Duis varius lobortis fringilla. Praesent gravida purus justo, et posuere ipsum finibus nec. Quisque tincidunt pharetra mauris, nec sagittis nisi dignissim malesuada. Etiam feugiat elementum nulla ut semper. Ut nec nisi a urna viverra scelerisque sed eu urna. Phasellus aliquam ac nisl in ullamcorper. Pellentesque sit amet ultricies libero, at bibendum enim. Integer euismod suscipit elit, tincidunt blandit nisl. Integer a ultrices turpis. Phasellus laoreet, erat vel euismod fermentum, diam lorem facilisis felis, nec imperdiet urna orci et nibh. Morbi nec nisl erat. Morbi et dignissim leo. Phasellus vel est luctus, ultricies diam ac, finibus sem. Maecenas est arcu, fermentum sit amet porta at, porttitor in nunc. In hac habitasse platea dictumst. Suspendisse potenti. Proin a egestas mauris. Cras lobortis egestas sem quis lobortis. Quisque sit amet faucibus ligula, vitae lobortis felis. Mauris vestibulum odio vel nunc cursus vulputate. Proin risus risus, placerat et dignissim et, pharetra ut diam. Integer cursus, quam dapibus molestie mollis, eros mi auctor justo, nec lacinia dui eros quis leo. Integer tempus arcu at tellus rhoncus ornare.</p>
+
+
+
+              </div>
+
+
+
+
+
+      </div>
+      <!-- article -->
+
+      <div style="height: 50px"></div>
+
+    </div>
+    <!-- col-md-7 -->
+  </div>
+
+</div>

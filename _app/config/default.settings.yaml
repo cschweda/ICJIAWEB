@@ -28,6 +28,7 @@ _parse_order:
 _fix_out_of_range_pagination: true
 _http_cache_expires: false
 _disable_member_cache: false
+_enable_list_helpers: true
 _environments:
   dev:
     - 'http://localhost*'

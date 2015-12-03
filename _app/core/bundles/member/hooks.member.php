@@ -255,7 +255,14 @@ class Hooks_member extends Hooks
                 }
             } else {
                 // set value
-                $value = filter_input(INPUT_POST, $field, FILTER_SANITIZE_STRING);
+                if (is_array($_POST[$field])) {
+                    $value = [];
+                    foreach ($_POST[$field] as $i => $val) {
+                        $value[$i] = filter_var($val, FILTER_SANITIZE_STRING);
+                    }
+                } else {
+                    $value = filter_input(INPUT_POST, $field, FILTER_SANITIZE_STRING);
+                }
             }
 
             // set value

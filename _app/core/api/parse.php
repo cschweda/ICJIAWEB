@@ -331,13 +331,13 @@ class Parse
                 $item = array(
                     "kind" => "comparison",
                     "type" => "has_none",
-                    "value" => explode("&", substr($value, 4))
+                    "value" => explode("&", substr($value, 1))
                 );
             } elseif (substr($value, 0, 2) == "! ") {
                 $item = array(
                     "kind" => "comparison",
                     "type" => "has_none",
-                    "value" => explode("&", substr($value, 4))
+                    "value" => explode("&", substr($value, 2))
                 );
             } else {
                 $item = array(
