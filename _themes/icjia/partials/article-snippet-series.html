@@ -1,0 +1,24 @@
+<div class="well article-snippet white">
+
+
+	<h5>
+		{{ if use_context }}<a href="{{ url }}">{{ endif }}{{ title|widont }}{{ if use_context }}</a>{{ endif }}
+	</h5>
+	<h6 class="published">
+		{{if seriesPart}}{{seriesPart}}{{endif}} | {{ date }} </h6>
+
+
+
+<div style="margin-left: 10px; ">
+	{{if splash}}
+	<a href="{{ url }}">
+	<img src="{{ transform src="{splash}" width="125"}}"
+			style="float: left; padding-right: 14px;" />
+		</a>
+	{{endif}}{{ teaser }}
+
+</div>
+
+
+
+</div>

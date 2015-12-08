@@ -7,6 +7,7 @@
 p {text-indent: 1.5em}
 .bigfoot-footnote__content p {text-indent: 0;}
 p.drop {text-indent: 0;}
+.footnotes p {text-indent: 0;}
 {{endif}}
 
 
@@ -27,7 +28,7 @@ p.drop {text-indent: 0;}
 
 
 	<div class="col-md-3 no-print hidden-xs" style="margin-top: 50px;">
-		  <div class="bs-sidebar hidden-print" role="complementary" data-spy="affix" data-offset-top="400" data-offset-bottom="350">
+		  <div class="bs-sidebar hidden-print" role="complementary" data-spy="affix" data-offset-top="400" data-offset-bottom="550">
 
 				<ul class="nav bs-sidenav" style="border: 0px;">
 
@@ -82,9 +83,19 @@ p.drop {text-indent: 0;}
     <li role="presentation" class="active">
 			<a href="#{{tab1|slugify}}" aria-controls="home" role="tab" data-toggle="tab" class="show-toc no-print">{{tab1}}</a>
 		</li>
+
+		{{if tab3}}
+		<li role="presentation">
+			<a href="#{{tab3|slugify}}" aria-controls="profile" role="tab" data-toggle="tab" class="hide-toc no-print">{{tab3}}</a>
+		</li>
+		{{endif}}
+
+
     <li role="presentation">
 			<a href="#{{tab2|slugify}}" aria-controls="profile" role="tab" data-toggle="tab" class="hide-toc no-print">{{tab2}}</a>
 		</li>
+
+
 
   </ul>
 	{{endif}}
@@ -92,7 +103,16 @@ p.drop {text-indent: 0;}
   <!-- Tab panes -->
 	{{ if tabviz == 'true'}}
   <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="{{tab1|slugify}}">{{theme:partial src="research-article-main-content"}}</div>
+    <div role="tabpanel" class="tab-pane active" id="{{tab1|slugify}}">
+			{{theme:partial src="research-article-main-content"}}
+		</div>
+
+
+		<div role="tabpanel" class="tab-pane" id="{{tab3|slugify}}">
+
+			{{tab3Content}}
+
+		</div>
     <div role="tabpanel" class="tab-pane" id="{{tab2|slugify}}">
 			{{ if pdf_uploads:0}}
 		{{pdf_uploads}}
@@ -114,11 +134,12 @@ p.drop {text-indent: 0;}
 
   </div> <!-- //tab-content -->
 {{else}}
-{{theme:partial src="research-article-main-content"}}
+{{theme:partial src="research-article-main-content" use_context="true"}}
 
 
 {{endif}}
 </div>
+
 
 
 

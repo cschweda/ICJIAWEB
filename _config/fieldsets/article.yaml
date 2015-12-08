@@ -146,6 +146,42 @@ fields:
     default: Full Report
     type: text
 
+  tab3:
+    display: Tab 3 text
+    default:
+    type: text
+
+  tab3Content:
+    display: Tab 3 Content
+    required: false
+    default:
+    type: redactor
+
+
+  series:
+    display: What the name of this article series?
+    required: false
+    type: tags
+    create: true
+    max_items: 2
+    default:
+
+  seriesPart:
+    display: What part is this article in the overall series?
+    instructions: For example, 'Part 1'
+    required: false
+    type: text
+
+  seriesIntro:
+    display: Code to display series at top of article
+    type: textarea
+
+  seriesExtro:
+    display: Code to Display series at bottom of article
+    type: textarea
+
+
+
   pdf_uploads:
       display: PDF paths
       type: replicator
