@@ -5,7 +5,7 @@
 		{{ if use_context }}<a href="{{ url }}">{{ endif }}{{ title|widont }}{{ if use_context }}</a>{{ endif }}
 	</h5>
 	<h6 class="published">
-		{{if seriesPart}}{{seriesPart}}{{endif}} | {{ date }} </h6>
+		{{if seriesPart}}<span style="color: #000">{{seriesPart}}</span> | {{endif}}{{ date }} </h6>
 
 
 
