@@ -643,7 +643,7 @@ $(document).ready(function() {
 
 
 	/* Add 'new' label to front page news items and articles. Added 12/01/2015. Uses moment.js date library  */
-	var daysToShowNewLabelforNews = 5;
+	var daysToShowNewLabelforNews = 3;
 	var daysToShowNewLabelforArticles = 15;
 	var newLabel =
 		'<span style="font-weight: 700; background: #fe8869; color: #fff; border: 0px solid #ccc; padding: 4px; font-family: Lato, sans-serif">NEW</span>&nbsp;&nbsp;';
