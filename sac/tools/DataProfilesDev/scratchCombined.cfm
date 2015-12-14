@@ -393,13 +393,18 @@ table td {
     </div>
 </div>
 
-<div class="container" id="MarkTempContainer" style="width: 900px; margin-top: 50px; margin-left: auto; margin-right: auto; padding-bottom: 50px">
+<div class="container" id="ProfilesContainer" style="width: 900px; margin-top: 50px; margin-left: auto; margin-right: auto; padding-bottom: 50px">
 
 
-<cfset DashboardNumberPrep = #url.DashboardNumber#>
-<cfset DashVar = 'Dash' & #DashboardNumberPrep# & '.cfm'>
+<cfset ProfileNumberPrep = #url.ProfileNumber#>
+<cfoutput>#ProfileNumberPrep#</cfoutput>
+
+ <!--->
+<cfset ProfileVar = 'Profile' & #ProfileNumberPrep# & '.cfm'>
 <cfset SelectedICJIANumber = INT(#url.ICJIANumber#) />
 
+
+<!---obtain CircuitCook88 value and potential text--->
 <cfquery name="GetCircuit" datasource="RADBP">
 	SELECT CircuitCook88, CountyName ,ShowCircuitText
 	FROM dbo_Counties
@@ -412,7 +417,7 @@ table td {
 <cfset CircuitNumber=INT(#GetCircuit.CircuitCook88#)>
 
 <cfif #url.ICJIANumber# GTE 1 AND #url.ICJIANumber# LTE 102>
-	<cfif #DashboardNumberPrep# GT 20>
+	<cfif #ProfileNumberPrep# GT 20>
 	<cfset GeographyName = #GetCircuit.CountyName# & ' County'>
 	<cfelse>
 	<cfset GeographyName = 'the ' & #GetCircuit.ShowCircuitText#>
@@ -424,7 +429,7 @@ table td {
 <cfif #url.ICJIANumber# GTE 1001 AND #url.ICJIANumber# LTE 1088>
 	<cfset GeographyName = 'the ' & #GetCircuit.CountyName#>
 </cfif>
- 
+
 
 
 <!---Main query, QoQ will be performed on this--->
@@ -438,23 +443,21 @@ table td {
 <cfquery name="MinMaxYears" datasource="RADBP">
 	SELECT DataGroupNumber, MinYear, MaxYear
     FROM dbo_MinMaxYearsToShow
-	WHERE DataGroupNumber =<cfqueryparam value="#url.DashboardNumber#" cfsqltype="CF_SQL_INTEGER" />;	
+	WHERE DataGroupNumber =<cfqueryparam value="#url.ProfileboardNumber#" cfsqltype="CF_SQL_INTEGER" />;	
 </cfquery>
 <cfquery name = "CountyCount" datasource="RADBP">
 	SELECT GeographyID, NumCounties
 	FROM Qry_CountOfCountiesInCircuit
 	WHERE GeographyID = <cfqueryparam value="#url.ICJIANumber#" cfsqltype="CF_SQL_INTEGER" />;	
 </cfquery>
-<!---><cfinclude template=#DashVar#>--->
-<cfinclude template="Dash10.cfm">
-<cfinclude template="Dash20.cfm">
-<cfinclude template="Dash30.cfm">
-<cfinclude template="Dash40.cfm">
+
+<cfinclude template="Profile10.cfm">
 
 
 
-<cfinclude template="DashPopTables.cfm">
 
+<cfinclude template="ProfilePopTables.cfm">
+--->
 </div>
 
 

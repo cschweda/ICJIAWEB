@@ -370,22 +370,23 @@
 <h2>ICJIA Criminal Justice Data Profiles</h2>
 <p>Data profiles for arrests, convictions, prison admissions, and prison exits are available at the county, judicial circuit, and statewide level. These profiles
 show a variety of charts and statistics about the chosen area and data theme.</p>
-					<form id="DashboardSelector" name="DashboardSelector" method="GET" action="scratch.cfm">
+					<form id="ProfileSelector" name="ProfileSelector" method="GET" action="scratchCombined.cfm">
 				        <p><b>Step 1 -</b> Select a profile to view:<br>  
-				            <input type="radio" name="DashboardNumber" class="required" id="DashboardRadio10" value="10" checked="checked">
-								<label for="DashboardRadio10">Arrests from the Illinois State Police CHRI Database*</label><br/>
-							<input type="radio" name="DashboardNumber" class="required" id="DashboardRadio20" value="20" >
-				            	<label for="DashboardRadio20">Convictions from the Illinois State Police CHRI Database*</label><br/>
-							<input type="radio" name="DashboardNumber" class="required" id="DashboardRadio30" value="30" >
-				            	<label for="DashboardRadio30">Prison Admissions</label>	<br/>
-							<input type="radio" name="DashboardNumber" class="required" id="DashboardRadio40" value="40" >
-				            	<label for="DashboardRadio40">Prison Exits</label>	<br/>
+				            <input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck10" value="10" checked="checked">
+								<label for="ProfileCheck10">Arrests from the Illinois State Police CHRI Database*</label><br/>
+							<input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck20" value="20" checked="checked">
+				            	<label for="ProfileCheck20">Convictions from the Illinois State Police CHRI Database*</label><br/>
+							<input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck30" value="30" checked="checked">
+				            	<label for="ProfileCheck30">Prison Admissions</label>	<br/>
+							<input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck40" value="40" checked="checked">
+				            	<label for="ProfileCheck40">Prison Exits</label>	<br/>
 				            *CHRI data in these profiles have limited availability at the county level. If you select a county, you will see a mix of of data at the county level and the judicial circuit in which the county resides in.  	
 				        </p>
 						
 											
 						<div id="CountySelector"><p><b>Step 2 -</b> Select a county, judicial circuit, or Illinois: 
 				        	<select id="CountySelector" name="ICJIANumber">
+					        	<option value="999">Illinois</option>
 								<option value="1">Adams</option>
 								<option value="2">Alexander</option>
 								<option value="3">Bond</option>
@@ -514,7 +515,7 @@ show a variety of charts and statistics about the chosen area and data theme.</p
 							</select>
 						</p></div>
 							
-						<p><input type="submit" id="getDashboard" value="Retrieve profile">
+						<p><input type="submit" id="getProfile" value="Retrieve profile">
 						<span id="ToolStatus"></span></p>
 					</form>	
 	</div>
