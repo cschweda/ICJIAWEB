@@ -643,10 +643,14 @@ $(document).ready(function() {
 
 
 	/* Add 'new' label to front page news items and articles. Added 12/01/2015. Uses moment.js date library  */
-	var daysToShowNewLabelforNews = 3;
+	var daysToShowNewLabelforNews = 5;
+	var daysToShowUpdatedLabelforNews = 5;
 	var daysToShowNewLabelforArticles = 15;
 	var newLabel =
 		'<span style="font-weight: 700; background: #fe8869; color: #fff; border: 0px solid #ccc; padding: 4px; font-family: Lato, sans-serif">NEW</span>&nbsp;&nbsp;';
+
+	var updateLabel =
+		'<span style="font-weight: 700; background: #af3535; color: #fff; border: 0px solid #ccc; padding: 4px; font-family: Lato, sans-serif">UPDATED</span>&nbsp;&nbsp;';
 
 	$('.addNewLabel[data-postDate]').each(function() {
 		var $postDate = moment($(this).attr('data-postDate'));
@@ -664,6 +668,20 @@ $(document).ready(function() {
 				$(this).prepend(newLabel);
 			}
 		}
+
+	});
+
+
+	$('.addUpdateLabel[data-postDate]').each(function() {
+		var $postDate = moment($(this).attr('data-postDate'));
+		var diffInDays = moment().diff($postDate, 'days');
+
+
+		if (diffInDays <= daysToShowUpdatedLabelforNews) {
+			$(this).prepend(updateLabel);
+		}
+
+
 
 	});
 
