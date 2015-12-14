@@ -33,11 +33,24 @@ fields:
     create: false
     max_items: 4
     default:
-      -ICJIA
+      - ICJIA
     options:
       - ICJIA
       - ARI
-      - ILFVCC
+      - IFVCC
+      - MVTPCC
+
+  updatedItem:
+    display: Is this an update to an existing news story?
+    required: false
+    type: suggest
+    create: false
+    max_items: 1
+    default:
+      - 'False'
+    options:
+      - 'False'
+      - 'True'
 
 
   keywords:

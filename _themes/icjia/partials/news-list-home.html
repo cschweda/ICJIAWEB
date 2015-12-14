@@ -15,7 +15,11 @@
 
 
       <div class="news-item">
-      <div style="font-weight: 900; margin-top: 40px; line-height: 30px; text-transform: uppercase;" class="h5"><span style="font-weight: 400; color: #666" class="addNewLabel" data-postType="news" data-postDate="{{date format='Y-m-d'}}">{{ date }}</span> | <a href="{{ url }}">{{if displayTitle}}{{ displayTitle }}{{else}}{{title}}{{endif}}</a></div>
+      <div style="font-weight: 900; margin-top: 40px; line-height: 30px; text-transform: uppercase;" class="h5">
+        {{if updatedItem}}
+        <span style="font-weight: 700; background: #bc2d2d; color: #fff; border: 0px solid #ccc; padding: 4px; font-family: Lato, sans-serif">UPDATED</span>&nbsp;&nbsp;
+        {{endif}}
+        <span style="font-weight: 400; color: #666" {{if !updatedItem}} class="addNewLabel" data-postType="news" data-postDate="{{date format='Y-m-d'}}"{{endif}}>{{ date }}</span> | <a href="{{ url }}">{{if displayTitle}}{{ displayTitle }}{{else}}{{title}}{{endif}}</a></div>
 
           <div class="expander-news">
           {{ content|widont }}
