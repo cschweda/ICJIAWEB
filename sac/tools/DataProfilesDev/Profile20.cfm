@@ -81,7 +81,7 @@ However, the AOIC data have limited details into what the conviction was for and
 <p>
 Convictions by county are available below. Each arrest incident that leads to a conviction is counted only once. An arrest incident containing more than one charge that leads to more than one conviction count will be counted only once.
 </p>
-	<table id="datatable_Incidents" class="CHRI trendTable">
+	<table id="datatable_Convictions_Incidents" class="CHRI trendTable">
 		<caption class="TableTitle">Convictions</caption>
 		<thead>
 			<th>Geography</th>
@@ -105,18 +105,11 @@ Convictions by county are available below. Each arrest incident that leads to a 
 		</cfoutput>
 	</table>
 
-<!---output an empty list for circuits with more than one county. This will be filled in with descriptives of the table with javascript--->
-	<cfif #CountyCount.NumCounties# GT 1>
-		<span class="ListIntroText">From <cfoutput>#MinMaxYears.MinYear#</cfoutput> to <cfoutput>#MinMaxYears.MaxYear#</cfoutput>, </span>
-		<ul class="PercentChangeList" id="ConvictionIncidentsCountList"></ul>
-		<span class="ListCaveats">Large percent changes may be more indicative of changes in submitting conviction data to the Illinois State Police instead of actual arrest practices.</span>
-		
-	</cfif>
 
 	<div id="TimeSeries_Convictions_Counts" class="HC_TimeSeries DataTableBefore" style="min-width: 310px; min-height: 500px; margin: 0 auto"></div>
 	<cfif #CountyCount.NumCounties# GT 1>
-	<div id="" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="" class="HC_Pie LastChart Population_Total" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_Convictions_Counts" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_Population_Convictions_Total" class="HC_Pie LastChart Population_Total" style="height: 300px; width: 400px; display: inline-block"></div>
 	</cfif>
 	
 </div>
@@ -127,7 +120,7 @@ Convictions by county are available below. Each arrest incident that leads to a 
 <p>It is generally preferable to compare conviction trends across counties by uisng rates of convictions per 100,000 people instead of conviction counts. Rates will take into account the population of potential arrestees. 
 	Rates calculated belore are per 100,000 residents in Illinois, using County Census estimates. The population data used to calculate rates is available below the arrest tables at the end of this profile. 
 	This rate should not be confused with a clearance rate of any sort. Arrests can be cleared through many ways that do not lead to a conviction.</p>
-	<table id="datatable_Rate" class="CHRI trendTable">
+	<table id="datatable_Convictions_Rate" class="CHRI trendTable">
 		<caption class="TableTitle">Conviction Rates</caption>
 		<thead>
 			<th>Geography</th>
@@ -150,9 +143,7 @@ Convictions by county are available below. Each arrest incident that leads to a 
 		</tr>
 		</cfoutput>
 	</table>
-	<span class="ListIntroText">From <cfoutput>#MinMaxYears.MinYear#</cfoutput> to <cfoutput>#MinMaxYears.MaxYear#</cfoutput>, </span>
-	<ul class="PercentChangeList" id="ConvictionsIncidentsRateList"></ul>
-			
+
 	
 <div id="TimeSeries_Convictions_Rates" class="HC_TimeSeries DataTableBefore" style="min-width: 310px; min-height: 500px; margin: 0 auto"></div>	
 </div>
@@ -170,7 +161,7 @@ Convictions by county are available below. Each arrest incident that leads to a 
 	These are excluded in the data below. <a href="http://www.nij.gov/topics/crime/Pages/delinquency-to-adult-offending.aspx" target="_blank">Research has shown that the peak offending age is typically in the late teens and early twenties.</a> 
 	The age at conviction can be influenced by various things unrelated to the offense. For example, an offender with little or no criminal history may not receive a conviction at all for an offense and instead some other non-conviction outcome. The court proceedings may also take a long amount of time after the arrest.
 	The pie charts display the percent by age group of convictions and the population for the latest year.</p>
-	<table id="datatable_Age" class="CHRI trendTable">
+	<table id="datatable_Convictions_Age" class="CHRI trendTable">
 		<caption class="TableTitle">Convictions by Age</caption>
 		<thead>
 			<th>Age Group</th>
@@ -188,8 +179,8 @@ Convictions by county are available below. Each arrest incident that leads to a 
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="" class="HC_Pie LastChart Population_ByAge" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_Convictions_Age" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_Population_Convictions_Age" class="HC_Pie LastChart Population_ByAge" style="height: 300px; width: 400px; display: inline-block"></div>
 	
 </div>
 <hr><hr>
@@ -200,7 +191,7 @@ Convictions by county are available below. Each arrest incident that leads to a 
 <h2>Convictions By Sex</h2>
 <p>Males have a disproportionately higher involvement in most aspects of the criminal justice system compared to females, particularly for violent offenses. <a href="http://www.fbi.gov/about-us/cjis/ucr/crime-in-the-u.s/2014/crime-in-the-u.s.-2014/tables/table-42" target="_blank">Nationally, the male proportion of arrests is higher for almost all types of arrests except prostitution</a>. The gap in proportion of crimes committed between males and females is large for violent offenses, and has been closing for some property offenses in the past several decades.
 </p>
-	<table id="datatable_Sex" class="CHRI trendTable">
+	<table id="datatable_Convictions_Sex" class="CHRI trendTable">
 		<caption class="TableTitle">Convictions by Sex</caption>
 		<thead>
 			<th>Sex</th>
@@ -218,8 +209,8 @@ Convictions by county are available below. Each arrest incident that leads to a 
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="" class="HC_Pie LastChart Population_BySex" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_Convictions_Sex" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_Population_Convictions_Sex" class="HC_Pie LastChart Population_BySex" style="height: 300px; width: 400px; display: inline-block"></div>
 	
 </div>
 <hr><hr>
@@ -231,8 +222,7 @@ Convictions by county are available below. Each arrest incident that leads to a 
 	Hispanic ethnicity only became an option in CHRI in 2014. For consistency, the data below include Hispanic in the non-white category. 
 	Census population estimates allow for race (white, black, etc.) to be separated from ethnicity (Hispanic). Overall, non-white people 
 are disproportionately more likely to be involved in the criminal justice system in the arrest stage and onwards, and are also <a href="http://www.nij.gov/topics/victims-victimization/pages/welcome.aspx" target="_blank">more likely to be victims of crime</a>. <a href="http://www.asanet.org/images/press/docs/pdf/ASARaceCrime.pdf" target="_blank">Reasons for the disparity in the criminal justice by race include contextual and historical explanations.</a></p>
-	<table id="datatable_Race" class="CHRI trendTable">
-	<table id="datatable_Race" class="CHRI trendTable">
+	<table id="datatable_Convictions_Race" class="CHRI trendTable">
 		<caption class="TableTitle">Convictions by Race</caption>
 		<thead>
 			<th>Race</th>
@@ -250,8 +240,8 @@ are disproportionately more likely to be involved in the criminal justice system
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="" class="HC_Pie LaststChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="" class="HC_Pie LastChart Population_ByRace" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_Convictions_Race" class="HC_Pie LaststChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_Population_Convictions_Race" class="HC_Pie LastChart Population_ByRace" style="height: 300px; width: 400px; display: inline-block"></div>
 	
 </div>
 <hr><hr>
@@ -267,7 +257,7 @@ If the sentence for a class 3 or 4 crime is prison, the offender will also have 
 for probation of up to four years and prison sentences from 3-15 years. Common examples of class 1 and 2 offenses include burglary and residential burglary, manufacture and delivery of controlled substances, and robbery. With the exception of first degree murder (class M), class X offenses are the most severe felonies and have mandatory prison sentences from 6-30 years. 
 Class X offenses include armed robbery, manufacture and delivery of controlled substances, criminal drug conspiracy, and home invasion.</p>
 <p>A single court case that has a conviction may involve one or more counts. CHRI convictions displayed below are categorized by the most severe class in which the offender is convicted on in the incident.</p>
-	<table id="datatable_Class" class="CHRI trendTable">
+	<table id="datatable_Convictions_Class" class="CHRI trendTable">
 		<caption class="TableTitle">Convictions by Offense Class</caption>
 		<thead>
 			<th>Offense Class</th>
@@ -285,8 +275,8 @@ Class X offenses include armed robbery, manufacture and delivery of controlled s
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="" class="HC_Pie FirstChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_Convictions_Class_First" class="HC_Pie FirstChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_Convictions_Class_Last" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
 	
 </div>
 <hr><hr>
@@ -324,7 +314,7 @@ Class X offenses include armed robbery, manufacture and delivery of controlled s
 <li>Other offenses not described above.</li>
 	</ul>
 <p>Each arrest may be represnted multiple times in the data below if there is more than one different offense type. Therefore, the total number of convictions below will sum to a larger number than the total number of convictions elsewhere in this profile.</p>
-		<table id="datatable_WebCat" class="CHRI trendTable">
+		<table id="datatable_Convictions_WebCat" class="CHRI trendTable">
 		<caption class="TableTitle">Convictions by Offense Category</caption>
 		<thead>
 			<th>Charge Offense Type</th>

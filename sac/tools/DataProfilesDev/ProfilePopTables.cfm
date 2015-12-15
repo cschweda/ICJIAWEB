@@ -1,6 +1,6 @@
-<cfif #DashboardNumberPrep#  EQ 30 OR #DashboardNumberPrep# EQ 40>
+<!---<cfif #DashboardNumberPrep#  EQ 30 OR #DashboardNumberPrep# EQ 40>
 	<cfset MinAge = 17>
-</cfif>
+</cfif>--->
 <cfquery dbtype="query" name="PopulationCount" >
 	SELECT *
 	FROM WTP
@@ -145,7 +145,7 @@
 			</cfloop>
 		</tr>
 		</cfoutput>
-		
+	</table>	
 	<table id="datatable_populationByRaceEth" class="Population trendTable">
 	<caption class="TableTitle">Population By Race/Ethnicity</caption>
 		<thead>
@@ -170,5 +170,5 @@
 		</cfoutput>
 	</table>
 		
-	</table>
+<button  onclick="tablesToExcel(['datatable_populationByRaceEth','datatable_populationBySex'], ['PopRaceEth','PopRace'], 'TestBook.xls', 'Excel')">Export to Excel</button>
 </div>

@@ -83,7 +83,7 @@
 </cfquery>
 
 <!---End main queries--->
-<title>ICJIA Criminal Justice Data Profiles</title>
+
 
 
 <h1>Adult Prison Admission Profile for <cfoutput>#GeographyName#</cfoutput></h1>
@@ -123,13 +123,11 @@
 	</table>
 	
 	<p><span class="ListCaveats">New court admissions to prison are usually the result of sentencing for crimes commited in the county. Technical violation admissions are the result of the offender violating conditions of their parole or mandatory supervised release. A violation may be a new arrest or offense committed. At the county and judicial circuit, new court admissions are more useful to examine as they are the result of crimes committed within the county or circuit. </span>
-	<span class="ListIntroText">From <cfoutput>#MinMaxYears.MinYear#</cfoutput> to <cfoutput>#MinMaxYears.MaxYear#</cfoutput>, </span></p>
-	<ul class="PercentChangeList" id="PrisonAdmitsByAdmitTypeCountList"></ul>
-		
+
 	
 	<div id="TimeSeriesContainer_PrisonAdmitsByType" class="HC_TimeSeries DataTableBefore" style="min-width: 310px; min-height: 500px; margin: 0 auto"></div>
-	<div id="" class="HC_Pie FirstChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_PrisonAdmits_AdmitType_Count_First" class="HC_Pie FirstChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_PrisonAdmits_AdmitType_Count_Last" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
 </div>
 
 
@@ -162,16 +160,11 @@
 		</cfoutput>
 	</table>
 
-<!---output an empty list for circuits with more than one county. This will be filled in with descriptives of the table with javascript--->
-
-	<span class="ListIntroText">From <cfoutput>#MinMaxYears.MinYear#</cfoutput> to <cfoutput>#MinMaxYears.MaxYear#</cfoutput>, </span>
-	<ul class="PercentChangeList" id="PrisonAdmitsByCountyCountList"></ul>		
-
 
 	<div id="TimeSeriesContainer_PrisonAdmitsByCounty_Circuit" class="HC_TimeSeries DataTableBefore" style="min-width: 310px; min-height: 500px; margin: 0 auto"></div>
 	<cfif #CountyCount.NumCounties# GT 1>
-	<div id="" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="" class="HC_Pie LastChart Population_Total" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_PrisonAdmits_Counts" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_Population_PrisonAdmits_Total" class="HC_Pie LastChart Population_Total" style="height: 300px; width: 400px; display: inline-block"></div>
 	</cfif>
 	<hr><hr>
 </div>
@@ -180,7 +173,7 @@
 <div id="NewPrisonAdmitsRateByCountySection">
 <h2>New Court Prison Admission Rates by County</h2>
 <p>The following new court prison admission rates per 100,000 people are calculated by using the total county population from Census estimates (population data is available at the end of this profile). </p>
-	<table id="datatable_Rate" class="IDOC trendTable">
+	<table id="datatable_PrisonAdmits_Rate" class="IDOC trendTable">
 		<caption class="TableTitle">New Court Prison Admission Rates</caption>
 		<thead>
 			<th>Geography</th>
@@ -204,9 +197,7 @@
 		</cfoutput>
 	</table>
 	
-<p><span class="ListIntroText">From <cfoutput>#MinMaxYears.MinYear#</cfoutput> to <cfoutput>#MinMaxYears.MaxYear#</cfoutput>, </span></p>
-<ul class="PercentChangeList" id="PrisonAdmitssByCountyRateList"></ul>		
-		
+
 <div id="TimeSeriesContainer_PrisonAdmitsByCounty" class="HC_TimeSeries DataTableBefore" style="min-width: 310px; min-height: 500px; margin: 0 auto"></div>	
 </div>
 <hr><hr>
@@ -235,8 +226,8 @@ The data below show the new court prison admissions by several age groups. The t
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="" class="HC_Pie LastChart Population_ByAge" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_PrisonAdmits_Age" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_Population_PrisonAdmits_Age" class="HC_Pie LastChart Population_ByAge" style="height: 300px; width: 400px; display: inline-block"></div>
 </div>
 <hr><hr>
 
@@ -262,8 +253,8 @@ The data below show the new court prison admissions by several age groups. The t
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="" class="HC_Pie LastChart Population_BySex" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_PrisonAdmits_Sex" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_Population_PrisonAdmits_Sex" class="HC_Pie LastChart Population_BySex" style="height: 300px; width: 400px; display: inline-block"></div>
 	
 </div>
 <hr><hr>
@@ -289,8 +280,8 @@ The data below show the new court prison admissions by several age groups. The t
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="" class="HC_Pie LaststChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="" class="HC_Pie LastChart Population_ByRaceEth" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_PrisonAdmits_Race" class="HC_Pie LaststChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_Population_PrisonAdmits_Race" class="HC_Pie LastChart Population_ByRaceEth" style="height: 300px; width: 400px; display: inline-block"></div>
 	
 </div>
 <hr><hr>
@@ -326,8 +317,8 @@ Class X offenses include armed robbery, manufacture and delivery of controlled s
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="piecontainer7" class="HC_Pie FirstChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer8" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_PrisonAdmits_Class_First" class="HC_Pie FirstChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_PrisonAdmits_Class_Last" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
 	
 </div>
 <hr><hr>
@@ -363,7 +354,7 @@ The offense type for the admission is determined by the offense that will keep t
 <li>Driving and motor vehicle offenses including driving without a license or registration, traffic offenses, and title violations.</li>
 <li>Other offenses not described above.</li>
 	</ul>
-		<table id="datatable_WebCat" class="IDOC trendTable">
+		<table id="datatable_PrisonAdmits_WebCat" class="IDOC trendTable">
 		<caption class="TableTitle">New Court Prison Admissions by Offense Category</caption>
 		<thead>
 			<th>Admission Offense Type</th>
@@ -381,7 +372,7 @@ The offense type for the admission is determined by the offense that will keep t
 		</tr>
 		</cfoutput>
 	</table>
-<div id="BarContainer_Admits_WebCat" class="HC_Bar DataTableBefore" style="height: 500px; width: 600px; display: inline-block"></div>
+<div id="BarContainer_PrisonAdmits_WebCat" class="HC_Bar DataTableBefore" style="height: 500px; width: 600px; display: inline-block"></div>
 </div>
 
 

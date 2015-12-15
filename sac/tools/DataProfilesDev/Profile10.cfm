@@ -78,7 +78,7 @@ UCR arrest data are collected from the Illinois implementation of the <a href="h
 <h2>Arrest Incidents</h2>
 <p><!---May use this but probably not needed><cfif #SelectedICJIANumber# LTE 102>Your original selection was for county-level arrest data. </cfif><--->Overall arrests for each county are available within this judicial circuit below.
 For all arrests to be included in this profile, the age of the arrestee had to be between 17 and 90 years old. Arrests with an age (based on the date of birth recoded in the arrest incident and the arrest date) between 17 and 90 only are included in this profile</p>
-	<table id="datatable_Incidents" class="CHRI trendTable">
+	<table id="datatable_Arrests_Incidents" class="CHRI trendTable">
 		<caption class="TableTitle">Arrest Incidents</caption>
 		<thead>
 			<th>Geography</th>
@@ -102,11 +102,7 @@ For all arrests to be included in this profile, the age of the arrestee had to b
 		</cfoutput>
 	</table>
 
-<!---output an empty list. This will be filled in with descriptives of the table with javascript--->
-	
 
-	<span class="ListIntroText">From <cfoutput>#MinMaxYears.MinYear#</cfoutput> to <cfoutput>#MinMaxYears.MaxYear#</cfoutput>, </span>
-	<ul class="PercentChangeList CountsList" id="ArrestIncidentsCountList"></ul>
 		
 
 	<span class="ListCaveats">Large percent changes may be more indicative of changes in submitting arrests to the Illinois State Police instead of actual arrest practices.</span>
@@ -114,7 +110,7 @@ For all arrests to be included in this profile, the age of the arrestee had to b
 	
 	<cfif #CountyCount.NumCounties# GT 1>
 	<div id="piecontainer_Arrests_Counts" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer_Population_Total" class="HC_Pie LastChart Population_Total" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_Population_Arrests_Total" class="HC_Pie LastChart Population_Total" style="height: 300px; width: 400px; display: inline-block"></div>
 	</cfif>
 	
 
@@ -131,7 +127,7 @@ For all arrests to be included in this profile, the age of the arrestee had to b
 <h2>Arrest Incident Rates (per 100,000 people)</h2>
 <p>CHRI arrest trends across counties can be compared by using arrest rates instead of arrest counts. Rates take into account the population of potential arrestees. 
 	Rates calculated belore are per 100,000 residents in Illinois, using County Census estimates. The population data used to calculate rates is available at the end of this profile.</p>
-	<table id="datatable_Rate" class="CHRI trendTable">
+	<table id="datatable_Arrests_Rate" class="CHRI trendTable">
 		<caption class="TableTitle">Arrest Incident Rates</caption>
 		<thead>
 			<th>Geography</th>
@@ -154,9 +150,7 @@ For all arrests to be included in this profile, the age of the arrestee had to b
 		</tr>
 		</cfoutput>
 	</table>
-<p><span class="ListIntroText">From <cfoutput>#MinMaxYears.MinYear#</cfoutput> to <cfoutput>#MinMaxYears.MaxYear#</cfoutput>, </span></p>
-<ul class="PercentChangeList RatesList" id="ArrestIncidentsRateList"></ul>		
-	
+
 	
 <div id="TimeSeriesContainer_Arrests_Counts" class="HC_TimeSeries DataTableBefore" style="min-width: 310px; min-height: 500px; margin: 0 auto"></div>	
 </div>
@@ -174,7 +168,7 @@ For all arrests to be included in this profile, the age of the arrestee had to b
 	These are excluded in the data in this profile. <a href="http://www.nij.gov/topics/crime/Pages/delinquency-to-adult-offending.aspx" target="_blank">Research has shown that the peak offending age is typically in the late teens and early twenties.</a>
 	The pie charts display the percent by age group of arrests and the population for the latest arrest year. 
 	</p>
-	<table id="datatable_Age" class="CHRI trendTable">
+	<table id="datatable_Arrests_Age" class="CHRI trendTable">
 		<caption class="TableTitle">Arrests by Age</caption>
 		<thead>
 			<th>Age Group</th>
@@ -202,7 +196,7 @@ For all arrests to be included in this profile, the age of the arrestee had to b
 <h2>Arrests by Sex</h2>
 <p>Males have a disproportionately higher involvement in most aspects of the criminal justice system compared to females, particularly for violent offenses. <a href="http://www.fbi.gov/about-us/cjis/ucr/crime-in-the-u.s/2014/crime-in-the-u.s.-2014/tables/table-42" target="_blank">Nationally, the male proportion of arrests is higher for almost all types of arrests except prostitution</a>. The gap in proportion of crimes committed between males and females is large for violent offenses, and has been closing for some property offenses in the past several decades.
 </p>
-	<table id="datatable_Sex" class="CHRI trendTable">
+	<table id="datatable_Arrests_Sex" class="CHRI trendTable">
 		<caption class="TableTitle">Arrests by Sex</caption>
 		<thead>
 			<th>Sex</th>
@@ -234,7 +228,7 @@ For all arrests to be included in this profile, the age of the arrestee had to b
 are disproportionately more likely to be involved in the criminal justice system in the arrest stage and onwards, and are 
 also <a href="http://www.nij.gov/topics/victims-victimization/pages/welcome.aspx" target="_blank">more likely to be victims of crime</a>. 
 <a href="http://www.asanet.org/images/press/docs/pdf/ASARaceCrime.pdf" target="_blank">Reasons for the disparity in the criminal justice by race include contextual and historical explanations.</a></p>
-	<table id="datatable_Race" class="CHRI trendTable">
+	<table id="datatable_Arrests_Race" class="CHRI trendTable">
 		<caption class="TableTitle">Arrests by Race</caption>
 		<thead>
 			<th>Race</th>
@@ -267,7 +261,7 @@ If the sentence for a class 3 or 4 crime is prison, the offender will also have 
 for probation of up to four years and prison sentences from 3-15 years. Common examples of class 1 and 2 offenses include burglary and residential burglary, manufacture and delivery of controlled substances, and robbery. With the exception of first degree murder (class M), class X offenses are the most severe felonies and have mandatory prison sentences from 6-30 years. 
 Class X offenses include armed robbery, manufacture and delivery of controlled substances, criminal drug conspiracy, and home invasion.</p>
 <p>A single arrest incident may involve one or more charges. CHRI arrests displayed below are categorized by the most severe charge within the incident.</p>
-	<table id="datatable_Class" class="CHRI trendTable">
+	<table id="datatable_Arrests_Class" class="CHRI trendTable">
 		<caption class="TableTitle">Arrests by Offense Class</caption>
 		<thead>
 			<th>Offense Class</th>
@@ -321,7 +315,7 @@ Class X offenses include armed robbery, manufacture and delivery of controlled s
 <li>Other offenses not described above.</li>
 	</ul>
 <p>Each arrest may be reperesnted multiple times in the data below if there is more than one charge. Therefore, the total number of arrests below will sum to a larger number than the total number of arrests elsewhere in this profile. Cells with "NA" have values below ten and are masked.</p>	
-		<table id="datatable_WebCat" class="CHRI trendTable">
+		<table id="datatable_Arrests_WebCat" class="CHRI trendTable">
 		<caption class="TableTitle">Arrests by Offense Category</caption>
 		<thead>
 			<th>Charge Offense Type</th>

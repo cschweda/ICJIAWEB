@@ -83,7 +83,7 @@
 </cfquery>
 
 <!---End main queries--->
-<title>ICJIA Criminal Justice Data Profiles</title>
+
 
 
 <h1>Adult Prison Exits Profile for <cfoutput>#GeographyName#</cfoutput></h1>
@@ -116,8 +116,8 @@
 		</cfoutput>
 	</table>
 	<div id="TimeSeriesContainer_PrisonExitsByType" class="HC_TimeSeries DataTableBefore" style="min-width: 310px; min-height: 500px; margin: 0 auto"></div>
-	<div id="" class="HC_Pie FirstChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_PrisonAdmits_ExitType_Count_First" class="HC_Pie FirstChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_PrisonAdmits_ExitType_Count_Last" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
 </div>
 
 
@@ -153,15 +153,12 @@
 	</table>
 	
 <!---output an empty list for circuits with more than one county. This will be filled in with descriptives of the table with javascript--->
-	<cfif #CountyCount.NumCounties# GT 1>
-		<span class="ListIntroText">From <cfoutput>#MinMaxYears.MinYear#</cfoutput> to <cfoutput>#MinMaxYears.MaxYear#</cfoutput>, </span>
-		<ul class="PercentChangeList" id="PrisonAdmissionsCountList"></ul>		
-	</cfif>
+
 
 	<div id="TimeSeriesContainer_PrisonExitsByCounty_Circuit" class="HC_TimeSeries DataTableBefore" style="min-width: 310px; min-height: 500px; margin: 0 auto"></div>
 	<cfif #CountyCount.NumCounties# GT 1>
-	<div id="" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="" class="HC_Pie LastChart Population_Total" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_PrisonExits_Counts" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_Population_PrisonExits_Total" class="HC_Pie LastChart Population_Total" style="height: 300px; width: 400px; display: inline-block"></div>
 	</cfif>
 	<hr><hr>
 </div>
@@ -218,8 +215,8 @@
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="" class="HC_Pie LastChart Population_ByAge" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_PrisonExits_Age" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_Population_PrisonExits_Age" class="HC_Pie LastChart Population_ByAge" style="height: 300px; width: 400px; display: inline-block"></div>
 </div>
 <hr><hr>
 
@@ -248,8 +245,8 @@
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="" class="HC_Pie LastChart Population_BySex" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_PrisonExits_Sex" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_Population_PrisonExits_Sex" class="HC_Pie LastChart Population_BySex" style="height: 300px; width: 400px; display: inline-block"></div>
 	
 </div>
 <hr><hr>
@@ -277,8 +274,8 @@
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="" class="HC_Pie LaststChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="" class="HC_Pie LastChart Population_ByRaceEth" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_PrisonExits_Race" class="HC_Pie LaststChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_Population_PrisonExits_Race" class="HC_Pie LastChart Population_ByRaceEth" style="height: 300px; width: 400px; display: inline-block"></div>
 	
 </div>
 <hr><hr>
@@ -307,8 +304,8 @@
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="" class="HC_Pie FirstChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_PrisonExits_Class_First" class="HC_Pie FirstChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_PrisonExits_Class_Last" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
 	
 </div>
 <hr><hr>
@@ -334,7 +331,7 @@
 		</tr>
 		</cfoutput>
 	</table>
-<div id="BarContainer_Exits_WebCat" class="HC_Bar DataTableBefore" style="height: 500px; width: 600px; display: inline-block"></div>
+<div id="BarContainer_PrisonExits_WebCat" class="HC_Bar DataTableBefore" style="height: 500px; width: 600px; display: inline-block"></div>
 </div>
 
 

@@ -395,14 +395,7 @@ table td {
 
 <div class="container" id="ProfilesContainer" style="width: 900px; margin-top: 50px; margin-left: auto; margin-right: auto; padding-bottom: 50px">
 
-
-<cfset ProfileNumberPrep = #url.ProfileNumber#>
-<cfoutput>#ProfileNumberPrep#</cfoutput>
-
- <!--->
-<cfset ProfileVar = 'Profile' & #ProfileNumberPrep# & '.cfm'>
 <cfset SelectedICJIANumber = INT(#url.ICJIANumber#) />
-
 
 <!---obtain CircuitCook88 value and potential text--->
 <cfquery name="GetCircuit" datasource="RADBP">
@@ -411,25 +404,26 @@ table td {
 	WHERE ICJIANumber=<cfqueryparam value="#url.ICJIANumber#" cfsqltype="CF_SQL_INTEGER" />
 	;
 </cfquery>
-
-
-<!---Generate Geography Name to be used in title and other sections--->
 <cfset CircuitNumber=INT(#GetCircuit.CircuitCook88#)>
 
-<cfif #url.ICJIANumber# GTE 1 AND #url.ICJIANumber# LTE 102>
-	<cfif #ProfileNumberPrep# GT 20>
-	<cfset GeographyName = #GetCircuit.CountyName# & ' County'>
-	<cfelse>
-	<cfset GeographyName = 'the ' & #GetCircuit.ShowCircuitText#>
-	</cfif>
-</cfif>
-<cfif #url.ICJIANumber# EQ 999>
-	<cfset GeographyName = #GetCircuit.CountyName#>
-</cfif>
-<cfif #url.ICJIANumber# GTE 1001 AND #url.ICJIANumber# LTE 1088>
-	<cfset GeographyName = 'the ' & #GetCircuit.CountyName#>
-</cfif>
 
+
+<!---Get number of counties within circuit--->
+<cfquery name = "CountyCount" datasource="RADBP">
+	SELECT GeographyID, NumCounties
+	FROM Qry_CountOfCountiesInCircuit
+	WHERE GeographyID = <cfqueryparam value="#url.ICJIANumber#" cfsqltype="CF_SQL_INTEGER" />;	
+</cfquery>
+
+<!---Get minimum and maximum years to show data for each profile--->
+<cfquery name="MinMaxYears" datasource="RADBP">
+	SELECT DataGroupNumber, MinYear, MaxYear
+    FROM dbo_MinMaxYearsToShow
+	WHERE DataGroupNumber IN (<cfqueryparam 
+								value="#url.ProfileNumber#" 
+								cfsqltype="CF_SQL_INTEGER" 
+								list="yes"/>);	
+</cfquery>
 
 
 <!---Main query, QoQ will be performed on this--->
@@ -440,27 +434,41 @@ table td {
 	;	
 </cfquery>
 
-<cfquery name="MinMaxYears" datasource="RADBP">
-	SELECT DataGroupNumber, MinYear, MaxYear
-    FROM dbo_MinMaxYearsToShow
-	WHERE DataGroupNumber =<cfqueryparam value="#url.ProfileboardNumber#" cfsqltype="CF_SQL_INTEGER" />;	
-</cfquery>
-<cfquery name = "CountyCount" datasource="RADBP">
-	SELECT GeographyID, NumCounties
-	FROM Qry_CountOfCountiesInCircuit
-	WHERE GeographyID = <cfqueryparam value="#url.ICJIANumber#" cfsqltype="CF_SQL_INTEGER" />;	
-</cfquery>
 
-<cfinclude template="Profile10.cfm">
 
+
+
+
+
+
+<!---Generate Geography Name to be used in title and other sections--->
+
+<cfloop index="ListElement" list="#url.ProfileNumber#">
+
+	<cfif #url.ICJIANumber# GTE 1 AND #url.ICJIANumber# LTE 102>
+		<cfif #ListElement# GT 20>
+		<cfset GeographyName = #GetCircuit.CountyName# & ' County'>
+		<cfelse>
+		<cfset GeographyName = 'the ' & #GetCircuit.ShowCircuitText#>
+		</cfif>
+	</cfif>
+	<cfif #url.ICJIANumber# EQ 999>
+		<cfset GeographyName = #GetCircuit.CountyName#>
+	</cfif>
+	<cfif #url.ICJIANumber# GTE 1001 AND #url.ICJIANumber# LTE 1088>
+		<cfset GeographyName = 'the ' & #GetCircuit.CountyName#>
+	</cfif>
+
+<cfset ProfileTemp = "Profile" & #ListElement# & ".cfm" />
+<cfinclude template="#ProfileTemp#">
+</cfloop>
 
 
 
 <cfinclude template="ProfilePopTables.cfm">
---->
+
+
 </div>
-
-
  <footer class="no-print">
 
 
