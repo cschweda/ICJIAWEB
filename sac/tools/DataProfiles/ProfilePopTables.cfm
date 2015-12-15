@@ -49,7 +49,7 @@
 
 
 <div id="PopulationTables">
-<h2>Population Data</h2>	
+<h1 id="PopulationHeading">Population Data</h1>	
 <p>Populations used in rate calculations and the various charts above are available below.</p>
 	<table id="datatable_populationTotal" class="Population trendTable">
 	<caption class="TableTitle">Circuit Population By County</caption>
@@ -169,6 +169,6 @@
 		</tr>
 		</cfoutput>
 	</table>
-		
+<!---		
 <button  onclick="tablesToExcel(['datatable_populationByRaceEth','datatable_populationBySex'], ['PopRaceEth','PopRace'], 'TestBook.xls', 'Excel')">Export to Excel</button>
-</div>
+</div>--->

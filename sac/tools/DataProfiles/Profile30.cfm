@@ -86,7 +86,7 @@
 
 
 
-<h1>Adult Prison Admission Profile for <cfoutput>#GeographyName#</cfoutput></h1>
+<h1 id="PrisonAdmitsHeading">Adult Prison Admission Profile for <cfoutput>#GeographyName#</cfoutput></h1>
 <p>A prison sentence can be imposed, <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073000050K5-5-3" target="_blank">and in some cases is required</a>, for felonies in Illinois. An admission into the Illinois Department of Corrections (IDOC) occurs when a prison sentence is imposed for a convicted felon or, after exiting prison, a person can be returned to prison as a result of a technical violation while on their mandatory supervised release (MSR) period.
   </p>
 
@@ -135,7 +135,8 @@
 <cfif #CountyCount.NumCounties# GT 1 AND #SelectedICJIANumber# GT 102><!---Only outputting this for Circuits with more than one county--->
 <div id= "NewPrisonAdmitsByCountySection">
 <h2>New Court Prison Admissions by County</h2>
-<p>The data below show the commiting county for the new court prison admissions within the judicial circuit. Caution should be taken when comparing counties with this data. Users should instead examine the new court admission rates per 100,000 county residents further below. </p>
+<p>The data below show the commiting county for the new court prison admissions within the judicial circuit. Caution should be taken when 
+	comparing counties with this data. Users should instead examine the new court admission rates per 100,000 county residents further below. </p>
 	<table id="datatable_NewPrisonAdmitsbyCounty" class="IDOC trendTable">
 		<caption class="TableTitle">New Court Prison Admissions</caption>
 		<thead>
@@ -190,7 +191,12 @@
 					<td class="FirstYear">#YearConcat#</td>
 					<cfelseif #YearLoop# EQ #MinMaxYears.MaxYear#>
 					<td class="LastYear">#YearConcat#</td>
+				<cfif #YearLoop# EQ #MinMaxYears.MinYear#>
+					<td class="FirstYear">#YearConcat#</td>
+					<cfelseif #YearLoop# EQ #MinMaxYears.MaxYear#>
+					<td class="LastYear">#YearConcat#</td>
 					<cfelse><td>#YearConcat#</td>
+				</cfif>
 					</cfif>
 			</cfloop>
 		</tr>
@@ -208,8 +214,8 @@
 <p>
 The data below show the new court prison admissions by several age groups. The typical admission age into IDOC is about 32 years old statewide.
 </p>
-	<table id="datatable_Age" class="IDOC trendTable">
-		<caption class="TableTitle">Circuitwide New Court Prison Admissions by Age</caption>
+	<table id="datatable_PrisonAdmits_Age" class="IDOC trendTable">
+		<caption class="TableTitle">New Court Prison Admissions by Age</caption>
 		<thead>
 			<th>Age Group</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -221,7 +227,12 @@ The data below show the new court prison admissions by several age groups. The t
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 				<cfset YearConcat = PrisonAdmitsByAge["FY" & YearLoop][PrisonAdmitsByAge.CurrentRow]>
 				<cfif YearConcat IS NOT ''><cfSet YearConcat = Int(YearConcat)></cfif>
-				<td>#YearConcat#</td>
+				<cfif #YearLoop# EQ #MinMaxYears.MinYear#>
+					<td class="FirstYear">#YearConcat#</td>
+					<cfelseif #YearLoop# EQ #MinMaxYears.MaxYear#>
+					<td class="LastYear">#YearConcat#</td>
+					<cfelse><td>#YearConcat#</td>
+				</cfif>
 			</cfloop>
 		</tr>
 		</cfoutput>
@@ -248,7 +259,12 @@ The data below show the new court prison admissions by several age groups. The t
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 				<cfset YearConcat = PrisonAdmitsBySex["FY" & YearLoop][PrisonAdmitsBySex.CurrentRow]>
 				<cfif YearConcat IS NOT ''><cfSet YearConcat = Int(YearConcat)></cfif>
-				<td>#YearConcat#</td>
+				<cfif #YearLoop# EQ #MinMaxYears.MinYear#>
+					<td class="FirstYear">#YearConcat#</td>
+					<cfelseif #YearLoop# EQ #MinMaxYears.MaxYear#>
+					<td class="LastYear">#YearConcat#</td>
+					<cfelse><td>#YearConcat#</td>
+				</cfif>
 			</cfloop>
 		</tr>
 		</cfoutput>
@@ -275,7 +291,12 @@ The data below show the new court prison admissions by several age groups. The t
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 				<cfset YearConcat = PrisonAdmitsByRace["FY" & YearLoop][PrisonAdmitsByRace.CurrentRow]>
 				<cfif YearConcat IS NOT ''><cfSet YearConcat = Int(YearConcat)></cfif>
-				<td>#YearConcat#</td>
+				<cfif #YearLoop# EQ #MinMaxYears.MinYear#>
+					<td class="FirstYear">#YearConcat#</td>
+					<cfelseif #YearLoop# EQ #MinMaxYears.MaxYear#>
+					<td class="LastYear">#YearConcat#</td>
+					<cfelse><td>#YearConcat#</td>
+				</cfif>
 			</cfloop>
 		</tr>
 		</cfoutput>
@@ -289,17 +310,19 @@ The data below show the new court prison admissions by several age groups. The t
 
 <div id = "PrisonAdmitsByClass">
 <h2>New Court Prison Admissions By Offense Class</h2>
-<p>
 <p>Illinois has several offense classes that increase along with the severity of the offense and/or punishment. 
  Felonies are for more serious offenses and allow incarceration in state prison. Class 3 and 4 felonies are the least severe, with sentences to prison from one to five years and a mandatory supervised release period of one year after exiting prison. Common examples of class 3 and 4 offenses include theft and retail theft, controlled substance possession under 15 grams, and aggravated battery. 
 Class 1 and 2 felonies are more severe, with prison sentences from 3-15 years. Common examples of class 1 and 2 offenses include burglary and residential burglary, manufacture and delivery of controlled substances, and robbery. 
 With the exception of first degree murder (class M), class X offenses are the most severe felonies and have mandatory prison sentences from 6-30 years. 
 Class X offenses include armed robbery, manufacture and delivery of controlled substances, criminal drug conspiracy, and home invasion.</p>
-<p>A person admitted into the Illinois Department of Corrections can have more than one prison sentence. These sentences can be concurrent (the sentences are served simultaneously) or consecutive. The offense class for the admission is determined by the offense that will keep the person in prison for the longest amount of time, also known as the holding offense. Statewide, class 3 and 4 admissions are the most common and make up a slim majority of all prison admissions. However, because the sentences for class 3 and 4 sentences are much shorter than the more severe classes, the class 3 and 4 offenders do not make up the majority of the prison population.
-
+<p>A person admitted into the Illinois Department of Corrections can have more than one prison sentence. These sentences can be concurrent (the sentences are served simultaneously) or consecutive. 
+	The offense class for the admission is determined by the offense that will keep the person in prison for the longest amount of time, also known as the holding offense. 
+	Statewide, class 3 and 4 admissions are the most common and make up a slim majority of all prison admissions. 
+	However, because the sentences for class 3 and 4 sentences are much shorter than the more severe classes, the 
+	class 3 and 4 offenders do not make up the majority of the prison population.
 </p>
 
-	<table id="datatable_Class" class="IDOC trendTable">
+	<table id="datatable_PrisonAdmits_Class" class="IDOC trendTable">
 		<caption class="TableTitle">New Court Prison Admissions by Offense Class</caption>
 		<thead>
 			<th>Offense Class</th>
@@ -312,7 +335,12 @@ Class X offenses include armed robbery, manufacture and delivery of controlled s
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 				<cfset YearConcat = PrisonAdmitsByClass["FY" & YearLoop][PrisonAdmitsByClass.CurrentRow]>
 				<cfif YearConcat IS NOT ''><cfSet YearConcat = Int(YearConcat)></cfif>
-				<td>#YearConcat#</td>
+				<cfif #YearLoop# EQ #MinMaxYears.MinYear#>
+					<td class="FirstYear">#YearConcat#</td>
+					<cfelseif #YearLoop# EQ #MinMaxYears.MaxYear#>
+					<td class="LastYear">#YearConcat#</td>
+					<cfelse><td>#YearConcat#</td>
+				</cfif>
 			</cfloop>
 		</tr>
 		</cfoutput>
@@ -367,7 +395,12 @@ The offense type for the admission is determined by the offense that will keep t
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 				<cfset YearConcat = PrisonAdmitsByWebCat["FY" & YearLoop][PrisonAdmitsByWebCat.CurrentRow]>
 				<cfif YearConcat IS NOT ''><cfSet YearConcat = Int(YearConcat)></cfif>
-				<td>#YearConcat#</td>
+				<cfif #YearLoop# EQ #MinMaxYears.MinYear#>
+					<td class="FirstYear">#YearConcat#</td>
+					<cfelseif #YearLoop# EQ #MinMaxYears.MaxYear#>
+					<td class="LastYear">#YearConcat#</td>
+					<cfelse><td>#YearConcat#</td>
+				</cfif>
 			</cfloop>
 		</tr>
 		</cfoutput>
@@ -376,3 +409,4 @@ The offense type for the admission is determined by the offense that will keep t
 </div>
 
 
+<hr><hr class="hr-split">

@@ -2,6 +2,13 @@
 
 
 $(document).ready(function() {
+
+	$('h1').each(function(){
+		var navMenuItem = $(this).text();
+		var headingID = '#' + $(this).prop('id');	
+		$('#side-nav').append('<li><a class="scrollclass" data-target="' + headingID + '">' + navMenuItem +'</a></li>');
+	});
+
 	
 	$('.CHRI td:empty').text('').addClass('ReplaceWithNA');  //replace missing data null
 	$('.IDOC td:empty').text('').addClass('ReplaceWithZero');  //replace missing data null
@@ -242,21 +249,41 @@ $(document).ready(function() {
 			captionText= "the " + captionText.slice(0,-1)
 		}
 		$('#'+list_id).append('<li>'+  subject + outText +' in ' +captionText +'.</li>');
-	}); */
-	
+	}); 
+	*/
+	//Code below adds percent change columns to tables
+	try {
+	$('.trendTable tr').each(function(){ 
+		$(this).find('th').eq(-1).after('<th>Percent<br>Change</th>'); //adds table header cell
+		
+		var firstPoint = $(this).find('.FirstYear').text();
+		var lastPoint = $(this).find('.LastYear').text();
+		if (firstPoint=="NA" || lastPoint=="NA" || firstPoint < 20 || lastPoint < 20) {
+				var outText = "N < 20";		
+		}
+		else {
+				var outText = (100*(lastPoint - firstPoint)/firstPoint).toFixed(1) + '%';				
+				
+		};
+		
+		$(this).find('td').eq(-1).after('<td class="PercentChangeCell">' +outText +'</td>'); 
+		});
+	}
+		 catch(e) {
+			
+	};
 
 
 
 
 
 
-
-
-
-
-
-
-
+	 $('.scrollclass').click(function() {
+              	$('body').scrollTo($(this).data('target'), {
+              		duration: 1200,
+              		offset: -90
+              	});
+              });
 
 	
 }); <!--end document ready-->
@@ -308,8 +335,8 @@ var tablesToExcel = (function() {
 
       ctx = {created: (new Date()).getTime(), worksheets: worksheetsXML};
       workbookXML = format(tmplWorkbookXML, ctx);
-
-console.log(workbookXML);
+/*
+console.log(workbookXML); */
 
       var link = document.createElement("A");
       link.href = uri + base64(workbookXML);

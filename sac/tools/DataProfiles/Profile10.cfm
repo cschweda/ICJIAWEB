@@ -62,14 +62,14 @@
 <!---End arrest queries--->
 
 
-<h1>CHRI Arrest Profile for <cfoutput>#GeographyName#</cfoutput></h1>
+<h1 id="ArrestHeading">CHRI Arrest Profile for <cfoutput>#GeographyName#</cfoutput></h1>
 
 <p>Arrest data in Illinois are available from two sources: <a href="http://www.isp.state.il.us/crime/ucrhome.cfm" target="_blank">I-UCR arrests</a> and the Illinois State Police Electronic Criminal History Record Information (CHRI) database. 
 UCR arrest data are collected from the Illinois implementation of the <a href="https://www.fbi.gov/about-us/cjis/ucr/ucr" target="_blank">federal UCR program</a>. UCR data have a small number of categories and not all arrests are included in those categories. There is no information in the UCR arrests about age, sex, race, or offense class. 
 	However, <a href="http://www.icjia.org/research/overview#tab_research-data" target="_blank">UCR data are available for several decades outside of this profile</a>. A CHRI arrest record is generated when an arrest incident occurs, the person arrested is fingerprinted, and the arrest data is succesfully submitted to the Illinois State Police Database.
 	 CHRI data can be analyzed by race, sex, age, offense class, and offense type.  
 	 <strong>ICJIA does not show arrest data where the count of arrests is below ten.</strong> CHRI arrest data are displayed at the county level below for overall arrests. 
-	 The various breakdowns of CHRI data (age, race, sex, etc.) are instead aggregated to the judicial circuit. Additional county-level arrest data from CHRI can be requested by emailing ASK CHRIS WHAT EMAIL GOES HERE.
+	 The various breakdowns of CHRI data (age, race, sex, etc.) are instead aggregated to the judicial circuit. Additional county-level arrest data from CHRI can be requested by emailing <a href="mailto:cja.irc@illinois.gov" target="_top">cja.irc@illinois.gov</a>.
 	CHRI data presented below were queried from the Illinois State Police Electronic Criminal History Records Information Systems (CHRI) by ICJIA staff. However reliable historical data suitable for this type of profile from CHRI can only be obtained after the early 2000s.</p> 
 
 
@@ -181,7 +181,12 @@ For all arrests to be included in this profile, the age of the arrestee had to b
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 				<cfset YearConcat = ArrestsByAge["CY" & YearLoop][ArrestsByAge.CurrentRow]>
 				<cfif YearConcat IS NOT ''><cfSet YearConcat = Int(YearConcat)></cfif>
-				<td>#YearConcat#</td>
+				<cfif #YearLoop# EQ #MinMaxYears.MinYear#>
+					<td class="FirstYear">#YearConcat#</td>
+					<cfelseif #YearLoop# EQ #MinMaxYears.MaxYear#>
+					<td class="LastYear">#YearConcat#</td>
+					<cfelse><td>#YearConcat#</td>
+				</cfif>
 			</cfloop>
 		</tr>
 		</cfoutput>
@@ -209,7 +214,12 @@ For all arrests to be included in this profile, the age of the arrestee had to b
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 				<cfset YearConcat = ArrestsBySex["CY" & YearLoop][ArrestsBySex.CurrentRow]>
 				<cfif YearConcat IS NOT ''><cfSet YearConcat = Int(YearConcat)></cfif>
-				<td>#YearConcat#</td>
+				<cfif #YearLoop# EQ #MinMaxYears.MinYear#>
+					<td class="FirstYear">#YearConcat#</td>
+					<cfelseif #YearLoop# EQ #MinMaxYears.MaxYear#>
+					<td class="LastYear">#YearConcat#</td>
+					<cfelse><td>#YearConcat#</td>
+				</cfif>
 			</cfloop>
 		</tr>
 		</cfoutput>
@@ -241,7 +251,12 @@ also <a href="http://www.nij.gov/topics/victims-victimization/pages/welcome.aspx
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 				<cfset YearConcat = ArrestsByRace["CY" & YearLoop][ArrestsByRace.CurrentRow]>
 				<cfif YearConcat IS NOT ''><cfSet YearConcat = Int(YearConcat)></cfif>
-				<td>#YearConcat#</td>
+				<cfif #YearLoop# EQ #MinMaxYears.MinYear#>
+					<td class="FirstYear">#YearConcat#</td>
+					<cfelseif #YearLoop# EQ #MinMaxYears.MaxYear#>
+					<td class="LastYear">#YearConcat#</td>
+					<cfelse><td>#YearConcat#</td>
+				</cfif>
 			</cfloop>
 		</tr>
 		</cfoutput>
@@ -274,7 +289,12 @@ Class X offenses include armed robbery, manufacture and delivery of controlled s
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 				<cfset YearConcat = ArrestsByClass["CY" & YearLoop][ArrestsByClass.CurrentRow]>
 				<cfif YearConcat IS NOT ''><cfSet YearConcat = Int(YearConcat)></cfif>
-				<td>#YearConcat#</td>
+				<cfif #YearLoop# EQ #MinMaxYears.MinYear#>
+					<td class="FirstYear">#YearConcat#</td>
+					<cfelseif #YearLoop# EQ #MinMaxYears.MaxYear#>
+					<td class="LastYear">#YearConcat#</td>
+					<cfelse><td>#YearConcat#</td>
+				</cfif>
 			</cfloop>
 		</tr>
 		</cfoutput>
@@ -328,7 +348,12 @@ Class X offenses include armed robbery, manufacture and delivery of controlled s
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 				<cfset YearConcat = ArrestsByWebCat["CY" & YearLoop][ArrestsByWebCat.CurrentRow]>
 				<cfif YearConcat IS NOT ''><cfSet YearConcat = Int(YearConcat)></cfif>
-				<td>#YearConcat#</td>
+				<cfif #YearLoop# EQ #MinMaxYears.MinYear#>
+					<td class="FirstYear">#YearConcat#</td>
+					<cfelseif #YearLoop# EQ #MinMaxYears.MaxYear#>
+					<td class="LastYear">#YearConcat#</td>
+					<cfelse><td>#YearConcat#</td>
+				</cfif>
 			</cfloop>
 		</tr>
 		</cfoutput>
@@ -337,3 +362,4 @@ Class X offenses include armed robbery, manufacture and delivery of controlled s
 </div>
 
 
+<hr><hr class="hr-split">

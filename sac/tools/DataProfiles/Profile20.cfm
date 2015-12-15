@@ -62,7 +62,7 @@
 <!---End conviction queries--->
 
 
-<h1>CHRI Conviction Profile for <cfoutput>#GeographyName#</cfoutput></h1>
+<h1 id="ConvictionHeading">CHRI Conviction Profile for <cfoutput>#GeographyName#</cfoutput></h1>
 <p>A conviction is a judgment of conviction or sentence entered upon a plea of guilty or upon a verdict or finding of guilty of an offense, rendered by a legally constituted jury or by a court of competent jurisdiction authorized to try the case without a jury (<a href="http://www.ilga.gov/legislation/ilcs/ilcs5.asp?ActID=1876&ChapterID=53" target="_blank">720 ILCS 5/2-5</a>).
 Convictions are submitted by the courts into CHRI by the circuit court clerks primarily through electronic data transfers. Ninety counties currently submit their data to the Administrative Office of the Illinois Courts (AOIC) via the Automated Disposition Reporting (ADR) program. The ADR program, in turn, transmits the data to several state entities, including the State Police CHRI system. 
 An arrest often will not lead to a conviction but can be closed though other non-conviction outcomes, such as a if a state's attorney declines to prosecute the arrestee, a withheld judgement, conditional discharge or supervision, and other outcomes. The data shown in this profile are specifically those with a conviction as the outcome.
@@ -73,7 +73,7 @@ However, the AOIC data have limited details into what the conviction was for and
 </p>
 
 <p><strong>ICJIA does not show conviction data where the count of conviction is below ten.</strong> CHRI conviction data are displayed at the county level below for overall convictions. 
-	 The various breakdowns of CHRI data (age, race, sex, etc.) are instead aggregated to the judicial circuit. Additional county-level conviction data from CHRI can be requested by emailing ASK CHRIS WHAT EMAIL GOES HERE.
+	 The various breakdowns of CHRI data (age, race, sex, etc.) are instead aggregated to the judicial circuit. Additional county-level conviction data from CHRI can be requested by emailing <a href="mailto:cja.irc@illinois.gov" target="_top">cja.irc@illinois.gov</a>.
 	CHRI data presented below were queried from the Illinois State Police Electronic Criminal History Records Information Systems (CHRI) by ICJIA staff. However reliable historical data suitable for this type of profile from CHRI can only be obtained after the early 2000s. 
 </p>
 <div id= "ConvictionCountSection">
@@ -174,7 +174,12 @@ Convictions by county are available below. Each arrest incident that leads to a 
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 				<cfset YearConcat = ConvictionsByAge["CY" & YearLoop][ConvictionsByAge.CurrentRow]>
 				<cfif YearConcat IS NOT ''><cfSet YearConcat = Int(YearConcat)></cfif>
-				<td>#YearConcat#</td>
+				<cfif #YearLoop# EQ #MinMaxYears.MinYear#>
+					<td class="FirstYear">#YearConcat#</td>
+					<cfelseif #YearLoop# EQ #MinMaxYears.MaxYear#>
+					<td class="LastYear">#YearConcat#</td>
+					<cfelse><td>#YearConcat#</td>
+				</cfif>
 			</cfloop>
 		</tr>
 		</cfoutput>
@@ -204,7 +209,12 @@ Convictions by county are available below. Each arrest incident that leads to a 
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 				<cfset YearConcat = ConvictionsBySex["CY" & YearLoop][ConvictionsBySex.CurrentRow]>
 				<cfif YearConcat IS NOT ''><cfSet YearConcat = Int(YearConcat)></cfif>
-				<td>#YearConcat#</td>
+				<cfif #YearLoop# EQ #MinMaxYears.MinYear#>
+					<td class="FirstYear">#YearConcat#</td>
+					<cfelseif #YearLoop# EQ #MinMaxYears.MaxYear#>
+					<td class="LastYear">#YearConcat#</td>
+					<cfelse><td>#YearConcat#</td>
+				</cfif>
 			</cfloop>
 		</tr>
 		</cfoutput>
@@ -235,7 +245,12 @@ are disproportionately more likely to be involved in the criminal justice system
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 				<cfset YearConcat = ConvictionsByRace["CY" & YearLoop][ConvictionsByRace.CurrentRow]>
 				<cfif YearConcat IS NOT ''><cfSet YearConcat = Int(YearConcat)></cfif>
-				<td>#YearConcat#</td>
+				<cfif #YearLoop# EQ #MinMaxYears.MinYear#>
+					<td class="FirstYear">#YearConcat#</td>
+					<cfelseif #YearLoop# EQ #MinMaxYears.MaxYear#>
+					<td class="LastYear">#YearConcat#</td>
+					<cfelse><td>#YearConcat#</td>
+				</cfif>
 			</cfloop>
 		</tr>
 		</cfoutput>
@@ -270,7 +285,12 @@ Class X offenses include armed robbery, manufacture and delivery of controlled s
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 				<cfset YearConcat = ConvictionsByClass["CY" & YearLoop][ConvictionsByClass	.CurrentRow]>
 				<cfif YearConcat IS NOT ''><cfSet YearConcat = Int(YearConcat)></cfif>
-				<td>#YearConcat#</td>
+				<cfif #YearLoop# EQ #MinMaxYears.MinYear#>
+					<td class="FirstYear">#YearConcat#</td>
+					<cfelseif #YearLoop# EQ #MinMaxYears.MaxYear#>
+					<td class="LastYear">#YearConcat#</td>
+					<cfelse><td>#YearConcat#</td>
+				</cfif>
 			</cfloop>
 		</tr>
 		</cfoutput>
@@ -327,7 +347,12 @@ Class X offenses include armed robbery, manufacture and delivery of controlled s
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 				<cfset YearConcat = ConvictionsByWebCat["CY" & YearLoop][ConvictionsByWebCat.CurrentRow]>
 				<cfif YearConcat IS NOT ''><cfSet YearConcat = Int(YearConcat)></cfif>
-				<td>#YearConcat#</td>
+				<cfif #YearLoop# EQ #MinMaxYears.MinYear#>
+					<td class="FirstYear">#YearConcat#</td>
+					<cfelseif #YearLoop# EQ #MinMaxYears.MaxYear#>
+					<td class="LastYear">#YearConcat#</td>
+					<cfelse><td>#YearConcat#</td>
+				</cfif>
 			</cfloop>
 		</tr>
 		</cfoutput>
@@ -335,3 +360,4 @@ Class X offenses include armed robbery, manufacture and delivery of controlled s
 <div id="BarContainer_Convictions_WebCat" class="HC_Bar DataTableBefore" style="height: 500px; width: 600px; display: inline-block"></div>
 </div>
 
+<hr><hr class="hr-split">
