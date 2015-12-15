@@ -19,7 +19,7 @@
         {{if updatedItem}}
         <span style="font-weight: 400; color: #666" class="addUpdateLabel" data-postDate="{{date format='Y-m-d'}}"></span>
         {{endif}}
-        <span style="font-weight: 400; color: #666" {{if updatedItem==='False'}} class="addNewLabel" data-postType="news" data-postDate="{{date format='Y-m-d'}}"{{endif}}>{{ date }}</span> | <a href="{{ url }}">{{if displayTitle}}{{ displayTitle }}{{else}}{{title}}{{endif}}</a></div>
+        <span style="font-weight: 400; color: #666" {{if !updatedItem}} class="addNewLabel" data-postType="news" data-postDate="{{date format='Y-m-d'}}"{{endif}}>{{ date }}</span> | <a href="{{ url }}">{{if displayTitle}}{{ displayTitle }}{{else}}{{title}}{{endif}}</a></div>
 
           <div class="expander-news">
           {{ content|widont }}
