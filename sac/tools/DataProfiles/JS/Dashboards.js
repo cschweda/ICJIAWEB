@@ -289,7 +289,7 @@ $(document).ready(function() {
 }); <!--end document ready-->
 
 
-var tablesToExcel = (function() {
+/*var tablesToExcel = (function() {
     var uri = 'data:application/vnd.ms-excel;base64,'
     , tmplWorkbookXML = '<?xml version="1.0"?><?mso-application progid="Excel.Sheet"?><Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">'
       + '<DocumentProperties xmlns="urn:schemas-microsoft-com:office:office"><Author>Axel Richter</Author><Created>{created}</Created></DocumentProperties>'
@@ -335,8 +335,8 @@ var tablesToExcel = (function() {
 
       ctx = {created: (new Date()).getTime(), worksheets: worksheetsXML};
       workbookXML = format(tmplWorkbookXML, ctx);
-/*
-console.log(workbookXML); */
+
+console.log(workbookXML); 
 
       var link = document.createElement("A");
       link.href = uri + base64(workbookXML);
@@ -347,4 +347,11 @@ console.log(workbookXML); */
       document.body.removeChild(link);
     }
   })();
+*/
 
+var ProduceExcel = (function() {
+				$(".trendtable").table2excel({
+					name: "omething",
+					filename: "myFileName"
+				});
+			});

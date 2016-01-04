@@ -169,6 +169,6 @@
 		</tr>
 		</cfoutput>
 	</table>
-<!---		
-<button  onclick="tablesToExcel(['datatable_populationByRaceEth','datatable_populationBySex'], ['PopRaceEth','PopRace'], 'TestBook.xls', 'Excel')">Export to Excel</button>
-</div>--->
+<!---
+<button  onclick="ProduceExcel()">Export to Excel</button>--->
+</div>

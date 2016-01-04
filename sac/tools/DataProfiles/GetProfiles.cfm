@@ -111,7 +111,7 @@
 <script src="http://code.highcharts.com/modules/data.js"></script>
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
 <script src="JS/Dashboards.js"></script>
-	
+<script src="JS/jquery.table2excel.js"></script>
 
 <style type="text/css">
 table {
