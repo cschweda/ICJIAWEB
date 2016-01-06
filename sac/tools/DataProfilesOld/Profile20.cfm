@@ -5,7 +5,6 @@
 	FROM WTP
 	WHERE MainCatnumber=1
 	AND DataGroupNumber=20
-	AND GeographyType = 50
 	ORDER BY SortOrder, GeographyName;
 </cfquery>
 
@@ -90,7 +89,10 @@ Convictions by county are available below. Each arrest incident that leads to a 
 			</cfloop>
 		</thead>
 		<cfoutput query="ConvictionIncidentsCount">
-		<tr class="DataRow"><td class="Geography">#GeographyName#</td>	
+			<cfif #GeographyType# EQ 100><tr class="DataRow IgnoreChart">
+			<cfelse>
+			<tr class="DataRow"></cfif>
+			<td class="Geography">#GeographyName#</td>	
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 				<cfset YearConcat = ConvictionIncidentsCount["CY" & YearLoop][ConvictionIncidentsCount.CurrentRow]>
 				<cfif YearConcat IS NOT ''><cfSet YearConcat = Int(YearConcat)></cfif>
@@ -116,12 +118,12 @@ Convictions by county are available below. Each arrest incident that leads to a 
 
 
 <div id="ConvictionRateSection">
-<h2>Conviction Rates</h2>
+<h2>Conviction Rate</h2>
 <p>It is generally preferable to compare conviction trends across counties by uisng rates of convictions per 100,000 people instead of conviction counts. Rates will take into account the population of potential arrestees. 
 	Rates calculated belore are per 100,000 residents in Illinois, using County Census estimates. The population data used to calculate rates is available below the arrest tables at the end of this profile. 
 	This rate should not be confused with a clearance rate of any sort. Arrests can be cleared through many ways that do not lead to a conviction.</p>
 	<table id="datatable_Convictions_Rate" class="CHRI trendTable">
-		<caption class="TableTitle">Conviction Rates</caption>
+		<caption class="TableTitle">Conviction Rate</caption>
 		<thead>
 			<th>Geography</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">

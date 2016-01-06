@@ -5,7 +5,6 @@
 	FROM WTP
 	WHERE MainCatnumber=1
 	AND DataGroupNumber=10
-	AND GeographyType = 50
 	ORDER BY SortOrder, GeographyName;
 </cfquery>
 
@@ -87,18 +86,22 @@ For all arrests to be included in this profile, the age of the arrestee had to b
 			</cfloop>
 		</thead>
 		<cfoutput query="ArrestIncidentsCount">
-		<tr class="DataRow"><td class="Geography">#GeographyName#</td>	
-			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
-				<cfset YearConcat = ArrestIncidentsCount["CY" & YearLoop][ArrestIncidentsCount.CurrentRow]>
-				<cfif YearConcat IS NOT ''><cfSet YearConcat = Int(YearConcat)></cfif>
-				<cfif #YearLoop# EQ #MinMaxYears.MinYear#>
-					<td class="FirstYear">#YearConcat#</td>
-					<cfelseif #YearLoop# EQ #MinMaxYears.MaxYear#>
-					<td class="LastYear">#YearConcat#</td>
-					<cfelse><td>#YearConcat#</td>
-					</cfif>
-			</cfloop>
-		</tr>
+			<cfif #GeographyType# EQ 100><tr class="DataRow IgnoreChart">
+			<cfelse>
+			<tr class="DataRow"></cfif>
+				<td class="Geography">#GeographyName#</td>	
+				<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
+					<cfset YearConcat = ArrestIncidentsCount["CY" & YearLoop][ArrestIncidentsCount.CurrentRow]>
+					<cfif YearConcat IS NOT ''><cfSet YearConcat = Int(YearConcat)></cfif>
+					<cfif #YearLoop# EQ #MinMaxYears.MinYear#>
+						<td class="FirstYear">#YearConcat#</td>
+						<cfelseif #YearLoop# EQ #MinMaxYears.MaxYear#>
+						<td class="LastYear">#YearConcat#</td>
+						<cfelse>
+							<td>#YearConcat#</td>
+						</cfif>
+				</cfloop>
+			</tr>
 		</cfoutput>
 	</table>
 
@@ -106,11 +109,11 @@ For all arrests to be included in this profile, the age of the arrestee had to b
 		
 
 	<span class="ListCaveats">Large percent changes may be more indicative of changes in submitting arrests to the Illinois State Police instead of actual arrest practices.</span>
-	<div id="TimeSeries_Arrests_Counts" class="HC_TimeSeries DataTableBefore" style="min-width: 310px; min-height: 500px; margin: 0 auto"></div>
+	<div id="TimeSeries_Arrests_Counts" class="HC_TimeSeries DataTableBefore"></div>
 	
 	<cfif #CountyCount.NumCounties# GT 1>
-	<div id="piecontainer_Arrests_Counts" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer_Population_Arrests_Total" class="HC_Pie LastChart Population_Total" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_Arrests_Counts" class="HC_Pie LastChart DataTableBefore"></div>
+	<div id="piecontainer_Population_Arrests_Total" class="HC_Pie LastChart Population_Total"></div>
 	</cfif>
 	
 
@@ -124,11 +127,11 @@ For all arrests to be included in this profile, the age of the arrestee had to b
 </div>
 
 <div id="ArrestRateSection">
-<h2>Arrest Incident Rates (per 100,000 people)</h2>
+<h2>Arrest Incident Rate (per 100,000 people)</h2>
 <p>CHRI arrest trends across counties can be compared by using arrest rates instead of arrest counts. Rates take into account the population of potential arrestees. 
 	Rates calculated belore are per 100,000 residents in Illinois, using County Census estimates. The population data used to calculate rates is available at the end of this profile.</p>
 	<table id="datatable_Arrests_Rate" class="CHRI trendTable">
-		<caption class="TableTitle">Arrest Incident Rates</caption>
+		<caption class="TableTitle">Arrest Incident Rate</caption>
 		<thead>
 			<th>Geography</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -152,7 +155,7 @@ For all arrests to be included in this profile, the age of the arrestee had to b
 	</table>
 
 	
-<div id="TimeSeriesContainer_Arrests_Counts" class="HC_TimeSeries DataTableBefore" style="min-width: 310px; min-height: 500px; margin: 0 auto"></div>	
+<div id="TimeSeriesContainer_Arrests_Counts" class="HC_TimeSeries DataTableBefore"></div>	
 </div>
 
 
@@ -191,8 +194,8 @@ For all arrests to be included in this profile, the age of the arrestee had to b
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="piecontainer_Arrests_Age" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer_Population_Age" class="HC_Pie LastChart Population_ByAge" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_Arrests_Age" class="HC_Pie LastChart DataTableBefore"></div>
+	<div id="piecontainer_Population_Age" class="HC_Pie LastChart Population_ByAge"></div>
 	
 </div>
 <hr><hr>
@@ -224,8 +227,8 @@ For all arrests to be included in this profile, the age of the arrestee had to b
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="piecontainer_Arrests_Sex" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer_Population_Sex" class="HC_Pie LastChart Population_BySex" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_Arrests_Sex" class="HC_Pie LastChart DataTableBefore"></div>
+	<div id="piecontainer_Population_Sex" class="HC_Pie LastChart Population_BySex"></div>
 	
 </div>
 <hr><hr>
@@ -261,9 +264,9 @@ also <a href="http://www.nij.gov/topics/victims-victimization/pages/welcome.aspx
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="piecontainer_Arrests_Race" class="HC_Pie LaststChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer_Population_Race" class="HC_Pie LastChart Population_ByRace" style="height: 300px; width: 400px; display: inline-block"></div>
-	
+	<div id="piecontainer_Arrests_Race" class="HC_Pie LaststChart DataTableBefore"></div>
+	<div id="piecontainer_Population_Race" class="HC_Pie LastChart Population_ByRace"></div>
+
 </div>
 <hr><hr>
 
@@ -299,8 +302,8 @@ Class X offenses include armed robbery, manufacture and delivery of controlled s
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="piecontainer_Arrests_Class_First" class="HC_Pie FirstChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer_Arrests_Class_Last" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_Arrests_Class_First" class="HC_Pie FirstChart DataTableBefore"></div>
+	<div id="piecontainer_Arrests_Class_Last" class="HC_Pie LastChart DataTableBefore"></div>
 	
 </div>
 <hr><hr>
@@ -358,7 +361,7 @@ Class X offenses include armed robbery, manufacture and delivery of controlled s
 		</tr>
 		</cfoutput>
 	</table>
-<div id="BarContainer_Arrests_WebCat" class="HC_Bar DataTableBefore" style="height: 500px; width: 600px; display: inline-block"></div>
+<div id="BarContainer_Arrests_WebCat" class="HC_Bar DataTableBefore"></div>
 </div>
 
 

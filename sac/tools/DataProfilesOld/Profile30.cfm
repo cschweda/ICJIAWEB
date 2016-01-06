@@ -172,10 +172,10 @@
 </cfif>
 
 <div id="NewPrisonAdmitsRateByCountySection">
-<h2>New Court Prison Admission Rates by County</h2>
+<h2>New Court Prison Admission Rate by County</h2>
 <p>The following new court prison admission rates per 100,000 people are calculated by using the total county population from Census estimates (population data is available at the end of this profile). </p>
 	<table id="datatable_PrisonAdmits_Rate" class="IDOC trendTable">
-		<caption class="TableTitle">New Court Prison Admission Rates</caption>
+		<caption class="TableTitle">New Court Prison Admission Rate</caption>
 		<thead>
 			<th>Geography</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">

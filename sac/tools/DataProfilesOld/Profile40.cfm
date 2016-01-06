@@ -169,11 +169,11 @@ The data in this profile are from an ICJIA analysis of data provided by the IDOC
 
 
 <div id="NewPrisonExitsRateByCountySection">
-<h2>Prison Exit Rates by County</h2>
+<h2>Prison Exit Rate by County</h2>
 <p>The following new court prison exit rates per 100,000 people are calculated by using the total county population from Census 
 	estimates (population data is available at the end of this profile).</p>
 	<table id="datatable_Rate" class="IDOC trendTable">
-		<caption class="TableTitle">Prison Exit Rates</caption>
+		<caption class="TableTitle">Prison Exit Rate</caption>
 		<thead>
 			<th>Geography</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">

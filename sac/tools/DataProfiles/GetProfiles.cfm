@@ -123,6 +123,9 @@ table {
 	border-collapse: collapse;
 	margin-top: 30px;
 	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	width:100%;
 }
 table th {
 	border-width: 1px;
@@ -130,7 +133,14 @@ table th {
 	border-style: solid;
 	border-color: #666666;
 	background-color: #dedede;
+	text-align: center;
 }
+
+table th:first-child {
+	text-align: left;
+}
+
+
 table td {
 	border-width: 1px;
 	padding: 8px;
@@ -139,9 +149,42 @@ table td {
 	background-color: #ffffff;
 }
 
+td:not(.Indicator):not(.Geography) {
+	text-align: center;
+}
+
 .hr-split {
 	margin-bottom: 100px;
 }
+
+.HC_Pie {
+	max-width: 500px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.HC_Bar {
+	height: 500px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.HC_TimeSeries {
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 20px;
+}
+
+#ProfilesContainer {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.TableTitle {
+	font-size: 120%;
+	text-align: center;
+}
+
 	
 </style>
 	
@@ -645,18 +688,15 @@ $('.expander-news').readmore({
 						;	
 					</cfquery>
 
-
-
-
-
-
-
+					<!---<cfdump var="#WTP#">  USED FOR DEBUGGING--->
 
 					<!---Generate Geography Name to be used in title and other sections--->
+					<!---ListElement is used to determine the geography based on the data selected by the user and the population tables to display--->
 
 					<cfloop index="ListElement" list="#url.ProfileNumber#">
 
 						<cfif #url.ICJIANumber# GTE 1 AND #url.ICJIANumber# LTE 102>
+							<cfset GeographyTypeForPopulationSubgroups = 50>
 							<cfif #ListElement# GT 20>
 							<cfset GeographyName = #GetCircuit.CountyName# & ' County'>
 							<cfelse>
@@ -664,10 +704,12 @@ $('.expander-news').readmore({
 							</cfif>
 						</cfif>
 						<cfif #url.ICJIANumber# EQ 999>
+							<cfset GeographyTypeForPopulationSubgroups = 250>
 							<cfset GeographyName = #GetCircuit.CountyName#>
 						</cfif>
 						<cfif #url.ICJIANumber# GTE 1001 AND #url.ICJIANumber# LTE 1088>
 							<cfset GeographyName = 'the ' & #GetCircuit.CountyName#>
+							<cfset GeographyTypeForPopulationSubgroups = 100>
 						</cfif>
 
 					<cfset ProfileTemp = "Profile" & #ListElement# & ".cfm" />

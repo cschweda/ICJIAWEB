@@ -133,13 +133,24 @@ table th {
 	border-style: solid;
 	border-color: #666666;
 	background-color: #dedede;
+	text-align: center;
 }
+
+table th:first-child {
+	text-align: left;
+}
+
+
 table td {
 	border-width: 1px;
 	padding: 8px;
 	border-style: solid;
 	border-color: #666666;
 	background-color: #ffffff;
+}
+
+td:not(.Indicator):not(.Geography) {
+	text-align: center;
 }
 
 .hr-split {
@@ -158,12 +169,21 @@ table td {
 	margin-right:auto;
 }
 
+.HC_TimeSeries {
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 20px;
+}
+
 #ProfilesContainer {
 	margin-left:auto;
 	margin-right:auto;
 }
 
-
+.TableTitle {
+	font-size: 120%;
+	text-align: center;
+}
 
 	
 </style>

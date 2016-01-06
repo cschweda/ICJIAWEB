@@ -86,18 +86,22 @@ For all arrests to be included in this profile, the age of the arrestee had to b
 			</cfloop>
 		</thead>
 		<cfoutput query="ArrestIncidentsCount">
-		<tr class="DataRow"><td class="Geography">#GeographyName#</td>	
-			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
-				<cfset YearConcat = ArrestIncidentsCount["CY" & YearLoop][ArrestIncidentsCount.CurrentRow]>
-				<cfif YearConcat IS NOT ''><cfSet YearConcat = Int(YearConcat)></cfif>
-				<cfif #YearLoop# EQ #MinMaxYears.MinYear#>
-					<td class="FirstYear">#YearConcat#</td>
-					<cfelseif #YearLoop# EQ #MinMaxYears.MaxYear#>
-					<td class="LastYear">#YearConcat#</td>
-					<cfelse><td>#YearConcat#</td>
-					</cfif>
-			</cfloop>
-		</tr>
+			<cfif #GeographyType# EQ 100><tr class="DataRow IgnoreChart">
+			<cfelse>
+			<tr class="DataRow"></cfif>
+				<td class="Geography">#GeographyName#</td>	
+				<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
+					<cfset YearConcat = ArrestIncidentsCount["CY" & YearLoop][ArrestIncidentsCount.CurrentRow]>
+					<cfif YearConcat IS NOT ''><cfSet YearConcat = Int(YearConcat)></cfif>
+					<cfif #YearLoop# EQ #MinMaxYears.MinYear#>
+						<td class="FirstYear">#YearConcat#</td>
+						<cfelseif #YearLoop# EQ #MinMaxYears.MaxYear#>
+						<td class="LastYear">#YearConcat#</td>
+						<cfelse>
+							<td>#YearConcat#</td>
+						</cfif>
+				</cfloop>
+			</tr>
 		</cfoutput>
 	</table>
 
@@ -123,11 +127,11 @@ For all arrests to be included in this profile, the age of the arrestee had to b
 </div>
 
 <div id="ArrestRateSection">
-<h2>Arrest Incident Rates (per 100,000 people)</h2>
+<h2>Arrest Incident Rate (per 100,000 people)</h2>
 <p>CHRI arrest trends across counties can be compared by using arrest rates instead of arrest counts. Rates take into account the population of potential arrestees. 
 	Rates calculated belore are per 100,000 residents in Illinois, using County Census estimates. The population data used to calculate rates is available at the end of this profile.</p>
 	<table id="datatable_Arrests_Rate" class="CHRI trendTable">
-		<caption class="TableTitle">Arrest Incident Rates</caption>
+		<caption class="TableTitle">Arrest Incident Rate</caption>
 		<thead>
 			<th>Geography</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">

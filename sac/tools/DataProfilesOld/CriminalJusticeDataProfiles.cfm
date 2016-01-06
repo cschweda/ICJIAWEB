@@ -1,9 +1,10 @@
 
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">	
 
 	<!--
 	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css">
@@ -14,8 +15,6 @@
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
-	
-
 
 	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
@@ -23,14 +22,14 @@
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
 <script src="JS/Dashboards.js"></script>
   	
-	
+
 	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		
-		<meta name="description" content="The Authority brings together key leaders from the justice system and the public to identify critical issues facing the criminal justice system in Illinois, and to propose and evaluate policies, programs, and legislation that address those issues. The agency also works to ensure the criminal justice system in Illinois is efficient and effective. The Authorityâ€™s specific powers and duties are detailed in the Illinois Criminal Justice Information Act. John Maki is the Executive Director of the Authority.">
+		<meta name="description" content="The Authority brings together key leaders from the justice system and the public to identify critical issues facing the criminal justice system in Illinois, and to propose and evaluate policies, programs, and legislation that address those issues. The agency also works to ensure the criminal justice system in Illinois is efficient and effective. The Authority’s specific powers and duties are detailed in the Illinois Criminal Justice Information Act. John Maki is the Executive Director of the Authority.">
 		<meta name="keywords" content="ICJIA, Criminal Justice, Illinois, Authority, Reform, Illinois Criminal Justice Information Authority">
 		<meta name="date" content="2015-08-31">
 		<link rel="canonical" href="http://www.icjia.state.il.us/">
@@ -99,45 +98,13 @@
 		
 
 		
-
-<style type="text/css">
-table {
-	font-family: verdana,arial,sans-serif;
-	font-size:11px;
-	color:#333333;
-	border-width: 1px;
-	border-color: #666666;
-	border-collapse: collapse;
-	margin-top: 30px;
-	margin-bottom: 30px;
-}
-table th {
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #666666;
-	background-color: #dedede;
-}
-table td {
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #666666;
-	background-color: #ffffff;
-}
-	
-</style>
-	
 <title>ICJIA Criminal Justice Data Profiles</title>	
 </head>
 
-<body>	
 
+<body>
 
-
-
-	  
-	  
+  
 
    <div id="nav-wrapper" style="margin-top: 10px; background: #fff; position: relative" >
     <div id="nav" class="navbar navbar-default icjia-main" role="navigation">
@@ -397,85 +364,183 @@ table td {
     </div>
 </div>
 
+<!--BEGIN POWERS-->
+
+<div class="container" id="FormContainer" style="width:600px; margin-top: 50px; margin-left: auto; margin-right: auto; padding-bottom: 50px">
+<script>
+//validate at least one checkbox is selected
+var checkCounter=0
+
+$(function ($) {
+    $('#ProfileSelector').submit(function (e) {
+		checkCounter = checkCounter + 1
+	    $('#ToolStatus').text("")
+        if (!$('.required').is(':checked')) {
+            //prevent the default form submit if it is not checked
+            e.preventDefault();
+       		checkCounter = checkCounter + 1
+            $('#ToolStatus').text("Select at least one checkbox above.")
+            if (checkCounter >=5) {$('#ToolStatus').text("Insanity: doing the same thing over and over again and expecting different results.")}
+        }
+    })
+})
+</script>
 
 
+<h2>ICJIA Criminal Justice Data Profiles</h2>
+<p>Data profiles for arrests, convictions, prison admissions, and prison exits are available at the county, judicial circuit, and statewide level. These profiles
+show a variety of charts and statistics about the chosen area and data theme.</p>
+					<form id="ProfileSelector" name="ProfileSelector" method="GET" action="GetProfiles.cfm">
+				        <p><b>Step 1 -</b> Select a profile to view:<br>  
+				            <input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck10" value="10" checked="checked">
+								<label for="ProfileCheck10">Arrests from the Illinois State Police CHRI Database*</label><br/>
+							<input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck20" value="20" checked="checked">
+				            	<label for="ProfileCheck20">Convictions from the Illinois State Police CHRI Database*</label><br/>
+							<input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck30" value="30" checked="checked">
+				            	<label for="ProfileCheck30">Prison Admissions</label>	<br/>
+							<input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck40" value="40" checked="checked">
+				            	<label for="ProfileCheck40">Prison Exits</label>	<br/>
+				            *CHRI data in these profiles have limited availability at the county level. If you select a county, you will see a mix of of data at the county level and the judicial circuit in which the county resides in.  	
+				        </p>
+						
+											
+						<div id="CountySelector"><p><b>Step 2 -</b> Select a county, judicial circuit, or Illinois: 
+				        	<select id="CountySelector" name="ICJIANumber">
+					        	<option value="999">Illinois</option>
+								<option value="1">Adams</option>
+								<option value="2">Alexander</option>
+								<option value="3">Bond</option>
+								<option value="4">Boone</option>
+								<option value="5">Brown</option>
+								<option value="6">Bureau</option>
+								<option value="7">Calhoun</option>
+								<option value="8">Carroll</option>
+								<option value="9">Cass</option>
+								<option value="10">Champaign</option>
+								<option value="11">Christian</option>
+								<option value="12">Clark</option>
+								<option value="13">Clay</option>
+								<option value="14">Clinton</option>
+								<option value="15">Coles</option>
+								<option value="16">Cook</option>
+								<option value="17">Crawford</option>
+								<option value="18">Cumberland</option>
+								<option value="19">DeKalb</option>
+								<option value="20">De Witt</option>
+								<option value="21">Douglas</option>
+								<option value="22">DuPage</option>
+								<option value="23">Edgar</option>
+								<option value="24">Edwards</option>
+								<option value="25">Effingham</option>
+								<option value="26">Fayette</option>
+								<option value="27">Ford</option>
+								<option value="28">Franklin</option>
+								<option value="29">Fulton</option>
+								<option value="30">Gallatin</option>
+								<option value="31">Greene</option>
+								<option value="32">Grundy</option>
+								<option value="33">Hamilton</option>
+								<option value="34">Hancock</option>
+								<option value="35">Hardin</option>
+								<option value="36">Henderson</option>
+								<option value="37">Henry</option>
+								<option value="38">Iroquois</option>
+								<option value="39">Jackson</option>
+								<option value="40">Jasper</option>
+								<option value="41">Jefferson</option>
+								<option value="42">Jersey</option>
+								<option value="43">Jo Daviess</option>
+								<option value="44">Johnson</option>
+								<option value="45">Kane</option>
+								<option value="46">Kankakee</option>
+								<option value="47">Kendall</option>
+								<option value="48">Knox</option>
+								<option value="49">Lake</option>
+								<option value="50">LaSalle</option>
+								<option value="51">Lawrence</option>
+								<option value="52">Lee</option>
+								<option value="53">Livingston</option>
+								<option value="54">Logan</option>
+								<option value="55">McDonough</option>
+								<option value="56">McHenry</option>
+								<option value="57">McLean</option>
+								<option value="58">Macon</option>
+								<option value="59">Macoupin</option>
+								<option value="60">Madison</option>
+								<option value="61">Marion</option>
+								<option value="62">Marshall</option>
+								<option value="63">Mason</option>
+								<option value="64">Massac</option>
+								<option value="65">Menard</option>
+								<option value="66">Mercer</option>
+								<option value="67">Monroe</option>
+								<option value="68">Montgomery</option>
+								<option value="69">Morgan</option>
+								<option value="70">Moultrie</option>
+								<option value="71">Ogle</option>
+								<option value="72">Peoria</option>
+								<option value="73">Perry</option>
+								<option value="74">Piatt</option>
+								<option value="75">Pike</option>
+								<option value="76">Pope</option>
+								<option value="77">Pulaski</option>
+								<option value="78">Putnam</option>
+								<option value="79">Randolph</option>
+								<option value="80">Richland</option>
+								<option value="81">Rock Island</option>
+								<option value="82">St. Clair</option>
+								<option value="83">Saline</option>
+								<option value="84">Sangamon</option>
+								<option value="85">Schuyler</option>
+								<option value="86">Scott</option>
+								<option value="87">Shelby</option>
+								<option value="88">Stark</option>
+								<option value="89">Stephenson</option>
+								<option value="90">Tazewell</option>
+								<option value="91">Union</option>
+								<option value="92">Vermilion</option>
+								<option value="93">Wabash</option>
+								<option value="94">Warren</option>
+								<option value="95">Washington</option>
+								<option value="96">Wayne</option>
+								<option value="97">White</option>
+								<option value="98">Whiteside</option>
+								<option value="99">Will</option>
+								<option value="100">Williamson</option>
+								<option value="101">Winnebago</option>
+								<option value="102">Woodford</option>
+								<option value="1001">1st Circuit</option>
+								<option value="1002">2nd Circuit</option>
+								<option value="1003">3rd Circuit</option>
+								<option value="1004">4th Circuit</option>
+								<option value="1005">5th Circuit</option>
+								<option value="1006">6th Circuit</option>
+								<option value="1007">7th Circuit</option>
+								<option value="1008">8th Circuit</option>
+								<option value="1009">9th Circuit</option>
+								<option value="1010">10th Circuit</option>
+								<option value="1011">11th Circuit</option>
+								<option value="1012">12th Circuit</option>
+								<option value="1013">13th Circuit</option>
+								<option value="1014">14th Circuit</option>
+								<option value="1015">15th Circuit</option>
+								<option value="1016">16th Circuit</option>
+								<option value="1017">17th Circuit</option>
+								<option value="1018">18th Circuit</option>
+								<option value="1019">19th Circuit</option>
+								<option value="1020">20th Circuit</option>
+								<option value="1021">21st Circuit</option>
+								<option value="1022">22nd Circuit</option>
+								<option value="1088">Cook County (Circuit)</option>
+							</select>
+						</p></div>
+							
+						<p><input type="submit" id="getProfile" value="Retrieve profile">
+						<span id="ToolStatus"></span></p>
+					</form>	
+	</div>
+<!--END POWERS-->
 
-<div class="Outputcontainer" id="ProfilesContainer" style="width: 900px; margin-top: 50px; margin-left: auto; margin-right: auto; padding-bottom: 50px">
-
-<cfset SelectedICJIANumber = INT(#url.ICJIANumber#) />
-
-<!---obtain CircuitCook88 value and potential text--->
-<cfquery name="GetCircuit" datasource="RADBP">
-	SELECT CircuitCook88, CountyName ,ShowCircuitText
-	FROM dbo_Counties
-	WHERE ICJIANumber=<cfqueryparam value="#url.ICJIANumber#" cfsqltype="CF_SQL_INTEGER" />
-	;
-</cfquery>
-<cfset CircuitNumber=INT(#GetCircuit.CircuitCook88#)>
-
-
-
-<!---Get number of counties within circuit--->
-<cfquery name = "CountyCount" datasource="RADBP">
-	SELECT GeographyID, NumCounties
-	FROM Qry_CountOfCountiesInCircuit
-	WHERE GeographyID = <cfqueryparam value="#url.ICJIANumber#" cfsqltype="CF_SQL_INTEGER" />;	
-</cfquery>
-
-<!---Get minimum and maximum years to show data for each profile--->
-<cfquery name="MinMaxYears" datasource="RADBP">
-	SELECT DataGroupNumber, MinYear, MaxYear
-    FROM dbo_MinMaxYearsToShow
-	WHERE DataGroupNumber IN (<cfqueryparam 
-								value="#url.ProfileNumber#" 
-								cfsqltype="CF_SQL_INTEGER" 
-								list="yes"/>);	
-</cfquery>
-
-
-<!---Main query, QoQ will be performed on this--->
-<cfquery name="WTP" datasource="RADBP">  
-	SELECT *
-    FROM Qry_WebTablePivot
-	WHERE CircuitCook88 = #CircuitNumber#
-	;	
-</cfquery>
-
-
-
-
-
-
-
-
-<!---Generate Geography Name to be used in title and other sections--->
-
-<cfloop index="ListElement" list="#url.ProfileNumber#">
-
-	<cfif #url.ICJIANumber# GTE 1 AND #url.ICJIANumber# LTE 102>
-		<cfif #ListElement# GT 20>
-		<cfset GeographyName = #GetCircuit.CountyName# & ' County'>
-		<cfelse>
-		<cfset GeographyName = 'the ' & #GetCircuit.ShowCircuitText#>
-		</cfif>
-	</cfif>
-	<cfif #url.ICJIANumber# EQ 999>
-		<cfset GeographyName = #GetCircuit.CountyName#>
-	</cfif>
-	<cfif #url.ICJIANumber# GTE 1001 AND #url.ICJIANumber# LTE 1088>
-		<cfset GeographyName = 'the ' & #GetCircuit.CountyName#>
-	</cfif>
-
-<cfset ProfileTemp = "Profile" & #ListElement# & ".cfm" />
-<cfinclude template="#ProfileTemp#">
-</cfloop>
-
-
-
-<cfinclude template="ProfilePopTables.cfm">
-
-
-</div>
  <footer class="no-print">
 
 

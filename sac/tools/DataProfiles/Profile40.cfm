@@ -117,9 +117,9 @@ The data in this profile are from an ICJIA analysis of data provided by the IDOC
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="TimeSeriesContainer_PrisonExitsByType" class="HC_TimeSeries DataTableBefore" style="min-width: 310px; min-height: 500px; margin: 0 auto"></div>
-	<div id="piecontainer_PrisonAdmits_ExitType_Count_First" class="HC_Pie FirstChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer_PrisonAdmits_ExitType_Count_Last" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="TimeSeriesContainer_PrisonExitsByType" class="HC_TimeSeries DataTableBefore"></div>
+	<div id="piecontainer_PrisonAdmits_ExitType_Count_First" class="HC_Pie FirstChart DataTableBefore"></div>
+	<div id="piecontainer_PrisonAdmits_ExitType_Count_Last" class="HC_Pie LastChart DataTableBefore"></div>
 </div>
 
 
@@ -157,10 +157,10 @@ The data in this profile are from an ICJIA analysis of data provided by the IDOC
 <!---output an empty list for circuits with more than one county. This will be filled in with descriptives of the table with javascript--->
 
 
-	<div id="TimeSeriesContainer_PrisonExitsByCounty_Circuit" class="HC_TimeSeries DataTableBefore" style="min-width: 310px; min-height: 500px; margin: 0 auto"></div>
+	<div id="TimeSeriesContainer_PrisonExitsByCounty_Circuit" class="HC_TimeSeries DataTableBefore"></div>
 	<cfif #CountyCount.NumCounties# GT 1>
-	<div id="piecontainer_PrisonExits_Counts" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer_Population_PrisonExits_Total" class="HC_Pie LastChart Population_Total" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_PrisonExits_Counts" class="HC_Pie LastChart DataTableBefore"></div>
+	<div id="piecontainer_Population_PrisonExits_Total" class="HC_Pie LastChart Population_Total"></div>
 	</cfif>
 	<hr><hr>
 </div>
@@ -169,11 +169,11 @@ The data in this profile are from an ICJIA analysis of data provided by the IDOC
 
 
 <div id="NewPrisonExitsRateByCountySection">
-<h2>Prison Exit Rates by County</h2>
+<h2>Prison Exit Rate by County</h2>
 <p>The following new court prison exit rates per 100,000 people are calculated by using the total county population from Census 
 	estimates (population data is available at the end of this profile).</p>
 	<table id="datatable_Rate" class="IDOC trendTable">
-		<caption class="TableTitle">Prison Exit Rates</caption>
+		<caption class="TableTitle">Prison Exit Rate</caption>
 		<thead>
 			<th>Geography</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -194,7 +194,7 @@ The data in this profile are from an ICJIA analysis of data provided by the IDOC
 		</tr>
 		</cfoutput>
 	</table>
-<div id="TimeSeriesContainer_PrisonExitsByCounty" class="HC_TimeSeries DataTableBefore" style="min-width: 310px; min-height: 500px; margin: 0 auto"></div>	
+<div id="TimeSeriesContainer_PrisonExitsByCounty" class="HC_TimeSeries DataTableBefore"></div>	
 </div>
 <hr><hr>
 
@@ -228,8 +228,8 @@ The data in this profile are from an ICJIA analysis of data provided by the IDOC
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="piecontainer_PrisonExits_Age" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer_Population_PrisonExits_Age" class="HC_Pie LastChart Population_ByAge" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_PrisonExits_Age" class="HC_Pie LastChart DataTableBefore"></div>
+	<div id="piecontainer_Population_PrisonExits_Age" class="HC_Pie LastChart Population_ByAge"></div>
 </div>
 <hr><hr>
 
@@ -263,8 +263,8 @@ The data in this profile are from an ICJIA analysis of data provided by the IDOC
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="piecontainer_PrisonExits_Sex" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer_Population_PrisonExits_Sex" class="HC_Pie LastChart Population_BySex" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_PrisonExits_Sex" class="HC_Pie LastChart DataTableBefore"></div>
+	<div id="piecontainer_Population_PrisonExits_Sex" class="HC_Pie LastChart Population_BySex"></div>
 	
 </div>
 <hr><hr>
@@ -297,8 +297,8 @@ The data in this profile are from an ICJIA analysis of data provided by the IDOC
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="piecontainer_PrisonExits_Race" class="HC_Pie LaststChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer_Population_PrisonExits_Race" class="HC_Pie LastChart Population_ByRaceEth" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_PrisonExits_Race" class="HC_Pie LaststChart DataTableBefore"></div>
+	<div id="piecontainer_Population_PrisonExits_Race" class="HC_Pie LastChart Population_ByRaceEth"></div>
 	
 </div>
 <hr><hr>
@@ -342,8 +342,8 @@ Class X offenses include armed robbery, manufacture and delivery of controlled s
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="piecontainer_PrisonExits_Class_First" class="HC_Pie FirstChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
-	<div id="piecontainer_PrisonExits_Class_Last" class="HC_Pie LastChart DataTableBefore" style="height: 300px; width: 400px; display: inline-block"></div>
+	<div id="piecontainer_PrisonExits_Class_First" class="HC_Pie FirstChart DataTableBefore"></div>
+	<div id="piecontainer_PrisonExits_Class_Last" class="HC_Pie LastChart DataTableBefore"></div>
 	
 </div>
 <hr><hr>
@@ -402,7 +402,7 @@ The offense type for the exit is determined by the offense that will keep the pe
 		</tr>
 		</cfoutput>
 	</table>
-<div id="BarContainer_PrisonExits_WebCat" class="HC_Bar DataTableBefore" style="height: 500px; width: 600px; display: inline-block"></div>
+<div id="BarContainer_PrisonExits_WebCat" class="HC_Bar DataTableBefore"></div>
 </div>
 
 <hr><hr class="hr-split">

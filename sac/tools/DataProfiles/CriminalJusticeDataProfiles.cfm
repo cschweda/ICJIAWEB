@@ -367,6 +367,26 @@
 <!--BEGIN POWERS-->
 
 <div class="container" id="FormContainer" style="width:600px; margin-top: 50px; margin-left: auto; margin-right: auto; padding-bottom: 50px">
+<script>
+//validate at least one checkbox is selected
+var checkCounter=0
+
+$(function ($) {
+    $('#ProfileSelector').submit(function (e) {
+		checkCounter = checkCounter + 1
+	    $('#ToolStatus').text("")
+        if (!$('.required').is(':checked')) {
+            //prevent the default form submit if it is not checked
+            e.preventDefault();
+       		checkCounter = checkCounter + 1
+            $('#ToolStatus').text("Select at least one checkbox above.")
+            if (checkCounter >=5) {$('#ToolStatus').text("Insanity: doing the same thing over and over again and expecting different results.")}
+        }
+    })
+})
+</script>
+
+
 <h2>ICJIA Criminal Justice Data Profiles</h2>
 <p>Data profiles for arrests, convictions, prison admissions, and prison exits are available at the county, judicial circuit, and statewide level. These profiles
 show a variety of charts and statistics about the chosen area and data theme.</p>
@@ -386,7 +406,7 @@ show a variety of charts and statistics about the chosen area and data theme.</p
 											
 						<div id="CountySelector"><p><b>Step 2 -</b> Select a county, judicial circuit, or Illinois: 
 				        	<select id="CountySelector" name="ICJIANumber">
-					        	<!---<option value="999">Illinois</option>--->
+					        	<option value="999">Illinois</option>
 								<option value="1">Adams</option>
 								<option value="2">Alexander</option>
 								<option value="3">Bond</option>

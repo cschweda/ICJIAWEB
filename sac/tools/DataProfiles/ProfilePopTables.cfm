@@ -1,6 +1,7 @@
 <!---<cfif #DashboardNumberPrep#  EQ 30 OR #DashboardNumberPrep# EQ 40>
 	<cfset MinAge = 17>
 </cfif>--->
+
 <cfquery dbtype="query" name="PopulationCount" >
 	SELECT *
 	FROM WTP
@@ -14,8 +15,9 @@
 	FROM WTP
 	WHERE MainCatnumber=5
 	AND DataGroupNumber=100
-	AND GeographyType=100
+	AND GeographyType=#GeographyTypeForPopulationSubgroups#
 	AND SubCatNum <>5 AND SubCatNum <>255
+	AND GeographyID =#SelectedICJIANumber#
 	ORDER BY SortOrder, GeographyName;
 </cfquery>
 
@@ -25,7 +27,8 @@
 	WHERE MainCatnumber=15
 	AND DataGroupNumber=100
 	AND SubCatNum <>255
-	AND GeographyType=100
+	AND GeographyType=#GeographyTypeForPopulationSubgroups#
+	AND GeographyID =#SelectedICJIANumber#
 	ORDER BY SortOrder, GeographyName;
 </cfquery>
 
@@ -34,7 +37,8 @@
 	FROM WTP
 	WHERE MainCatnumber=10
 	AND DataGroupNumber=100
-	AND GeographyType=100
+	AND GeographyType=#GeographyTypeForPopulationSubgroups#
+	AND GeographyID =#SelectedICJIANumber#
 	ORDER BY SortOrder, GeographyName;
 </cfquery>
 
@@ -43,7 +47,8 @@
 	FROM WTP
 	WHERE MainCatnumber=11
 	AND DataGroupNumber=100
-	AND GeographyType=100
+	AND GeographyType=#GeographyTypeForPopulationSubgroups#
+	AND GeographyID =#SelectedICJIANumber#
 	ORDER BY SortOrder, GeographyName;
 </cfquery>
 
@@ -51,6 +56,7 @@
 <div id="PopulationTables">
 <h1 id="PopulationHeading">Population Data</h1>	
 <p>Populations used in rate calculations and the various charts above are available below.</p>
+
 	<table id="datatable_populationTotal" class="Population trendTable">
 	<caption class="TableTitle">Circuit Population By County</caption>
 		<thead>
