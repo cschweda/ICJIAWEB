@@ -32,11 +32,11 @@ $(function() {
         dataLabels: {
           enabled: true
         },
-        enableMouseTracking: true
+        enableMouseTracking: false
       }
     },
     series: [{
-      name: 'Data source: Illinois Department of Human Services, Budget Briefing<br/>Note: General revenue funds only',
+      name: 'Source: Illinois Department of Human Services, Budget Briefing<br/>Note: General revenue funds only',
       data: [164423, 164540, 109463, 147232, 104887, 130144, 120046,
         118856, 124274
       ]
