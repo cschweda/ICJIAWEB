@@ -73,9 +73,7 @@
 
           <div class="flex-content">
             <h2 class="h3 text-center" style="text-transform: uppercase; font-weight: 900; margin-bottom: 8px">Find a Council</h2>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-          totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-          dicta sunt explicabo.</p>
+          <p>Councils provide professional education and prevention; coordinate interventions and services for victims and perpetrators; and contribute to both the improvement of the legal system and the administration of justice.</p>
           <div class="text-center">
           <a class="btn btn-default heavy scrollclass" data-target="#find-a-council" style="pointer" role="button">Find out More&nbsp;&nbsp;<i class="fa fa-angle-double-down" style="font-weight: 900"></i></a>
         </div>
@@ -88,9 +86,7 @@
 
           <div class="flex-content">
             <h2 class="h3 text-center" style="text-transform: uppercase; font-weight: 900; margin-bottom: 8px">About the IFVCC</h2>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-          totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-          dicta sunt explicabo.</p>
+          <p>Family Violence Coordinating Councils, at both the state and local/circuit levels, provide a forum to improve the institutional, professional and community response to family violence.</p><br/>
           <div class="text-center">
           <a class="btn btn-default heavy scrollclass" data-target="#about-the-ifvcc" style="pointer" role="button">Find out More&nbsp;&nbsp;<i class="fa fa-angle-double-down" style="font-weight: 900"></i></a>
         </div>

@@ -598,10 +598,14 @@ section.breadcrumbs {
   text-decoration: none;
 }
 
-.project-left-margin {
+.project, .partner {margin-top: 35px; font-weight: 700}
+
+.project.first, .partner.first {margin-top: 0}
+
+.project-left-margin, .page-left-margin {
   padding-left: 15px;
 }
 
-.project-content {
+.project-content, .partner-content {
   margin-left: 30px;
 }
