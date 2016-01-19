@@ -1,18 +1,5 @@
 $(function() {
   Highcharts.setOptions({
-    credits: {
-      enabled: false
-    },
-    exporting: {
-      buttons: {
-        enabled: true
-      }
-    },
-    navigation: {
-      buttonOptions: {
-        enabled: false
-      }
-    },
     lang: {
       thousandsSep: ','
     }
@@ -45,7 +32,7 @@ $(function() {
         dataLabels: {
           enabled: true
         },
-        enableMouseTracking: false
+        enableMouseTracking: true
       }
     },
     series: [{
@@ -54,6 +41,35 @@ $(function() {
         118856, 124274
       ]
 
+    }]
+  });
+});
+
+
+$(function() {
+  $('#hc-fig1').highcharts({
+    chart: {
+      type: 'bar'
+    },
+    title: {
+      text: 'Figure 1'
+    },
+
+    subtitle: {
+      text: 'Illinois criminal justice system drug offender population'
+    },
+
+    xAxis: {
+      categories: ['Jail', 'Prison', 'Probation']
+    },
+    yAxis: {
+      title: {
+        text: 'Percentage'
+      }
+    },
+    series: [{
+      name: 'Source: ADAM and Illinois Department of Corrections',
+      data: [50, 19, 28]
     }]
   });
 });
