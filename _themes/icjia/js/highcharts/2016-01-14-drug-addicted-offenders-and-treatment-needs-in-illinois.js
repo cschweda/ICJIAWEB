@@ -10,6 +10,7 @@ $(function() {
     },
     title: {
       text: 'Figure 2'
+
     },
     subtitle: {
       text: 'State Funding For Addiction Treatment 2007 - 2015'

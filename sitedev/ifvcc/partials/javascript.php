@@ -15,11 +15,6 @@ $(function() {
         event.preventDefault();
     });
 });
-</script>
-
-
-
-<script>
 
 
 
@@ -43,18 +38,21 @@ $(function() {
                   // label = suffix + ' Circuit';
                 }
 
+
+
                 $('#foobar').html(label);
 
             },
 
             "entityClick": function(evt, data) {
                 circuit=data.value / 10;
-                displayURL='/sitedev/ifvcc/data/display-circuit.php?c=circuit-' + circuit;
-
+                displayURL='/sitedev/ifvcc/data/display-circuit.php?c=circuit-' + padToThree(circuit);
+                //console.log('Circuit ' + circuit + ' Padded: ' + padToThree(circuit));
                 $('#circuit-info').html('<div style="text-align: center;"><h5>Loading circuit information ...&nbsp;&nbsp;<i class="fa fa-spinner fa-spin"></i></h5></div>');
                 $('#circuit-info').load(displayURL);
                 $('.display-panel').show();
                 $('#map-instructions').hide();
+                console.log(displayURL)
 
             },
         }
@@ -78,13 +76,12 @@ function ordinal_suffix_of(i) {
 }
 
 
+function padToThree(number) {
+  if (number<=999) { number = ("00"+number).slice(-3); }
+  return number;
+}
 
 
-
-</script>
-
-
-<script>
     $('.carousel').carousel({
         interval: 10000 //changes the speed
     })

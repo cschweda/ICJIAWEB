@@ -10,7 +10,7 @@ h2.h5 {font-weight: 700}
 
 
 <h2 class="h5 rule">Counties Served</h2>
-<img src='/sitedev/ilfvcc/img/logo-no-text.png' width='75' style="float: left; padding-right: 10px; margin-top: 10px; padding-bottom: 0px">
+<img src='/sitedev/ifvcc/img/logo-no-text.png' width='75' style="float: left; padding-right: 10px; margin-top: 10px; padding-bottom: 0px">
 <p style="margin-bottom: 30px">
 Christian, Clay, Clinton, Effingham, Fayette, Jasper, Marion, Montgomery, Shelby</p>
 
