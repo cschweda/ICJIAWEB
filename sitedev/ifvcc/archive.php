@@ -44,7 +44,7 @@
 
   <div class="container">
     <div class="col-md-2"></div>
-    <div class="col-md-9" style="border-left: 1px solid #eee;">
+    <div class="col-md-9 page-left-border">
       <div class="page-left-margin">
 
 
@@ -75,17 +75,23 @@
 
 
 
-<h2 class="h4 rule project first" style="font-weight: 700">Domestic Violence Court Systems Project</h2>
+<h2 class="h4 rule project" style="font-weight: 700">Domestic Violence Court Systems Project</h2>
 
 
 
 <p>The Domestic Violence Court Systems Project was designed to examine Illinois’ domestic violence courts. Site visits were conducted to gather information on how the courts were developed and how they operate and to identify effective procedures and practices for use across state domestic violence courts.  Courts examined were in Champaign, DuPage, Kane, Kankakee, Lake, LaSalle, Madison, Peoria, Sangamon, St. Clair, and Will counties, and in Cook County’s six municipal districts. A network of domestic violence court system personnel also was developed to facilitate information sharing.</p>
 <ul>
-<li>Domestic Violence Court Systems Self Assessment</li>
-<li>Domestic Violence Court Systems Summary Report</li>
-<li>Cook County Summary Report</li>
+<li><a href="/assets/ifvcc/DVCS Project Attachments/Domestic Violence Court Systems Self Assessment.pdf">Domestic Violence Court Systems Self Assessment</a></li>
+<li><a href="/assets/ifvcc/DVCS Project Attachments/Domestic Violence Court Systems Summary Report.pdf">Domestic Violence Court Systems Summary Report</a></li>
+<li><a href="/assets/ifvcc/DVCS Project Attachments/Cook County Summary Report.pdf">Cook County Summary Report</a></li>
 </ul>
 
+
+
+<h2 class="h4 rule project" style="font-weight: 700">Visitation Exchange Project</h2>
+
+
+<p>The safe exchange of children affects many domains of the court, including domestic relations, parentage, child support, domestic violence, probate, mental health, and child protection. The Visitation Exchange Project was based on a fundamental understanding and respect for the needs and rights of children and parents to interact with each other in an appropriate and sensitive environment. Individual visitation exchange reports were compiled on visitation exchange sites in DuPage, Madison, McLean, Peoria, Rock Island, St. Clair, Will counties. A summary report also was completed comparing site services and policies, commonly accepted principles for safety, and court requirements for services. The report offered illustrations of emerging trends and the centers’ unique characteristics.</p>
 
 
 

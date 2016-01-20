@@ -609,3 +609,6 @@ section.breadcrumbs {
 .project-content, .partner-content {
   margin-left: 30px;
 }
+
+
+.page-left-border {border-left: 1px solid #eee;}
