@@ -1,0 +1,64 @@
+title: IFVCC Councils
+
+fields:
+  _template:
+    type: hidden
+    default: council
+
+  _layout:
+    type: hidden
+    default: ifvcc-minimal
+
+  circuitTitle:
+    display: Full circuit title
+    required: false
+    default:
+    type: text
+
+  counties:
+    display: Counties
+    required: false
+    default:
+    type: redactor
+
+
+  leadership:
+    display: Council Leadership
+    required: false
+    default:
+    type: redactor
+
+
+  coordinator:
+    display: Council Coordinator
+    required: false
+    default:
+    type: redactor
+
+
+  committees:
+    display: Committees
+    required: false
+    default:
+    type: redactor
+
+
+  publications:
+    display: Publications
+    required: false
+    default:
+    type: redactor
+
+
+  socialMedia:
+    display: Social media
+    required: false
+    default:
+    type: redactor
+
+
+  content:
+    display: Additional Content
+    required: false
+    default:
+    type: redactor

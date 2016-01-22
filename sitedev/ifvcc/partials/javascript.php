@@ -1,6 +1,11 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 
+
+
+<!-- https://silviomoreto.github.io/bootstrap-select/ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.4/js/bootstrap-select.min.js"></script>
+
 <script>
 //jQuery to collapse the navbar on scroll
 

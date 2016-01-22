@@ -1,0 +1,50 @@
+
+<style>
+.rule {padding-bottom: 5px; border-bottom: 1px solid #ddd}
+h2.h5 {font-weight: 700}
+</style>
+
+
+<h2 class="h4 text-center" style="font-weight: 700; margin-bottom: 35px;">{{circuitTitle}}</h2>
+<h2 class="h5 rule">Counties Served</h2>
+<!-- <img src='/sitedev/ifvcc/img/logo-no-text.png' width='75' style="float: left; padding-right: 10px; margin-top: 10px; padding-bottom: 0px"> -->
+<div style="margin-bottom: 30px">
+{{if counties}}
+  {{counties}}
+{{else}}
+  n/a
+{{endif}}
+</p>
+
+<h2 class="h5 rule">Council Leadership</h2>
+{{if leadership}}
+  {{leadership}}
+{{else}}
+n/a
+{{endif}}
+<h2 class="h5 rule">Coordinator</h2>
+{{if coordinator}}
+  {{coordinator}}
+{{else}}
+  n/a
+{{endif}}
+
+<h2 class="h5 rule">Committees</h2>
+{{ if committees}}
+  {{committees}}
+{{else}}
+n/a
+{{endif}}
+<h2 class="h5 rule">Publications</h2>
+{{ if publications}}
+{{publications}}
+{{else}}
+n/a
+{{endif}}
+<h2 class="h5 rule">Social Media</h2>
+{{if socialMedia}}
+					{{socialMedia}}
+          {{else}}
+            --
+          {{endif}}
+</div>
