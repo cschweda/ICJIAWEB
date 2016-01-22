@@ -132,7 +132,7 @@
 
 
 <hr><hr>
-<cfif #CountyCount.NumCounties# GT 1 AND #SelectedICJIANumber# GT 102><!---Only outputting this for Circuits with more than one county--->
+<cfif #CountyCount.NumCounties# GT 1 AND #SelectedICJIANumber# GT 102 AND #SelectedICJIANumber# NEQ 999><!---Only outputting this for Circuits with more than one county--->
 <div id= "NewPrisonAdmitsByCountySection">
 <h2>New Court Prison Admissions by County</h2>
 <p>The data below show the commiting county for the new court prison admissions within the judicial circuit. Caution should be taken when 
