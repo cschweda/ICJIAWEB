@@ -233,11 +233,16 @@ $('#getCouncilSelect').on('changed.bs.select', function (e) {
     displayURL='/councils/' + circuit;
     console.log(displayURL);
     $('#circuit-info').html('<div style="text-align: center;"><h5>Loading circuit information ...&nbsp;&nbsp;<i class="fa fa-spinner fa-spin"></i></h5></div>');
-    $('#circuit-info').load(displayURL);
+    $('#circuit-info').load(displayURL).show();
     $('.display-panel').show();
     $('#map-instructions').hide();
+    
 } else {
-  return false;
+
+  $('#circuit-info').hide();
+  $('.display-panel').hide();
+  $('#map-instructions').show();
+
 }
 });
 
