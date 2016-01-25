@@ -51,7 +51,7 @@ $(function() {
 
             "entityClick": function(evt, data) {
                 circuit=data.value / 10;
-                displayURL='/sitedev/ifvcc/data/display-circuit.php?c=circuit-' + padToThree(circuit);
+                displayURL='/councils/' + padToThree(circuit);
                 //console.log('Circuit ' + circuit + ' Padded: ' + padToThree(circuit));
                 $('#circuit-info').html('<div style="text-align: center;"><h5>Loading circuit information ...&nbsp;&nbsp;<i class="fa fa-spinner fa-spin"></i></h5></div>');
                 $('#circuit-info').load(displayURL);

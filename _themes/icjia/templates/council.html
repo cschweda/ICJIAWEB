@@ -3,54 +3,77 @@
 .rule {padding-bottom: 5px; border-bottom: 1px solid #ddd}
 h2.h5 {font-weight: 700}
 .panel-title {text-transform: uppercase}
+.council-content {margin-bottom: 30px}
 </style>
 
 
-<div class="panel panel-default">
+
+
+<div class="panel panel-default" style="margin-top: 40px">
   <div class="panel-heading">
     <h3 class="panel-title text-center">{{circuitTitle}}</h3>
   </div>
   <div class="panel-body">
+
+    <div class="text-center" style="color: #888; font-size: 14px; margin-top: 20px; margin-bottom: 30px">Please contact coordinator for more information.</div>
+
+    {{if counties}}
     <h2 class="h5 rule">Counties Served</h2>
     <!-- <img src='/sitedev/ifvcc/img/logo-no-text.png' width='75' style="float: left; padding-right: 10px; margin-top: 10px; padding-bottom: 0px"> -->
-    <div style="margin-bottom: 30px">
-    {{if counties}}
+
+      <div class="council-content">
       {{counties}}
-    {{else}}
-      n/a
+      </div>
+
     {{endif}}
-    </p>
+
+
+    {{if leadership}}
 
     <h2 class="h5 rule">Council Leadership</h2>
-    {{if leadership}}
+
+        <div class="council-content">
       {{leadership}}
-    {{else}}
-    n/a
-    {{endif}}
-    <h2 class="h5 rule">Coordinator</h2>
-    {{if coordinator}}
-      {{coordinator}}
-    {{else}}
-      n/a
+      </div>
+
     {{endif}}
 
+      {{if coordinator}}
+    <h2 class="h5 rule">Coordinator</h2>
+
+      <div class="council-content">
+      {{coordinator}}
+      </div>
+
+    {{endif}}
+
+      {{ if committees}}
     <h2 class="h5 rule">Committees</h2>
-    {{ if committees}}
+
+      <div class="council-content">
       {{committees}}
-    {{else}}
-    n/a
+      </div>
+
     {{endif}}
+
+
+      {{ if publications}}
     <h2 class="h5 rule">Publications</h2>
-    {{ if publications}}
+
+      <div class="council-content">
     {{publications}}
-    {{else}}
-    n/a
+    </div>
+
     {{endif}}
-    <h2 class="h5 rule">Social Media</h2>
+
+
     {{if socialMedia}}
+    <h2 class="h5 rule">Social Media</h2>
+
+            <div class="council-content">
     					{{socialMedia}}
-              {{else}}
-                --
+              </div>
+
               {{endif}}
-  </div>
+
 </div>

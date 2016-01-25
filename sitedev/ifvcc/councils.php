@@ -44,8 +44,8 @@
 
   <div class="container">
     <div class="col-md-2"></div>
-    <div class="col-md-9 page-left-border">
-      <div class="page-left-margin">
+    <div class="col-md-9">
+      <div class="">
 
 
         <h2 class="h3" style="text-transform: uppercase; font-weight: 700">IFVCC Councils</h2>
@@ -58,13 +58,13 @@
 
 
 
-        <div class="archive-content">
+        <div class="council-content" style="margin-bottom: 100px">
 <style>.btn {color: #000}</style>
 
           <div class="text-center">
           <select class="selectpicker" id="getCouncilSelect" data-dropup-auto="false" data-live-search="true">
           <option value="000">Please select a county</option>
-        <option value="001">Adams</option>
+        <option value="008">Adams</option>
         <option value="001">Alexander</option>
         <option value="Bond">Bond</option>
         <option value="Boone">Boone</option>
@@ -177,20 +177,11 @@
 <div id="map-instructions" class="text-center well" style="margin-top: 60px">
 
   <img src='/sitedev/ifvcc/img/logo3-purple-black.png' width='150' style='margin-top: 30px; margin-bottom: 30px'>
-  <h2 class="h3">Select a county to view circuit information</h2>
+  <!-- <h2 class="h3">Select a county to view circuit information</h2> -->
 </div>
 
 
   <div id="circuit-info"></div>
-<!--
-<div class="panel panel-default display-panel">
-  <div class="panel-heading" style="font-weight: 900; font-size: 20px">
-    CIRCUIT HEADING HERE
-  </div>
-  <div class="panel=body" style="padding-left: 15px; padding-right: 15px; font-size: 14px">
-    <div id="circuit-info"></div>
-  </div>
-</div> -->
 
 
 
@@ -236,7 +227,7 @@ $('#getCouncilSelect').on('changed.bs.select', function (e) {
     $('#circuit-info').load(displayURL).show();
     $('.display-panel').show();
     $('#map-instructions').hide();
-    
+
 } else {
 
   $('#circuit-info').hide();

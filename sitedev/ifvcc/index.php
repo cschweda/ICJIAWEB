@@ -117,7 +117,7 @@
   <div class="container section-content">
 
     <div class="col-md-12">
-        <h2 class="h3" style="text-transform: uppercase; font-weight: 900; border-bottom: 1px solid #ccc; padding-bottom: 8px; margin-bottom: 40px">Find a Council</h2>
+        <h2 class="h3" style="text-transform: uppercase; font-weight: 900; border-bottom: 1px solid #ccc; padding-bottom: 8px; margin-bottom: 40px">Find a Council Near You</h2>
     </div>
 
     <div class="col-md-6 text-center">
@@ -129,7 +129,7 @@
 
     <div class="col-md-6" >
 
-
+<div style="padding-right: 20px">
       <div id="map-instructions" class="text-center well" style="margin-top: 60px">
 
         <img src='/sitedev/ifvcc/img/logo3-purple-black.png' width='150' style='margin-top: 30px; margin-bottom: 30px'>
@@ -137,15 +137,10 @@
       </div>
 
 
+        <div id="circuit-info"></div>
 
-      <div class="panel panel-default display-panel">
-        <div class="panel-heading" style="font-weight: 900; font-size: 20px">
-          CIRCUIT HEADING HERE
-        </div>
-        <div class="panel=body" style="padding-left: 15px; padding-right: 15px; font-size: 14px">
-          <div id="circuit-info"></div>
-        </div>
-      </div>
+
+    </div>
     </div>
 
   </div>
