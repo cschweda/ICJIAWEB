@@ -36,7 +36,7 @@ $(function() {
 
 
                 suffix = ordinal_suffix_of(circuit);
-                if (circuit == '100') {
+                if (circuit == '500') {
                   label = 'Cook County | Cook';
                 } else {
                   label = data.label + ' County ' + ' | ' + suffix + ' Circuit';
@@ -52,6 +52,7 @@ $(function() {
             "entityClick": function(evt, data) {
                 circuit=data.value / 10;
                 displayURL='/councils/' + padToThree(circuit);
+                console.log(data.value);
                 //console.log('Circuit ' + circuit + ' Padded: ' + padToThree(circuit));
                 $('#circuit-info').html('<div style="text-align: center;"><h5>Loading circuit information ...&nbsp;&nbsp;<i class="fa fa-spinner fa-spin"></i></h5></div>');
                 $('#circuit-info').load(displayURL);
