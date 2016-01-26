@@ -56,7 +56,7 @@ showLegend="0">
 
 <data>
 		<entity id='001' value='080' toolText="Adams County{br}8th Circuit"/>
-		<entity id='003' value='100'  toolText="Alexander County{br} 10th Circuit"/>
+		<entity id='003' value='10'  toolText="Alexander County{br} 1st Circuit"/>
 		<entity id='005' value='030'  toolText="Bond County{br} 3rd Circuit"/>
 		<entity id='007' value='170'  toolText="Boone County{br} 17th Circuit"/>/>
 		<entity id='009' value='80'  toolText="Brown County{br} 8th Circuit"/>/>
@@ -93,12 +93,12 @@ showLegend="0">
 		<entity id='071' value='90'  toolText="Henderson County{br} 9th Circuit"/>
 		<entity id='073' value='140'  toolText="Henry County{br} 14th Circuit"/>
 		<entity id='075' value='210'  toolText="Iroquois County{br} 21st Circuit"/>
-		<entity id='077' value='100'  toolText="Jackson County{br} 10th Circuit"/>
+		<entity id='077' value='10'  toolText="Jackson County{br} 1st Circuit"/>
 		<entity id='079' value='40'  toolText="Jasper County{br} 4th Circuit"/>/>
 		<entity id='081' value='200'  toolText="Jefferson County{br} 20th Circuit"/>"/>
 		<entity id='083' value='70'  toolText="Jersey County{br} 7th Circuit"/>
 		<entity id='085' value='150'  toolText="Jo Daviess County{br} 15th Circuit"/>
-		<entity id='087' value='100'  toolText="Johnson County{br} 10th Circuit"/>
+		<entity id='087' value='10'  toolText="Johnson County{br} 1st Circuit"/>
 		<entity id='089' value='160'  toolText="Kane County{br} 16th Circuit"/>
 		<entity id='091' value='210'  toolText="Kankakee County{br} 21st Circuit"/>
 		<entity id='093' value='230'  toolText="Kendall County{br} 23rd Circuit"/>
@@ -117,46 +117,46 @@ showLegend="0">
 		<entity id='119' value='30'  toolText="Madison County{br} 3rd Circuit"/>
 		<entity id='121' value='40'  toolText="Marion County{br} 4th Circuit"/>/>
 		<entity id='123' value='100'  toolText="Marshall County{br} 10th Circuit"/>
-		<entity id='125' value='80'  toolText=" County{br} 8th Circuit"/>/>
-		<entity id='127' value='100'  toolText=" County{br} 10th Circuit"/>
-		<entity id='129' value='80'  toolText=" County{br} 8th Circuit"/>/>
-		<entity id='131' value='140'  toolText=" County{br} 14th Circuit"/>
-		<entity id='133' value='200'  toolText=" County{br} 20th Circuit"/>"/>
-		<entity id='135' value='40'  toolText=" County{br} 4th Circuit"/>/>
-		<entity id='137' value='70'  toolText=" County{br} 7th Circuit"/>
-		<entity id='139' value='60'  toolText=" County{br} 6th Circuit"/>/>
-		<entity id='141' value='150'  toolText=" County{br} 15th Circuit"/>
-		<entity id='143' value='100'  toolText=" County{br} 10th Circuit"/>
-		<entity id='145' value='200'  toolText=" County{br} 20th Circuit"/>"/>
-		<entity id='147' value='60'  toolText=" County{br} 6th Circuit"/>/>
-		<entity id='149' value='80'  toolText=" County{br} 8th Circuit"/>/>
-		<entity id='151' value='100'  toolText=" County{br} 10th Circuit"/>
-		<entity id='153' value='100'  toolText=" County{br} 10th Circuit"/>
-		<entity id='155' value='100'  toolText=" County{br} 10th Circuit"/>
-		<entity id='157' value='200'  toolText=" County{br} 20th Circuit"/>"/>
-		<entity id='159' value='200'  toolText=" County{br} 20th Circuit"/>"/>
-		<entity id='161' value='140'  toolText=" County{br} Circuit"/>
-		<entity id='163' value='200'  toolText=" County{br} 20th Circuit"/>"/>
-		<entity id='165' value='100'  toolText=" County{br} 10th Circuit"/>
-		<entity id='167' value='70'  toolText=" County{br} 7th Circuit"/>
-		<entity id='169' value='80'  toolText=" County{br} 8th Circuit"/>/>
-		<entity id='171' value='70'  toolText=" County{br} 7th Circuit"/>
-		<entity id='173' value='40'  toolText=" County{br} 4th Circuit"/>/>
-		<entity id='175' value='100'  toolText=" County{br} 10th Circuit"/>
-		<entity id='177' value='150'  toolText=" County{br} 15th Circuit"/>
-		<entity id='179' value='100'  toolText=" County{br} 10th Circuit"/>
-		<entity id='181' value='100'  toolText=" County{br} 10th Circuit"/>
-		<entity id='183' value='50'  toolText=" County{br} 5th Circuit"/>
-		<entity id='185' value='200'  toolText=" County{br} 20th Circuit"/>"/>
-		<entity id='187' value='90'  toolText=" County{br} 9th Circuit"/>
-		<entity id='189' value='200'  toolText=" County{br} 20th Circuit"/>"/>
-		<entity id='191' value='200'  toolText=" County{br} 20th Circuit"/>"/>
-		<entity id='193' value='200'  toolText=" County{br} 20th Circuit"/>"/>
-		<entity id='195' value='140'  toolText=" County{br} 14th Circuit"/>
-		<entity id='197' value='120'  toolText=" County{br} 12th Circuit"/>
-		<entity id='199' value='100'  toolText=" County{br} 10th Circuit"/>
-		<entity id='201' value='170'  toolText=" County{br} 17th Circuit"/>/>
-		<entity id='203' value='110'  toolText=" County{br} 11th Circuit"/>
+		<entity id='125' value='80'  toolText="Mason County{br} 8th Circuit"/>/>
+		<entity id='127' value='10'  toolText="Massac County{br} 1st Circuit"/>
+		<entity id='129' value='80'  toolText="Menard County{br} 8th Circuit"/>/>
+		<entity id='131' value='140'  toolText="Mercer County{br} 14th Circuit"/>
+		<entity id='133' value='200'  toolText="Monroe County{br} 20th Circuit"/>"/>
+		<entity id='135' value='40'  toolText="Montgomery County{br} 4th Circuit"/>/>
+		<entity id='137' value='70'  toolText="Morgan County{br} 7th Circuit"/>
+		<entity id='139' value='60'  toolText="Moultrie County{br} 6th Circuit"/>/>
+		<entity id='141' value='150'  toolText="Ogle County{br} 15th Circuit"/>
+		<entity id='143' value='100'  toolText="Peoria County{br} 10th Circuit"/>
+		<entity id='145' value='200'  toolText="Perry County{br} 20th Circuit"/>"/>
+		<entity id='147' value='60'  toolText="Piatt County{br} 6th Circuit"/>/>
+		<entity id='149' value='80'  toolText="Pike County{br} 8th Circuit"/>/>
+		<entity id='151' value='10'  toolText="Pope County{br} 1st Circuit"/>
+		<entity id='153' value='10'  toolText="Pulaski County{br} 1st Circuit"/>
+		<entity id='155' value='100'  toolText="Putnam County{br} 10th Circuit"/>
+		<entity id='157' value='200'  toolText="Randolph County{br} 20th Circuit"/>"/>
+		<entity id='159' value='200'  toolText="Richland County{br} 20th Circuit"/>"/>
+		<entity id='161' value='140'  toolText="Rock Island County{br} Circuit"/>
+		<entity id='163' value='200'  toolText="St. Clair County{br} 20th Circuit"/>"/>
+		<entity id='165' value='10'  toolText="Saline County{br} 1st Circuit"/>
+		<entity id='167' value='70'  toolText="Sangamon County{br} 7th Circuit"/>
+		<entity id='169' value='80'  toolText="Schuyler County{br} 8th Circuit"/>/>
+		<entity id='171' value='70'  toolText="Scott County{br} 7th Circuit"/>
+		<entity id='173' value='40'  toolText="Shelby County{br} 4th Circuit"/>/>
+		<entity id='175' value='100'  toolText="Stark County{br} 10th Circuit"/>
+		<entity id='177' value='150'  toolText="Stephenson County{br} 15th Circuit"/>
+		<entity id='179' value='100'  toolText="Tazewell County{br} 10th Circuit"/>
+		<entity id='181' value='10'  toolText="Union County{br} 1st Circuit"/>
+		<entity id='183' value='50'  toolText="Vermillion County{br} 5th Circuit"/>
+		<entity id='185' value='200'  toolText="Wasbash County{br} 20th Circuit"/>"/>
+		<entity id='187' value='90'  toolText="Warren County{br} 9th Circuit"/>
+		<entity id='189' value='200'  toolText="Washington County{br} 20th Circuit"/>"/>
+		<entity id='191' value='200'  toolText="Wayne County{br} 20th Circuit"/>"/>
+		<entity id='193' value='200'  toolText="White County{br} 20th Circuit"/>"/>
+		<entity id='195' value='140'  toolText="Whiteside County{br} 14th Circuit"/>
+		<entity id='197' value='120'  toolText="Will County{br} 12th Circuit"/>
+		<entity id='199' value='10'  toolText="Williamson County{br} 1st Circuit"/>
+		<entity id='201' value='170'  toolText="Winnebago County{br} 17th Circuit"/>/>
+		<entity id='203' value='110'  toolText="Woodford County{br} 11th Circuit"/>
 	</data>
 
 
