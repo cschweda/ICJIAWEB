@@ -433,8 +433,9 @@ footer ul a {
 /*#about-the-ifvcc {background: #51446C; color: #fff}*/
 
 #about-the-ifvcc {
-  background: #51446C;
-  color: #fff
+  /*background: #51446C;*/
+  background: #eee;
+  color: #000
 }
 
 .firstcharacter {

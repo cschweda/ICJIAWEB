@@ -98,9 +98,7 @@
 
           <div class="flex-content">
             <h2 class="h3 text-center" style="text-transform: uppercase; font-weight: 900; margin-bottom: 8px">News & Events</h2>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-          totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-          dicta sunt explicabo.</p>
+          <p>Local Councils provide opportunities for communication between criminal justice professionals and community service providers. Find out the latest news and information from the Illinois Family Violence Coordinating Councils.</p>
           <div class="text-center">
           <a class="btn btn-default heavy scrollclass" data-target="#about-the-ifvcc" style="pointer" role="button">Find out More&nbsp;&nbsp;<i class="fa fa-angle-double-down" style="font-weight: 900"></i></a>
           </div>
@@ -155,11 +153,10 @@
     <section id="about-the-ifvcc">
       <div class="container section-content">
 
-        <div class="col-md-7">
+        <div class="col-md-7" s>
           <h2 class="h3" style="text-transform: uppercase; font-weight: 900; border-bottom: 1px solid #fff; padding-bottom: 8px; margin-bottom: 20px">About the IFVCC</h2>
 
-          <!-- <img src='/sitedev/ifvcc/img/logo-placeholder-large.jpg' width='200' style="float: left; padding-right: 20px; margin-top: 10px; padding-bottom: 0px">
- -->
+          <div class="about-content" tyle="padding-right: 30px;">
 
           <p>
             <p><span class="firstcharacter">F</span>amily Violence Coordinating Councils, at both the state and local/circuit levels, provide a forum to improve the institutional, professional and community response to family violence including child abuse, domestic abuse, and elder abuse. Councils provide professional education and prevention; coordinate interventions and services for victims and perpetrators; and contribute to both the improvement of the legal system and the administration of justice.</p>
@@ -170,10 +167,57 @@
               Chief and circuit judges convene and chair the 23 local councils in all 102 counties in Illinois which are composed of policy-level decision makers who represent agencies and services to help intervene and prevent family violence.
             </p>
 
+          </div>
+
         </div>
 
-        <div class="col-md-5">
+        <div class="col-md-5" >
           <h2 class="h3" style="text-transform: uppercase; font-weight: 900; border-bottom: 1px solid #fff; padding-bottom: 8px; margin-bottom: 20px">News & Events</h2>
+
+          <div class="news-content" style="border-left: 1px solid #fff; padding-left: 30px;">
+
+          <div class="ifvcc-news-item" style="margin-top: -20px">
+          <div style="font-weight: 900; margin-top: 40px; line-height: 30px; text-transform: uppercase;" class="h5">
+
+            <span style="font-weight: 400; color: #666">January 6, 2016</span> | <a href="">Sample News Item Title 1</a></div>
+
+              <div class="expander-news">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et libero lacinia, molestie nulla sed, rhoncus purus. Curabitur elit ante, pretium euismod porta in, gravida ut tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat semper massa bibendum convallis.</p>
+
+              </div>
+
+            </div>
+
+
+            <div class="ifvcc-news-item">
+            <div style="font-weight: 900; margin-top: 40px; line-height: 30px; text-transform: uppercase;" class="h5">
+
+              <span style="font-weight: 400; color: #666">January 6, 2016</span> | <a href="">Sample News Item Title 2</a></div>
+
+                <div class="expander-news">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et libero lacinia, molestie nulla sed, rhoncus purus. Curabitur elit ante, pretium euismod porta in, gravida ut tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat semper massa bibendum convallis.</p>
+
+                </div>
+
+              </div>
+
+
+              <div class="ifvcc-news-item">
+              <div style="font-weight: 900; margin-top: 40px; line-height: 30px; text-transform: uppercase;" class="h5">
+
+                <span style="font-weight: 400; color: #666">January 6, 2016</span> | <a href="">Sample News Item Title 3</a></div>
+
+                  <div class="expander-news">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et libero lacinia, molestie nulla sed, rhoncus purus. Curabitur elit ante, pretium euismod porta in, gravida ut tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat semper massa bibendum convallis.</p>
+
+                  </div>
+
+                </div>
+
+
+
+                </div>
+
         </div>
 
       </div>
