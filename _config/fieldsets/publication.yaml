@@ -92,10 +92,11 @@ fields:
   #   allowed: ['pdf']
 
   puburl:
-    Display: URL Path
+    display: Absolute URL Path to PDF in assets directory (leave blank if no PDF)
+    instructions: 'Example URL path: /assets/pdf/sample_publication.pdf'
     type: text
     required:
-    default: /assets/pdf/
+    default:
 
   articleLink:
     Display: URL of accompanying article
