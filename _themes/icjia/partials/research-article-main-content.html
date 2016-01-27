@@ -12,23 +12,6 @@
 
 
 
-    <!-- <div class="text-center" style="margin-top: 30px; margin-bottom: 40px; ">
-
-
-
-
-      <div class="well text-center">
-
-        <h2 class="h5">Downloads</h2>
-
-
-
-      </div>
-
-
-
-    </div> -->
-
 
 
 
@@ -91,6 +74,24 @@
 
   </span>
 
+{{if pdf_uploads}}
+  <hr/>
+
+
+    <div class="well white" style="font-family: Lato, sans-serif; padding: 30px 25px 30px 25px; font-size: 14px; color: #555;">
+
+    <div style="font-size: 20px; margin-bottom: 20px;">{{tab2}}</div>
+
+  <ul>
+      {{pdf_uploads}}
+      <li>
+      <a href="{{pdf}}" class="track article-download-link">{{title}}</a>&nbsp;&nbsp;<i class="fa fa-file-pdf-o" style="margin-bottom: .3em"></i>
+      </li>
+      {{/pdf_uploads}}
+  </ul>
+
+    </div>
+{{endif}}
 
 
 
