@@ -55,6 +55,9 @@ $(function() {
       type: 'column'
     },
     title: {
+      text: 'Figure 1'
+    },
+    subtitle: {
       text: 'Illinois criminal justice system drug offender population'
     },
     xAxis: {

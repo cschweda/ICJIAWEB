@@ -142,11 +142,13 @@ fields:
     type: text
 
   tab2:
+    instructions: This tab will contain embedded PDFs. 'Full Report' or 'Full Report and Presentation'
     display: Tab 2 text
     default: Full Report
     type: text
 
   tab3:
+    instructions: This tab will contain additional article information. A literature review, for example.
     display: Tab 3 text
     default:
     type: text
