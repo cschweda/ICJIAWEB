@@ -58,7 +58,7 @@
 <p>Populations used in rate calculations and the various charts above are available below.</p>
 
 	<table id="datatable_populationTotal" class="Population trendTable">
-	<caption class="TableTitle">Circuit Population By County</caption>
+	<caption class="TableTitle">Circuit Population by County</caption>
 		<thead>
 			<th>County</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -82,7 +82,7 @@
 	</table>
 	
 	<table id="datatable_populationByAge" class="Population trendTable">
-	<caption class="TableTitle">Population By Age</caption>
+	<caption class="TableTitle">Population by Age</caption>
 		<thead>
 			<th>Age Group</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -106,7 +106,7 @@
 	</table>
 	
 	<table id="datatable_populationBySex" class="Population trendTable">
-	<caption class="TableTitle">Population By Sex</caption>
+	<caption class="TableTitle">Population by Sex</caption>
 		<thead>
 			<th>Sex</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -130,7 +130,7 @@
 	</table>
 	
 	<table id="datatable_populationByRace" class="Population trendTable">
-	<caption class="TableTitle">Population By Race</caption>
+	<caption class="TableTitle">Population by Race</caption>
 		<thead>
 			<th>Race</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -153,7 +153,7 @@
 		</cfoutput>
 	</table>	
 	<table id="datatable_populationByRaceEth" class="Population trendTable">
-	<caption class="TableTitle">Population By Race/Ethnicity</caption>
+	<caption class="TableTitle">Population by Race/Ethnicity</caption>
 		<thead>
 			<th>Race/Ethnicity</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">

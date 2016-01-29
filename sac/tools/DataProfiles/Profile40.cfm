@@ -60,6 +60,7 @@
 	FROM WTP
 	WHERE MainCatnumber=10
 	AND DataGroupNumber=40
+	AND NumberType='C'
 	AND GeographyID = <cfqueryparam value="#url.ICJIANumber#" cfsqltype="CF_SQL_INTEGER" />
 	ORDER BY SortOrder;
 </cfquery>
@@ -89,11 +90,11 @@
 <h1 id="PrisonExitsHeading">Adult Prison Exits Profile for <cfoutput>#GeographyName#</cfoutput></h1>
 <p>A prison sentence can be imposed, and in some cases is required, for felonies in Illinois. An exit from the Illinois Department of Corrections (IDOC) occurs when a person leaves a prison or adult transition center. A person exiting on a court admission will require additional supervision in the community, known as mandatory supervised release. The length of the supervision varies by offense class and in some cases the offense. A person exiting a prison facility from a technical violation admission will either be discharged and no longer under IDOC supervision or will have additional supervision time remaining.
 
-The data in this profile are from an ICJIA analysis of data provided by the IDOC planning and research unit. Exits do not include juveniles (The Illinois Department of Juvenile Justice houses juvenile offenders in separate facilities). A person can be exit prison more than one time in a year. In this data profile, each admission is counted separately. User's should not confuse prison exits with the prison population. Due to longer sentences, the prison population is older and have more violent offenders than the exits from prison.</p>
+The data in this profile are from an ICJIA analysis of data provided by the IDOC planning and research unit. Exits do not include juveniles (The Illinois Department of Juvenile Justice houses juvenile offenders in separate facilities). A person can be exit prison more than one time in a year. In this data profile, each admission is counted separately. Users should not confuse prison exits with the prison population. Due to longer sentences, the prison population is older and has more violent offenders than the exits from prison.</p>
 
 <div id="PrisonExitsByExitTypeSection">
 	<h2>Prison Exits by Exit Type</h2>
-	<p>Illinois has a determinate sentencing system. For those sentenced to prison, they will receive 1-3 years of mandatory supervised release upon exiting, unless the sentence has been discharged. Most discharge exits are exiting from a technical violation of their mandatory supervised release. Some exits also immediately return to prison as soon as the exit due to not meeting conditions of their mandatory supervised release, such as not having a host site to reside at</p>
+	<p>Illinois has a determinate sentencing system. For those sentenced to prison, they will receive 1-3 years of mandatory supervised release upon exiting, unless the sentence has been discharged. Most discharge exits are exiting from a technical violation of their mandatory supervised release. Some exits also immediately return to prison as soon as the exit due to not meeting conditions of their mandatory supervised release, such as not having a host site to reside at.</p>
 	<table id="datatable_PrisonExitsbyExitType" class="IDOC trendTable">
 		<caption class="TableTitle">Prison Exits by Exit Type</caption>
 		<thead>
@@ -106,7 +107,7 @@ The data in this profile are from an ICJIA analysis of data provided by the IDOC
 		<tr class="DataRow"><td class="Indicator">#SubCatDesc#</td>	
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 				<cfset YearConcat = PrisonExitsByExitTypeCount["FY" & YearLoop][PrisonExitsByExitTypeCount.CurrentRow]>
-				<cfif YearConcat IS NOT ''><cfSet YearConcat = YearConcat></cfif>
+				<cfif YearConcat IS NOT ''><cfSet YearConcat = int(YearConcat)></cfif>
 				<cfif #YearLoop# EQ #MinMaxYears.MinYear#>
 					<td class="FirstYear">#YearConcat#</td>
 					<cfelseif #YearLoop# EQ #MinMaxYears.MaxYear#>
@@ -169,7 +170,7 @@ The data in this profile are from an ICJIA analysis of data provided by the IDOC
 
 
 <div id="NewPrisonExitsRateByCountySection">
-<h2>Prison Exit Rate by County</h2>
+<h2>Prison Exit Rate</h2>
 <p>The following new court prison exit rates per 100,000 people are calculated by using the total county population from Census 
 	estimates (population data is available at the end of this profile).</p>
 	<table id="datatable_Rate" class="IDOC trendTable">
@@ -203,7 +204,7 @@ The data in this profile are from an ICJIA analysis of data provided by the IDOC
 
 
 <div id = "PrisonExitsByAge">
-<h2>Prison Exits By Age</h2>
+<h2>Prison Exits by Age</h2>
 <p>The data below show the new court prison exits by several age groups. The typical admission age into IDOC is about 33 years old statewide.</p>
 	<table id="datatable_PrisonExits_Age" class="IDOC trendTable">
 		<caption class="TableTitle">Prison Exits by Age</caption>
@@ -238,7 +239,7 @@ The data in this profile are from an ICJIA analysis of data provided by the IDOC
 
 
 <div id = "PrisonExitsBySex">
-<h2>Prison Exits By Sex</h2>
+<h2>Prison Exits by Sex</h2>
 <p>Males have a disproportionately higher involvement in most aspects of the criminal justice system compared to females, particularly for violent offenses. Statewide, males account for approximately 90 percent of all exits from prison.</p>
 	<table id="datatable_PrisonExitsBySex" class="IDOC trendTable">
 		<caption class="TableTitle">Prison Exits by Sex</caption>
@@ -272,7 +273,7 @@ The data in this profile are from an ICJIA analysis of data provided by the IDOC
 
 
 <div id = "PrisonExitsByRaceEth">
-<h2>Prison Exits By Race/Ethnicity</h2>
+<h2>Prison Exits by Race/Ethnicity</h2>
 <p>Statewide, the proportion of prison exits that are black is much larger than the proportion of the general population that is black, though this can vary by county and judicial circuit. <a href="http://www.asanet.org/images/press/docs/pdf/ASARaceCrime.pdf" target="_blank">Reasons for the disparity in the criminal justice by race include contextual and historical explanations.</a></p>
 	<table id="datatable_RaceEth" class="IDOC trendTable">
 		<caption class="TableTitle">Prison Exits by Race/Ethnicity</caption>
@@ -307,7 +308,7 @@ The data in this profile are from an ICJIA analysis of data provided by the IDOC
 
 
 <div id = "PrisonExitsByClass">
-<h2>Prison Exits By Offense Class</h2>
+<h2>Prison Exits by Offense Class</h2>
 <p>Illinois has several offense classes that increase along with the severity of the offense and/or punishment. 
  Felonies are for more serious offenses and allow incarceration in state prison. Class 3 and 4 felonies are the least severe, with sentences to prison from one to five years and a mandatory supervised release period of one year after exiting prison. Common examples of class 3 and 4 offenses include theft and retail theft, controlled substance possession under 15 grams, and aggravated battery. 
 Class 1 and 2 felonies are more severe, with prison sentences from 3-15 years. Common examples of class 1 and 2 offenses include burglary and residential burglary, manufacture and delivery of controlled substances, and robbery. 
@@ -349,13 +350,13 @@ Class X offenses include armed robbery, manufacture and delivery of controlled s
 <hr><hr>
 
 <div id = "PrisonExitsByWebCat">
-<h2>Prison Exits By Offense Type</h2>
+<h2>Prison Exits by Offense Type</h2>
 <p>
 A person exiting from the Illinois Department of Corrections can have more than one prison sentence. These sentences can be concurrent (the sentences are served simultaneously) or consecutive. 
 The offense type for the exit is determined by the offense that will keep the person in prison for the longest amount of time, also known as the holding offense. The exits can be split up into numerous offense categories:
 </p>
 	<ul class="WebCategories">
-		<li>Homicide related, including murder, attempted or consipriacy to commit murder, manslaughter, reckless homicide, and criminal abortion.</li>
+		<li>Homicide related, including murder, attempted or conspiracy to commit murder, manslaughter, reckless homicide, and criminal abortion.</li>
 <li>Violent sex offenses, including criminal sexual assault, predatory sexual assault, and criminal sexual abuse</li>
 <li>Robbery: robbery and armed robbery, home invasion, vehicular invasion or hijacking</li>
 <li>Assault, battery, and armed violence, including aggravated discharge of a firearm, harassment and stalking, and intimidation.</li>
@@ -363,17 +364,17 @@ The offense type for the exit is determined by the offense that will keep the pe
 <li>Driving under the influence of drugs or alcohol (DUI) or driving while intoxicated (DWI).</li>
 <li>Burglary including residential burglary and possession of burglary tools.</li>
 <li>Motor vehicle theft including theft from a motor vehicle and offenses related to stolen vehicle titles</li>
-<li>Theft including identity theft, retail theft, and tampering or possession of tools for the purposes of commiting theft</li>
+<li>Theft including identity theft, retail theft, and tampering or possession of tools for the purposes of committing theft</li>
 <li>Forgery/Fraud/Deception including money laundering, false impersonation, computer and wire fraud, and deceptive practices</li>
 <li>Miscellaneous property offenses including trespassing, arson, vandalism, and destruction of property</li>
 <li>Weapons offenses including unlawful use or possession of a weapon, unlawful sales, defacing firearms, and concealed carry violations. Offenses that involved the discharge of a firearm are included in the assault, battery, and armed violence category.</li>
-<li>Miscellaneous sex offenses including child pornography, obsenity, sexual exploitation of a child, and sex offender location violations.</li>
+<li>Miscellaneous sex offenses including child pornography, obscenity, sexual exploitation of a child, and sex offender location violations.</li>
 <li>Controlled substance and meth - manufacture/delivery/trafficking. Controlled substances included a large number of possible substances, but primarily involved heroin or cocaine.</li>
 <li>Controlled substance and meth - possession</li>
 <li>Cannabis - manufacture/delivery/trafficking</li>
 <li>Cannabis - possession</li>
 <li>Miscellaneous drug offenses including paraphernalia and offenses related to syringes.</li>
-<li>Human trafficking related offenses including prostitution, pimping, solicitation, promoting prositution, and involuntary servitude.</li>
+<li>Human trafficking related offenses including prostitution, pimping, solicitation, promoting prostitution, and involuntary servitude.</li>
 <li>Miscellaneous public order offenses including animal cruelty, mob action, disorderly conduct, and public nuisance offenses.</li>
 <li>Registry violations including violating sex offender registries, failing to report a change of address.</li>
 <li>Driving and motor vehicle offenses including driving without a license or registration, traffic offenses, and title violations.</li>

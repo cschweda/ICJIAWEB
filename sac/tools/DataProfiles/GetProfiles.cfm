@@ -654,7 +654,7 @@ $('.expander-news').readmore({
 					<!---obtain CircuitCook88 value and potential text--->
 					<cfquery name="GetCircuit" datasource="RADBP">
 						SELECT CircuitCook88, CountyName ,ShowCircuitText
-						FROM dbo_Counties
+						FROM dbo_Geographies
 						WHERE ICJIANumber=<cfqueryparam value="#url.ICJIANumber#" cfsqltype="CF_SQL_INTEGER" />
 						;
 					</cfquery>
@@ -685,6 +685,7 @@ $('.expander-news').readmore({
 						SELECT *
 						FROM Qry_WebTablePivot
 						WHERE CircuitCook88 = #CircuitNumber#
+						OR GeographyID IN (500,510,520,530)
 						;	
 					</cfquery>
 

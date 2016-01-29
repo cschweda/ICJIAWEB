@@ -393,9 +393,11 @@ show a variety of charts and statistics about the chosen area and data theme.</p
 					<form id="ProfileSelector" name="ProfileSelector" method="GET" action="GetProfiles.cfm">
 				        <p><b>Step 1 -</b> Select a profile to view:<br>  
 				            <input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck10" value="10" checked="checked">
-								<label for="ProfileCheck10">Arrests from the Illinois State Police CHRI Database*</label><br/>
+								<label for="ProfileCheck10">Adult Arrests from the Illinois State Police CHRI Database*</label><br/>
 							<input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck20" value="20" checked="checked">
-				            	<label for="ProfileCheck20">Convictions from the Illinois State Police CHRI Database*</label><br/>
+				            	<label for="ProfileCheck20">Adult Convictions from the Illinois State Police CHRI Database*</label><br/>
+							<input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck40" value="50" checked="checked">
+				            	<label for="ProfileCheck50">Adult Court Indicators (filings, convictions, sentences, probation)</label>	<br/>
 							<input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck30" value="30" checked="checked">
 				            	<label for="ProfileCheck30">Prison Admissions</label>	<br/>
 							<input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck40" value="40" checked="checked">
@@ -531,7 +533,6 @@ show a variety of charts and statistics about the chosen area and data theme.</p
 								<option value="1020">20th Circuit</option>
 								<option value="1021">21st Circuit</option>
 								<option value="1022">22nd Circuit</option>
-								<option value="1088">Cook County (Circuit)</option>
 							</select>
 						</p></div>
 							

@@ -12,6 +12,7 @@ $(document).ready(function() {
 	});
 	
 	$('.CHRI td:empty').text('').addClass('ReplaceWithNA');  //replace missing data null
+	$('.AOIC td:empty').text('').addClass('ReplaceWithNA');
 	$('.IDOC td:empty').text('').addClass('ReplaceWithZero');  //replace missing data null
 	$('.ReplaceWithZero').text('0');
 	
@@ -271,7 +272,7 @@ $(document).ready(function() {
 		var firstPoint = $(this).find('.FirstYear').text();
 		var lastPoint = $(this).find('.LastYear').text();
 		if (firstPoint=="NA" || lastPoint=="NA" || firstPoint < 20 || lastPoint < 20) {
-				var outText = "N < 20";		
+				var outText = "NA";		
 		}
 		else {
 				var outText = (100*(lastPoint - firstPoint)/firstPoint).toFixed(1) + '%';				
