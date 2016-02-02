@@ -61,12 +61,29 @@
 
   <p>In 2011, IFVCC was awarded the US Department of Justice Office on Violence Against Women Grant to Encourage Arrest and Enforcement of Orders of Protection. Those funds allowed IFVCC to revise the 2008 Domestic Violence Protocol for Law Enforcement, Prosecution and the Judiciary; create a training curriculum based on those protocols. Regional trainings were held throughout the state for cross-discipline teams from each circuit to train law enforcement and prosecutors at the local level. IFVCC also developed Elder Abuse and Abuse of Persons with Disabilities Protocols for law enforcement and prosecutors as well as a training curriculum. Regional Trainings of Trainers were held for circuit teams and local trainings were held throughout the state.</p>
 <p>Over 4,300 criminal justice professionals were trained statewide.  Arrest Grant trainings continue to be held throughout the state.
-Model Protocols: (please contact local council coordinator for the PowerPoint version, if interested)</p>
+</p>
+<div class="well">
+<h3 class="text-center" style="border-bottom: 1px solid #aaa; padding-bottom: 14px; margin-bottom: 20px">Model Protocols</h3>
 <ul>
-  <li>Model Domestic Violence Protocol</li>
-<li>Model Elder Abuse Protocol</li>
-<li>Model Abuse of Persons with Disabilities Protocol</li>
+  <li><strong>Model Domestic Violence Protocol</strong></li>
+  <ul>
+  <li><a href="/assets/ifvcc/Model Protocols/Model Domestic Violence Protocol - Contents.docx">Download Table of Contents</a></li>
+  <li><a href="/assets/ifvcc/Model Protocols/Model Domestic Violence Protocol.zip">Download Protocol (Zip file)</a></li>
+  </ul>
+<li><strong>Model Elder Abuse Protocol</strong></li>
+<ul>
+<li><a href="/assets/ifvcc/Model Protocols/Model Elder Abuse Protocol - Contents.docx">Download Table of Contents</a></li>
+<li><a href="/assets/ifvcc/Model Protocols/Model Elder Abuse Protocol.zip">Download Protocol (Zip file)</a></li>
 </ul>
+<li><strong>Model Abuse of Persons with Disabilities Protocol</strong></li>
+<ul>
+<li><a href="/assets/ifvcc/Model Protocols/Model Abuse of Persons with Disabilities Protocol - Contents.docx">Download Table of Contents</a></li>
+<li>Download Protocol (Zip file)</li>
+</ul>
+</ul>
+<div class="text-center" style="margin-top: 20px; font-size: 14px; font-weight: 700">
+Please contact local council coordinator for PowerPoint versions, if interested.</div>
+</div>
 <p>In 2014, IFVCC was awarded a renewal of the Arrest Grant, which allows for additional training, implementation and follow-up with local jurisdictions on the protocols. Utilizing the model protocols, the IFVCC Arrest Grant Advisory Statewide Committee are developing toolkits for first responders (911/Dispatchers and Emergency Medical professionals), court personnel (Circuit Clerks office personnel and Court Security/Bailiffs) and Probation. Guidelines will be distributed statewide through the Local FVCCs.  By developing and providing resources and toolkits for other associated disciplines, the coordinated community response effort will be strengthened along with the ongoing implementation of the protocols.</p>
 
 
