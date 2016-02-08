@@ -121,12 +121,15 @@ $(document).ready(function() {
 						cursor: 'pointer',
 						size: '220px',
 						dataLabels: {
+							formatter: function() {
+								return this.point.name + ' ' + (this.percentage).toFixed(1) + ' %';
+							},
 							style: {
 								width: '100px'
 							},
 							distance: 10, 
-						enabled: true
-                },
+							enabled: true
+						},
             }
         }
 			});
