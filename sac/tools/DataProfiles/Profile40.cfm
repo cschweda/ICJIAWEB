@@ -90,7 +90,7 @@
 <h1 id="PrisonExitsHeading">Adult Prison Exits Profile for <cfoutput>#GeographyName#</cfoutput></h1>
 <p>A prison sentence can be imposed, and in some cases is required, for felonies in Illinois. An exit from the Illinois Department of Corrections (IDOC) occurs when a person leaves a prison or adult transition center. A person exiting on a court admission will require additional supervision in the community, known as mandatory supervised release. The length of the supervision varies by offense class and in some cases the offense. A person exiting a prison facility from a technical violation admission will either be discharged and no longer under IDOC supervision or will have additional supervision time remaining.
 
-The data in this profile are from an ICJIA analysis of data provided by the IDOC planning and research unit. Exits do not include juveniles (The Illinois Department of Juvenile Justice houses juvenile offenders in separate facilities). A person can be exit prison more than one time in a year. In this data profile, each admission is counted separately. Users should not confuse prison exits with the prison population. Due to longer sentences, the prison population is older and has more violent offenders than the exits from prison.</p>
+The data in this profile are from an ICJIA analysis of data provided by the IDOC planning and research unit. Exits are based on the committing county. A persone exiting IDOC may reside in a different county. Exits do not include juveniles (The Illinois Department of Juvenile Justice houses juvenile offenders in separate facilities). A person can be exit prison more than one time in a year. In this data profile, each admission is counted separately. Users should not confuse prison exits with the prison population. Due to longer sentences, the prison population is older and has more violent offenders than the exits from prison.</p>
 
 <div id="PrisonExitsByExitTypeSection">
 	<h2>Prison Exits by Exit Type</h2>
@@ -353,33 +353,8 @@ Class X offenses include armed robbery, manufacture and delivery of controlled s
 <h2>Prison Exits by Offense Type</h2>
 <p>
 A person exiting from the Illinois Department of Corrections can have more than one prison sentence. These sentences can be concurrent (the sentences are served simultaneously) or consecutive. 
-The offense type for the exit is determined by the offense that will keep the person in prison for the longest amount of time, also known as the holding offense. The exits can be split up into numerous offense categories:
+The offense type for the exit is determined by the offense that will keep the person in prison for the longest amount of time, also known as the holding offense. The exits can be split up into numerous offense categories (a description of the offenses for each category is in the <a href="#OffenseCategoriesHeading" target="_self">appendix</a>):
 </p>
-	<ul class="WebCategories">
-		<li>Homicide related, including murder, attempted or conspiracy to commit murder, manslaughter, reckless homicide, and criminal abortion.</li>
-<li>Violent sex offenses, including criminal sexual assault, predatory sexual assault, and criminal sexual abuse</li>
-<li>Robbery: robbery and armed robbery, home invasion, vehicular invasion or hijacking</li>
-<li>Assault, battery, and armed violence, including aggravated discharge of a firearm, harassment and stalking, and intimidation.</li>
-<li>Miscellaneous person offenses, including kidnaping and forcible detention, harboring a runaway, and inducement to suicide.</li>
-<li>Driving under the influence of drugs or alcohol (DUI) or driving while intoxicated (DWI).</li>
-<li>Burglary including residential burglary and possession of burglary tools.</li>
-<li>Motor vehicle theft including theft from a motor vehicle and offenses related to stolen vehicle titles</li>
-<li>Theft including identity theft, retail theft, and tampering or possession of tools for the purposes of committing theft</li>
-<li>Forgery/Fraud/Deception including money laundering, false impersonation, computer and wire fraud, and deceptive practices</li>
-<li>Miscellaneous property offenses including trespassing, arson, vandalism, and destruction of property</li>
-<li>Weapons offenses including unlawful use or possession of a weapon, unlawful sales, defacing firearms, and concealed carry violations. Offenses that involved the discharge of a firearm are included in the assault, battery, and armed violence category.</li>
-<li>Miscellaneous sex offenses including child pornography, obscenity, sexual exploitation of a child, and sex offender location violations.</li>
-<li>Controlled substance and meth - manufacture/delivery/trafficking. Controlled substances included a large number of possible substances, but primarily involved heroin or cocaine.</li>
-<li>Controlled substance and meth - possession</li>
-<li>Cannabis - manufacture/delivery/trafficking</li>
-<li>Cannabis - possession</li>
-<li>Miscellaneous drug offenses including paraphernalia and offenses related to syringes.</li>
-<li>Human trafficking related offenses including prostitution, pimping, solicitation, promoting prostitution, and involuntary servitude.</li>
-<li>Miscellaneous public order offenses including animal cruelty, mob action, disorderly conduct, and public nuisance offenses.</li>
-<li>Registry violations including violating sex offender registries, failing to report a change of address.</li>
-<li>Driving and motor vehicle offenses including driving without a license or registration, traffic offenses, and title violations.</li>
-<li>Other offenses not described above.</li>
-	</ul>
 		<table id="datatable_WebCat" class="IDOC trendTable">
 		<caption class="TableTitle">Prison Exits by Offense Category</caption>
 		<thead>

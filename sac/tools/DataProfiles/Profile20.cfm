@@ -119,8 +119,8 @@ Convictions by county are available below. Each arrest incident that leads to a 
 
 <div id="ConvictionRateSection">
 <h2>Conviction Rate</h2>
-<p>It is generally preferable to compare conviction trends across counties by using rates of convictions per 100,000 people instead of conviction counts. Rates will take into account the population of potential arrestees. 
-	Rates calculated below are per 100,000 residents in Illinois, using County Census estimates. The population data used to calculate rates is available below the arrest tables at the end of this profile. 
+<p>It is generally preferable to compare conviction trends across counties, circuits, or statewide by using rates of convictions per 100,000 people instead of conviction counts. Rates will take into account the population of potential arrestees. 
+	Rates calculated below are per 100,000 residents in Illinois, using Census estimates. The population data used to calculate rates is available below the arrest tables at the end of this profile. 
 	This rate should not be confused with a clearance rate of any sort. Arrests can be cleared through many ways that do not lead to a conviction.</p>
 	<table id="datatable_Convictions_Rate" class="CHRI trendTable">
 		<caption class="TableTitle">Conviction Rate</caption>
@@ -269,7 +269,7 @@ are disproportionately more likely to be involved in the criminal justice system
 <div id = "ConvictionsByClass">
 <h2>Convictions by Class</h2>
 <p>Illinois has several offense classes that increase along with the severity of the offense and/or punishment. Misdemeanors (class A, B, and C) are generally minor crimes that may result in a fine, jail sentence under a year, a probation term of up to two years, or some other form of community supervision.
- Felonies are for more serious offenses. Felonies allow incarceration in state prison, and <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073000050K5-5-3" target="_blank">for some offenses require imprisonment</a>.</p><p>Class 3 and 4 felonies are the least severe, with typical sentences to either probation up to two and half years (possibly with a jail sentence) or a prison sentence from one to five years. 
+ Felonies are for more serious offenses. Felonies allow incarceration in state prison, and <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073000050K5-5-3" target="_blank">for some offenses require imprisonment</a>.</p><p>Class 3 and 4 felonies are the least severe, with typical sentences to up to two and half years of probation, (possibly with a jail sentence) or a prison sentence from one to five years. 
 If the sentence for a class 3 or 4 crime is prison, the offender will also have a mandatory supervised release period of one year after exiting prison. Common examples of class 3 and 4 offenses include theft and retail theft, controlled substance possession under 15 grams, and aggravated battery. Class 1 and 2 felonies are more severe, with typical sentences 
 for probation of up to four years and prison sentences from 3-15 years. Common examples of class 1 and 2 offenses include burglary and residential burglary, manufacture and delivery of controlled substances, and robbery. With the exception of first degree murder (class M), class X offenses are the most severe felonies and have mandatory prison sentences from 6-30 years. 
 Class X offenses include armed robbery, manufacture and delivery of controlled substances, criminal drug conspiracy, and home invasion.</p>
@@ -309,32 +309,8 @@ Class X offenses include armed robbery, manufacture and delivery of controlled s
 <div id = "ConvictionsByWebCat">
 <h2>Convictions by Offense Type</h2>
 <p>A court case may involve one or more charges that could lead to one or more convictions. It is difficult to determine which is the most severe charge by offense type in many convictions. For example, a conviction for a class 4 retail theft and a conviction for a class 4 criminal damage to property offense in the same court case may be classified as either of those two.
-	Instead, the data below display how many convictions occurred where there was at least one conviction charge in the following categories:</p>
-	<ul class="WebCategories">
-		<li>Homicide related, including murder, attempted or conspiracy to commit murder, manslaughter, reckless homicide, and criminal abortion.</li>
-<li>Violent sex offenses, including criminal sexual assault, predatory sexual assault, and criminal sexual abuse</li>
-<li>Robbery: robbery and armed robbery, home invasion, vehicular invasion or hijacking</li>
-<li>Assault, battery, and armed violence, including aggravated discharge of a firearm, harassment and stalking, and intimidation.</li>
-<li>Miscellaneous person offenses, including kidnaping and forcible detention, harboring a runaway, and inducement to suicide.</li>
-<li>Driving under the influence of drugs or alcohol (DUI) or driving while intoxicated (DWI).</li>
-<li>Burglary including residential burglary and possession of burglary tools.</li>
-<li>Motor vehicle theft including theft from a motor vehicle and offenses related to stolen vehicle titles</li>
-<li>Theft including identity theft, retail theft, and tampering or possession of tools for the purposes of committing theft</li>
-<li>Forgery/Fraud/Deception including money laundering, false impersonation, computer and wire fraud, and deceptive practices</li>
-<li>Miscellaneous property offenses including trespassing, arson, vandalism, and destruction of property</li>
-<li>Weapons offenses including unlawful use or possession of a weapon, unlawful sales, defacing firearms, and concealed carry violations. Offenses that involved the discharge of a firearm are included in the assault, battery, and armed violence category.</li>
-<li>Miscellaneous sex offenses including child pornography, obscenity, sexual exploitation of a child, and sex offender location violations.</li>
-<li>Controlled substance and meth - manufacture/delivery/trafficking. Controlled substances included a large number of possible substances, but primarily involved heroin or cocaine.</li>
-<li>Controlled substance and meth - possession</li>
-<li>Cannabis - manufacture/delivery/trafficking</li>
-<li>Cannabis - possession</li>
-<li>Miscellaneous drug offenses including paraphernalia and offenses related to syringes.</li>
-<li>Human trafficking related offenses including prostitution, pimping, solicitation, promoting prostitution, and involuntary servitude.</li>
-<li>Miscellaneous public order offenses including animal cruelty, mob action, disorderly conduct, and public nuisance offenses.</li>
-<li>Registry violations including violating sex offender registries, failing to report a change of address.</li>
-<li>Driving and motor vehicle offenses including driving without a license or registration, traffic offenses, and title violations.</li>
-<li>Other offenses not described above.</li>
-	</ul>
+	Instead, the data below display how many convictions occurred where there was at least one conviction charge in the following categories (a description of the offenses for each category is in the <a href="#OffenseCategoriesHeading" target="_self">appendix</a>).</p>
+
 <p>Each case that has more than one conviction may be represented multiple times in the data below if there is more than one different offense type. Therefore, the total number of convictions below will sum to a larger number than the total number of convictions elsewhere in this profile.</p>
 		<table id="datatable_Convictions_WebCat" class="CHRI trendTable">
 		<caption class="TableTitle">Convictions by Offense Category</caption>

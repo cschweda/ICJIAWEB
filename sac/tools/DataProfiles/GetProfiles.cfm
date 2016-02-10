@@ -164,7 +164,7 @@ td:not(.Indicator):not(.Geography) {
 }
 
 .HC_Bar {
-	height: 500px;
+	height: 700px;
 	margin-left:auto;
 	margin-right:auto;
 }

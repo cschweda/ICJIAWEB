@@ -1,6 +1,5 @@
 
 
-
 $(document).ready(function() {
 
 
@@ -122,7 +121,7 @@ $(document).ready(function() {
 						size: '220px',
 						dataLabels: {
 							formatter: function() {
-								return this.point.name + ' ' + (this.percentage).toFixed(1) + ' %';
+								return this.point.name + ': ' + (this.percentage).toFixed(1) + ' %';
 							},
 							style: {
 								width: '100px'

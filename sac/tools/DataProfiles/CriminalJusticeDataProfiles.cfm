@@ -372,18 +372,23 @@
 var checkCounter=0
 
 $(function ($) {
+	//verify that at least one profile checkbox is checked
     $('#ProfileSelector').submit(function (e) {
 		checkCounter = checkCounter + 1
 	    $('#ToolStatus').text("")
         if (!$('.required').is(':checked')) {
             //prevent the default form submit if it is not checked
             e.preventDefault();
-       		checkCounter = checkCounter + 1
-            $('#ToolStatus').text("Select at least one checkbox above.")
-            if (checkCounter >=5) {$('#ToolStatus').text("Insanity: doing the same thing over and over again and expecting different results.")}
+       		$('#ToolStatus').text("Select at least one checkbox above.")
+        	}
+     //inform user about circuit and county CHRI data   
+
+        if ($('.CHRI_checkbox').is(':checked') && checkCounter==1 && $("#CountySelector option:selected").val() <=102){
+        	e.preventDefault();
+       		$('#ToolStatus').text("Be aware that if you are selecting a county, the CHRI data will be mostly at the judicial circuit level. Click the button again to proceed.")
         }
-    })
-})
+    })    
+});
 </script>
 
 
@@ -392,9 +397,9 @@ $(function ($) {
 show a variety of charts and statistics about the chosen area and data theme.</p>
 					<form id="ProfileSelector" name="ProfileSelector" method="GET" action="GetProfiles.cfm">
 				        <p><b>Step 1 -</b> Select a profile to view:<br>  
-				            <input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck10" value="10" checked="checked">
+				            <input type="checkbox" name="ProfileNumber" class="required CHRI_checkbox" id="ProfileCheck10" value="10" checked="checked">
 								<label for="ProfileCheck10">Adult Arrests from the Illinois State Police CHRI Database*</label><br/>
-							<input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck20" value="20" checked="checked">
+							<input type="checkbox" name="ProfileNumber" class="required CHRI_checkbox" id="ProfileCheck20" value="20" checked="checked">
 				            	<label for="ProfileCheck20">Adult Convictions from the Illinois State Police CHRI Database*</label><br/>
 							<input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck40" value="50" checked="checked">
 				            	<label for="ProfileCheck50">Adult Court Indicators (filings, convictions, sentences, probation)</label>	<br/>
@@ -537,7 +542,7 @@ show a variety of charts and statistics about the chosen area and data theme.</p
 						</p></div>
 							
 						<p><input type="submit" id="getProfile" value="Retrieve profile">
-						<span id="ToolStatus"></span></p>
+						<span id="ToolStatus" style="color:red"></span></p>
 					</form>	
 	</div>
 <!--END POWERS-->

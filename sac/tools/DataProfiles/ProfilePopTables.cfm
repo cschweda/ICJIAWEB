@@ -1,6 +1,4 @@
-<!---<cfif #DashboardNumberPrep#  EQ 30 OR #DashboardNumberPrep# EQ 40>
-	<cfset MinAge = 17>
-</cfif>--->
+
 
 <cfquery dbtype="query" name="PopulationCount" >
 	SELECT *
@@ -52,9 +50,9 @@
 	ORDER BY SortOrder, GeographyName;
 </cfquery>
 
-
+<h1 id="AppendexHeading">Appendix</h1>
 <div id="PopulationTables">
-<h1 id="PopulationHeading">Population Data</h1>	
+<h2 id="PopulationHeading">Population Data</h1>	
 <p>Populations used in rate calculations and the various charts above are available below.</p>
 
 	<table id="datatable_populationTotal" class="Population trendTable">
@@ -175,6 +173,35 @@
 		</tr>
 		</cfoutput>
 	</table>
-<!---
-<button  onclick="ProduceExcel()">Export to Excel</button>--->
+
+</div>
+<div id="OffenseCategories">
+<h2 id="OffenseCategoriesHeading">Offense Categories</h2>
+<p>The offense categories for CHRI data and prison data are as follows:</p>
+	<ul class="WebCategories">
+		<li>Homicide related, including murder, attempted or conspiracy to commit murder, manslaughter, reckless homicide, and criminal abortion.</li>
+<li>Violent sex offenses, including criminal sexual assault, predatory sexual assault, and criminal sexual abuse.</li>
+<li>Robbery: robbery and armed robbery, home invasion, vehicular invasion or hijacking.</li>
+<li>Assault, battery, and armed violence, including aggravated discharge of a firearm, harassment and stalking, and intimidation.</li>
+<li>Miscellaneous person offenses, including kidnaping and forcible detention, harboring a runaway, and inducement to suicide.</li>
+<li>Driving under the influence of drugs or alcohol (DUI) or driving while intoxicated (DWI).</li>
+<li>Burglary including residential burglary and possession of burglary tools.</li>
+<li>Motor vehicle theft including theft from a motor vehicle and offenses related to stolen vehicle titles.</li>
+<li>Theft including identity theft, retail theft, and tampering or possession of tools for the purposes of committing theft.</li>
+<li>Forgery/Fraud/Deception including money laundering, false impersonation, computer and wire fraud, and deceptive practices.</li>
+<li>Miscellaneous property offenses including trespassing, arson, vandalism, and destruction of property.</li>
+<li>Weapons offenses including unlawful use or possession of a weapon, unlawful sales, defacing firearms, and concealed carry violations. Offenses that involved the discharge of a firearm are included in the assault, battery, and armed violence category.</li>
+<li>Miscellaneous sex offenses including child pornography, obscenity, sexual exploitation of a child, and sex offender location violations.</li>
+<li>Controlled substance and meth - manufacture/delivery/trafficking. Controlled substances included a large number of possible substances, but primarily involved heroin or cocaine.</li>
+<li>Controlled substance and meth - possession.</li>
+<li>Cannabis - manufacture/delivery/trafficking.</li>
+<li>Cannabis - possession.</li>
+<li>Miscellaneous drug offenses including paraphernalia and offenses related to syringes.</li>
+<li>Human trafficking related offenses including prostitution, pimping, solicitation, promoting prostitution, and involuntary servitude.</li>
+<li>Miscellaneous public order offenses including animal cruelty, mob action, disorderly conduct, and public nuisance offenses.</li>
+<li>Registry violations including violating sex offender registries, failing to report a change of address.</li>
+<li>Driving and motor vehicle offenses including driving without a license or registration, traffic offenses, and title violations.</li>
+<li>Other offenses include offenses not described above.</li>
+	</ul>
+
 </div>
