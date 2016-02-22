@@ -94,10 +94,10 @@
 <p>The data in this profile are from an ICJIA analysis of data provided by the IDOC planning and research unit. Admissions do not include juveniles (The Illinois Department of Juvenile Justice houses juvenile offenders in separate facilities). A person can be admitted into prison more than one time in a year. In this data profile, each admission is counted separately. Users should not confuse prison admissions with the prison population. Due to longer sentences, the prison population is older and has more violent offenders than the admissions into prison.</p>
 <div id="PrisonAdmitsByAdmitTypeSection">
 	<h2>Prison Admissions by Admission Type</h2>
-	<p>An admission into prison can generally be grouped into two main types - new court admissions and technical violator admissions. New court admissions are due to a felony conviction and sentence to the Illinois Department of Corrections. These include those sentenced for a new offense while on MSR.
+	<p>An admission into prison can generally be grouped into two main types - new court admissions and technical violator admissions. New court admissions are due to a felony convictions and sentences to the Illinois Department of Corrections. These include those sentenced for a new offense while on MSR.
 	Technical violation admissions can be the result of an arrest while on MSR or the result of a violation of a requirement in the MSR period (failing a drug test, not attending meetings with parole officers, associating with known gang members, etc.). 
 	<a href="http://www.icjia.state.il.us/spac/pdf/SPAC%20Report%20MSR%20violator%209-13.pdf" target="_blank">Various parole policies, staffing levels and decisions, MSR population levels, and legislation have influenced technical violator readmission levels over time</a>.
-	An offender may violate MSR by being arrested, return to prison, and be sentenced while in prison for the new offense. The data presented in this profile classifies the offender by the admission type when entering prison. Such as person would be classified as a technical violator.
+	An offender may violate MSR by being arrested, return to prison, and be sentenced while in prison for the new offense. The data presented in this profile classifies the offender by the admission type when entering prison. 
 	</p>
 	<table id="datatable_PrisonAdmitsbyAdmitType" class="IDOC trendTable">
 		<caption class="TableTitle">Prison Admissions by Admission Type</caption>
@@ -123,11 +123,8 @@
 		</cfoutput>
 	</table>
 	
-	<p><span class="ListCaveats">New court admissions to prison are usually the result of sentencing for crimes committed within the county. Technical violation admissions are the result of the offender violating conditions of their parole or mandatory supervised release. A violation may be a new arrest or offense committed. At the county and judicial circuit, new court admissions are more useful to examine as they are the result of crimes committed within the county or circuit. </span>
-
 	
 	<div id="TimeSeriesContainer_PrisonAdmitsByType" class="HC_TimeSeries DataTableBefore"></div>
-	<div id="piecontainer_PrisonAdmits_AdmitType_Count_First" class="HC_Pie FirstChart DataTableBefore"></div>
 	<div id="piecontainer_PrisonAdmits_AdmitType_Count_Last" class="HC_Pie LastChart DataTableBefore"></div>
 </div>
 
@@ -273,7 +270,7 @@ The data below show the new court prison admissions by several age groups. The t
 
 <div id = "PrisonAdmitsByRace">
 <h2>Prison Admissions by Race</h2>
-<p>Statewide, the proportion of prison admissions that are black is much larger than the proportion of the general population that is black, though this can vary by county and judicial circuit. <a href="http://www.asanet.org/images/press/docs/pdf/ASARaceCrime.pdf" target="_blank">Reasons for the disparity in the criminal justice by race include contextual and historical explanations.</a></p>
+<p>Statewide, the proportion of prison admissions that are black is much larger than the proportion of the general population that is black, though this can vary by county and judicial circuit. <a href="http://www.asanet.org/images/press/docs/pdf/ASARaceCrime.pdf" target="_blank">Reasons for the racial disparity in the criminal justice include contextual and historical explanations.</a></p>
 	<table id="datatable_Race" class="IDOC trendTable">
 		<caption class="TableTitle">New Court Prison Admissions by Race</caption>
 		<thead>
@@ -306,12 +303,7 @@ The data below show the new court prison admissions by several age groups. The t
 
 <div id = "PrisonAdmitsByClass">
 <h2>New Court Prison Admissions by Offense Class</h2>
-<p>Illinois has several offense classes that increase along with the severity of the offense and/or punishment. 
- Felonies are for more serious offenses and allow incarceration in state prison. Class 3 and 4 felonies are the least severe, with sentences to prison from one to five years and a mandatory supervised release period of one year after exiting prison. Common examples of class 3 and 4 offenses include theft and retail theft, controlled substance possession under 15 grams, and aggravated battery. 
-Class 1 and 2 felonies are more severe, with prison sentences from 3-15 years. Common examples of class 1 and 2 offenses include burglary and residential burglary, manufacture and delivery of controlled substances, and robbery. 
-With the exception of first degree murder (class M), class X offenses are the most severe felonies and have mandatory prison sentences from 6-30 years. 
-Class X offenses include armed robbery, manufacture and delivery of controlled substances, criminal drug conspiracy, and home invasion.</p>
-<p>A person admitted into the Illinois Department of Corrections can have more than one prison sentence. These sentences can be concurrent (the sentences are served simultaneously) or consecutive. 
+<p>Illinois has several offense classes that increase along with the severity of the offense and/or punishment. An explanation of the offense classes is available in the <a href="#OffenseClasses">appendix</a>. A person admitted into the Illinois Department of Corrections can have more than one prison sentence. These sentences can be concurrent (the sentences are served simultaneously) or consecutive. 
 	The offense class for the admission is determined by the offense that will keep the person in prison for the longest amount of time, also known as the holding offense. 
 	Statewide, class 3 and 4 admissions are the most common and make up a slim majority of all prison admissions. 
 	However, because the sentences for class 3 and 4 sentences are much shorter than the more severe classes, the 
@@ -341,7 +333,6 @@ Class X offenses include armed robbery, manufacture and delivery of controlled s
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="piecontainer_PrisonAdmits_Class_First" class="HC_Pie FirstChart DataTableBefore"></div>
 	<div id="piecontainer_PrisonAdmits_Class_Last" class="HC_Pie LastChart DataTableBefore"></div>
 	
 </div>

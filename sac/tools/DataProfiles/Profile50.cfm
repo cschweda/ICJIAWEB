@@ -68,15 +68,9 @@ are from those reports collected over time. <cfif #SelectedICJIANumber# GT 102 A
 	<h2>Criminal Filings</h2>
 	<p>
 	A criminal court filing may occur after an arrest incident.  After screening a case and determining that it warrants
-further action, the state’s attorney must file formal charges in court. The circumstances of the offense will determine if a misdemeanor or felony charge is filed.
- Misdemeanor cases are less serious than felonies and are punishable by probation sentence of two years or less and less than
-one year of incarceration. Felony cases, on the other hand, are more serious. Sentences may
-include a probation term of up to four years and incarceration for more than one year. Reporting
-practices may differ across time and across counties by number of filings. For example, when two or
-more defendants are involved in a single case, some state’s attorneys file a single case charging
-all suspects, while others file a separate case for each individual. Felonies are more serious than misdemeanors. A DUI filing can be either
-	a felony or misdemeanor. The AOIC began separating DUI filings from felony and misdemeanor filings in 2014.
-	As a result, misdemeanor and felony filings may be lower beginning in 2014 compared to previous years.
+further action, the state’s attorney must file formal charges in court. The circumstances of the offense will determine if a misdemeanor or felony charge is filed. An explanation of the difference between misdemeanors and felonies is available in the <a href="#OffenseClasses">appendix</a>.
+The AOIC began separating DUI filings from felony and misdemeanor filings in 2014. As a result, misdemeanor and felony filings may be lower beginning in 2014 compared to previous years.  A DUI filing can be either
+	a felony or misdemeanor. 
 	</p>
 	<table id="datatable_CourtFilings_Count" class="AOIC trendTable">
 		<caption class="TableTitle">Criminal Filings</caption>
@@ -140,7 +134,7 @@ all suspects, while others file a separate case for each individual. Felonies ar
 
 
 
-
+<!--->
 <div id="FelonyFilingsRegionalSection">
 <h2>Regional Comparison of Felony Filings Rate</h2>
 <p>Regional comparison</p>
@@ -169,7 +163,7 @@ all suspects, while others file a separate case for each individual. Felonies ar
 	</table>
 	<div id="TimeSeriesContainer_FelonyFilingsRegional_Rate" class="HC_TimeSeries DataTableBefore"></div>
 </div>
-
+<--->
 
 
 
@@ -177,11 +171,11 @@ all suspects, while others file a separate case for each individual. Felonies ar
 <h2>Felony Convictions and Sentences</h2>
 <p>The AOIC collects counts of how many individuals are convicted of a felony and their sentencing outcomes. The vast majority of 
 convictions occur as a result of a plea bargain. It is possible for a person to have a felony charge initially filed but during the plea
-process the prosecution and defense agree to a misdemeanor offense. Possible penalties for a felony offense include prison incarceration, probation, and conditional
+process the prosecution and defense agree to a misdemeanor offense. Possible penalties for a felony offense include prison incarceration (IDOC), probation, and conditional
 discharge, the latter two of which may include periodic imprisonment or home confinement. A
 number of factors influence the type and length of sentence imposed on convicted felons,
 including the severity of the crime, the offender’s criminal and social history, safety of the
-community, and legislation affecting certain types of offenses. <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073000050K5-5-3" target="_blank">Some types of felony convictions require
+community, and legislation affecting certain types of offenses. <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073000050K5-5-3" target="_blank">Some felony convictions require
 a prison sentence by state statute.</a></p>
 	<table id="datatable_FelonySentences_Count" class="AOIC trendTable">
 		<caption class="TableTitle">Felony Sentences</caption>
@@ -208,7 +202,6 @@ a prison sentence by state statute.</a></p>
 	</table>
 
 	<div id="TimeSeriesContainer_FelonySentences_Count" class="HC_TimeSeries DataTableBefore"></div>
-	<div id="piecontainer_FelonySentences_Count_First" class="HC_Pie FirstChart DataTableBefore"></div>
 	<div id="piecontainer_FelonySentences_Count_Last" class="HC_Pie LastChart DataTableBefore"></div>
 </div>
 
@@ -248,7 +241,6 @@ court supervision.</p>
 	</table>
 
 	<div id="TimeSeriesContainer_ProbationCaseloads_Count" class="HC_TimeSeries DataTableBefore"></div>
-	<div id="piecontainer_ProbationCaseloads_Count_First" class="HC_Pie FirstChart DataTableBefore"></div>
 	<div id="piecontainer_ProbationCaseloads_Count_Last" class="HC_Pie LastChart DataTableBefore"></div>
 </div>
 

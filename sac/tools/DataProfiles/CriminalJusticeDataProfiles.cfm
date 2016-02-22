@@ -393,21 +393,21 @@ $(function ($) {
 
 
 <h2>ICJIA Criminal Justice Data Profiles</h2>
-<p>Data profiles for arrests, convictions, prison admissions, and prison exits are available at the county, judicial circuit, and statewide level. These profiles
+<p>Data profiles for several criminal justice indicators are available at the county, judicial circuit, and statewide level. These profiles
 show a variety of charts and statistics about the chosen area and data theme.</p>
 					<form id="ProfileSelector" name="ProfileSelector" method="GET" action="GetProfiles.cfm">
 				        <p><b>Step 1 -</b> Select a profile to view:<br>  
 				            <input type="checkbox" name="ProfileNumber" class="required CHRI_checkbox" id="ProfileCheck10" value="10" checked="checked">
 								<label for="ProfileCheck10">Adult Arrests from the Illinois State Police CHRI Database*</label><br/>
-							<input type="checkbox" name="ProfileNumber" class="required CHRI_checkbox" id="ProfileCheck20" value="20" checked="checked">
-				            	<label for="ProfileCheck20">Adult Convictions from the Illinois State Police CHRI Database*</label><br/>
-							<input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck40" value="50" checked="checked">
+							<!---><input type="checkbox" name="ProfileNumber" class="required CHRI_checkbox" id="ProfileCheck20" value="20" checked="checked">
+				            	<label for="ProfileCheck20">Adult Convictions from the Illinois State Police CHRI Database*</label><br/><--->
+							<input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck50" value="50" checked="checked">
 				            	<label for="ProfileCheck50">Adult Court Indicators (filings, convictions, sentences, probation)</label>	<br/>
 							<input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck30" value="30" checked="checked">
 				            	<label for="ProfileCheck30">Prison Admissions</label>	<br/>
 							<input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck40" value="40" checked="checked">
 				            	<label for="ProfileCheck40">Prison Exits</label>	<br/>
-				            *CHRI data in these profiles have limited availability at the county level. If you select a county, you will see a mix of of data at the county level and the judicial circuit in which the county resides in.  	
+				            *CHRI data in these profiles have limited availability at the county level. If you select a county, you will see a mix of data at the county level and the judicial circuit in which the county resides in.  	
 				        </p>
 						
 											

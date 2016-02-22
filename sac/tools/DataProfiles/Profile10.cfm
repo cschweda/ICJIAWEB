@@ -65,19 +65,17 @@
 
 <p>Arrest data in Illinois are available from two sources: <a href="http://www.isp.state.il.us/crime/ucrhome.cfm" target="_blank">I-UCR arrests</a> and the Illinois State Police Electronic Criminal History Record Information (CHRI) database. 
 UCR arrest data are collected from the Illinois implementation of the <a href="https://www.fbi.gov/about-us/cjis/ucr/ucr" target="_blank">federal UCR program</a>. UCR data have a small number of categories and not all arrests are included in those categories. There is no information in the UCR arrests about age, sex, race, or offense class. 
-	However, <a href="http://www.icjia.org/research/overview#tab_research-data" target="_blank">UCR data are available for several decades outside of this profile</a>. A CHRI arrest record is generated when an arrest incident occurs, the person arrested is fingerprinted, and the arrest data is successfully submitted to the Illinois State Police Database.
-	 CHRI data can be analyzed by race, sex, age, offense class, and offense type.  
+	CHRI data can be analyzed by race, sex, age, offense class, and offense type. However, <a href="http://www.icjia.org/research/overview#tab_research-data" target="_blank">UCR data are available for several decades outside of this profile</a>.</p> 
+	<p>A CHRI arrest record is generated when an arrest incident occurs, the person arrested is fingerprinted, and the arrest data is successfully submitted to the Illinois State Police Database.
 	 <strong>ICJIA does not show arrest data where the count of arrests is below ten.</strong> CHRI arrest data are displayed at the county level below for overall arrests. 
-	 The various breakdowns of CHRI data (age, race, sex, etc.) are instead aggregated to the judicial circuit. Additional county-level arrest data from CHRI can be requested by emailing <a href="mailto:cja.irc@illinois.gov" target="_top">cja.irc@illinois.gov</a>.
-	CHRI data presented below were queried from the Illinois State Police Electronic Criminal History Records Information Systems (CHRI) by ICJIA staff. However reliable historical data suitable for this type of profile from CHRI can only be obtained after the early 2000s.</p> 
+	 The various breakdowns of CHRI data (age, race, sex, etc.) are instead aggregated to the judicial circuit. Additional county-level arrest data from CHRI can be requested by emailing <a href="mailto:cja.irc@illinois.gov" target="_top">cja.irc@illinois.gov</a>.</p> 
 
 
 
 <div id= "ArrestCountSection">
 <h2>Arrest Incidents</h2>
 <p>Overall arrests for <cfif #SelectedICJIANumber# EQ 999>Illinois are<cfelse>each county are available within this judicial circuit</cfif> below.
-For all arrests to be included in this profile, the age of the arrestee had to be between 17 and 90 years old. 
-Arrests with an age (based on the date of birth recoded in the arrest incident and the arrest date) between 17 and 90 only are included in this profile.</p>
+For all arrests to be included in this profile, the age of the arrestee had to be between 17 and 90 years old.</p>
 	<table id="datatable_Arrests_Incidents" class="CHRI trendTable">
 		<caption class="TableTitle">Arrest Incidents</caption>
 		<thead>
@@ -109,9 +107,9 @@ Arrests with an age (based on the date of birth recoded in the arrest incident a
 
 		
 
-	<span class="ListCaveats">Large percent changes may be more indicative of changes in submitting arrests to the Illinois State Police instead of actual arrest practices. 
+	<p><span class="ListCaveats">Large percent changes may be more indicative of changes in submitting arrests to the Illinois State Police instead of actual arrest practices. 
 		For example, Class C misdemeanors and lesser offenses are not required to be submitted to CHRI, but can be discretionally done so. A large increase or decrease may be a result of
-	an agency increasing or decreasing the amount of discretionary submissions.</span>
+	an agency increasing or decreasing the amount of discretionary submissions.</span></p>
 	<div id="TimeSeries_Arrests_Counts" class="HC_TimeSeries DataTableBefore"></div>
 	
 	<cfif #CountyCount.NumCounties# GT 1>
@@ -132,7 +130,7 @@ Arrests with an age (based on the date of birth recoded in the arrest incident a
 <div id="ArrestRateSection">
 <h2>Arrest Incident Rate (per 100,000 people)</h2>
 <p>CHRI arrest trends across counties, circuits, or statewide can be compared by using arrest rates instead of arrest counts. Rates take into account the population of potential arrestees. 
-	Rates calculated below are per 100,000 residents in Illinois, using Census estimates. The population data used to calculate rates is available at the end of this profile.</p>
+	Rates calculated below are per 100,000 residents in Illinois, using Census estimates. The population data used to calculate rates is available in the <a href="#PopulationTables">appendix</a>.</p>
 	<table id="datatable_Arrests_Rate" class="CHRI trendTable">
 		<caption class="TableTitle">Arrest Incident Rate</caption>
 		<thead>
@@ -171,7 +169,7 @@ Arrests with an age (based on the date of birth recoded in the arrest incident a
 <h2>Arrest Incidents by Age</h2>
 <p>Arrest age can be obtained by using the date of birth of the arrestee and the arrest date on the record in CHRI. 
 	In some cases, the arrest age is missing, not possible, or seems unlikely to be true, such as those where the age is above 90 years old. 
-	These are excluded in the data in this profile. <a href="http://www.nij.gov/topics/crime/Pages/delinquency-to-adult-offending.aspx" target="_blank">Research has shown that the peak offending age is typically in the late teens and early twenties.</a>
+	These are excluded in the data in this profile. <a href="http://www.nij.gov/topics/crime/Pages/delinquency-to-adult-offending.aspx" target="_blank">Research indicates that the peak offending age is typically in the late teens and early twenties.</a>
 	The pie charts display the percent by age group of arrests and the population for the latest arrest year. 
 	</p>
 	<table id="datatable_Arrests_Age" class="CHRI trendTable">
@@ -240,10 +238,10 @@ Arrests with an age (based on the date of birth recoded in the arrest incident a
 <h2>Arrests by Race</h2>
 <p>CHRI data can be broken down into white vs. non-white arrestees. 
 	Hispanic ethnicity only became an option in CHRI in 2014. For consistency, the data below include Hispanic in the non-white category. 
-	Census population estimates allow for race (white, black, etc.) to be separated from ethnicity (Hispanic). Overall, non-white people 
+	Overall, non-white people 
 are disproportionately more likely to be involved in the criminal justice system in the arrest stage and onwards, and are 
 also <a href="http://www.nij.gov/topics/victims-victimization/pages/welcome.aspx" target="_blank">more likely to be victims of crime</a>. 
-<a href="http://www.asanet.org/images/press/docs/pdf/ASARaceCrime.pdf" target="_blank">Reasons for the disparity in the criminal justice by race include contextual and historical explanations.</a></p>
+<a href="http://www.asanet.org/images/press/docs/pdf/ASARaceCrime.pdf" target="_blank">Reasons for the racial disparity in the criminal justice include contextual and historical explanations.</a></p>
 	<table id="datatable_Arrests_Race" class="CHRI trendTable">
 		<caption class="TableTitle">Arrests by Race</caption>
 		<thead>
@@ -276,12 +274,8 @@ also <a href="http://www.nij.gov/topics/victims-victimization/pages/welcome.aspx
 
 <div id = "ArrestsByClass">
 <h2>Arrests by Class</h2>
-<p>Illinois has several offense classes that increase along with the severity of the offense and/or punishment. Misdemeanors (class A, B, and C) are generally minor crimes that may result in a fine, jail sentence under a year, a probation term of up to two years, or some other form of community supervision.
- Felonies are for more serious offenses. Felonies allow incarceration in state prison, and <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073000050K5-5-3" target="_blank">for some offenses require imprisonment</a>.</p><p>Class 3 and 4 felonies are the least severe, with typical sentences to up to two and half years of probation, (possibly with a jail sentence) or a prison sentence from one to five years. 
-If the sentence for a class 3 or 4 crime is prison, the offender will also have a mandatory supervised release period of one year after exiting prison. Common examples of class 3 and 4 offenses include theft and retail theft, controlled substance possession under 15 grams, and aggravated battery. Class 1 and 2 felonies are more severe, with typical sentences 
-for probation of up to four years and prison sentences from 3-15 years. Common examples of class 1 and 2 offenses include burglary and residential burglary, manufacture and delivery of controlled substances, and robbery. With the exception of first degree murder (class M), class X offenses are the most severe felonies and have mandatory prison sentences from 6-30 years. 
-Class X offenses include armed robbery, manufacture and delivery of controlled substances, criminal drug conspiracy, and home invasion.</p>
-<p>A single arrest incident may involve one or more charges. CHRI arrests displayed below are categorized by the most severe charge within the incident.</p>
+<p>Illinois has several offense classes that increase along with the severity of the offense and/or punishment. An explanation of the offense classes is available in the <a href="#OffenseClasses">appendix</a>.
+ A single arrest incident may involve one or more charges. CHRI arrests displayed below are categorized by the most severe charge within the incident.</p>
 	<table id="datatable_Arrests_Class" class="CHRI trendTable">
 		<caption class="TableTitle">Arrests by Offense Class</caption>
 		<thead>
@@ -305,7 +299,7 @@ Class X offenses include armed robbery, manufacture and delivery of controlled s
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="piecontainer_Arrests_Class_First" class="HC_Pie FirstChart DataTableBefore"></div>
+	<!---><div id="piecontainer_Arrests_Class_First" class="HC_Pie FirstChart DataTableBefore"></div><--->
 	<div id="piecontainer_Arrests_Class_Last" class="HC_Pie LastChart DataTableBefore"></div>
 	
 </div>
@@ -313,8 +307,8 @@ Class X offenses include armed robbery, manufacture and delivery of controlled s
 
 <div id = "ArrestsByWebCat">
 <h2>Arrests by Offense Type</h2>
-<p>A single arrest incident may involve one or more charges. It is difficult to determine which is the most severe charge by offense type in many arrests. For example, an arrest with a charge for a class 4 retail theft and a charge for a class 4 criminal damage to property may be classified as either of those two.
-	Instead, the data below display how many arrests occurred where there was at least one charge in each category (a description of the offenses for each category is in the <a href="#OffenseCategoriesHeading" target="_self">appendix</a>).</p>
+<p>A single arrest incident may involve one or more charges. It is difficult to determine the most severe charge by offense type in many arrests. For example, an arrest with a charge for a class 4 retail theft and a charge for a class 4 criminal damage to property may be classified as either of those two.
+	Instead, the data below display how many arrests occurred where there was at least one charge in each category (a description of the offenses for each category is in the <a href="#OffenseCategoriesHeading">appendix</a>).</p>
 
 <p>Each arrest may be represented multiple times in the data below if there is more than one charge. Therefore, the total number of arrests below will sum to a larger number than the total number of arrests elsewhere in this profile. Cells with "NA" have values below ten and are masked.</p>	
 		<table id="datatable_Arrests_WebCat" class="CHRI trendTable">

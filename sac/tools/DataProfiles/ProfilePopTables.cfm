@@ -173,8 +173,16 @@
 		</tr>
 		</cfoutput>
 	</table>
-
+</div>	
+<div>
+<h2 id="OffenseClasses">Illinois Offense Classes</h2>
+<p>Illinois has several felony, misdemeanor, and lesser offense classes. Lesser offense classes such as local ordinances have penalties that do not involve probation, jail, or prison. Misdemeanors (class A, B, and C) are generally minor crimes that may result in a fine, jail sentence under a year, a probation term of up to two years, or some other form of community supervision.
+ Felonies are for more serious offenses. Felonies allow incarceration in state prison, and <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073000050K5-5-3" target="_blank">for some offenses require imprisonment</a>.</p><p>Class 3 and 4 felonies are the least severe, with typical sentences to up to two and half years of probation, (possibly with a jail sentence) or a prison sentence from one to five years. 
+If the sentence for a class 3 or 4 crime is prison, the offender will also have a mandatory supervised release period of one year after exiting prison. Common examples of class 3 and 4 offenses include theft and retail theft, controlled substance possession under 15 grams, and aggravated battery.</p><p>Class 1 and 2 felonies are more severe, with typical sentences 
+for probation of up to four years and prison sentences from 3-15 years. Common examples of class 1 and 2 offenses include burglary and residential burglary, manufacture and delivery of controlled substances, and robbery.</p> <p>With the exception of first degree murder (class M), class X offenses are the most severe felonies and have mandatory prison sentences from 6-30 years. 
+Class X offenses include armed robbery, manufacture and delivery of controlled substances, criminal drug conspiracy, and home invasion. First degree murder (class M) offenses require a prison sentence.</p>
 </div>
+
 <div id="OffenseCategories">
 <h2 id="OffenseCategoriesHeading">Offense Categories</h2>
 <p>The offense categories for CHRI data and prison data are as follows:</p>

@@ -115,6 +115,7 @@
 
 <style type="text/css">
 table {
+	
 	font-family: verdana,arial,sans-serif;
 	font-size:60%;;
 	color:#333333;
@@ -126,6 +127,7 @@ table {
 	margin-left: auto;
 	margin-right: auto;
 	width:100%;
+	
 }
 table th {
 	border-width: 1px;
@@ -143,7 +145,7 @@ table th:first-child {
 
 table td {
 	border-width: 1px;
-	padding: 8px;
+	padding: 3px;
 	border-style: solid;
 	border-color: #666666;
 	background-color: #ffffff;
