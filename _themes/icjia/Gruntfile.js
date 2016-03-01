@@ -40,7 +40,7 @@ module.exports = function(grunt) {
 				},
 				files: {
 					"css/icjia.css": "less/icjia-main.less",
-					"css/ilfvcc.css": "less/ilfvcc-main.less" // destination file and source file
+					"css/ifvcc.css": "less/ifvcc-main.less" // destination file and source file
 				}
 			}
 		},

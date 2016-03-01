@@ -30,6 +30,7 @@
     "bootstrap-select": "~1.9.4"
   },
   "resolutions": {
-    "jquery": "2.1.4"
+    "jquery": "2.1.4",
+    "bootstrap-select": "~1.10.0"
   }
 }

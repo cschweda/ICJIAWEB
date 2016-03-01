@@ -62,11 +62,15 @@
 
 		<!-- styles -->
 
-		<link href="{{ theme:asset src='css/ilfvcc.css' }}" rel="stylesheet" property="stylesheet">
+		<link href="{{ theme:asset src='css/ifvcc.css' }}" rel="stylesheet" property="stylesheet">
 
 		<!-- Charting js (if necessary) -->
 
+		{{ if overrideCSS}}
 
+		<link href="{{ theme:asset src='css/overrideCSS/{{overrideCSS}}' }}" rel="stylesheet" property="stylesheet">
+
+		{{ endif}}
 
 
 
@@ -126,24 +130,161 @@
 <div id="icjia-page-top"></div>
 
 
-{{ theme:partial src="social" }}
 
 {{theme:partial src="icjia-off-canvas-menu"}}
-
-{{ theme:partial src="ilfvcc-navbar" }}
-
+{{theme:partial src="ifvcc-nav-alt"}}
 
 
+	{{ theme:partial src="ifvcc-breadcrumbs"}}
 
 			<!-- ////////////////////////////////////////////////// content-start \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-			<div id="content-wrap">
+			<div id="content-wrap-ifvcc">
+
+
+
+
       {{ layout_content }}
-		</div>
+			</div>
 			<!-- ////////////////////////////////////////////////// content-end \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 
 
 
-	{{ theme:partial src="footer-dark" }}
+	{{ theme:partial src="ifvcc-footer" }}
+
+
+
+
+	<script src="{{ theme:asset src='bower_components/bootstrap/dist/js/bootstrap.js' }}"></script>
+	<script src="{{ theme:asset src='bower_components/jquery-easing-original/jquery.easing.js' }}"></script>
+
+
+
+	<script src="{{ theme:asset src='bower_components/readmore/readmore.js' }}"></script>
+
+
+<!--	<script src="{{ theme:asset src='bower_components/bootstrap-tabcollapse/bootstrap-tabcollapse.js' }}"></script>-->
+
+	<!-- Progress bar from CSS-tricks -->
+	<script src="{{ theme:asset src='js/special/progressBar.js' }}"></script>
+
+	<link rel="stylesheet" property="stylesheet" href="{{ theme:asset src='bower_components/bx-slider.js/dist/jquery.bxslider.css'}}">
+	<script src="{{ theme:asset src='bower_components/bx-slider.js/dist/jquery.bxslider.js' }}"></script>
+
+	<!-- ICJIA js -->
+	<script src="{{ theme:asset src='js/icjia.js' }}"></script>
+
+	<script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.0/jquery.scrollTo.min.js"></script>
+
+
+
+
+	<!-- Jasny -->
+	<link rel="stylesheet" property="stylesheet" href="{{ theme:asset src='bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css'}}">
+	<script src="{{ theme:asset src='bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js' }}"></script>
+
+
+
+
+
+
+	<script>
+	//jQuery to collapse the navbar on scroll
+
+
+	//jQuery for page scrolling feature - requires jQuery Easing plugin
+	$(function() {
+	    $('a.page-scroll').bind('click', function(event) {
+	        var $anchor = $(this);
+	        $('html, body').stop().animate({
+	            scrollTop: $($anchor.attr('href')).offset().top
+	        }, 1500, 'easeInOutExpo');
+	        event.preventDefault();
+	    });
+	});
+
+
+
+	  $("#map-container-2").insertFusionCharts({
+	      type: "maps/illinois",
+	      width: "500",
+	      height: "750",
+	      dataFormat: "XMLURL",
+	      dataSource: "/data/ifvcc.xml",
+	      loadMessage: "Loading Illinois circuit data. Please wait.",
+	      events: {
+	            "entityRollover": function(evt, data) {
+	                circuit=data.value / 10;
+
+
+	                suffix = ordinal_suffix_of(circuit);
+	                if (circuit == '500') {
+	                  label = 'Cook County | Cook';
+	                } else {
+	                  label = data.label + ' County ' + ' | ' + suffix + ' Circuit';
+	                  // label = suffix + ' Circuit';
+	                }
+
+
+
+	                $('#foobar').html(label);
+
+	            },
+
+	            "entityClick": function(evt, data) {
+	                circuit=data.value / 10;
+	                displayURL='/councils/' + padToThree(circuit);
+	                console.log(data.value);
+	                //console.log('Circuit ' + circuit + ' Padded: ' + padToThree(circuit));
+	                $('#circuit-info').html('<div style="text-align: center;"><h5>Loading circuit information ...&nbsp;&nbsp;<i class="fa fa-spinner fa-spin"></i></h5></div>');
+	                $('#circuit-info').load(displayURL);
+	                $('.display-panel').show();
+	                $('#map-instructions').hide();
+	                console.log(displayURL)
+
+	            },
+	        }
+	  });
+
+
+
+	function ordinal_suffix_of(i) {
+	    var j = i % 10,
+	        k = i % 100;
+	    if (j == 1 && k != 11) {
+	        return i + "st";
+	    }
+	    if (j == 2 && k != 12) {
+	        return i + "nd";
+	    }
+	    if (j == 3 && k != 13) {
+	        return i + "rd";
+	    }
+	    return i + "th";
+	}
+
+
+	function padToThree(number) {
+	  if (number<=999) { number = ("00"+number).slice(-3); }
+	  return number;
+	}
+
+
+	    $('.carousel').carousel({
+	        interval: 10000 //changes the speed
+	    })
+
+
+	    $('.scrollclass').click(function() {
+	      $('body').scrollTo($(this).data('target'), {
+	        duration: 1200,
+	        offset: -50
+	      });
+	    });
+
+
+
+
+	    </script>
 
 
 
@@ -151,79 +292,6 @@
 
 
 
-
-    <script src="{{ theme:asset src='bower_components/bootstrap/dist/js/bootstrap.js' }}"></script>
-    <script src="{{ theme:asset src='bower_components/jquery-easing-original/jquery.easing.js' }}"></script>
-
-		<!-- Highcharts
-    <script src="{{ theme:asset src='bower_components/highcharts-release/highcharts.src.js' }}"></script>
-    <script src="{{ theme:asset src='bower_components/highcharts-release/modules/exporting.js' }}"></script> -->
-
-
-
-
-    <script src="{{ theme:asset src='bower_components/readmore/readmore.js' }}"></script>
-
-
-	<!--	<script src="{{ theme:asset src='bower_components/bootstrap-tabcollapse/bootstrap-tabcollapse.js' }}"></script>-->
-
-		<!-- Progress bar from CSS-tricks -->
-		<script src="{{ theme:asset src='js/special/progressBar.js' }}"></script>
-
-		<link rel="stylesheet" property="stylesheet" href="{{ theme:asset src='bower_components/bx-slider.js/dist/jquery.bxslider.css'}}">
-		<script src="{{ theme:asset src='bower_components/bx-slider.js/dist/jquery.bxslider.js' }}"></script>
-
-		<!-- ICJIA js -->
-		<script src="{{ theme:asset src='js/icjia.js' }}"></script>
-
-		<!-- datatables
-		<link href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.css" property="stylesheet" rel="stylesheet">
-		<link href="//cdn.datatables.net/responsive/1.0.6/css/dataTables.responsive.css" property="stylesheet" rel="stylesheet">
-		<script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
-		<script src="//cdn.datatables.net/responsive/1.0.6/js/dataTables.responsive.js"></script>-->
-
-
-		<!-- Bootstrap modal lightbox
-		<link href="{{ theme:asset src='bower_components/ekko-lightbox/dist/ekko-lightbox.min.css' }}" rel="stylesheet" property="stylesheet">
-		<script src="{{ theme:asset src='bower_components/ekko-lightbox/dist/ekko-lightbox.min.js' }}"></script>-->
-
-		<!-- https://github.com/saribe/eModal
-		<script src="//rawgit.com/saribe/eModal/master/dist/eModal.min.js"></script>-->
-
-		<!-- scrollto: https://github.com/flesler/jquery.scrollTo -->
-		<script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.0/jquery.scrollTo.min.js"></script>
-
-
-
-
-		<!-- Jasny -->
-		<link rel="stylesheet" property="stylesheet" href="{{ theme:asset src='bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css'}}">
-		<script src="{{ theme:asset src='bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js' }}"></script>
-
-
-
-		<!-- Charting js (if necessary) -->
-		{{if jsFile}}
-			<script src="{{ theme:asset src='js/highcharts/{{jsFile}}'}}"></script>
-		{{/if}}
-
-
-
-
-
-
-
-
-
-
-
-
-		{{theme:partial src="google-analytics"}}
-
-		{{theme:partial src="google-tracking"}}
-
-
-{{theme:partial src="sticky-social-sidebar"}}
 
 
 
