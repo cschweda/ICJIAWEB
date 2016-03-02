@@ -1,0 +1,126 @@
+<style>
+/* pagination */
+.pagination {
+   border-top: 1px solid #ddd;
+   margin-top: 1.5em;
+   padding-top: 1em;
+   *zoom: 1;
+   font-family: 'Lato', sans-serif;
+}
+
+   .pagination:before,
+   .pagination:after {
+      content: " ";
+      display: table;
+   }
+
+   .pagination:after {
+      clear: both;
+   }
+
+   .pagination a {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 45%;
+      position: relative;
+      line-height: 1.4;
+   }
+
+      .pagination a:before,
+      .pagination a:after {
+         display: block;
+         position: absolute;
+         top: 0;
+      }
+
+   .pagination .older {
+      float: left;
+      padding-left: 0.85em;
+   }
+
+      .pagination .older:before {
+         content: "«";
+         left: 0;
+         -webkit-transition: left 0.24s ease;
+         -moz-transition: left 0.24s ease;
+         transition: left 0.24s ease;
+      }
+
+      .pagination .older:hover:before {
+         left: -0.25em;
+      }
+
+   .pagination .newer {
+      float: right;
+      text-align: right;
+      padding-right: 2em;
+   }
+
+      .pagination .newer:after {
+         content: "»";
+         right: 0;
+         -webkit-transition: right 0.24s ease;
+         -moz-transition: right 0.24s ease;
+         transition: right 0.24s ease;
+      }
+
+      .pagination .newer:hover:after {
+         right: -0.25em;
+      }
+
+   .pagination small {
+      font-size: 0.875em;
+   }
+
+   .separator-line {
+    height: 1px;
+    width: 70px;
+    background-color: #707070;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+</style>
+
+
+
+<h4 class="text-center" style="font-family: 'Lato', san-serif;">IFVCC News Archive</h4>
+  <div class="separator-line"></div>
+
+
+  {{ entries:listing folder="/ifvcc/ifvcc-news" limit="8" }}
+	    {{ if no_results }}
+		  <p class="sorry">
+			No journal posts have been posted yet.<br>
+			Check back soon.
+		  </p>
+	    {{ else }}
+      <h5 style="font-family: Lato, sans-serif; font-weight: 900; margin-top: 40px; line-height: 25px; text-transform: uppercase;"><span style="font-weight: 400; text-transform: none; color: #999">{{ date }}</span> | <a href="{{ url }}">{{if displayTitle}}{{ displayTitle }}{{else}}{{title}}{{endif}}</a></h5>
+
+
+          {{ content }}
+
+          <hr/>
+
+	    {{ endif }}
+	{{ /entries:listing }}
+
+
+
+	{{ entries:pagination folder="/ifvcc/ifvcc-news" limit="8" }}
+	    {{ if next_page || previous_page }}
+		  <div class="pagination clearfix">
+			{{ if next_page }}
+			    <a href="{{ next_page }}" class="older">Older</a>
+      {{else}}
+      &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+			{{ endif }}
+			{{ if previous_page }}
+			    <a href="{{ previous_page }}" class="newer">Newer&nbsp;</a>
+			{{ endif }}
+		  </div>
+	    {{ endif }}
+	{{ /entries:pagination }}

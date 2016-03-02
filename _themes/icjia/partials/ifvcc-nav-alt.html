@@ -42,17 +42,68 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/ifvcc/councils">Councils</a>
+                    <li {{if title == 'IFVCC Councils'}}class="active"{{/if}}>
+                        <a href="/ifvcc/ifvcc-councils">Councils</a>
                     </li>
-                    <li>
-                        <a href="/ifvcc/projects">Projects</a>
+
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+
+                          <li class="dropdown-header">
+                              IFVCC Projects
+                          </li>
+
+                            <li>
+                                <a href="/ifvcc/projects">Overview</a>
+                            </li>
+
+
+
+
+
+
+                              <li class="divider"></li>
+
+                              <li class="dropdown-header">
+                                  Model Domestic Violence Protocol
+                              </li>
+                              <li style="margin-bottom: -20px; padding-bottom: 0">
+                                <a href="/assets/ifvcc/Model Protocols/Model Domestic Violence Protocol.zip" class="track"><i class="fa fa-download fa-fw" ></i> Download </a>&nbsp;
+                              </li>
+
+
+                              <li class="dropdown-header">
+                                  Model Elder Abuse Protocol
+                              </li>
+                              <li style="margin-bottom: -20px; padding-bottom: 0">
+                                <a href="/assets/ifvcc/Model Protocols/Model Elder Abuse Protocol.zip" class="track"><i class="fa fa-download fa-fw" ></i> Download </a>&nbsp;
+                              </li>
+
+
+                              <!-- <li class="dropdown-header">
+                                  Model Abuse of Persons with Disabilities Protocol
+                              </li>
+                              <li style="margin-bottom: -20px; padding-bottom: 0">
+                                <a href="/assets/ifvcc/model protocols" class="track"><i class="fa fa-download fa-fw" ></i> Download </a>&nbsp;
+                              </li> -->
+
+
+
+
+
+
+                        </ul>
                     </li>
-                    <li>
+
+
+                    <li {{if title == 'Partners'}}class="active"{{/if}}>
                         <a href="/ifvcc/partners">Partners</a>
                     </li>
 
-                    <li>
+                    <li {{if title == 'Archive'}}class="active"{{/if}}>
                         <a href="/ifvcc/archive">Archive</a>
                     </li>
                     <li>
@@ -61,6 +112,13 @@
                     <li>
                         <a href="/ifvcc/contact">Contact</a>
                     </li>
+
+
+
+
+                    <!--<li>
+                        <a href="/ifvcc/lcc">LCC</a>
+                    </li>-->
 
 
 

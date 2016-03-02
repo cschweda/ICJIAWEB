@@ -27,7 +27,7 @@ showLegend="0">
 <colorRange>
 
         <color minValue="1" maxValue="10" displayValue="Circuit 1" color="571F4E" />
-				<color minValue="11" maxValue="20" displayValue="Circuit 2" color="76486E" />
+				<color minValue="11" maxValue="20" displayValue="Circuit 2" color="86486E" />
 				<color minValue="21" maxValue="30" displayValue="Circuit 3" color="94708E" />
 				<color minValue="31" maxValue="40" displayValue="Circuit 4" color="AF3B6E" />
 				<color minValue="41" maxValue="50" displayValue="Circuit 5" color="C2AEBF" />
@@ -71,31 +71,31 @@ showLegend="0">
 		<entity id='027' value='40'  toolText="Clinton County{br} 4th Circuit"/>/>
 		<entity id='029' value='50'  toolText="Coles County{br} 5th Circuit"/>
 		<entity id='031' value='5000'  toolText="Cook County{br} Cook"/>
-		<entity id='033' value='200'  toolText="Crawford County{br} 20th Circuit"/>"/>
+		<entity id='033' value='20'  toolText="Crawford County{br} 2nd Circuit"/>"/>
 		<entity id='035' value='50'  toolText="Cumberland County{br}5th Circuit"/>
 		<entity id='037' value='230'  toolText="DeKalb County{br}23rd Circuit"/>
 		<entity id='039' value='60'  toolText="De Witt County{br} 6th Circuit"/>/>
 		<entity id='041' value='60'  toolText="Douglas County{br} 6th Circuit"/>/>
 		<entity id='043' value='180'  toolText="Du Page County{br}18th Circuit"/>
 		<entity id='045' value='50'  toolText="Edgar County{br}5th Circuit"/>
-		<entity id='047' value='200'  toolText="Edwards County{br} 20th Circuit"/>"/>
+		<entity id='047' value='20'  toolText="Edwards County{br} 2nd Circuit"/>"/>
 		<entity id='049' value='40'  toolText="Effingham County{br} 4th Circuit"/>/>
 		<entity id='051' value='40'  toolText="Fayette County{br} 4th Circuit"/>/>
 		<entity id='053' value='110'  toolText="Ford County{br} 11th Circuit"/>
-		<entity id='055' value='200'  toolText="Franklin County{br} 20th Circuit"/>"/>
+		<entity id='055' value='20'  toolText="Franklin County{br} 2nd Circuit"/>"/>
 		<entity id='057' value='90'  toolText="Fulton County{br} 9th Circuit"/>
-		<entity id='059' value='200'  toolText="Gallatin County{br} 20th Circuit"/>"/>
+		<entity id='059' value='20'  toolText="Gallatin County{br} 2nd Circuit"/>"/>
 		<entity id='061' value='70'  toolText="Greene County{br} 7th Circuit"/>
 		<entity id='063' value='130'  toolText="Grundy County{br} 13th Circuit"/>
-		<entity id='065' value='200'  toolText="Hamilton County{br} 20th Circuit"/>"/>
+		<entity id='065' value='20'  toolText="Hamilton County{br} 2nd Circuit"/>"/>
 		<entity id='067' value='90'  toolText="Hancock County{br} 9th Circuit"/>
-		<entity id='069' value='200'  toolText="Hardin County{br} 20th Circuit"/>"/>
+		<entity id='069' value='20'  toolText="Hardin County{br} 2nd Circuit"/>"/>
 		<entity id='071' value='90'  toolText="Henderson County{br} 9th Circuit"/>
 		<entity id='073' value='140'  toolText="Henry County{br} 14th Circuit"/>
 		<entity id='075' value='210'  toolText="Iroquois County{br} 21st Circuit"/>
 		<entity id='077' value='10'  toolText="Jackson County{br} 1st Circuit"/>
 		<entity id='079' value='40'  toolText="Jasper County{br} 4th Circuit"/>/>
-		<entity id='081' value='200'  toolText="Jefferson County{br} 20th Circuit"/>"/>
+		<entity id='081' value='20'  toolText="Jefferson County{br} 2nd Circuit"/>"/>
 		<entity id='083' value='70'  toolText="Jersey County{br} 7th Circuit"/>
 		<entity id='085' value='150'  toolText="Jo Daviess County{br} 15th Circuit"/>
 		<entity id='087' value='10'  toolText="Johnson County{br} 1st Circuit"/>
@@ -105,7 +105,7 @@ showLegend="0">
 		<entity id='095' value='90'  toolText="Knox County{br} 9th Circuit"/>
 		<entity id='097' value='190'  toolText="Lake County{br} 19th Circuit"/>
 		<entity id='099' value='130'  toolText="La Salle County{br} 13th Circuit"/>
-		<entity id='101' value='200'  toolText="Lawrence County{br} 20th Circuit"/>"/>
+		<entity id='101' value='20'  toolText="Lawrence County{br} 2nd Circuit"/>"/>
 		<entity id='103' value='150'  toolText="Lee County{br} 15th Circuit"/>
 		<entity id='105' value='110'  toolText="Livingston County{br} 11th Circuit"/>
 		<entity id='107' value='110'  toolText="Logan County{br} 11th Circuit"/>
@@ -134,7 +134,7 @@ showLegend="0">
 		<entity id='153' value='10'  toolText="Pulaski County{br} 1st Circuit"/>
 		<entity id='155' value='100'  toolText="Putnam County{br} 10th Circuit"/>
 		<entity id='157' value='200'  toolText="Randolph County{br} 20th Circuit"/>"/>
-		<entity id='159' value='200'  toolText="Richland County{br} 20th Circuit"/>"/>
+		<entity id='159' value='20'  toolText="Richland County{br} 2nd Circuit"/>"/>
 		<entity id='161' value='140'  toolText="Rock Island County{br} Circuit"/>
 		<entity id='163' value='200'  toolText="St. Clair County{br} 20th Circuit"/>"/>
 		<entity id='165' value='10'  toolText="Saline County{br} 1st Circuit"/>
@@ -147,11 +147,11 @@ showLegend="0">
 		<entity id='179' value='100'  toolText="Tazewell County{br} 10th Circuit"/>
 		<entity id='181' value='10'  toolText="Union County{br} 1st Circuit"/>
 		<entity id='183' value='50'  toolText="Vermillion County{br} 5th Circuit"/>
-		<entity id='185' value='200'  toolText="Wasbash County{br} 20th Circuit"/>"/>
+		<entity id='185' value='20'  toolText="Wasbash County{br} 2nd Circuit"/>"/>
 		<entity id='187' value='90'  toolText="Warren County{br} 9th Circuit"/>
 		<entity id='189' value='200'  toolText="Washington County{br} 20th Circuit"/>"/>
-		<entity id='191' value='200'  toolText="Wayne County{br} 20th Circuit"/>"/>
-		<entity id='193' value='200'  toolText="White County{br} 20th Circuit"/>"/>
+		<entity id='191' value='20'  toolText="Wayne County{br} 2nd Circuit"/>"/>
+		<entity id='193' value='20'  toolText="White County{br} 2nd Circuit"/>"/>
 		<entity id='195' value='140'  toolText="Whiteside County{br} 14th Circuit"/>
 		<entity id='197' value='120'  toolText="Will County{br} 12th Circuit"/>
 		<entity id='199' value='10'  toolText="Williamson County{br} 1st Circuit"/>

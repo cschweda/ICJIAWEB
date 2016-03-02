@@ -127,6 +127,7 @@ _environments:
     - '10.*'
   live:
     - 'http://icjia.*'
+    - 'http://www.icjia.*'
 
 # Set to 'true' if you want to log system messages
 _log_enabled: true

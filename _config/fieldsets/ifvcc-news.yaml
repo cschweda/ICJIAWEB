@@ -1,0 +1,156 @@
+title: News Item
+
+fields:
+  _template:
+    type: hidden
+    default: ifvcc-news-item
+
+  _layout:
+    type: hidden
+    default: ifvcc-default
+
+  expire:
+    display: Expire date
+    required:
+    type: date
+    default: 2222-12-31
+
+  displayTitle:
+    display: Display Title
+    required: true
+    type: text
+    instructions: This title will be displayed as the title of the news item.
+
+  authors:
+    display: News poster
+    type: select
+    default:
+    options:
+      - Sal Perri
+      - Chris Schweda
+      - Cristin Evans
+
+  # siteDisplay:
+  #   display: Display news item on which site(s)?
+  #   required: true
+  #   type: suggest
+  #   create: false
+  #   max_items: 4
+  #   default:
+  #     - ICJIA
+  #   options:
+  #     - ICJIA
+  #     - ARI
+  #     - IFVCC
+  #     - MVTPCC
+
+  updatedItem:
+    display: Is this an update to an existing news story?
+    required: false
+    type: suggest
+    create: false
+    max_items: 1
+    default:
+      - 'False'
+    options:
+      - 'False'
+      - 'True'
+
+
+  keywords:
+    display: Keywords
+    required: false
+    type: suggest
+    create: true
+    max_items: 10
+    options:
+      - Aging
+      - Child Abuse
+      - Criminal Records
+      - Criminal Justice
+      - Corrections
+      - Court Services
+      - Defense
+      - Domestic Violence
+      - Forensic Sciences
+      - Gangs
+      - Human Services
+      - Human Trafficking
+      - Jail
+      - Juveniles
+      - Law Enforcement
+      - Offender Services
+      - Partnerships
+      - Prevention and Education
+      - Probation and Parole
+      - Prosecution
+      - Research and Evaluation
+      - Security
+      - Sexual Assault
+      - Substance Abuse
+      - Technology Improvement
+      - Training
+      - Treatment
+      - Victims
+
+  teaser:
+    display: Teaser (partial to display)
+    required: false
+    type: redactor
+    height: 100
+
+  summary:
+    display: Summary (for search)
+    required: false
+    type: redactor
+    height: 100
+
+  content:
+    display: Content
+    type: redactor
+    image_dir: assets/img/news
+
+  positive_keywords:
+    display: Positive Search Keywords
+    required: false
+    default:
+    type: tags
+
+  negative_keywords:
+    display: Negative Search Keywords
+    required: false
+    default:
+    type: tags
+
+  super_positive_keywords:
+    display: Super positive Search Keywords (weighted heavily for search -- not visible on site)
+    required: false
+    default:
+    type: tags
+
+  super_negative_keywords:
+    display: Super negative Search Keywords (weighted heavily for search -- not visible on site)
+    required: false
+    default:
+    type: tags
+
+  file_upload_field:
+    type: replicator
+    instructions: |
+      File upload
+
+    sets:
+
+      file_upload:
+        display: PDF/Word Upload
+        instructions: Upload PDF or Word file here
+        fields:
+          fileitem:
+            type: file
+            allowed: [pdf, doc, docx]
+            destination: assets/news
+
+
+
+
+hide: true

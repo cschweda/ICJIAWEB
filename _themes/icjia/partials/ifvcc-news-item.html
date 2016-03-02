@@ -1,0 +1,19 @@
+
+	<h1 class="h4" style="text-transform: uppercase; font-weight: 700">
+		{{ if use_context }}<a href="{{ url }}">{{ endif }}{{ displayTitle|widont }}{{ if use_context }}</a>{{ endif }}
+	</h1>
+	<h4 class="h6 published">
+		{{ date }}
+		{{if keywords}}
+	| Keywords: {{ keywords_url_list }}
+{{endif}}</h6>
+
+
+<div style="margin-left: 10px; ">
+{{ content|widont }}
+</div>
+
+
+
+
+<div style="height: 50px"></div>
