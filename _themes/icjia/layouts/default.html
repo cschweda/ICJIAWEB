@@ -214,6 +214,24 @@
 
 
 
+		<script>
+		$(function() {
+			$('#nav-wrapper').height($("#nav").height());
+
+			$('#nav.icjia-main').affix({
+				offset: {
+					top: $('#nav').offset().top
+				}
+			});
+		});
+		$.bigfoot({
+
+				// leave original footnotes intact
+				actionOriginalFN: 'ignore'
+			}
+
+		);
+		</script>
 
 
 

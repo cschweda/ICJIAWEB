@@ -594,15 +594,15 @@ $('.open-image').click(function(e) {
 
 
 
-$(function() {
-	$('#nav-wrapper').height($("#nav").height());
-
-	$('#nav.icjia-main').affix({
-		offset: {
-			top: $('#nav').offset().top
-		}
-	});
-});
+// $(function() {
+// 	$('#nav-wrapper').height($("#nav").height());
+//
+// 	$('#nav.icjia-main').affix({
+// 		offset: {
+// 			top: $('#nav').offset().top
+// 		}
+// 	});
+// });
 
 
 
@@ -692,13 +692,13 @@ $(document).ready(function() {
 
 /* Markdown footnotes: BigfootJS: http://www.bigfootjs.com/ */
 
-$.bigfoot({
-
-		// leave original footnotes intact
-		actionOriginalFN: 'ignore'
-	}
-
-);
+// $.bigfoot({
+//
+// 		// leave original footnotes intact
+// 		actionOriginalFN: 'ignore'
+// 	}
+//
+// );
 ;/*!
  * jQuery plug-in to turn bootstrap tabbed navigation into responsive tabbed navigation
  * Original author: @stephen_thomas
