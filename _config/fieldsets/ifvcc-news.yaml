@@ -15,11 +15,11 @@ fields:
     type: date
     default: 2222-12-31
 
-  displayTitle:
-    display: Display Title
-    required: true
-    type: text
-    instructions: This title will be displayed as the title of the news item.
+  # displayTitle:
+  #   display: Display Title
+  #   required: true
+  #   type: text
+  #   instructions: This title will be displayed as the title of the news item.
 
   authors:
     display: News poster
@@ -29,20 +29,8 @@ fields:
       - Sal Perri
       - Chris Schweda
       - Cristin Evans
+      - Mary Raitliff
 
-  # siteDisplay:
-  #   display: Display news item on which site(s)?
-  #   required: true
-  #   type: suggest
-  #   create: false
-  #   max_items: 4
-  #   default:
-  #     - ICJIA
-  #   options:
-  #     - ICJIA
-  #     - ARI
-  #     - IFVCC
-  #     - MVTPCC
 
   updatedItem:
     display: Is this an update to an existing news story?
@@ -56,59 +44,63 @@ fields:
       - 'False'
       - 'True'
 
-
-  keywords:
-    display: Keywords
+  circuit:
+    display: Circuit
+    instructions: Keep circuit at '00' to indicate 'all' circuits. Select '500' for Cook.
     required: false
     type: suggest
-    create: true
-    max_items: 10
+    max_items: 1
     options:
-      - Aging
-      - Child Abuse
-      - Criminal Records
-      - Criminal Justice
-      - Corrections
-      - Court Services
-      - Defense
-      - Domestic Violence
-      - Forensic Sciences
-      - Gangs
-      - Human Services
-      - Human Trafficking
-      - Jail
-      - Juveniles
-      - Law Enforcement
-      - Offender Services
-      - Partnerships
-      - Prevention and Education
-      - Probation and Parole
-      - Prosecution
-      - Research and Evaluation
-      - Security
-      - Sexual Assault
-      - Substance Abuse
-      - Technology Improvement
+      - '000'
+      - '001'
+      - '002'
+      - '003'
+      - '004'
+      - '005'
+      - '006'
+      - '007'
+      - '008'
+      - '009'
+      - '010'
+      - '011'
+      - '012'
+      - '013'
+      - '014'
+      - '015'
+      - '016'
+      - '017'
+      - '018'
+      - '019'
+      - '020'
+      - '021'
+      - '022'
+      - '023'
+      - '500'
+
+  eventType:
+    display: Event Type
+    required: false
+    type: suggest
+    create: false
+    max_items: 3
+    options:
+      - Community Awareness
+      - Meeting
       - Training
-      - Treatment
-      - Victims
 
-  teaser:
-    display: Teaser (partial to display)
-    required: false
-    type: redactor
-    height: 100
 
-  summary:
-    display: Summary (for search)
-    required: false
-    type: redactor
-    height: 100
 
   content:
-    display: Content
+    display: News and Event content
     type: redactor
-    image_dir: assets/img/news
+    image_dir: assets/ifvcc/img
+
+  summary:
+    display: Search summary
+    instructions: Users will see this summary in the search results.
+    required: false
+    type: redactor
+    height: 100
 
   positive_keywords:
     display: Positive Search Keywords
@@ -148,7 +140,7 @@ fields:
           fileitem:
             type: file
             allowed: [pdf, doc, docx]
-            destination: assets/news
+            destination: assets/ifvcc/news
 
 
 

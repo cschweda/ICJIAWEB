@@ -76,4 +76,19 @@ h2.h5 {font-weight: 700}
 
               {{endif}}
 
+
+            <h2 class="h5 rule">Circuit News & Events</h2>
+              {{ entries:listing folder="/ifvcc/ifvcc-news" limit="3" show_past="false" show_future="true"  conditions="circuit:{title}"}}
+                {{ if no_results }}
+                No upcoming events
+                {{else}}
+                <div style="margin-bottom: 30px">
+              <span style="text-transform: uppercase; color: #aaa;">{{date}}</span> | <span style="text-transform: uppercase; font-weight: 900"><a href="{{url}}">{{title}}&nbsp;&raquo;</a></span>
+
+            </div>
+                {{ endif }}
+                	{{ /entries:listing }}
+
+
+
 </div>
