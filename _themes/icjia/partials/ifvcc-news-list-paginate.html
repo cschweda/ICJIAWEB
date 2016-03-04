@@ -86,22 +86,82 @@
 </style>
 
 
+<script>
+function ordinal_suffix(i) {
+
+
+    var j = i % 10,
+        k = i % 100;
+    if (j == 1 && k != 11) {
+        return i + "st";
+    }
+    if (j == 2 && k != 12) {
+        return i + "nd";
+    }
+    if (j == 3 && k != 13) {
+        return i + "rd";
+    }
+    return i + "th";
+}
+
+
+
+
+function getCircuitName(c) {
+  var myCircuitClass=".circuit-name-" + c;
+  //$(myCircuitClass).html(Number(c));
+  var circuitNum=Number(c);
+  var circuitInsert = ordinal_suffix(circuitNum) + ' Circuit';
+  if (c==='500') {
+    $(myCircuitClass).html('Cook County');
+  } else {
+    $(myCircuitClass).html(circuitInsert);
+  }
+
+
+
+
+
+}
+</script>
+
+
+
 
 <h4 class="text-center" style="font-family: 'Lato', san-serif;">IFVCC News Archive</h4>
   <div class="separator-line"></div>
 
 
-  {{ entries:listing folder="/ifvcc/ifvcc-news" limit="8" }}
+  {{ entries:listing folder="/ifvcc/ifvcc-news" limit="8"}}
 	    {{ if no_results }}
 		  <p class="sorry">
 			No journal posts have been posted yet.<br>
 			Check back soon.
 		  </p>
 	    {{ else }}
-      <h5 style="font-family: Lato, sans-serif; font-weight: 900; margin-top: 40px; line-height: 25px; text-transform: uppercase;"><span style="font-weight: 400; text-transform: none; color: #999">{{ date }}</span> | <a href="{{ url }}">{{if displayTitle}}{{ displayTitle }}{{else}}{{title}}{{endif}}</a></h5>
+      <h4 class="h4" style="text-transform: uppercase; font-weight: 700">
+    	{{ title|widont }}
+    </h4>
+      <h4 class="h6 published">
+
+        {{if eventType}}
+        <span class="dv-purple" style="font-weight: 600; text-transform: uppercase;">
+    {{ eventType_list}}</span> |
+    {{endif}}<span style="color: #000; font-weight: 600; text-transform: uppercase;" class="circuit-name-{{circuit}}">{{circuit}}</span>&nbsp;<span style="color: #777; font-size: 14px; text-transform: uppercase;">
 
 
-          {{ content }}
+      <script>
+      getCircuitName('{{circuit}}');
+      </script>
+
+
+
+    </span>
+  </h4>
+
+  <div style="margin-left: 10px; ">
+  {{ content|widont }}
+  </div>
 
           <hr/>
 

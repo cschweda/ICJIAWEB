@@ -1,19 +1,50 @@
 
 	<h1 class="h4" style="text-transform: uppercase; font-weight: 700">
-		{{ if use_context }}<a href="{{ url }}">{{ endif }}{{ title|widont }}{{ if use_context }}</a>{{ endif }}
+	{{ title|widont }}
 	</h1>
 	<h4 class="h6 published">
-		{{ date }}
-		{{if keywords}}
-	| Keywords: {{ keywords_url_list }}
-{{endif}}</h6>
+
+		{{if eventType}}
+		<span class="dv-purple" style="font-weight: 600; text-transform: uppercase;">
+{{ eventType_list}}</span> |
+{{endif}}<span style="color: #000; font-weight: 600; text-transform: uppercase;" id="circuit-name"></span>&nbsp;<span style="color: #777; font-size: 14px; text-transform: uppercase;">
+
+</span>
+	</h4>
 
 
 <div style="margin-left: 10px; ">
 {{ content|widont }}
 </div>
 
+<div style="margin-top: 20px; font-size: 14px; color: #aaa; text-transform: uppercase">
+	Posted: {{ date }}
+</div>
 
 
 
 <div style="height: 50px"></div>
+<script>
+
+function ordinal_suffix(i) {
+		var j = i % 10,
+				k = i % 100;
+		if (j == 1 && k != 11) {
+				return i + "st";
+		}
+		if (j == 2 && k != 12) {
+				return i + "nd";
+		}
+		if (j == 3 && k != 13) {
+				return i + "rd";
+		}
+		return i + "th";
+}
+var s=Number('{{circuit}}');
+var myCircuit = ordinal_suffix(s);
+if (myCircuit == '500th') {
+	$('#circuit-name').html('Cook County');
+} else {
+	$('#circuit-name').html(myCircuit + ' Circuit');
+}
+</script>

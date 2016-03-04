@@ -77,6 +77,16 @@ fields:
       - '023'
       - '500'
 
+  # itemType:
+  #   display: Is this a news item or an event?
+  #   required: false
+  #   type: suggest
+  #   create: false
+  #   max_items: 1
+  #   options:
+  #     - News
+  #     - Event
+
   eventType:
     display: Event Type
     required: false
@@ -87,6 +97,7 @@ fields:
       - Community Awareness
       - Meeting
       - Training
+
 
 
 
