@@ -29,7 +29,7 @@ $(function() {
       name: 'Children (0-17)',
       data: [4305, 4141, 4050, 3877, 3904]
     }, {
-      name: 'Adults(18+)',
+      name: 'Adults (18+)',
       data: [6322, 6212, 6174, 5953, 6103]
     }, {
       name: 'Hotline/Crisis Intervention contacts',
@@ -98,7 +98,7 @@ $(function() {
 
 
 $(function() {
-  $('#container').highcharts({
+  $('#hc-fig3').highcharts({
     chart: {
       plotBackgroundColor: null,
       plotBorderWidth: null,
