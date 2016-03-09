@@ -47,7 +47,7 @@ $(function() {
       type: 'column'
     },
     title: {
-      text: 'Child sexual abuse reports to child protective services and rape offenses reported to law enforcement in Illinois, Fiscal/Calendar<sup><span style="color: #000">*</span></sup> Years (FY/CY) 2010-2014'
+      text: 'Child sexual abuse reports to child protective services and rapes reported to law enforcement in Illinois, Fiscal/Calendar<sup><span style="color: #000">*</span></sup> Years (FY/CY) 2010-2014'
     },
     subtitle: {
       text: 'Sources: Illinois Department of Children and Family Services (DCFS) and Illinois State Police (ISP)'
