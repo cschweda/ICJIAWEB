@@ -47,7 +47,7 @@ $(function() {
       type: 'column'
     },
     title: {
-      text: 'Child sexual abuse reports to child protective services and rape offenses reported to law enforcement in Illinois, Fiscal/Calendar Years (FY/CY) 2010-2014'
+      text: 'Child sexual abuse reports to child protective services and rape offenses reported to law enforcement in Illinois, Fiscal/Calendar<sup><span style="color: #000">*</span></sup> Years (FY/CY) 2010-2014'
     },
     subtitle: {
       text: 'Sources: Illinois Department of Children and Family Services (DCFS) and Illinois State Police (ISP)'
@@ -83,12 +83,12 @@ $(function() {
       }
     },
     series: [{
-      name: 'Cases of child sexual abuse reported to DCFS (reported by state fiscal year)',
+      name: 'Child sexual abuse cases reported to DCFS',
       data: [7965, 7757, 8208, 7880, 7185]
 
 
     }, {
-      name: 'Rapes reported to law enforcement (reported by calendar year, including adults and children)',
+      name: 'Rapes reported to law enforcement (adults and children)',
       data: [4533, 4383, 4330, 3960, 4089]
 
 
