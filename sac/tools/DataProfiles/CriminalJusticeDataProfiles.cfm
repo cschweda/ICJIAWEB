@@ -5,7 +5,6 @@
 <html>
 <head>
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">	
-
 	<!--
 	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
@@ -21,7 +20,12 @@
 <script src="http://code.highcharts.com/modules/data.js"></script>
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
 <script src="JS/Dashboards.js"></script>
-  	
+
+
+
+	<script type="text/javascript" src="http://www.icjia.org/_themes/icjia/vendor/fusioncharts-suite-xt/js/fusioncharts.js"></script>
+	<script type="text/javascript" src="http://www.icjia.org/_themes/icjia/vendor/fusioncharts-jquery-plugin-master/package/fusioncharts-jquery-plugin.min.js"></script>
+
 
 	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -395,6 +399,7 @@ $(function ($) {
 <h2>ICJIA Criminal Justice Data Profiles</h2>
 <p>Data profiles for several criminal justice indicators are available at the county, judicial circuit, and statewide level. These profiles
 show a variety of charts and statistics about the chosen area and data theme.</p>
+
 					<form id="ProfileSelector" name="ProfileSelector" method="GET" action="GetProfiles.cfm">
 				        <p><b>Step 1 -</b> Select a profile to view:<br>  
 				            <input type="checkbox" name="ProfileNumber" class="required CHRI_checkbox" id="ProfileCheck10" value="10" checked="checked">
@@ -411,7 +416,8 @@ show a variety of charts and statistics about the chosen area and data theme.</p
 				        </p>
 						
 											
-						<div id="CountySelector"><p><b>Step 2 -</b> Select a county, judicial circuit, or Illinois: 
+						<div id="CountySelector"><p><b>Step 2 -</b> Select a county, judicial circuit, or Illinois:
+						
 				        	<select id="CountySelector" name="ICJIANumber">
 					        	<option value="999">Illinois</option>
 								<option value="1">Adams</option>
@@ -539,8 +545,8 @@ show a variety of charts and statistics about the chosen area and data theme.</p
 								<option value="1021">21st Circuit</option>
 								<option value="1022">22nd Circuit</option>
 							</select>
-						</p></div>
-							
+						</p><cfinclude template="IllinoisMap.cfm"> </div>
+						
 						<p><input type="submit" id="getProfile" value="Retrieve profile">
 						<span id="ToolStatus" style="color:red"></span></p>
 					</form>	
