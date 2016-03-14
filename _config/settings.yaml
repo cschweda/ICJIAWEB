@@ -210,7 +210,7 @@ _allow_file_field_deletions: false
 ###########################################################################################
 
 # plain english works just fine here.
-_cookies.lifetime: 1 day
+_cookies.lifetime: 15 minutes
 
 # For advanced users only. Here be dragons.
 _cookies.cipher: MCRYPT_RIJNDAEL_256

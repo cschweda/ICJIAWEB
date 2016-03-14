@@ -1,0 +1,50 @@
+---
+title: Password Entry
+_template: default-blank
+upload: ""
+_layout: ifvcc-default
+breadcrumbs: 'true'
+---
+<section id="archive" style="margin-bottom: 50px">
+
+  <div class="container">
+    <div class="col-md-2"></div>
+    <div class="col-md-9">
+      <div class="">
+
+
+        <h2 class="h3" style="text-transform: uppercase; font-weight: 700">Local Council Coordinators</h2>
+          <img src='/sitedev/ifvcc/img/logo3-purple-black-small.png' style='float: left; margin-right: 15px; margin-top: 10px'>
+        <p>Family Violence Coordinating Councils, at both the state and local/circuit levels, provide a forum to improve the institutional, professional and community response to family violence including child abuse, domestic abuse, and elder abuse. Councils provide professional education and prevention; coordinate interventions and services for victims and perpetrators; and contribute to both the improvement of the legal system and the administration of justice.</p>
+
+        <div style="margin-bottom: 50px"></div>
+
+        <h3 class="h4 text-center" style="font-weight: 900; text-transform: uppercase">Please enter the password to view this content</h3>
+
+        <div style="margin-bottom: 30px"></div>
+
+
+        {{ protect:password_form }}
+           {{ if error }}
+              <p class="error">{{ error }}</p>
+           {{ endif }}
+
+<form class="form-inline">
+  <div class="form-group text-center">
+
+              <input type="password" name="password" value="" id="password" style="width: 40%" placeholder=" Password ">
+              <br/><br/>
+
+              <input type="submit" style="color: #000" value="Submit" class="btn btn-primary">
+            </div>
+            </form>
+
+        {{ /protect:password_form }}
+
+        <div class="text-center" style="margin-top: 20px;">
+        <p style="font-size: 12px; color: #666">For questions or additional information, please contact <a href="mailto: mary.ratliff@illinois.gov">mary.ratliff@illinois.gov</a></p>
+
+</div>
+</div>
+</div>
+</div>
