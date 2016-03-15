@@ -19,14 +19,21 @@ breadcrumbs: 'true'
 
         <div style="margin-bottom: 50px"></div>
 
+        <div class="well" style="padding-top: 50px; padding-bottom: 40px">
+
         <h3 class="h4 text-center" style="font-weight: 900; text-transform: uppercase">Please enter the password to view this content</h3>
 
         <div style="margin-bottom: 30px"></div>
 
 
+
         {{ protect:password_form }}
            {{ if error }}
-              <p class="error">{{ error }}</p>
+
+           <div class="text-center" >
+
+              <p class="error" style="color: red; font-weight: 700">{{ error }}</p>
+            </div>
            {{ endif }}
 
 <form class="form-inline">
@@ -43,7 +50,7 @@ breadcrumbs: 'true'
 
         <div class="text-center" style="margin-top: 20px;">
         <p style="font-size: 12px; color: #666">For questions or additional information, please contact <a href="mailto: mary.ratliff@illinois.gov">mary.ratliff@illinois.gov</a></p>
-
+</div>
 </div>
 </div>
 </div>
