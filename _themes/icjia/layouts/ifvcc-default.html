@@ -121,7 +121,9 @@
 
 	<script src="{{ theme:asset src='bower_components/moment/min/moment.min.js' }}"></script>
 
+<style>
 
+</style>
 	</head>
 	<body>
 
@@ -300,6 +302,9 @@
 			$circuitContainer.isotope({
 				filter: filterValue
 			});
+
+			$('.filter-group a').removeClass('selected-circuit');
+			$(this).addClass('selected-circuit');
 
 			if ( !$circuitContainer.data('isotope').filteredItems.length ) {
   			$('#circuit-message').show();
