@@ -3,13 +3,28 @@ facebokContentType: 'article'
 facebookAppId: '658596667606445'
 facebookAuthorURL: 'https://www.facebook.com/ICJIA'
 socialMediaImage: 'http://www.icjia.state.il.us/assets/img/icjia-default.jpg'
+socialMediaImageIFVCC: 'http://www.icjia.state.il.us/assets/ifvcc/img/logo3-purple-black.png'
 
 #default meta content
 
 defaultDescription: 'Created in 1983, the Illinois Criminal Justice Information Authority is a state agency dedicated to improving the administration of criminal justice.'
+defaultDescriptionIFVCC: 'Illinois Family Violence Coordinating Councils, at both the state and local/circuit levels, provide a forum to improve the institutional, professional and community response to family violence including child abuse, domestic abuse, and elder abuse.'
+
+#default site titles
 
 defaultPageTitle: 'Illinois Criminal Justice Information Authority'
+defaultPageTitleIFVCC: 'Illinois Family Violence Coordinating Councils'
+
+#default site names
+
 defaultSiteName: 'Illinois Criminal Justice Information Authority'
+defaultSiteNameIFVCC: 'Illinois Family Violence Coordinating Councils'
+
+#default site keywords
+
 defaultKeywords: 'ICJIA, Criminal Justice, Illinois, Authority, Reform, Illinois Criminal Justice Information Authority'
+defaultKeywordsIFVCC: 'IFVCC, ICJIA, Criminal Justice, Illinois, Illinois Family Violence Coordinating Councils, elder abuse, family violence, child abuse, domestic abuse'
+
+
 
 stickysocialsidebar: 'true'

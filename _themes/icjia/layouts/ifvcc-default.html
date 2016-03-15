@@ -5,31 +5,31 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>ICJIA {{if title}}| {{ title }}{{endif}}</title>
-		<meta name="description" content="{{if summary}}{{summary|striptags}}{{else}}{{ defaultDescription }}{{endif}}">
-		<meta name="keywords" content="{{ if keywords }}{{keywords_list}}{{else}}{{defaultKeywords}}{{endif}}">
+		<title>IFVCC {{if title}}| {{ title }}{{endif}}</title>
+		<meta name="description" content="{{if summary}}{{summary|striptags}}{{else}}{{ defaultDescriptionIFVCC }}{{endif}}">
+		<meta name="keywords" content="{{ if keywords }}{{keywords_list}}{{else}}{{defaultKeywordsIFVCC}}{{endif}}">
 		<meta name="date" content="{{ current_date }}">
 		<link rel="canonical" href="{{ permalink }}">
 
 
 		<!-- Facebook metatags -->
 				<meta property="og:title" content="{{ title }}" />
-				<meta property="og:site_name" content="{{ defaultSiteName }}"/>
+				<meta property="og:site_name" content="{{ defaultSiteNameIFVCC }}"/>
 				<meta property="og:url" content="{{ permalink }}" />
-				<meta property="og:description" content="{{if summary}}{{summary|striptags}}{{else}}{{ defaultDescription }}{{endif}}" />
+				<meta property="og:description" content="{{if summary}}{{summary|striptags}}{{else}}{{ defaultDescriptionIFVCC }}{{endif}}" />
 				<meta property="fb:app_id" content="{{facebookAppId}}" />
 				<meta property="og:type" content="{{facebokContentType}}" />
 				<meta property="og:locale" content="en_US" />
 				<meta property="article:author" content="{{ facebookAuthorURL }}" />
-					<meta property="og:image" content="{{if splash}}http://www.icjia.state.il.us{{splash}}{{else}}{{socialMediaImage}}{{endif}}" />
+					<meta property="og:image" content="{{if splash}}http://www.icjia.state.il.us{{splash}}{{else}}{{socialMediaImageIFVCC}}{{endif}}" />
 		<!-- // Facebook metatags -->
 
 		<!-- Twitter metatags -->
 			<meta name="twitter:card" content="summary" />
 			<meta name="twitter:site" content="@ICJIA_Illinois" />
 			<meta name="twitter:title" content="{{title}}" />
-			<meta name="twitter:description" content="{{if summary }}{{ summary }} {{else}} {{defaultdescription }} {{endif}}" />
-			<meta name="twitter:image" content="{{socialMediaImage}}" />
+			<meta name="twitter:description" content="{{if summary }}{{ summary }} {{else}} {{defaultdescriptionIFVCC }} {{endif}}" />
+			<meta name="twitter:image" content="{{socialMediaImageIFVCC}}" />
 			<meta name="twitter:url" content="{{ permalink }}" />
 		<!-- //Twitter metatags -->
 
@@ -282,7 +282,9 @@
 
 
 
-
+		$('.carousel').carousel({
+        interval: 10000 //changes the speed
+    })
 
 	    </script>
 
