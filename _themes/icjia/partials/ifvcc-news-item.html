@@ -3,8 +3,9 @@
 	{{ title|widont }}
 	</h1>
 	<h4 class="h6 published">
+		<span style="color: #999; text-transform: uppercase">{{date}}</span>
 
-		{{if eventType}}
+		{{if eventType}}&nbsp|&nbsp;
 		<span class="dv-purple" style="font-weight: 600; text-transform: uppercase;">
 {{ eventType_list}}</span> |
 {{endif}}<span style="color: #000; font-weight: 600; text-transform: uppercase;" id="circuit-name"></span>&nbsp;<span style="color: #777; font-size: 14px; text-transform: uppercase;">
@@ -17,9 +18,6 @@
 {{ content|widont }}
 </div>
 
-<div style="margin-top: 20px; font-size: 14px; color: #aaa; text-transform: uppercase">
-	Posted: {{ date }}
-</div>
 
 
 

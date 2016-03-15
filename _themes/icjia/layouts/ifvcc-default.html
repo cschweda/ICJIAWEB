@@ -286,6 +286,33 @@
         interval: 10000 //changes the speed
     })
 
+
+		var $circuitContainer = $('#circuit-grid');
+
+		$circuitContainer.isotope({
+			itemSelector: '.circuit-single',
+			layoutMode: 'fitRows'
+		});
+
+		$('.filter-group').on('click', 'a', function() {
+			var filterValue = $(this).attr('data-target');
+			//alert(filterValue);
+			$circuitContainer.isotope({
+				filter: filterValue
+			});
+
+			if ( !$circuitContainer.data('isotope').filteredItems.length ) {
+  			$('#circuit-message').show();
+		}	else {
+			$('#circuit-message').hide();
+		}
+
+
+
+		});
+
+
+
 	    </script>
 
 
@@ -293,8 +320,8 @@
 
 
 
-
 			{{theme:partial src="google-analytics"}}
+
 
 
 
