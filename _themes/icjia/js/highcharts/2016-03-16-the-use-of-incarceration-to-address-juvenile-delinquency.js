@@ -1,11 +1,11 @@
 $(function() {
   $('#hc-fig1').highcharts({
     title: {
-      text: 'IDJJ Admission Rates of Youths for Court Evaluations by Region, SFY 1993-2014 ',
+      text: 'IDJJ Admission Rates of Youths for Court Evaluations by Region, FY 1993-2014 ',
       x: -20 //center
     },
     subtitle: {
-      text: 'per 100,000 youths 13 to 20 years of age',
+      text: '',
       x: -20
     },
     xAxis: {
@@ -76,7 +76,7 @@ $(function() {
       type: 'column'
     },
     title: {
-      text: 'Percentage of Admissions for Court Evaluations Accounted for by Cook County, SFY 1995 - 2015'
+      text: 'Percentage of Admissions for Court Evaluations Accounted for by Cook County, FY 1995 - 2015'
     },
 
     xAxis: {
@@ -162,7 +162,7 @@ $(function() {
       text: 'Court Evaluation Admissions for Cook and non-Cook Counties by Offense Category'
     },
     subtitle: {
-      text: 'SFY 1996 - 2005 vs. SFY 2006 - 2015'
+      text: 'FY 1996 - 2005 vs. FY 2006 - 2015'
     },
     xAxis: {
       categories: ['Cook 1996-2005', 'Cook 2006-2014',
@@ -224,7 +224,7 @@ $(function() {
       text: 'IDJJ Admisions for Court Evaluations from Cook and non-Cook Counties by Race'
     },
     subtitle: {
-      text: 'SFY 1996 - 2005 vs SFY 2006 - 2015'
+      text: 'FY 1996 - 2005 vs FY 2006 - 2015'
     },
     xAxis: {
       categories: ['Cook County 1996-2005', 'Cook County 2006-2015',
