@@ -28,15 +28,14 @@
     "package.json",
     "test.html"
   ],
-  "version": "1.10.0",
-  "_release": "1.10.0",
+  "version": "1.9.4",
+  "_release": "1.9.4",
   "_resolution": {
     "type": "version",
-    "tag": "v1.10.0",
-    "commit": "a1b3d496e7ea13054451ddaa941fa217898b8ce4"
+    "tag": "v1.9.4",
+    "commit": "418bf9bacb2afd41aa1711194987908f458d26ce"
   },
   "_source": "git://github.com/silviomoreto/bootstrap-select.git",
-  "_target": "~1.10.0",
-  "_originalSource": "bootstrap-select",
-  "_direct": true
+  "_target": "~1.9.4",
+  "_originalSource": "bootstrap-select"
 }

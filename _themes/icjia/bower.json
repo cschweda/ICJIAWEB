@@ -27,7 +27,8 @@
     "viewerjs": "~0.5.7",
     "yamm3": "~1.1.0",
     "moment": "~2.10.6",
-    "bootstrap-select": "~1.9.4"
+    "bootstrap-select": "~1.9.4",
+    "emodal": "^1.2.6"
   },
   "resolutions": {
     "jquery": "2.1.4",

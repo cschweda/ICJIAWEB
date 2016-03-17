@@ -1,0 +1,42 @@
+{
+  "name": "emodal",
+  "description": "Easy Modal for bootstrap, is a simple way to create modal dialogs using javaScript.",
+  "main": "eModal.js",
+  "version": "1.2.6",
+  "authors": [
+    "Samuel Ribeiro"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "bootstrap",
+    "modal",
+    "dialog",
+    "iFrame",
+    "ajax",
+    "confirm",
+    "javaScript",
+    "easy"
+  ],
+  "homepage": "https://github.com/saribe/eModal",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  },
+  "_release": "1.2.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.2.6",
+    "commit": "935f5e9eff8003340ae539b0f262518bc4c55c85"
+  },
+  "_source": "git://github.com/saribe/eModal.git",
+  "_target": "^1.2.6",
+  "_originalSource": "emodal",
+  "_direct": true
+}

@@ -78,14 +78,6 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
     </td>
   </tr>
   <tr>
-    <td>liveSearchPlaceholder</td>
-    <td>string</td>
-    <td><code>null</code></td>
-    <td>
-      <p>When set to a string, a placeholder attribute equal to the string will be added to the liveSearch input.</p>
-    </td>
-  </tr>
-  <tr>
     <td>maxOptions</td>
     <td>integer | false</td>
     <td><code>false</code></td>
@@ -137,12 +129,11 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
     </td>
   </tr>
   <tr>
-    <td>showContent</td>
+    <td>showSubtext</td>
     <td>boolean</td>
-    <td><code>true</code></td>
+    <td><code>false</code></td>
     <td>
-      <p>When set to <code>true</code>, display custom HTML associated with selected option(s) in the button. When set 
-       to <code>false</code>, the option value will be displayed instead.</p>
+      <p>When set to <code>true</code>, display subtext associated with a selected option in the button.</p>
     </td>
   </tr>
   <tr>
@@ -154,19 +145,12 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
     </td>
   </tr>
   <tr>
-    <td>showSubtext</td>
+    <td>showContent</td>
     <td>boolean</td>
-    <td><code>false</code></td>
+    <td><code>true</code></td>
     <td>
-      <p>When set to <code>true</code>, display subtext associated with a selected option in the button.</p>
-    </td>
-  </tr>
-  <tr>
-    <td>showTick</td>
-    <td>boolean</td>
-    <td><code>false</code></td>
-    <td>
-      <p>Show checkmark on selected option (for items without <code>multiple</code> attribute).</p>
+      <p>When set to <code>true</code>, display custom HTML associated with selected option(s) in the button. When set 
+       to <code>false</code>, the option value will be displayed instead.</p>
     </td>
   </tr>
   <tr>

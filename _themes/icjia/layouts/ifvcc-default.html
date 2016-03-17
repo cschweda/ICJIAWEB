@@ -121,6 +121,8 @@
 
 	<script src="{{ theme:asset src='bower_components/moment/min/moment.min.js' }}"></script>
 
+
+
 <style>
 
 </style>
@@ -188,6 +190,11 @@
 
 
 
+	<!-- http://saribe.github.io/eModal/#demo-->
+				<!--	<script src="//rawgit.com/saribe/eModal/master/dist/eModal.min.js"></script>-->
+	<!--<script src="{{theme:asset src='bower_components/emodal/dist/eModal.min.js'}}"></script>-->
+
+<script src="{{theme:asset src='bower_components/emodal/dist/eModal.min.js'}}"></script>
 
 
 	<script>
@@ -328,6 +335,40 @@
 			{{theme:partial src="google-analytics"}}
 
 
+			<script>
+
+			$(document).ready(function(){
+    		$('#what-circuit').on('click', function(){
+				
+					var options = {
+	        url: "/ifvcc/what-circuit-am-i",
+	        title:'What Circuit Am I?'
+	    };
+
+			eModal.ajax(options);
+
+    	});
+		});
+
+
+
+
+
+
+
+		// 		function testMe(m) {
+		//
+		// 			var url = "/ifvcc/what-circuit-am-i";
+		// 			eModal.ajax(url);
+		// }
+		//
+		//
+		// testMe();
+
+
+
+
+			</script>
 
 
 

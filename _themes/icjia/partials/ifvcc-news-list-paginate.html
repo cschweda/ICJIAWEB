@@ -3,6 +3,7 @@
 
 .filter-group a:hover {cursor: pointer; cursor: hand;}
 #circuit-message {display: none}
+.btn {color: #000}
 </style>
 <script>
 function ordinal_suffix(i) {
@@ -47,7 +48,7 @@ function getCircuitName(c) {
 <h2 class="h3" style="border-bottom: 1px solid #ccc; padding-bottom: 10px; margin-bottom: 30px;">Filter FVCC News by Circuit</h2>
 
 
-<div class="text-center well white filter-group" style="font-family: 'Lato', sans-serif; color: #777; margin-bottom : 30px">
+<div class="text-center well white filter-group" style="font-family: 'Lato', sans-serif; color: #777; ">
 
   <a data-target="*" class="filter selected-circuit">ALL CIRCUITS</a>&nbsp;|&nbsp;
   <a data-target=".001" class="filter">01</a>&nbsp;|&nbsp;
@@ -76,7 +77,11 @@ function getCircuitName(c) {
   <a data-target=".500" class="filter">Cook</a>
 
 
+
 </div>
+
+  <div style="font-size: 14px; margin-top: 5px; margin-bottom: 50px;" class="text-center"><a href="javascript:void(0)" id="what-circuit">What Circuit Am I?</a></div>
+
 
 <div id="circuit-grid">
 
