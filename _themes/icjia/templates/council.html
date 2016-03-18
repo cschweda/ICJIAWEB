@@ -77,7 +77,7 @@ h2.h5 {font-weight: 700}
 
 
             <h2 class="h5 rule"><span id="circuit-name"></span>&nbsp; News & Events</h2>
-              {{ entries:listing folder="/ifvcc/ifvcc-news" limit="5" sort_dir="desc" show_past="true" show_future="true"  conditions="circuit:{title}"}}
+              {{ entries:listing folder="/ifvcc/ifvcc-news" sort_dir="desc" show_past="false" show_future="true"  conditions="circuit:{title}"}}
                 {{ if no_results }}
                 No upcoming events
                 {{else}}
