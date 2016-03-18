@@ -60,9 +60,9 @@ showLegend="0">
 		<entity id='005' value='030'  toolText="Bond County{br} 3rd Circuit"/>
 		<entity id='007' value='170'  toolText="Boone County{br} 17th Circuit"/>/>
 		<entity id='009' value='80'  toolText="Brown County{br} 8th Circuit"/>/>
-		<entity id='011' value='130'  toolText="Bureau County{br} Circuit"/>
+		<entity id='011' value='130'  toolText="Bureau County{br} 13th Circuit"/>
 		<entity id='013' value='80'  toolText="Calhoun County{br} 8th Circuit"/>/>
-		<entity id='015' value='150'  toolText="Carroll County{br} Circuit"/>
+		<entity id='015' value='150'  toolText="Carroll County{br} 15th Circuit"/>
 		<entity id='017' value='80'  toolText="Cass County{br} 8th Circuit"/>/>
 		<entity id='019' value='60'  toolText="Champaign County{br} 6th Circuit"/>/>
 		<entity id='021' value='40'  toolText="Christian County{br} 4th Circuit"/>/>
