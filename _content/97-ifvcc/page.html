@@ -169,7 +169,7 @@ breadcrumbs: 'false'
 
           <div class="news-content" style="border-left: 1px solid #fff; padding-left: 30px;">
 
-            {{ entries:listing folder="/ifvcc/ifvcc-news" limit="3" show_past="true" show_future="false"}}
+            {{ entries:listing folder="/ifvcc/ifvcc-news" limit="3" show_past="true" show_future="true"}}
           	    {{ if no_results }}
           		  <p class="sorry">
           			No news is good news.<br>
@@ -185,7 +185,7 @@ breadcrumbs: 'false'
                   {{if updatedItem}}
                   <span style="font-weight: 400; color: #666" class="addUpdateLabel" data-postDate="{{date format='Y-m-d'}}"></span>
                   {{endif}}
-                  <span style="font-weight: 400; color: #666" {{if !updatedItem}} class="addNewLabel" data-postType="news" data-postDate="{{date format='Y-m-d'}}"{{endif}}>{{ date }}</span> | <a href="{{ url }}">{{if displayTitle}}{{ displayTitle }}{{else}}{{title}}{{endif}}</a></div>
+                  <span style="font-weight: 400; color: #666" {{if !updatedItem}} class="" data-postType="news" data-postDate="{{date format='Y-m-d'}}"{{endif}}>{{ date }}</span> | <a href="{{ url }}">{{if displayTitle}}{{ displayTitle }}{{else}}{{title}}{{endif}}</a></div>
 
                     <div class="expander-news">
                     {{ content|widont }}
@@ -203,7 +203,7 @@ breadcrumbs: 'false'
           	{{ /entries:listing }}
 
             <div class="text-center" style="margin-top: 50px">
-            <a class="btn btn-default" href="/ifvcc/ifvcc-news" role="button" style="text-transform: uppercase; font-family: 'Lato'; color: #000; margin-bottom: 20px;">Archive&nbsp;&raquo;</a>
+            <a class="btn btn-default" href="/ifvcc/ifvcc-news" role="button" style="text-transform: uppercase; font-family: 'Lato'; color: #000; margin-bottom: 20px;">Event archive&nbsp;&raquo;</a>
             </div>
 
 
