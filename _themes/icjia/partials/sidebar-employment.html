@@ -1,0 +1,42 @@
+
+
+
+
+  {{ entries:listing folder="employment" show_future="true" show_past="true" sort_dir="desc" limit="4"}}
+
+  {{if no_results}}
+
+
+  {{else}}
+
+  {{if first}}
+
+  <h4 class="text-center" style="font-family: 'Lato', san-serif;">Employment</h4>
+    <div class="separator-line"></div>
+
+  {{/if}}
+
+  <h4 class="h5" style="font-weight: 900; line-height: 25px;">
+    <a href="{{url}}" >{{title}}</a></h4>
+  <div style="font-size: 12px; color: #aaa; margin-top: -5px">
+    <span class="addNewLabel" data-postType="employment" data-postDate="{{date format='Y-m-d'}}"></span>
+    &nbsp;
+    <span style="text-transform: uppercase;">Posted: {{date}}</span>
+  </div>
+
+
+
+{{if last}}
+  <div class="text-center" style="margin-top: 50px; margin-bottom: 30px">
+  <a class="btn btn-default" href="/about/employment" role="button" style="text-transform: uppercase; font-family: 'Lato'; color: #000; margin-bottom: 20px;">Employment & Internships&nbsp;&raquo;</a>
+  </div>
+    <hr/>
+{{/if}}
+
+
+
+  <div style="height: 20px"></div>
+
+  {{/if}}
+
+    {{ /entries:listing }}

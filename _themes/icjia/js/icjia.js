@@ -646,6 +646,7 @@ $(document).ready(function() {
 	var daysToShowNewLabelforNews = 3;
 	var daysToShowUpdatedLabelforNews = 3;
 	var daysToShowNewLabelforArticles = 10;
+	var daysToShowNewLabelforEmployment = 15;
 	var newLabel =
 		'<span style="font-weight: 700; background: #fe8869; color: #fff; border: 0px solid #ccc; padding: 4px; font-family: Lato, sans-serif">NEW</span>&nbsp;&nbsp;';
 
@@ -659,6 +660,13 @@ $(document).ready(function() {
 
 		if ($postType == 'news') {
 			if (diffInDays <= daysToShowNewLabelforNews) {
+				$(this).prepend(newLabel);
+			}
+		}
+
+
+		if ($postType == 'employment') {
+			if (diffInDays <= daysToShowNewLabelforEmployment) {
 				$(this).prepend(newLabel);
 			}
 		}

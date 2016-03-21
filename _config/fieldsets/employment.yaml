@@ -1,0 +1,43 @@
+title: Employment
+
+fields:
+  _template:
+    type: hidden
+    default: employment
+
+  siteLink:
+    display: Link to web page or PDF file
+    type: text
+
+  content:
+    display: Content
+    type: redactor
+
+  positive_keywords:
+    display: Positive Search Keywords
+    required: false
+    default:
+    type: tags
+
+  negative_keywords:
+    display: Negative Search Keywords
+    required: false
+    default:
+    type: tags
+
+  super_positive_keywords:
+    display: Super positive Search Keywords (weighted heavily for search -- not visible on site)
+    required: false
+    default:
+    type: tags
+
+  super_negative_keywords:
+    display: Super negative Search Keywords (weighted heavily for search -- not visible on site)
+    required: false
+    default:
+    type: tags
+
+
+
+
+hide: true
