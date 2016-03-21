@@ -151,7 +151,7 @@ _log_file_path: _logs
 _log_file_prefix: icjia
 
 # Will show some debugging information about your page at the bottom of each page
-_display_debug_panel: false
+_display_debug_panel: true
 
 
 ###########################################################################################
