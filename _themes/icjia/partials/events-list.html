@@ -4,6 +4,12 @@
 
 {{ entries:listing folder="events" show_future="true" show_past="false" limit="6" sort_dir="asc"}}
 
+{{if no_results}}
+<div class="meeting text-center">
+<h4 style="font-weight: 900; color: #777; line-height: 25px; ">No upcoming events</h4>
+</div>
+{{else}}
+
       <div class="meeting">
         <div class="meeting-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;{{ date }}</div>
       <h5 style="font-weight: 900; line-height: 25px; ">
@@ -17,5 +23,7 @@
 
       </h5>
       </div>
+
+      {{/if}}
 
 {{ /entries:listing }}
