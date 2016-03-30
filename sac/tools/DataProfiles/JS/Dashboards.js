@@ -2,20 +2,177 @@
 
 
 $(document).ready(function() {
+	//set select box value for geography to previously selected if it exists
+	var ICJIANumber = parseInt($('#HiddenICJIANumber').text());
+	console.log(ICJIANumber);
+	try{
+		$('#CountySelector option[value="' + ICJIANumber + '"]').attr("selected", "selected");
+	}
+	catch(e){
+	}
+	
+	
+	//form validation
+	$('#ProfileSelector').submit(function (e) {
+		console.log('Submit event fired');
+		$('#ToolStatus').text("");
+		RequestOk=0;
+		if (!$('.required').is(':checked')) {
+			//verify that at least one profile checkbox is checked
+			e.preventDefault();
+			$('#ToolStatus').text("Select at least one checkbox above.");
+			}
+		else if($('select#CountySelector').val()==0) {
+			e.preventDefault();
+			$('#ToolStatus').text("Select a county, circuit, or state in the select box.");
+			}
+		else if($('select#CountySelector').val() <103 && $('#ProfileCheck10').is(':checked')){
+			//don't allow CHRI requests for county level
+			$('#ToolStatus').text("CHRI Arrests are available at the circuit and statewide only.");
+			e.preventDefault();
+			}
+		else{
+				RequestOk=1;
+			};	
+		
+		
+	});    
 
 
 
-	function AddColorJson(value,jsonObj) {    //funcction to alter map json based on click or select value
+/*
+	function AddColorJson(value,jsonObj) {    //function to alter map json based on click or select value
 		for (var i=0; i<jsonObj.data.length; i++) {
 			jsonObj.data[i].color = '#99ccff';
 			if (jsonObj.data[i].value == ICJIANumber) {
-				jsonObj.data[i].color = '#ff9900';						
+				jsonObj.data[i].color = '#ff9900';	
+				
 			};
 								
 		};
 	};
-		
-	function DrawFSmap(selection) {
+		*/
+	function DrawFSmap(ICJIANumber) {
+		var mapJSON =  [{"value":"1","id": "001","circuit": "1008", "toolText" : "Adams" , "color": "#368BC1"},
+						{"value":"2","id": "003","circuit": "1001", "toolText" : "Alexander" , "color": "#15317E"},
+						{"value":"3","id": "005","circuit": "1003", "toolText" : "Bond" , "color": "#728FCE"},
+						{"value":"4","id": "007","circuit": "1017", "toolText" : "Boone" , "color": "#0000A0"},
+						{"value":"5","id": "009","circuit": "1008", "toolText" : "Brown" , "color": "#368BC1"},
+						{"value":"6","id": "011","circuit": "1013", "toolText" : "Bureau" , "color": "#6495ED"},
+						{"value":"7","id": "013","circuit": "1008", "toolText" : "Calhoun" , "color": "#368BC1"},
+						{"value":"8","id": "015","circuit": "1015", "toolText" : "Carroll" , "color": "#B7CEEC"},
+						{"value":"9","id": "017","circuit": "1008", "toolText" : "Cass" , "color": "#368BC1"},
+						{"value":"10","id": "019","circuit": "1006", "toolText" : "Champaign" , "color": "#2B60DE"},
+						{"value":"11","id": "021","circuit": "1004", "toolText" : "Christian" , "color": "#1589FF"},
+						{"value":"12","id": "023","circuit": "1005", "toolText" : "Clark" , "color": "#87AFC7"},
+						{"value":"13","id": "025","circuit": "1004", "toolText" : "Clay" , "color": "#1589FF"},
+						{"value":"14","id": "027","circuit": "1004", "toolText" : "Clinton" , "color": "#1589FF"},
+						{"value":"15","id": "029","circuit": "1005", "toolText" : "Coles" , "color": "#87AFC7"},
+						{"value":"16","id": "031","circuit": "1088", "toolText" : "Cook" , "color": "#659EC7"},
+						{"value":"17","id": "033","circuit": "1002", "toolText" : "Crawford" , "color": "#C6DEFF"},
+						{"value":"18","id": "035","circuit": "1005", "toolText" : "Cumberland" , "color": "#87AFC7"},
+						{"value":"19","id": "037","circuit": "1016", "toolText" : "DeKalb" , "color": "#151B8D"},
+						{"value":"20","id": "039","circuit": "1006", "toolText" : "De Witt" , "color": "#2B60DE"},
+						{"value":"21","id": "041","circuit": "1006", "toolText" : "Douglas" , "color": "#2B60DE"},
+						{"value":"22","id": "043","circuit": "1018", "toolText" : "DuPage" , "color": "#56A5EC"},
+						{"value":"23","id": "045","circuit": "1005", "toolText" : "Edgar" , "color": "#87AFC7"},
+						{"value":"24","id": "047","circuit": "1002", "toolText" : "Edwards" , "color": "#C6DEFF"},
+						{"value":"25","id": "049","circuit": "1004", "toolText" : "Effingham" , "color": "#1589FF"},
+						{"value":"26","id": "051","circuit": "1004", "toolText" : "Fayette" , "color": "#1589FF"},
+						{"value":"27","id": "053","circuit": "1011", "toolText" : "Ford" , "color": "#95B9C7"},
+						{"value":"28","id": "055","circuit": "1002", "toolText" : "Franklin" , "color": "#C6DEFF"},
+						{"value":"29","id": "057","circuit": "1009", "toolText" : "Fulton" , "color": "#82CAFF"},
+						{"value":"30","id": "059","circuit": "1002", "toolText" : "Gallatin" , "color": "#C6DEFF"},
+						{"value":"31","id": "061","circuit": "1007", "toolText" : "Greene" , "color": "#82CAFA"},
+						{"value":"32","id": "063","circuit": "1013", "toolText" : "Grundy" , "color": "#6495ED"},
+						{"value":"33","id": "065","circuit": "1002", "toolText" : "Hamilton" , "color": "#C6DEFF"},
+						{"value":"34","id": "067","circuit": "1009", "toolText" : "Hancock" , "color": "#82CAFF"},
+						{"value":"35","id": "069","circuit": "1002", "toolText" : "Hardin" , "color": "#C6DEFF"},
+						{"value":"36","id": "071","circuit": "1009", "toolText" : "Henderson" , "color": "#82CAFF"},
+						{"value":"37","id": "073","circuit": "1014", "toolText" : "Henry" , "color": "#CFECEC"},
+						{"value":"38","id": "075","circuit": "1021", "toolText" : "Iroquois" , "color": "#1569C7"},
+						{"value":"39","id": "077","circuit": "1001", "toolText" : "Jackson" , "color": "#15317E"},
+						{"value":"40","id": "079","circuit": "1004", "toolText" : "Jasper" , "color": "#1589FF"},
+						{"value":"41","id": "081","circuit": "1002", "toolText" : "Jefferson" , "color": "#C6DEFF"},
+						{"value":"42","id": "083","circuit": "1007", "toolText" : "Jersey" , "color": "#82CAFA"},
+						{"value":"43","id": "085","circuit": "1015", "toolText" : "Jo Daviess" , "color": "#B7CEEC"},
+						{"value":"44","id": "087","circuit": "1001", "toolText" : "Johnson" , "color": "#15317E"},
+						{"value":"45","id": "089","circuit": "1016", "toolText" : "Kane" , "color": "#151B8D"},
+						{"value":"46","id": "091","circuit": "1021", "toolText" : "Kankakee" , "color": "#1569C7"},
+						{"value":"47","id": "093","circuit": "1016", "toolText" : "Kendall" , "color": "#151B8D"},
+						{"value":"48","id": "095","circuit": "1009", "toolText" : "Knox" , "color": "#82CAFF"},
+						{"value":"49","id": "097","circuit": "1019", "toolText" : "Lake" , "color": "#736AFF"},
+						{"value":"50","id": "099","circuit": "1013", "toolText" : "LaSalle" , "color": "#6495ED"},
+						{"value":"51","id": "101","circuit": "1002", "toolText" : "Lawrence" , "color": "#C6DEFF"},
+						{"value":"52","id": "103","circuit": "1015", "toolText" : "Lee" , "color": "#B7CEEC"},
+						{"value":"53","id": "105","circuit": "1011", "toolText" : "Livingston" , "color": "#95B9C7"},
+						{"value":"54","id": "107","circuit": "1011", "toolText" : "Logan" , "color": "#95B9C7"},
+						{"value":"55","id": "109","circuit": "1009", "toolText" : "McDonough" , "color": "#82CAFF"},
+						{"value":"56","id": "111","circuit": "1022", "toolText" : "McHenry" , "color": "#2B65EC"},
+						{"value":"57","id": "113","circuit": "1011", "toolText" : "McLean" , "color": "#95B9C7"},
+						{"value":"58","id": "115","circuit": "1006", "toolText" : "Macon" , "color": "#2B60DE"},
+						{"value":"59","id": "117","circuit": "1007", "toolText" : "Macoupin" , "color": "#82CAFA"},
+						{"value":"60","id": "119","circuit": "1003", "toolText" : "Madison" , "color": "#728FCE"},
+						{"value":"61","id": "121","circuit": "1004", "toolText" : "Marion" , "color": "#1589FF"},
+						{"value":"62","id": "123","circuit": "1010", "toolText" : "Marshall" , "color": "#3BB9FF"},
+						{"value":"63","id": "125","circuit": "1008", "toolText" : "Mason" , "color": "#368BC1"},
+						{"value":"64","id": "127","circuit": "1001", "toolText" : "Massac" , "color": "#15317E"},
+						{"value":"65","id": "129","circuit": "1008", "toolText" : "Menard" , "color": "#368BC1"},
+						{"value":"66","id": "131","circuit": "1014", "toolText" : "Mercer" , "color": "#CFECEC"},
+						{"value":"67","id": "133","circuit": "1020", "toolText" : "Monroe" , "color": "#157DEC"},
+						{"value":"68","id": "135","circuit": "1004", "toolText" : "Montgomery" , "color": "#1589FF"},
+						{"value":"69","id": "137","circuit": "1007", "toolText" : "Morgan" , "color": "#82CAFA"},
+						{"value":"70","id": "139","circuit": "1006", "toolText" : "Moultrie" , "color": "#2B60DE"},
+						{"value":"71","id": "141","circuit": "1015", "toolText" : "Ogle" , "color": "#B7CEEC"},
+						{"value":"72","id": "143","circuit": "1010", "toolText" : "Peoria" , "color": "#3BB9FF"},
+						{"value":"73","id": "145","circuit": "1020", "toolText" : "Perry" , "color": "#157DEC"},
+						{"value":"74","id": "147","circuit": "1006", "toolText" : "Piatt" , "color": "#2B60DE"},
+						{"value":"75","id": "149","circuit": "1008", "toolText" : "Pike" , "color": "#368BC1"},
+						{"value":"76","id": "151","circuit": "1001", "toolText" : "Pope" , "color": "#15317E"},
+						{"value":"77","id": "153","circuit": "1001", "toolText" : "Pulaski" , "color": "#15317E"},
+						{"value":"78","id": "155","circuit": "1010", "toolText" : "Putnam" , "color": "#3BB9FF"},
+						{"value":"79","id": "157","circuit": "1020", "toolText" : "Randolph" , "color": "#157DEC"},
+						{"value":"80","id": "159","circuit": "1002", "toolText" : "Richland" , "color": "#C6DEFF"},
+						{"value":"81","id": "161","circuit": "1014", "toolText" : "Rock Island" , "color": "#CFECEC"},
+						{"value":"82","id": "163","circuit": "1020", "toolText" : "St. Clair" , "color": "#157DEC"},
+						{"value":"83","id": "165","circuit": "1001", "toolText" : "Saline" , "color": "#15317E"},
+						{"value":"84","id": "167","circuit": "1007", "toolText" : "Sangamon" , "color": "#82CAFA"},
+						{"value":"85","id": "169","circuit": "1008", "toolText" : "Schuyler" , "color": "#368BC1"},
+						{"value":"86","id": "171","circuit": "1007", "toolText" : "Scott" , "color": "#82CAFA"},
+						{"value":"87","id": "173","circuit": "1004", "toolText" : "Shelby" , "color": "#1589FF"},
+						{"value":"88","id": "175","circuit": "1010", "toolText" : "Stark" , "color": "#3BB9FF"},
+						{"value":"89","id": "177","circuit": "1015", "toolText" : "Stephenson" , "color": "#B7CEEC"},
+						{"value":"90","id": "179","circuit": "1010", "toolText" : "Tazewell" , "color": "#3BB9FF"},
+						{"value":"91","id": "181","circuit": "1001", "toolText" : "Union" , "color": "#15317E"},
+						{"value":"92","id": "183","circuit": "1005", "toolText" : "Vermilion" , "color": "#87AFC7"},
+						{"value":"93","id": "185","circuit": "1002", "toolText" : "Wabash" , "color": "#C6DEFF"},
+						{"value":"94","id": "187","circuit": "1009", "toolText" : "Warren" , "color": "#82CAFF"},
+						{"value":"95","id": "189","circuit": "1020", "toolText" : "Washington" , "color": "#157DEC"},
+						{"value":"96","id": "191","circuit": "1002", "toolText" : "Wayne" , "color": "#C6DEFF"},
+						{"value":"97","id": "193","circuit": "1002", "toolText" : "White" , "color": "#C6DEFF"},
+						{"value":"98","id": "195","circuit": "1014", "toolText" : "Whiteside" , "color": "#CFECEC"},
+						{"value":"99","id": "197","circuit": "1012", "toolText" : "Will" , "color": "#6698FF"},
+						{"value":"100","id": "199","circuit": "1001", "toolText" : "Williamson" , "color": "#15317E"},
+						{"value":"101","id": "201","circuit": "1017", "toolText" : "Winnebago" , "color": "#0000A0"},
+						{"value":"102","id": "203","circuit": "1011", "toolText" : "Woodford" , "color": "#95B9C7"}];
+							
+		if(ICJIANumber > 0) {
+			if (ICJIANumber >999) {
+				for(var i=0; i<mapJSON.length; i++) {
+					if(mapJSON[i].circuit == ICJIANumber) {
+					mapJSON[i].color = '#ff9900';			
+					};
+				};	
+			} else {
+				for(var i=0; i<mapJSON.length; i++) {
+					if(mapJSON[i].value == ICJIANumber) {
+						mapJSON[i].color = '#ff9900';
+						break;					
+					};	
+				};		
+			};
+		};
+
 			
 			var countyMap = new FusionCharts({
 					"type": "maps/illinois",
@@ -24,110 +181,7 @@ $(document).ready(function() {
 					"height": "750",
 					"dataFormat": "json",
 					"dataSource": {
-						"data": [
-							{"value":"1","id": "001","toolText" : "Adams" , "color": "#99ccff"},
-							{"value":"2","id": "003","toolText" : "Alexander" , "color": "#99ccff"},
-							{"value":"3","id": "005","toolText" : "Bond" , "color": "#99ccff"},
-							{"value":"4","id": "007","toolText" : "Boone" , "color": "#99ccff"},
-							{"value":"5","id": "009","toolText" : "Brown" , "color": "#99ccff"},
-							{"value":"6","id": "011","toolText" : "Bureau" , "color": "#99ccff"},
-							{"value":"7","id": "013","toolText" : "Calhoun" , "color": "#99ccff"},
-							{"value":"8","id": "015","toolText" : "Carroll" , "color": "#99ccff"},
-							{"value":"9","id": "017","toolText" : "Cass" , "color": "#99ccff"},
-							{"value":"10","id": "019","toolText" : "Champaign" , "color": "#99ccff"},
-							{"value":"11","id": "021","toolText" : "Christian" , "color": "#99ccff"},
-							{"value":"12","id": "023","toolText" : "Clark" , "color": "#99ccff"},
-							{"value":"13","id": "025","toolText" : "Clay" , "color": "#99ccff"},
-							{"value":"14","id": "027","toolText" : "Clinton" , "color": "#99ccff"},
-							{"value":"15","id": "029","toolText" : "Coles" , "color": "#99ccff"},
-							{"value":"16","id": "031","toolText" : "Cook" , "color": "#99ccff"},
-							{"value":"17","id": "033","toolText" : "Crawford" , "color": "#99ccff"},
-							{"value":"18","id": "035","toolText" : "Cumberland" , "color": "#99ccff"},
-							{"value":"19","id": "037","toolText" : "DeKalb" , "color": "#99ccff"},
-							{"value":"20","id": "039","toolText" : "De Witt" , "color": "#99ccff"},
-							{"value":"21","id": "041","toolText" : "Douglas" , "color": "#99ccff"},
-							{"value":"22","id": "043","toolText" : "DuPage" , "color": "#99ccff"},
-							{"value":"23","id": "045","toolText" : "Edgar" , "color": "#99ccff"},
-							{"value":"24","id": "047","toolText" : "Edwards" , "color": "#99ccff"},
-							{"value":"25","id": "049","toolText" : "Effingham" , "color": "#99ccff"},
-							{"value":"26","id": "051","toolText" : "Fayette" , "color": "#99ccff"},
-							{"value":"27","id": "053","toolText" : "Ford" , "color": "#99ccff"},
-							{"value":"28","id": "055","toolText" : "Franklin" , "color": "#99ccff"},
-							{"value":"29","id": "057","toolText" : "Fulton" , "color": "#99ccff"},
-							{"value":"30","id": "059","toolText" : "Gallatin" , "color": "#99ccff"},
-							{"value":"31","id": "061","toolText" : "Greene" , "color": "#99ccff"},
-							{"value":"32","id": "063","toolText" : "Grundy" , "color": "#99ccff"},
-							{"value":"33","id": "065","toolText" : "Hamilton" , "color": "#99ccff"},
-							{"value":"34","id": "067","toolText" : "Hancock" , "color": "#99ccff"},
-							{"value":"35","id": "069","toolText" : "Hardin" , "color": "#99ccff"},
-							{"value":"36","id": "071","toolText" : "Henderson" , "color": "#99ccff"},
-							{"value":"37","id": "073","toolText" : "Henry" , "color": "#99ccff"},
-							{"value":"38","id": "075","toolText" : "Iroquois" , "color": "#99ccff"},
-							{"value":"39","id": "077","toolText" : "Jackson" , "color": "#99ccff"},
-							{"value":"40","id": "079","toolText" : "Jasper" , "color": "#99ccff"},
-							{"value":"41","id": "081","toolText" : "Jefferson" , "color": "#99ccff"},
-							{"value":"42","id": "083","toolText" : "Jersey" , "color": "#99ccff"},
-							{"value":"43","id": "085","toolText" : "Jo Daviess" , "color": "#99ccff"},
-							{"value":"44","id": "087","toolText" : "Johnson" , "color": "#99ccff"},
-							{"value":"45","id": "089","toolText" : "Kane" , "color": "#99ccff"},
-							{"value":"46","id": "091","toolText" : "Kankakee" , "color": "#99ccff"},
-							{"value":"47","id": "093","toolText" : "Kendall" , "color": "#99ccff"},
-							{"value":"48","id": "095","toolText" : "Knox" , "color": "#99ccff"},
-							{"value":"49","id": "097","toolText" : "Lake" , "color": "#99ccff"},
-							{"value":"50","id": "099","toolText" : "LaSalle" , "color": "#99ccff"},
-							{"value":"51","id": "101","toolText" : "Lawrence" , "color": "#99ccff"},
-							{"value":"52","id": "103","toolText" : "Lee" , "color": "#99ccff"},
-							{"value":"53","id": "105","toolText" : "Livingston" , "color": "#99ccff"},
-							{"value":"54","id": "107","toolText" : "Logan" , "color": "#99ccff"},
-							{"value":"55","id": "109","toolText" : "McDonough" , "color": "#99ccff"},
-							{"value":"56","id": "111","toolText" : "McHenry" , "color": "#99ccff"},
-							{"value":"57","id": "113","toolText" : "McLean" , "color": "#99ccff"},
-							{"value":"58","id": "115","toolText" : "Macon" , "color": "#99ccff"},
-							{"value":"59","id": "117","toolText" : "Macoupin" , "color": "#99ccff"},
-							{"value":"60","id": "119","toolText" : "Madison" , "color": "#99ccff"},
-							{"value":"61","id": "121","toolText" : "Marion" , "color": "#99ccff"},
-							{"value":"62","id": "123","toolText" : "Marshall" , "color": "#99ccff"},
-							{"value":"63","id": "125","toolText" : "Mason" , "color": "#99ccff"},
-							{"value":"64","id": "127","toolText" : "Massac" , "color": "#99ccff"},
-							{"value":"65","id": "129","toolText" : "Menard" , "color": "#99ccff"},
-							{"value":"66","id": "131","toolText" : "Mercer" , "color": "#99ccff"},
-							{"value":"67","id": "133","toolText" : "Monroe" , "color": "#99ccff"},
-							{"value":"68","id": "135","toolText" : "Montgomery" , "color": "#99ccff"},
-							{"value":"69","id": "137","toolText" : "Morgan" , "color": "#99ccff"},
-							{"value":"70","id": "139","toolText" : "Moultrie" , "color": "#99ccff"},
-							{"value":"71","id": "141","toolText" : "Ogle" , "color": "#99ccff"},
-							{"value":"72","id": "143","toolText" : "Peoria" , "color": "#99ccff"},
-							{"value":"73","id": "145","toolText" : "Perry" , "color": "#99ccff"},
-							{"value":"74","id": "147","toolText" : "Piatt" , "color": "#99ccff"},
-							{"value":"75","id": "149","toolText" : "Pike" , "color": "#99ccff"},
-							{"value":"76","id": "151","toolText" : "Pope" , "color": "#99ccff"},
-							{"value":"77","id": "153","toolText" : "Pulaski" , "color": "#99ccff"},
-							{"value":"78","id": "155","toolText" : "Putnam" , "color": "#99ccff"},
-							{"value":"79","id": "157","toolText" : "Randolph" , "color": "#99ccff"},
-							{"value":"80","id": "159","toolText" : "Richland" , "color": "#99ccff"},
-							{"value":"81","id": "161","toolText" : "Rock Island" , "color": "#99ccff"},
-							{"value":"82","id": "163","toolText" : "St. Clair" , "color": "#99ccff"},
-							{"value":"83","id": "165","toolText" : "Saline" , "color": "#99ccff"},
-							{"value":"84","id": "167","toolText" : "Sangamon" , "color": "#99ccff"},
-							{"value":"85","id": "169","toolText" : "Schuyler" , "color": "#99ccff"},
-							{"value":"86","id": "171","toolText" : "Scott" , "color": "#99ccff"},
-							{"value":"87","id": "173","toolText" : "Shelby" , "color": "#99ccff"},
-							{"value":"88","id": "175","toolText" : "Stark" , "color": "#99ccff"},
-							{"value":"89","id": "177","toolText" : "Stephenson" , "color": "#99ccff"},
-							{"value":"90","id": "179","toolText" : "Tazewell" , "color": "#99ccff"},
-							{"value":"91","id": "181","toolText" : "Union" , "color": "#99ccff"},
-							{"value":"92","id": "183","toolText" : "Vermilion" , "color": "#99ccff"},
-							{"value":"93","id": "185","toolText" : "Wabash" , "color": "#99ccff"},
-							{"value":"94","id": "187","toolText" : "Warren" , "color": "#99ccff"},
-							{"value":"95","id": "189","toolText" : "Washington" , "color": "#99ccff"},
-							{"value":"96","id": "191","toolText" : "Wayne" , "color": "#99ccff"},
-							{"value":"97","id": "193","toolText" : "White" , "color": "#99ccff"},
-							{"value":"98","id": "195","toolText" : "Whiteside" , "color": "#99ccff"},
-							{"value":"99","id": "197","toolText" : "Will" , "color": "#99ccff"},
-							{"value":"100","id": "199","toolText" : "Williamson" , "color": "#99ccff"},
-							{"value":"101","id": "201","toolText" : "Winnebago" , "color": "#99ccff"},
-							{"value":"102","id": "203","toolText" : "Woodford" , "color": "#99ccff"}
-						],
+						"data": mapJSON,
 						"chart": {
 							"showLabels": "0",
 							"showCanvasBorder": "0",
@@ -135,41 +189,40 @@ $(document).ready(function() {
 						}
 					},
 					"events": {
-						"entityClick": function(evt, data) {
+						"entityClick": function(event, data) {
 							ICJIANumber =data.value;
 							$('#CountySelector option[value="' + ICJIANumber + '"]').attr("selected", "selected");
-							var jsonObj = countyMap.getChartData('json');
-							
-							AddColorJson(ICJIANumber,jsonObj);
-							countyMap.setJSONData(jsonObj);								
+							$('#getProfile').click();
+							//var jsonObj = countyMap.getChartData('json');
+							//AddColorJson(ICJIANumber,jsonObj);
+							//countyMap.setJSONData(jsonObj);								
 						}
 					}
 					
 			});
-			
-			if(selection >0) {
-				ICJAINumber=selection;
-				var jsonObj = countyMap.getChartData('json');
-				AddColorJson(ICJIANumber,jsonObj);	
-				countyMap.render();
-			}
-			else {
-				countyMap.render();
-	}		};
+		countyMap.render();
+
+	};
 
 
 
 	$("#CountySelector").change(function() {      //change the highlighted map area based on select box
 		ICJIANumber=$("option:selected",this).val();
+/*		if(ICJIANumber >=1 && ICJIANumber<=102) {
+			$('#ProfileCheck10').prop('checked', false)
+		};*/
+		$('#getProfile').click();
+	});	
+	
+	//draw fusion charts map if possible
+	try{
+	FusionCharts.ready(function(){
 		DrawFSmap(ICJIANumber);
 	});	
-	
-	
-	
-	FusionCharts.ready(function(){
-		DrawFSmap(0);
-	});	
-	
+	}
+	catch(e){
+	console.log('no fusioncharts');
+	};
 
 
 		
@@ -476,4 +529,5 @@ $(document).ready(function() {
     });
 
 	
-}); <!--end document ready-->
+}); //end document ready
+
