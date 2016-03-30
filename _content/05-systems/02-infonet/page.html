@@ -21,6 +21,7 @@ super_positive_keywords:
   - data
   - training
   - webinar
+  - hiselman
 keywords:
   - infonet
   - icasa
@@ -41,7 +42,9 @@ keywords:
         <h5 style="padding-left: 15px;"><a class="scrollclass sidebarHeading" data-target="#icjia-page-top">InfoNet</a></h5>
         <ul class="nav">
           <li><a class="scrollclass" data-target="#overview">Overview</a></li>
+          <li><a class="scrollclass" data-target="#announcements">Announcements</a></li>
           <li><a class="scrollclass" data-target="#faq">Frequently Asked Questions</a></li>
+          <li><a class="scrollclass" data-target="#articles">Articles</a></li>
 
 
         </ul>
@@ -67,6 +70,34 @@ keywords:
 <li>Ease reporting for victim service providers that receive grants from multiple funding agencies, which often require different types of information.</li>
 <li>Facilitate continuous strategic planning for improving services and system response to victims.</li>
 </ul>
+
+<br/><br/>
+
+<!-- ------------- Announcements ----------------------------- -->
+
+<div id="announcements"></div>
+
+<h2 class="h4" style="padding-bottom: 8px; margin-top: 20px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;">Announcements</h2>
+
+<div class="infonet-news-item" style="margin-top: 10px; margin-bottom: 50px">
+<h5>
+  <span style="color: #888;">March 30, 2016</span> | InfoNet RFP</h5>
+<p>The Authority recently published a Request for Proposals (RFP) to rewrite InfoNet’s application code and complete other system improvements. Proposals are due to the Authority by Monday, May 9th.</p>
+
+<p><a href="/assets/infonet/InfoNet Rewrite & Improvements RFP V.16.1.pdf">Click here to view the RFP.</a></p>
+
+<p>
+To view the entire solicitation and related materials, click here to view the Illinois Procurement Bulletin (IPB): <a href="http://www.purchase.state.il.us/ipb/IllinoisBID.nsf/frmBidViewFrameset?ReadForm&view=viewSolicitationsOpenByDate?OpenView&Start=1&Count=250"> http://www.purchase.state.il.us/ipb/IllinoisBID.nsf/frmBidViewFrameset?ReadForm&view=viewSolicitationsOpenByDate?OpenView&Start=1&Count=250</a>.</p>
+<p>Please note registration is required to open the RFP and its attachment files directly from this site.</p>
+</div>
+
+
+
+
+
+
+<!-- ------------- FAQ ----------------------------- -->
+
 
 <div id="faq"></div>
 
@@ -637,6 +668,21 @@ keywords:
 
 
 </div>
+
+<div id="articles"></div>
+
+<h2 class="h4" style="padding-bottom: 8px; margin-top: 50px; margin-bottom: 30px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;">Articles</h2>
+
+{{ entries:listing folder="articles" conditions="keywords:infonet" }}
+    {{ if no_results }}
+    <p class="sorry">
+
+    Check back soon.
+    </p>
+    {{ else }}
+      {{ theme:partial src="article-snippet" use_context="true" }}
+    {{ endif }}
+{{ /entries:listing }}
 
 
 </div>
