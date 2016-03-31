@@ -585,9 +585,9 @@ $('.expander-news').readmore({
 
   <div class="container-fluid">
 
-
+<cfif structKeyExists(url, 'getProfile') and trim(url.getProfile) eq "1">
 <!-- 3-column Table of Contents -->
-        <div class="col-md-3 no-print hidden-xs" style="margin-top: 50px;">
+    <div class="col-md-3 no-print hidden-xs" style="margin-top: 50px;">
       <!--
 
       Information about Bootstrap scrollspy, affix, and offsets:
@@ -603,11 +603,11 @@ $('.expander-news').readmore({
       <div class="bs-sidebar hidden-print" role="complementary" data-spy="affix" data-offset-top="55" data-offset-bottom="475">
 
         <ul class="nav bs-sidenav" style="border: 0px;">
-<cfif structKeyExists(url, 'getProfile') and trim(url.getProfile) eq "1">
+
           <li>
 
             <h5 style="color: rgb(68, 68, 68); text-transform: uppercase; padding-bottom: 8px; font-weight: 900; margin-bottom: 10px; margin-left: 10px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;">Contents</h5>
-            <ul class="nav" id="side-nav">
+            <ul class="nav">
 
               <!--
 
@@ -632,7 +632,7 @@ $('.expander-news').readmore({
 
 
 
-              <!--- MARK UNCOMMENT AFTER WRITING INTRO<li><a class="scrollclass" data-target="#article-top">Introduction</a></li>--->
+              <li><a class="scrollclass" data-target="#article-top">Introduction</a></li>
 
               <!--
 
@@ -642,7 +642,9 @@ $('.expander-news').readmore({
 
               -->
 
-</cfif>
+
+              <li><a class="scrollclass" data-target="#key-findings">Key findings</a></li>
+              <li><a class="scrollclass" data-target="#implications-for-policy-and-practice">Implications for policy and practice</a></li>
             </ul>
 
 
@@ -653,7 +655,7 @@ $('.expander-news').readmore({
       </div>
     </div>
     <!--/left-->
-
+</cfif>
 
 
 
@@ -675,7 +677,7 @@ $('.expander-news').readmore({
 <p>Data profiles for several criminal justice indicators are available at the county, judicial circuit, and statewide level. These profiles
 show a variety of charts and statistics about the chosen area and data theme.</p>
 
-					<cfform id="ProfileSelector" name="ProfileSelector" method="GET" action="CriminalJusticeDataProfiles.cfm">
+					<cfform id="ProfileSelector" name="ProfileSelector" method="GET" action="CriminalJusticeDataProfilesNew.cfm">
 				        <p><b>Step 1 -</b> Select a profile to view:<br>  
 				            <input type="checkbox" name="ProfileNumber" class="required CHRI_checkbox" id="ProfileCheck10" value="10">
 								<label for="ProfileCheck10">Adult Arrests from the Illinois State Police CHRI Database*</label><br/>
