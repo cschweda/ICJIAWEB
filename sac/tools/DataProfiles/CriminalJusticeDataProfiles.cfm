@@ -672,8 +672,8 @@ $('.expander-news').readmore({
 
 <h2>ICJIA Criminal Justice Data Profiles</h2>
 
-<p>Data profiles for several criminal justice indicators are available at the county, judicial circuit, and statewide level. These profiles
-show a variety of charts and statistics about the chosen area and data theme.</p>
+<p>The Criminal Justice Data Profiles tool offers criminal justice indicators that allow users to create county, judicial circuit, and statewide profiles. These profiles
+may be used to inform planning and policy decisions.</p>
 
 					<cfform id="ProfileSelector" name="ProfileSelector" method="GET" action="CriminalJusticeDataProfiles.cfm">
 				        <p><b>Step 1 -</b> Select a profile to view:<br>  
@@ -688,7 +688,7 @@ show a variety of charts and statistics about the chosen area and data theme.</p
 							<input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck40" value="40" checked="checked">
 				            	<label for="ProfileCheck40">Prison Exits</label>	<br/>
 
-				            *CHRI data in these profiles have limited availability at the county level. If you select a county, you will see a mix of data at the county level and the judicial circuit in which the county resides in.  	
+				            *CHRI data in these profiles are avaiable for judicial circuits and statewide. If you select a county, CHRI data will not be in the profile.  	
 				        </p>
 						
 											
