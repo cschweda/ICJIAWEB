@@ -103,6 +103,11 @@
     url: /biographies#tab_authority-staff
     type: 301
 
+/trauma-and-ptsd:
+  url: /sites/trauma-and-ptsd
+  type: 301
+
+
 /contact:
     url: /about/contact
     type: 301
