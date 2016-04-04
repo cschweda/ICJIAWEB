@@ -1,0 +1,227 @@
+/* -------------------- Navbar --------------------- */
+
+/*.navbar {
+  display: none
+}*/
+
+#nav-wrapper-rvc {
+  font-family: 'Lato';
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+a {
+   outline: 0;
+}
+
+a:active {
+    outline: none;
+}
+
+a:focus {
+    outline: none;
+    outline-offset:0;
+}
+
+#myNavmenu, .dropdown-header {
+  font-family: 'Lato', sans-serif;
+}
+
+.offCanvasButton {
+  position: absolute;
+  top: 19px;
+  left: 10px;
+  background: #fff
+}
+
+#icjia-logo {
+  position: absolute;
+  top: 10px;
+  left: 60px;
+  /*display: none;*/
+}
+
+#site-title {
+  position: absolute;
+  top: 24px;
+  left: 100px;
+  font-size: 14px;
+  font-weight: 900;
+  /*display: none;*/
+}
+
+
+
+
+
+/* -------------------- Headroom --------------------- */
+
+/*.headroom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all .2s ease-in-out;
+}
+
+.headroom--pinned {
+  top: -2000px;
+
+}
+
+.headroom--unpinned {
+  top: 0;
+  z-index: 5000;
+}*/
+
+/*.headroom {
+  transition: transform 250ms linear;
+}
+
+.headroom--pinned {
+  transform: translateY(-100%);
+}
+
+.headroom--unpinned {
+  transform: translateY(-0%);
+}*/
+
+
+/* -------------------- Splash --------------------- */
+
+.featured-well {
+  width: 100%;
+  float: left;
+  background: #555;
+  color: #fff;
+  border-bottom: 0px;
+  border-right: 0px;
+  font-family: "Oswald";
+  font-weight: 400;
+  overflow: hidden;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.featured-well a {
+    color: #fff;
+}
+
+.featured-well .featured-tall {
+    height: 450px;
+}
+
+.featured-well .featured-tall-headline {
+    padding: 120px 0 220px 0;
+    /*padding-top: 80px;*/
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.15em;
+    word-spacing: -1px;
+    letter-spacing: .3px;
+    max-width: 2500px;
+}
+
+.featured-well .featured-sub-headline {
+
+    /*padding-top: 80px;*/
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.15em;
+    word-spacing: -1px;
+    letter-spacing: .3px;
+    max-width: 2500px;
+}
+
+/* -------------------- Sections --------------------- */
+
+section#about, section#who-is-it-for, section#registration{
+  padding: 50px 0 80px 0;
+
+}
+section#about {background-color: #eee;}
+section#about p {font-family: 'Lato', sans-serif; color: #777}
+
+
+section#who-is-it-for{background-color: #263A58; color: #fff}
+section#who-is-it-for p, section#who-is-it-for ul li {font-family: 'Lato', sans-serif;}
+
+section#registration {background-color: #eee;}
+section#registration p {font-family: 'Lato', sans-serif; color: #666}
+section#registration p.contact {margin-bottom: 30px; color: #333}
+section#registration p.disclaimer {color: #aaa; font-size: 12px}
+
+section#packet-downloads {background-color: #fff;}
+section#packet-downloads {font-family: 'Lato', sans-serif; color: #666; padding-bottom: 30px}
+
+footer {margin-top: -50px}
+
+
+
+a.back-to-top {
+	display: none;
+	width: 50px;
+	height: 50px;
+	text-indent: -9999px;
+	position: fixed;
+	z-index: 999;
+	right: 30px;
+	bottom: 20px;
+	background: #999 url("/assets/img/up-arrow.png") no-repeat center 43%;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+  /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+
+  /* IE 5-7 */
+  filter: alpha(opacity=70);
+
+  /* Netscape */
+  -moz-opacity: 0.7;
+
+  /* Safari 1.x */
+  -khtml-opacity: 0.7;
+
+  /* Good browsers */
+  opacity: 0.7;
+}
+
+span.register-now {
+
+    border: 1px solid #ccc;
+    padding: 4px 5px 4px 5px;
+    border-radius: 3px;
+    background: #fff;
+}
+
+span.register-now:hover {
+
+
+    background: #eee;
+
+}
+
+
+
+@media (max-width: 770px) {
+
+  #site-title {font-size: 12px}
+
+}
+
+
+@media (max-width: 689px) {
+
+  #site-title {font-size: 10px}
+
+}
+
+@media (max-width: 603px) {
+
+  #site-title {display: none;}
+
+}
+
+
+/*.firstcharacter { float: left; color: #082e6f; font-size: 75px; line-height: 60px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: 'Lato', sans-serif; }*/
