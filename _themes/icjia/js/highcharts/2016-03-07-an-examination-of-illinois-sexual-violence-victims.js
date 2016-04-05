@@ -4,7 +4,7 @@ $(function() {
       type: 'column'
     },
     title: {
-      text: 'Victims served and hotline/crisis intervention contacts by Illinois rape crisis centers, Fiscal Years (FYs) 2011-2015'
+      text: 'Figure 1<br>Victims served and hotline/crisis intervention contacts by Illinois rape crisis centers, Fiscal Years (FYs) 2011-2015'
     },
     subtitle: {
       text: "Sources: Illinois rape crisis centers and ICJIA's InfoNet system"
@@ -47,7 +47,7 @@ $(function() {
       type: 'column'
     },
     title: {
-      text: 'Child sexual abuse reports to child protective services and rapes reported to law enforcement in Illinois, Fiscal/Calendar<sup><span style="color: #000">*</span></sup> Years (FY/CY) 2010-2014'
+      text: 'Figure 2<br>Child sexual abuse reports to child protective services and rapes reported to law enforcement in Illinois, Fiscal/Calendar<sup><span style="color: #000">*</span></sup> Years (FY/CY) 2010-2014'
     },
     subtitle: {
       text: 'Sources: Illinois Department of Children and Family Services (DCFS) and Illinois State Police (ISP)'
@@ -106,7 +106,7 @@ $(function() {
       type: 'pie'
     },
     title: {
-      text: 'Victims served by offfender relationship to victim*, FY11 to FY15 (n=20,339)'
+      text: 'Figure 3<br>Victims served by offender relationship to victim*, FY11 to FY15 (n=20,339)'
     },
     subtitle: {
       text: "Source: Illinois rape crisis centers and ICJIA's InfoNet System<br/> * Includes data for only victims whose offender relationship was known or 55% of victims"
