@@ -106,7 +106,7 @@ $(function() {
       type: 'pie'
     },
     title: {
-      text: 'Figure 3<br>Victims served by offender relationship to victim*, FY11 to FY15 (n=20,339)'
+      text: 'Figure 3<br>Victims served by offender relationship to victim, FY11 to FY15 (n=20,339)*'
     },
     subtitle: {
       text: "Source: Illinois rape crisis centers and ICJIA's InfoNet System<br/> * Includes data for only victims whose offender relationship was known or 55% of victims"
