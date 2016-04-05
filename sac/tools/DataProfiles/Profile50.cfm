@@ -57,25 +57,21 @@
 
 
 
-<h1 id="CourtsHeading">Adult Court Profile for <cfoutput>#GeographyName#</cfoutput></h1>
-<p>Official court data are collected by the <a href="http://www.illinoiscourts.gov/" target="_blank">Administrative Office of Illinois' Courts</a> (AOIC)
-and published in their <a href="http://www.illinoiscourts.gov/SupremeCourt/AnnReport.asp" target="_blank">annual reports</a>. The data below on filings, felony convictions, felony sentences, and probation caseloads 
-are from those reports collected over time. <cfif #SelectedICJIANumber# GT 102 AND #SelectedICJIANumber# NEQ 999>The counties within judicial circuits rarely change, but this profile will include counties that were within the judicial circuit as of the last AOIC annual report published. </cfif> 
+<h1 id="CourtsHeading">Adult court profile for <cfoutput>#GeographyName#</cfoutput></h1>
+<p>These data are official court data collected by the <a href="http://www.illinoiscourts.gov/" target="_blank">Administrative Office of Illinois' Courts</a> (AOIC)
+and published in their <a href="http://www.illinoiscourts.gov/SupremeCourt/AnnReport.asp" target="_blank">annual reports</a>. <cfif #SelectedICJIANumber# GT 102 AND #SelectedICJIANumber# NEQ 999>The counties within judicial circuits rarely change, but this profile will include counties that were within the judicial circuit as of the last AOIC annual report published. </cfif> 
 </p>
 
 
 <div id="CourtFilingsCountSection">
-	<h2>Criminal Filings</h2>
-	<p>
-	A criminal court filing may occur after an arrest incident.  After screening a case and determining that it warrants
-further action, the state’s attorney must file formal charges in court. The circumstances of the offense will determine if a misdemeanor or felony charge is filed. An explanation of the difference between misdemeanors and felonies is available in the <a href="#OffenseClasses">appendix</a>.
-The AOIC began separating DUI filings from felony and misdemeanor filings in 2014. As a result, misdemeanor and felony filings may be lower beginning in 2014 compared to previous years.  A DUI filing can be either
+	<h2>Criminal filings</h2>
+	<p>The AOIC began separating DUI filings from felony and misdemeanor filings in 2014. As a result, misdemeanor and felony filings may be lower beginning in 2014 compared to previous years.  A DUI filing can be either
 	a felony or misdemeanor. 
 	</p>
 	<table id="datatable_CourtFilings_Count" class="AOIC trendTable">
 		<caption class="TableTitle">Criminal Filings</caption>
 		<thead>
-			<th>Criminal Filing Type</th>
+			<th>Criminal filing type</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 			<cfoutput><th>#YearLoop#</th></cfoutput>
 			</cfloop>
@@ -103,12 +99,12 @@ The AOIC began separating DUI filings from felony and misdemeanor filings in 201
 
 
 <div id="CourtFilingsRateSection">
-<h2>Criminal Filings Rate per 100,000 people</h2>
-<p>Criminal filings rates per 100,000 people take into account the population changes that occur over time. Rates are calculated using the total population within your selected geography.</p>
+<h2>Criminal filings rate per 100,000 people</h2>
+<p>Population data used to calculate these rates is available in the <a href="#PopulationTables">appendix</a>.</p>
 	<table id="datatable_CourtFilings_Rate" class="AOIC trendTable">
-		<caption class="TableTitle">Criminal Filings Rate per 100,000 People</caption>
+		<caption class="TableTitle">Criminal filings rate per 100,000 people</caption>
 		<thead>
-			<th>Criminal Filing Type</th>
+			<th>Criminal filing type</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 			<cfoutput><th>#YearLoop#</th></cfoutput>
 			</cfloop>
@@ -168,17 +164,9 @@ The AOIC began separating DUI filings from felony and misdemeanor filings in 201
 
 
 <div id="CourtFelonyConvictionSentenceSection">
-<h2>Felony Convictions and Sentences</h2>
-<p>The AOIC collects counts of how many individuals are convicted of a felony and their sentencing outcomes. The vast majority of 
-convictions occur as a result of a plea bargain. It is possible for a person to have a felony charge initially filed but during the plea
-process the prosecution and defense agree to a misdemeanor offense. Possible penalties for a felony offense include prison incarceration (IDOC), probation, and conditional
-discharge, the latter two of which may include periodic imprisonment or home confinement. A
-number of factors influence the type and length of sentence imposed on convicted felons,
-including the severity of the crime, the offender’s criminal and social history, safety of the
-community, and legislation affecting certain types of offenses. <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073000050K5-5-3" target="_blank">Some felony convictions require
-a prison sentence by state statute.</a></p>
+<h2>Felony convictions and sentences</h2>
 	<table id="datatable_FelonySentences_Count" class="AOIC trendTable">
-		<caption class="TableTitle">Felony Sentences</caption>
+		<caption class="TableTitle">Felony sentences</caption>
 		<thead>
 			<th>Sentence</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -208,16 +196,9 @@ a prison sentence by state statute.</a></p>
 
 
 <div id="CourtProbationCaseloadsSection">
-<h2>Probation Caseloads</h2>
-<p>The Illinois probation system is operated by the courts—the judicial branch. Probation
-supervision is administered locally by individual departments. The Administrative Office of the
-Illinois Courts Probation Division oversees provision of statewide probation services.
-The administration of each probation department in Illinois varies according to the needs and
-resources of each county or circuit. Most Illinois counties have a single probation department
-that oversees all criminal supervision caseloads, including probation, conditional discharge, and
-court supervision.</p>
+<h2>Probation caseloads</h2>
 	<table id="datatable_ProbationCaseloads_Count" class="AOIC trendTable">
-		<caption class="TableTitle">Probation Caseloads</caption>
+		<caption class="TableTitle">Probation caseloads</caption>
 		<thead>
 			<th>Type</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">

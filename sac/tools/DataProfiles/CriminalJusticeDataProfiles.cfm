@@ -677,7 +677,7 @@ may be used to inform planning and policy decisions.</p>
 
 					<cfform id="ProfileSelector" name="ProfileSelector" method="GET" action="CriminalJusticeDataProfiles.cfm">
 				        <p><b>Step 1 -</b> Select a profile to view:<br>  
-				            <input type="checkbox" name="ProfileNumber" class="required CHRI_checkbox" id="ProfileCheck10" value="10">
+				            <input type="checkbox" name="ProfileNumber" class="required CHRI_checkbox" id="ProfileCheck10" value="10" checked="checked">
 								<label for="ProfileCheck10">Adult Arrests from the Illinois State Police CHRI Database*</label><br/>
 							<!---><input type="checkbox" name="ProfileNumber" class="required CHRI_checkbox" id="ProfileCheck20" value="20" checked="checked">
 				            	<label for="ProfileCheck20">Adult Convictions from the Illinois State Police CHRI Database*</label><br/><--->

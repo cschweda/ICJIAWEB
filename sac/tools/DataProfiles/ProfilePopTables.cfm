@@ -52,11 +52,11 @@
 
 <h1 id="AppendexHeading">Appendix</h1>
 <div id="PopulationTables">
-<h2 id="PopulationHeading">Population Data</h1>	
+<h2 id="PopulationHeading">Population data</h1>	
 <p>Populations used in rate calculations and the various charts above are available below.</p>
 
 	<table id="datatable_populationTotal" class="Population trendTable">
-	<caption class="TableTitle">Circuit Population by County</caption>
+	<caption class="TableTitle">Circuit population by county</caption>
 		<thead>
 			<th>County</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -80,9 +80,9 @@
 	</table>
 	
 	<table id="datatable_populationByAge" class="Population trendTable">
-	<caption class="TableTitle">Population by Age</caption>
+	<caption class="TableTitle">Population by age</caption>
 		<thead>
-			<th>Age Group</th>
+			<th>Age group</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 			<cfoutput><th>#YearLoop#</th></cfoutput>
 			</cfloop>
@@ -104,7 +104,7 @@
 	</table>
 	
 	<table id="datatable_populationBySex" class="Population trendTable">
-	<caption class="TableTitle">Population by Sex</caption>
+	<caption class="TableTitle">Population by sex</caption>
 		<thead>
 			<th>Sex</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -128,7 +128,7 @@
 	</table>
 	
 	<table id="datatable_populationByRace" class="Population trendTable">
-	<caption class="TableTitle">Population by Race</caption>
+	<caption class="TableTitle">Population by race</caption>
 		<thead>
 			<th>Race</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -151,9 +151,9 @@
 		</cfoutput>
 	</table>	
 	<table id="datatable_populationByRaceEth" class="Population trendTable">
-	<caption class="TableTitle">Population by Race/Ethnicity</caption>
+	<caption class="TableTitle">Population by race/ethnicity</caption>
 		<thead>
-			<th>Race/Ethnicity</th>
+			<th>Race/ethnicity</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 			<cfoutput><th>#YearLoop#</th></cfoutput>
 			</cfloop>
@@ -175,7 +175,7 @@
 	</table>
 </div>	
 <div>
-<h2 id="OffenseClasses">Illinois Offense Classes</h2>
+<h2 id="OffenseClasses">Illinois offense classes</h2>
 <p>Illinois has several felony, misdemeanor, and lesser offense classes. Lesser offense classes such as local ordinances have penalties that do not involve probation, jail, or prison. Misdemeanors (class A, B, and C) are generally minor crimes that may result in a fine, jail sentence under a year, a probation term of up to two years, or some other form of community supervision.
  Felonies are for more serious offenses. Felonies allow incarceration in state prison, and <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073000050K5-5-3" target="_blank">for some offenses require imprisonment</a>.</p><p>Class 3 and 4 felonies are the least severe, with typical sentences to up to two and half years of probation, (possibly with a jail sentence) or a prison sentence from one to five years. 
 If the sentence for a class 3 or 4 crime is prison, the offender will also have a mandatory supervised release period of one year after exiting prison. Common examples of class 3 and 4 offenses include theft and retail theft, controlled substance possession under 15 grams, and aggravated battery.</p><p>Class 1 and 2 felonies are more severe, with typical sentences 
@@ -184,7 +184,7 @@ Class X offenses include armed robbery, manufacture and delivery of controlled s
 </div>
 
 <div id="OffenseCategories">
-<h2 id="OffenseCategoriesHeading">Offense Categories</h2>
+<h2 id="OffenseCategoriesHeading">Offense categories</h2>
 <p>The offense categories for CHRI data and prison data are as follows:</p>
 	<ul class="WebCategories">
 		<li>Homicide related, including murder, attempted or conspiracy to commit murder, manslaughter, reckless homicide, and criminal abortion.</li>

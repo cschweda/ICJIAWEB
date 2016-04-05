@@ -61,7 +61,7 @@
 <!---End arrest queries--->
 
 
-<h1 id="ArrestHeading">CHRI Arrest Profile for <cfoutput>#GeographyName#</cfoutput></h1>
+<h1 id="ArrestHeading">CHRI arrest profile for <cfoutput>#GeographyName#</cfoutput></h1>
 
 <p>These data are arrests gathered from the Illinois State Police Electronic Criminal History Record Information (CHRI) database.</p> 
 
@@ -71,7 +71,7 @@
 <h2>Arrest incidents</h2>
 
 	<table id="datatable_Arrests_Incidents" class="CHRI trendTable">
-		<caption class="TableTitle">Arrest Incidents</caption>
+		<caption class="TableTitle">Arrest incidents</caption>
 		<thead>
 			<th>Geography</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -120,9 +120,9 @@
 
 <div id="ArrestRateSection">
 <h2>Arrest incident rate (per 100,000 people)</h2>
-<p>Ppulation data used to calculate these rates is available in the <a href="#PopulationTables">appendix</a>.</p>
+<p>Population data used to calculate these rates is available in the <a href="#PopulationTables">appendix</a>.</p>
 	<table id="datatable_Arrests_Rate" class="CHRI trendTable">
-		<caption class="TableTitle">Arrest Incident Rate</caption>
+		<caption class="TableTitle">Arrest incident rate</caption>
 		<thead>
 			<th>Geography</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -158,9 +158,9 @@
 <div id = "ArrestsByAge">
 <h2>Arrests by age</h2>
 	<table id="datatable_Arrests_Age" class="CHRI trendTable">
-		<caption class="TableTitle">Arrests by Age</caption>
+		<caption class="TableTitle">Arrests by age</caption>
 		<thead>
-			<th>Age Group</th>
+			<th>Age group</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 			<cfoutput><th>#YearLoop#</th></cfoutput>
 			</cfloop>
@@ -190,7 +190,7 @@
 <h2>Arrests by sex</h2>
 
 	<table id="datatable_Arrests_Sex" class="CHRI trendTable">
-		<caption class="TableTitle">Arrests by Sex</caption>
+		<caption class="TableTitle">Arrests by sex</caption>
 		<thead>
 			<th>Sex</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -222,7 +222,7 @@
 <h2>Arrests by race</h2>
 
 	<table id="datatable_Arrests_Race" class="CHRI trendTable">
-		<caption class="TableTitle">Arrests by Race</caption>
+		<caption class="TableTitle">Arrests by race</caption>
 		<thead>
 			<th>Race</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -255,9 +255,9 @@
 <h2>Arrests by class</h2>
 
 	<table id="datatable_Arrests_Class" class="CHRI trendTable">
-		<caption class="TableTitle">Arrests by Offense Class</caption>
+		<caption class="TableTitle">Arrests by offense class</caption>
 		<thead>
-			<th>Offense Class</th>
+			<th>Offense class</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 			<cfoutput><th>#YearLoop#</th></cfoutput>
 			</cfloop>
@@ -287,9 +287,9 @@
 <h2>Arrests by offense type</h2>
 <p>Each arrest may be represented multiple times in the data below if there is more than one charge. Therefore, the total number of arrests below will sum to a larger number than the total number of arrests elsewhere in this profile. Cells with "NA" have values below ten and are masked.</p>	
 		<table id="datatable_Arrests_WebCat" class="CHRI trendTable">
-		<caption class="TableTitle">Arrests by Offense Category</caption>
+		<caption class="TableTitle">Arrests by offense category</caption>
 		<thead>
-			<th>Charge Offense Type</th>
+			<th>Charge offense type</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 			<cfoutput><th>#YearLoop#</th></cfoutput>
 			</cfloop>

@@ -87,22 +87,18 @@
 
 
 
-<h1 id="PrisonExitsHeading">Adult Prison Exits Profile for <cfoutput>#GeographyName#</cfoutput></h1>
-<p>A prison sentence can be imposed, and in some cases is required, for felonies in Illinois. An exit from the Illinois Department of Corrections (IDOC) occurs when a person leaves a prison or adult transition center. 
-	A person exiting on a court admission will require additional supervision in the community, known as mandatory supervised release. The length of the supervision varies by offense class and in some cases the offense.
-	 A person exiting a prison facility from a technical violation admission will either be discharged and no longer under IDOC supervision or will have additional supervision time remaining.</p>
+<h1 id="PrisonExitsHeading">Adult prison exits profile for <cfoutput>#GeographyName#</cfoutput></h1>
 	 <p>The data in this profile are from an ICJIA analysis of data provided by the IDOC planning and research unit. Exits are based on the committing county. 
 	 A person exiting IDOC may reside in a different county, which would only be tracked if a person exits onto MSR or parole. 
 	 Exits do not include juveniles (The Illinois Department of Juvenile Justice houses juvenile offenders in separate facilities). 
 	 A person can be exit prison more than one time in a year. In this data profile, each exit is counted separately. Users should not confuse prison exits with the prison population. Due to longer sentences, the prison population is older and has more violent offenders than the exits from prison.</p>
-<p>Illinois has a determinate sentencing system which dictates the length of mandatory supervised release. For those sentenced to prison, they will receive 1-3 years of mandatory supervised release upon exiting, unless the sentence has been discharged as a result of the offender meeting all required conditions that the court imposed. Some exits also immediately return to prison as soon as the exit due to not meeting conditions of their mandatory supervised release, such as not having a host site to reside at.</p>
 <div id="PrisonExitsByExitTypeSection">
-	<h2>Prison Exits by Exit Type</h2>
+	<h2>Prison exits by exit type</h2>
 	
 	<table id="datatable_PrisonExitsbyExitType" class="IDOC trendTable">
-		<caption class="TableTitle">Prison Exits by Exit Type</caption>
+		<caption class="TableTitle">Prison exits by exit type</caption>
 		<thead>
-			<th>Exit Type</th>
+			<th>Exit type</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 			<cfoutput><th>#YearLoop#</th></cfoutput>
 			</cfloop>
@@ -132,11 +128,9 @@
 <hr><hr>
 <cfif #CountyCount.NumCounties# GT 1 AND #SelectedICJIANumber# GT 102><!---Only outputting this for Circuits with more than one county--->
 <div id= "NewPrisonExitsByCountySection">
-<h2>Prison Exits by County</h2>
-<p>Exits for each county in the judicial circuit are available below. Caution should be taken when 
-	comparing counties with this data. Users should instead examine the prison exit rates per 100,000 county residents further below.</p>
+<h2>Prison exits by county</h2>
 	<table id="datatable_NewPrisonExitsbyCounty" class="IDOC trendTable">
-		<caption class="TableTitle">New Court Prison Exits</caption>
+		<caption class="TableTitle">New court prison exits</caption>
 		<thead>
 			<th>Geography</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -174,11 +168,10 @@
 
 
 <div id="NewPrisonExitsRateByCountySection">
-<h2>Prison Exit Rate</h2>
-<p>The following new court prison exit rates per 100,000 people are calculated by using the total county population from Census 
-	estimates (population data is available at the end of this profile).</p>
+<h2>Prison exit rate</h2>
+<p>Population data used to calculate these new court prison exit rates is available in the <a href="#PopulationTables">appendix</a>.</p>
 	<table id="datatable_Rate" class="IDOC trendTable">
-		<caption class="TableTitle">Prison Exit Rate</caption>
+		<caption class="TableTitle">Prison exit rate</caption>
 		<thead>
 			<th>Geography</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -208,12 +201,11 @@
 
 
 <div id = "PrisonExitsByAge">
-<h2>Prison Exits by Age</h2>
-<p>The data below show the new court prison exits by several age groups. The typical exit age is about 33 years old statewide.</p>
+<h2>Prison exits by age</h2>
 	<table id="datatable_PrisonExits_Age" class="IDOC trendTable">
-		<caption class="TableTitle">Prison Exits by Age</caption>
+		<caption class="TableTitle">Prison exits by age</caption>
 		<thead>
-			<th>Age Group</th>
+			<th>Age group</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 			<cfoutput><th>#YearLoop#</th></cfoutput>
 			</cfloop>
@@ -243,10 +235,9 @@
 
 
 <div id = "PrisonExitsBySex">
-<h2>Prison Exits by Sex</h2>
-<p>Males have a disproportionately higher involvement in most aspects of the criminal justice system compared to females, particularly for violent offenses. Statewide, males account for approximately 90 percent of all exits from prison.</p>
+<h2>Prison exits by sex</h2>
 	<table id="datatable_PrisonExitsBySex" class="IDOC trendTable">
-		<caption class="TableTitle">Prison Exits by Sex</caption>
+		<caption class="TableTitle">Prison exits by sex</caption>
 		<thead>
 			<th>Sex</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -277,10 +268,9 @@
 
 
 <div id = "PrisonExitsByRaceEth">
-<h2>Prison Exits by Race/Ethnicity</h2>
-<p>Statewide, the proportion of prison exits that are black is much larger than the proportion of the general population that is black, though this can vary by county and judicial circuit. <a href="http://www.asanet.org/images/press/docs/pdf/ASARaceCrime.pdf" target="_blank">Reasons for the racial disparity in the criminal justice include contextual and historical explanations.</a></p>
+<h2>Prison exits by race/ethnicity</h2>
 	<table id="datatable_RaceEth" class="IDOC trendTable">
-		<caption class="TableTitle">Prison Exits by Race/Ethnicity</caption>
+		<caption class="TableTitle">Prison exits by race/ethnicity</caption>
 		<thead>
 			<th>Race/Ethnicity</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -312,13 +302,11 @@
 
 
 <div id = "PrisonExitsByClass">
-<h2>Prison Exits by Offense Class</h2>
-<p>Illinois has several offense classes that increase along with the severity of the offense and/or punishment. An explanation of the offense classes is available in the <a href="#OffenseClasses">appendix</a>.</p>
-
+<h2>Prison exits by offense class</h2>
 	<table id="datatable_PrisonExits_Class" class="IDOC trendTable">
-		<caption class="TableTitle">Prison Exits by Offense Class</caption>
+		<caption class="TableTitle">Prison exits by offense class</caption>
 		<thead>
-			<th>Offense Class</th>
+			<th>Offense class</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 			<cfoutput><th>#YearLoop#</th></cfoutput>
 			</cfloop>
@@ -344,15 +332,11 @@
 <hr><hr>
 
 <div id = "PrisonExitsByWebCat">
-<h2>Prison Exits by Offense Type</h2>
-<p>
-A person exiting from the Illinois Department of Corrections can have more than one prison sentence. These sentences can be concurrent (the sentences are served simultaneously) or consecutive. 
-The offense type for the exit is determined by the offense that kept the person in prison for the longest amount of time if they had one sentence or concurrent sentences, also known as the holding offense. The exits can be split up into numerous offense categories (a description of the offenses for each category is in the <a href="#OffenseCategoriesHeading" target="_self">appendix</a>):
-</p>
+<h2>Prison exits by offense type</h2>
 		<table id="datatable_WebCat" class="IDOC trendTable">
-		<caption class="TableTitle">Prison Exits by Offense Category</caption>
+		<caption class="TableTitle">Prison exits by offense category</caption>
 		<thead>
-			<th>Charge Offense Type</th>
+			<th>Charge offense type</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 			<cfoutput><th>#YearLoop#</th></cfoutput>
 			</cfloop>

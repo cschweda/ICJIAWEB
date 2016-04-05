@@ -4,7 +4,6 @@
 $(document).ready(function() {
 	//set select box value for geography to previously selected if it exists
 	var ICJIANumber = parseInt($('#HiddenICJIANumber').text());
-	console.log(ICJIANumber);
 	try{
 		$('#CountySelector option[value="' + ICJIANumber + '"]').attr("selected", "selected");
 	}
@@ -29,7 +28,7 @@ $(document).ready(function() {
 		else if($('select#CountySelector').val() <103 && $('#ProfileCheck10').is(':checked')){
 			//don't allow CHRI requests for county level
 			$('#ToolStatus').text("CHRI Arrests are available at the circuit and statewide only.");
-			e.preventDefault();
+			$('#ProfileCheck10').prop('checked', false);
 			}
 		else{
 				RequestOk=1;
