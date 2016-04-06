@@ -190,6 +190,10 @@ td:not(.Indicator):not(.Geography) {
 #HiddenICJIANumber {
 	visibility: hidden;
 }
+
+#MapContainer {
+	margin: auto;
+}
 	
 </style>
 
@@ -692,7 +696,7 @@ may be used to inform planning and policy decisions.</p>
 				        </p>
 						
 											
-						<div id="CountySelector"><p><b>Step 2 -</b> Select a county, judicial circuit, or Illinois:	
+						<p><b>Step 2 -</b> Select a county, judicial circuit, or Illinois:	
 				        	<select id="CountySelector" name="ICJIANumber">
 					        	<option value="0">Select geography</option>
 					        	<option value="999">Illinois</option>
@@ -822,12 +826,13 @@ may be used to inform planning and policy decisions.</p>
 								<option value="1022">22nd Circuit</option>
 								<option value="1023">23rd Circuit</option>
 							</select>
-						</p><cfinclude template="IllinoisMap.cfm"> </div>
+						</p>
+						<div id="MapContainer"><cfinclude template="IllinoisMap.cfm"> </div>
 						
 						<p><button type="submit" id="getProfile" value="1" name="getProfile">Retrieve Profile</button>
 						<span id="ToolStatus" style="color:red"></span></p>
 					</cfform>	
-	</div>
+
 	
 <!---this will be sued to retain select box value when page is changed--->	
 <cfif structKeyExists(url, 'ICJIANumber')>
@@ -836,14 +841,13 @@ may be used to inform planning and policy decisions.</p>
 </cfif>
 
 
-               <cfif structKeyExists(url, 'getProfile') and trim(url.getProfile) eq "1">
+               <cfif structKeyExists(url, 'getProfile') and trim(url.getProfile) eq "1">  <!---BEGIN check for self submit--->
 
 					<cfoutput>
 
 					<div class="Outputcontainer" id="ProfilesContainer" >
 				
-				<h2>Introduction</h2>
-				<p id="IntroductionText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pretium condimentum ante, sed bibendum libero egestas quis. Nunc eu vehicula urna. Proin eleifend blandit enim, eu bibendum turpis euismod sed. Maecenas posuere at velit quis auctor. Duis viverra tellus molestie condimentum viverra. Aliquam imperdiet euismod neque, non efficitur dui tempor a. Nulla efficitur mollis turpis, sed dictum arcu posuere vel. Nulla ornare auctor dolor eget bibendum. Ut accumsan, lacus nec lacinia hendrerit, est enim volutpat sem, ac aliquet nulla ante quis libero. Praesent varius nunc justo, ut elementum elit rutrum quis. Curabitur in faucibus quam. Aenean ut felis pretium, viverra augue in, semper justo. Cras varius efficitur tortor eget commodo. Donec venenatis venenatis urna, vel eleifend leo hendrerit sed.</p>
+
 					<!---obtain CircuitCook88 value and potential text--->
 					<cfquery name="GetCircuit" datasource="RADBP">
 						SELECT CircuitCook88, CountyName ,ShowCircuitText
@@ -852,7 +856,7 @@ may be used to inform planning and policy decisions.</p>
 						;
 					</cfquery>
 					<cfset CircuitNumber=INT(#GetCircuit.CircuitCook88#)>
-
+					<cfset DisplayName = #GetCircuit.ShowCircuitText#>
 
 
 					<!---Get number of counties within circuit--->
@@ -881,32 +885,31 @@ may be used to inform planning and policy decisions.</p>
 						OR GeographyID IN (500,510,520,530)
 						;	
 					</cfquery>
+					
+					<!---Generate Geography Name to be used in title and other sections--->		
+					<cfif #url.ICJIANumber# GTE 1 AND #url.ICJIANumber# LTE 102>
+						<cfset GeographyTypeForPopulationSubgroups = 50>
+						<cfset GeographyName = #GetCircuit.CountyName# & ' County'>
+					</cfif>
+					<cfif #url.ICJIANumber# EQ 999>
+						<cfset GeographyTypeForPopulationSubgroups = 250>
+						<cfset GeographyName = #GetCircuit.CountyName#>
+					</cfif>
+					<cfif #url.ICJIANumber# GTE 1001 AND #url.ICJIANumber# LTE 1088>
+						<cfset GeographyName = 'the ' & #GetCircuit.CountyName#>
+						<cfset GeographyTypeForPopulationSubgroups = 100>
+					</cfif>
+				<h2>Introduction</h2>
+					<p id="IntroductionText">This profile for #GeographyName# displays criminal justice data on </p>
 
 					<!---<cfdump var="#WTP#">  USED FOR DEBUGGING--->
 
-					<!---Generate Geography Name to be used in title and other sections--->
-					<!---ListElement is used to determine the geography based on the data selected by the user and the population tables to display--->
+
+					<!---use url to determine which profile templates to include--->
 
 					<cfloop index="ListElement" list="#url.ProfileNumber#">
-
-						<cfif #url.ICJIANumber# GTE 1 AND #url.ICJIANumber# LTE 102>
-							<cfset GeographyTypeForPopulationSubgroups = 50>
-							<cfif #ListElement# GT 20>
-							<cfset GeographyName = #GetCircuit.CountyName# & ' County'>
-							<cfelse>
-							<cfset GeographyName = 'the ' & #GetCircuit.ShowCircuitText#>
-							</cfif>
-						</cfif>
-						<cfif #url.ICJIANumber# EQ 999>
-							<cfset GeographyTypeForPopulationSubgroups = 250>
-							<cfset GeographyName = #GetCircuit.CountyName#>
-						</cfif>
-						<cfif #url.ICJIANumber# GTE 1001 AND #url.ICJIANumber# LTE 1088>
-							<cfset GeographyName = 'the ' & #GetCircuit.CountyName#>
-							<cfset GeographyTypeForPopulationSubgroups = 100>
-						</cfif>
-
-					<cfset ProfileTemp = "Profile" & #ListElement# & ".cfm" />
+	
+					<cfset ProfileTemp = "Profile" & #ListElement# & ".cfm" />	
 					<cfinclude template="#ProfileTemp#">
 					</cfloop>
 
@@ -915,10 +918,9 @@ may be used to inform planning and policy decisions.</p>
 					<cfinclude template="ProfilePopTables.cfm">
 
 
-					</div>
+					</div> <!---output container--->
 					</cfoutput>
-</cfif>
-<!--END POWERS-->
+</cfif>  <!--END check for selfsubmit-->
 
   
 
