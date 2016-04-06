@@ -158,7 +158,7 @@
 <div class="row">
   <div class="col-md-3" style="margin-top: 20px">
    <div class="bs-example">
-  <div class="panel-group" id="accordion">
+  <div class="panel-group" id="accordion" style="font-size: 12px">
 
 
 
@@ -253,6 +253,41 @@
 
 
             </div>
+          </div>
+        </div>
+      </div>
+
+
+
+			<div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" class="collapsed">MVTPC Members</a></h4>
+        </div>
+        <div id="collapseFive" class="panel-collapse collapse">
+          <div class="panel-body">
+
+						<p><strong>MVTPC Council members:</strong></p>
+						<ul>
+								<li>Anita Alvarez, Cook County State’s Attorney</li>
+								<li>Larry C. Cholewin, Metlife Insurance</li>
+								<li>Brian B. Fengel, Chief, Bartonville Police Department</li>
+								<li>Hiram Grau, Director, Illinois State Police</li>
+								<li>Larry D. Johnson, Farmers Insurance</li>
+								<li>Donald L. Sauzek</li>
+								<li>Jesse White, Illinois Secretary of State</li>
+							</ul>
+
+
+							<p><strong>Grant Review Committee members:</strong></p>
+						<ul>
+							<li>John Biffany - Representative for Hiram Grau, Captain, Illinois State Police</li>
+							<li>Sydney Roberts - Representative for Jesse White, Director, Secretary of State, Department of Police</li>
+							<li>Kathleen Boehmer, Chicago Police Department</li>
+							<li>Larry Cholewin, Metlife Insurance</li>
+							<li>Brian B. Fengel, Chief, Bartonville Police Department</li>
+							<li>Mike Golden - Representative for Anita Alvarez, Cook County State’s Attorney</li>
+						</ul>
+
           </div>
         </div>
       </div>
@@ -473,6 +508,11 @@
 	</tr>
 	</tbody>
 	</table>
+
+
+
+
+
 
 
 
