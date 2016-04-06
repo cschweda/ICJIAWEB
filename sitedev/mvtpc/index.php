@@ -28,15 +28,13 @@
 
 
 
-		<link rel="stylesheet" href="./_bower_components/fontawesome/css/font-awesome.css">
-
-
-
-
 		<!-- Google Fonts -->
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900" />
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" />
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900" />
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic,400italic' rel='stylesheet' type='text/css'>
+
+
 		<!-- End Google Fonts -->
 
 
@@ -48,7 +46,17 @@
     <style>
     .mvtpc-item {margin-bottom: 50px}
     .mvtpc-item.last {margin-bottom: 0px}
-    .mvtpc-item h2 {font-weight: 600}
+    .mvtpc-item h2 {font-weight: 600; line-height: 26px;}
+
+		.new-item {
+    font-weight: 700;
+    background: #1485CC;
+    color: #fff;
+    border: 0px solid #ccc;
+    padding: 2px 6px 2px 6px;
+    font-family: Lato, sans-serif;
+
+}
 
     </style>
 
@@ -175,7 +183,7 @@
           <div class="panel-body">
             <div id="sidepanelPublicationsInsert">
 
-							<p><strong>2015 Annual Report</strong></p>
+							<p><span class="new-item">NEW</span>&nbsp;<strong>2015 Annual Report</strong></p>
 
 				      <ul>
 				        <li><a class="track" href="/assets/news/2015_Motor_Vehicle_Annual_Report.pdf">Download (PDF, 19 pp.)</a></li>
@@ -523,8 +531,8 @@
 
 
 <div class="mvtpc-item">
-	<h2 class="h4" id="annual-report">
-	Motor Vehicle Theft Prevention Council 2015 Annual Report
+	<h2 class="h4" id="annual-report"><span class="new-item">NEW</span>
+	MVTPC FY2015 Annual Report
 	</h2>
 	<p>The Illinois Motor Vehicle Theft Prevention Council 2015 Annual Report describes the Council&#8217;s achievements and challenges over the past year. The Council&#8217;s partnership of public and private sectors is effectively fighting vehicle theft in Illinois.
 	</p>
