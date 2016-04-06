@@ -500,11 +500,11 @@ td:not(.Indicator):not(.Geography) {
 </div>
 
 
-			
+		
 <section class="breadcrumbs hidden-print" style="">
 	<div class="container">
 		<div class="row" style="text-align: right">
-      <ol class="breadcrumb" style="display: inline;">
+     <!--->	 <ol class="breadcrumb" style="display: inline;">
         <li><a href="/">Home</a></li>
         
 
@@ -514,7 +514,7 @@ td:not(.Indicator):not(.Geography) {
 
                             <li>Default ICJIA page</li>
             
-      </ol>
+      </ol><--->
     </div>
   </div>
 </section>
@@ -632,7 +632,7 @@ $('.expander-news').readmore({
 
 
 
-              <!--- MARK UNCOMMENT AFTER WRITING INTRO<li><a class="scrollclass" data-target="#article-top">Introduction</a></li>--->
+              <li><a class="scrollclass" data-target="#article-top">Introduction</a></li>
 
               <!--
 
@@ -711,13 +711,13 @@ may be used to inform planning and policy decisions.</p>
 								<option value="13">Clay</option>
 								<option value="14">Clinton</option>
 								<option value="15">Coles</option>
-								<option value="16">Cook</option>
+								<option value="1088">Cook</option>
 								<option value="17">Crawford</option>
 								<option value="18">Cumberland</option>
 								<option value="19">DeKalb</option>
 								<option value="20">De Witt</option>
 								<option value="21">Douglas</option>
-								<option value="22">DuPage</option>
+								<option value="1018">DuPage</option>
 								<option value="23">Edgar</option>
 								<option value="24">Edwards</option>
 								<option value="25">Effingham</option>
@@ -740,18 +740,18 @@ may be used to inform planning and policy decisions.</p>
 								<option value="42">Jersey</option>
 								<option value="43">Jo Daviess</option>
 								<option value="44">Johnson</option>
-								<option value="45">Kane</option>
+								<option value="1016">Kane</option>
 								<option value="46">Kankakee</option>
 								<option value="47">Kendall</option>
 								<option value="48">Knox</option>
-								<option value="49">Lake</option>
+								<option value="1019">Lake</option>
 								<option value="50">LaSalle</option>
 								<option value="51">Lawrence</option>
 								<option value="52">Lee</option>
 								<option value="53">Livingston</option>
 								<option value="54">Logan</option>
 								<option value="55">McDonough</option>
-								<option value="56">McHenry</option>
+								<option value="1022">McHenry</option>
 								<option value="57">McLean</option>
 								<option value="58">Macon</option>
 								<option value="59">Macoupin</option>
@@ -794,7 +794,7 @@ may be used to inform planning and policy decisions.</p>
 								<option value="96">Wayne</option>
 								<option value="97">White</option>
 								<option value="98">Whiteside</option>
-								<option value="99">Will</option>
+								<option value="1012">Will</option>
 								<option value="100">Williamson</option>
 								<option value="101">Winnebago</option>
 								<option value="102">Woodford</option>
@@ -820,6 +820,7 @@ may be used to inform planning and policy decisions.</p>
 								<option value="1020">20th Circuit</option>
 								<option value="1021">21st Circuit</option>
 								<option value="1022">22nd Circuit</option>
+								<option value="1023">23rd Circuit</option>
 							</select>
 						</p><cfinclude template="IllinoisMap.cfm"> </div>
 						
@@ -840,8 +841,9 @@ may be used to inform planning and policy decisions.</p>
 					<cfoutput>
 
 					<div class="Outputcontainer" id="ProfilesContainer" >
-
-
+				
+				<h2>Introduction</h2>
+				<p id="IntroductionText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pretium condimentum ante, sed bibendum libero egestas quis. Nunc eu vehicula urna. Proin eleifend blandit enim, eu bibendum turpis euismod sed. Maecenas posuere at velit quis auctor. Duis viverra tellus molestie condimentum viverra. Aliquam imperdiet euismod neque, non efficitur dui tempor a. Nulla efficitur mollis turpis, sed dictum arcu posuere vel. Nulla ornare auctor dolor eget bibendum. Ut accumsan, lacus nec lacinia hendrerit, est enim volutpat sem, ac aliquet nulla ante quis libero. Praesent varius nunc justo, ut elementum elit rutrum quis. Curabitur in faucibus quam. Aenean ut felis pretium, viverra augue in, semper justo. Cras varius efficitur tortor eget commodo. Donec venenatis venenatis urna, vel eleifend leo hendrerit sed.</p>
 					<!---obtain CircuitCook88 value and potential text--->
 					<cfquery name="GetCircuit" datasource="RADBP">
 						SELECT CircuitCook88, CountyName ,ShowCircuitText
