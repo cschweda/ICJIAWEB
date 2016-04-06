@@ -174,6 +174,15 @@
         <div id="collapseThree" class="panel-collapse collapse in">
           <div class="panel-body">
             <div id="sidepanelPublicationsInsert">
+
+							<p><strong>2015 Annual Report</strong></p>
+
+				      <ul>
+				        <li><a class="track" href="/assets/news/2015_Motor_Vehicle_Annual_Report.pdf">Download (PDF, 19 pp.)</a></li>
+				      </ul>
+
+
+
               <p><strong>2016 Annual Insurance Assessment</strong></p>
 
               <ul>
@@ -186,11 +195,7 @@
 
   	</ul>
 
-      <p><strong>2014 Annual Report</strong></p>
 
-      <ul>
-        <li><a class="track" href="/assets/pdf/mvtpc/2014_MV_Annual_Report.pdf">Download (PDF, 21 pp.)</a></li>
-      </ul>
 
 
             </div>
@@ -476,6 +481,19 @@
   <div class="col-md-6" style="border-left: 1px solid #ddd; padding-left: 30px">
 <h2 class="h3" style="margin-bottom: 50px; font-weight: 700; text-transform: uppercase">News & Events</h2>
 
+
+<div class="mvtpc-item">
+	<h2 class="h4" id="annual-report">
+	Motor Vehicle Theft Prevention Council 2015 Annual Report
+	</h2>
+	<p>The Illinois Motor Vehicle Theft Prevention Council 2015 Annual Report describes the Council&#8217;s achievements and challenges over the past year. The Council&#8217;s partnership of public and private sectors is effectively fighting vehicle theft in Illinois.
+	</p>
+	<ul>
+		<li><a class="track" href="/assets/news/2015_Motor_Vehicle_Annual_Report.pdf">View the Motor Vehicle Theft Prevention Council 2015 Annual Report (PDF, 19 pp.)</a></li>
+	</ul>
+</div>
+
+
 <div class="mvtpc-item">
 	<h2 class="h4" id="strategy">
 	Request For Input: 2016 - 2019 MVTPC Strategy
@@ -501,16 +519,7 @@
 	<li><a href="https://www.surveygizmo.com/s3/2566407/2016-Motor-Vehicle-Theft-Prevention-Trust-Fund-Insurer-Worksheet">View the Worksheet Instructions and Complete the Online Worksheet Form</a></li>
 	</ul>
 </div>
-<div class="mvtpc-item">
-	<h2 class="h4" id="annual-report">
-	Motor Vehicle Theft Prevention Council 2014 Annual Report
-	</h2>
-	<p>The Illinois Motor Vehicle Theft Prevention Council 2014 Annual Report describes the Council&#8217;s achievements and challenges over the past year. The Council&#8217;s partnership of public and private sectors is effectively fighting vehicle theft in Illinois.
-	</p>
-	<ul>
-		<li><a class="track" href="/assets/pdf/mvtpc/2014_MV_Annual_Report.pdf">View the Motor Vehicle Theft Prevention Council 2014 Annual Report (PDF, 21 pp.)</a></li>
-	</ul>
-</div>
+
 
 
   </div>
