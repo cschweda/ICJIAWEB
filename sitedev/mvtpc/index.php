@@ -45,7 +45,12 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
+    <style>
+    .mvtpc-item {margin-bottom: 50px}
+    .mvtpc-item.last {margin-bottom: 0px}
+    .mvtpc-item h2 {font-weight: 600}
 
+    </style>
 
 
 	</head>
@@ -83,7 +88,7 @@
 
 
 
-          <li> <a href="#news" class="navLink menuTop page-scroll"> MVTPC News </a> </li>
+          <li> <a href="#news" class="navLink menuTop page-scroll"> News & Events </a> </li>
 
 
           <li class="dropdown " data-animate="animated fadeInUp" style="z-index:500;"> <a href="#" class="dropdown-toggle " data-toggle="dropdown"> <i class="fa fa-search"> </i> </a>
@@ -148,7 +153,7 @@
 
 
 <section>
-    <div id="about"></div>
+    <div id="about" style="background: #eee; margin-top: -30px; border-top: 1px solid #ccc">
 <div class="container">
 <div class="row">
   <div class="col-md-3" style="margin-top: 20px">
@@ -159,50 +164,35 @@
 
 
 
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed">Upcoming Meetings</a></h4>
-        </div>
-        <div id="collapseTwo" class="panel-collapse collapse in">
-          <div class="panel-body">
-            <div id="sidepanelMeetingsInsert">
-              <div class="meeting-announcement">
-  <h5 style="margin-bottom: 3px">
-  <a href="/about/meetings.html">
 
-    MVTPC Council
-  </a>
-</h5>
-<p>
-
-  &nbsp;Wednesday, November 13, 2014
-</p>
-</div>
-
-<div class="meeting-announcement last">
-<a href="/about/meetings.html">
-  <h5 style="margin-bottom: 3px"> Grant Review Committee</h5>
-</a>
-<p>
-
-  &nbsp;Thursday, October 2, 2014
-</p>
-</div>
-
-            </div>
-          </div>
-        </div>
-      </div>
 
 
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed">Recent Publications</a></h4>
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed"> Publications & Downloads</a></h4>
         </div>
-        <div id="collapseThree" class="panel-collapse collapse">
+        <div id="collapseThree" class="panel-collapse collapse in">
           <div class="panel-body">
             <div id="sidepanelPublicationsInsert">
-              Publications here
+              <p><strong>2016 Annual Insurance Assessment</strong></p>
+
+              <ul>
+
+                <li><a class="track" href="/assets/pdf/mvtpc/2016_Motor_Vehicle_Theft_Prevention_Trust_Fund_Collection_Rules_Part_1800.pdf">MVTPC Trust Fund Collection Rules</a>
+              	</li>
+              	<li><a class="track" href="/assets/pdf/mvtpc/MV_2016_Insurance_collection_letter.pdf">Letter to Insurers</a>
+              	</li>
+              	<li><a href="https://www.surveygizmo.com/s3/2566407/2016-Motor-Vehicle-Theft-Prevention-Trust-Fund-Insurer-Worksheet">Online Worksheet Form</a></li>
+
+  	</ul>
+
+      <p><strong>2014 Annual Report</strong></p>
+
+      <ul>
+        <li><a class="track" href="/assets/pdf/mvtpc/2014_MV_Annual_Report.pdf">Download (PDF, 21 pp.)</a></li>
+      </ul>
+
+
             </div>
           </div>
         </div>
@@ -216,7 +206,47 @@
         <div id="collapseFour" class="panel-collapse collapse">
           <div class="panel-body">
             <div id="sidepanelPublicationsInsert">
-              Meeting Minutes here
+              <p><strong>MVTPC Meeting Minutes</strong></p>
+
+              <ul>
+  		<li>2015
+  		<ul>
+  			<li><a class="track" href="/assets/pdf/mvtpc/Meeting_Minutes/February_25_2015_Council_minutes.pdf">February 25, 2015</a></li>
+  			<li><a class="track" href="/assets/pdf/mvtpc/Meeting_Minutes/May_13_2015_Council_minutes.pdf">May 13, 2015</a></li>
+  		</ul>
+  		</li>
+  	</ul>
+  	<ul>
+  		<li>2014
+  		<ul>
+  			<li><a class="track" href="/assets/pdf/mvtpc/Meeting_Minutes/February_19_2014_Council_minutes.pdf">February 19, 2014</a></li>
+  			<li><a class="track" href="/assets/pdf/mvtpc/Meeting_Minutes/May_21_2014_Council_minutes.pdf">May 21, 2014</a></li>
+  			<li><a class="track" href="/assets/pdf/mvtpc/Meeting_Minutes/August_13_2014_Council_minutes.pdf">August 13, 2014</a></li>
+  			<li><a class="track" href="/assets/pdf/mvtpc/Meeting_Minutes/November_20_2014_Council_minutes.pdf">November 20, 2014</a></li>
+  		</ul>
+  		</li>
+  	</ul>
+
+    <p><strong>Grant Review Committee Meeting Minutes</strong>
+	</p>
+	<ul>
+		<li>2015
+		<ul>
+			<li><a class="track" href="/assets/pdf/mvtpc/GRC_Minutes/GRC_Meeting_Minutes_January_29_2015.pdf">January 29, 2015</a></li>
+		</ul>
+		</li>
+	</ul>
+	<ul>
+		<li>2014
+		<ul>
+			<li><a class="track" href="/assets/pdf/mvtpc/GRC_Minutes/GRC_Meeting_Minutes_April_17_2014.pdf">April 7, 2014</a></li>
+			<li><a class="track" href="/assets/pdf/mvtpc/GRC_Minutes/GRC_Meeting_Minutes_July_10_2014.pdf">July 10, 2014</a></li>
+			<li><a class="track" href="/assets/pdf/mvtpc/GRC_Minutes/GRC_Meeting_Minutes_October_2_2014.pdf">October 2, 2014</a></li>
+		</ul>
+		</li>
+	</ul>
+
+
             </div>
           </div>
         </div>
@@ -314,7 +344,185 @@
   </div>
 </div>
 </div>
+</div>
 </section>
+
+
+<section>
+  <div id="news" style="background: #fff; border-top: 1px solid #ccc; padding-top: 20px">
+
+<div class="container">
+<div class="row">
+  <div class="col-md-6" style="padding-right: 25px">
+
+  <h2 class="h3" id="meetings" style="margin-bottom: 50px; font-weight: 700; text-transform: uppercase;">Meeting Dates & Locations</h2>
+	<h3 class="h4">2016 Grant Review Committee Meeting Schedule</h3>
+	<table class="table table-striped" style="font-size: 12px">
+	<tbody>
+	<tr>
+		<td><strong>Scheduled Date:</strong>
+		</td>
+		<td><strong>Location:</strong>
+		</td>
+		<td><strong>Time:</strong>
+		</td>
+		<td><strong>Alternate Date:</strong>
+		</td>
+	</tr>
+	<tr>
+		<td>Wednesday, February 24, 2016 <br>Strategy Development Hearing
+		</td>
+		<td>ICJIA offices 300 W. Adams, Chicago, IL, 60606, Suite 200
+		</td>
+		<td>9 a.m.
+		</td>
+		<td><br>
+		</td>
+	</tr>
+	<tr>
+		<td>Wednesday, May 25, 2016
+		</td>
+		<td>Springfield
+		</td>
+		<td>10 a.m.
+		</td>
+		<td><br>
+		</td>
+	</tr>
+	<tr>
+		<td>Wednesday, July 13, 2016
+		</td>
+		<td>ICJIA offices 300 W. Adams, Chicago, IL, 60606, Suite 200
+		</td>
+		<td>10 a.m.
+		</td>
+		<td>Wednesday, July 27, 2016
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>Wednesday, October 5, 2016
+			</p>
+		</td>
+		<td>ICJIA offices 300 W. Adams, Chicago, IL, 60606, Suite 200
+		</td>
+		<td>10 a.m.
+		</td>
+		<td>Wednesday, October 12, 2016
+		</td>
+	</tr>
+	</tbody>
+	</table>
+	<h3 class="h4">2016 Council Meeting Schedule</h3>
+	<table class="table table-striped" style="font-size: 12px">
+	<tbody>
+	<tr>
+		<td><strong>Scheduled Date:</strong>
+		</td>
+		<td><strong>Location:</strong>
+		</td>
+		<td><strong>Time:</strong>
+		</td>
+		<td><strong>Alternate Date:</strong>
+		</td>
+	</tr>
+	<tr>
+		<td>Thursday, February 25, 2016
+		</td>
+		<td>ICJIA offices, 300 W. Adams, Chicago, IL, 60606, Suite 200
+		</td>
+		<td>10 a.m.
+		</td>
+		<td><br>
+		</td>
+	</tr>
+	<tr>
+		<td>Thursday, May 26, 2016
+		</td>
+		<td>ICJIA offices, 300 West Adams St., Chicago, IL 60606, Suite 200
+		</td>
+		<td>10 a.m.
+		</td>
+		<td><br>
+		</td>
+	</tr>
+	<tr>
+		<td>Thursday, August 25, 2016
+		</td>
+		<td>ICJIA offices, 300 W. Adams, Chicago, IL, 60606, Suite 200
+		</td>
+		<td>10 a.m.
+		</td>
+		<td>Thursday, September 1, 2016
+		</td>
+	</tr>
+	<tr>
+		<td>Thursday, November 17, 2016
+		</td>
+		<td>ICJIA offices, 300 W. Adams, Chicago, IL, 60606, Suite 200
+		</td>
+		<td>10 a.m.
+		</td>
+		<td>Thursday, December 1, 2016
+		</td>
+	</tr>
+	</tbody>
+	</table>
+
+
+
+  </div>
+
+  <div class="col-md-6" style="border-left: 1px solid #ddd; padding-left: 30px">
+<h2 class="h3" style="margin-bottom: 50px; font-weight: 700; text-transform: uppercase">News & Events</h2>
+
+<div class="mvtpc-item">
+	<h2 class="h4" id="strategy">
+	Request For Input: 2016 - 2019 MVTPC Strategy
+	</h2>
+	<p>Written comment is being sought on the Illinois Motor Vehicle Theft Prevention Council&#8217;s statewide motor vehicle theft prevention strategy and the programs it supports. As in past years, this input will be used to help identify and clarify issues or problem areas, effective approaches, needed legislative or regulatory remedies or any other information relevant to the vehicle theft problem in this State. The written input will culminate in the development of a revised statewide strategy for 2016 - 2019. You are invited to submit written comments.
+	</p>
+	<ul>
+		<li><a class="track" href="/assets/pdf/mvtpc/MVTPC_2016-2019_Strategy_Request_for_Input_0215.pdf">View the MVTPC 2016-2019 Strategy Request for Input (PDF, 1 pp.) </a></li>
+		<li><a href="/assets/pdf/mvtpc/Written_Input_Sought_for_IMVTPC_Statewide_Funding_Strategy_0215.pdf">View the Comprehensive Solicitation for Written Comment (PDF, 3 pp.) ;</a></li>
+		<li><a class="track" href="/assets/pdf/mvtpc/Statewide_MV_Theft_Prevention_Strategy_2012-2015.pdf">View the 2012 - 2015 Motor Vehicle Theft Prevention Council Strategy (PDF, 59 pp.)</a></li>
+	</ul>
+</div>
+<div class="mvtpc-item">
+	<h2 class="h4" id="insurance-assessment">
+	2016 Annual Insurance Assessment
+	</h2>
+	<p>The Illinois Motor Vehicle Theft Prevention Act (20 ILCS 4005/1 et seq) took effect January 1, 1991, creating the Illinois Motor Vehicle Theft Prevention Council. The Act requires all insurance companies licensed to write private passenger vehicle insurance coverage in Illinois that are included in Class 2 and Class 3 of Section 4 of the Illinois Insurance Code to annually pay into the special trust fund $1 for each earned car year of exposure for physical damage (comprehensive) insurance coverage written during the calendar year.</p>
+	<ul>
+	<li><a class="track" href="/assets/pdf/mvtpc/2016_Motor_Vehicle_Theft_Prevention_Trust_Fund_Collection_Rules_Part_1800.pdf">View the 2016 Motor Vehicle Theft Prevention Trust Fund Collection Rules Part 1800 in PDF</a>
+	</li>
+	<li><a class="track" href="/assets/pdf/mvtpc/MV_2016_Insurance_collection_letter.pdf">View the Letter to Insurers in PDF</a>
+	</li>
+	<li><a href="https://www.surveygizmo.com/s3/2566407/2016-Motor-Vehicle-Theft-Prevention-Trust-Fund-Insurer-Worksheet">View the Worksheet Instructions and Complete the Online Worksheet Form</a></li>
+	</ul>
+</div>
+<div class="mvtpc-item">
+	<h2 class="h4" id="annual-report">
+	Motor Vehicle Theft Prevention Council 2014 Annual Report
+	</h2>
+	<p>The Illinois Motor Vehicle Theft Prevention Council 2014 Annual Report describes the Council&#8217;s achievements and challenges over the past year. The Council&#8217;s partnership of public and private sectors is effectively fighting vehicle theft in Illinois.
+	</p>
+	<ul>
+		<li><a class="track" href="/assets/pdf/mvtpc/2014_MV_Annual_Report.pdf">View the Motor Vehicle Theft Prevention Council 2014 Annual Report (PDF, 21 pp.)</a></li>
+	</ul>
+</div>
+
+
+  </div>
+
+</div>
+</div>
+</div>
+</section>
+
+
+
+
 
 
 		<!-- MVTPC Footer -->
