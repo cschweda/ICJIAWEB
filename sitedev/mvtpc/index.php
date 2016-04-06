@@ -535,7 +535,7 @@
 			</div>
 		</div>
 		<div class="container text-center" style="font-size: 12px; margin-bottom: 20px;">
-			&copy; 2014
+			&copy; 2016
 			<a href="##" target="_blank"> Illinois Criminal Justice Information Authority </a> -
 			<a href="page-privacy.html" class="fsize11"> Privacy Policy </a>
 		</div>
