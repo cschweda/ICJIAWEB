@@ -636,7 +636,7 @@ $('.expander-news').readmore({
 
 
 
-              <li><a class="scrollclass" data-target="#article-top">Introduction</a></li>
+             <!---intro not needed <li><a class="scrollclass" data-target="#article-top">Introduction</a></li> --->
 
               <!--
 
@@ -692,7 +692,7 @@ may be used to inform planning and policy decisions.</p>
 							<input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck40" value="40" checked="checked">
 				            	<label for="ProfileCheck40">Prison Exits</label>	<br/>
 
-				            *CHRI data in these profiles are avaiable for judicial circuits and statewide. If you select a county, CHRI data will not be in the profile.  	
+				            *CHRI data in these profiles are avaiable for judicial circuits and statewide. If you select a county, CHRI data will not be in the profile unless it is the only county in a judicial circuit.  	
 				        </p>
 						
 											
@@ -887,7 +887,7 @@ may be used to inform planning and policy decisions.</p>
 					</cfquery>
 					
 					<!---Generate Geography Name to be used in title and other sections--->		
-					<cfif #url.ICJIANumber# GTE 1 AND #url.ICJIANumber# LTE 102>
+					<cfif (#url.ICJIANumber# GTE 1 AND #url.ICJIANumber# LTE 102) OR #url.ICJIANumber# EQ 1088>
 						<cfset GeographyTypeForPopulationSubgroups = 50>
 						<cfset GeographyName = #GetCircuit.CountyName# & ' County'>
 					</cfif>
@@ -895,12 +895,10 @@ may be used to inform planning and policy decisions.</p>
 						<cfset GeographyTypeForPopulationSubgroups = 250>
 						<cfset GeographyName = #GetCircuit.CountyName#>
 					</cfif>
-					<cfif #url.ICJIANumber# GTE 1001 AND #url.ICJIANumber# LTE 1088>
+					<cfif #url.ICJIANumber# GTE 1001 AND #url.ICJIANumber# LT 1088>
 						<cfset GeographyName = 'the ' & #GetCircuit.CountyName#>
 						<cfset GeographyTypeForPopulationSubgroups = 100>
 					</cfif>
-				<h2>Introduction</h2>
-					<p id="IntroductionText">This profile for #GeographyName# displays criminal justice data on </p>
 
 					<!---<cfdump var="#WTP#">  USED FOR DEBUGGING--->
 
@@ -908,7 +906,7 @@ may be used to inform planning and policy decisions.</p>
 					<!---use url to determine which profile templates to include--->
 
 					<cfloop index="ListElement" list="#url.ProfileNumber#">
-	
+						
 					<cfset ProfileTemp = "Profile" & #ListElement# & ".cfm" />	
 					<cfinclude template="#ProfileTemp#">
 					</cfloop>

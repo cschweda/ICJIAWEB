@@ -63,7 +63,7 @@
 
 <h1 id="ArrestHeading">CHRI arrest profile for <cfoutput>#GeographyName#</cfoutput></h1>
 
-<p>These data are arrests gathered from the Illinois State Police Electronic Criminal History Record Information (CHRI) database.</p> 
+<p>These data are arrests (age 18+) gathered from the Illinois State Police Electronic Criminal History Record Information (CHRI) database.</p> 
 
 
 
