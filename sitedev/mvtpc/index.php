@@ -21,7 +21,7 @@
 
 
 
-	
+
 		<link rel="stylesheet" href="css/mvtpc.css">
 
 
@@ -86,20 +86,20 @@
   <div id="navContainer" class="container">
     <div class="navbar-header page-scroll">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only"> Toggle navigation </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> </button>
-      <a class="navbar-brand" href="/"> <span style="font-weight: 900; font-size: 22px; color: #000;">ILLINOIS</span> <span style="text-transform: uppercase; color: #777; font-weight: 700; font-size: 22px">| <span style="color: #A94545">Motor Vehicle Theft Prevention Council</a></span> </a>
+      <a class="navbar-brand" href="/sitedev/mvtpc"> <span style="font-weight: 900; font-size: 22px; color: #000;">ILLINOIS</span> <span style="text-transform: uppercase; color: #777; font-weight: 700; font-size: 22px">| <span style="color: #A94545">Motor Vehicle Theft Prevention Council</a></span> </a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right" style="text-transform: uppercase">
         <li> <a href="#page-top" class="navLink menuTop page-scroll"> Home </a> </li>
         <li> <a href="#about" class="navLink menuTop page-scroll"> About </a> </li>
 
 
 
-          <li> <a href="#news" class="navLink menuTop page-scroll"> News & Events </a> </li>
+          <li> <a href="#news" class="navLink menuTop page-scroll"> News & Publications </a> </li>
 
 
-          <li class="dropdown " data-animate="animated fadeInUp" style="z-index:500;"> <a href="#" class="dropdown-toggle " data-toggle="dropdown"> <i class="fa fa-search"> </i> </a>
+        <!--  <li class="dropdown " data-animate="animated fadeInUp" style="z-index:500;"> <a href="#" class="dropdown-toggle " data-toggle="dropdown"> <i class="fa fa-search"> </i> </a>
             <ul class="dropdown-menu animated bounceInDown">
               <li id="dropdownForm">
                 <div class="dropdown-form">
@@ -108,14 +108,17 @@
                       <input type="text" id="siteSearchTerm" class="form-control" style="width: 200px" placeholder="search..." />
                       <span class="input-group-btn"> <input type="submit" class="btn btn-theme-bg" id="siteSearchButton" value="Go!" /> </span>
                     </div>
-                    <!--input group-->
+
                   </form>
-                  <!--form-->
+
                 </div>
-                <!--.dropdown form--> </li>
-                <!--.drop form search-->
+                 </li>
+
               </ul>
-              <!--.drop menu--> </li>
+						</li>-->
+
+
+
               <!--nav search form-->
             </ul>
           </div>
@@ -527,7 +530,7 @@
   </div>
 
   <div class="col-md-6" style="border-left: 1px solid #ddd; padding-left: 30px">
-<h2 class="h3" style="margin-bottom: 50px; font-weight: 700; text-transform: uppercase">News & Events</h2>
+<h2 class="h3" style="margin-bottom: 50px; font-weight: 700; text-transform: uppercase">News & Publications</h2>
 
 
 <div class="mvtpc-item">
