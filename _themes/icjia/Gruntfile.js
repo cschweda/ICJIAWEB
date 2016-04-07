@@ -11,7 +11,13 @@ module.exports = function(grunt) {
 				src: [
 					'js/app/*.js'
 				],
-				dest: 'js/<%= pkg.name %>.js',
+				dest: 'js/icjia.js',
+			},
+			mvtpc: {
+				src: [
+					'js/mvtpc/*.js'
+				],
+				dest: 'js/mvtpc.js',
 			},
 		},
 
@@ -24,7 +30,8 @@ module.exports = function(grunt) {
 					}
 				},
 				files: {
-					'js/<%= pkg.name %>.js': ['js/<%= pkg.name %>.js']
+					'js/icjia.js': ['js/icjia.js'],
+					'js/mvtpc.js': ['js/mvtpc.js']
 				}
 			}
 		},
@@ -40,14 +47,15 @@ module.exports = function(grunt) {
 				},
 				files: {
 					"css/icjia.css": "less/icjia-main.less",
-					"css/ifvcc.css": "less/ifvcc-main.less" // destination file and source file
+					"css/ifvcc.css": "less/ifvcc-main.less",
+					"css/mvtpc.css": "less/mvtpc-main.less" // destination file and source file
 				}
 			}
 		},
 
 		watch: {
 			js: {
-				files: ['js/app/*.js'],
+				files: ['js/app/*.js', 'js/mvtpc/*.js'],
 				tasks: ['concat'],
 				options: {
 					livereload: true,
@@ -76,11 +84,8 @@ module.exports = function(grunt) {
 	});
 
 
-	grunt.registerTask('reduceViolence', ['concat:reduceViolence',
-		'less:reduceViolence',
-		'watch'
-	]);
-	grunt.registerTask('default', ['concat:dist', 'less', 'watch']);
+
+	grunt.registerTask('default', ['concat', 'less', 'watch']);
 	grunt.registerTask('deploy', ['concat', 'uglify', 'less', 'watch']);
 
 

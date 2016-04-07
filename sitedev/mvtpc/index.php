@@ -86,7 +86,7 @@
   <div id="navContainer" class="container">
     <div class="navbar-header page-scroll">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only"> Toggle navigation </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> </button>
-      <a class="navbar-brand" href="/"> <span style="font-weight: 900; font-size: 22px; color: #000;">ILLINOIS</span> <span style="text-transform: uppercase; color: #777; font-weight: 400; font-size: 22px">| Motor Vehicle Theft Prevention Council</span> </a>
+      <a class="navbar-brand" href="/"> <span style="font-weight: 900; font-size: 22px; color: #000;">ILLINOIS</span> <span style="text-transform: uppercase; color: #777; font-weight: 700; font-size: 22px">| <span style="color: #A94545">Motor Vehicle Theft Prevention Council</a></span> </a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -183,7 +183,7 @@
           <div class="panel-body">
             <div id="sidepanelPublicationsInsert">
 
-							<p><span class="new-item">NEW</span>&nbsp;<strong>2015 Annual Report</strong></p>
+							<p><strong>2015 Annual Report</strong></p>
 
 				      <ul>
 				        <li><a class="track" href="/assets/news/2015_Motor_Vehicle_Annual_Report.pdf">Download (PDF, 19 pp.)</a></li>
