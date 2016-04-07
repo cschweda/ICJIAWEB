@@ -18,9 +18,6 @@ body {
   padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
-.page-top {margin-top: 70px}
-
-
 
 * {
   outline:none;
@@ -33,18 +30,6 @@ a:hover{
   text-decoration: none;
   color: #ccc;
 }
-a.hover-color{
-  -webkit-transition: all 200ms ease-in;
-  -o-transition: all 200ms ease-in;
-  -moz-transition: all 200ms ease-in;
-  transition: all 200ms ease-in;
-}
-
-
-a.readMore {padding: 3px 7px 3px 7px; background:#fff; color: #A94545 }
-
-a.readMore:hover {padding: 3px 7px 3px 7px; background:#801515; color: white }
-
 
 
 img {
@@ -62,74 +47,14 @@ img {
 
 h1, h2, h3, h4, h5, h6 {font-weight: 500; font-family: 'Roboto', sans-serif;}
 
-.thin, h1.thin, h2.thin, h3.thin, h4.thin, h5.thin, h6.thin {font-weight: 300;}
 
 .mvtpc-red {color: #a94545}
 
-h4.margin-headline
-{font-weight: 600; font-size: 15px; text-transform: uppercase; padding: 0; margin: 0; padding-bottom: 8px; border-bottom: 1px solid #ccc; margin-bottom: 10px}
 
-
-.btn-xs, .btn-group-xs > .btn .myTopKeyword {
-  font-size: 8px;
-  font-weight: 600;
-}
-
-.tags {font-size: 11px; font-weight: 600; margin-left: 10px}
-
-h4.sidebar {color: #777; font-size: 15px; border-bottom: 1px solid #ddd; padding-bottom: 8px}
-#sidebar-recent-posts {}
-  #sidebar-recent-posts .recent-posts .headline {font-size: 14px}
-  #sidebar-recent-posts .recent-posts .bodyText {margin-left: 5px; font-size: 12px;}
-
-  #sidebar-top-keywords {margin-left: 10px}
-
-
-  /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
-  The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
-  of those sections to manage the look and feel of the site. */
-
-  .contentbox {margin-top: 70px; margin-bottom: 40px}
-
-  .box {margin-left: 15px; margin-right: 15px}
-  .spacing-15 {height: 15px}
-  .spacing-25 {height: 25px}
-  .spacing-35 {height: 35px}
-  .spacing-50 {height: 50px}
-  .spacing-75 {height: 75px}
 
 
 
   .mvtpcRed {color: #a94545}
-
-
-
-  /*==================== ========*/
-  /*========= sections =========*/
-  /*============================*/
-
-
-  .content-section {margin: 0; padding: 0; padding-top: 25px; padding-bottom: 25px}
-  .content-section.first {padding-top: 5px;}
-  .content-section.last {padding-top: 40px;}
-  .content-section.grey {background: #efefef; border-bottom: 1px solid #ddd}
-  .content-section.white {background: #fff}
-
-
-  /*==================== ========*/
-  /*========= tables =========*/
-  /*============================*/
-
-  .tableNote {font-weight: 600; font-size: 11px}
-
-
-
-
-
-
-
-
-
 
   .navbar-nav.navbar-right:last-child {
     margin-right: 15px;
@@ -141,19 +66,19 @@ h4.sidebar {color: #777; font-size: 15px; border-bottom: 1px solid #ddd; padding
 
 
 
+
+
+
+
+
+
+
+
+
+
   /*-----------------------------------services and features------------------------------------------*/
 
-  h2.mvtpc-header {
-    font-size: 22px;
-    font-weight: 400;
-    color: #444;
-    font-style: italic;
-  }
 
-  .services {
-
-    background: #eaeaea;
-  }
 
 
 
@@ -208,208 +133,35 @@ h4.sidebar {color: #777; font-size: 15px; border-bottom: 1px solid #ddd; padding
   }
 
 
-  /*features*/
-  .features h3{
-    font-weight: 400;
-    color:#fff;
-  }
-  .features p{
-    color:#fff;
-  }
-
-
-
-
-
-
-
-  /* Home Page Carousel */
-
-  header.carousel {
-    height: 50%;
-  }
-
-  header.carousel .item,
-  header.carousel .item.active,
-  header.carousel .carousel-inner {
-    height: 100%;
-
-  }
-
-  header.carousel .fill {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-  }
-
-
-
-  /*==================== ========*/
-  /*========= latest-news =========*/
-  /*============================*/
-
-  .latest-news {
-
-    background: #fff;
-  }
-
-
-  .latest-news h3 {
-    font-size: 20px;
-
-    color: #444;
-  }
-
-
-
-
-  article {
-    margin-bottom: 20px;
-
-  }
-
-
-
-  article  .headline {font-size: 14px; font-weight: 400; margin-bottom: 5px;}
-
-  article  .body {
-    margin-top: 8px;
-    margin-bottom: 8px;
-  }
-
-  article  .publicationDate {color: #777; display: inline-block;}
-
-  article  .keyword {
-    text-transform: uppercase;
-    display: inline;
-    font-size: 9px;
-
-
-  }
-
-  article a:hover {color: #666;}
-
-
-  .meeting-announcement {font-size: 10px; margin-top: 10px; margin-left: 10px; margin-bottom: 20px}
-
-  .meeting-announcement.last {margin-bottom: 30px;}
-
-  /*==================== ========*/
-  /*========= council programs =========*/
-  /*============================*/
-
-  div.council-program {margin-bottom: 35px}
-  div.council-program h5 {color: #666; font-weight: 600;}
-  div.council-program h6 { margin-left: 15px; font-weight: 600;}
-  div.council-program h6.council-program-award {color: #a83a3a;}
-  div.council-program p.program-description {margin-left: 15px}
-
-  /*==================== ========*/
-  /*========= council members =========*/
-  /*============================*/
-  .board-member {margin-bottom: 40px}
-  .member-details {text-align: center; margin-bottom: 10px;}
-  .member-photo {margin-bottom: 15px}
-  .member-name {font-weight: 600}
-  .member-title {color: #888}
-  .member-represents {color: #a83a3a;}
-
-
-
-
-  /*==================== ========*/
-  /*========= Google Maps -- Contact US =========*/
-  /*============================*/
-
-  #map-canvas { height: 400px; width: 100% }
-
-
-  /*==================== ========*/
-  /*========= footers =========*/
-  /*============================*/
-
-  /*footers default*/
-
-  #footer {
-
-    color: #8C8989;
-    padding-top: 25px;
-  }
-
-  .copyright {margin-top: 20px; background: #333; font-size: 11px; padding: 10px}
-
-
-
-
+  /* navbar */
   .navbar {
     border-top: 3px solid #fff;
     border-bottom: 3px solid #fff
   }
-  .headline a {
-    color: #333
+
+
+  .navbar-default {
+    background-color: #fff;
+    border-color: #fff;
   }
-  .bodyText {
-    color: #666
-  }
-  /* articles
-  ----------------------------------------------- */
-  .publication {
-    padding: 0;
-  }
-  #publications {
-    padding-top: 0;
-    margin-bottom: 25px;
-  }
-  .publication {
-    border-top: 0px solid #666;
-    padding-top: 10px;
-  }
-  .box .publication {
-    border-top: 0px dotted #eee;
-    padding: 18px 10px 0 10px;
-  }
-  .publication h5 {
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: none;
-    color: #333;
-    background: transparent;
-    padding: 0;
-    margin: 0;
-  }
-  .publication h6 {
-    margin-bottom: 5px;
-  }
-  .publication a.image {
-    float: left;
-    margin: 3px 10px 3px 0;
-    padding: 3px;
-    border: 1px solid #bbb;
-    background: #fff;
-    width: 68px;
-    height: 90px;
-  }
-  .publication a.image:hover {
-    border: 1px solid #666;
-  }
-  .publication a.image img {
-    float: left;
-  }
-  .publication p.meta {
-    color: #666;
-    border-top: 1px dotted #999;
-    border-bottom: 1px dotted #999;
-    padding: .3em 0;
-    margin-bottom: .8em;
-  }
-  h5.side-bar-slug {
-    background: #a44b4b;
-    margin-top: -2px;
-    padding: 5px 5px 5px 5px;
-    margin-bottom: 5px;
-    text-align: center;
+
+
+
+
+
+  .panel-title {font-size: 13px}
+
+
+
+  .panel-heading a:after {
+    font-family: 'Glyphicons Halflings';
+    content: "\e114";
+    float: right;
+    font-size: 12px;
     color: #fff;
+  }
+  .panel-heading a.collapsed:after {
+    content: "\e080";
   }
 
 
@@ -448,11 +200,7 @@ h4.sidebar {color: #777; font-size: 15px; border-bottom: 1px solid #ddd; padding
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
     font-size: 4em;
   }
-  .intro-divider {
-    width: 400px;
-    border-top: 1px solid #f8f8f8;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  }
+
   .topSlug {
     position: relative;
     margin-top: 3%;
@@ -467,10 +215,7 @@ h4.sidebar {color: #777; font-size: 15px; border-bottom: 1px solid #ddd; padding
 
 
   .topSlug h4 {font-size: 20px; color: #fff; line-height: 34px;}
-  .intro-message > h3 {
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 
-  }
   .mvtpc-bold {
     font-weight: 800
   }
@@ -478,49 +223,6 @@ h4.sidebar {color: #777; font-size: 15px; border-bottom: 1px solid #ddd; padding
   .uppercase {text-transform: uppercase}
 
 
-
-  .breadcrumbs {
-    font-size: 12px;
-    margin-top: 60px;
-    margin-bottom: 40px;
-    font-weight: 400;
-    margin-right: 35px;
-  }
-
-  .breadcrumb {
-
-    background-color: #fff;
-
-  }
-
-
-  /* navbar */
-  .navbar-default {
-    background-color: #fff;
-    border-color: #fff;
-  }
-
-  .recent-posts h5, #sidepanelMeetingsInsert h5 {font-size: 13px}
-  .panel-title {font-size: 13px}
-  #frontPageSidepanelCoreInsert .readMore {font-size: 12px}
-
-  .recent-posts p, #sidepanelMeetingsInsert p, .publication p {font-size: 12px}
-
-
-  .panel-heading a:after {
-    font-family: 'Glyphicons Halflings';
-    content: "\e114";
-    float: right;
-    font-size: 12px;
-    color: #fff;
-  }
-  .panel-heading a.collapsed:after {
-    content: "\e080";
-  }
-
-  #relatedAddon {font-weight: 700; margin-top: 10px; margin-bottom: 30px; border: 0px solid #ddd; padding: 10px 5px 10px 5px; background: #fff; font-size: 14px;}
-  #relatedPageLabel {color: #555 ;text-transform: uppercase; vertical-align: middle}
-  .relatedPage {font-size: 11px}
 
   @media print {
 
@@ -530,61 +232,31 @@ h4.sidebar {color: #777; font-size: 15px; border-bottom: 1px solid #ddd; padding
 
 
 
-  /*==================================================
-  =            Bootstrap 3 Media Queries             =
-  ==================================================*/
 
-  /*==========  Mobile First Method  ==========*/
+  @media(min-width:767px) {
+    .navbar {
+      padding: 28px 0;
+      -webkit-transition: background .3s ease-in-out,padding .3s ease-in-out;
+      -moz-transition: background .3s ease-in-out,padding .3s ease-in-out;
+      transition: background .3s ease-in-out,padding .3s ease-in-out;
+    }
 
-  /* Custom, iPhone Retina */
-  @media only screen and (min-width : 320px) {
+    .navbar-default .navbar-nav {font-weight: bold; color: #222}
 
-  }
+    .navbar-default .navbar-nav > .active > a,
+    .navbar-default .navbar-nav > .active > a:hover,
+    .navbar-default .navbar-nav > .active > a:focus {
+      color: #aa3c3e;
+      background-color: #fff;
 
-  /* Extra Small Devices, Phones */
-  @media only screen and (min-width : 480px) {
+    }
 
-  }
+    .top-nav-collapse {
+      /* Customize the look and feel of the collapsed top nav here */
+      padding: 0;
+      -webkit-box-shadow: 5px 4px 12px -0px rgba(130,126,130,.37);
+      -moz-box-shadow: 5px 4px 12px -0px rgba(130,126,130,.37);
+      box-shadow: 5px 4px 12px -0px rgba(130,126,130,.37);
 
-  /* Small Devices, Tablets */
-  @media only screen and (min-width : 768px) {
-
-  }
-
-  /* Medium Devices, Desktops */
-  @media only screen and (min-width : 992px) {
-
-  }
-
-  /* Large Devices, Wide Screens */
-  @media only screen and (min-width : 1200px) {
-
-  }
-
-
-  /*==========  Non-Mobile First Method  ==========*/
-
-  /* Large Devices, Wide Screens */
-  @media only screen and (max-width : 1200px) {
-
-  }
-
-  /* Medium Devices, Desktops */
-  @media only screen and (max-width : 992px) {
-
-  }
-
-  /* Small Devices, Tablets */
-  @media only screen and (max-width : 768px) {
-
-  }
-
-  /* Extra Small Devices, Phones */
-  @media only screen and (max-width : 480px) {
-
-  }
-
-  /* Custom, iPhone Retina */
-  @media only screen and (max-width : 320px) {
-
+    }
   }

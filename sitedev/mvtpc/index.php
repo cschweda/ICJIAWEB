@@ -21,7 +21,7 @@
 
 
 
-		<link rel="stylesheet" href="css/scrolling-nav.css">
+	
 		<link rel="stylesheet" href="css/mvtpc.css">
 
 
