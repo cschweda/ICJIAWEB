@@ -90,11 +90,89 @@
 
 		<script src="{{ theme:asset src='bower_components/moment/min/moment.min.js' }}"></script>
 
-    <style>
+  	<link rel="stylesheet" property="stylesheet" href="{{ theme:asset src='bower_components/bx-slider.js/dist/jquery.bxslider.min.css'}}">
+
+		<style>
+		/*-------------------------------------------------------------------*/
+/* bxslider */
+/*-------------------------------------------------------------------*/
+.bx-wrapper {
+  border: none;
+  box-shadow: none;
+}
+.bx-wrapper .bx-loading {
+  background-image: url("../img/bx_loader.gif");
+}
+.bx-wrapper .bx-caption {
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.bx-wrapper .bx-caption span {
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  margin: 0;
+  line-height: 1em;
+  padding-bottom: 15px;
+}
+.bx-wrapper .bx-prev {
+  left: 0px;
+  background: url("../img/controls.png") no-repeat 0 -32px;
+}
+.bx-wrapper .bx-next {
+  right: 10px;
+  background: url("../img/controls.png") no-repeat -43px -32px;
+}
+.bx-wrapper .bx-viewport {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 0;
+}
+.bxslider-controls {
+  position: relative;
+}
+.bxslider-controls .bx-next {
+  font-size: 1.4em;
+  font-weight: 700;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 6px 0px;
+  color: #fff;
+  width: 32px;
+  height: 35px;
+  text-align: center;
+  text-decoration: none;
 
 
-    </style>
+}
+.bxslider-controls .bx-prev {
+  font-size: 1.4em;
+  font-weight: 500;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 6px 0px;
+  color: #fff;
+  width: 32px;
+  height: 35px;
+  text-align: center;
+  text-decoration: none;
 
+}
+.bxslider-controls .bx-prev:hover,
+.bxslider-controls .bx-next:hover {
+  background-color: #0099da;
+}
+.calification {
+  color: #ffde00;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+.calification i {
+  margin: 0;
+  padding: 0;
+  line-height: 100%;
+}
+</style>
 
 	</head>
 
@@ -126,6 +204,7 @@
 
 
 		<script src="{{ theme:asset src='bower_components/bootstrap/dist/js/bootstrap.min.js' }}"></script>
+		<script src="{{ theme:asset src='bower_components/bx-slider.js/dist/jquery.bxslider.min.js' }}"></script>
 		<script src="{{ theme:asset src='js/mvtpc.js' }}"></script>
 
 
@@ -133,7 +212,22 @@
 
 		<script>
 
+		// $(document).ready(function(){
+		//   $('.bxslider').bxSlider();
+		// });
 
+
+		$('.bxslider').bxSlider({
+        hideControlOnEnd: true,
+        minSlides: 1,
+        maxSlides: 1,
+
+        pager: false,
+        nextSelector: '#bx-next5',
+        prevSelector: '#bx-prev5',
+        nextText: '>',
+        prevText: '<',
+    });
 
 		</script>
 
