@@ -17,10 +17,6 @@
 
 
 
-		<link rel="stylesheet" href="css/bootstrap.css">
-
-
-
 
 		<link href="{{ theme:asset src='css/mvtpc.css' }}" rel="stylesheet" property="stylesheet">
 
@@ -39,7 +35,8 @@
 
 
 			<script src="{{ theme:asset src='bower_components/jquery/dist/jquery.min.js' }}"></script>
-		<script src="js/jquery.easing.min.js"></script>
+			<script src="{{ theme:asset src='bower_components/jquery-easing-original/jquery.easing.min.js' }}"></script>
+
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
@@ -49,7 +46,7 @@
 		<script src="{{theme:asset src='bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js'}}"></script>
 		<script src="{{theme:asset src='bower_components/jasny-bootstrap/js/offcanvas.js'}}"></script>
 
-			<script src="{{ theme:asset src='bower_components/moment/min/moment.min.js' }}"></script>
+		<script src="{{ theme:asset src='bower_components/moment/min/moment.min.js' }}"></script>
 
     <style>
     .mvtpc-item {margin-bottom: 50px}
@@ -85,7 +82,7 @@
 
 
 					<!-- ////////////////////////////////////////////////// content-start \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-					<div id="content-wrap-ifvcc">
+					<div id="content-wrap-mvtpc">
 		      {{ layout_content }}
 					</div>
 					<!-- ////////////////////////////////////////////////// content-end \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
@@ -98,49 +95,16 @@
 
 
 
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/scrolling-nav.js"></script>
-		<script src="js/mvtpc.js"></script>
+		<script src="{{ theme:asset src='bower_components/bootstrap/dist/js/bootstrap.min.js' }}"></script>
+		<script src="{{ theme:asset src='js/mvtpc.js' }}"></script>
 
-	
+
 
 
 		<script>
 
 
-		//jQuery to collapse the navbar on scroll
-		$(window).scroll(function() {
-			if ($(".navbar").offset().top > 50) {
-				$(".navbar-fixed-top").addClass("top-nav-collapse");
-				$("#navContainer").removeClass("container");
-				// $(".navbar-collapse > ul").removeClass("pull-right");
 
-				$( ".top-bar" ).fadeOut(100);
-				//$( "a.navbar-brand" ).html('<img src="img/mvtpc-logo-small.png" style="margin-top: -15px;" >');
-
-				$(".navbar-default .navbar-nav > .active > a").css({
-					"background-color": "#aa3c3e",
-					"color": "#fff"
-				});
-
-
-
-
-
-			} else {
-				$(".navbar-fixed-top").removeClass("top-nav-collapse");
-
-				$("#navContainer").addClass("container");
-				//$(".navbar-collapse > ul").addClass("pull-right");
-				$(".navbar-default .navbar-nav > .active > a").css({
-					"background-color": "#fff",
-					"color": "#222"
-				});
-				$( ".top-bar" ).fadeIn(100);
-				//$( "a.navbar-brand" ).html('<img src="img/mvtpc-logo-small.png" style="margin-top: -41px">').fadeIn( 400 );
-
-			}
-		});
 		</script>
 
 
