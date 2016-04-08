@@ -9,7 +9,7 @@ log_successful_searches: true
 # log failed searches as `warn`-level messages?
 log_failed_searches: true
 
-folders: grant-programs|press|ifvcc*|mvtpc*|grant-opportunities|faq*|biographies|news|systems*|ilfvcc|articles|publications|grants|about|research|events|redeploy|datasets|drone|sites*
+folders: grant-programs|press|ifvcc*|grant-opportunities|faq*|biographies|news|systems*|ilfvcc|articles|publications|grants|about|research|events|redeploy|datasets|drone|sites*
 limit: 75
 type: all
 include_properties:
