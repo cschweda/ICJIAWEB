@@ -38,6 +38,19 @@ $(function() {
     $('html, body').stop().animate({
       scrollTop: $($anchor.attr('href')).offset().top - 50
     }, 1500, 'easeInOutExpo');
+
     event.preventDefault();
   });
+});
+
+
+$(document).ready(function() {
+  var width = $(window).width(),
+    height = $(window).height();
+  if (width <= 480) {
+    $('html, body').animate({
+      scrollTop: $('.intro-message').offset().top - 50
+    }, 'fast');
+
+  }
 });

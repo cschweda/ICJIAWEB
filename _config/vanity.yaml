@@ -51,9 +51,9 @@
     url: /sites/mvtpc
     type: 301
 
-/mvtpc:
-    url: /sites/mvtpc
-    type: 301
+# /mvtpc:
+#     url: /sites/mvtpc
+#     type: 301
 
 /infonet:
     url: /systems/infonet

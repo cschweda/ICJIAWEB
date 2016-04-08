@@ -30,7 +30,7 @@ body{
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   cursor:default;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color:#555;
 }
@@ -94,7 +94,19 @@ h1, h2, h3, h4, h5, h6 {font-weight: 500; font-family: 'Roboto', sans-serif;}
 
 
 
+  .mvtpc-item {margin-bottom: 50px}
+  .mvtpc-item.last {margin-bottom: 0px}
+  .mvtpc-item h2 {font-weight: 600; line-height: 26px;}
 
+  .new-item {
+  font-weight: 700;
+  background: #1485CC;
+  color: #fff;
+  border: 0px solid #ccc;
+  padding: 2px 6px 2px 6px;
+  font-family: Lato, sans-serif;
+
+}
 
 
 
@@ -175,7 +187,7 @@ h1, h2, h3, h4, h5, h6 {font-weight: 500; font-family: 'Roboto', sans-serif;}
 
 
 
-  .panel-title {font-size: 13px}
+  .panel-title {font-size: 16px}
 
 
 
@@ -201,6 +213,7 @@ h1, h2, h3, h4, h5, h6 {font-weight: 500; font-family: 'Roboto', sans-serif;}
 
   .panel-body {
     padding: 10px 9px 10px 9px;
+    font-size: 12px;
 
   }
 
@@ -257,7 +270,30 @@ h1, h2, h3, h4, h5, h6 {font-weight: 500; font-family: 'Roboto', sans-serif;}
   }
 
 
+.navbar-brand-illinois {font-weight: 900; font-size: 22px; color: #000;}
 
+.navbar-brand-mvtpc {text-transform: uppercase; color: #A94545; font-weight: 700; font-size: 22px}
+
+#mvtpc-mini {
+    float: left;
+    padding-top: 14px;
+    padding-left: 0px;
+    font-size: 18px;
+    line-height: 22px;
+    height: 50px;
+    font-weight: 900;
+    display: none;
+    text-transform: uppercase
+}
+
+
+
+
+footer a {color: #fff}
+footer a:hover {color: #a94545}
+footer {font-size: 14px}
+footer ul {list-style: none;}
+footer ul li {margin-left: -20px}
 
   @media(min-width:767px) {
     .navbar {
@@ -285,4 +321,30 @@ h1, h2, h3, h4, h5, h6 {font-weight: 500; font-family: 'Roboto', sans-serif;}
       box-shadow: 5px 4px 12px -0px rgba(130,126,130,.37);
 
     }
+  }
+
+
+
+
+
+
+  @media (max-width: 745px) {
+
+    .navbar-brand-illinois {font-size: 18px;}
+
+    .navbar-brand-mvtpc {font-size: 18px;}
+
+      #mvtpc-mini {display: none;}
+
+
+  }
+
+  @media (max-width: 653px) {
+
+    .navbar-brand-illinois {display: none;}
+
+    .navbar-brand-mvtpc {display: none;}
+
+    #mvtpc-mini {display: inline;}
+
   }
