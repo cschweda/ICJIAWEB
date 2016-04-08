@@ -5,23 +5,65 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html> <!--<![endif]-->
 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Illinois Motor Vehicle Theft Prevention Council</title>
-		<meta name="description" content="Adult Redeploy All Sites Summit 2015">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="date" content="Sun, 12 January 2014 ">
-		<meta name="keywords" content="news">
-		<meta name="copyright" content="(c) 2016 by the Illinois Motor Vehicle Theft Prevention Council">
-		<link rel="canonical" href="/index.hbs">
+		<title>ICJIA {{if title}}| {{ title }}{{endif}}</title>
+		<meta name="description" content="{{if summary}}{{summary|striptags}}{{else}}{{ defaultDescription }}{{endif}}">
+		<meta name="keywords" content="{{ if keywords }}{{keywords_list}}{{else}}{{defaultKeywords}}{{endif}}">
+		<meta name="date" content="{{ current_date }}">
+		<link rel="canonical" href="{{ permalink }}">
+
+
+		<!-- Facebook metatags -->
+				<meta property="og:title" content="{{ title }}" />
+				<meta property="og:site_name" content="{{ defaultSiteName }}"/>
+				<meta property="og:url" content="{{ permalink }}" />
+				<meta property="og:description" content="{{if summary }}{{ summary }} {{else}} {{defaultdescription }} {{endif}}" />
+				<meta property="fb:app_id" content="{{facebookAppId}}" />
+				<meta property="og:type" content="{{facebokContentType}}" />
+				<meta property="og:locale" content="en_US" />
+				<meta property="article:author" content="{{ facebookAuthorURL }}" />
+				<meta property="og:image" content="{{if splash}}http://www.icjia.state.il.us{{splash}}{{else}}{{socialMediaImage}}{{endif}}" />
+		<!-- // Facebook metatags -->
+
+
+		<!-- Twitter metatags -->
+			<meta name="twitter:card" content="summary" />
+			<meta name="twitter:site" content="@ICJIA_Illinois" />
+			<meta name="twitter:title" content="{{title}}" />
+			<meta name="twitter:description" content="{{if summary }}{{ summary }} {{else}} {{defaultdescription }} {{endif}}" />
+			<meta name="twitter:image" content="{{socialMediaImage}}" />
+			<meta name="twitter:url" content="{{ permalink }}" />
+		<!-- //Twitter metatags -->
+
+
+
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="{{ theme:img src="icons/apple-icon-57x57.png"}}">
+<link rel="apple-touch-icon" sizes="60x60" href="{{ theme:img src="icons//apple-icon-60x60.png"}}">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ theme:img src="icons//apple-icon-72x72.png"}}">
+<link rel="apple-touch-icon" sizes="76x76" href="{{ theme:img src="icons//apple-icon-76x76.png"}}">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ theme:img src="icons//apple-icon-114x114.png"}}">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ theme:img src="icons//apple-icon-120x120.png"}}">
+<link rel="apple-touch-icon" sizes="144x144" href="{{ theme:img src="icons//apple-icon-144x144.png"}}">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ theme:img src="icons//apple-icon-152x152.png"}}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ theme:img src="icons//apple-icon-180x180.png"}}">
+<link rel="icon" type="image/png" sizes="192x192"  href="{{ theme:img src="icons//android-icon-192x192.png"}}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ theme:img src="icons//favicon-32x32.png"}}">
+<link rel="icon" type="image/png" sizes="96x96" href="{{ theme:img src="icons//favicon-96x96.png"}}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ theme:img src="icons//favicon-16x16.png"}}">
+<link rel="manifest" href="{{ theme:img src="icons//manifest.json"}}">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="{{ theme:img src="icons//ms-icon-144x144.png"}}">
+<meta name="theme-color" content="#ffffff">
 
 
 
 
 		<link href="{{ theme:asset src='css/mvtpc.css' }}" rel="stylesheet" property="stylesheet">
-
-
-
 
 
 		<!-- Google Fonts -->
@@ -49,7 +91,7 @@
 		<script src="{{ theme:asset src='bower_components/moment/min/moment.min.js' }}"></script>
 
     <style>
-  
+
 
     </style>
 
