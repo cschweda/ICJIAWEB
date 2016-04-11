@@ -36,7 +36,7 @@ $(document).ready(function() {
       // $(".navbar-collapse > ul").removeClass("pull-right");
 
       $(".top-bar").fadeOut(100);
-      //$( "a.navbar-brand" ).html('<img src="img/mvtpc-logo-small.png" style="margin-top: -15px;" >');
+      $(".offCanvasButton").show();
 
       $(".navbar-default .navbar-nav > .active > a").css({
         "background-color": "#aa3c3e",
@@ -55,7 +55,7 @@ $(document).ready(function() {
         "color": "#222"
       });
       $(".top-bar").fadeIn(100);
-      //$( "a.navbar-brand" ).html('<img src="img/mvtpc-logo-small.png" style="margin-top: -41px">').fadeIn( 400 );
+      $(".offCanvasButton").hide();
 
     }
   });
