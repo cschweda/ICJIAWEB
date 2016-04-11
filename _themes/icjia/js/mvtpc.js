@@ -193,6 +193,12 @@ $(document).ready(function() {
       $('a.back-to-top').fadeOut('fast');
     }
 
+    if ($(window).scrollTop() > socialbar) {
+      $('.prepbootstrap-sharing-container').fadeIn('slow');
+    } else {
+      $('.prepbootstrap-sharing-container').fadeOut('slow');
+    }
+
 
   });
 
