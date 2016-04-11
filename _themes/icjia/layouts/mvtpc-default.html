@@ -125,29 +125,13 @@
 
 		<script src="{{ theme:asset src='bower_components/bootstrap/dist/js/bootstrap.min.js' }}"></script>
 		<script src="{{ theme:asset src='bower_components/bx-slider.js/dist/jquery.bxslider.min.js' }}"></script>
+		<script src="{{ theme:asset src='bower_components/jquery-countTo/jquery.countTo.js' }}"></script>
 		<script src="{{ theme:asset src='js/mvtpc.js' }}"></script>
 
 
 
 
 		<script>
-
-		// $(document).ready(function(){
-		//   $('.bxslider').bxSlider();
-		// });
-
-
-		// $('.bxslider').bxSlider({
-    //     hideControlOnEnd: true,
-    //     minSlides: 1,
-    //     maxSlides: 1,
-		//
-    //     pager: false,
-    //     nextSelector: '#bx-next5',
-    //     prevSelector: '#bx-prev5',
-    //     nextText: '>',
-    //     prevText: '<',
-    // });
 
 
 		$('.bxslider').show().bxSlider({
@@ -164,6 +148,92 @@
 			nextText: '<i class="fa fa-arrow-circle-right fa-2x"></i>',
 			prevText: '<i class="fa fa-arrow-circle-left fa-2x"></i>'
 		});
+
+
+		var counterSpeed = 5000;
+		$('#counter1').countTo({
+	 			from: 0,
+	 			to: 36710,
+	 			speed: counterSpeed,
+	 			refreshInterval: 20,
+	 			formatter: function (value, options) {
+		 			return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+	 			},
+				onComplete: function (value) {
+          $(this).addClass('countup-finished');
+				}
+ 		});
+
+
+		$('#counter2').countTo({
+	 			from: 0,
+	 			to: 68159,
+	 			speed: counterSpeed,
+	 			refreshInterval: 20,
+	 			formatter: function (value, options) {
+		 			return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+	 			},
+				onComplete: function (value) {
+          $(this).addClass('countup-finished');
+				}
+ 		});
+
+
+		$('#counter3').countTo({
+				from: 0,
+				to: 14373,
+				speed: counterSpeed,
+				refreshInterval: 20,
+				formatter: function (value, options) {
+					return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+				},
+				onComplete: function (value) {
+          $(this).addClass('countup-finished');
+				}
+		});
+
+
+		$('#counter4').countTo({
+				from: 0,
+				to: 17641,
+				speed: counterSpeed,
+				refreshInterval: 20,
+				formatter: function (value, options) {
+					return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+				},
+				onComplete: function (value) {
+          $(this).addClass('countup-finished');
+				}
+		});
+
+
+		$('#counter5').countTo({
+				from: 0,
+				to: 7072,
+				speed: counterSpeed,
+				refreshInterval: 20,
+				formatter: function (value, options) {
+					return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+				},
+				onComplete: function (value) {
+          $(this).addClass('countup-finished');
+				}
+		});
+
+
+		$('#counter6').countTo({
+				from: 0,
+				to: 41217,
+				speed: counterSpeed,
+				refreshInterval: 20,
+				formatter: function (value, options) {
+					return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+				},
+				onComplete: function (value) {
+          $(this).addClass('countup-finished');
+				}
+		});
+
 
 
 		</script>
