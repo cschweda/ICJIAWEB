@@ -80,7 +80,7 @@ $(function() {
       text: 'Figure 2<br>Changes in Client Assessment Scores'
     },
     subtitle: {
-      text: 'Time 1 and 2'
+      text: ''
 
     },
     xAxis: {
