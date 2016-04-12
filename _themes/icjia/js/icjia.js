@@ -617,7 +617,7 @@ $(document).ready(function() {
 
 	var amountScrolled = 550;
 
-	var socialbar = 10;
+	var socialbar = 5;
 
 	$(window).scroll(function() {
 		if ($(window).scrollTop() > amountScrolled) {
