@@ -23,9 +23,7 @@
     {{if total_found}}
     {{ if first}}
     <span class="article-about-the-author">
-      <h6>
-      About the author{{if total_found>1}}s{{/if}}
-    </h6>
+
     {{/if}}
     {{/if}}
     {{/entries:listing}}
@@ -37,8 +35,11 @@
 
     {{ entries:listing folder="biographies" conditions="title:{authors|option_list}" }}
     {{if total_found}}
-    {{if !first}}<hr/>{{/if}}
+    {{if !first}}{{/if}}
 
+    <h6><a href="{{url}}">{{title}}{{degrees}}{{if total_found}}, {{/if}}{{name}}{{/degrees}}</a></h6>
+
+    <div style="margin-left: 15px">
       <p>{{if authorPhoto}}<img src="{{ transform src="{authorPhoto}" height="75"}}"
           style="float: left; padding-right: 14px;" />{{endif}}	{{content}}</p>
 
@@ -61,7 +62,7 @@
           {{endif}}
 
           {{theme:partial src="author-social" use_context="true"}}</p>
-
+        </div>
 
 
 
