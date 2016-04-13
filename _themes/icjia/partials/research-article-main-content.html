@@ -33,9 +33,10 @@
 
 
 
-    {{ entries:listing folder="biographies" conditions="title:{authors|option_list}" }}
+    {{ entries:listing folder="biographies" conditions="title:{authors|option_list}" sort_by="date" }}
     {{if total_found}}
-    {{if !first}}{{/if}}
+
+    {{if content}}
 
     <h6><a href="{{url}}">{{title}}{{degrees}}{{if total_found}}, {{/if}}{{name}}{{/degrees}}</a></h6>
 
@@ -65,7 +66,7 @@
         </div>
 
 
-
+        {{/if}}
       {{/if}}
     {{ /entries:listing }}
 
