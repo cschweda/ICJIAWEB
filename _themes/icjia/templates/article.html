@@ -47,7 +47,17 @@ table p {text-indent: 0;}
 					</li>
 				</ul>
 
-				{{theme:partial src="research-article-social-sidebar"}}
+				{{if sidebarThumbnail}}
+
+					{{theme:partial src="research-article-sidebar-download"}}
+
+				{{/if}}
+
+
+
+
+
+
 			</div>
 	</div>
 <!--/left-->
