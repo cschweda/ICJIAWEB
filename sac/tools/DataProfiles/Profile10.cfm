@@ -70,7 +70,7 @@
 <div id= "ArrestCountSection">
 <h2>Arrest incidents</h2>
 
-	<table id="datatable_Arrests_Incidents" class="CHRI trendTable">
+	<table id="datatable_Arrests_Incidents" class="CHRI trendTable table table-responsive">
 		<caption class="TableTitle">Arrest incidents</caption>
 		<thead>
 			<th>Geography</th>
@@ -121,7 +121,7 @@
 <div id="ArrestRateSection">
 <h2>Arrest incident rate (per 100,000 people)</h2>
 <p>Population data used to calculate these rates is available in the <a href="#PopulationTables">appendix</a>.</p>
-	<table id="datatable_Arrests_Rate" class="CHRI trendTable">
+	<table id="datatable_Arrests_Rate" class="CHRI trendTable table table-responsive">
 		<caption class="TableTitle">Arrest incident rate</caption>
 		<thead>
 			<th>Geography</th>
@@ -157,7 +157,7 @@
 
 <div id = "ArrestsByAge">
 <h2>Arrests by age</h2>
-	<table id="datatable_Arrests_Age" class="CHRI trendTable">
+	<table id="datatable_Arrests_Age" class="CHRI trendTable table table-responsive">
 		<caption class="TableTitle">Arrests by age</caption>
 		<thead>
 			<th>Age group</th>
@@ -189,7 +189,7 @@
 <div id = "ArrestsBySex">
 <h2>Arrests by sex</h2>
 
-	<table id="datatable_Arrests_Sex" class="CHRI trendTable">
+	<table id="datatable_Arrests_Sex" class="CHRI trendTable table table-responsive">
 		<caption class="TableTitle">Arrests by sex</caption>
 		<thead>
 			<th>Sex</th>
@@ -221,7 +221,7 @@
 <div id = "ArrestsByRace">
 <h2>Arrests by race</h2>
 
-	<table id="datatable_Arrests_Race" class="CHRI trendTable">
+	<table id="datatable_Arrests_Race" class="CHRI trendTable table table-responsive">
 		<caption class="TableTitle">Arrests by race</caption>
 		<thead>
 			<th>Race</th>
@@ -254,7 +254,7 @@
 <div id = "ArrestsByClass">
 <h2>Arrests by class</h2>
 
-	<table id="datatable_Arrests_Class" class="CHRI trendTable">
+	<table id="datatable_Arrests_Class" class="CHRI trendTable table table-responsive">
 		<caption class="TableTitle">Arrests by offense class</caption>
 		<thead>
 			<th>Offense class</th>
@@ -286,7 +286,7 @@
 <div id = "ArrestsByWebCat">
 <h2>Arrests by offense type</h2>
 <p>Each arrest may be represented multiple times in the data below if there is more than one charge. Therefore, the total number of arrests below will sum to a larger number than the total number of arrests elsewhere in this profile. Cells with "NA" have values below ten and are masked.</p>	
-		<table id="datatable_Arrests_WebCat" class="CHRI trendTable">
+		<table id="datatable_Arrests_WebCat" class="CHRI trendTable table table-responsive">
 		<caption class="TableTitle">Arrests by offense category</caption>
 		<thead>
 			<th>Charge offense type</th>
