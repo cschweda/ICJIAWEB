@@ -57,7 +57,7 @@ summary: 'The Information Systems Unit is charged with designing, developing, an
 							<!-- //Tab: Overview -->
 							<div role="tabpanel" class="tab-pane" id="systems-staff">
 								<!-- ******* staff tab start ***************** -->
-              	{{ entries:listing folder="biographies" sort="sortField" conditions="role:Staff,unit:Information Systems"}}
+              	{{ entries:listing folder="biographies" sort="sortField" conditions="role:Staff,unit:Information Systems,orgStatus:active"}}
                 {{ if !no_results }}
 								<div class="staff-list" style="margin-bottom: 25px;">
 									<h2 class="h5"><a href="/biographies/{{title|slugify}}">{{ title }}&nbsp;&raquo;</a>

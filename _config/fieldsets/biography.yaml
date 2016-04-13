@@ -57,8 +57,16 @@ fields:
     required: true
     type: select
     options:
-      - Authority
+      - ICJIA
       - Adult Redeploy
+
+  orgStatus:
+    display: Current Status
+    type: select
+    options:
+      - active
+      - inactive
+      - nonicjia
 
 
 

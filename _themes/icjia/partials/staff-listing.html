@@ -1,4 +1,6 @@
-{{ entries:listing folder="biographies" sort="sortField" conditions="role: Staff"}}
+{{ entries:listing folder="biographies" sort="sortField" conditions="role:Staff,orgStatus:active"}}
+
+
 	<div class="staff-list" style="margin-top: 35px; margin-bottom: 35px;">
 		<h2 class="h5">
 			<a href="{{url}}" target="_blank">
@@ -32,4 +34,5 @@
 
 
 	</div>
+
  {{ /entries:listing }}
