@@ -1,0 +1,71 @@
+<!-- <link href="{{theme:asset src='bower_components/bootstrap-select/dist/css/bootstrap-select.min.css'}}" rel="stylesheet">
+<script src="{{theme:asset src='bower_components/bootstrap-select/dist/js/bootstrap-select.min.js'}}"></script>
+ -->
+
+
+
+
+
+<!-- <div style="margin-bottom: 20px">
+<h3 id="unit-title" style="border-bottom: 1px solid #ccc; padding-bottom: 8px; ">
+All Authority Staff
+</h3>
+</div> -->
+
+<div class="text-center well" style="margin-top: 25px;">
+<select class="selectpicker" id="getCouncilSelect" data-dropup-auto="false" data-live-search="true">
+<option value="all-staff">All Authority Staff</option>
+<option disabled role=separator>
+<option value="office-of-administrative-services">Office of Administrative Services</option>
+<option value="adult-redeploy">Adult Redeploy</option>
+<option value="office-of-the-executive-director">Office of the Executive Director</option>
+<option value="office-of-public-information">Office of Public Information</option>
+<option value="federal-and-state-grants">Federal and State Grants</option>
+<option value="information-systems">Information Systems</option>
+<option value="research-and-analysis">Research and Analysis</option>
+<option value="office-of-general-counsel">Office of General Counsel</option>
+<option value="human-resources">Human Resources</option>
+<option value="office-of-fiscal-management">Office of Fiscal Management</option>
+
+</select>
+
+</div>
+
+<div id="staff-listing">
+
+{{ entries:listing folder="biographies" sort="sortField" conditions="role:Staff,orgStatus:active"}}
+
+{{theme:partial src="staff-display" use_context="true"}}
+
+{{ /entries:listing }}
+
+</div>
+
+
+
+
+<script>
+
+// $('#getCouncilSelect').on('changed.bs.select', function (e) {
+//
+//   alert($('select[name=selValue]').val());
+//   $('.selectpicker').selectpicker('refresh');
+// });
+// $('#getCouncilSelect').selectpicker({
+// style: 'btn-default',
+// size: 8
+// });
+
+
+$('#getCouncilSelect').change(function () {
+		 var staffViewURL = '/staff-views/' +  $('#getCouncilSelect option:selected').val();
+		 var staffViewTitle = $('#getCouncilSelect option:selected').text();
+		 $('#staff-listing').html('<div style="text-align: center;"><h5>Loading ...&nbsp;&nbsp;<i class="fa fa-spinner fa-spin"></i></h5></div>');
+		 $('#staff-listing').load(staffViewURL);
+		 $('#unit-title').html(staffViewTitle);
+		 console.log(staffViewURL)
+		 //alert(staffView)
+ });
+
+
+</script>
