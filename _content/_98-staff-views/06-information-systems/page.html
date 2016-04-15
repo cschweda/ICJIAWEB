@@ -1,0 +1,16 @@
+---
+_fieldset: page
+title: Information Systems
+splash: ""
+upload: ""
+breadcrumbs: 'true'
+_layout: blank
+_template: default-blank
+---
+
+
+{{ entries:listing folder="biographies" sort="sortField" conditions="role:Staff,orgStatus:active, unit:Information Systems"}}
+
+  {{theme:partial src="staff-display" use_context="true"}}
+
+{{ /entries:listing }}

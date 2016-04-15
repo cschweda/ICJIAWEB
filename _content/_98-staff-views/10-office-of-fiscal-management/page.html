@@ -1,0 +1,16 @@
+---
+_fieldset: page
+title: Office of Fiscal Management
+splash: ""
+upload: ""
+breadcrumbs: 'true'
+_layout: blank
+_template: default-blank
+---
+
+
+{{ entries:listing folder="biographies" sort="sortField" conditions="role:Staff,orgStatus:active, unit:Office of Fiscal Management"}}
+
+  {{theme:partial src="staff-display" use_context="true"}}
+
+{{ /entries:listing }}

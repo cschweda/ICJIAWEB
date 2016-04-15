@@ -1,0 +1,119 @@
+---
+_fieldset: page
+title: offcanvas
+_template: default-blank
+upload: ""
+_layout: default
+breadcrumbs: "true"
+---
+
+
+
+
+<style>
+.bootstrap-select.btn-group .dropdown-menu li a span.text {
+    display: inline-block;
+    font-size: 14px;
+		margin: 0;
+}
+
+
+</style>
+
+
+<div class="container">
+
+<a class="switch btn btn-default" href="javascript:void(0);" role="button">*</a>
+<a class="switch btn btn-default" href="javascript:void(0);" role="button">.information-systems</a>
+<a class="switch btn btn-default" href="javascript:void(0);" role="button">.research-and-analysis</a>
+
+<div id="staff-grid">
+
+
+
+{{ entries:listing folder="biographies" sort="sortField" conditions="role:Staff,orgStatus:active"}}
+
+
+
+	<div class="person {{unit|slugify}} spacer">
+
+
+
+
+
+    <p>
+			<a href="{{url}}" target="_blank">
+				{{ title }}
+			</a>&nbsp;{{if orgtitle}}|&nbsp;<span style="color: #777">&nbsp;{{orgtitle}}</span>{{endif}}
+
+    </p>
+
+
+
+
+
+
+
+
+	</div>
+
+ {{ /entries:listing }}
+
+</div>
+</div>
+
+
+<script>
+
+
+
+
+
+
+
+
+
+$( document ).ready(function() {
+
+	var $container = $('#staff-grid');
+
+	$container.isotope({
+		itemSelector: '.person',
+		layoutMode: 'vertical'
+	});
+
+
+	$('#getUnitSelect').on('change', function(){
+		var selectedUnit = $(this).find("option:selected").val();
+		console.log('Selected: ' + selectedUnit);
+		$container.isotope({
+				filter: 'selectedUnit'
+			 });
+
+	});
+
+	$('.switch').click(function(e) {
+	  var txt = $(e.target).text();
+		console.log('Selected: ' + txt);
+		$container.isotope({
+				filter: txt
+			 });
+	});
+
+});
+
+//$container.isotope({
+//     filter: filterValue
+//  });
+
+// $('.filter-group').on('click', 'a', function() {
+//   var filterValue = $(this).attr('data-target');
+//
+//   $container.isotope({
+//     filter: filterValue
+//   });
+//   $(".filter-group a").removeClass("active-selection");
+//   $(this).addClass("active-selection");
+//   	progressBarInit();
+// });
+</script>
