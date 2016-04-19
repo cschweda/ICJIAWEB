@@ -13,7 +13,6 @@ $(document).ready(function() {
 	
 	//form validation
 	$('#ProfileSelector').submit(function (e) {
-		console.log('Submit event fired');
 		$('#ToolStatus').text("");
 		RequestOk=0;
 		if (!$('.required').is(':checked')) {
@@ -27,8 +26,7 @@ $(document).ready(function() {
 			}
 		else if($('select#CountySelector').val() <103 && $('#ProfileCheck10').is(':checked')){
 			//don't allow CHRI requests for county level
-			$('#ToolStatus').text("CHRI Arrests are available at the circuit and statewide only.");
-			$('#ProfileCheck10').prop('checked', false);
+				$('#ProfileCheck10').prop('checked', false);
 			}
 		else{
 				RequestOk=1;
@@ -480,7 +478,7 @@ $(document).ready(function() {
 	//Code below adds percent change columns to tables
 	try {
 	$('.trendTable tr').each(function(){ 
-		$(this).find('th').eq(-1).after('<th>Percent<br>Change</th>'); //adds table header cell
+		$(this).find('th').eq(-1).after('<th>Percent<br>change</th>'); //adds table header cell
 		
 		var firstPoint = $(this).find('.FirstYear').text();
 		var lastPoint = $(this).find('.LastYear').text();
@@ -526,5 +524,19 @@ $(document).ready(function() {
 	};
 
 	
+	    $('.trendTable').DataTable( {
+        "scrollX": true,
+		"paging":   false,
+        "ordering": false,
+        "info":     false,
+		"bFilter": false
+		
+    } );
+	
 }); //end document ready
+
+
+
+
+
 

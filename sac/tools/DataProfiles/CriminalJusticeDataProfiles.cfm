@@ -103,7 +103,11 @@
 		<script type="text/javascript" src="/_themes/icjia/vendor/fusioncharts-jquery-plugin-master/package/fusioncharts-jquery-plugin.min.js"></script>
 
 
-	
+		<!-- datatables MP moved from bottom to here-->
+		<link href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css" property="stylesheet" rel="stylesheet">
+		<link href="//cdn.datatables.net/responsive/1.0.6/css/dataTables.responsive.css" property="stylesheet" rel="stylesheet">
+		<script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+		<script src="//cdn.datatables.net/responsive/1.0.6/js/dataTables.responsive.js"></script>	
 
 	
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
@@ -116,6 +120,8 @@
 h1 {
 	margin-top:200px;
 }	
+
+
 	
 table {
 	
@@ -129,12 +135,12 @@ table {
 	margin-bottom: 30px;
 	margin-left: auto;
 	margin-right: auto;
-	width:100%;
+
 	
 }
 table th {
 	border-width: 1px;
-	padding: 8px;
+	padding: 3px;
 	border-style: solid;
 	border-color: #666666;
 	background-color: #dedede;
@@ -151,7 +157,7 @@ table td {
 	padding: 3px;
 	border-style: solid;
 	border-color: #666666;
-	background-color: #ffffff;
+	background-color: #ffffff
 }
 
 td:not(.Indicator):not(.Geography) {
@@ -197,6 +203,19 @@ td:not(.Indicator):not(.Geography) {
 
 #MapContainer {
 	margin: auto;
+}
+
+.WarningText {
+	font-size: 80%;
+	font-style: italic;
+}
+
+label {
+	font-weight: normal;
+}
+
+table.dataTable thead th, table.dataTable thead td, table.dataTable tr td {
+  padding: 3px 3px;
 }
 	
 </style>
@@ -678,29 +697,30 @@ $('.expander-news').readmore({
               <div class="article-content">
 
 
-<h2>ICJIA Criminal Justice Data Profiles</h2>
+<h1>ICJIA Criminal Justice Data Profiles</h1>
 
 <p>The Criminal Justice Data Profiles tool offers criminal justice indicators that allow users to create county, judicial circuit, and statewide profiles. These profiles
 may be used to inform planning and policy decisions.</p>
-
+		        <div class="well well-lg">
 					<cfform id="ProfileSelector" name="ProfileSelector" method="GET" action="CriminalJusticeDataProfiles.cfm">
-				        <p><b>Step 1 -</b> Select a profile to view:<br>  
+
+					        <p><b>Step 1 -</b> Select a profile to view:<br>  
 				            <input type="checkbox" name="ProfileNumber" class="required CHRI_checkbox" id="ProfileCheck10" value="10" checked="checked">
-								<label for="ProfileCheck10">Adult Arrests from the Illinois State Police CHRI Database*</label><br/>
+								<label for="ProfileCheck10">Adult Arrests (Illinois State Police CHRI Database)*</label><br/>
 							<!---><input type="checkbox" name="ProfileNumber" class="required CHRI_checkbox" id="ProfileCheck20" value="20" checked="checked">
 				            	<label for="ProfileCheck20">Adult Convictions from the Illinois State Police CHRI Database*</label><br/><--->
 							<input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck50" value="50" checked="checked">
-				            	<label for="ProfileCheck50">Adult Court Indicators (filings, convictions, sentences, probation)</label>	<br/>
+				            	<label for="ProfileCheck50">Adult Courts (filings, convictions, sentences, probation)</label><br/>
 							<input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck30" value="30" checked="checked">
 				            	<label for="ProfileCheck30">Prison Admissions</label>	<br/>
 							<input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck40" value="40" checked="checked">
-				            	<label for="ProfileCheck40">Prison Exits</label>	<br/>
+				            	<label for="ProfileCheck40">Prison Exits</label>	<br/><br/>
 
-				            *CHRI data in these profiles are avaiable for judicial circuits and statewide. If you select a county, CHRI data will not be in the profile unless it is the only county in a judicial circuit.  	
-				        </p>
-						
+				            <span class="WarningText">*CHRI data in these profiles are avaiable for judicial circuits and statewide. If you select a county, CHRI data will not be in the profile unless it is the only county in a judicial circuit.</span>  	
+					        </p><br/>
+
 											
-						<p><b>Step 2 -</b> Select a county, judicial circuit, or Illinois:	
+						<p><b>Step 2 -</b> Select a county, judicial circuit, or statewide:	
 				        	<select id="CountySelector" name="ICJIANumber">
 					        	<option value="0">Select geography</option>
 					        	<option value="999">Illinois</option>
@@ -833,9 +853,8 @@ may be used to inform planning and policy decisions.</p>
 						</p>
 						<div id="MapContainer"><cfinclude template="IllinoisMap.cfm"> </div>
 						
-						<p><button type="submit" id="getProfile" value="1" name="getProfile">Retrieve Profile</button>
-						<span id="ToolStatus" style="color:red"></span></p>
-					</cfform>	
+						<p><button type="submit" id="getProfile" value="1" name="getProfile">Retrieve Profile</button></p>
+					</cfform></div>	</div>
 
 	
 <!---this will be sued to retain select box value when page is changed--->	
@@ -1067,11 +1086,7 @@ may be used to inform planning and policy decisions.</p>
 		<!-- ICJIA js -->
 		<script src="/_themes/icjia/js/icjia.js"></script>
 
-		<!-- datatables -->
-		<link href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css" property="stylesheet" rel="stylesheet">
-		<link href="//cdn.datatables.net/responsive/1.0.6/css/dataTables.responsive.css" property="stylesheet" rel="stylesheet">
-		<script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
-		<script src="//cdn.datatables.net/responsive/1.0.6/js/dataTables.responsive.js"></script>
+
 
 
 		<!-- Bootstrap modal lightbox -->
