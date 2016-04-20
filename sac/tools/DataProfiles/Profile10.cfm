@@ -118,7 +118,7 @@
 		<hr>
 </div>
 
-<div id="ArrestRateSection" class="well">
+<div id="ArrestRateSection" class="well well-sm">
 <h2>Arrest incident rate (per 100,000 people)</h2>
 <p>Population data used to calculate these rates is available in the <a href="#PopulationTables">appendix</a>.</p>
 	<table id="datatable_Arrests_Rate" class="CHRI trendTable">

@@ -89,7 +89,7 @@
 
 <h1 id="PrisonAdmitsHeading">Adult prison admission profile for <cfoutput>#GeographyName#</cfoutput></h1>
 <p>The data in this profile are from an ICJIA analysis of data provided by the IDOC planning and research unit. Admissions do not include juveniles (The Illinois Department of Juvenile Justice houses juvenile offenders in separate facilities). A person can be admitted into prison more than one time in a year. In this data profile, each admission is counted separately. Users should not confuse prison admissions with the prison population. Due to longer sentences, the prison population is older and has more violent offenders than the admissions into prison.</p>
-<div id="PrisonAdmitsByAdmitTypeSection">
+<div id="PrisonAdmitsByAdmitTypeSection" class="well well-sm">
 	<h2>Prison admissions by admission type</h2>
 	<table id="datatable_PrisonAdmitsbyAdmitType" class="IDOC trendTable">
 		<caption class="TableTitle">Prison admissions by admission type</caption>
@@ -123,7 +123,7 @@
 
 <hr><hr>
 <cfif #CountyCount.NumCounties# GT 1 AND #SelectedICJIANumber# GT 102 AND #SelectedICJIANumber# NEQ 999><!---Only outputting this for Circuits with more than one county--->
-<div id= "NewPrisonAdmitsByCountySection">
+<div id= "NewPrisonAdmitsByCountySection" class="well well-sm">
 <h2>New court prison admissions by county</h2>
 <p>The data below show the commiting county for the new court prison admissions within the judicial circuit. Caution should be taken when 
 	comparing counties with this data. Users should instead examine the new court admission rates per 100,000 county residents further below. </p>
@@ -161,7 +161,7 @@
 </div>
 </cfif>
 
-<div id="NewPrisonAdmitsRateByCountySection">
+<div id="NewPrisonAdmitsRateByCountySection" class="well well-sm">
 <h2>New court prison admission rate</h2>
 <p>Population data used to calculate these rates is available in the <a href="#PopulationTables">appendix</a>.</p>
 	<table id="datatable_PrisonAdmits_Rate" class="IDOC trendTable">
@@ -194,7 +194,7 @@
 <hr><hr>
 
 
-<div id = "PrisonAdmitsByAge">
+<div id = "PrisonAdmitsByAge" class="well well-sm">
 <h2>New court prison admissions by age</h2>
 	<table id="datatable_PrisonAdmits_Age" class="IDOC trendTable">
 		<caption class="TableTitle">New court prison admissions by age</caption>
@@ -224,7 +224,7 @@
 </div>
 <hr><hr>
 
-<div id = "PrisonAdmitsBySex">
+<div id = "PrisonAdmitsBySex" class="well well-sm">
 <h2>New court prison admissions by sex</h2>
 	<table id="datatable_PrisonAdmissionsBySex" class="IDOC trendTable">
 		<caption class="TableTitle">New court IDOC admissions by sex</caption>
@@ -255,7 +255,7 @@
 </div>
 <hr><hr>
 
-<div id = "PrisonAdmitsByRace">
+<div id = "PrisonAdmitsByRace" class="well well-sm">
 <h2>Prison admissions by race</h2>
 	<table id="datatable_Race" class="IDOC trendTable">
 		<caption class="TableTitle">New court prison admissions by race</caption>
@@ -287,7 +287,7 @@
 <hr><hr>
 
 
-<div id = "PrisonAdmitsByClass">
+<div id = "PrisonAdmitsByClass" class="well well-sm">
 <h2>New court prison admissions by offense class</h2>
 	<table id="datatable_PrisonAdmits_Class" class="IDOC trendTable">
 		<caption class="TableTitle">New court prison admissions by offense class</caption>
@@ -317,7 +317,7 @@
 </div>
 <hr><hr>
 
-<div id = "PrisonAdmissionsByWebCat">
+<div id = "PrisonAdmissionsByWebCat" class="well well-sm">
 <h2>New court prison admissions by offense type</h2>
 		<table id="datatable_PrisonAdmits_WebCat" class="IDOC trendTable">
 		<caption class="TableTitle">New court prison admissions by offense category</caption>

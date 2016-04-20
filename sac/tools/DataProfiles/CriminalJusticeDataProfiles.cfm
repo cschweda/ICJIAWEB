@@ -214,10 +214,14 @@ label {
 	font-weight: normal;
 }
 
+
 table.dataTable thead th, table.dataTable thead td, table.dataTable tr td {
   padding: 3px 3px;
 }
-	
+
+.DataTableBefore {
+	margin-top: 30px;
+}
 </style>
 
 
