@@ -56,14 +56,14 @@
 </cfquery>
 
 
-
+<hr class="hr-split">
 <h1 id="CourtsHeading">Adult court profile for <cfoutput>#GeographyName#</cfoutput></h1>
 <p>These data are official court data collected by the <a href="http://www.illinoiscourts.gov/" target="_blank">Administrative Office of Illinois' Courts</a> (AOIC)
 and published in their <a href="http://www.illinoiscourts.gov/SupremeCourt/AnnReport.asp" target="_blank">annual reports</a>. <cfif #SelectedICJIANumber# GT 102 AND #SelectedICJIANumber# NEQ 999>The counties within judicial circuits rarely change, but this profile will include counties that were within the judicial circuit as of the last AOIC annual report published. </cfif> 
 </p>
 
 
-<div id="CourtFilingsCountSection">
+<div id="CourtFilingsCountSection" class="well well-sm">
 	<h2>Criminal filings</h2>
 	<p>The AOIC began separating DUI filings from felony and misdemeanor filings in 2014. As a result, misdemeanor and felony filings may be lower beginning in 2014 compared to previous years.  A DUI filing can be either
 	a felony or misdemeanor. 
@@ -98,7 +98,7 @@ and published in their <a href="http://www.illinoiscourts.gov/SupremeCourt/AnnRe
 
 
 
-<div id="CourtFilingsRateSection">
+<div id="CourtFilingsRateSection" class="well well-sm">
 <h2>Criminal filings rate per 100,000 people</h2>
 <p>Population data used to calculate these rates is available in the <a href="#PopulationTables">appendix</a>.</p>
 	<table id="datatable_CourtFilings_Rate" class="AOIC trendTable">
@@ -163,7 +163,7 @@ and published in their <a href="http://www.illinoiscourts.gov/SupremeCourt/AnnRe
 
 
 
-<div id="CourtFelonyConvictionSentenceSection">
+<div id="CourtFelonyConvictionSentenceSection" class="well well-sm">
 <h2>Felony convictions and sentences</h2>
 	<table id="datatable_FelonySentences_Count" class="AOIC trendTable">
 		<caption class="TableTitle">Felony sentences</caption>
@@ -195,7 +195,7 @@ and published in their <a href="http://www.illinoiscourts.gov/SupremeCourt/AnnRe
 
 
 
-<div id="CourtProbationCaseloadsSection">
+<div id="CourtProbationCaseloadsSection" class="well well-sm">
 <h2>Probation caseloads</h2>
 	<table id="datatable_ProbationCaseloads_Count" class="AOIC trendTable">
 		<caption class="TableTitle">Probation caseloads</caption>

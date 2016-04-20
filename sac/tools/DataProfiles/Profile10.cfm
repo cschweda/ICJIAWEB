@@ -60,7 +60,7 @@
 </cfquery>
 <!---End arrest queries--->
 
-
+<hr class="hr-split">
 <h1 id="ArrestHeading">CHRI arrest profile for <cfoutput>#GeographyName#</cfoutput></h1>
 
 <p>These data are arrests (age 18+) gathered from the Illinois State Police Electronic Criminal History Record Information (CHRI) database.</p> 
@@ -114,8 +114,8 @@
 	
 	
 	
-		<hr>
-		<hr>
+		
+		
 </div>
 
 <div id="ArrestRateSection" class="well well-sm">
@@ -152,7 +152,7 @@
 
 
 
-<hr><hr>
+
 
 
 <div id = "ArrestsByAge" class="well well-sm">
@@ -184,7 +184,7 @@
 	<div id="piecontainer_Population_Age" class="HC_Pie LastChart Population_ByAge"></div>
 	
 </div>
-<hr><hr>
+
 
 <div id = "ArrestsBySex" class="well well-sm">
 <h2>Arrests by sex</h2>
@@ -216,7 +216,7 @@
 	<div id="piecontainer_Population_Sex" class="HC_Pie LastChart Population_BySex"></div>
 	
 </div>
-<hr><hr>
+
 
 <div id = "ArrestsByRace" class="well well-sm">
 <h2>Arrests by race</h2>
@@ -248,7 +248,7 @@
 	<div id="piecontainer_Population_Race" class="HC_Pie LastChart Population_ByRace"></div>
 
 </div>
-<hr><hr>
+
 
 
 <div id = "ArrestsByClass" class="well well-sm">
@@ -281,7 +281,7 @@
 	<div id="piecontainer_Arrests_Class_Last" class="HC_Pie LastChart DataTableBefore"></div>
 	
 </div>
-<hr><hr>
+
 
 <div id = "ArrestsByWebCat" class="well well-sm">
 <h2>Arrests by offense type</h2>
@@ -313,4 +313,3 @@
 </div>
 
 
-<hr><hr class="hr-split">

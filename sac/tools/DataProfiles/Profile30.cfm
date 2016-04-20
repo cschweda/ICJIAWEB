@@ -86,7 +86,7 @@
 <!---End main queries--->
 
 
-
+<hr class="hr-split">
 <h1 id="PrisonAdmitsHeading">Adult prison admission profile for <cfoutput>#GeographyName#</cfoutput></h1>
 <p>The data in this profile are from an ICJIA analysis of data provided by the IDOC planning and research unit. Admissions do not include juveniles (The Illinois Department of Juvenile Justice houses juvenile offenders in separate facilities). A person can be admitted into prison more than one time in a year. In this data profile, each admission is counted separately. Users should not confuse prison admissions with the prison population. Due to longer sentences, the prison population is older and has more violent offenders than the admissions into prison.</p>
 <div id="PrisonAdmitsByAdmitTypeSection" class="well well-sm">
@@ -121,7 +121,7 @@
 </div>
 
 
-<hr><hr>
+
 <cfif #CountyCount.NumCounties# GT 1 AND #SelectedICJIANumber# GT 102 AND #SelectedICJIANumber# NEQ 999><!---Only outputting this for Circuits with more than one county--->
 <div id= "NewPrisonAdmitsByCountySection" class="well well-sm">
 <h2>New court prison admissions by county</h2>
@@ -157,7 +157,7 @@
 	<div id="piecontainer_PrisonAdmits_Counts" class="HC_Pie LastChart DataTableBefore"></div>
 	<div id="piecontainer_Population_PrisonAdmits_Total" class="HC_Pie LastChart Population_Total"></div>
 	</cfif>
-	<hr><hr>
+	
 </div>
 </cfif>
 
@@ -191,7 +191,7 @@
 
 <div id="TimeSeriesContainer_PrisonAdmitsByCounty" class="HC_TimeSeries DataTableBefore"></div>	
 </div>
-<hr><hr>
+
 
 
 <div id = "PrisonAdmitsByAge" class="well well-sm">
@@ -222,7 +222,7 @@
 	<div id="piecontainer_PrisonAdmits_Age" class="HC_Pie LastChart DataTableBefore"></div>
 	<div id="piecontainer_Population_PrisonAdmits_Age" class="HC_Pie LastChart Population_ByAge"></div>
 </div>
-<hr><hr>
+
 
 <div id = "PrisonAdmitsBySex" class="well well-sm">
 <h2>New court prison admissions by sex</h2>
@@ -253,7 +253,7 @@
 	<div id="piecontainer_Population_PrisonAdmits_Sex" class="HC_Pie LastChart Population_BySex"></div>
 	
 </div>
-<hr><hr>
+
 
 <div id = "PrisonAdmitsByRace" class="well well-sm">
 <h2>Prison admissions by race</h2>
@@ -284,7 +284,7 @@
 	<div id="piecontainer_Population_PrisonAdmits_Race" class="HC_Pie LastChart Population_ByRaceEth"></div>
 	
 </div>
-<hr><hr>
+
 
 
 <div id = "PrisonAdmitsByClass" class="well well-sm">
@@ -315,7 +315,7 @@
 	<div id="piecontainer_PrisonAdmits_Class_Last" class="HC_Pie LastChart DataTableBefore"></div>
 	
 </div>
-<hr><hr>
+
 
 <div id = "PrisonAdmissionsByWebCat" class="well well-sm">
 <h2>New court prison admissions by offense type</h2>
@@ -346,4 +346,3 @@
 </div>
 
 
-<hr><hr class="hr-split">

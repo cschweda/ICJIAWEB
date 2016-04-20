@@ -37,18 +37,7 @@ $(document).ready(function() {
 
 
 
-/*
-	function AddColorJson(value,jsonObj) {    //function to alter map json based on click or select value
-		for (var i=0; i<jsonObj.data.length; i++) {
-			jsonObj.data[i].color = '#99ccff';
-			if (jsonObj.data[i].value == ICJIANumber) {
-				jsonObj.data[i].color = '#ff9900';	
-				
-			};
-								
-		};
-	};
-		*/
+//Initial map render function (colors are based on circuit)
 	function DrawFSmap(ICJIANumber) {
 		var mapJSON =  [{"value":"1","id": "001","circuit": "1008", "toolText" : "Adams" , "color": "#368BC1"},
 						{"value":"2","id": "003","circuit": "1001", "toolText" : "Alexander" , "color": "#15317E"},
@@ -152,7 +141,7 @@ $(document).ready(function() {
 						{"value":"100","id": "199","circuit": "1001", "toolText" : "Williamson" , "color": "#15317E"},
 						{"value":"101","id": "201","circuit": "1017", "toolText" : "Winnebago" , "color": "#0000A0"},
 						{"value":"102","id": "203","circuit": "1011", "toolText" : "Woodford" , "color": "#95B9C7"}];
-							
+		//makes the selected geography orange					
 		if(ICJIANumber > 0) {
 			if (ICJIANumber >999) {
 				for(var i=0; i<mapJSON.length; i++) {
@@ -202,13 +191,10 @@ $(document).ready(function() {
 
 	$("#CountySelector").change(function() {      //change the highlighted map area based on select box
 		ICJIANumber=$("option:selected",this).val();
-/*		if(ICJIANumber >=1 && ICJIANumber<=102) {
-			$('#ProfileCheck10').prop('checked', false)
-		};*/
 		$('#getProfile').click();
 	});	
 	
-	//draw fusion charts map if possible
+
 
 
 		
@@ -312,7 +298,8 @@ $(document).ready(function() {
 					data: JSON.parse(valuesString)
 					}],
 				chart: {
-					type: 'pie'
+					type: 'pie',
+					backgroundColor: '#f5f5f5'
 				},
 				title: {
 					text: chartTitleText
@@ -367,7 +354,8 @@ $(document).ready(function() {
 					switchRowsAndColumns: true
 				},
 				chart: {
-					type: 'line'
+					type: 'line',
+					backgroundColor: '#f5f5f5'
 				},
 				plotOptions: {
 					series: {
@@ -429,6 +417,7 @@ $(document).ready(function() {
 					}],
 				chart: {
 					type: 'column',
+					backgroundColor: '#f5f5f5'
 				},
 				title: {
 					text:chartTitleText
@@ -475,6 +464,7 @@ $(document).ready(function() {
 		$('#'+list_id).append('<li>'+  subject + outText +' in ' +captionText +'.</li>');
 	}); 
 	*/
+	
 	//Code below adds percent change columns to tables
 	try {
 	$('.trendTable tr').each(function(){ 
@@ -507,6 +497,8 @@ $(document).ready(function() {
 	
 	$('td').digits();	//perform function
 
+
+
 	$('.scrollclass').click(function() {
 		$('body').scrollTo($(this).data('target'), {
 			duration: 1200,
@@ -514,6 +506,19 @@ $(document).ready(function() {
         });
     });
 
+	//datatables
+	$('.trendTable').DataTable( {
+        "scrollX": true,
+		"paging":   false,
+        "ordering": false,
+        "info":     false,
+		"bFilter": false,
+		"language": {
+			"thousands": ","
+		}
+		
+    } );	
+	
 	//leave map rendering until the end, it takes the longest
 	try{
 		FusionCharts.ready(function(){
@@ -523,15 +528,7 @@ $(document).ready(function() {
 	catch(e){
 	};
 
-	
-	    $('.trendTable').DataTable( {
-        "scrollX": true,
-		"paging":   false,
-        "ordering": false,
-        "info":     false,
-		"bFilter": false
-		
-    } );
+
 	
 }); //end document ready
 

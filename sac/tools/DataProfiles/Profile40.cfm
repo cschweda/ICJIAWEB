@@ -86,13 +86,13 @@
 <!---End main queries--->
 
 
-
+<hr class="hr-split">
 <h1 id="PrisonExitsHeading">Adult prison exits profile for <cfoutput>#GeographyName#</cfoutput></h1>
 	 <p>The data in this profile are from an ICJIA analysis of data provided by the IDOC planning and research unit. Exits are based on the committing county. 
 	 A person exiting IDOC may reside in a different county, which would only be tracked if a person exits onto MSR or parole. 
 	 Exits do not include juveniles (The Illinois Department of Juvenile Justice houses juvenile offenders in separate facilities). 
 	 A person can be exit prison more than one time in a year. In this data profile, each exit is counted separately. Users should not confuse prison exits with the prison population. Due to longer sentences, the prison population is older and has more violent offenders than the exits from prison.</p>
-<div id="PrisonExitsByExitTypeSection">
+<div id="PrisonExitsByExitTypeSection" class="well well-sm">
 	<h2>Prison exits by exit type</h2>
 	
 	<table id="datatable_PrisonExitsbyExitType" class="IDOC trendTable">
@@ -125,9 +125,9 @@
 
 
 
-<hr><hr>
+
 <cfif #CountyCount.NumCounties# GT 1 AND #SelectedICJIANumber# GT 102><!---Only outputting this for Circuits with more than one county--->
-<div id= "NewPrisonExitsByCountySection">
+<div id= "NewPrisonExitsByCountySection" class="well well-sm">
 <h2>Prison exits by county</h2>
 	<table id="datatable_NewPrisonExitsbyCounty" class="IDOC trendTable">
 		<caption class="TableTitle">New court prison exits</caption>
@@ -161,13 +161,13 @@
 	<div id="piecontainer_PrisonExits_Counts" class="HC_Pie LastChart DataTableBefore"></div>
 	<div id="piecontainer_Population_PrisonExits_Total" class="HC_Pie LastChart Population_Total"></div>
 	</cfif>
-	<hr><hr>
+	
 </div>
 </cfif>
 
 
 
-<div id="NewPrisonExitsRateByCountySection">
+<div id="NewPrisonExitsRateByCountySection" class="well well-sm">
 <h2>Prison exit rate</h2>
 <p>Population data used to calculate these new court prison exit rates is available in the <a href="#PopulationTables">appendix</a>.</p>
 	<table id="datatable_Rate" class="IDOC trendTable">
@@ -194,13 +194,13 @@
 	</table>
 <div id="TimeSeriesContainer_PrisonExitsByCounty" class="HC_TimeSeries DataTableBefore"></div>	
 </div>
-<hr><hr>
 
 
 
 
 
-<div id = "PrisonExitsByAge">
+
+<div id="PrisonExitsByAge" class="well well-sm">
 <h2>Prison exits by age</h2>
 	<table id="datatable_PrisonExits_Age" class="IDOC trendTable">
 		<caption class="TableTitle">Prison exits by age</caption>
@@ -228,13 +228,13 @@
 	<div id="piecontainer_PrisonExits_Age" class="HC_Pie LastChart DataTableBefore"></div>
 	<div id="piecontainer_Population_PrisonExits_Age" class="HC_Pie LastChart Population_ByAge"></div>
 </div>
-<hr><hr>
 
 
 
 
 
-<div id = "PrisonExitsBySex">
+
+<div id="PrisonExitsBySex" class="well well-sm">
 <h2>Prison exits by sex</h2>
 	<table id="datatable_PrisonExitsBySex" class="IDOC trendTable">
 		<caption class="TableTitle">Prison exits by sex</caption>
@@ -263,11 +263,11 @@
 	<div id="piecontainer_Population_PrisonExits_Sex" class="HC_Pie LastChart Population_BySex"></div>
 	
 </div>
-<hr><hr>
 
 
 
-<div id = "PrisonExitsByRaceEth">
+
+<div id="PrisonExitsByRaceEth" class="well well-sm">
 <h2>Prison exits by race/ethnicity</h2>
 	<table id="datatable_RaceEth" class="IDOC trendTable">
 		<caption class="TableTitle">Prison exits by race/ethnicity</caption>
@@ -296,12 +296,12 @@
 	<div id="piecontainer_Population_PrisonExits_Race" class="HC_Pie LastChart Population_ByRaceEth"></div>
 	
 </div>
-<hr><hr>
 
 
 
 
-<div id = "PrisonExitsByClass">
+
+<div id="PrisonExitsByClass" class="well well-sm">
 <h2>Prison exits by offense class</h2>
 	<table id="datatable_PrisonExits_Class" class="IDOC trendTable">
 		<caption class="TableTitle">Prison exits by offense class</caption>
@@ -329,9 +329,9 @@
 	<div id="piecontainer_PrisonExits_Class_Last" class="HC_Pie LastChart DataTableBefore"></div>
 	
 </div>
-<hr><hr>
 
-<div id = "PrisonExitsByWebCat">
+
+<div id="PrisonExitsByWebCat" class="well well-sm">
 <h2>Prison exits by offense type</h2>
 		<table id="datatable_WebCat" class="IDOC trendTable">
 		<caption class="TableTitle">Prison exits by offense category</caption>
@@ -359,4 +359,3 @@
 <div id="BarContainer_PrisonExits_WebCat" class="HC_Bar DataTableBefore"></div>
 </div>
 
-<hr><hr class="hr-split">
