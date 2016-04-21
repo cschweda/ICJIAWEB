@@ -701,7 +701,7 @@ $('.expander-news').readmore({
               <div class="article-content">
 
 
-<h1>ICJIA Criminal Justice Data Profiles</h1>
+<h1 id="MainHeading">ICJIA Criminal Justice Data Profiles</h1>
 
 <p>The Criminal Justice Data Profiles tool offers criminal justice indicators that allow users to create county, judicial circuit, and statewide profiles. These profiles
 may be used to inform planning and policy decisions.</p>
@@ -914,10 +914,16 @@ may be used to inform planning and policy decisions.</p>
 					</cfquery>
 					
 					<!---Generate Geography Name to be used in title and other sections--->		
-					<cfif (#url.ICJIANumber# GTE 1 AND #url.ICJIANumber# LTE 102) OR #url.ICJIANumber# EQ 1088>
+					<cfif (#url.ICJIANumber# GTE 1 AND #url.ICJIANumber# LTE 102)>
 						<cfset GeographyTypeForPopulationSubgroups = 50>
 						<cfset GeographyName = #GetCircuit.CountyName# & ' County'>
 					</cfif>
+					<cfif #url.ICJIANumber# EQ 1088>
+					<cfset GeographyTypeForPopulationSubgroups = 100>
+						<cfset GeographyName = #GetCircuit.CountyName# & ' County'>
+						<cfset GeographyTypeForPopulationSubgroups = 100>
+					</cfif>
+					
 					<cfif #url.ICJIANumber# EQ 999>
 						<cfset GeographyTypeForPopulationSubgroups = 250>
 						<cfset GeographyName = #GetCircuit.CountyName#>

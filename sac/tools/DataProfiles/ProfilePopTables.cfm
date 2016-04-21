@@ -5,7 +5,7 @@
 	FROM WTP
 	WHERE MainCatnumber=1
 	AND DataGroupNumber=100
-	AND (GeographyID =999 OR GeographyID <=102)
+	AND (GeographyID =999 OR GeographyID <=102 OR GeographyID = 1088)
 	ORDER BY SortOrder, GeographyName;
 </cfquery>
 <cfquery dbtype="query" name="PopulationCountByAge" >
@@ -49,7 +49,6 @@
 	AND GeographyID =#SelectedICJIANumber#
 	ORDER BY SortOrder, GeographyName;
 </cfquery>
-
 
 <hr class="hr-split">
 <h1 id="AppendexHeading">Appendix</h1>
