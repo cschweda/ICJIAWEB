@@ -60,6 +60,7 @@
 	FROM WTP
 	WHERE MainCatnumber=10
 	AND DataGroupNumber=30
+	AND NumberType='C'
 	AND GeographyID = <cfqueryparam value="#url.ICJIANumber#" cfsqltype="CF_SQL_INTEGER" />
 	ORDER BY SortOrder;
 </cfquery>
@@ -85,23 +86,15 @@
 <!---End main queries--->
 
 
-
-<h1 id="PrisonAdmitsHeading">Adult Prison Admission Profile for <cfoutput>#GeographyName#</cfoutput></h1>
-<p>A prison sentence can be imposed, <a href="http://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=073000050K5-5-3" target="_blank">and in some cases is required</a>, for felonies in Illinois. An admission into the Illinois Department of Corrections (IDOC) occurs when a prison sentence is imposed for a convicted felon or, after exiting prison, a person can be returned to prison as a result of a technical violation while on their mandatory supervised release (MSR) period.
-  </p>
-
-<p>The data in this profile are from an ICJIA analysis of data provided by the IDOC planning and research unit. Admissions do not include juveniles (The Illinois Department of Juvenile Justice houses juvenile offenders in separate facilities). A person can be admitted into prison more than one time in a year. In this data profile, each admission is counted separately. User's should not confuse prison admissions with the prison population. Due to longer sentences, the prison population is older and have more violent offenders than the admissions into prison.</p>
-<div id="PrisonAdmitsByAdmitTypeSection">
-	<h2>Prison Admissions By Admission Type</h2>
-	<p>An admission into prison can generally be grouped into two main types - new court admissions and technical violator admissions. New court admissions are due to a felony conviction and sentence to the Illinois Department of Corrections. These include those sentenced for a new offense while on MSR.
-	Technical violation admissions can be the result of an arrest while on MSR or the result of a violation of a requirement in the MSR period (failing a drug test, not attending meetings with parole officers, associating with known gang members, etc.). 
-	<a href="http://www.icjia.state.il.us/spac/pdf/SPAC%20Report%20MSR%20violator%209-13.pdf" target="_blank">Various parole policies, staffing levels and decisions, MSR population levels, and legislation have influenced technical violator readmission levels over time</a>.
-	An offender may violate MSR by being arrested, return to prison, and be sentenced while in prison for the new offense. The data presented in this profile classifies the offender by the admission type when entering prison. Such as person would be classified as a technical violator.
-	</p>
+<hr class="hr-split">
+<h1 id="PrisonAdmitsHeading">Adult prison admission profile for <cfoutput>#GeographyName#</cfoutput></h1>
+<p>The data in this profile are from an ICJIA analysis of data provided by the IDOC planning and research unit. Admissions do not include juveniles (The Illinois Department of Juvenile Justice houses juvenile offenders in separate facilities). A person can be admitted into prison more than one time in a year. In this data profile, each admission is counted separately. Users should not confuse prison admissions with the prison population. Due to longer sentences, the prison population is older and has more violent offenders than the admissions into prison.</p>
+<div id="PrisonAdmitsByAdmitTypeSection" class="well well-sm">
+	<h2>Prison admissions by admission type</h2>
 	<table id="datatable_PrisonAdmitsbyAdmitType" class="IDOC trendTable">
-		<caption class="TableTitle">Prison Admissions By Admission Type</caption>
+		<caption class="TableTitle">Prison admissions by admission type</caption>
 		<thead>
-			<th>Admission Type</th>
+			<th>Admission type</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 			<cfoutput><th>#YearLoop#</th></cfoutput>
 			</cfloop>
@@ -122,23 +115,20 @@
 		</cfoutput>
 	</table>
 	
-	<p><span class="ListCaveats">New court admissions to prison are usually the result of sentencing for crimes commited in the county. Technical violation admissions are the result of the offender violating conditions of their parole or mandatory supervised release. A violation may be a new arrest or offense committed. At the county and judicial circuit, new court admissions are more useful to examine as they are the result of crimes committed within the county or circuit. </span>
-
 	
 	<div id="TimeSeriesContainer_PrisonAdmitsByType" class="HC_TimeSeries DataTableBefore"></div>
-	<div id="piecontainer_PrisonAdmits_AdmitType_Count_First" class="HC_Pie FirstChart DataTableBefore"></div>
 	<div id="piecontainer_PrisonAdmits_AdmitType_Count_Last" class="HC_Pie LastChart DataTableBefore"></div>
 </div>
 
 
-<hr><hr>
-<cfif #CountyCount.NumCounties# GT 1 AND #SelectedICJIANumber# GT 102><!---Only outputting this for Circuits with more than one county--->
-<div id= "NewPrisonAdmitsByCountySection">
-<h2>New Court Prison Admissions by County</h2>
+
+<cfif #CountyCount.NumCounties# GT 1 AND #SelectedICJIANumber# GT 102 AND #SelectedICJIANumber# NEQ 999><!---Only outputting this for Circuits with more than one county--->
+<div id= "NewPrisonAdmitsByCountySection" class="well well-sm">
+<h2>New court prison admissions by county</h2>
 <p>The data below show the commiting county for the new court prison admissions within the judicial circuit. Caution should be taken when 
 	comparing counties with this data. Users should instead examine the new court admission rates per 100,000 county residents further below. </p>
 	<table id="datatable_NewPrisonAdmitsbyCounty" class="IDOC trendTable">
-		<caption class="TableTitle">New Court Prison Admissions</caption>
+		<caption class="TableTitle">New court prison admissions</caption>
 		<thead>
 			<th>Geography</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -167,15 +157,15 @@
 	<div id="piecontainer_PrisonAdmits_Counts" class="HC_Pie LastChart DataTableBefore"></div>
 	<div id="piecontainer_Population_PrisonAdmits_Total" class="HC_Pie LastChart Population_Total"></div>
 	</cfif>
-	<hr><hr>
+	
 </div>
 </cfif>
 
-<div id="NewPrisonAdmitsRateByCountySection">
-<h2>New Court Prison Admission Rate by County</h2>
-<p>The following new court prison admission rates per 100,000 people are calculated by using the total county population from Census estimates (population data is available at the end of this profile). </p>
+<div id="NewPrisonAdmitsRateByCountySection" class="well well-sm">
+<h2>New court prison admission rate</h2>
+<p>Population data used to calculate these rates is available in the <a href="#PopulationTables">appendix</a>.</p>
 	<table id="datatable_PrisonAdmits_Rate" class="IDOC trendTable">
-		<caption class="TableTitle">New Court Prison Admission Rate</caption>
+		<caption class="TableTitle">New court prison admission rate</caption>
 		<thead>
 			<th>Geography</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -201,16 +191,13 @@
 
 <div id="TimeSeriesContainer_PrisonAdmitsByCounty" class="HC_TimeSeries DataTableBefore"></div>	
 </div>
-<hr><hr>
 
 
-<div id = "PrisonAdmitsByAge">
-<h2>New Court Prison Admissions By Age</h2>
-<p>
-The data below show the new court prison admissions by several age groups. The typical admission age into IDOC is about 32 years old statewide.
-</p>
+
+<div id = "PrisonAdmitsByAge" class="well well-sm">
+<h2>New court prison admissions by age</h2>
 	<table id="datatable_PrisonAdmits_Age" class="IDOC trendTable">
-		<caption class="TableTitle">New Court Prison Admissions by Age</caption>
+		<caption class="TableTitle">New court prison admissions by age</caption>
 		<thead>
 			<th>Age Group</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -235,14 +222,12 @@ The data below show the new court prison admissions by several age groups. The t
 	<div id="piecontainer_PrisonAdmits_Age" class="HC_Pie LastChart DataTableBefore"></div>
 	<div id="piecontainer_Population_PrisonAdmits_Age" class="HC_Pie LastChart Population_ByAge"></div>
 </div>
-<hr><hr>
 
-<div id = "PrisonAdmitsBySex">
-<h2>New Court Prison Admissions By Sex</h2>
-<p>Males have a disproportionately higher involvement in most aspects of the criminal justice system compared to females, particularly for violent offenses. Statewide, males account for approximately 90 percent of all new court admissions into prison. The vast majority of violent admissions are male.
-</p>
+
+<div id = "PrisonAdmitsBySex" class="well well-sm">
+<h2>New court prison admissions by sex</h2>
 	<table id="datatable_PrisonAdmissionsBySex" class="IDOC trendTable">
-		<caption class="TableTitle">New Court IDOC Admissions by Sex</caption>
+		<caption class="TableTitle">New court IDOC admissions by sex</caption>
 		<thead>
 			<th>Sex</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -268,13 +253,12 @@ The data below show the new court prison admissions by several age groups. The t
 	<div id="piecontainer_Population_PrisonAdmits_Sex" class="HC_Pie LastChart Population_BySex"></div>
 	
 </div>
-<hr><hr>
 
-<div id = "PrisonAdmitsByRace">
-<h2>Prison Admissions By Race</h2>
-<p>Statewide, the proportion of prison admissions that are black is much larger than the proportion of the general population that is black, though this can vary by county and judicial circuit. <a href="http://www.asanet.org/images/press/docs/pdf/ASARaceCrime.pdf" target="_blank">Reasons for the disparity in the criminal justice by race include contextual and historical explanations.</a></p>
+
+<div id = "PrisonAdmitsByRace" class="well well-sm">
+<h2>Prison admissions by race</h2>
 	<table id="datatable_Race" class="IDOC trendTable">
-		<caption class="TableTitle">New Court Prison Admissions by Race</caption>
+		<caption class="TableTitle">New court prison admissions by race</caption>
 		<thead>
 			<th>Race</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
@@ -300,27 +284,15 @@ The data below show the new court prison admissions by several age groups. The t
 	<div id="piecontainer_Population_PrisonAdmits_Race" class="HC_Pie LastChart Population_ByRaceEth"></div>
 	
 </div>
-<hr><hr>
 
 
-<div id = "PrisonAdmitsByClass">
-<h2>New Court Prison Admissions By Offense Class</h2>
-<p>Illinois has several offense classes that increase along with the severity of the offense and/or punishment. 
- Felonies are for more serious offenses and allow incarceration in state prison. Class 3 and 4 felonies are the least severe, with sentences to prison from one to five years and a mandatory supervised release period of one year after exiting prison. Common examples of class 3 and 4 offenses include theft and retail theft, controlled substance possession under 15 grams, and aggravated battery. 
-Class 1 and 2 felonies are more severe, with prison sentences from 3-15 years. Common examples of class 1 and 2 offenses include burglary and residential burglary, manufacture and delivery of controlled substances, and robbery. 
-With the exception of first degree murder (class M), class X offenses are the most severe felonies and have mandatory prison sentences from 6-30 years. 
-Class X offenses include armed robbery, manufacture and delivery of controlled substances, criminal drug conspiracy, and home invasion.</p>
-<p>A person admitted into the Illinois Department of Corrections can have more than one prison sentence. These sentences can be concurrent (the sentences are served simultaneously) or consecutive. 
-	The offense class for the admission is determined by the offense that will keep the person in prison for the longest amount of time, also known as the holding offense. 
-	Statewide, class 3 and 4 admissions are the most common and make up a slim majority of all prison admissions. 
-	However, because the sentences for class 3 and 4 sentences are much shorter than the more severe classes, the 
-	class 3 and 4 offenders do not make up the majority of the prison population.
-</p>
 
+<div id = "PrisonAdmitsByClass" class="well well-sm">
+<h2>New court prison admissions by offense class</h2>
 	<table id="datatable_PrisonAdmits_Class" class="IDOC trendTable">
-		<caption class="TableTitle">New Court Prison Admissions by Offense Class</caption>
+		<caption class="TableTitle">New court prison admissions by offense class</caption>
 		<thead>
-			<th>Offense Class</th>
+			<th>Offense class</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 			<cfoutput><th>#YearLoop#</th></cfoutput>
 			</cfloop>
@@ -340,47 +312,17 @@ Class X offenses include armed robbery, manufacture and delivery of controlled s
 		</tr>
 		</cfoutput>
 	</table>
-	<div id="piecontainer_PrisonAdmits_Class_First" class="HC_Pie FirstChart DataTableBefore"></div>
 	<div id="piecontainer_PrisonAdmits_Class_Last" class="HC_Pie LastChart DataTableBefore"></div>
 	
 </div>
-<hr><hr>
 
-<div id = "PrisonAdmissionsByWebCat">
-<h2>New Court Prison Admissions By Offense Type</h2>
-<p>
-A person admitted into the Illinois Department of Corrections can have more than one prison sentence. These sentences can be concurrent (the sentences are served simultaneously) or consecutive. 
-The offense type for the admission is determined by the offense that will keep the person in prison for the longest amount of time, also known as the holding offense. The admissions shown in this profile can be split up into numerous offense categories:
-</p>
-	<ul class="WebCategories">
-		<li>Homicide related, including murder, attempted or consipriacy to commit murder, manslaughter, reckless homicide, and criminal abortion.</li>
-<li>Violent sex offenses, including criminal sexual assault, predatory sexual assault, and criminal sexual abuse</li>
-<li>Robbery: robbery and armed robbery, home invasion, vehicular invasion or hijacking</li>
-<li>Assault, battery, and armed violence, including aggravated discharge of a firearm, harassment and stalking, and intimidation.</li>
-<li>Miscellaneous person offenses, including kidnaping and forcible detention, harboring a runaway, and inducement to suicide.</li>
-<li>Driving under the influence of drugs or alcohol (DUI) or driving while intoxicated (DWI).</li>
-<li>Burglary including residential burglary and possession of burglary tools.</li>
-<li>Motor vehicle theft including theft from a motor vehicle and offenses related to stolen vehicle titles</li>
-<li>Theft including identity theft, retail theft, and tampering or possession of tools for the purposes of commiting theft</li>
-<li>Forgery/Fraud/Deception including money laundering, false impersonation, computer and wire fraud, and deceptive practices</li>
-<li>Miscellaneous property offenses including trespassing, arson, vandalism, and destruction of property</li>
-<li>Weapons offenses including unlawful use or possession of a weapon, unlawful sales, defacing firearms, and concealed carry violations. Offenses that involved the discharge of a firearm are included in the assault, battery, and armed violence category.</li>
-<li>Miscellaneous sex offenses including child pornography, obsenity, sexual exploitation of a child, and sex offender location violations.</li>
-<li>Controlled substance and meth - manufacture/delivery/trafficking. Controlled substances included a large number of possible substances, but primarily involved heroin or cocaine.</li>
-<li>Controlled substance and meth - possession</li>
-<li>Cannabis - manufacture/delivery/trafficking</li>
-<li>Cannabis - possession</li>
-<li>Miscellaneous drug offenses including paraphernalia and offenses related to syringes.</li>
-<li>Human trafficking related offenses including prostitution, pimping, solicitation, promoting prositution, and involuntary servitude.</li>
-<li>Miscellaneous public order offenses including animal cruelty, mob action, disorderly conduct, and public nuisance offenses.</li>
-<li>Registry violations including violating sex offender registries, failing to report a change of address.</li>
-<li>Driving and motor vehicle offenses including driving without a license or registration, traffic offenses, and title violations.</li>
-<li>Other offenses not described above.</li>
-	</ul>
+
+<div id = "PrisonAdmissionsByWebCat" class="well well-sm">
+<h2>New court prison admissions by offense type</h2>
 		<table id="datatable_PrisonAdmits_WebCat" class="IDOC trendTable">
-		<caption class="TableTitle">New Court Prison Admissions by Offense Category</caption>
+		<caption class="TableTitle">New court prison admissions by offense category</caption>
 		<thead>
-			<th>Admission Offense Type</th>
+			<th>Admission offense type</th>
 			<cfloop index="YearLoop" from=#MinMaxYears.MinYear# to=#MinMaxYears.MaxYear# step="1">
 			<cfoutput><th>#YearLoop#</th></cfoutput>
 			</cfloop>
@@ -404,4 +346,3 @@ The offense type for the admission is determined by the offense that will keep t
 </div>
 
 
-<hr><hr class="hr-split">
