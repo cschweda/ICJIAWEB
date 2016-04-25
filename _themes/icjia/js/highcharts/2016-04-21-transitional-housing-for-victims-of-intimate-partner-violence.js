@@ -12,9 +12,9 @@ $(function() {
     xAxis: {
       type: 'category',
       labels: {
-        rotation: -45,
+        rotation: -65,
         style: {
-          fontSize: '13px',
+          fontSize: '12px',
           fontFamily: 'Verdana, sans-serif'
         }
       }
@@ -25,6 +25,7 @@ $(function() {
       labels: {
         enabled: false
       },
+
       title: {
         text: ''
       }
