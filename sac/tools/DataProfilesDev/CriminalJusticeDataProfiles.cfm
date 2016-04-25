@@ -6,31 +6,31 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="description" content="Created in 1983, the Illinois Criminal Justice Information Authority is a state agency dedicated to improving the administration of criminal justice.">
-		<meta name="keywords" content="ICJIA, Criminal Justice, Illinois, Authority, Reform, Illinois Criminal Justice Information Authority">
+		<meta name="keywords" content="data profiles, ICJIA, Criminal Justice, Illinois, Authority, Reform, Illinois Criminal Justice Information Authority">
 		<meta name="date" content="2015-12-15">
-		<link rel="canonical" href="http://www.icjia.state.il.us/sandbox/blank">
+		<link rel="canonical" href="http://www.icjia.state.il.us/sac/tools/DataProfiles/CriminalJusticeDataProfiles.cfm">
 
 
 		<!-- Facebook metatags -->
-				<meta property="og:title" content="Default ICJIA page" />
+				<meta property="og:title" content="Illinois Criminal Justice Data Profiles" />
 				<meta property="og:site_name" content="Illinois Criminal Justice Information Authority"/>
-				<meta property="og:url" content="http://www.icjia.state.il.us/sandbox/blank" />
+				<meta property="og:url" content="http://www.icjia.state.il.us/sac/tools/DataProfiles/CriminalJusticeDataProfiles.cfm" />
 				<meta property="og:description" content="  " />
 				<meta property="fb:app_id" content="658596667606445" />
 				<meta property="og:type" content="article" />
 				<meta property="og:locale" content="en_US" />
 				<meta property="article:author" content="https://www.facebook.com/ICJIA" />
-				<meta property="og:image" content="http://www.icjia.state.il.us/assets/img/icjia-default.jpg" />
+				<meta property="og:image" content="http://www.icjia.state.il.us/assets/img/splash/data-profile.jpg" />
 		<!-- // Facebook metatags -->
 
 
 		<!-- Twitter metatags -->
 			<meta name="twitter:card" content="summary" />
 			<meta name="twitter:site" content="@ICJIA_Illinois" />
-			<meta name="twitter:title" content="Default ICJIA page" />
+			<meta name="twitter:title" content="Illinois Criminal Justice Data Profiles" />
 			<meta name="twitter:description" content="  " />
-			<meta name="twitter:image" content="http://www.icjia.state.il.us/assets/img/icjia-default.jpg" />
-			<meta name="twitter:url" content="http://www.icjia.state.il.us/sandbox/blank" />
+			<meta name="twitter:image" content="http://www.icjia.state.il.us/assets/img/splash/data-profile.jpg" />
+			<meta name="twitter:url" content="http://www.icjia.state.il.us/sac/tools/DataProfiles/CriminalJusticeDataProfiles.cfm" />
 		<!-- //Twitter metatags -->
 
 
@@ -107,9 +107,9 @@
 		<link href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css" property="stylesheet" rel="stylesheet">
 		<link href="//cdn.datatables.net/responsive/1.0.6/css/dataTables.responsive.css" property="stylesheet" rel="stylesheet">
 		<script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
-		<script src="//cdn.datatables.net/responsive/1.0.6/js/dataTables.responsive.js"></script>	
+		<script src="//cdn.datatables.net/responsive/1.0.6/js/dataTables.responsive.js"></script>
 
-	
+
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="http://code.highcharts.com/modules/data.js"></script>
@@ -119,12 +119,14 @@
 <style type="text/css">
 h1 {
 	margin-top:200px;
-}	
+}
 
+h1.FirstHeading {
+	margin-top:0px;
+}
 
-	
 table {
-	
+
 	font-family: verdana,arial,sans-serif;
 	font-size:60%;;
 	color:#333333;
@@ -136,7 +138,7 @@ table {
 	margin-left: auto;
 	margin-right: auto;
 
-	
+
 }
 table th {
 	border-width: 1px;
@@ -231,15 +233,15 @@ table.dataTable thead th, table.dataTable thead td, table.dataTable tr td {
 
 
 
-	
-<title>ICJIA Criminal Justice Data Profiles</title>	
+
+<title>ICJIA | Criminal Justice Data Profiles</title>
 </head>
 	<body data-spy="scroll" data-target=".bs-sidenav" data-offset="100">
 
 
 <div id="icjia-page-top"></div>
 
-			
+
 
 <div style="border-top: 2px solid #2e475d; background: #fff; height: 10px">
 
@@ -247,7 +249,7 @@ table.dataTable thead th, table.dataTable thead td, table.dataTable tr td {
 </div>
 
 
-			
+
 
 
 <div id="nav-wrapper" style="background: #fff; position: relative" >
@@ -531,20 +533,20 @@ table.dataTable thead th, table.dataTable thead td, table.dataTable tr td {
 </div>
 
 
-		
+
 <section class="breadcrumbs hidden-print" style="">
 	<div class="container">
 		<div class="row" style="text-align: right">
      <!--->	 <ol class="breadcrumb" style="display: inline;">
         <li><a href="/">Home</a></li>
-        
+
 
 
                 <li><a href="/sandbox">Sandbox</a></li>
 
 
                             <li>Default ICJIA page</li>
-            
+
       </ol><--->
     </div>
   </div>
@@ -689,7 +691,7 @@ $('.expander-news').readmore({
 
 
     <!-- 7-column body content. For more info on Bootstrap's grid, see: http://getbootstrap.com/css/#grid -->
-    <div class="col-md-7" id="content">
+    <div class="col-md-9" id="content">
 
       <div class="article">
 
@@ -701,14 +703,14 @@ $('.expander-news').readmore({
               <div class="article-content">
 
 
-<h1 id="MainHeading">ICJIA Criminal Justice Data Profiles</h1>
+<h1 id="MainHeading" class="FirstHeading">ICJIA Criminal Justice Data Profiles</h1>
 
 <p>The Criminal Justice Data Profiles tool offers criminal justice indicators that allow users to create county, judicial circuit, and statewide profiles. These profiles
 may be used to inform planning and policy decisions.</p>
 		        <div class="well well-lg">
 					<cfform id="ProfileSelector" name="ProfileSelector" method="GET" action="CriminalJusticeDataProfiles.cfm">
 
-					        <p>Select profile(s) to view:<br>  
+					        <p>Select profile(s) to view:<br>
 				            <input type="checkbox" name="ProfileNumber" class="required CHRI_checkbox" id="ProfileCheck10" value="10" checked="checked">
 								<label for="ProfileCheck10">Adult Arrests (Illinois State Police CHRI Database)*</label><br/>
 							<!---><input type="checkbox" name="ProfileNumber" class="required CHRI_checkbox" id="ProfileCheck20" value="20" checked="checked">
@@ -720,11 +722,11 @@ may be used to inform planning and policy decisions.</p>
 							<input type="checkbox" name="ProfileNumber" class="required" id="ProfileCheck40" value="40" checked="checked">
 				            	<label for="ProfileCheck40">Prison Exits</label>	<br/><br/>
 
-				            <span class="WarningText">*CHRI data in these profiles are avaiable for judicial circuits and statewide. If you select a county, CHRI data will not be in the profile unless it is the only county in a judicial circuit.</span>  	
+				            <span class="WarningText">*CHRI data in these profiles are avaiable for judicial circuits and statewide. If you select a county, CHRI data will not be in the profile unless it is the only county in a judicial circuit.</span>
 					        </p><br/>
 
-											
-						<p>Select a county, judicial circuit, or statewide:	
+
+						<p>Select a county, judicial circuit, or statewide:
 				        	<select id="CountySelector" name="ICJIANumber">
 					        	<option value="0">Select geography</option>
 					        	<option value="999">Illinois</option>
@@ -856,12 +858,12 @@ may be used to inform planning and policy decisions.</p>
 							</select>
 						</p>
 						<div id="MapContainer"><cfinclude template="IllinoisMap.cfm"> </div>
-						
+
 						<p><button type="submit" id="getProfile" value="1" name="getProfile">Retrieve Profile</button><span id="ToolStatus" style="color:red"></span></p>
 					</cfform></div>	</div>
 
-	
-<!---this will be sued to retain select box value when page is changed--->	
+
+<!---this will be sued to retain select box value when page is changed--->
 <cfif structKeyExists(url, 'ICJIANumber')>
 	<cfset SelectedICJIANumber = INT(#url.ICJIANumber#) />
 	<cfoutput><span id="HiddenICJIANumber">#SelectedICJIANumber#</span></cfoutput>
@@ -873,7 +875,7 @@ may be used to inform planning and policy decisions.</p>
 					<cfoutput>
 
 					<div class="Outputcontainer" id="ProfilesContainer" >
-				
+
 
 					<!---obtain CircuitCook88 value and potential text--->
 					<cfquery name="GetCircuit" datasource="RADBP">
@@ -890,30 +892,30 @@ may be used to inform planning and policy decisions.</p>
 					<cfquery name = "CountyCount" datasource="RADBP">
 						SELECT GeographyID, NumCounties
 						FROM Qry_CountOfCountiesInCircuit
-						WHERE GeographyID = <cfqueryparam value="#url.ICJIANumber#" cfsqltype="CF_SQL_INTEGER" />;	
+						WHERE GeographyID = <cfqueryparam value="#url.ICJIANumber#" cfsqltype="CF_SQL_INTEGER" />;
 					</cfquery>
 
 					<!---Get minimum and maximum years to show data for each profile--->
 					<cfquery name="MinMaxYears" datasource="RADBP">
 						SELECT DataGroupNumber, MinYear, MaxYear
 						FROM dbo_MinMaxYearsToShow
-						WHERE DataGroupNumber IN (<cfqueryparam 
-													value="#url.ProfileNumber#" 
-													cfsqltype="CF_SQL_INTEGER" 
-													list="yes"/>);	
+						WHERE DataGroupNumber IN (<cfqueryparam
+													value="#url.ProfileNumber#"
+													cfsqltype="CF_SQL_INTEGER"
+													list="yes"/>);
 					</cfquery>
 
 
 					<!---Main query, QoQ will be performed on this--->
-					<cfquery name="WTP" datasource="RADBP">  
+					<cfquery name="WTP" datasource="RADBP">
 						SELECT *
 						FROM Qry_WebTablePivot
 						WHERE CircuitCook88 = #CircuitNumber#
 						OR GeographyID IN (500,510,520,530)
-						;	
+						;
 					</cfquery>
-					
-					<!---Generate Geography Name to be used in title and other sections--->		
+
+					<!---Generate Geography Name to be used in title and other sections--->
 					<cfif (#url.ICJIANumber# GTE 1 AND #url.ICJIANumber# LTE 102)>
 						<cfset GeographyTypeForPopulationSubgroups = 50>
 						<cfset GeographyName = #GetCircuit.CountyName# & ' County'>
@@ -923,7 +925,7 @@ may be used to inform planning and policy decisions.</p>
 						<cfset GeographyName = #GetCircuit.CountyName# & ' County'>
 						<cfset GeographyTypeForPopulationSubgroups = 100>
 					</cfif>
-					
+
 					<cfif #url.ICJIANumber# EQ 999>
 						<cfset GeographyTypeForPopulationSubgroups = 250>
 						<cfset GeographyName = #GetCircuit.CountyName#>
@@ -939,8 +941,8 @@ may be used to inform planning and policy decisions.</p>
 					<!---use url to determine which profile templates to include--->
 
 					<cfloop index="ListElement" list="#url.ProfileNumber#">
-						
-					<cfset ProfileTemp = "Profile" & #ListElement# & ".cfm" />	
+
+					<cfset ProfileTemp = "Profile" & #ListElement# & ".cfm" />
 					<cfinclude template="#ProfileTemp#">
 					</cfloop>
 
@@ -953,7 +955,7 @@ may be used to inform planning and policy decisions.</p>
 					</cfoutput>
 </cfif>  <!--END check for selfsubmit-->
 
-  
+
 
               </div><!-- article content -->
 
@@ -1119,7 +1121,7 @@ may be used to inform planning and policy decisions.</p>
 
 
 
-		
+
 
 
 		<script>

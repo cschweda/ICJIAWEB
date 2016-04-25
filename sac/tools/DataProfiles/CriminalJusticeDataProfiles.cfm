@@ -121,7 +121,9 @@ h1 {
 	margin-top:200px;
 }
 
-
+h1.FirstHeading {
+	margin-top:0px;
+}
 
 table {
 
@@ -689,7 +691,7 @@ $('.expander-news').readmore({
 
 
     <!-- 7-column body content. For more info on Bootstrap's grid, see: http://getbootstrap.com/css/#grid -->
-    <div class="col-md-7" id="content">
+    <div class="col-md-9" id="content">
 
       <div class="article">
 
@@ -701,7 +703,7 @@ $('.expander-news').readmore({
               <div class="article-content">
 
 
-<h1 id="MainHeading">ICJIA Criminal Justice Data Profiles</h1>
+<h1 id="MainHeading" class="FirstHeading">ICJIA Criminal Justice Data Profiles</h1>
 
 <p>The Criminal Justice Data Profiles tool offers criminal justice indicators that allow users to create county, judicial circuit, and statewide profiles. These profiles
 may be used to inform planning and policy decisions.</p>
