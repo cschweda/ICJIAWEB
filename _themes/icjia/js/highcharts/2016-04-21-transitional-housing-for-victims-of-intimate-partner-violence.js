@@ -4,10 +4,10 @@ $(function() {
       type: 'column'
     },
     title: {
-      text: '<strong>Figure 1</strong><br>DV Client Needs at Intake, CY2015'
+      text: '<strong>Figure 1</strong><br>Top 10 Domestic Violence Victim Service Needs Identified at Intake'
     },
     subtitle: {
-      text: '(Clients who completed intake CYs 13-15)'
+      text: ''
     },
     xAxis: {
       type: 'category',
@@ -78,10 +78,10 @@ $(function() {
       type: 'column'
     },
     title: {
-      text: '<strong>Figure 2</strong><br>Title?'
+      text: '<strong>Figure 2</strong><br>Relationship Between Housing/Shelter Needs and Financial and Employment Needs'
     },
     subtitle: {
-      text: 'Subtitle'
+      text: ''
     },
     xAxis: {
       categories: [
