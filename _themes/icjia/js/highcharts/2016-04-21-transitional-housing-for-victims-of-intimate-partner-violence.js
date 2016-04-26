@@ -93,7 +93,7 @@ $(function() {
     },
     yAxis: {
       min: 0,
-      max: 30,
+      max: 40,
       tickInterval: 5,
       title: {
         text: ''

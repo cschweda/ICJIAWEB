@@ -33,7 +33,7 @@
 
 
 
-    {{ entries:listing folder="biographies" conditions="title:{authors|option_list}" sort_by="date" }}
+    {{ entries:listing folder="biographies" conditions="title:{authors|option_list}" sort_by="sortField" }}
     {{if total_found}}
 
     {{if content}}
