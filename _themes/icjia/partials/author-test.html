@@ -1,0 +1,34 @@
+{{authors}}
+{{name}}<br>
+{{/authors}}
+
+
+<hr>
+
+
+
+{{ entries:listing folder="biographies" conditions="title:{authors|option_list}"}}
+{{if total_found}}
+
+{{if content}}
+
+<h6><a href="{{url}}">{{title}}{{degrees}}{{if total_found}}, {{/if}}{{name}}{{/degrees}}</a></h6>
+
+
+
+    {{/if}}
+  {{/if}}
+{{ /entries:listing }}
+
+<hr>
+
+
+{{authors}}
+{{ entries:listing folder="biographies" conditions="title:{name}"}}
+<h6><a href="{{url}}">{{title}}</a></h6>
+
+
+
+{{ /entries:listing }}
+
+{{/authors}}
