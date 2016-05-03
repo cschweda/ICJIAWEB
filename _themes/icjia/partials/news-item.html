@@ -3,7 +3,7 @@
 		{{ if use_context }}<a href="{{ url }}">{{ endif }}{{ displayTitle|widont }}{{ if use_context }}</a>{{ endif }}
 	</h1>
 	<h4 class="h6 published">
-		{{ date }}
+		<span style="color: #555">Posted: {{ date }}</a>
 		{{if keywords}}
 	| Keywords: {{ keywords_url_list }}
 {{endif}}</h6>
