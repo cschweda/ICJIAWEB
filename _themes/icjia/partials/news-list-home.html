@@ -16,10 +16,12 @@
 
       <div class="news-item">
       <div style="font-weight: 900; margin-top: 40px; line-height: 30px; text-transform: uppercase;" class="h5">
-        {{if updatedItem}}
+        <!-- {{if updatedItem}}
         <span style="font-weight: 400; color: #666" class="addUpdateLabel" data-postDate="{{date format='Y-m-d'}}"></span>
-        {{endif}}
-        <span style="font-weight: 400; color: #666" {{if !updatedItem}} class="addNewLabel" data-postType="news" data-postDate="{{date format='Y-m-d'}}"{{endif}}>&nbsp;</span><a href="{{ url }}">{{if displayTitle}}{{ displayTitle }}{{else}}{{title}}{{endif}}</a>
+        {{endif}} -->
+        <!-- <span style="font-weight: 400; color: #666" {{if !updatedItem}} class="addNewLabel" data-postType="news" data-postDate="{{date format='Y-m-d'}}"{{endif}}>&nbsp;</span> -->
+
+        <a href="{{ url }}">{{if displayTitle}}{{ displayTitle }}{{else}}{{title}}{{endif}}</a>
 
 
         </div>
