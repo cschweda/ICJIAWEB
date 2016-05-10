@@ -83,3 +83,22 @@ fields:
     required: false
     display: Boxed kicker for Photo 3
     default:
+
+  newsItemsHome:
+    display: News Items on Front Page
+    required: true
+    type: select
+    default: 5
+    options:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12

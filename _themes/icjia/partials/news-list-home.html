@@ -3,7 +3,7 @@
   <div class="separator-line"></div>
 
 
-  {{ entries:listing folder="news|press" limit="10" show_past="true" show_future="false" conditions="siteDisplay:ICJIA"}}
+  {{ entries:listing folder="news|press" limit="{newsItemsHome}" show_past="true" show_future="false" conditions="siteDisplay:ICJIA"}}
 	    {{ if no_results }}
 		  <p class="sorry">
 			No news is good news.<br>
