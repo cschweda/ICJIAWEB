@@ -4,7 +4,7 @@ $(function() {
       type: 'column'
     },
     title: {
-      text: '<strong>Figure 1</strong><br>Domestic Violence Victim Service Needs Identified at Intake'
+      text: '<strong>Figure 1</strong><br>Domestic Violence Victim Service Needs Identified at Intake<br>(N = 89,888)'
     },
     subtitle: {
       text: ''
@@ -79,7 +79,7 @@ $(function() {
       type: 'column'
     },
     title: {
-      text: '<strong>Figure 2</strong><br>Relationship Between Housing/Shelter Needs and Financial and Employment Needs'
+      text: '<strong>Figure 2</strong><br>Relationship Between Housing/Shelter Needs and Financial and Employment Needs<br>(N = 89,888)'
     },
     subtitle: {
       text: ''
