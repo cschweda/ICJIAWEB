@@ -4,7 +4,7 @@ $(function() {
       type: 'column'
     },
     title: {
-      text: '<strong>Figure 1</strong><br>Top 10 Domestic Violence Victim Service Needs Identified at Intake'
+      text: '<strong>Figure 1</strong><br>Domestic Violence Victim Service Needs Identified at Intake'
     },
     subtitle: {
       text: ''
