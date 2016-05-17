@@ -3,7 +3,47 @@
   <div class="separator-line"></div>
 
 
-  {{ entries:listing folder="news|press" limit="{newsItemsHome}" show_past="true" show_future="false" conditions="siteDisplay:ICJIA"}}
+    {{ entries:listing folder="news" limit="3" show_past="true" show_future="false" conditions="siteDisplay:ICJIA,pinned:true"}}
+
+    {{ if no_results }}
+    {{ else }}
+
+
+
+
+    <div class="news-item">
+    <div style="font-weight: 900; margin-top: 40px; line-height: 30px; text-transform: uppercase;" class="h5">
+    {{if updatedItem}}
+      <span style="font-weight: 400; color: #666" class="addUpdateLabel" data-postDate="{{date format='Y-m-d'}}"></span>
+      {{endif}}
+      <!-- <span style="font-weight: 400; color: #666" {{if !updatedItem}} class="addNewLabel" data-postType="news" data-postDate="{{date format='Y-m-d'}}"{{endif}}>&nbsp;</span> -->
+
+      <a href="{{ url }}">{{if displayTitle}}{{ displayTitle }}{{else}}{{title}}{{endif}}</a>
+
+
+      </div>
+
+
+
+        <div class="expander-news" style="margin-top: -5px">
+        {{ content|widont }}
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+    {{ endif }}
+
+    {{ /entries:listing }}
+
+
+  {{ entries:listing folder="news|press" limit="{newsItemsHome}" show_past="true" show_future="false" conditions="siteDisplay:ICJIA,pinned:!true"}}
 	    {{ if no_results }}
 		  <p class="sorry">
 			No news is good news.<br>
@@ -18,7 +58,7 @@
       <div style="font-weight: 900; margin-top: 40px; line-height: 30px; text-transform: uppercase;" class="h5">
       {{if updatedItem}}
         <span style="font-weight: 400; color: #666" class="addUpdateLabel" data-postDate="{{date format='Y-m-d'}}"></span>
-        {{endif}} 
+        {{endif}}
         <!-- <span style="font-weight: 400; color: #666" {{if !updatedItem}} class="addNewLabel" data-postType="news" data-postDate="{{date format='Y-m-d'}}"{{endif}}>&nbsp;</span> -->
 
         <a href="{{ url }}">{{if displayTitle}}{{ displayTitle }}{{else}}{{title}}{{endif}}</a>

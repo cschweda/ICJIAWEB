@@ -40,8 +40,20 @@ fields:
       - IFVCC
       - MVTPCC
 
-  updatedItem:
-    display: Is this an update to an existing news story?
+  # updatedItem:
+  #   display: Is this an update to an existing news story?
+  #   required: false
+  #   type: suggest
+  #   create: false
+  #   max_items: 1
+  #   default:
+  #     - 'False'
+  #   options:
+  #     - 'False'
+  #     - 'True'
+
+  pinned:
+    display: Is the news item 'pinned' to the top of the news stream?
     required: false
     type: suggest
     create: false
@@ -51,7 +63,6 @@ fields:
     options:
       - 'False'
       - 'True'
-
 
   keywords:
     display: Keywords
