@@ -19,6 +19,12 @@ module.exports = function(grunt) {
 				],
 				dest: 'js/mvtpc.js',
 			},
+			tvpp: {
+				src: [
+					'js/tvpp/*.js'
+				],
+				dest: 'js/tvpp.js',
+			},
 		},
 
 		uglify: {
@@ -31,6 +37,7 @@ module.exports = function(grunt) {
 				},
 				files: {
 					'js/icjia.js': ['js/icjia.js'],
+					'js/tvpp.js': ['js/tvpp.js'],
 					'js/mvtpc.js': ['js/mvtpc.js']
 				}
 			}
@@ -48,6 +55,7 @@ module.exports = function(grunt) {
 				files: {
 					"css/icjia.css": "less/icjia-main.less",
 					"css/ifvcc.css": "less/ifvcc-main.less",
+					"css/tvpp.css": "less/tvpp-main.less",
 					"css/mvtpc.css": "less/mvtpc-main.less" // destination file and source file
 				}
 			}
@@ -55,7 +63,7 @@ module.exports = function(grunt) {
 
 		watch: {
 			js: {
-				files: ['js/app/*.js', 'js/mvtpc/*.js'],
+				files: ['js/app/*.js', 'js/mvtpc/*.js', 'js/tvpp/*.js'],
 				tasks: ['concat'],
 				options: {
 					livereload: true,
