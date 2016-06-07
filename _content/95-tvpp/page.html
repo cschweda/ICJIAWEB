@@ -59,6 +59,56 @@ position: relative;
     top: 20;
 
 }
+
+/* ============================= Service boxes =============================== */
+.icjia-hover {
+    background: #ddd;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    color: #444;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+.icjia-hover:last-of-type { border-right: none }
+.icjia-hover:first-of-type { border-top: 1px solid #ccc }
+.entry-title {
+    text-transform: uppercase;
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 16px;
+}
+.icjia-hover:hover {
+    background: #4c5667;
+    color: #fff;
+    cursor: pointer;
+    cursor: hand;
+}
+.read-more {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    padding: 3px 3px 3px 3px;
+    margin-bottom: -5px;
+}
+.icjia-hover a { color: #444 }
+.icjia-hover:hover > a { color: #fff }
+
+
+    .equal,
+    .equal > div[class*='col-'] {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex: 1 0 auto;
+    }
+
+h6.entry-title {font-size: 24px; font-weight: 700}
 </style>
 <div id="page-top">
 </div>
@@ -135,6 +185,64 @@ position: relative;
        </a>
 
    </header>
+
+
+
+
+
+
+   <!-- focus areas  -->
+   <div class="hidden-xs">
+   <div class="container-fluid" style="margin: 0; padding: 0">
+
+   <div class="equal">
+   <div class="col-sm-3 col-md-3 col-lg-3 icjia-hover">
+   	<a href="/grants/overview">
+   <div class="service-inner">
+
+   <h6 class="entry-title">About TVPP</h6>
+   <p class="p-description">The Targeted Violence Prevention Program promotes a public health approach to preventing ideologically inspired targeted violence in Illinois.  </p>
+   </div>
+   </a>
+   </div>
+   <div class="col-sm-3 col-md-3 col-lg-3 icjia-hover">
+   	<a href="{{_site_root}}research/overview#tab_research-overview" >
+   <div class="service-inner">
+
+   <h6 class="entry-title">Our Approach</h6>
+   <p class="p-description">Our approach relies on promoting prevention at the community-level through community-based and faith-based organizations.</p>
+   </div>
+   </a>
+   </div>
+
+   <div class="col-sm-3 col-md-3 col-lg-3 icjia-hover">
+   	<a href="http://www.icjia.state.il.us/redeploy" >
+   <div class="service-inner">
+
+   <h6 class="entry-title">Resources</h6>
+   <p class="p-description">Additional targeted violence resources.</p>
+   </div>
+   </a>
+   </div>
+
+   <div class="col-sm-3 col-md-3 col-lg-3 icjia-hover">
+   	<a href="http://www.ilfvcc.org" >
+   <div class="service-inner">
+
+   <h6 class="entry-title">Research</h6>
+   <p class="p-description">Information on research related to preventing ideologically inspired targeted violence.
+</p>
+   </div>
+   </a>
+   </div>
+
+
+
+
+
+   </div>
+   </div>
+   </div>
 
 
 
