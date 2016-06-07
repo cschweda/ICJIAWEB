@@ -44,6 +44,14 @@ $(document).ready(function() {
         "color": "#fff"
       });
 
+      $(".navbar-brand-tvpp").css({
+        "font-size": "14px"
+      });
+
+      $(".navbar-brand-illinois").css({
+        "font-size": "14px",
+        "margin-left": "0px"
+      });
 
 
     } else {
@@ -57,6 +65,15 @@ $(document).ready(function() {
       });
       $(".top-bar").fadeIn(100);
       $(".offCanvasButton").hide();
+
+      $(".navbar-brand-tvpp").css({
+        "font-size": "18px"
+      });
+
+      $(".navbar-brand-illinois").css({
+        "font-size": "18px",
+        "margin-left": "-20px"
+      });
 
     }
   });
