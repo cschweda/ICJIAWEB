@@ -31,7 +31,7 @@ $(document).ready(function() {
 
   //jQuery to collapse the navbar on scroll
   $(window).scroll(function() {
-    if ($(".navbar").offset().top > 50) {
+    if ($(".navbar").offset().top > 40) {
       $(".navbar-fixed-top").addClass("top-nav-collapse");
       $("#navContainer").removeClass("container");
       // $(".navbar-collapse > ul").removeClass("pull-right");
