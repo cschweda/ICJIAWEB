@@ -151,9 +151,35 @@
 
 		<script>
 		 $(document).ready(function ($) {
+
+			$('.scroll-reminder-up').hide();
 			 $('#news-scroller').perfectScrollbar();
 
 		 });
+
+		 $(document).on('ps-y-reach-end', function () {
+  	 	$('.scroll-reminder-down').fadeOut();
+				$('.scroll-reminder-up').fadeOut();
+		})
+
+		$(document).on('ps-y-reach-start', function () {
+		 $('.scroll-reminder-down').fadeIn();
+			//  $('.scroll-reminder-up').hide();
+	 })
+
+		$(document).on('ps-scroll-up', function () {
+		//  $('.scroll-reminder-up').hide();
+		//  $('.scroll-reminder-down').hide();
+
+	 })
+
+	 $(document).on('ps-scroll-down', function () {
+		// $('.scroll-reminder-up').hide();
+		// $('.scroll-reminder-down').show();
+
+	})
+
+
 	 </script>
 
 
