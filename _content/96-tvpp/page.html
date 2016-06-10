@@ -27,7 +27,7 @@ super_positive_keywords:
 
 #bg1{
     background:url('/assets/tvpp/img/page-image05.jpg') no-repeat center center;
-    height: 465px;
+    height: 475px;
     background-size: cover;
 }
 
@@ -38,7 +38,7 @@ super_positive_keywords:
     background-size: cover;
 }
 
- .contentHolder { position:relative; margin:0px auto; padding-left: 15px; padding-right: 15px; padding-bottom: 50px; height:450px; overflow: auto; }
+ .contentHolder { position:relative; margin:0px auto; margin-top: 20px; padding-left: 15px; padding-right: 15px; padding-bottom: 50px; height:450px; overflow: auto; }
 
 
 
@@ -343,7 +343,7 @@ fieldset[disabled] .btn-tvpp.active {
 
               <div class="col-md-7">
                 <div class="text-container" style="color: #fff">
-                <h1 class="h4" style="font-weight: 900;">Welcome to the Targeted Violence Prevention Program</h1>
+                <h1 class="h4" style="text-transform: uppercase; font-weight: 900; border-bottom: 1px solid #fff; padding-bottom: 8px; margin-bottom: 20px">Welcome to the Targeted Violence Prevention Program</h1>
             <p>The Illinois Criminal Justice Information Authority’s Targeted Violence Prevention Program (TVPP) uses a public health approach to preventing ideologically inspired targeted violence.  TVPP works with interested communities in building and sustaining community-level programs that can prevent individuals from being recruited to commit ideologically inspired targeted violence, and to help off-ramp individuals who have begun down the path ideologically inspired targeted violence but have not yet committed a crime.</p>
 
 <p>
@@ -353,7 +353,7 @@ Ideologically inspired targeted violence is a low frequency/high impact crime.  
 
 <div class="text-center" style="margin-top: 50px">
 
-<a class="btn btn-tvpp" href="/tvpp/our-approach">Find out more&nbsp;&raquo;</a>
+<a class="btn btn-tvpp" href="/tvpp/our-approach" style="text-transform: uppercase; font-family: 'Lato'; color: #fff;">Find out more&nbsp;&raquo;</a>
 
 </div>
 
@@ -389,32 +389,63 @@ Ideologically inspired targeted violence is a low frequency/high impact crime.  
 
 
 
-   <div class="container-fluid" style="background: #ccc; color: #333; padding: 0; margin: 0;">
+   <div class="container-fluid" style="background: #ddd; color: #333; padding: 0; margin: 0;">
          <div class="row">
 
 
               <div class="col-md-6">
 
+
+
             <div id="news-scroller" class="contentHolder">
 
-              <h3>News & Updates</h3>
+              <h2 class="h4" style="text-transform: uppercase; font-weight: 900; border-bottom: 1px solid #777; padding-bottom: 8px; margin-bottom: 20px">News & Updates</h2>
 
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum, mi non imperdiet tincidunt, libero diam condimentum elit, vel luctus massa felis sed nunc. Nunc aliquam dictum odio ac gravida. Sed cursus viverra neque. Cras id orci et magna lobortis commodo ut ac elit. Sed enim orci, pulvinar vel finibus ut, pellentesque quis eros. Vestibulum maximus, eros quis dictum placerat, nisl libero consequat libero, nec mollis erat felis vel sapien. Ut nec tortor vitae arcu rhoncus scelerisque. Phasellus sed mauris sagittis, vulputate nibh sed, finibus est.</p>
+              <div class="news-content">
 
-<p>Mauris malesuada lacinia risus, vulputate viverra lorem congue eu. Sed pretium maximus augue, ac rutrum nunc laoreet id. Mauris tortor eros, eleifend sed ante nec, consequat elementum arcu. Pellentesque ornare, dolor tempus cursus vulputate, augue ante rutrum nisi, a suscipit sem nunc a massa. Morbi tempor, ipsum ac consectetur fringilla, libero dui laoreet nibh, eget commodo enim nisl sit amet metus. Suspendisse lorem lacus, efficitur ut eros tincidunt, sodales ornare orci. Nunc felis arcu, consectetur vel accumsan a, pulvinar nec nunc. Fusce convallis hendrerit mauris, sed volutpat justo fringilla et. Nulla maximus ornare lacinia. Donec quis velit facilisis, fringilla felis in, mattis felis. Praesent rhoncus velit vel augue lacinia, vitae vulputate nibh ultrices. Etiam ipsum enim, sollicitudin quis posuere ac, vehicula at nisi. Maecenas elementum leo non magna consectetur venenatis. Donec at mi vitae est condimentum lacinia id sit amet nunc. Sed tempor lacus at tellus maximus bibendum. Etiam nec augue at diam laoreet tristique.</p>
+              {{ entries:listing folder="/ifvcc/ifvcc-news" limit="3" show_past="true" show_future="true"}}
+            	    {{ if no_results }}
+            		  <p class="sorry">
+            			No news is good news.<br>
+            			Check back soon.
+            		  </p>
+            	    {{ else }}
 
-<p>Phasellus euismod felis dictum libero tempus, vitae porttitor sem ultrices. Donec accumsan nulla ac urna maximus tempor. Nam maximus sem at hendrerit scelerisque. Phasellus ultricies, erat commodo finibus efficitur, tortor sapien suscipit ipsum, vel elementum orci lectus non nunc. Phasellus sit amet nibh fringilla enim faucibus suscipit. Sed rutrum quam et ante dapibus, eu venenatis mauris tempus. Sed at viverra mauris. Sed a est non metus congue maximus eget et quam. Mauris eu mauris eget lacus viverra molestie. Donec magna erat, porttitor non finibus vel, ultricies id erat. Maecenas id ullamcorper est. Nam vel diam nulla. Maecenas gravida eleifend efficitur. Etiam vel posuere ipsum.</p>
 
-<p>Suspendisse ligula turpis, porttitor non feugiat feugiat, volutpat in ligula. Duis blandit eget ipsum nec vestibulum. Nulla orci mauris, luctus et justo id, ultricies sagittis ante. Nunc suscipit fringilla augue ut posuere. Sed pharetra, lacus ac bibendum venenatis, ante lectus varius lacus, sit amet consequat justo urna non turpis. Maecenas nibh leo, aliquet non felis sit amet, interdum congue tellus. Morbi porttitor enim at pulvinar iaculis. Nulla eget ligula molestie, pretium nulla id, ultrices lectus. Aliquam egestas erat massa, sit amet volutpat quam condimentum a. Aenean venenatis viverra malesuada. Aliquam consectetur eros ut justo auctor, et lacinia mauris rhoncus. Maecenas posuere facilisis ex quis pretium.</p>
 
-<p>Phasellus sagittis, leo quis pretium eleifend, est elit sollicitudin elit, vestibulum vehicula ipsum velit eget ligula. Suspendisse venenatis vestibulum odio gravida consectetur. Ut consectetur, justo vitae pulvinar rutrum, lacus ligula pellentesque libero, a dapibus risus est vitae erat. Maecenas et bibendum massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed lobortis leo vitae nunc varius egestas. Sed arcu erat, venenatis at dapibus ac, malesuada ut turpis. Sed mattis dolor blandit est porta consequat. Donec congue, ipsum quis iaculis auctor, diam nisl egestas lectus, ut mattis ligula libero at velit.</p>
 
+                  <div class="news-item">
+                  <div style="font-weight: 900; margin-top: 40px; line-height: 30px; text-transform: uppercase;" class="h5">
+                    {{if updatedItem}}
+                    <span style="font-weight: 400; color: #666" class="addUpdateLabel" data-postDate="{{date format='Y-m-d'}}"></span>
+                    {{endif}}
+                    <span style="font-weight: 400; color: #666" {{if !updatedItem}} class="" data-postType="news" data-postDate="{{date format='Y-m-d'}}"{{endif}}>{{ date }}</span> | <a href="{{ url }}">{{if displayTitle}}{{ displayTitle }}{{else}}{{title}}{{endif}}</a></div>
+
+                      <div class="expander-news">
+                      {{ content|widont }}
+                      </div>
+
+                    </div>
+
+
+
+
+
+
+
+            	    {{ endif }}
+            	{{ /entries:listing }}
+            </div>
+
+            <div class="text-center" style="margin-top: 50px">
+            <a class="btn btn-tvpp" href="/tvpp/tvpp-news" role="button" style="text-transform: uppercase; font-family: 'Lato'; color: #fff; margin-bottom: 20px;">News archive&nbsp;&raquo;</a>
+            </div>
 
             </div>
 
 
             <div class="text-center ">
-              <i class="scroll-reminder-down fa fa-angle-double-down fa-2x" style="font-weight: 900; margin-top: 20px; color: #888" aria-hidden="true"></i>
+              <i class="scroll-reminder-down fa fa-angle-double-down fa-2x" style="font-weight: 900; margin-top: 20px; color: #bbb" aria-hidden="true"></i>
 
                 <!-- <i class="scroll-reminder-up fa fa-angle-double-up fa-2x" style="margin-top: 10px; color: #888" aria-hidden="true"></i> -->
             </div>
