@@ -1,0 +1,21 @@
+{{ entries:listing folder="biographies" sort="sortField" conditions="role:Board,orgStatus:active" }}
+
+
+<div style="margin-bottom: 45px">
+  <h3 class="h4" style="padding: 0; margin: 0; padding-bottom: 8px; border-bottom: 1px solid #ccc; margin-bottom: 15px;">{{ title }}<span style="color: #888">{{modifier}}&nbsp;{{orgtitle}}</span></h3>
+  <div class="expander-bio">
+{{if authorPhoto}}
+<img src="{{ transform src="{authorPhoto}" height="75"}}"
+    style="float: left; padding-right: 14px;" />
+{{else}}
+<!--
+<img src="{{ transform src="/assets/img/biographies/default-head.jpg" height="75"}}"
+    style="float: left; padding-right: 14px;" />-->
+{{endif}}
+  <p>	{{content}}</p>
+</div>
+
+</div>
+
+
+{{ /entries:listing }}
