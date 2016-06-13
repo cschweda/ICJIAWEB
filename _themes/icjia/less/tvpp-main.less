@@ -25,7 +25,7 @@
 
 
 body{
-  font-family: 'Roboto', sans-serif;
+
   background: #fff;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
@@ -33,18 +33,35 @@ body{
 
   font-weight: 400;
   color:#555;
+  height: 100%;
+  font-family: 'Neuton', serif; font-size: 20px;
 }
 
-h1, h2, h3, h4, h5, h6 {font-weight: 500; font-family: 'Montserrat', sans-serif;}
 
 html,
-body {
-  height: 100%;
-}
+
 
 body {
   padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
+
+h1, h2, h3, h4, h5, h6 {font-family: 'Montserrat', sans-serif; font-weight: 700}
+.h1, .h2, .h3, .h4, .h5, .h6 {font-family: 'Montserrat', sans-serif; font-weight: 700}
+
+
+p.drop { margin-top: 30px }
+p.drop:first-letter {
+    float: left;
+    color: #777;
+    font-size: 105px;
+    line-height: 80px;
+    padding-top: 4px;
+    padding-right: 10px;
+    padding-left: 3px;
+    font-family: 'Alfa+Slab+One', serif;
+}
+
+
 
 
 * {
@@ -77,6 +94,11 @@ img {
 
 .countup-finished {font-weight: 900;}
 
+/* page typography */
+.page-main {margin-bottom: 25px; }
+.page-sub {color: #888; margin-top: 30px; }
+.page-left-margin {padding-left: 25px;}
+
 
 
 
@@ -90,6 +112,8 @@ img {
 .tvpp-dark {color: #4c5667}
 
 .tvpp-dark2 {color: #39404c}
+
+.navbar {font-family: 'Montserrat', sans-serif; }
 
   .navbar-brand-illinois {font-weight: 900; font-size: 18px; color: #4c5667; margin-left: -20px;}
 
@@ -279,17 +303,18 @@ img {
 section.breadcrumbs {
   width: 100%;
   margin-bottom: 30px;
-  margin-top: 60px;
+  margin-top: 10px;
   background: #4c5667;
   padding-top: 8px;
-  padding-bottom: 8px
+  padding-bottom: 8px;
+
 }
 
 .breadcrumb {
-  font-family: 'Lato';
+  font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 14px;
   color: #e28642;
   padding: 0;
   margin-bottom: 0;
@@ -300,23 +325,23 @@ section.breadcrumbs {
 
 .breadcrumb li a {
   color: #fff;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .breadcrumb li a:hover {
   color: #aaa;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 
 
-
+footer {}
 footer #footer {margin: 0; background: #191f28; padding: 0;}
 footer a {color: #fff}
 footer a:hover {color: #a94545}
 footer {font-size: 14px}
 footer ul {list-style: none;}
-footer ul li {margin-left: -20px}
+footer ul li {margin-left: -20px; font-family: 'Open Sans', sans-serif}
 footer h3.h4 {font-weight: 700; color: #fff}
 
 
@@ -447,7 +472,215 @@ footer h3.h4 {font-weight: 700; color: #fff}
   }
 
 
-  /* page typography */
-  .page-main {margin-bottom: 25px}
-  .page-sub {margin-top: 30px; margin-bottom: 20px}
-  .page-left-margin {padding-left: 25px;}
+
+
+
+  .featured-container {
+      background-color: #111;
+      margin-bottom: 50px;
+
+  }
+  .featured-well {
+      width: 33.3333333333333%;
+      float: left;
+      background: #555;
+      color: #fff;
+      border-bottom: 1px solid #353535;
+      border-right: 1px solid #353535;
+      font-family: "Oswald";
+      font-weight: 400;
+      overflow: hidden;
+      background-size: cover;
+      background-position: 50% 50%;
+  }
+  .featured-well.full-width { width: 100% }
+  .featured-well a { color: #fff }
+  .featured-well a.featured-link {
+      width: 100%;
+      height: 100%;
+      display: block;
+  }
+  .featured-well a.featured-link:hover { text-decoration: none }
+  .featured-well .featured-tall { height: 350px }
+  .featured-well .featured-tall-headline {
+      padding: 110px 30px;
+      /*padding-top: 80px;*/
+      text-align: center;
+      font-size: 30px;
+      line-height: 1.15em;
+      word-spacing: -1px;
+      letter-spacing: .3px;
+      max-width: 600px;
+  }
+
+  .featured-well .featured-tall-headline a:hover { text-decoration: none }
+  .featured-well .featured-tall-kicker {
+      margin: 40px 30px;
+      position: absolute;
+      font-family: 'Lato', sans-serif;
+      font-weight: normal;
+      letter-spacing: -0.2px;
+      text-transform: uppercase;
+      color: #888;
+      font-size: 12px;
+      line-height: 14px;
+      border: 1px solid #fff;
+      padding: 8px 5px;
+      max-width: 500px;
+  }
+  @media only screen and (max-width:720px) {
+      .featured-well .featured-tall-headline { }
+  }
+  .featured-well .featured-tall-kicker a { color: #fff }
+  .featured-well .featured-tall-kicker span {
+      font-weight: normal;
+      letter-spacing: -0.2px;
+      position: relative;
+      font-size: 12px;
+      color: #888;
+      text-transform: none;
+  }
+  .featured-well .featured-short {
+      overflow: hidden;
+      background-size: cover;
+      background-position: 50% 50%;
+      height: 225px;
+      float: none;
+      border-bottom: 1px solid #353535;
+  }
+  .featured-well .featured-short:last-child { border-bottom: none }
+  .featured-well .featured-short-headline {
+      padding: 70px 40px;
+      font-size: 24px;
+      line-height: 1.15em;
+      word-spacing: -1px;
+      letter-spacing: -.4px;
+      max-width: 500px;
+  }
+  .featured-well .featured-short-kicker {
+      margin: 40px 40px;
+      position: absolute;
+      font-weight: normal;
+      letter-spacing: -0.2px;
+      text-transform: uppercase;
+      color: #888;
+      font-size: 14px;
+      line-height: 14px;
+  }
+  .featured-well .featured-short-kicker a { color: #ff0b3a }
+  .featured-well .overlay {
+      width: 100%;
+      height: 100%;
+      background: rgba(11, 11, 11, 0.35);
+      webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      -webkit-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+  }
+  .featured-well .overlay-full-width {
+      width: 100%;
+      height: 100%;
+      background: rgba(11, 11, 11, 0.2);
+      webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      -webkit-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+  }
+  .featured-well .overlay:hover {
+      cursor: hand;
+      cursor: pointer;
+      background: #466c8c;
+      webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      -webkit-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+  }
+  .featured-well .overlay:hover a {
+      color: #ccc;
+      webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      -webkit-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+  }
+  .featured-clear-right { border-right: none }
+  @media (max-width: 1140px) {
+      .featured-tall-headline { font-size: 30px !important }
+  }
+  @media (max-width: 740px) {
+      .featured-one-byline { display: none }
+      .featured-well {
+          width: 100%;
+          border-right: none;
+      }
+      .featured-one-headline { padding: 213px 10px }
+      .featured-one-byline { margin: 0px }
+      .featured-one-kicker { margin: 180px 10px }
+      .featured-tall { height: 225px !important }
+      .featured-tall-headline,
+      .featured-one-headline {
+          padding: 90px 40px !important;
+          font-size: 24px !important;
+      }
+      .featured-tall-kicker,
+      .featured-one-kicker { margin: 20px 40px !important }
+      .featured-container .container { padding: 0 }
+  }
+
+
+  @progress-color:                   #466c8c;
+  /* https://css-tricks.com/reading-position-indicator/ */
+  progress {
+      /* Positioning */
+      position: fixed;
+      left: 0;
+      top: 53px;
+      z-index: 999;
+      /* Dimensions */
+      width: 100%;
+      height: .20em;
+      /* Reset the apperance */
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      /* Get rid of the default border in Firefox/Opera. */
+      border: none;
+      /* For Firefox/IE10+ */
+      background-color: transparent;
+      /* For IE10+, color of the progress bar */
+      color: #466c8c;
+  }
+  progress::-webkit-progress-bar { background-color: transparent }
+  .flat::-webkit-progress-value { background-color: #466c8c }
+  .flat::-moz-progress-bar { background-color: #466c8c }
+  .single::-webkit-progress-value {
+         background-color: transparent;
+         background-image: -webkit-linear-gradient(left, transparent, red);
+
+  }
+
+   .single::-moz-progress-bar {
+         background-color: transparent;
+         background-image: -moz-linear-gradient(left, transparent, red);
+
+  }
+
+
+  .progress-container {
+      width: 100%;
+      background-color: transparent;
+      position: fixed;
+      top: 74px;
+      left: 0;
+      height: 2em;
+      display: block;
+  }
+  .progress-bar {
+      background-color: #466c8c;
+      width: 50%;
+      display: block;
+      height: inherit;
+  }

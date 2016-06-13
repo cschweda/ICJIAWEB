@@ -70,13 +70,16 @@
 
 
 		<!-- Google Fonts -->
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900" />
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" />
+		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900" />
+
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900" />
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic,400italic' rel='stylesheet' type='text/css'>
-
+ -->
 
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Alfa+Slab+One' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Neuton:400,700,800,200,300,400italic' rel='stylesheet' type='text/css'>
+			<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" />
 
 
 		<!-- End Google Fonts -->
@@ -126,6 +129,15 @@
 		{{theme:partial src="tvpp-nav"}}
 		{{ theme:partial src="tvpp-breadcrumbs"}}
 
+		{{ if (progressBar==='true') }}
+		{{ theme:partial src="tvpp-progress-bar" }}
+			{{/if}}
+
+
+			{{ if (displaySplash==='true') }}
+				{{ theme:partial src="tvpp-splash"}}
+			{{/if}}
+
 
 					<!-- ////////////////////////////////////////////////// content-start \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 					<div id="content-wrap-tvpp">
@@ -152,20 +164,20 @@
 		<script>
 		 $(document).ready(function ($) {
 
-			$('.scroll-reminder-up').hide();
+			// $('.scroll-reminder-up').show();
 			 $('#news-scroller').perfectScrollbar();
 
 		 });
 
-		 $(document).on('ps-y-reach-end', function () {
-  	 	$('.scroll-reminder-down').fadeOut();
-				// $('.scroll-reminder-up').fadeIn();
-		})
+		//  $(document).on('ps-y-reach-end', function () {
+  	//  	$('.scroll-reminder-down').fadeOut();
+		// 		$('.scroll-reminder-up').fadeIn();
+		// })
 
-		$(document).on('ps-y-reach-start', function () {
-		 $('.scroll-reminder-down').fadeIn();
-		// $('.scroll-reminder-up').fadeOut();
-	 })
+	// 	$(document).on('ps-y-reach-start', function () {
+	// 	 $('.scroll-reminder-down').fadeIn();
+	// 	$('.scroll-reminder-up').fadeOut();
+	//  })
 
 	// 	$(document).on('ps-scroll-up', function () {
 	// 	 $('.scroll-reminder-up').fadeIn();
