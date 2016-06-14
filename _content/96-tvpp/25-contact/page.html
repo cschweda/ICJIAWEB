@@ -24,16 +24,12 @@ breadcrumbs: 'true'
 
 
       <div style="margin-bottom: 45px">
-        <h3 class="h4" style="padding: 0; margin: 0; padding-bottom: 8px; border-bottom: 1px solid #ccc; margin-bottom: 15px;">Junaid Afeef, J.D. | <span style="color: #888">Director</span></h3>
-        <div class="expander-bio">
-          <img src="{{ transform src="/assets/tvpp/img/blank-photo.jpg" height="125"}}"
-              style="float: left; padding-right: 14px;" />
-        <p>
 
-        Sed finibus, neque eget rhoncus malesuada, nisi enim fermentum mauris, vel ornare erat eros eget ipsum. Etiam ante nulla, iaculis at nulla sed, ultricies tincidunt nisl. Quisque non quam auctor, sollicitudin dui vel, ultrices eros. Praesent sit amet enim sed orci mollis porta sed eu leo. Etiam eu pretium ligula. Aliquam ultricies posuere felis at pretium. Phasellus pretium aliquet consequat. Vestibulum pulvinar nisl ut egestas blandit. Integer commodo nisi vitae ex vulputate, et consequat leo iaculis. Vestibulum et maximus turpis. Nullam bibendum, sem eu varius posuere, elit felis suscipit diam, ac rhoncus metus nisi dignissim sapien. Donec sit amet enim eu est pharetra pharetra a eu est. Cras dignissim ultrices justo, sed laoreet mauris malesuada ut. Aenean malesuada ut quam ac pharetra. Sed vel egestas quam, vel dignissim lacus. Morbi nec iaculis mauris.</p>
+  {{theme:partial src="tvpp-bios"}}
       </div>
 
-      </div>
+
+
 
       <hr>
 
@@ -43,7 +39,56 @@ Illinois Criminal Justice Information Authority<br>
 Chicago, Illinois 60606<br>
 T: 312-793-8550<br>
 C: 312-497-4236<br>
-E: <a href="email: junaid.afeef@illinois.gov">junaid.afeef@illinois.gov</a><br>
+E: <a href="email: junaid.afeef@illinois.gov">junaid.afeef@illinois.gov</a><br><br><br>
+
+<strong>Illinois Criminal Justice Information Authority</strong><br>
+
+300 W. Adams Street, Suite 200<br>
+Chicago, Illinois 60606<br>
+T: 312-793-8550<br>
+F: 312-793-8422<br>
+E: <a href="email: cja.info@illinois.gov">cja.info@illinois.gov</a><br>
+
+<br>
+
+<!-- {{ email_form subject="Contact Form" to="christopher.schweda@illinois.gov" required="first-name" }}
+    {{ if error}}
+        <h1>Error</h1>
+        <ul>
+        {{ errors }}
+            <li>{{error}}</li>
+        {{ /errors }}
+        </ul>
+    {{ endif }}
+
+    {{ if success }}
+        <p>Your message has been sent!</p>
+    {{ else }}
+	<fieldset>
+		<label>Your Name:</label>
+		<div class="form-left">
+			<label class="small">First Name<span class="required">*</span></label>
+			<input type="text" name="first-name" class="text-field" id="first-name" size="50" value="" />
+		</div>
+		<div class="form-right">
+			<label class="small">Last Name<span class="required">*</span></label>
+			<input type="text" name="last-name" class="text-field" id="last-name" size="50" value="" />
+		</div>
+		<div class="form-left">
+			<label>Email Address<span class="required">*</span></label>
+			<input type="text" name="from" class="text-field" id="email" size="50" value="" />
+		</div>
+
+		<div class="form-left">
+			<label>Your Message<span class="required">*</span></label>
+			<textarea name="message" id="message" rows="18" cols="34"></textarea>
+		</div>
+		<div class="form-right">
+			<input type="submit" class="button small" value=" Submit Form " />
+		</div>
+	</fieldset>
+    {{ endif }}
+{{ /email_form }} -->
 
 
 

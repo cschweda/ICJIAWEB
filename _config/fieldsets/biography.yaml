@@ -26,6 +26,13 @@ fields:
       - Human Resources
       - Office of Fiscal Management
 
+  removeAuthority:
+    display: Remove the word 'Authority' before title?
+    type: select
+    default: 'false'
+    options:
+      - 'true'
+      - 'false'
 
   role:
     display: Authority Role
@@ -68,6 +75,13 @@ fields:
       - inactive
       - nonicjia
 
+  affiliation:
+    display: Agency affiliated with ICJIA (Leave as 'ICJIA' if none)
+    type: select
+    options:
+      - icjia
+      - tvpp
+      - ifvcc
 
 
   authorPhoto:
