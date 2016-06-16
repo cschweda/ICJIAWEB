@@ -4,7 +4,7 @@
 
 
 <!-- Check for pinned entries -->
-    {{ entries:listing folder="news" limit="3" show_past="true" show_future="false" conditions="siteDisplay:ICJIA,pinned:true"}}
+    {{ entries:listing folder="news" limit="3" show_past="true" show_future="false" conditions="siteDisplay:ICJIA,pinned:Yes"}}
 
     {{ if no_results }}
     {{ else }}
@@ -34,9 +34,6 @@
 
 
 
-
-
-
     {{ endif }}
 
     {{ /entries:listing }}
@@ -45,7 +42,7 @@
 
 <!-- Display all news (minus pinned entries) -->
 
-  {{ entries:listing folder="news|press" limit="{newsItemsHome}" show_past="true" show_future="false" conditions="siteDisplay:ICJIA,pinned:!true"}}
+  {{ entries:listing folder="news|press" limit="{newsItemsHome}" show_past="true" show_future="false" conditions="siteDisplay:ICJIA,pinned:!Yes"}}
 	    {{ if no_results }}
 		  <p class="sorry">
 			No news is good news.<br>

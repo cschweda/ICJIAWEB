@@ -59,10 +59,10 @@ fields:
     create: false
     max_items: 1
     default:
-      - 'False'
+      - 'No'
     options:
-      - 'False'
-      - 'True'
+      - 'No'
+      - 'Yes'
 
   keywords:
     display: Keywords
