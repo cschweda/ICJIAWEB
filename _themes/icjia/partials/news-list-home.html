@@ -4,7 +4,7 @@
 
 
 <!-- Check for pinned entries -->
-    {{ entries:listing folder="news" limit="3" show_past="true" show_future="false" conditions="siteDisplay:ICJIA,pinned:Yes"}}
+    {{ entries:listing folder="news" limit="{pinnedItemsHome}" show_past="true" show_future="false" conditions="siteDisplay:ICJIA,pinned:Yes"}}
 
     {{ if no_results }}
     {{ else }}

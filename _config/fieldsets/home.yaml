@@ -84,8 +84,20 @@ fields:
     display: Boxed kicker for Photo 3
     default:
 
+  pinnedItemsHome:
+    display: Maximum 'pinned' (static) news items on front page
+    required: true
+    type: select
+    default: 2
+    options:
+      - 1
+      - 2
+      - 3
+      - 4
+
+
   newsItemsHome:
-    display: News Items on Front Page
+    display: Maximum news items on Front Page
     required: true
     type: select
     default: 5
