@@ -17,13 +17,13 @@
 <!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse navbar-ex1-collapse">
   <ul class="nav navbar-nav navbar-right" style="text-transform: uppercase">
-    <li> <a href="/tvpp" class="navLink menuTop page-scroll"> Home </a> </li>
-    <li> <a href="/tvpp/our-approach" class="navLink menuTop page-scroll" > Our Approach </a> </li>
-    <li> <a href="/tvpp/research" class="navLink menuTop page-scroll" > Research </a> </li>
-    <li> <a href="/tvpp/resources" class="navLink menuTop page-scroll" > Resources </a> </li>
+    <li {{if !segment_2}}class='active'{{/if}}> <a href="/tvpp" class="navLink menuTop page-scroll"> Home </a> </li>
+    <li {{if segment_2 === 'our-approach'}}class='active'{{/if}}> <a href="/tvpp/our-approach" class="navLink menuTop page-scroll" > Our Approach </a> </li>
+    <li {{if segment_2 === 'research'}}class='active'{{/if}}> <a href="/tvpp/research" class="navLink menuTop page-scroll" > Research </a> </li>
+    <li {{if segment_2 === 'resources'}}class='active'{{/if}}> <a href="/tvpp/resources" class="navLink menuTop page-scroll" > Resources </a> </li>
 
-      <li> <a href="/tvpp/partners" class="navLink menuTop page-scroll" > Partners </a> </li>
-        <li> <a href="/tvpp/contact" class="navLink menuTop page-scroll" > Contact </a> </li>
+      <li {{if segment_2 === 'partners'}}class='active'{{/if}}> <a href="/tvpp/partners" class="navLink menuTop page-scroll" > Partners </a> </li>
+        <li {{if segment_2 === 'contact'}}class='active'{{/if}}> <a href="/tvpp/contact" class="navLink menuTop page-scroll" > Contact </a> </li>
 
 
     <!--  <li class="dropdown " data-animate="animated fadeInUp" style="z-index:500;"> <a href="#" class="dropdown-toggle " data-toggle="dropdown"> <i class="fa fa-search"> </i> </a>
