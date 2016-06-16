@@ -39,10 +39,10 @@ $(document).ready(function() {
       $(".top-bar").fadeOut(100);
       $(".offCanvasButton").show();
 
-      $(".navbar-default .navbar-nav > .active > a").css({
-        "background-color": "#aa3c3e",
-        "color": "#fff"
-      });
+      // $(".navbar-default .navbar-nav > .active > a").css({
+      //
+      //   "color": "#e28642"
+      // });
 
       $(".navbar-brand-tvpp").css({
         "font-size": "14px"
@@ -59,10 +59,10 @@ $(document).ready(function() {
 
       $("#navContainer").addClass("container");
       //$(".navbar-collapse > ul").addClass("pull-right");
-      $(".navbar-default .navbar-nav > .active > a").css({
-        "background-color": "#fff",
-        "color": "#222"
-      });
+      // $(".navbar-default .navbar-nav > .active > a").css({
+      //
+      //   "color": "#e28642"
+      // });
       $(".top-bar").fadeIn(100);
       $(".offCanvasButton").hide();
 
