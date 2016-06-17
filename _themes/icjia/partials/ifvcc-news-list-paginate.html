@@ -31,7 +31,7 @@ function getCircuitName(c) {
   //$(myCircuitClass).html(Number(c));
   var circuitNum=Number(c);
   var circuitInsert = ordinal_suffix(circuitNum) + ' Circuit';
-  if (circuitInsert == '0th Circuit') {circuitInsert = 'All Circuits'}
+  if (circuitInsert == '0th Circuit') {circuitInsert = ''}
   if (c==='500') {
     $(myCircuitClass).html('Cook County');
   } else {
