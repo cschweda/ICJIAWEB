@@ -39,10 +39,11 @@ function ordinal_suffix(i) {
 		return i + "th";
 }
 var s=Number('{{circuit}}');
-var myCircuit = ordinal_suffix(s);
+var myCircuit = ordinal_suffix(s) + ' Circuit';
+if (myCircuit == '0th Circuit') {myCircuit = 'All Circuits'}
 if (myCircuit == '500th') {
 	$('#circuit-name').html('Cook County');
 } else {
-	$('#circuit-name').html(myCircuit + ' Circuit');
+	$('#circuit-name').html(myCircuit);
 }
 </script>

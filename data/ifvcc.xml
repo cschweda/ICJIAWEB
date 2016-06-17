@@ -135,7 +135,7 @@ showLegend="0">
 		<entity id='155' value='100'  toolText="Putnam County{br} 10th Circuit"/>
 		<entity id='157' value='200'  toolText="Randolph County{br} 20th Circuit"/>"/>
 		<entity id='159' value='20'  toolText="Richland County{br} 2nd Circuit"/>"/>
-		<entity id='161' value='140'  toolText="Rock Island County{br} Circuit"/>
+		<entity id='161' value='140'  toolText="Rock Island County{br} 14th Circuit"/>
 		<entity id='163' value='200'  toolText="St. Clair County{br} 20th Circuit"/>"/>
 		<entity id='165' value='10'  toolText="Saline County{br} 1st Circuit"/>
 		<entity id='167' value='70'  toolText="Sangamon County{br} 7th Circuit"/>
