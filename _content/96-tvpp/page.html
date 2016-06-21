@@ -117,7 +117,7 @@ super_positive_keywords:
    <div class="container-fluid" style="margin: 0; padding: 0">
 
    <div class="equal">
-   <div class="col-sm-3 col-md-3 col-lg-3 icjia-hover">
+   <div class="col-sm-4 col-md-4 col-lg-4 icjia-hover">
    	<a href="/tvpp/our-approach">
    <div class="service-inner">
 
@@ -126,27 +126,27 @@ super_positive_keywords:
    </div>
    </a>
    </div>
-   <div class="col-sm-3 col-md-3 col-lg-3 icjia-hover">
+   <div class="col-sm-4 col-md-4 col-lg-4 icjia-hover">
    	<a href="/tvpp/research" >
    <div class="service-inner">
 
    <h6 class="entry-title">Research</h6>
-   <p class="p-description">Illinois is home to 23 active hate groups, and in 2014 there have were 131 cases of hate crimes in the state. Of those, 101 were cases of intimidation, assault and aggravated assault.</p>
+   <p class="p-description">The Targeted Violence Prevention Program makes outside research on targeted violence prevention and countering violent extremism more accessible to community-based and faith-based organizations.  TVPP can also partner with community-level efforts to conduct research on current and new targeted violence prevention programs.</p>
    </div>
    </a>
    </div>
 
-   <div class="col-sm-3 col-md-3 col-lg-3 icjia-hover">
+   <div class="col-sm-4 col-md-4 col-lg-4 icjia-hover">
    	<a href="/tvpp/resources" >
    <div class="service-inner">
 
    <h6 class="entry-title">Resources</h6>
-   <p class="p-description">Additional targeted violence resources.</p>
+   <p class="p-description">The Targeted Violence Prevention Program is developing new resources and curating existing resources to help community-based and faith-based organizations develop and sustain community-level programs to prevent ideologically inspired targeted violence.</p>
    </div>
    </a>
    </div>
 
-   <div class="col-sm-3 col-md-3 col-lg-3 icjia-hover">
+   <!-- <div class="col-sm-3 col-md-3 col-lg-3 icjia-hover">
    	<a href="/tvpp/partners" >
    <div class="service-inner">
 
@@ -155,7 +155,7 @@ super_positive_keywords:
 </p>
    </div>
    </a>
-   </div>
+   </div> -->
 
 
 
@@ -189,7 +189,7 @@ super_positive_keywords:
 <p>
 Ideologically inspired targeted violence is a low frequency/high impact crime.  Whether it takes the form of domestic terrorism or violent hate crimes, it is a scourge on our society, and it strains the healthy social cohesion essential to our diverse communities.</p>
 
-<p>Illinois is home to 23 active hate groups, and in 2014 there have were 131 cases of hate crimes in the state.  Of those, 101 were cases of intimidation, assault and aggravated assault.</p>
+<p>Illinois is home to 23 active hate groups, and in 2014 there have were 131 cases of hate crimes in the state.  Of those, 101 were cases of intimidation, assault and aggravated assault. Between March 2014 and April 2016 there were 5 individuals from Illinois charged with ISIS-related offenses.</p>
 
 <div class="text-center" style="margin-top: 50px">
 
@@ -249,7 +249,7 @@ Ideologically inspired targeted violence is a low frequency/high impact crime.  
 
               <div class="news-content">
 
-              {{ entries:listing folder="/ifvcc/ifvcc-news" limit="3" show_past="true" show_future="true"}}
+              {{ entries:listing folder="/tvpp/tvpp-news" limit="10" show_past="true" show_future="true"}}
             	    {{ if no_results }}
             		  <p class="sorry">
             			No news is good news.<br>
@@ -267,8 +267,8 @@ Ideologically inspired targeted violence is a low frequency/high impact crime.  
                     {{endif}}
                     <span style="font-weight: 400; color: #666" {{if !updatedItem}} class="" data-postType="news" data-postDate="{{date format='Y-m-d'}}"{{endif}}>{{ date }}</span> | <a href="{{ url }}">{{if displayTitle}}{{ displayTitle }}{{else}}{{title}}{{endif}}</a></div>
 
-                      <div class="expander-news">
-                      {{ content|widont }}
+                      <div class="">
+                      {{ content }}
                       </div>
 
                     </div>

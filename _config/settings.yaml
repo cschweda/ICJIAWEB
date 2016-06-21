@@ -54,7 +54,7 @@ _taxonomy:
   - orgtitle
   - unit
   - eligibility
-  - tags
+  - tvpptags
 
 # Turns your slugs into pretty urls (spaces become "-" instead of %20)
 _taxonomy_slugify: true

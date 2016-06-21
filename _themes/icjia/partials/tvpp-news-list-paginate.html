@@ -1,0 +1,60 @@
+
+<style>
+
+.filter-group a:hover {cursor: pointer; cursor: hand;}
+#circuit-message {display: none}
+.btn {color: #000}
+</style>
+
+
+	<h1  class="main-head" style="margin-bottom: 30px">TVPP News Archive</h1>
+
+
+
+
+<div id="news-grid">
+
+{{ entries:listing folder="/tvpp/tvpp-news" show_past="true" show_future="true" }}
+
+<div class="news-single">
+
+  <h4 class="h4" style="text-transform: uppercase; font-weight: 700">
+  {{ title|widont }}
+</h4>
+
+
+<h4 class="h6 published">	<span style="color: #999; text-transform: uppercase">{{date}}</span>
+
+  {{if eventType}}&nbsp|&nbsp;
+  <span class="dv-purple" style="font-weight: 600; text-transform: uppercase;">
+{{ eventType_list}}</span>
+{{endif}}&nbsp&nbsp;
+
+
+</h4>
+
+
+<div style="margin-left: 10px; ">
+{{ content }}
+</div>
+
+
+
+
+        <hr/>
+
+
+
+
+</div>
+
+
+
+
+{{ /entries:listing }}
+</div>
+
+<div id="circuit-message" class="text-center" style="font-weight: 700">Sorry, no news items for selected circuit</div>
+
+
+<div style="height: 100px"></div>
