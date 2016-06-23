@@ -169,7 +169,7 @@ breadcrumbs: 'false'
 
           <div class="news-content" style="border-left: 1px solid #fff; padding-left: 30px;">
 
-            {{ entries:listing folder="/ifvcc/ifvcc-news" limit="3" show_past="true" show_future="true"}}
+            {{ entries:listing folder="/ifvcc/ifvcc-news" limit="4" show_past="false" sort_dir="asc" show_future="true"}}
           	    {{ if no_results }}
           		  <p class="sorry">
           			No news is good news.<br>
@@ -203,7 +203,7 @@ breadcrumbs: 'false'
           	{{ /entries:listing }}
 
             <div class="text-center" style="margin-top: 50px">
-            <a class="btn btn-default" href="/ifvcc/ifvcc-news" role="button" style="text-transform: uppercase; font-family: 'Lato'; color: #000; margin-bottom: 20px;">Event archive&nbsp;&raquo;</a>
+            <a class="btn btn-default" href="/ifvcc/ifvcc-news" role="button" style="text-transform: uppercase; font-family: 'Lato'; color: #000; margin-bottom: 20px;">All News & Events&nbsp;&raquo;</a>
             </div>
 
 

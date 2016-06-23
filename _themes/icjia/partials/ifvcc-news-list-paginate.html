@@ -31,7 +31,7 @@ function getCircuitName(c) {
   //$(myCircuitClass).html(Number(c));
   var circuitNum=Number(c);
   var circuitInsert = ordinal_suffix(circuitNum) + ' Circuit';
-  if (circuitInsert == '0th Circuit') {circuitInsert = ''}
+  if (circuitInsert == '0th Circuit') {circuitInsert = 'All Circuits'}
   if (c==='500') {
     $(myCircuitClass).html('Cook County');
   } else {
@@ -46,7 +46,7 @@ function getCircuitName(c) {
 </script>
 
 
-<h2 class="h3" style="border-bottom: 1px solid #ccc; padding-bottom: 10px; margin-bottom: 30px;">IFVCC Event Archive</h2>
+<h2 class="h3" style="border-bottom: 1px solid #ccc; padding-bottom: 10px; margin-bottom: 30px;">IFVCC News & Events</h2>
 
 
 <div class="text-center well white filter-group" style="font-family: 'Lato', sans-serif; color: #777; ">
@@ -86,7 +86,7 @@ function getCircuitName(c) {
 
 <div id="circuit-grid">
 
-{{ entries:listing folder="/ifvcc/ifvcc-news" show_past="true" show_future="true" }}
+{{ entries:listing folder="/ifvcc/ifvcc-news" show_past="false" show_future="true" }}
 
 <div class="circuit-single {{circuit}}">
 
