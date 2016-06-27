@@ -83,7 +83,7 @@ h2.h5 {font-weight: 700}
 
 							{{else}}
 							<div style="margin-bottom: 15px">
-						<span style="text-transform: uppercase; color: #aaa;">{{date}}</span> | <span style="text-transform: uppercase; font-weight: 900"><a href="{{url}}">{{title}}&nbsp;&raquo;</a></span>
+					<span style="text-transform: uppercase; font-weight: 900"><a href="{{url}}">{{title}}&nbsp;&raquo;</a></span>
 
 					</div>
 							{{ endif }}
@@ -93,13 +93,13 @@ h2.h5 {font-weight: 700}
               {{ entries:listing folder="/ifvcc/ifvcc-news" limit="3" sort_dir="desc" show_past="true" show_future="true"  conditions="circuit:{title}"}}
                 {{ if no_results }}{{else}}
                 <div style="margin-bottom: 15px">
-              <span style="text-transform: uppercase; color: #aaa;">{{date}}</span> | <span style="text-transform: uppercase; font-weight: 900"><a href="{{url}}">{{title}}&nbsp;&raquo;</a></span>
+              <span style="text-transform: uppercase; font-weight: 900"><a href="{{url}}">{{title}}&nbsp;&raquo;</a></span>
 
             </div>
                 {{ endif }}
                 	{{ /entries:listing }}
 
-									<div class="text-center"><a class="btn btn-default btn-sm" href="/ifvcc/ifvcc-news" style="color: #444;">All news & events&nbsp;&raquo;</a></div>
+									<div class="text-center" style="margin-top: 15px"><a class="btn btn-default btn-sm" href="/ifvcc/ifvcc-news" style="color: #444;">All news & events&nbsp;&raquo;</a></div>
 
 </div>
 

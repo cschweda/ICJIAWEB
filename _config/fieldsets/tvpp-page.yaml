@@ -1,0 +1,62 @@
+title: TVPP Page
+
+fields:
+  _template:
+    type: hidden
+    default: default-standard
+
+  keywords:
+    display: Keywords
+    required: false
+    default:
+    type: tags
+
+  upload:
+    type: file
+    destination: assets/pdf/
+    allowed: ['pdf']
+
+  breadcrumbs:
+    display: Display breadcrumbs?
+    type: select
+    options:
+      true: Yes, display the breadcrumbs
+      false: No, do not display the breadcrumbs
+
+
+  summary:
+    display: Page summary
+    required: false
+    default:
+    type: redactor
+
+  content:
+    display: Page Content
+    required: false
+    default:
+    type: redactor
+
+
+  positive_keywords:
+    display: Positive Search Keywords
+    required: false
+    default:
+    type: tags
+
+  negative_keywords:
+    display: Negative Search Keywords
+    required: false
+    default:
+    type: tags
+
+  super_positive_keywords:
+    display: Super positive Search Keywords (weighted heavily for search -- not visible on site)
+    required: false
+    default:
+    type: tags
+
+  super_negative_keywords:
+    display: Super negative Search Keywords (weighted heavily for search -- not visible on site)
+    required: false
+    default:
+    type: tags

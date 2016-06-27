@@ -138,6 +138,10 @@
 				{{ theme:partial src="tvpp-splash"}}
 			{{/if}}
 
+			{{if (tvpp-social-bar === 'top') }}
+			{{ theme:partial src="tvpp-social-bar" }}
+			{{/if}}
+
 
 					<!-- ////////////////////////////////////////////////// content-start \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 					<div id="content-wrap-tvpp">
@@ -145,8 +149,9 @@
 					</div>
 					<!-- ////////////////////////////////////////////////// content-end \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 
-
-						{{ theme:partial src="tvpp-social-footer" }}
+			{{if (tvpp-social-bar === 'bottom') }}
+			{{ theme:partial src="tvpp-social-bar" }}
+			{{/if}}
 			{{ theme:partial src="footer-dark" }}
 
 
