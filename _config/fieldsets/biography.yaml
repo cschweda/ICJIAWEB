@@ -34,6 +34,14 @@ fields:
       - 'true'
       - 'false'
 
+  displayFullJob:
+    display: Display the full job line -- X is the Authority Y?
+    default: 'true'
+    type: select
+    options:
+      - 'true'
+      - 'false'
+
   role:
     display: Authority Role
     type: select

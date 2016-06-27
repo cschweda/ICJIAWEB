@@ -11,9 +11,10 @@
 
 
 
-	{{if role == 'Staff'}}
+{{if role == 'Staff'}}
 		{{if orgtitle}}
-  		<p>{{title}} is
+  		<p>
+        <!--{{title}} is
 				{{if modifier == 'a'}}
 				an
 				{{else}}
@@ -26,7 +27,7 @@
 					{{/if}}
 				{{else}}
 				{{organization}}
-				{{endif}} {{orgtitle}}.
+				{{endif}} {{orgtitle}}.-->
 				<div style="margin-top: 5px; margin-bottom: 5px"></div>
 				{{if phone}}{{phone}}{{else}}(312) 793-8550{{endif}}&nbsp;&nbsp;
   		{{theme:partial src="author-social" use_context="true"}}</p>
