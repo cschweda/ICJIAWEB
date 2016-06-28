@@ -3,7 +3,11 @@ title: TVPP Page
 fields:
   _template:
     type: hidden
-    default: default-standard
+    default: default-blank
+
+  _layout:
+    type: hidden
+    default: tvpp-default
 
   keywords:
     display: Keywords
@@ -13,7 +17,7 @@ fields:
 
   upload:
     type: file
-    destination: assets/pdf/
+    destination: assets/tvpp/pdf/
     allowed: ['pdf']
 
   breadcrumbs:
@@ -23,9 +27,39 @@ fields:
       true: Yes, display the breadcrumbs
       false: No, do not display the breadcrumbs
 
+  splash:
+    display: Splash Photo (Photo across top of page -- also used for social media image)
+    type: file
+    allowed: [png, jpg, jpeg]
+    destination: assets/tvpp/img/
+
+  displaySplash:
+    display: Display splash photo on page?
+    type: select
+    default: 'false'
+    options:
+      - 'false'
+      - 'true'
+
+  progressBar:
+    display: Display reading progress bar on page?
+    type: select
+    default: 'false'
+    options:
+      - 'false'
+      - 'true'
+
+  tvppSocialBar:
+    display: Display TVPP social bar on page?
+    type: select
+    default: 'none'
+    options:
+      - 'none'
+      - 'top'
+      - 'bottom'
 
   summary:
-    display: Page summary
+    display: Page summary (Summary displays in search results)
     required: false
     default:
     type: redactor
@@ -34,7 +68,7 @@ fields:
     display: Page Content
     required: false
     default:
-    type: redactor
+    type: textarea
 
 
   positive_keywords:
