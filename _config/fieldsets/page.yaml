@@ -34,7 +34,7 @@ fields:
     display: Page Content
     required: false
     default:
-    type: redactor
+    type: textarea
 
   overrideCSS:
     display: Override CSS file
