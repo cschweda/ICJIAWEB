@@ -24,12 +24,7 @@ $(function() {
     tooltip: {
       valueSuffix: ''
     },
-    legend: {
-      layout: 'vertical',
-      align: 'right',
-      verticalAlign: 'middle',
-      borderWidth: 0
-    },
+
     series: [{
       name: 'Identification',
       data: [1.61, 1.83, 1.69]
