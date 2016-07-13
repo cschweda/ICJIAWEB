@@ -110,7 +110,3 @@
 /contact:
     url: /about/contact
     type: 301
-
-/gata:
-    url: /grants/gata
-    type: 301

@@ -25,6 +25,12 @@ module.exports = function(grunt) {
 				],
 				dest: 'js/tvpp.js',
 			},
+			gata: {
+				src: [
+					'js/gata/*.js'
+				],
+				dest: 'js/gata.js',
+			},
 		},
 
 		uglify: {
@@ -38,7 +44,8 @@ module.exports = function(grunt) {
 				files: {
 					'js/icjia.js': ['js/icjia.js'],
 					'js/tvpp.js': ['js/tvpp.js'],
-					'js/mvtpc.js': ['js/mvtpc.js']
+					'js/mvtpc.js': ['js/mvtpc.js'],
+					'js/gata.js': ['js/gata.js']
 				}
 			}
 		},
@@ -56,14 +63,17 @@ module.exports = function(grunt) {
 					"css/icjia.css": "less/icjia-main.less",
 					"css/ifvcc.css": "less/ifvcc-main.less",
 					"css/tvpp.css": "less/tvpp-main.less",
-					"css/mvtpc.css": "less/mvtpc-main.less" // destination file and source file
+					"css/mvtpc.css": "less/mvtpc-main.less",
+					"css/gata.css": "less/gata-main.less"
+
+					// destination file and source file
 				}
 			}
 		},
 
 		watch: {
 			js: {
-				files: ['js/app/*.js', 'js/mvtpc/*.js', 'js/tvpp/*.js'],
+				files: ['js/app/*.js', 'js/mvtpc/*.js', 'js/gata/*.js', 'js/tvpp/*.js'],
 				tasks: ['concat'],
 				options: {
 					livereload: true,
