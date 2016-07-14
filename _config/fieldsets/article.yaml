@@ -205,7 +205,10 @@ fields:
                         display: Report Type (Full Report, Presentation, etc.)
                         default: Full Report
                         required:
-
+                    reportCoverImage:
+                        type: text
+                        display: Report Cover Image (leave blank if same as splash image)
+                        
 
 
 

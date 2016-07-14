@@ -62,9 +62,13 @@ table p {text-indent: 0;}
 						<a href="{{pdf}}">
 
 						<div style="padding-top: 5px; padding-bottom: 5px; font-size: 12px; font-family: 'Lato', sans-serif; text-transform: uppercase; font-weight: 700" class="text-center">{{reportType}}</div>
-
+						{{if reportCoverImage }}
+						<img src="{{ transform src="{ reportCoverImage }" width="170"}}"
+								style="" />
+						{{else}}
 						<img src="{{ transform src="{ splash }" width="170"}}"
 								style="" />
+						{{/if}}
 
 								<div style="padding-top: 5px; padding-bottom: 5px; font-size: 10px; font-family: 'Lato', sans-serif; text-transform: uppercase; font-weight: 700" class="text-center">{{title}}</div>
 
