@@ -200,6 +200,12 @@ fields:
                         display: Path /assets/articles/
                         required:
                         default: /assets/articles/
+                    reportType:
+                        type: text
+                        display: Report Type (Full Report, Presentation, etc.)
+                        default: Full Report
+                        required:
+
 
 
 

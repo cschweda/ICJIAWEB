@@ -48,16 +48,20 @@ table p {text-indent: 0;}
 				</ul>
 
 
-			  <!-- <h5 style="color: rgb(68, 68, 68); text-transform: uppercase; padding-bottom: 5px; font-weight: 900; margin-bottom: 10px; margin-left: 10px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;">Download</h5> -->
+ {{if pdf_uploads }}
+		<h5 style="color: rgb(68, 68, 68); text-transform: uppercase; padding-bottom: 5px; font-weight: 900; margin-bottom: 10px; margin-left: 10px; margin-top: 30px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;">Download</h5>
 
-				<!-- {{if tab2 }}
+
+
+
+			   {{pdf_uploads}}
 
 				<div class="text-center" style="margin-top: 25px;">
 					<div style="width: 175px; border: 1px solid #888; padding: 2px; margin: 0 auto;  ">
 
-						<a href="">
+						<a href="{{pdf}}">
 
-						<div style="padding-top: 5px; padding-bottom: 5px; font-size: 12px; font-family: 'Lato', sans-serif; text-transform: uppercase; font-weight: 700">DOWNLOAD {{tab2}}</div>
+						<div style="padding-top: 5px; padding-bottom: 5px; font-size: 12px; font-family: 'Lato', sans-serif; text-transform: uppercase; font-weight: 700">{{reportType}}</div>
 
 						<img src="{{ transform src="{ splash }" width="170"}}"
 								style="" />
@@ -68,7 +72,9 @@ table p {text-indent: 0;}
 					</div>
 				</div>
 
-				{{/if}} -->
+				  {{/pdf_uploads}}
+
+				{{/if}}
 
 			</div>
 	</div>
