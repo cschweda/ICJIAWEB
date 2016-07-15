@@ -208,7 +208,7 @@ fields:
                     reportCoverImage:
                         type: text
                         display: Report Cover Image (leave blank if same as splash image)
-                        
+
 
 
 
