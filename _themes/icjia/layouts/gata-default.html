@@ -67,11 +67,16 @@
 
 
 		<!-- Google Fonts -->
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900" />
+		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900" />
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" />
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900" />
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic,400italic' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'> -->
+
+
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cardo:400,700,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:300,700,900,500' rel='stylesheet' type='text/css'>
 
 
 		<!-- End Google Fonts -->
@@ -81,7 +86,7 @@
 			<script src="{{ theme:asset src='bower_components/jquery-easing-original/jquery.easing.min.js' }}"></script>
 
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<script src="https://use.fontawesome.com/389ef7729c.js"></script>
 
 
 		<!-- jasny bootstrap -->
@@ -91,7 +96,11 @@
 
 		<script src="{{ theme:asset src='bower_components/moment/min/moment.min.js' }}"></script>
 
-  	<link rel="stylesheet" property="stylesheet" href="{{ theme:asset src='bower_components/bx-slider.js/dist/jquery.bxslider.min.css'}}">
+
+
+
+		<link href="{{theme:asset src='bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css'}}" rel="stylesheet">
+		<script src="{{theme:asset src='bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js'}}"></script>
 
 
 
@@ -125,17 +134,24 @@
 
 
 		<script src="{{ theme:asset src='bower_components/bootstrap/dist/js/bootstrap.min.js' }}"></script>
-		<script src="{{ theme:asset src='bower_components/bx-slider.js/dist/jquery.bxslider.min.js' }}"></script>
-		<script src="{{ theme:asset src='bower_components/jquery-countTo/jquery.countTo.js' }}"></script>
+
 		<script src="{{ theme:asset src='js/gata.js' }}"></script>
 
 
 
 
 		<script>
+		 $(document).ready(function ($) {
+
+			// $('.scroll-reminder-up').show();
+			 $('#news-scroller').perfectScrollbar();
+
+		 });
 
 
-		</script>
+
+
+	 </script>
 
 
 

@@ -7,6 +7,8 @@
 
 
 
+@gata-main: #234c3b;
+
 /*!
  * Start Bootstrap - Modern Business HTML Template (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
@@ -25,14 +27,17 @@
 
 
 body{
-  font-family: 'Open Sans', sans-serif;
+  padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
   background: #fff;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   cursor:default;
-  font-size: 16px;
   font-weight: 400;
   color:#555;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  line-height: 2.028571429;
+  background-color: #fefefe;
 }
 
 html,
@@ -40,21 +45,28 @@ body {
   height: 100%;
 }
 
-body {
-  padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-}
-
-
 * {
   outline:none;
 }
-a {
-  text-decoration: none;
-  color: #A94545;
+a, a:hover {
+    color: @gata-main;
+    // -webkit-transition: all 0.3s ease-in-out;
+    // -moz-transition: all 0.3s ease-in-out;
+    // -ms-transition: all 0.3s ease-in-out;
+    // -o-transition: all 0.3s ease-in-out;
+    // transition: all 0.3s ease-in-out;
 }
-a:hover{
-  text-decoration: none;
-  color: #ccc;
+
+a {font-weight: 700}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Montserrat',serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin-bottom: 1.1em;
 }
 
 a {
@@ -75,16 +87,9 @@ img {
 
 .countup-finished {font-weight: 900;}
 
-h1, h2, h3, h4, h5, h6 {font-weight: 500; font-family: 'Roboto', sans-serif;}
 
+.gata-main {color: @gata-main}
 
-.mvtpc-red {color: #a94545}
-
-
-
-
-
-  .mvtpcRed {color: #a94545}
 
   .navbar-nav.navbar-right:last-child {
     margin-right: 15px;
@@ -98,9 +103,9 @@ h1, h2, h3, h4, h5, h6 {font-weight: 500; font-family: 'Roboto', sans-serif;}
 
 
 
-  .mvtpc-item {margin-bottom: 50px}
-  .mvtpc-item.last {margin-bottom: 0px}
-  .mvtpc-item h2 {font-weight: 600; line-height: 26px;}
+  .gata-item {margin-bottom: 50px}
+  .gata-item.last {margin-bottom: 0px}
+  .gata-item h2 {font-weight: 600; line-height: 26px;}
 
   .new-item {
   font-weight: 700;
@@ -148,115 +153,26 @@ a.back-to-top {
 
 
 
-  /*-----------------------------------services and features------------------------------------------*/
 
-
-
-
-
-  .services-box{
-    text-align: center;
-    margin-bottom: 10px;
-    padding: 15px 10px;
-    border:0px solid #cccccc;
-    margin-top: 30px;
-  }
-  .services-box i{
-    color:#e12e36;
-    font-size: 60px;
-    margin-bottom: 15px;
-    width:100px;
-    height: 100px;
-    line-height: 90px;
-    text-align: center;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border: 2px solid #e12e36;
-    -webkit-transition: all 200ms ease-in;
-    -o-transition: all 200ms ease-in;
-    -moz-transition: all 200ms ease-in;
-    transition: all 200ms ease-in;
-  }
-  .services-box h1{
-    font-size: 20px;
-    margin-bottom:0px;
-    color: #444;
-    font-weight: 600;
-  }
-
-  .services-box a {
-    text-decoration: none;
-  }
-
-  .services-box a {
-    color: #444;
-  }
-
-  .services-box a:hover {
-    color: #aaa;
-  }
-
-
-
-  // .services-box:hover i{
-  //   border-color: #e12e36;
-  //   background-color: #e0535a;
-  //   color:#fff;
-  // }
-
-
-  .services-box.complete i{
-    border-color: #e12e36;
-    background-color: #e0535a;
-    color:#fff;
-  }
 
 
   /* navbar */
   .navbar {
     border-top: 3px solid #fff;
-    border-bottom: 3px solid #fff
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    -webkit-box-shadow: 5px 4px 12px -0px rgba(130,126,130,.37);
+    -moz-box-shadow: 5px 4px 12px -0px rgba(130,126,130,.37);
+    box-shadow: 5px 4px 12px -0px rgba(130,126,130,.37);
   }
 
 
   .navbar-default {
     background-color: #fff;
-    border-color: #fff;
-  }
-
-
-
-
-
-  .panel-title {font-size: 16px}
-
-
-
-  .panel-heading a:after {
-    font-family: 'Glyphicons Halflings';
-    content: "\e114";
-    float: right;
-    font-size: 12px;
-    color: #fff;
-  }
-  .panel-heading a.collapsed:after {
-    content: "\e080";
-  }
-
-
-  .panel-default > .panel-heading {
-    color: #fff;
-    background-color: #A94545 !important;
-    border-color: #ddd;
-  }
-
-
-
-  .panel-body {
-    padding: 10px 9px 10px 9px;
-    font-size: 12px;
 
   }
+
+
 
 
 
@@ -266,9 +182,9 @@ a.back-to-top {
     margin-bottom: 30px;
     text-align: center;
     color: #f8f8f8;
-    background: url(/assets/mvtpc/img/mvtpc-car-01.jpg) no-repeat center center;
+    background: url(/assets/gata/img/gata-splash01.jpg) no-repeat center center;
     background-size: cover;
-    height: 600px;
+    height: 450px;
   }
   .intro-message {
     position: relative;
@@ -296,7 +212,7 @@ a.back-to-top {
 
   .topSlug h4 {font-size: 20px; color: #fff; line-height: 34px;}
 
-  .mvtpc-bold {
+  .gata-bold {
     font-weight: 800
   }
 
@@ -311,11 +227,11 @@ a.back-to-top {
   }
 
 
-.navbar-brand-illinois {font-weight: 900; font-size: 22px; color: #000;}
+.navbar-brand-illinois {font-weight: 900; font-size: 19px; color: #000;}
 
-.navbar-brand-mvtpc {text-transform: uppercase; color: #A94545; font-weight: 700; font-size: 22px}
+.navbar-brand-gata {text-transform: uppercase; color: @gata-main; font-weight: 900; font-size: 19px}
 
-#mvtpc-mini {
+#gata-mini {
     float: left;
     padding-top: 14px;
     padding-left: 0px;
@@ -479,9 +395,9 @@ footer h3.h4 {font-weight: 700; color: #fff}
 
     .navbar-brand-illinois {font-size: 18px;}
 
-    .navbar-brand-mvtpc {font-size: 18px;}
+    .navbar-brand-gata {font-size: 18px;}
 
-      #mvtpc-mini {display: none;}
+      #gata-mini {display: none;}
 
 
   }
@@ -490,9 +406,9 @@ footer h3.h4 {font-weight: 700; color: #fff}
 
     .navbar-brand-illinois {display: none;}
 
-    .navbar-brand-mvtpc {display: none;}
+    .navbar-brand-gata {display: none;}
 
-    #mvtpc-mini {display: inline;}
+    #gata-mini {display: inline;}
 
     .topSlug {display: none}
 
