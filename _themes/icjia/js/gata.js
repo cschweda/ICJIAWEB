@@ -60,6 +60,9 @@ $(document).ready(function() {
     }
   });
 
+  // $(document).on('ps-scroll-x', function() {
+  //   console.log('scroll down');
+  // });
 
 
   $('a.back-to-top').click(function() {
