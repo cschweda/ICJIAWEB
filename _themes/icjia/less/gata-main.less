@@ -8,6 +8,7 @@
 
 
 @gata-main: #234c3b;
+@gata-footer: #1a3a40;
 
 /*!
  * Start Bootstrap - Modern Business HTML Template (http://startbootstrap.com)
@@ -50,12 +51,14 @@ body {
 }
 a, a:hover {
     color: @gata-main;
-    // -webkit-transition: all 0.3s ease-in-out;
-    // -moz-transition: all 0.3s ease-in-out;
-    // -ms-transition: all 0.3s ease-in-out;
-    // -o-transition: all 0.3s ease-in-out;
-    // transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
+
+a:hover {color: #aaa}
 
 a {font-weight: 700}
 
@@ -85,6 +88,8 @@ img {
 
 }
 
+#gata-top {border-top: 2px solid @gata-main}
+
 .countup-finished {font-weight: 900;}
 
 
@@ -98,7 +103,16 @@ img {
 
 
 
+  .section-title {
+      border-bottom: solid 1px #ccc;
+      padding-bottom: 25px;
+      padding-top: 25px;
+      margin-top: 10px;
+      margin-bottom: 30px;
+  }
 
+  .section-inner {padding-left: 25px; padding-right: 25px}
+  .hero-heading {background: @gata-main; color: #fff;}
 
 
 
@@ -150,6 +164,25 @@ a.back-to-top {
 
 
 
+.ps-container > .ps-scrollbar-x-rail,
+.ps-container > .ps-scrollbar-y-rail {
+  opacity: .6;
+}
+
+
+
+.lead {color: #888}
+
+#bg2{
+    background:url('/assets/gata/img/gata-image01.jpg') no-repeat center center;
+    height: 600px;
+    background-size: cover;
+}
+
+ .contentHolder { position:relative; margin:0px auto; margin-top: 5px; margin-left: 15px; padding-left: 0px; padding-right: 25px; padding-bottom: 50px; height:450px; overflow: auto; }
+
+
+
 
 
 
@@ -161,9 +194,9 @@ a.back-to-top {
     border-top: 3px solid #fff;
     border-bottom: 1px solid #eee;
     font-size: 14px;
-    -webkit-box-shadow: 5px 4px 12px -0px rgba(130,126,130,.37);
-    -moz-box-shadow: 5px 4px 12px -0px rgba(130,126,130,.37);
-    box-shadow: 5px 4px 12px -0px rgba(130,126,130,.37);
+    -webkit-box-shadow: 3px 2px 8px -0px rgba(130,126,130,.37);
+    -moz-box-shadow: 3px 2px 8px -0px rgba(130,126,130,.37);
+    box-shadow: 3px 2px 8px -0px rgba(130,126,130,.37);
   }
 
 
@@ -248,9 +281,9 @@ h1.front-page-big-header{font-size: 32px; }
 .services-box p {font-size: 16px; color: #a94545}
 
 
-footer #footer {margin: 0; background: #1f3641; padding: 0;}
+footer #footer {margin: 0; background: @gata-footer; padding: 0;}
 footer a {color: #fff}
-footer a:hover {color: #a94545}
+footer a:hover {color: #aaa}
 footer {font-size: 14px}
 footer ul {list-style: none;}
 footer ul li {margin-left: -20px}
