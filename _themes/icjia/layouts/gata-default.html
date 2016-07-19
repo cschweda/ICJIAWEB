@@ -9,23 +9,23 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>ICJIA {{if title}}| {{ title }}{{endif}}</title>
-		<meta name="description" content="{{if summary}}{{summary|striptags}}{{else}}{{ defaultDescription }}{{endif}}">
-		<meta name="keywords" content="{{ if keywords }}{{keywords_list}}{{else}}{{defaultKeywords}}{{endif}}">
+		<title>GATA {{if title}}| {{ title }}{{endif}}</title>
+		<meta name="description" content="{{if summary}}{{summary|striptags}}{{else}}{{ defaultDescriptionGATA }}{{endif}}">
+		<meta name="keywords" content="{{defaultKeywordsGATA}}">
 		<meta name="date" content="{{ current_date }}">
 		<link rel="canonical" href="{{ permalink }}">
 
 
 		<!-- Facebook metatags -->
 				<meta property="og:title" content="{{ title }}" />
-				<meta property="og:site_name" content="{{ defaultSiteName }}"/>
+				<meta property="og:site_name" content="{{ defaultSiteNameGATA }}"/>
 				<meta property="og:url" content="{{ permalink }}" />
-				<meta property="og:description" content="{{if summary }}{{ summary }} {{else}} {{defaultdescription }} {{endif}}" />
+				<meta property="og:description" content="{{if summary }}{{ summary }} {{else}} {{defaultdescriptionGATA }} {{endif}}" />
 				<meta property="fb:app_id" content="{{facebookAppId}}" />
 				<meta property="og:type" content="{{facebokContentType}}" />
 				<meta property="og:locale" content="en_US" />
-				<meta property="article:author" content="{{ facebookAuthorURL }}" />
-				<meta property="og:image" content="{{if splash}}http://www.icjia.state.il.us{{splash}}{{else}}{{socialMediaImage}}{{endif}}" />
+				<meta property="article:author" content="{{ facebookAuthorURLGATA }}" />
+				<meta property="og:image" content="{{socialMediaImageGATA}}" />
 		<!-- // Facebook metatags -->
 
 
@@ -33,11 +33,10 @@
 			<meta name="twitter:card" content="summary" />
 			<meta name="twitter:site" content="@ICJIA_Illinois" />
 			<meta name="twitter:title" content="{{title}}" />
-			<meta name="twitter:description" content="{{if summary }}{{ summary }} {{else}} {{defaultdescription }} {{endif}}" />
-			<meta name="twitter:image" content="{{socialMediaImage}}" />
+			<meta name="twitter:description" content="{{if summary }}{{ summary }} {{else}} {{defaultdescriptionGATA }} {{endif}}" />
+			<meta name="twitter:image" content="{{socialMediaImageGATA}}" />
 			<meta name="twitter:url" content="{{ permalink }}" />
 		<!-- //Twitter metatags -->
-
 
 
 
