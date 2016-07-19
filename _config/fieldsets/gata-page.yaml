@@ -1,0 +1,96 @@
+title: Gata Page
+
+fields:
+  _template:
+    type: hidden
+    default: default-blank
+
+  _layout:
+    type: hidden
+    default: gata-default
+
+  keywords:
+    display: Keywords
+    required: false
+    default:
+    type: tags
+
+  upload:
+    type: file
+    destination: assets/tvpp/pdf/
+    allowed: ['pdf']
+
+  breadcrumbs:
+    display: Display breadcrumbs?
+    type: select
+    options:
+      true: Yes, display the breadcrumbs
+      false: No, do not display the breadcrumbs
+
+  # splash:
+  #   display: Splash Photo (Photo across top of page -- also used for social media image)
+  #   type: file
+  #   allowed: [png, jpg, jpeg]
+  #   destination: assets/tvpp/img/
+
+  # displaySplash:
+  #   display: Display splash photo on page?
+  #   type: select
+  #   default: 'false'
+  #   options:
+  #     - 'false'
+  #     - 'true'
+
+  # progressBar:
+  #   display: Display reading progress bar on page?
+  #   type: select
+  #   default: 'false'
+  #   options:
+  #     - 'false'
+  #     - 'true'
+
+  # tvppSocialBar:
+  #   display: Display TVPP social bar on page?
+  #   type: select
+  #   default: 'none'
+  #   options:
+  #     - 'none'
+  #     - 'top'
+  #     - 'bottom'
+
+  summary:
+    display: Page summary (Summary displays in search results)
+    required: false
+    default:
+    type: textarea
+
+  content:
+    display: Page Content
+    required: false
+    default:
+    type: textarea
+
+
+  positive_keywords:
+    display: Positive Search Keywords
+    required: false
+    default:
+    type: tags
+
+  negative_keywords:
+    display: Negative Search Keywords
+    required: false
+    default:
+    type: tags
+
+  super_positive_keywords:
+    display: Super positive Search Keywords (weighted heavily for search -- not visible on site)
+    required: false
+    default:
+    type: tags
+
+  super_negative_keywords:
+    display: Super negative Search Keywords (weighted heavily for search -- not visible on site)
+    required: false
+    default:
+    type: tags

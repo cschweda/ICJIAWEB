@@ -20,15 +20,126 @@
 <div class="collapse navbar-collapse navbar-ex1-collapse">
   <ul class="nav navbar-nav navbar-right" style="text-transform: uppercase">
     <!-- <li> <a href="#page-top" class="navLink menuTop page-scroll">Home</a> </li> -->
-    <li> <a href="#about" class="navLink menuTop page-scroll" >Overview</a> </li>
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" title=" ">About <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+
+          <li>
+              <a href="/gata/overview">General Overview</a>
+          </li>
+
+          <li>
+              <a href="/gata/news">News & Announcements</a>
+          </li>
 
 
 
-      <li> <a href="#news" class="navLink menuTop page-scroll" >Grant Opportunities</a> </li>
+          <li>
+              <a href="/gata/grant-information">Grant Information</a>
+          </li>
 
-        <li> <a href="#news" class="navLink menuTop page-scroll" >Documents</a> </li>
+          <li>
+              <a href="/gata/contact">Contact</a>
+          </li>
 
-            <li> <a href="#news" class="navLink menuTop page-scroll" >Training</a> </li>
+
+
+
+
+
+
+
+
+        </ul>
+    </li>
+
+
+
+    <li class="dropdown navLink menuTop page-scroll">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Grant Opportunities <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+
+
+            <li class="dropdown-header">
+                Current Opportunities
+            </li>
+
+
+
+            {{ entries:listing folder="/gata/gata-opportunities" sort_dir="desc" conditions="grantStatus:Current" show_past="true" show_future="false" }}
+
+
+            {{ if no_results }}
+              <li class="text-center" style="color: #999">
+              No current opportunities
+            </li>
+
+      	    {{ else }}
+
+            <li>
+                <a href="{{url}}">{{title}}</a>
+            </li>
+
+            {{/if}}
+
+
+
+          {{ /entries:listing }}
+
+
+
+
+
+            <li class="divider"></li>
+
+            <li class="dropdown-header">
+                Archived
+            </li>
+            <li>
+                <a href="/gata/opportunities/gata-oppo-archive">2016</a>
+            </li>
+
+
+
+
+
+
+
+
+
+
+
+        </ul>
+    </li>
+
+        <li> <a href="/gata/documents" class="navLink menuTop page-scroll" >Documents</a> </li>
+
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" title=" ">Training <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+
+              <li>
+                  <a href="/gata/webinars">Webinars & Powerpoints</a>
+              </li>
+
+
+
+              <li>
+                  <a href="/gata/faqs">FAQs</a>
+              </li>
+
+
+
+
+
+
+
+
+
+
+
+            </ul>
+        </li>
 
 
     <!--  <li class="dropdown " data-animate="animated fadeInUp" style="z-index:500;"> <a href="#" class="dropdown-toggle " data-toggle="dropdown"> <i class="fa fa-search"> </i> </a>
