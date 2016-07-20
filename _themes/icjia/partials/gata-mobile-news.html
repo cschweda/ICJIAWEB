@@ -1,0 +1,66 @@
+<!------------------- MOBILE ONLY DISPLAY ---------->
+
+
+          <section class="visible-xs visible-sm" style="margin-top: 55px; margin-bottom: 20px">
+            <div class="container-fluid" style="border-top: 1px solid #bbb; background: #fff; color: #333; padding: 0; margin: 0;">
+
+
+
+                       <div class="col-md-12 col-sm-12 col-xs-12 ">
+
+                         <div class="hero-heading text-center" style="margin-top: -10px; margin-left: -15px; margin-right: -15px;">
+
+
+                                   <h2 class="h4 section-title">News & Announcements</h2>
+
+                                 </div>
+
+                                   {{ entries:listing folder="/tvpp/tvpp-news" limit="10" show_past="true" show_future="true"}}
+                                      {{ if no_results }}
+                                      <p class="sorry">
+                                      No news is good news.<br>
+                                      Check back soon.
+                                      </p>
+                                      {{ else }}
+
+
+
+
+                                       <div class="news-item" style="border-bottom: 1px solid #bbb; margin-bottom: 10px; padding-bottom: 15px">
+                                       <div style="font-weight: 900; margin-top: 40px; line-height: 30px; text-transform: uppercase; font-family: 'Montserrat', sans-serif; font-weight: 700">
+                                         {{if updatedItem}}
+                                         <span style="font-weight: 400; color: #666" class="addUpdateLabel" data-postDate="{{date format='Y-m-d'}}"></span>
+                                         {{endif}}
+                                         <span style="font-weight: 400; color: #666" {{if !updatedItem}} class="" data-postType="news" data-postDate="{{date format='Y-m-d'}}"{{endif}}>{{ date }}</span> | <a href="{{ url }}">{{if displayTitle}}{{ displayTitle }}{{else}}{{title}}{{endif}}</a></div>
+
+                                           <div class="">
+                                           {{ content }}
+                                           </div>
+
+                                         </div>
+
+
+
+
+
+
+
+                                      {{ endif }}
+                                  {{ /entries:listing }}
+
+
+                                  <div class="text-center" style="margin-top: 50px">
+                                  <a class="btn btn-default" href="/tvpp/tvpp-news" role="button" style="text-transform: uppercase; font-family: 'Montserrat', sans-serif; color: #fff; margin-bottom: 20px; color: #222">All News & Annoucements&nbsp;&raquo;</a>
+                                  </div>
+
+
+                         </div>
+                       </div>
+
+                    </div>
+
+
+          </section>
+
+
+<!--- //MOBILE ONLY DISPLAY -------------------------------->
