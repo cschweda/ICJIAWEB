@@ -3,14 +3,14 @@ $(document).ready(function() {
 
 
   //bump window down 50px if on iPhone
-  var width = $(window).width(),
-    height = $(window).height();
-  if (width <= 480) {
-    $('html, body').animate({
-      scrollTop: $('.intro-message').offset().top - 50
-    }, 'fast');
-
-  }
+  // var width = $(window).width(),
+  //   height = $(window).height();
+  // if (width <= 480) {
+  //   $('html, body').animate({
+  //     scrollTop: $('.intro-message').offset().top - 50
+  //   }, 'fast');
+  //
+  // }
 
 
 
