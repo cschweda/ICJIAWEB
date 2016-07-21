@@ -4,7 +4,7 @@ class statamic_fieldset
   protected $data = array();
   protected $name = null;
 
-  public function Statamic_Fieldset($data)
+  public function __construct($data)
   {
     $this->data = $data;
   }

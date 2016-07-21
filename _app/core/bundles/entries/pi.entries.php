@@ -15,14 +15,14 @@ class Plugin_entries extends Plugin
 {
     /**
      * Combines numeric values of all entries found into one combined result
-     * 
+     *
      * @return string
      */
     public function meld()
     {
         // grab common parameters
         $settings = $this->parseCommonParameters();
-        
+
         // grab extra parameters
         $field      = $this->fetchParam('field', null);
         $action     = $this->fetchParam('action', 'sum');
@@ -45,7 +45,7 @@ class Plugin_entries extends Plugin
                 $content_set->limit($limit, $offset);
             }
         }
-        
+
         // get total entries
         $total_entries = $content_set->count();
 
@@ -53,7 +53,7 @@ class Plugin_entries extends Plugin
         if (!$total_entries) {
             return '0';
         }
-        
+
         // total them up
         $total = 0;
         foreach ($content_set->get(false, false) as $content) {
@@ -69,18 +69,18 @@ class Plugin_entries extends Plugin
             if (!is_numeric($content[$field])) {
                 continue;
             }
-            
+
             $total += $content[$field];
         }
-        
+
         // set output
         $output = $total;
-        
+
         // perform other actions
         if ($action === 'average') {
             $output = $output / $total_entries;
         }
-        
+
         return (!is_null($precision)) ? number_format($output, $precision) : (string) $output;
     }
 
@@ -94,7 +94,7 @@ class Plugin_entries extends Plugin
     {
         // grab common parameters
         $settings = $this->parseCommonParameters();
-        
+
         // grab content set based on the common parameters
         $content_set = $this->getContentSet($settings);
 
@@ -356,7 +356,7 @@ class Plugin_entries extends Plugin
             'type'        => 'entries',
             'conditions'  => trim($this->fetchParam('conditions', null))
         ));
-        
+
         // prepare if needed
         $parse_content = (bool) preg_match(Pattern::USING_CONTENT, $this->content);
         if ($parse_content) {
@@ -433,7 +433,7 @@ class Plugin_entries extends Plugin
 
         $markers = array();
         foreach ($content as $item) {
-            
+
             $marker = array(
                 'latitude'       => $item['latitude'],
                 'longitude'      => $item['longitude'],
@@ -473,12 +473,12 @@ class Plugin_entries extends Plugin
     private function parseCommonParameters()
     {
         $current_folder = URL::getCurrent();
-        
+
         // Strip taxonomy segments because they don't reflect physical folder locations
         if (Taxonomy::isTaxonomyUrl($current_folder)) {
             $current_folder = URL::stripTaxonomy($current_folder);
         }
-        
+
         // determine folder
         $folders = array('folders' => $this->fetchParam(array('folder', 'folders', 'from'), $current_folder));
 
@@ -494,7 +494,7 @@ class Plugin_entries extends Plugin
             'conditions'    => trim($this->fetchParam('conditions', null, false, false, false)),
             'where'         => trim($this->fetchParam('where', null, false, false, false))
         );
-        
+
         // determine supplemental data
         $supplements = array(
             'locate_with' => $this->fetchParam('locate_with', null, false, false, false),
@@ -552,13 +552,13 @@ class Plugin_entries extends Plugin
 
             // additional post-sort supplement
             $additional_supplementation = array();
-            
+
             if ($date_offset = $this->fetchParam('date_offset', null, null, false, false)) {
-                $additional_supplementation[] = $date_offset;
+                $additional_supplementation['date_offset'] = $date_offset;
             }
 
             if ($group_by_date = trim($this->fetchParam("group_by_date", null, null, false, false))) {
-                $additional_supplementation[] = $group_by_date;   
+                $additional_supplementation['group_by_date'] = $group_by_date;
             }
 
             if ( ! empty($additional_supplementation)) {

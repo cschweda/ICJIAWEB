@@ -80,6 +80,23 @@
         </tbody>
       </table>
     </div>
+
+    <?php if ($pagination['total_pages'] > 1): ?>
+        <div class="pagination">
+            <ul>
+                <?php for ($i = 1; $i <= $pagination['total_pages']; $i++): ?>
+                    <?php if ($i === $pagination['current_page']): ?>
+                        <li class="current"><b><?php echo $i; ?></b></li>
+                    <?php else: ?>
+                        <li><a href="<?php echo $app->urlFor('entries').'?path='.$path.'&amp;page='.$i ?>">
+                            <?php echo $i; ?>
+                        </a></li>
+                    <?php endif; ?>
+                <?php endfor ?>
+            </ul>
+        </div>
+    <?php endif; ?>
+
     <div class="take-action clearfix">
       <div class="input-status block-action pull-left" data-bind="css: {disabled: selectedEntries().length < 1}">
         <div class="input-select-wrap">

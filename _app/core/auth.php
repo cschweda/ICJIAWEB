@@ -71,7 +71,7 @@ class Auth
     public static function logout()
     {
         // trigger a hook
-        Hook::run('auth', 'login', 'call', null, Auth::getCurrentMember());
+        Hook::run('auth', 'logout', 'call', null, Auth::getCurrentMember());
         
         $app = \Slim\Slim::getInstance();
         $app->deleteCookie('stat_auth_cookie');

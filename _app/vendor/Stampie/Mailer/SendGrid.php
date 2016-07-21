@@ -129,9 +129,13 @@ class SendGrid extends Mailer
             'html'     => $message->getHtml(),
             'bcc'      => $bccEmails,
             'replyto'  => $message->getReplyTo(),
-            'headers'  => json_encode($message->getHeaders()),
             'content'  => $inline,
         );
+
+        if ($headers = $message->getHeaders()) {
+            $parameters['headers'] = json_encode($headers);
+        }
+
 
         if ($smtpApi) {
             $parameters['x-smtpapi'] = json_encode(array_filter($smtpApi));

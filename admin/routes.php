@@ -273,6 +273,13 @@ $admin_app->get('/entries', function () use ($admin_app) {
     $entries = Statamic::get_content_list($path, null, 0, true, true, $entry_type, $order, null, null, true);
     Statamic_View::set_templates(array_reverse($template_list));
 
+    // Perform pagination
+    $page_size = Config::get('admin_pagination_size', 100);
+    $page = (int) array_get($_GET, 'page', 1);
+    $count = count($entries);
+    $offset = ($page - 1) * $page_size;
+    $entries = array_slice($entries, $offset, $page_size, true);
+
     $admin_app->render(null, array(
         'route'  => 'entries',
         'app'    => $admin_app,
@@ -280,6 +287,7 @@ $admin_app->get('/entries', function () use ($admin_app) {
         'path'   => $path,
         'folder'   => Path::addStartingSlash(preg_replace(Pattern::NUMERIC, '', $path)),
         'entries'  => $entries,
+        'pagination' => Helper::createPaginationData($count, $page_size),
         'type'   => $entry_type,
         'listings' => Statamic::get_listings()
       )
@@ -698,6 +706,10 @@ $admin_app->post('/publish', function () use ($admin_app) {
     } else {
       $file_data[$field] = $value;
     }
+  }
+
+  if (isset($field_settings['content']['type'])) {
+      $form_data['content'] = Fieldtype::process_field_data($field_settings['content']['type'], $form_data['content'], $field_settings['content'], 'content');
   }
 
   /*

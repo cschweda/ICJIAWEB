@@ -3,7 +3,7 @@ class Hooks_member extends Hooks
 {
     /**
      * Target for the member:login_form form
-     * 
+     *
      * @return void
      */
     public function member__login()
@@ -14,7 +14,7 @@ class Hooks_member extends Hooks
         $token     = filter_input(INPUT_POST, 'token', FILTER_SANITIZE_STRING);
         $return    = filter_input(INPUT_POST, 'return', FILTER_SANITIZE_STRING);
         $referrer  = $_SERVER['HTTP_REFERER'];
-        
+
         // validate form token
         if (!$this->tokens->validate($token)) {
             $this->flash->set('login_error', 'Invalid token.');
@@ -35,7 +35,7 @@ class Hooks_member extends Hooks
 
     /**
      * Logs a user out
-     * 
+     *
      * @return void
      */
     public function member__logout()
@@ -49,7 +49,7 @@ class Hooks_member extends Hooks
 
     /**
      * Target for the member:register_form form
-     * 
+     *
      * @return void
      */
     public function member__register()
@@ -69,10 +69,10 @@ class Hooks_member extends Hooks
         if (Auth::isLoggedIn()) {
             URL::redirect($return);
         }
-        
+
         // get configurations
         $allowed_fields = array_get($this->loadConfigFile('fields'), 'fields', array());
-        
+
         // get username
         $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
 
@@ -80,10 +80,10 @@ class Hooks_member extends Hooks
         $submission = array(
             'username' => $username
         );
-        
+
         // create member object
         $member = new Member(array());
-        
+
         // adjust allowed fields to include username and password
         if (!isset($allowed_fields['username'])) {
             $allowed_fields['username'] = array();
@@ -91,37 +91,37 @@ class Hooks_member extends Hooks
         if (!isset($allowed_fields['password'])) {
             $allowed_fields['password'] = array();
         }
-        
+
         // loop through allowed fields, validating and storing
         foreach ($allowed_fields as $field => $options) {
             if (!isset($_POST[$field])) {
                 // field wasn't set, skip it
                 continue;
             }
-            
+
             // set value
             $value = filter_input(INPUT_POST, $field, FILTER_SANITIZE_STRING);
-            
+
             // don't store this value if `save_value` is set to `false`
             if (array_get($options, 'save_value', true)) {
                 $member->set($field, $value);
             }
-            
+
             // add to submissions, including non-save_value fields because this
             // is the list that will be validated
             $submission[$field] = $value;
         }
-        
+
         // ensure UID
         $member->ensureUID(false);
-        
+
         // user-defined validation
         $errors = $this->tasks->validate($submission);
-        
-        
+
+
         // built-in validation
         // --------------------------------------------------------------------
-        
+
         // username
         if (!$username) {
             $errors['username'] = 'Username is required.';
@@ -130,7 +130,7 @@ class Hooks_member extends Hooks
         } elseif (Member::exists($username)) {
             $errors['username'] = 'Username is already in use.';
         }
-        
+
         // password
         $password          = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
         $password_confirm  = filter_input(INPUT_POST, 'password_confirmation', FILTER_SANITIZE_STRING);
@@ -138,7 +138,7 @@ class Hooks_member extends Hooks
         if (empty($password)) {
             $errors['password'] = 'Password is required';
         }
-        
+
         if (
             !isset($errors['password']) &&   // make sure password isn't already an error
             !is_null($password_confirm) &&   // a password_confirm field was entered
@@ -151,18 +151,18 @@ class Hooks_member extends Hooks
             // errors were found, set a flash message and redirect
             $this->flash->set('register_error', 'Member not created.');
             $this->flash->set('register_field_errors', $errors);
-            
+
             // remove password and password_confirm from submission
             if (isset($submission['password'])) {
                 unset($submission['password']);
             }
-            
+
             if (isset($submission['password_confirmation'])) {
                 unset($submission['password_confirmation']);
             }
-            
+
             $this->flash->set('register_old_values', $submission);
-            
+
             // redirect back to the form
             URL::redirect($referrer);
         } else {
@@ -172,20 +172,20 @@ class Hooks_member extends Hooks
             if ($this->runHook('pre_process', 'replace', true, $member)) {
                 // save member
                 $member->save();
-                
+
                 // trigger a hook
                 $this->runHook('register', 'call', null, $member);
 
                 // user saved
                 $this->flash->set('register_success', 'Member created.');
-                
+
                 if ($auto_login) {
                     Auth::login($username, $password);
                 }
-                
+
                 // run hook
                 $this->runHook('registration_complete', null, null, $member);
-                
+
                 // redirect to member home
                 URL::redirect($return);
             } else {
@@ -199,31 +199,31 @@ class Hooks_member extends Hooks
 
     /**
      * Target for the member:profile_form form
-     * 
+     *
      * @return void
      */
     public function member__update_profile()
     {
-        $site_root = Config::getSiteRoot();   
+        $site_root = Config::getSiteRoot();
         $referrer  = $_SERVER['HTTP_REFERER'];
         $return    = filter_input(INPUT_POST, 'return', FILTER_SANITIZE_URL);
-        
+
         // is user logged in?
         if (!Auth::isLoggedIn()) {
             URL::redirect($this->fetchConfig('login_url', $site_root, null, false, false));
         }
-        
+
         // get current user
         $member = Auth::getCurrentMember();
-        
+
         // get configurations
         $allowed_fields   = array_get($this->loadConfigFile('fields'), 'fields', array());
         $role_definitions = $this->fetchConfig('role_definitions');
-        
+
         // who are we editing?
         $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
         $username = (!$username) ? $member->get('username') : $username;
-        
+
         // if the user isn't the current user, ensure that's allowed
         if ($username !== $member->get('username')) {
             // username is different from current user
@@ -236,13 +236,13 @@ class Hooks_member extends Hooks
                 $member = Member::load($username);
             }
         }
-        
+
         // get old values
         $old_values = $member->export();
-        
+
         // set up iterators and flags
         $submission = array();
-        
+
         // loop through allowed fields, validating and updating
         foreach ($allowed_fields as $field => $options) {
             if (!isset($_POST[$field])) {
@@ -256,7 +256,7 @@ class Hooks_member extends Hooks
             } else {
                 // set value
                 if (is_array($_POST[$field])) {
-                    $value = [];
+                    $value = array();
                     foreach ($_POST[$field] as $i => $val) {
                         $value[$i] = filter_var($val, FILTER_SANITIZE_STRING);
                     }
@@ -277,27 +277,27 @@ class Hooks_member extends Hooks
             // is the list that will be validated
             $submission[$field] = $value;
         }
-        
+
         // validate
         $errors = $this->tasks->validate($submission);
-        
+
         if (count($errors)) {
             // errors were found, set a flash message and redirect
             $this->flash->set('update_profile_error', 'Member profile not updated.');
             $this->flash->set('update_profile_field_errors', $errors);
             $this->flash->set('update_profile_old_values', $old_values);
-            
+
             URL::redirect($referrer);
         } else {
             // save member
             $member->save();
-            
+
             // trigger a hook
             $this->runHook('profile_update', 'call', null, $member);
 
             // user saved
             $this->flash->set('update_profile_success', 'Member profile updated.');
-            
+
             if ($return) {
                 URL::redirect($return);
             } else {
@@ -381,12 +381,12 @@ class Hooks_member extends Hooks
             $this->flash->set('reset_password_error', 'Invalid token.');
             URL::redirect($referrer);
         }
-        
+
         // bail if cache doesnt exist or if its too old.
         // this should have been caught on the page itself,
         // but if it got submitted somehow, just redirect and the error logic will be in the plugin.
         if (
-            ! $this->cache->exists($hash) 
+            ! $this->cache->exists($hash)
             || $this->cache->getAge($hash) > $this->fetchConfig('reset_password_age_limit', 20, 'is_numeric') * 60
         ) {
             URL::redirect($referrer);
@@ -398,7 +398,7 @@ class Hooks_member extends Hooks
             URL::redirect($referrer);
         }
 
-        // password confirmation check        
+        // password confirmation check
         if (
             !is_null($password_confirm) &&   // a password_confirm field was entered
             $password !== $password_confirm  // password doesn't match password_confirm
