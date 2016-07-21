@@ -1,6 +1,10 @@
 
 <style>
 
+  .news-single {-moz-box-shadow: 1px 1px 7px rgb(100,100,100);
+  -webkit-box-shadow: 1px 1px 7px rgb(100,100,100);
+  box-shadow: 1px 1px 7px rgb(100,100,100); background: #fdfdfd; padding: 25px 25px; margin-bottom: 50px;}
+
 .filter-group a:hover {cursor: pointer; cursor: hand;}
 #circuit-message {display: none}
 .btn {color: #000}
@@ -16,9 +20,7 @@
 
 {{ entries:listing folder="/tvpp/tvpp-news" show_past="true" show_future="true" }}
 
-<div class="news-single" style="-moz-box-shadow: 1px 1px 7px rgb(100,100,100);
--webkit-box-shadow: 1px 1px 7px rgb(100,100,100);
-box-shadow: 1px 1px 7px rgb(100,100,100); background: #fdfdfd; padding: 25px 25px; margin-bottom: 50px;">
+<div class="news-single" style="">
 
   <h4 class="h4" style="text-transform: uppercase; font-weight: 700">
   {{ title|widont }}
@@ -56,7 +58,6 @@ box-shadow: 1px 1px 7px rgb(100,100,100); background: #fdfdfd; padding: 25px 25p
 {{ /entries:listing }}
 </div>
 
-<div id="circuit-message" class="text-center" style="font-weight: 700">Sorry, no news items for selected circuit</div>
 
 
 <div style="height: 100px"></div>
