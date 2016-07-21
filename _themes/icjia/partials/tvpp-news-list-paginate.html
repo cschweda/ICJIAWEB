@@ -16,14 +16,16 @@
 
 {{ entries:listing folder="/tvpp/tvpp-news" show_past="true" show_future="true" }}
 
-<div class="news-single">
+<div class="news-single" style="-moz-box-shadow: 0px 0px 8px rgb(100,100,100);
+-webkit-box-shadow: 0px 0px 8px rgb(100,100,100);
+box-shadow: 0px 0px 8px rgb(100,100,100); background: #fefefe; padding: 25px 25px; margin-bottom: 50px;">
 
   <h4 class="h4" style="text-transform: uppercase; font-weight: 700">
   {{ title|widont }}
 </h4>
 
 
-<h4 class="h6 published">	<span style="color: #999; text-transform: uppercase">Posted: {{date}}</span> 
+<h4 class="h6 published">	<span style="color: #999; text-transform: uppercase">Posted: {{date}}</span>
 
   {{if eventType}}&nbsp|&nbsp;
   <span class="dv-purple" style="font-weight: 600; text-transform: uppercase;">
