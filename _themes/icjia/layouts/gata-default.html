@@ -20,7 +20,7 @@
 				<meta property="og:title" content="{{ title }}" />
 				<meta property="og:site_name" content="{{ defaultSiteNameGATA }}"/>
 				<meta property="og:url" content="{{ permalink }}" />
-				<meta property="og:description" content="{{if summary }}{{ summary }} {{else}} {{defaultdescriptionGATA }} {{endif}}" />
+				<meta property="og:description" content="{{if summary }}{{ summary|striptags }} {{else}} {{defaultdescriptionGATA }} {{endif}}" />
 				<meta property="fb:app_id" content="{{facebookAppId}}" />
 				<meta property="og:type" content="{{facebokContentType}}" />
 				<meta property="og:locale" content="en_US" />
@@ -33,7 +33,7 @@
 			<meta name="twitter:card" content="summary" />
 			<meta name="twitter:site" content="@ICJIA_Illinois" />
 			<meta name="twitter:title" content="{{title}}" />
-			<meta name="twitter:description" content="{{if summary }}{{ summary }} {{else}} {{defaultdescriptionGATA }} {{endif}}" />
+			<meta name="twitter:description" content="{{if summary }}{{ summary|striptags }} {{else}} {{defaultdescriptionGATA }} {{endif}}" />
 			<meta name="twitter:image" content="{{socialMediaImageGATA}}" />
 			<meta name="twitter:url" content="{{ permalink }}" />
 		<!-- //Twitter metatags -->

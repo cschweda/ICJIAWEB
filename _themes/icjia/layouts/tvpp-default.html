@@ -10,7 +10,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>TVPP {{if title}}| {{ title }}{{endif}}</title>
-		<meta name="description" content="{{if summary}}{{summary|striptags}}{{else}}{{ defaultDescriptionTVPP }}{{endif}}">
+		<meta name="description" content="{{if summary}}{{summary|striptags}}{{else}}{{ defaultDescriptionTVPP|striptags }}{{endif}}">
 		<meta name="keywords" content="{{defaultKeywordsTVPP}}">
 		<meta name="date" content="{{ current_date }}">
 		<link rel="canonical" href="{{ permalink }}">
@@ -20,7 +20,7 @@
 				<meta property="og:title" content="{{ title }}" />
 				<meta property="og:site_name" content="{{ defaultSiteNameTVPP }}"/>
 				<meta property="og:url" content="{{ permalink }}" />
-				<meta property="og:description" content="{{if summary }}{{ summary }} {{else}} {{defaultdescriptionTVPP }} {{endif}}" />
+				<meta property="og:description" content="{{if summary }}{{ summary|striptags }} {{else}} {{defaultdescriptionTVPP }} {{endif}}" />
 				<meta property="fb:app_id" content="{{facebookAppId}}" />
 				<meta property="og:type" content="{{facebokContentType}}" />
 				<meta property="og:locale" content="en_US" />
@@ -33,7 +33,7 @@
 			<meta name="twitter:card" content="summary" />
 			<meta name="twitter:site" content="@ICJIA_Illinois" />
 			<meta name="twitter:title" content="{{title}}" />
-			<meta name="twitter:description" content="{{if summary }}{{ summary }} {{else}} {{defaultdescriptionTVPP }} {{endif}}" />
+			<meta name="twitter:description" content="{{if summary }}{{ summary|striptags }} {{else}} {{defaultdescriptionTVPP }} {{endif}}" />
 			<meta name="twitter:image" content="{{socialMediaImageTVPP}}" />
 			<meta name="twitter:url" content="{{ permalink }}" />
 		<!-- //Twitter metatags -->
