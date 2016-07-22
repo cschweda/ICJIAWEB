@@ -1,0 +1,45 @@
+<div class="hidden-md hidden-lg">
+
+  <h2 class="h4" style="text-transform: uppercase; font-weight: 900; border-bottom: 1px solid #777; padding-bottom: 8px; margin-bottom: 20px">News & Updates</h2>
+
+  <div class="news-content" style="padding-left: 10px; padding-right: 10px">
+
+  {{ entries:listing folder="/tvpp/tvpp-news" limit="5" show_past="true" show_future="true"}}
+      {{ if no_results }}
+      <p class="sorry">
+      No news is good news.<br>
+      Check back soon.
+      </p>
+      {{ else }}
+
+
+
+
+      <div class="news-item" style="border-bottom: 1px solid #bbb; margin-bottom: 10px; padding-bottom: 15px">
+      <div style="font-weight: 900; margin-top: 40px; line-height: 30px; text-transform: uppercase; font-family: 'Montserrat', sans-serif; font-weight: 700">
+        {{if updatedItem}}
+        <span style="font-weight: 400; color: #666" class="addUpdateLabel" data-postDate="{{date format='Y-m-d'}}"></span>
+        {{endif}}
+        <span style="font-weight: 400; color: #666" {{if !updatedItem}} class="" data-postType="news" data-postDate="{{date format='Y-m-d'}}"{{endif}}>{{ date }}</span> | <a href="{{ url }}">{{if displayTitle}}{{ displayTitle }}{{else}}{{title}}{{endif}}</a></div>
+
+          <div class="">
+          {{ content }}
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+      {{ endif }}
+  {{ /entries:listing }}
+</div>
+
+<div class="text-center" style="margin-top: 50px">
+<a class="btn btn-tvpp" href="/tvpp/tvpp-news" role="button" style="text-transform: uppercase; font-family: 'Montserrat', sans-serif; color: #fff; margin-bottom: 20px;">All News & Updates&nbsp;&raquo;</a>
+</div>
+
+</div>
