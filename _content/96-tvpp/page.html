@@ -169,7 +169,7 @@ super_positive_keywords:
 
 
 
-<section class="">
+<section>
 
 
 
@@ -204,6 +204,23 @@ Ideologically inspired targeted violence is a low frequency/high impact crime.  
 </section>
 
 
+<!-- <section>
+<div class="container-fluid" style="margin: 0; padding: 0;">
+
+
+<div class="fb-page" data-href="https://www.facebook.com/ICJIA/" data-tabs="timeline" data-width="800" data-height="500" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/ICJIA/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ICJIA/">Illinois Criminal Justice Information Authority</a></blockquote></div>
+
+
+
+
+</div>
+
+
+</section> -->
+
+<style>
+
+</style>
 
 
 
@@ -217,11 +234,59 @@ Ideologically inspired targeted violence is a low frequency/high impact crime.  
 
               <div class="col-md-6 col-sm-12">
 
+                  <!-- <i class="scroll-reminder-up fa fa-angle-double-up" style="float: right; font-weight: 900; margin-top: 15px; color: #999; margin-left: 10px; margin-bottom: 30px; " aria-hidden="true"></i> -->
+
+                <div class="">
 
 
-                {{theme:partial src="tvpp-home-news-scroll"}}
+                    <!-- <i class="scroll-reminder-up fa fa-angle-double-up fa-2x" style="margin-top: 10px; color: #888" aria-hidden="true"></i> -->
+                </div>
 
-                {{theme:partial src="tvpp-home-news-fixed"}}
+            <div id="news-scroller" class="contentHolder">
+
+              <h2 class="h4" style="text-transform: uppercase; font-weight: 900; border-bottom: 1px solid #777; padding-bottom: 8px; margin-bottom: 20px">News & Updates</h2>
+
+              <div class="news-content">
+
+              {{ entries:listing folder="/tvpp/tvpp-news" limit="10" show_past="true" show_future="true"}}
+            	    {{ if no_results }}
+            		  <p class="sorry">
+            			No news is good news.<br>
+            			Check back soon.
+            		  </p>
+            	    {{ else }}
+
+
+
+
+                  <div class="news-item" style="border-bottom: 1px solid #bbb; margin-bottom: 10px; padding-bottom: 15px">
+                  <div style="font-weight: 900; margin-top: 40px; line-height: 30px; text-transform: uppercase; font-family: 'Montserrat', sans-serif; font-weight: 700">
+                    {{if updatedItem}}
+                    <span style="font-weight: 400; color: #666" class="addUpdateLabel" data-postDate="{{date format='Y-m-d'}}"></span>
+                    {{endif}}
+                    <span style="font-weight: 400; color: #666" {{if !updatedItem}} class="" data-postType="news" data-postDate="{{date format='Y-m-d'}}"{{endif}}>{{ date }}</span> | <a href="{{ url }}">{{if displayTitle}}{{ displayTitle }}{{else}}{{title}}{{endif}}</a></div>
+
+                      <div class="">
+                      {{ content }}
+                      </div>
+
+                    </div>
+
+
+
+
+
+
+
+            	    {{ endif }}
+            	{{ /entries:listing }}
+            </div>
+
+            <div class="text-center" style="margin-top: 50px">
+            <a class="btn btn-tvpp" href="/tvpp/tvpp-news" role="button" style="text-transform: uppercase; font-family: 'Montserrat', sans-serif; color: #fff; margin-bottom: 20px;">All News & Updates&nbsp;&raquo;</a>
+            </div>
+
+            </div>
 
 
             <div class="">
