@@ -105,6 +105,8 @@
 		<script src="{{theme:asset src='bower_components/matchHeight/dist/jquery.matchHeight-min.js'}}"></script>
 		<!-- <script src="{{theme:asset src='bower_components/matchHeight/dist/jquery.matchHeight-min.js}}" type="text/javascript"></script> -->
 
+		<link rel="stylesheet" property="stylesheet" href="{{ theme:asset src='bower_components/bx-slider.js/dist/jquery.bxslider.min.css'}}">
+
 	</head>
 
 	<body>
@@ -136,7 +138,7 @@
 
 
 		<script src="{{ theme:asset src='bower_components/bootstrap/dist/js/bootstrap.min.js' }}"></script>
-
+		<script src="{{ theme:asset src='bower_components/bx-slider.js/dist/jquery.bxslider.min.js' }}"></script>
 		<script src="{{ theme:asset src='js/gata.js' }}"></script>
 
 
@@ -152,7 +154,34 @@
 		 });
 
 
+		 // slider for MVTPC info
+		//  $('.bxslider').show().bxSlider({
+		// 	 minSlides: 4,
+		// 	 preloadImages: 'all',
+		// 	 maxSlides: 6,
+		// 	 controls: true,
+		// 	 pager: false,
+		// 	 easing: 'ease-in',
+		// 	 auto: false,
+		// 	 adaptiveHeight: true,
+		// 	 nextSelector: '#slider-next',
+		// 	 prevSelector: '#slider-prev',
+		// 	 nextText: '<i class="fa fa-arrow-circle-right fa-2x"></i>',
+		// 	 prevText: '<i class="fa fa-arrow-circle-left fa-2x"></i>'
+		//  });
 
+		$('.bxslider').bxSlider({
+  minSlides: 3,
+  maxSlides: 6,
+  slideWidth: 170,
+  slideMargin: 10,
+	controls: true,
+	pager: true,
+	nextSelector: '#slider-next',
+		 prevSelector: '#slider-prev',
+		 nextText: '<i class="fa fa-arrow-circle-right fa-2x"></i>',
+		 prevText: '<i class="fa fa-arrow-circle-left fa-2x"></i>'
+});
 
 	 </script>
 
