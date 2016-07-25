@@ -1,9 +1,15 @@
 
 <style>
 
-  .news-single {-moz-box-shadow: 1px 1px 7px rgb(100,100,100);
-  -webkit-box-shadow: 1px 1px 7px rgb(100,100,100);
-  box-shadow: 1px 1px 7px rgb(100,100,100); background: #fdfdfd; padding: 25px 25px; margin-bottom: 50px;}
+  .news-single {
+
+
+    -webkit-box-shadow: 0px 0px 27px -5px rgba(0,0,0,0.68);
+  -moz-box-shadow: 0px 0px 27px -5px rgba(0,0,0,0.68);
+  box-shadow: 0px 0px 27px -5px rgba(0,0,0,0.68);
+
+
+background: #fdfdfd; padding: 0px 25px 25px 25px; margin-bottom: 50px;}
 
 .filter-group a:hover {cursor: pointer; cursor: hand;}
 #circuit-message {display: none}
@@ -22,20 +28,12 @@
 
 <div class="news-single" style="">
 
+  <div style="padding: 8px 5px; background: #aaa; color: #fff; display: inline-block; margin-left: -25px; font-weight: 700; font-size: 12px; margin-bottom: 10px; text-transform: uppercase; font-family: 'Montserrat', sans-serif;">POSTED: {{date}}</div>
+
   <h4 class="h4" style="text-transform: uppercase; font-weight: 700">
   {{ title|widont }}
 </h4>
 
-
-<h4 class="h6 published">	<span style="color: #999; text-transform: uppercase">Posted: {{date}}</span>
-
-  {{if eventType}}&nbsp|&nbsp;
-  <span class="dv-purple" style="font-weight: 600; text-transform: uppercase;">
-{{ eventType_list}}</span>
-{{endif}}&nbsp&nbsp;
-
-
-</h4>
 
 
 <div style="margin-left: 10px; ">
