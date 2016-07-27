@@ -110,3 +110,9 @@
 /contact:
     url: /about/contact
     type: 301
+
+/vocanofo:
+    url: /sites/vocanofo
+    type: 301
+
+    
