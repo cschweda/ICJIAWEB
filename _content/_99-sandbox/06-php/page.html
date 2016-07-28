@@ -16,6 +16,9 @@ breadcrumbs: 'true'
 <?php
 
 
+
+
+
 $db = mysqli_connect('localhost','root','icjia60606!!','wordpress1')
 or die('Error connecting to MySQL server.');
 
@@ -32,6 +35,9 @@ $row = mysqli_fetch_array($result);
 while ($row = mysqli_fetch_array($result)) {
  echo $row['user_pass']. ' '.$row['user_login'] . '' .'<br />';
 }
+
+
+
 //Step 4
 mysqli_close($db);
 ?>
