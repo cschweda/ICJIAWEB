@@ -77,7 +77,7 @@ Once fully implemented, it will unify processes and reduce administrative burden
 
             </div>
           </div>
-                            <div class="container" >
+                            <div class="container-fluid" >
                               <div class="section-inner">
                             <div class="row">
                                 <div class="col-md-4 col-sm-12 col-xs-12">
@@ -147,68 +147,97 @@ Once fully implemented, it will unify processes and reduce administrative burden
                     </div>
                 </section>
 
+                <section style=" " class="hidden-xs hidden-sm">
 
 
-                <section id="gata-overview">
 
-                <!-- <div style="height: 60px" class="visible-sm visible-xs"></div> -->
 
-                  <div class="hero-heading">
-                    <div class="text-center">
+                   <div class="container" style="border-top: 1px solid #bbb; background: #fff; color: #333; padding: 0; margin: 0;">
 
-                            <h1 class="h3 section-title">News & Announcements</h1>
+
+
+                              <div class="col-md-12 col-sm-12 col-xs-12 ">
+
+                                <div class="hero-heading" style="margin-top: -10px; margin-left: -15px; margin-right: -15px;">
+                                  <div class="text-center">
+
+                                          <h2 class="h4 section-title">News & Announcements</h2>
+
+
+                                  </div>
+                                </div>
+
+                                  <!-- <i class="scroll-reminder-up fa fa-angle-double-up" style="float: right; font-weight: 900; margin-top: 15px; color: #999; margin-left: 10px; margin-bottom: 30px; " aria-hidden="true"></i> -->
+
+
+                            <div id="news-scroller" class="contentHolder">
+
+                              <div class="text-center">
+
+                                <p style="color: #777; text-transform: uppercase; font-size: 12px; font-weight: 900;">Scroll for GATA news&nbsp;&nbsp;<i class="fa fa-angle-double-down" aria-hidden="true"></i></p>
+
+                                  <!-- <i class="scroll-reminder-up fa fa-angle-double-up fa-2x" style="margin-top: 10px; color: #888" aria-hidden="true"></i> -->
+                              </div>
+
+
+                              <div class="news-content">
+
+                              {{ entries:listing folder="/gata/gata-news" limit="10" show_past="true" show_future="true"}}
+                            	    {{ if no_results }}
+                            		  <p class="sorry">
+                            			No news is good news.<br>
+                            			Check back soon.
+                            		  </p>
+                            	    {{ else }}
+
+
+
+
+                                  <div class="news-item" style="border-bottom: 1px solid #bbb; margin-bottom: 10px; padding-bottom: 15px">
+                                  <div style="font-weight: 900; margin-top: 40px; line-height: 30px; text-transform: uppercase; font-family: 'Montserrat', sans-serif; font-weight: 700">
+                                    {{if updatedItem}}
+                                    <span style="font-weight: 400; color: #666" class="addUpdateLabel" data-postDate="{{date format='Y-m-d'}}"></span>
+                                    {{endif}}
+                                    <span style="font-weight: 400; color: #666" {{if !updatedItem}} class="" data-postType="news" data-postDate="{{date format='Y-m-d'}}"{{endif}}>{{ date }}</span> | <a href="{{ url }}">{{if displayTitle}}{{ displayTitle }}{{else}}{{title}}{{endif}}</a></div>
+
+                                      <div class="">
+                                      {{ content }}
+                                      </div>
+
+                                    </div>
+
+
+
+
+
+
+
+                            	    {{ endif }}
+                            	{{ /entries:listing }}
+                            </div>
+
+                            <div class="text-center" style="margin-top: 50px">
+                            <a class="btn btn-default" href="/gata/gata-news" role="button" style="text-transform: uppercase; font-family: 'Montserrat', sans-serif; color: #fff; margin-bottom: 20px; color: #222">All News & Annoucements&nbsp;&raquo;</a>
+                            </div>
+
+                            </div>
+
+
+                            <div class="">
+
+                            </div>
+
+
+                              </div>
+
+
+                              <div class="col-md-6 col-sm-12 col-xs-12" id="bg2">
+
+                              </div>
 
 
                     </div>
-                  </div>
-
-                    <div class="container" >
-                      <div class="col-md-12">
-
-                  <div class="news-content1">
-
-                  {{ entries:listing folder="/gata/gata-news" limit="10" show_past="true" show_future="true"}}
-                      {{ if no_results }}
-                      <p class="sorry">
-                      No news is good news.<br>
-                      Check back soon.
-                      </p>
-                      {{ else }}
-
-
-
-
-                      <div class="news-item" style="border-bottom: 1px solid #bbb; margin-bottom: 10px; padding-bottom: 15px">
-                      <div style="font-weight: 900; margin-top: 40px; line-height: 30px; text-transform: uppercase; font-family: 'Montserrat', sans-serif; font-weight: 700">
-                        {{if updatedItem}}
-                        <span style="font-weight: 400; color: #666" class="addUpdateLabel" data-postDate="{{date format='Y-m-d'}}"></span>
-                        {{endif}}
-                        <span style="font-weight: 400; color: #666" {{if !updatedItem}} class="" data-postType="news" data-postDate="{{date format='Y-m-d'}}"{{endif}}>{{ date }}</span> | <a href="{{ url }}">{{if displayTitle}}{{ displayTitle }}{{else}}{{title}}{{endif}}</a></div>
-
-                          <div class="">
-                          {{ content }}
-                          </div>
-
-                        </div>
-
-
-
-
-
-
-
-                      {{ endif }}
-                  {{ /entries:listing }}
-                </div>
-
-                <div class="text-center" style="margin-top: 50px">
-                <a class="btn btn-default" href="/gata/gata-news" role="button" style="text-transform: uppercase; font-family: 'Montserrat', sans-serif; color: #fff; margin-bottom: 20px; color: #222">All News & Annoucements&nbsp;&raquo;</a>
-                </div>
-
-                </div>
-
-              </div>
-            </div>
-
-
                 </section>
+
+
+                {{theme:partial src="gata-mobile-news"}}
