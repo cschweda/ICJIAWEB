@@ -48,6 +48,7 @@ fields:
     options:
       - Staff
       - Board
+      - ' '
 
   modifier:
     display: Title Modifier
@@ -74,6 +75,7 @@ fields:
     options:
       - ICJIA
       - Adult Redeploy
+      - ' '
 
   orgStatus:
     display: Current Status
