@@ -5,15 +5,14 @@ _fieldset: page
 upload: ""
 splash: ""
 breadcrumbs: 'true'
+_layout: blank
 ---
 
 {{ foo }}
 
 <!-- tag necessary for statamic to render the php -->
-<h1>Test</h1>
 
-
-<?php
+<!-- <?php
 
 
 
@@ -24,11 +23,11 @@ or die('Error connecting to MySQL server.');
 
 ?>
 <?php
-//Step2
+
 $query = "SELECT * FROM wp_users";
 mysqli_query($db, $query) or die('Error querying database.');
 
-//Step3
+
 $result = mysqli_query($db, $query);
 $row = mysqli_fetch_array($result);
 
@@ -38,8 +37,81 @@ while ($row = mysqli_fetch_array($result)) {
 
 
 
-//Step 4
+
 mysqli_close($db);
+?> -->
+
+
+
+<!-- Working V1-->
+
+
+<?php
+    //open connection to mysql db
+    $connection = mysqli_connect("localhost","root","icjia60606!!","testdb") or die("Error " . mysqli_error($connection));
+
+    //fetch table rows from mysql db
+    $sql = "select * from tbl_employee";
+    $result = mysqli_query($connection, $sql) or die("Error in Selecting " . mysqli_error($connection));
+
+    //create an array
+    $emparray = array();
+    while($row =mysqli_fetch_assoc($result))
+    {
+        $emparray[] = $row;
+    }
+
+    $json_data = array(
+
+    			"data"            => $emparray
+    			);
+    echo json_encode($json_data);
 ?>
 
-<br>
+
+<?php
+$myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+$txt = "John Doe\n";
+fwrite($myfile, $txt);
+$txt = "Jane Doe\n";
+fwrite($myfile, $txt);
+fclose($myfile);
+?>
+
+<!-- WORKING version 2 -->
+
+
+<!-- <?php
+
+//open connection to mysql db
+$connection = mysqli_connect("localhost","root","icjia60606!!","testdb") or die("Error " . mysqli_error($connection));
+
+//fetch table rows from mysql db
+$sql = "select * from tbl_employee";
+$query = mysqli_query($connection, $sql) or die("Error in Selecting " . mysqli_error($connection));
+
+
+$data = array();
+while( $row=mysqli_fetch_array($query) ) {  // preparing an array
+	$nestedData=array();
+  $nestedData[] = $row["employee_id"];
+	$nestedData[] = $row["employee_name"];
+	$nestedData[] = $row["designation"];
+	$nestedData[] = $row["hired_date"];
+  $nestedData[] = $row["salary"];
+
+	$data[] = $nestedData;
+}
+
+
+$json_data = array(
+
+			"data"            => $data
+			);
+echo json_encode($json_data);  // send data as json format
+
+
+
+
+
+?> -->
