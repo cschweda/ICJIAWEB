@@ -1,0 +1,29 @@
+<div class="sidebar" style="">
+<h4 class="text-center" style="font-family: 'Lato', san-serif;">Funding</h4>
+  <div class="separator-line" style="margin-bottom: 35px"></div>
+
+
+
+
+{{entries:listing folder="grant-opportunities" show_past="false" show_future="true" conditions="icjiagrant:ICJIA" sort_dir="asc"}}
+
+{{ if no_results }}
+    <p class="text-center">
+        There are no Authority funding opportunities available at this time.
+    </p>
+{{ else }}
+<h4 class="h5" style="font-weight: 900; line-height: 25px;">
+  <a href="{{if directURL}}{{directURL}}{{else}}{{url}}{{endif}}">{{title}}&nbsp;&raquo;</a></h4>
+  <p>Deadline: {{date}}</p>
+
+{{if !last}}
+<div style="height: 25px;"></div>
+
+
+{{endif}}
+{{endif}}
+
+{{ /entries:listing }}
+<div style="height: 20px"></div>
+<hr>
+</div>

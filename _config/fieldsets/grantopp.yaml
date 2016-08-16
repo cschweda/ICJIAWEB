@@ -86,6 +86,10 @@ fields:
       - NON-ICJIA
       - ICJIA
 
+  directURL:
+    display: Link to web page for grant opportunity
+    type: text
+
   summary:
     display: Summary (for Search)
     required: false
