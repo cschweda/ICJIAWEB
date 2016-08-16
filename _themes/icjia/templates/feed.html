@@ -18,7 +18,7 @@
          <guid>{{ permalink }}</guid>
          <category>{{_folder}}</category>
          <pubDate>{{ datestamp format="r" }}</pubDate>
-         <description><![CDATA[{{ content|widont|truncate:200|striptags }}]]></description>
+         <description><![CDATA[{{ summary|widont|truncate:500|striptags }}]]></description>
          </item>
       {{ /entries:listing }}
    </channel>
