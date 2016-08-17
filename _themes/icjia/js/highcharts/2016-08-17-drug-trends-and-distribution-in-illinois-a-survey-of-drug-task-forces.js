@@ -11,7 +11,7 @@ $(function() {
       type: 'column'
     },
     title: {
-      text: 'Extent of illegal drug distribution in drug task force jurisdictions (n=19)'
+      text: '<strong>Figure 1</strong><br>Extent of illegal drug distribution in drug task force jurisdictions (n=19)'
     },
     xAxis: {
       categories: ['Cannabis',	'Heroin',	'Prescription drugs',	'Cocaine',	'Crack cocaine']
