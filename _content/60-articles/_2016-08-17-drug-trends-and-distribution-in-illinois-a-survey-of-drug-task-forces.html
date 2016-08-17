@@ -29,7 +29,20 @@ leftColumn: |
     	<li><a class="scrollclass" data-target="#article-top">Introduction</a></li>
     	<li><a class="scrollclass" data-target="#implications-for-policy-and-practice">Implications for policy and practice</a></li>
     </ul>
+jsFile: 2016-08-17-drug-trends-and-distribution-in-illinois-a-survey-of-drug-task-forces.js
 ---
+
+<style>
+.table-caption {margin-top: 25px; font-size: 16px; font-family: 'Lato', sans-serif; font-weight: 700}
+.table-source {font-family: 'Lato', sans-serif; font-weight: 700; font-size: 12px; margin-bottom: 25px}
+.highchart {margin-top: 25px; margin-bottom: 25px}
+.table {font-size: 14px;}
+.cellMargin {margin-left: 25px}
+.table-heading {font-weight: 700}
+.table-cell-border-right {border-right: 1px solid #ccc}
+.table-cell-border-left {border-left: 1px solid #ccc}
+.sub-color {color: #f44013; margin-top: 25px}
+</style>
 <p>Drug trafficking is the cultivation, manufacture, distribution, and sale of drugs. <a href="#fn:1" id="fnref:1" title="See footnote" class="footnote">1</a> Drug distribution networks exist to oversee operations to obtain, transport, deliver, and finally sell to individuals in communities all over the United States. <a href="#fn:2" id="fnref:2" title="See footnote" class="footnote">2</a> Globally, money exchanged through the illicit drug trade is around $$500 billion per year. <a href="#fn:3" id="fnref:3" title="See footnote" class="footnote">3</a> Despite great risk, individuals in the in illegal drug trade are drawn to the potentially lucrative enterprise. However, the economic cost to U.S. society for drug distribution including criminal activity, as well as users’ medical costs and lost productivity, was estimated at $76 billion per year.<a href="#fn:4" id="fnref:4" title="See footnote" class="footnote">4</a>
 </p>
 <p>In Illinois, the distribution of controlled substances is a significant problem. In 1995, the Office of the National Drug Control Policy established the High Intensity Drug Trafficking Area program in Chicago.<a href="#fn:5" id="fnref:5" title="See footnote" class="footnote">5</a> Chicago HIDTA’s mission is to enhance and coordinate drug control efforts among federal, state, and local law enforcement agencies in order to eliminate or reduce drug trafficking in critical regions in Illinois. In addition to establishing programs like HIDTA, drug task forces were created to combat the distribution of controlled substances at the local level. Drug task forces arrest and prosecute drug offenders, identify and respond to emerging drug problems, and enhance inter-agency cooperation. <a href="#fn:6" id="fnref:6" title="See footnote" class="footnote">6</a> The Illinois Criminal Justice Information Authority has supported drug task forces with federal funding for more than 20 years.
@@ -42,11 +55,72 @@ leftColumn: |
 <p>Use and distribution of heroin was identified as the most serious problem drug by 16 of 19 drug task force communities, and most drug task force officials indicated an increase in the heroin problem in their communities over the two years examined (n=17) (see figure).
 </p>
 <div class="hc-embed">
-	<div id="hc-fig1">
-		<p class="text-center"><img src="http://placehold.it/550x300?text=insert+chart+here">
-		</p>
-	</div>
+	<div id="hc-fig1" style="min-width: 100%; height: 400px; margin: 0 auto"></div>
+
+  <p class="text-center table-caption">
+Note: No drug task forces responded <i>not a problem at all</i>
+</p>
+
+<div class="text-center" style="margin-top: 20px;">
+  <input id="TableButton" class="btn btn-default" value="Display data table" class="btn btn-secondary btn-block" onclick="TableFunction()">
 </div>
+
+  <table class="datatable table table-hover table-striped" id="hc-table1" style="display: none">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Cannabis</th>
+        <th>Heroin</th>
+        <th>Prescription drugs</th>
+        <th>Cocaine</th>
+        <th>Crack cocaine</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Minor problem</th>
+        <td>0%</td>
+        <td>0%</td>
+        <td>11%</td>
+        <td>11%</td>
+        <td>16%</td>
+      </tr>
+      <tr>
+        <th>Neutral</th>
+        <td>5%</td>
+        <td>0%</td>
+        <td>5%</td>
+        <td>0%</td>
+        <td>0%</td>
+      </tr>
+      <tr>
+        <th>Moderate problem</th>
+        <td>37%</td>
+        <td>5%</td>
+        <td>37%</td>
+        <td>37%</td>
+        <td>37%</td>
+      </tr>
+      <tr>
+        <th>Serious problem</th>
+        <td>58%</td>
+        <td>95%</td>
+        <td>47%</td>
+        <td>53%</td>
+        <td>47%</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+
+
+
+</div>
+
+
 <p>Although less frequently noted, many drug task forces also indicated they had seen an increased drug problem associated with cannabis (n=12), prescription drugs (12), and methamphetamines (n=12) in their communities over the past two years (2014-2015). Other emerging drugs identified were cannabis oils and cannabis wax (n=4) and synthetic cathinones (n=2).
 </p>
 <p>These findings were also consistent with the Authority’s 2016 Illinois Drug Threat Assessment. Thirty-seven out of 77 police chiefs and sheriffs identified heroin as the greatest drug threat  followed by prescription drugs (n=24). However, in the central and southern regions of Illinois, methamphetamine was most commonly identified as a considerable drug threat. Cannabis was fairly evenly spread out among the rankings for greatest drug threat across each region.<a href="#fn:7" id="fnref:7" title="See footnote" class="footnote">7</a> The National Drug Threat Assessment also corroborates these findings, with an identified increase in heroin, methamphetamine, marijuana, and controlled prescription drugs.
