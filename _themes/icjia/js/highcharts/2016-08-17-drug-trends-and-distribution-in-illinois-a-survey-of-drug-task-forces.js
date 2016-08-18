@@ -28,22 +28,24 @@ $(function() {
       }
     },
             series: [
-            {
-        		name: 'Serious problem',
-            data: [58,95,47,53,47]
-        },
-        {
-            name: 'Moderate problem',
-            data: [37,5,.37,37,37]
-        },
-        {
-            name: 'Neutral',
-            data: [5,0,5,0,0]
-        },
+
+
+
             {
             name: 'Minor problem',
             data: [0,0,11,11,16]
         },
+        {
+            name: 'Neutral',
+            data: [5,0,5,0,0]
+        },{
+            name: 'Moderate problem',
+            data: [37,5,37,37,37]
+        },
+        {
+        name: 'Serious problem',
+        data: [58,95,47,53,47]
+    }
         ],
     plotOptions: {
       column: {
