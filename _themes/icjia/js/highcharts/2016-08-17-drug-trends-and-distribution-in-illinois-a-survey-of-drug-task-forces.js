@@ -30,19 +30,19 @@ $(function() {
             series: [
             {
         		name: 'Serious problem',
-            data: [.58,.95,.47,.53,.47]
+            data: [58,95,47,53,47]
         },
         {
             name: 'Moderate problem',
-            data: [.37,.05,.37,.37,.37]
+            data: [37,5,.37,37,37]
         },
         {
             name: 'Neutral',
-            data: [.05,0,.05,0,0]
+            data: [5,0,5,0,0]
         },
             {
             name: 'Minor problem',
-            data: [0,0,.11,.11,.16]
+            data: [0,0,11,11,16]
         },
         ],
     plotOptions: {
@@ -50,6 +50,7 @@ $(function() {
         stacking: 'percent',
         dataLabels: {
           enabled: true,
+          format: '{point.y:.0f}%',
           color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
           style: {
             textShadow: '0 0 3px black'
