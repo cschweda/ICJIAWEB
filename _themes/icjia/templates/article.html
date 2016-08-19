@@ -49,38 +49,8 @@ table p {text-indent: 0;}
 
 
 
- 	<!--{{if pdf_uploads }}
-	 <h5 style="color: rgb(68, 68, 68); text-transform: uppercase; padding-bottom: 8px; font-weight: 900; margin-bottom: 10px; margin-left: 10px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid; width: 240px; ">Download</h5> -->
 
-
-
-
-			   <!-- {{pdf_uploads}}
-
-				<div style="width: 240px; margin-top: 25px;">
-					<div style="width: 175px; border: 1px solid #888; padding: 2px; margin: 0 auto;  ">
-
-						<a href="{{pdf}}">
-
-						<div style="padding-top: 5px; padding-bottom: 5px; font-size: 12px; font-family: 'Lato', sans-serif; text-transform: uppercase; font-weight: 700" class="text-center">Download {{reportType}}</div>
-						{{if reportCoverImage }}
-						<img src="{{ transform src="{ reportCoverImage }" width="170"}}"
-								style="" />
-						{{else}}
-						<img src="{{ transform src="{ splash }" width="170"}}"
-								style="" />
-						{{/if}}
-
-								<div style="padding-top: 5px; padding-bottom: 5px; font-size: 10px; font-family: 'Lato', sans-serif; text-transform: uppercase; font-weight: 700" class="text-center">{{title}}</div>
-
-							</a>
-					</div>
-				</div>
-
-				  {{/pdf_uploads}}
-
-				{{/if}} -->
-				{{pdf_uploads}}
+				<!-- {{pdf_uploads}}
 				<div class="text-center" style="width: 240px; margin-top: 35px;">
 					<a href="{{pdf}}" class="btn btn-default" style="font-family: 'Lato', sans-serif; text-transform: uppercase; font-size: 12px; font-weight: 700" title="Print page">Download {{reportType}}&nbsp;&nbsp;<i style="margin-bottom: .35em" class="fa fa-download"></i></a>
 				</div>
@@ -89,7 +59,23 @@ table p {text-indent: 0;}
 
 				<div class="text-center" style="width: 240px; margin-top: 35px;">
 				  <a href="javascript:window.print()" class="btn btn-default social print" style="font-family: 'Lato', sans-serif; text-transform: uppercase; font-size: 12px; font-weight: 700" title="Print page">Print article&nbsp;&nbsp;<i style="margin-bottom: .35em" class="fa fa-print"></i></a>
-				</div>
+				</div> -->
+
+
+				<div class="text-center" style="width: 240px; margin-top: 35px;">
+				<div class="btn-group" role="group" aria-label="">
+					{{pdf_uploads}}
+
+
+  					<a href="{{pdf}}" class="btn btn-default" style="font-family: 'Lato', sans-serif; text-transform: uppercase; font-size: 11px; font-weight: 700">{{reportType}}&nbsp;&nbsp;<i style="margin-bottom: .35em" class="fa fa-download"></i></a>
+
+	  {{/pdf_uploads}}
+
+  <!-- <a ref="javascript:window.print()" class="btn btn-default social print" style="font-family: 'Lato', sans-serif; text-transform: uppercase; font-size: 10px; font-weight: 700" title="Print page"><i style="margin-bottom: .35em" class="fa fa-print"></i></a> -->
+</div>
+
+</div>
+
 
 			</div>
 
@@ -120,7 +106,8 @@ table p {text-indent: 0;}
 				{{ authors_sentence_url_list }}
 			</span>
 			&nbsp;|&nbsp;{{endif}}
-			<span class="article-date">{{date}}</span>
+			<span class="article-date">{{date}}</span>&nbsp;|&nbsp;
+			<a href="javascript:window.print()" class="social print print-link" style="font-family: 'Lato', sans-serif; text-transform: uppercase; font-size: 18px; font-weight: 700" title="Print page"><i style="margin-bottom: .20em" class="fa fa-print"></i></a>
 
 		</div>
 
