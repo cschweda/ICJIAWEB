@@ -2,22 +2,189 @@
 title: Illinois Criminal Justice Information Authority
 _fieldset: home
 _template: home
-summary: The Authority brings together key leaders from the justice system and the public to identify critical issues facing the criminal justice system in Illinois, and to propose and evaluate policies, programs, and legislation that address those issues. The agency also works to ensure the criminal justice system in Illinois is efficient and effective. The Authority’s specific powers and duties are detailed in the Illinois Criminal Justice Information Act. John Maki is the Executive Director of the Authority.
-splashPhoto1: /assets/img/splash/drug-tf.jpg
-splashHeadline1: 'Drug trends and distribution in Illinois: A survey of drug task forces'
-splashPhoto3: /assets/gata/img/gata-image01-01.jpg
-splashHeadline3: 'Comprehensive Opioid Medication Assisted Treatment Program: Notice of Funding Opportunity'
-splashPhoto2: /assets/img/splash/employment-restriction2.jpg
-splashHeadline2: "The impact of employment restriction laws on Illinois’ convicted felons"
-splashLink1: /articles/drug-trends-and-distribution-in-illinois-a-survey-of-drug-task-forces
-splashLink3: /sites/opioidnofo
-splashLink2: /articles/the-impact-of-employment-restriction-laws-on-illinois-convicted-felons
+summary: The Authority brings together key leaders from the justice system and the public to identify critical issues facing the criminal justice system in Illinois, and to propose and evaluate policies, programs, and legislation that address those issues. The agency also works to ensure the criminal justice system in Illinois is efficient and effective. The Authority’s specific powers and duties are detailed in the Illinois Criminal Justice Information Act.
 newsItemsHome: "7"
 pinnedItemsHome: "2"
-splashKicker2:
+splashKicker2: ""
 splashKicker3: Funding Opportunity
 ---
-{{theme:partial src="home-splash2"}}
+<section id="home-splash2" style="margin-top: 20px">
+	<div style="width: 100%; overflow: hidden">
+			<div class="owl-carousel" style="">
+
+
+					<!-- Slide start -->
+					<div class="item">
+							<div class="slide owl-lazy" data-src=
+							"/assets/img/splash/gata-image01-01.jpg">
+									<a class="fp-splash" data-title="Opioid NOFO" href="/sites/opioidnofo">
+									<div class="overlay">
+											<div class="kicker">
+													Funding Opportunity
+											</div>
+											<div class="head">
+													2016 Comprehensive Opioid Medication Assisted
+													Treatment Program Notice of Funding Opportunity
+											</div>
+									</div></a>
+							</div>
+					</div>
+
+
+					<!-- Slide start -->
+					<div class="item">
+							<div class="slide owl-lazy" data-src="/assets/img/splash/drug-tf.jpg">
+									<a class="fp-splash" data-title=
+									"Drug Trends and distribution" href=
+									"/articles/drug-trends-and-distribution-in-illinois-a-survey-of-drug-task-forces">
+									<div class="overlay">
+											<div class="head">
+													Drug trends and distribution in Illinois: A survey
+													of drug task forces
+											</div>
+									</div></a>
+							</div>
+					</div>
+
+
+
+					<!-- Slide start -->
+					<div class="item">
+							<div class="slide" style=
+							"background-image:url(/assets/img/splash/employment-restriction2.jpg);">
+							<a class="fp-splash" data-title="Impact of employment"
+									href="/articles/the-impact-of-employment-restriction-laws-on-illinois-convicted-felons">
+									<div class="overlay">
+											<div class="head">
+													The impact of employment restriction laws on
+													Illinois’ convicted felons
+											</div>
+									</div></a>
+							</div>
+					</div>
+
+
+
+					<!-- Slide start -->
+					<div class="item">
+							<div class="slide" style=
+							"background-image:url('/assets/img/splash/ptsd-splash.jpg');">
+									<a class="fp-splash" data-title="Stress disorder" href=
+									"/articles/probable-posttraumatic-stress-disorder-in-a-sample-of-urban-jail-detainees">
+									<div class="overlay">
+											<div class="head">
+													Probable posttraumatic stress disorder in a sample
+													of urban jail detainees
+											</div>
+									</div></a>
+							</div>
+					</div>
+
+
+
+					<!-- Slide start -->
+					<div class="item">
+							<div class="slide" style=
+							"background-image:url(/assets/img/splash/gata-image01-01.jpg);">
+							<a class="fp-splash" data-title="VOCA NOFO" href=
+							"/sites/vocanofo">
+									<div class="overlay">
+											<div class="kicker">
+													Funding Opportunity
+											</div>
+											<div class="head">
+													Victims of Crime Act Transitional Housing Program:
+													Notice of Funding Opportunity
+											</div>
+									</div></a>
+							</div>
+					</div>
+
+
+
+					<!-- Slide start -->
+					<div class="item">
+							<div class="slide" style=
+							"background-image:url('assets/img/splash/247-sobriety.jpg');">
+									<a class="fp-splash" data-title="24/7 Sobriety" href=
+									"/articles/24-7-sobriety-program-summary">
+									<div class="overlay">
+											<div class="head">
+													24/7 Sobriety Program Summary
+											</div>
+									</div></a>
+							</div>
+					</div>
+			</div>
+	</div>
+
+          <script>
+            $(document).ready(function() {
+              var owl = $('.owl-carousel');
+              owl.on('initialized.owl.carousel', function(event) {
+                  // var comment = $(this).find('.active').find('img').attr('alt');
+                  // var title = $(this).find('.active').find('img').attr('title');
+                  // if(comment) $('.image-caption').html('<h4>'+title+'</h4><p>'+comment+'</p>');
+                    var title = $(this).find('.active').find('a').data('title');
+                  console.log ('init -- ' + title)
+                });
+              owl.owlCarousel({
+                margin: 1,
+                nav: true,
+                loop: true,
+                 lazyLoad:true,
+                autoplay:true,
+                 stagePadding: 0,
+
+    autoplayTimeout:5000,
+    autoplayHoverPause:true,
+                navText: [
+                      "<i class='fa fa-chevron-left fa-2x'></i>",
+                      "<i class='fa fa-chevron-right fa-2x'></i>"
+                    ],
+
+                responsive: {
+                  0: {
+                    items: 1
+                  },
+                  600: {
+                    items: 2
+                  },
+                  1000: {
+                    items: 3
+                  }
+                }
+              })
+
+              owl.on('translated.owl.carousel', function(event) {
+                  // var comment = $(this).find('.active').find('img').attr('alt');
+                  // var title = $(this).find('.active').find('img').attr('title');
+                  // if(comment) $('.image-caption').html('<h4>'+title+'</h4><p>'+comment+'</p>');
+                  var title = $(this).find('.active').find('a').data('title');
+                  console.log ('Stage transform -- Title ' + title);
+                });
+
+
+
+
+
+
+
+
+            })
+
+
+
+
+
+          </script>
+
+    </section>
+
+
+
+		<!--- ********** END PHOTO SPLASH ******************** --->
+
 
 <div style="height: 30px">
 </div>

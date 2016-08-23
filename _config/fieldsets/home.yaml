@@ -5,84 +5,84 @@ fields:
     type: hidden
     default: home
 
-  splashPhoto1:
-    required: true
-    type: text
-    required: true
-    instructions: Please resize photograph before publishing (2500px width / low to medium quality / 300-400k filesize)
-    display: Path to photo in assets directory
-    default: /assets/img/splash/
-
-  splashHeadline1:
-    type: text
-    required: true
-    display: Headline overlay for Photo 1
-    default:
-
-  splashLink1:
-    type: text
-    required: true
-    display: URL for Photo 1
-    default:
-
-  splashKicker1:
-    type: text
-    required: false
-    display: Boxed kicker for photo1
-    default:
-
-
-  splashPhoto2:
-    required: true
-    instructions: Please resize photograph before publishing (2500px width / low to medium quality / 300-400k filesize)
-    type: text
-    required: true
-    display: Path to photo in assets directory
-    default: /assets/img/splash/
-
-  splashHeadline2:
-    type: text
-    required: true
-    display: Headline overlay for Photo 2
-    default:
-
-  splashLink2:
-    type: text
-    required: true
-    display: URL for Photo 2
-    default:
-
-  splashKicker2:
-    type: text
-    required: false
-    display: Boxed kicker for Photo 2
-    default:
-
-  splashPhoto3:
-    required: true
-    type: text
-    required: true
-    display: Path to photo in assets directory
-    default: /assets/img/splash/
-    instructions: Please resize photograph before publishing (2500px width / low to medium quality / 300-400k filesize)
-
-  splashHeadline3:
-    type: text
-    required: true
-    display: Headline overlay for Photo 3
-    default:
-
-  splashLink3:
-    type: text
-    required: true
-    display: URL for Photo 3
-    default:
-
-  splashKicker3:
-    type: text
-    required: false
-    display: Boxed kicker for Photo 3
-    default:
+  # splashPhoto1:
+  #   required: true
+  #   type: text
+  #   required: true
+  #   instructions: Please resize photograph before publishing (2500px width / low to medium quality / 300-400k filesize)
+  #   display: Path to photo in assets directory
+  #   default: /assets/img/splash/
+  #
+  # splashHeadline1:
+  #   type: text
+  #   required: true
+  #   display: Headline overlay for Photo 1
+  #   default:
+  #
+  # splashLink1:
+  #   type: text
+  #   required: true
+  #   display: URL for Photo 1
+  #   default:
+  #
+  # splashKicker1:
+  #   type: text
+  #   required: false
+  #   display: Boxed kicker for photo1
+  #   default:
+  #
+  #
+  # splashPhoto2:
+  #   required: true
+  #   instructions: Please resize photograph before publishing (2500px width / low to medium quality / 300-400k filesize)
+  #   type: text
+  #   required: true
+  #   display: Path to photo in assets directory
+  #   default: /assets/img/splash/
+  #
+  # splashHeadline2:
+  #   type: text
+  #   required: true
+  #   display: Headline overlay for Photo 2
+  #   default:
+  #
+  # splashLink2:
+  #   type: text
+  #   required: true
+  #   display: URL for Photo 2
+  #   default:
+  #
+  # splashKicker2:
+  #   type: text
+  #   required: false
+  #   display: Boxed kicker for Photo 2
+  #   default:
+  #
+  # splashPhoto3:
+  #   required: true
+  #   type: text
+  #   required: true
+  #   display: Path to photo in assets directory
+  #   default: /assets/img/splash/
+  #   instructions: Please resize photograph before publishing (2500px width / low to medium quality / 300-400k filesize)
+  #
+  # splashHeadline3:
+  #   type: text
+  #   required: true
+  #   display: Headline overlay for Photo 3
+  #   default:
+  #
+  # splashLink3:
+  #   type: text
+  #   required: true
+  #   display: URL for Photo 3
+  #   default:
+  #
+  # splashKicker3:
+  #   type: text
+  #   required: false
+  #   display: Boxed kicker for Photo 3
+  #   default:
 
   pinnedItemsHome:
     display: Maximum 'pinned' (static) news items on front page
