@@ -1,12 +1,12 @@
-<section id="home-splash2" style="margin-top: 20px;">
+<section id="home-splash2" style="margin-top: 20px">
       <div style="width: 100%; overflow: hidden">
           <div class="owl-carousel" style="">
 
 
 
             <div class="item">
-              <div class="slide" style="background-image:url(/assets/img/splash/gata-image01-01.jpg);">
-                <a href="/sites/opioidnofo" class="fp-splash">
+              <div class="slide owl-lazy" data-src="/assets/img/splash/gata-image01-01.jpg">
+                <a href="/sites/opioidnofo" class="fp-splash" data-title="Opioid NOFO">
                     <div class="overlay">
 
                         <div class="kicker">
@@ -26,8 +26,8 @@
           </div>
 
           <div class="item">
-            <div class="slide" style="background-image:url(/assets/img/splash/drug-tf.jpg);">
-              <a href="/articles/drug-trends-and-distribution-in-illinois-a-survey-of-drug-task-forces" class="fp-splash">
+            <div class="slide owl-lazy" data-src="/assets/img/splash/drug-tf.jpg">
+              <a href="/articles/drug-trends-and-distribution-in-illinois-a-survey-of-drug-task-forces" class="fp-splash" data-title="Drug Trends and distribution">
                   <div class="overlay">
                             <div class="head">
 
@@ -43,7 +43,7 @@
 
         <div class="item">
           <div class="slide" style="background-image:url(/assets/img/splash/employment-restriction2.jpg);">
-            <a href="/articles/the-impact-of-employment-restriction-laws-on-illinois-convicted-felons" class="fp-splash">
+            <a href="/articles/the-impact-of-employment-restriction-laws-on-illinois-convicted-felons" class="fp-splash" data-title="Impact of employment">
                 <div class="overlay">
                           <div class="head">
 
@@ -59,7 +59,7 @@
 
       <div class="item">
         <div class="slide" style="background-image:url('/assets/img/splash/ptsd-splash.jpg');">
-          <a href="/articles/probable-posttraumatic-stress-disorder-in-a-sample-of-urban-jail-detainees" class="fp-splash">
+          <a href="/articles/probable-posttraumatic-stress-disorder-in-a-sample-of-urban-jail-detainees" class="fp-splash" data-title="Stress disorder">
               <div class="overlay">
                         <div class="head">
 
@@ -76,7 +76,7 @@
 
 <div class="item">
   <div class="slide" style="background-image:url(/assets/img/splash/gata-image01-01.jpg);">
-    <a href="/sites/vocanofo" class="fp-splash">
+    <a href="/sites/vocanofo" class="fp-splash" data-title="VOCA NOFO">
         <div class="overlay">
 
           <div class="kicker">
@@ -97,8 +97,8 @@
 
 
 <div class="item">
-  <div class="slide" style="background-image:url('/assets/img/splash/247-sobriety.jpg');">
-    <a href="/articles/24-7-sobriety-program-summary" class="fp-splash">
+  <div class="slide" style="background-image:url('assets/img/splash/247-sobriety.jpg');">
+    <a href="/articles/24-7-sobriety-program-summary" class="fp-splash" data-title="24/7 Sobriety">
         <div class="overlay">
                   <div class="head">
 
@@ -114,23 +114,6 @@
 
 
 
-<div class="item">
-  <div class="slide" style="background-image:url('/assets/img/splash/evaluation-cpd.jpg');">
-    <a href="/articles/evaluation-of-chicago-police-department-s-crisis-intervention-team-for-youth" class="fp-splash">
-        <div class="overlay">
-                  <div class="head">
-
-                    Evaluation of Chicago Police Department’s Crisis Intervention Team for Youth training curriculum: Year 2
-
-                  </div>
-        </div>
-
-        </a>
-
-</div>
-</div>
-
-
 
 
 
@@ -144,10 +127,18 @@
           <script>
             $(document).ready(function() {
               var owl = $('.owl-carousel');
+              owl.on('initialized.owl.carousel', function(event) {
+                  // var comment = $(this).find('.active').find('img').attr('alt');
+                  // var title = $(this).find('.active').find('img').attr('title');
+                  // if(comment) $('.image-caption').html('<h4>'+title+'</h4><p>'+comment+'</p>');
+                    var title = $(this).find('.active').find('a').data('title');
+                  console.log ('init -- ' + title)
+                });
               owl.owlCarousel({
                 margin: 1,
                 nav: true,
                 loop: true,
+                 lazyLoad:true,
                 autoplay:true,
                  stagePadding: 0,
 
@@ -170,6 +161,22 @@
                   }
                 }
               })
+
+              owl.on('translated.owl.carousel', function(event) {
+                  // var comment = $(this).find('.active').find('img').attr('alt');
+                  // var title = $(this).find('.active').find('img').attr('title');
+                  // if(comment) $('.image-caption').html('<h4>'+title+'</h4><p>'+comment+'</p>');
+                  var title = $(this).find('.active').find('a').data('title');
+                  console.log ('Stage transform -- Title ' + title);
+                });
+
+
+
+
+
+
+
+
             })
 
 
