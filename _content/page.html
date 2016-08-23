@@ -10,6 +10,12 @@ splashKicker3: Funding Opportunity
 ---
 <section id="home-splash2" style="margin-top: 20px">
 	<div style="width: 100%; overflow: hidden">
+
+		<div class="text-center" id="preloader" style="">
+
+          <h4 style="font-family: 'Lato', sans-serif; font-weight: 700; font-size: 20px; text-transform: uppercase;">Loading ...&nbsp;&nbsp;<img src="/assets/img/ajax-loader.gif"></h4>
+
+        </div>
 			<div class="owl-carousel" style="">
 
 
@@ -125,8 +131,10 @@ splashKicker3: Funding Opportunity
                   // var comment = $(this).find('.active').find('img').attr('alt');
                   // var title = $(this).find('.active').find('img').attr('title');
                   // if(comment) $('.image-caption').html('<h4>'+title+'</h4><p>'+comment+'</p>');
-                    var title = $(this).find('.active').find('a').data('title');
-                  console.log ('init -- ' + title)
+                  // var title = $(this).find('.active').find('a').data('title');
+                  // console.log ('init -- ' + title)
+									$('.owl-carousel').show();
+								$('#preloader').hide();
                 });
               owl.owlCarousel({
                 margin: 1,
@@ -160,8 +168,8 @@ splashKicker3: Funding Opportunity
                   // var comment = $(this).find('.active').find('img').attr('alt');
                   // var title = $(this).find('.active').find('img').attr('title');
                   // if(comment) $('.image-caption').html('<h4>'+title+'</h4><p>'+comment+'</p>');
-                  var title = $(this).find('.active').find('a').data('title');
-                  console.log ('Stage transform -- Title ' + title);
+                  // var title = $(this).find('.active').find('a').data('title');
+                  // console.log ('Stage transform -- Title ' + title);
                 });
 
 
