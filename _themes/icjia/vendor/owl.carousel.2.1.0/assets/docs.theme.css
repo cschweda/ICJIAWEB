@@ -1,0 +1,41 @@
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0
+}
+
+
+
+/*#demos .owl-carousel {
+    margin: 2rem 0
+}*/
+
+/*#demos .owl-carousel .item {
+    height: 350px;
+    background: #4DC7A0;
+    padding: 1px;
+}*/
+
+/*#demos .owl-carousel .item h4 {
+    color: #FFF;
+    font-weight: 400;
+    margin-top: 0rem
+}*/
+
+#demos .owl-carousel .item-video {
+    height: 300px
+}
+
+#demos #setup {
+    margin-top: 4rem
+}
+
+#demos .demo-list h5 {
+    margin: 0
+}
