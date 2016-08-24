@@ -118,3 +118,7 @@
 /opioidnofo:
   url: /sites/opioidnofo
   type: 301
+
+/vspsurvey:
+  url: /research/vspsurvey
+  type: 301
