@@ -354,11 +354,15 @@ h1 {font-family: 'Special Elite', cursive; font-size: 85px; text-transform: uppe
                       console.log('Target ID: ' + targetID);
                       // clone element, remove it in order to restart animation
                       // https://css-tricks.com/restart-css-animation/
-                      $('#' + targetID + 'ContextDiv').addClass('hidden ')
-                      var el=$('#' + targetID + 'ContextDiv');
-                      var newone = el.clone(true);
-                      el.before(newone);
-                      $("." + el.attr("class") + ":last").remove();
+                      // $('#' + targetID + 'ContextDiv').addClass('hidden ')
+                      // var el=$('#' + targetID + 'ContextDiv');
+                      // var newone = el.clone(true);
+                      // el.before(newone);
+                      // $("." + el.attr("class") + ":first").remove();
+
+
+                      $('#' + targetID + 'ContextDiv').replaceWith($('#' + targetID + 'ContextDiv').clone(true));
+
 
                       $('#' + targetID + 'TitleDiv').removeClass('hidden ').html(graphTitle);
                       $('#' + targetID + 'ContextDiv').removeClass('hidden ').addClass("animated flipInX").html(graphContext);
