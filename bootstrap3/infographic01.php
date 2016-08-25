@@ -62,15 +62,15 @@ body {font-family: 'Roboto', sans-serif; font-size: 18px;}
 .white {color: #fff;}
 .source-text {font-weight: 300}
 
-
-h1 {font-family: 'Special Elite', cursive; font-size: 85px; text-transform: uppercase;}
+h1 {font-family: 'Oswald', sans-serif; font-size: 95px; font-weight: 700; text-transform: uppercase;}
+/*h1 {font-family: 'Special Elite', cursive; font-size: 85px; text-transform: uppercase;}*/
 .title {border-top: 3px solid #fff; padding-top: 10px; margin-top: 0px; font-family: 'Oswald', sans-serif; font-size: 36px; text-transform: uppercase; margin-bottom: 20px; font-weight: 900}
 
 /*.title {border-top: 3px solid #fff; padding-top: 10px; margin-top: 0px; font-family: 'Special Elite', san-serif; font-size: 40px; text-transform: uppercase; margin-bottom: 20px; font-weight: 900}*/
 
 
 
-.text {font-family: 'Roboto', sans-serif; font-weight: 100;}
+.text {font-family: 'Roboto', sans-serif; font-weight: 300;}
 
 #graphContexts h4 {font-family: 'Roboto', sans-serif; font-size: 18px; margin-bottom: 20px; font-weight: 100}
 .white {color: #fff;}
@@ -98,9 +98,9 @@ h1 {font-family: 'Special Elite', cursive; font-size: 85px; text-transform: uppe
     <section id="section0">
       <div class="container">
         <div class="col-md-12">
-      <h1 class="white">Eget facilisis neque</h1>
+      <h1 class="white">Eget facilisis neque eges</h1>
       <div class="col-md-6">
-        <div class="white title">
+        <div class="white title" style="margin-top: 30px">
 
         </div>
 
@@ -115,7 +115,7 @@ h1 {font-family: 'Special Elite', cursive; font-size: 85px; text-transform: uppe
 
       </div>
       <div class="col-md-6">
-        <p class="white text">Aliquam velit nibh, imperdiet eu tristique vel, aliquet nec eros. Maecenas lacinia diam vitae ex ultricies lacinia. Quisque at urna cursus, elementum sapien ac, rhoncus libero. Vestibulum tristique purus vel nulla vehicula, ut condimentum turpis consequat. Phasellus risus urna, dignissim at nibh sit amet, fermentum porta mi. Nam vel odio viverra, porta dui ac, luctus dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        <p class="white text" style="margin-top: 30px">Aliquam velit nibh, imperdiet eu tristique vel, aliquet nec eros. Maecenas lacinia diam vitae ex ultricies lacinia. Quisque at urna cursus, elementum sapien ac, rhoncus libero. Vestibulum tristique purus vel nulla vehicula, ut condimentum turpis consequat. Phasellus risus urna, dignissim at nibh sit amet, fermentum porta mi. Nam vel odio viverra, porta dui ac, luctus dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 
         <p class="white text">Aliquam velit nibh, imperdiet eu tristique vel, aliquet nec eros. Maecenas lacinia diam vitae ex ultricies lacinia. Quisque at urna cursus, elementum sapien ac, rhoncus libero. Vestibulum tristique purus vel nulla vehicula, ut condimentum turpis consequat. Phasellus risus urna, dignissim at nibh sit amet, fermentum porta mi. Nam vel odio viverra, porta dui ac, luctus dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 
@@ -340,7 +340,7 @@ h1 {font-family: 'Special Elite', cursive; font-size: 85px; text-transform: uppe
       items : 1,
       itemsDesktop : false,
       itemsDesktopSmall : false,
-       pagination : true,
+       pagination : false,
       itemsTablet: false,
       itemsMobile : false,
 
