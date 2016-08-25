@@ -372,7 +372,7 @@ h1 {font-family: 'Special Elite', cursive; font-size: 85px; text-transform: uppe
         $( ".slider" ).each(function( index ) {
           $(this).addClass("hidden")
         });
-        $(sliderID).removeClass("hidden").addClass('animated zoomIn');
+        $(sliderID).removeClass("hidden");
 
         $('#sliderTitle').html(sliderTitle);
         $("#graphTitles > h4 > div").addClass("hidden animated fadeIn");
