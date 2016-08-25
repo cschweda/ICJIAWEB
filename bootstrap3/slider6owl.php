@@ -19,8 +19,8 @@
 
     <!-- Owl Stylesheets -->
 
-    <link rel="stylesheet" href="/vendor/owl.carousel.2.1.0/new/owl.carousel.css">
-    <link rel="stylesheet" href="/vendor/owl.carousel.2.1.0/new/owl.theme.default.css">
+    <link rel="stylesheet" href="vendor/owl.carousel.2.1.0/new/owl.carousel.css">
+    <link rel="stylesheet" href="vendor/owl.carousel.2.1.0/new/owl.theme.default.css">
 
     <script src="https://use.fontawesome.com/11155de5f7.js"></script>
 
@@ -40,7 +40,7 @@
 
     <!-- javascript -->
     <script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
-    <script src="/vendor/owl.carousel.2.1.0/new/owl.carousel.js"></script>
+    <script src="vendor/owl.carousel.2.1.0/new/owl.carousel.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' property="stylesheet" type='text/css'>
 
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">

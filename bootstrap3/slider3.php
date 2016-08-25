@@ -19,8 +19,8 @@
 
     <!-- Owl Stylesheets -->
 
-    <link rel="stylesheet" href="/vendor/owl.carousel.2.1.0/new/owl.carousel.css">
-    <link rel="stylesheet" href="/vendor/owl.carousel.2.1.0/new/owl.theme.default.css">
+    <link rel="stylesheet" href="vendor/owl.carousel.2.1.0/new/owl.carousel.css">
+    <link rel="stylesheet" href="vendor/owl.carousel.2.1.0/new/owl.theme.default.css">
 
     <script src="https://use.fontawesome.com/11155de5f7.js"></script>
 
@@ -51,9 +51,9 @@
 
 
     <!-- bxSlider Javascript file -->
-    <script src="/vendor/jquery.bxslider/jquery.bxslider.js"></script>
+    <script src="vendor/jquery.bxslider/jquery.bxslider.js"></script>
     <!-- bxSlider CSS file -->
-  <link href="/vendor/jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
+  <link href="vendor/jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
 
 
   </head>

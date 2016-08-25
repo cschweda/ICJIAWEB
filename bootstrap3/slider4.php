@@ -19,8 +19,8 @@
 
     <!-- Owl Stylesheets -->
 
-    <link rel="stylesheet" href="/vendor/owl.carousel.2.1.0/new/owl.carousel.css">
-    <link rel="stylesheet" href="/vendor/owl.carousel.2.1.0/new/owl.theme.default.css">
+    <link rel="stylesheet" href="vendor/owl.carousel.2.1.0/new/owl.carousel.css">
+    <link rel="stylesheet" href="vendor/owl.carousel.2.1.0/new/owl.theme.default.css">
 
     <script src="https://use.fontawesome.com/11155de5f7.js"></script>
 
@@ -49,8 +49,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
 
-    <link rel="stylesheet" type="text/css" href="/vendor/slick-1.6.0/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="/vendor/slick-1.6.0/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="vendor/slick-1.6.0/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="vendor/slick-1.6.0/slick/slick-theme.css">
     <style type="text/css">
 
       .slider {
@@ -121,7 +121,7 @@
       });
     </script>
 
-<script src="/vendor/slick-1.6.0/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+<script src="vendor/slick-1.6.0/slick/slick.js" type="text/javascript" charset="utf-8"></script>
 
   </body>
 </html>

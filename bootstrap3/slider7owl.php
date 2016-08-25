@@ -14,8 +14,8 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Owl Carousel Assets -->
-    <link href="/vendor/owl.carousel.1.3.3/owl-carousel/owl.carousel.css" rel="stylesheet">
-    <link href="/vendor/owl.carousel.1.3.3/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="vendor/owl.carousel.1.3.3/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="vendor/owl.carousel.1.3.3/owl-carousel/owl.theme.css" rel="stylesheet">
 
     <!-- <link href="../assets/js/google-code-prettify/prettify.css" rel="stylesheet"> -->
 
@@ -68,39 +68,39 @@
 
               <div id="quarter1" class="slider owl-carousel">
 
-                <div class="item"><img src="/vendor/owl.carousel.1.3.3/demos/assets/fullimage1.jpg" alt="Q1 - The Last of us"></div>
-                <div class="item"><img src="/vendor/owl.carousel.1.3.3/demos/assets/fullimage2.jpg" alt="Q1 - GTA V"></div>
-                <div class="item"><img src="/vendor/owl.carousel.1.3.3/demos/assets/fullimage3.jpg" alt="Q1 - Mirror Edge"></div>
-                <div class="item"><img src="/vendor/owl.carousel.1.3.3/demos/assets/fullimage4.jpg" alt="Q1 - Misty Mountain"></div>
+                <div class="item"><img src="vendor/owl.carousel.1.3.3/demos/assets/fullimage1.jpg" alt="Q1 - The Last of us"></div>
+                <div class="item"><img src="vendor/owl.carousel.1.3.3/demos/assets/fullimage2.jpg" alt="Q1 - GTA V"></div>
+                <div class="item"><img src="vendor/owl.carousel.1.3.3/demos/assets/fullimage3.jpg" alt="Q1 - Mirror Edge"></div>
+                <div class="item"><img src="vendor/owl.carousel.1.3.3/demos/assets/fullimage4.jpg" alt="Q1 - Misty Mountain"></div>
 
               </div>
 
               <div id="quarter2" class="slider owl-carousel hidden">
 
-                <div class="item"><img src="/vendor/owl.carousel.1.3.3/demos/assets/fullimage1.jpg" alt="Q2 - The Last of us"></div>
-                <div class="item"><img src="/vendor/owl.carousel.1.3.3/demos/assets/fullimage2.jpg" alt="Q2 - GTA V"></div>
-                <div class="item"><img src="/vendor/owl.carousel.1.3.3/demos/assets/fullimage3.jpg" alt="Q2 - Mirror Edge"></div>
-                <div class="item"><img src="/vendor/owl.carousel.1.3.3/demos/assets/fullimage4.jpg" alt="Q2 - Misty Mountain"></div>
+                <div class="item"><img src="vendor/owl.carousel.1.3.3/demos/assets/fullimage1.jpg" alt="Q2 - The Last of us"></div>
+                <div class="item"><img src="vendor/owl.carousel.1.3.3/demos/assets/fullimage2.jpg" alt="Q2 - GTA V"></div>
+                <div class="item"><img src="vendor/owl.carousel.1.3.3/demos/assets/fullimage3.jpg" alt="Q2 - Mirror Edge"></div>
+                <div class="item"><img src="vendor/owl.carousel.1.3.3/demos/assets/fullimage4.jpg" alt="Q2 - Misty Mountain"></div>
 
               </div>
 
 
               <div id="quarter3" class="slider owl-carousel hidden">
 
-                <div class="item"><img src="/vendor/owl.carousel.1.3.3/demos/assets/fullimage1.jpg" alt="Q3 - The Last of us"></div>
-                <div class="item"><img src="/vendor/owl.carousel.1.3.3/demos/assets/fullimage2.jpg" alt="Q3 - GTA V"></div>
-                <div class="item"><img src="/vendor/owl.carousel.1.3.3/demos/assets/fullimage3.jpg" alt="Q3 - Mirror Edge"></div>
-                  <div class="item"><img src="/vendor/owl.carousel.1.3.3/demos/assets/fullimage4.jpg" alt="Q3 - Misty Mountain"></div>
+                <div class="item"><img src="vendor/owl.carousel.1.3.3/demos/assets/fullimage1.jpg" alt="Q3 - The Last of us"></div>
+                <div class="item"><img src="vendor/owl.carousel.1.3.3/demos/assets/fullimage2.jpg" alt="Q3 - GTA V"></div>
+                <div class="item"><img src="vendor/owl.carousel.1.3.3/demos/assets/fullimage3.jpg" alt="Q3 - Mirror Edge"></div>
+                  <div class="item"><img src="vendor/owl.carousel.1.3.3/demos/assets/fullimage4.jpg" alt="Q3 - Misty Mountain"></div>
 
               </div>
 
 
               <div id="quarter4" class="slider owl-carousel hidden">
 
-                <div class="item"><img src="/vendor/owl.carousel.1.3.3/demos/assets/fullimage1.jpg" alt="Q4 - The Last of us"></div>
-                <div class="item"><img src="/vendor/owl.carousel.1.3.3/demos/assets/fullimage2.jpg" alt="Q4 - GTA V"></div>
-                <div class="item"><img src="/vendor/owl.carousel.1.3.3/demos/assets/fullimage3.jpg" alt="Q4 - Mirror Edge"></div>
-                  <div class="item"><img src="/vendor/owl.carousel.1.3.3/demos/assets/fullimage4.jpg" alt="Q4 - Misty Mountain"></div>
+                <div class="item"><img src="vendor/owl.carousel.1.3.3/demos/assets/fullimage1.jpg" alt="Q4 - The Last of us"></div>
+                <div class="item"><img src="vendor/owl.carousel.1.3.3/demos/assets/fullimage2.jpg" alt="Q4 - GTA V"></div>
+                <div class="item"><img src="vendor/owl.carousel.1.3.3/demos/assets/fullimage3.jpg" alt="Q4 - Mirror Edge"></div>
+                  <div class="item"><img src="vendor/owl.carousel.1.3.3/demos/assets/fullimage4.jpg" alt="Q4 - Misty Mountain"></div>
 
               </div>
 
@@ -114,7 +114,7 @@
 
 
 
-    <script src="/vendor/owl.carousel.1.3.3/owl-carousel/owl.carousel.js"></script>
+    <script src="vendor/owl.carousel.1.3.3/owl-carousel/owl.carousel.js"></script>
 
 
     <!-- Demo -->
