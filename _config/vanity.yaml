@@ -122,3 +122,11 @@
 /vspsurvey:
   url: /research/vspsurvey
   type: 301
+
+/safepassage:
+  url: /sites/safepassage
+  type: 301
+
+/clientsurvey:
+  url: /sites/clientsurvey
+  type: 301

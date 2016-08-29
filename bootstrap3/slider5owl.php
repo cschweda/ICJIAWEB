@@ -75,18 +75,15 @@
 
     <div id="target1" class="stage">
     <div class="owl-carousel">
-        <div class="item"><h4>1</h4></div>
-        <div class="item"><h4>2</h4></div>
-        <div class="item"><h4>3</h4></div>
-        <div class="item"><h4>4</h4></div>
-        <div class="item"><h4>5</h4></div>
-        <div class="item"><h4>6</h4></div>
-        <div class="item"><h4>7</h4></div>
-        <div class="item"><h4>8</h4></div>
-        <div class="item"><h4>9</h4></div>
-        <div class="item"><h4>10</h4></div>
-        <div class="item"><h4>11</h4></div>
-        <div class="item"><h4>12</h4></div>
+        <div class="item slide" data-title="test 1"><h4>1</h4></div>
+        <div class="item slide" data-title="test 2" ><h4>2</h4></div>
+        <div class="item slide" data-title="test 3"><h4>3</h4></div>
+        <div class="item slide" data-title="test 4"><h4>4</h4></div>
+        <div class="item slide" data-title="test 5"><h4>5</h4></div>
+        <div class="item slide" data-title="test 6"><h4>6</h4></div>
+        <div class="item slide" data-title="test 7"><h4>7</h4></div>
+        <div class="item slide" data-title="test 8"><h4>8</h4></div>
+
     </div>
     </div>
 
@@ -138,6 +135,15 @@
 <script>
 
 var owl = $('.owl-carousel');
+
+owl.on('initialized.owl.carousel', function(event) {
+    // var comment = $(this).find('.active').find('img').attr('alt');
+    // var title = $(this).find('.active').find('img').attr('title');
+    // if(comment) $('.image-caption').html('<h4>'+title+'</h4><p>'+comment+'</p>');
+    var title = $(this).find('.active').find('.slide').data('title');
+    console.log ('Stage initialized -- Title ' + title);
+  });
+
 owl.owlCarousel({
     items: 1,
     loop:true,
@@ -149,7 +155,7 @@ owl.on('translated.owl.carousel', function(event) {
     // var comment = $(this).find('.active').find('img').attr('alt');
     // var title = $(this).find('.active').find('img').attr('title');
     // if(comment) $('.image-caption').html('<h4>'+title+'</h4><p>'+comment+'</p>');
-    var title = $(this).find('.active').find('a').data('title');
+    var title = $(this).find('.active').find('.slide').data('title');
     console.log ('Stage transform -- Title ' + title);
   });
 
@@ -187,6 +193,7 @@ function carouselRebuild (id) {
 
   var carousel = $(id + ' .owl-carousel').data('owlCarousel');
   //console.log(id);
+  // fix for determining width when hidden
   carousel._width = $(id + ' .owl-carousel').width();
   carousel.invalidate('width');
   carousel.refresh();
