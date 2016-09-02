@@ -98,7 +98,7 @@ Highcharts.setOptions({
         shadow: false
     },
     tooltip: {
-        pointFormat: "$ {point.y:,.0f}"
+        pointFormat: "${point.y:,.0f}"
     },
 
     lang: {
@@ -320,7 +320,7 @@ $('#2015Q3').highcharts({
    			csv: "Component,Funds Designated\nCorrections,835749\nCourts,606589\nDefense,136642\nICJIA / Internal Programs,986409\nLaw Enforcement,2570650\nProsecution,2063869\nService Provider,8688353.05"
     },
     title: {
-        text: 'Funds Designated in Q2 2015'
+        text: 'Funds Designated in Q3 2015'
     },
     chart: {
     	type: "column",
@@ -336,7 +336,7 @@ $('#2015Q4').highcharts({
    			csv: "Component,Funds Designated\nSystemwide / General,200000\nService Provider,2253.95"
     },
     title: {
-        text: 'Funds Designated in Q2 2015'
+        text: 'Funds Designated in Q4 2015'
     },
     chart: {
     	type: "column",
@@ -352,7 +352,7 @@ $('#2016Q1').highcharts({
    			csv: "Component,Funds Designated\nCorrections ,331569\nCourts,244170\nLaw Enforcement,496360\nProsecution,1249461\nService Provider,902204\nSystemwide / General,200000"
     },
     title: {
-        text: 'Funds Designated in Q2 2015'
+        text: 'Funds Designated in Q1 2016'
     },
     chart: {
     	type: "column",
@@ -367,7 +367,7 @@ $('#2016Q2').highcharts({
    			csv: "Component,Funds Designated\nCorrections ,190081\nICJIA / Internal Programs,233947\nLaw Enforcement,239885\nService Provider,12136630"
     },
     title: {
-        text: 'Funds Designated in Q2 2015'
+        text: 'Funds Designated in Q2 2016'
     },
     chart: {
     	type: "column",
