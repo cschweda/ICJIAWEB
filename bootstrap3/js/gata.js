@@ -104,6 +104,9 @@ Highcharts.setOptions({
     lang: {
         thousandsSep: ','
     },
+    legend: {
+            enabled: false
+        },
 
     yAxis: {
       labels: {
