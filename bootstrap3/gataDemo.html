@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GATA Charting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="jQuery Responsive Carousel - Owl Carusel">
+
+
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700' rel='stylesheet' type='text/css'> -->
+    <!-- <link href="../assets/css/bootstrapTheme.css" rel="stylesheet">
+    <link href="../assets/css/custom.css" rel="stylesheet"> -->
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Roboto:100,300,400,700,700i,900,900i|Special+Elite" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <!-- <link href="../assets/js/google-code-prettify/prettify.css" rel="stylesheet"> -->
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <!-- Hover CSS -->
+    <link rel="stylesheet" href="vendor/Hover-master/css/hover.css">
+
+
+
+
+
+
+
+    <script src="https://use.fontawesome.com/11155de5f7.js"></script>
+    <script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
+
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="js/gata.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Oswald:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+
+    <!-- bxSlider Javascript file -->
+<script src="bower_components/bxslider-4/dist/jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS file -->
+<link href="bower_components/bxslider-4/dist/jquery.bxslider.css" rel="stylesheet" />
+
+
+<script src="https://rawgit.com/morr/jquery.appear/master/jquery.appear.js"></script>
+
+<style>
+/*.slide {height: 500px; background: #f5f5f5;}*/
+body {font-size: 16px; font-family: 'Open Sans', sans-serif;}
+
+
+.slideWhite {height: 510px; background: #fff;}
+.slideGrey {height: 510px; background: #f5f5f5;}
+
+/*.chart1, chart2 {height: 380px;}*/
+.compDescription, .qDescription {margin-top: 30px; font-family: 'Lato', sans-serif; font-size: 18px; font-weight: 700}
+#compPager, #qPager {font-family: 'Oswald', sans-serif; font-size: 18px; line-height: 26px; font-weight: 700; text-transform: uppercase;}
+/*#bx-pager .active {padding: 5px; background: #ccc}*/
+
+
+
+.bx-wrapper {
+    -moz-box-shadow: 0 0 0px #ccc;
+    -webkit-box-shadow: 0 0 0px #ccc;
+    box-shadow: 0 0 0px #ccc;
+    border: 0px solid #fff;
+    background: #fff;
+}
+
+.leftRule {border-left: 1px solid #bbb; padding-left: 20px; padding-right: 15px}
+
+#compPager ul, #qPager ul {list-style: none; margin-left: -30px}
+#compPager ul li, #qPager ul li{margin-top: 15px;}
+/*#bx-pager .active {padding: 5px; background: #ccc; text-decoration: none;   -moz-box-shadow: 0 0 5px #ccc;
+  -webkit-box-shadow: 0 0 5px #ccc;
+  box-shadow: 0 0 5px #ccc;
+  }*/
+
+  #compPager .active, #qPager .active{border-bottom: 2px solid #555; text-decoration: none; color: #333;
+    }
+
+
+
+a {}
+a:hover, a:focus {text-decoration: none}
+.well.white {background: #fff}
+
+#section1 {background: #f5f5f5; }
+#section2 {background: #fff; }
+
+#section1, #section2 {padding-top: 75px; padding-bottom: 75px}
+
+.chart2 {background: #f5f5f5; margin: auto; width: 80%; margin-bottom: 40px}
+
+</style>
+
+
+  </head>
+  <body>
+
+    <section id="section1">
+
+    <div class="container">
+
+      <div class="col-md-1">
+
+
+      </div>
+
+
+      <div class="col-md-11" style="margin-bottom: 30px">
+        <p>These charts illustrate all funds designated to programs serving the following components of the criminal justice system in Illinois:  Corrections, Courts, Defense, ICJIA/Internal, Law Enforcement, Prosecution, Service Providers, Systemwide/General. These charts represent funding designations made during the 18 month period from the 1st Quarter of Calendar Year 2015 through the 2nd Quarter of Calendar Year 2016.</p>
+<p>These charts represent funds from federal sources including the Office of Justice Programs (OJP), the Office for Victims of Crime (OVC), and the United States Department of Justice (DOJ).</p>
+<p>Federal programs represented include:</p>
+<ul>
+<li>Justice Assistance Grants (OJP)</li>
+<li>the Coverdell National Forensic Science Improvement Grants Program (OJP)</li>
+<li>Project Safe Neighborhoods (OJP)</li>
+<li>Residential Substance Abuse Treatment for State Prisoners (OJP)</li>
+<li>Sex Offender Registration and Notification Act (DOJ)</li>
+<li>Victim Assistance Discretionary Grant Training Program (OVC)</li>
+<li>the Violence Against Women Act (DOJ)</li>
+<li>the Victims of Crime Act (DOJ)</li>
+</ul>
+
+<p>Also included is the State of Illinois’s Adult Redeploy Illinois program.</p>
+
+      </div>
+
+
+
+
+
+
+
+
+  <div class="col-md-1"></div>
+    <div class="col-md-11">
+        <div class="row well white" >
+      <div class="col-md-2 hidden-xs hidden-sm" style="margin-left: -15px; padding-right: 10px;">
+        <div id="compPager">
+          <ul>
+          <li><a data-slide-index="0" href="" class="slidePager ">Corrections</a></li>
+          <li><a data-slide-index="1" href="" class="slidePager">Courts</a></li>
+          <li><a data-slide-index="2" href="" class="slidePager">Prosecution</a></li>
+          <li><a data-slide-index="3" href="" class="slidePager">Service Providers</a></li>
+          <li><a data-slide-index="4" href="" class="slidePager">Defense</a></li>
+          <li><a data-slide-index="5" href="" class="slidePager">ICJIA</a></li>
+          <li><a data-slide-index="6" href="" class="slidePager">Law Enforcement</a></li>
+          <li><a data-slide-index="7" href="" class="slidePager">Systemwide</a></li>
+        </ul>
+        </div>
+      </div>
+
+      <div class="col-md-10 graphPack leftRule" style="">
+
+
+
+    <ul class="compSlider">
+
+
+
+          <li class="slideWhite">
+            <div id="corrections" class="chart1" data-description="This chart illustrates all funds designated to corrections programs for the 18 month period from the 1st Quarter of Calendar Year 2015 through the 2nd Quarter of Calendar Year 2016." style="margin: auto;width: 80%"></div>
+
+          </li>
+
+          <li class="slideWhite">
+            <div id="courts" class="chart1" data-description="This chart illustrates all funds designated to court programs for the 18 month period from the 1st Quarter of Calendar Year 2015 through the 2nd Quarter of Calendar Year 2016." style="margin: auto; width: 80%"></div>
+
+          </li>
+
+          <li class="slideWhite ">
+            <div id="prosecution" class="chart1" data-description="This chart illustrates all funds designated to prosecution programs for the 18 month period from the 1st Quarter of Calendar Year 2015 through the 2nd Quarter of Calendar Year 2016." style="margin: auto; width: 80%"></div>
+
+          </li>
+
+
+          <li class="slideWhite ">
+            <div id="serviceProviders" class="chart1" data-description="This chart illustrates all funds designated to service providers' programs for the 18 month period from the 1st Quarter of Calendar Year 2015 through the 2nd Quarter of Calendar Year 2016." style="margin: auto; width: 80%"></div>
+
+          </li>
+
+
+          <li class="slideWhite ">
+            <div id="defense" class="chart1" data-description="This chart illustrates all funds designated to defense programs for the 18 month period from the 1st Quarter of Calendar Year 2015 through the 2nd Quarter of Calendar Year 2016." style="margin: auto; width: 80%"></div>
+
+          </li>
+
+          <li class="slideWhite ">
+            <div id="icjia" class="chart1" data-description="This chart illustrates all funds designated to ICJIA's internal programs for the 18 month period from the 1st Quarter of Calendar Year 2015 through the 2nd Quarter of Calendar Year 2016." style="margin: auto; width: 80%"></div>
+
+          </li>
+
+
+          <li class="slideWhite ">
+            <div id="lawEnforcement" class="chart1" data-description="This chart illustrates all funds designated to law enforcement programs for the 18 month period from the 1st Quarter of Calendar Year 2015 through the 2nd Quarter of Calendar Year 2016." style="margin: auto; width: 80%"></div>
+
+          </li>
+
+          <li class="slideWhite ">
+            <div id="systemwide" class="chart1" data-description="This chart illustrates all funds designated to systemwide / general programs for the 18 month period from the 1st Quarter of Calendar Year 2015 through the 2nd Quarter of Calendar Year 2016." style="margin: auto; width: 80%"></div>
+
+          </li>
+
+
+
+
+
+        </ul>
+
+
+          <p style="border-top: 1px solid #bbb; padding-top: 15px; font-family: 'Lato', sans-serif; font-size: 11px; color: #777" class="text-center"><span style="font-weight: 900">Q1</span> = January, Febrary, and March. <span style="font-weight: 900">Q2</span> = April, May, and June. <span style="font-weight: 900">Q3</span> = July, August, and September. <span style="font-weight: 900">Q4</span> = October, November, and December.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+
+
+<section id="section2">
+
+<div class="container">
+<div class="col-md-1">
+
+
+</div>
+
+<div class="col-md-11" style="margin-bottom: 30px">
+  <p>These charts illustrate all funds designated to grant programs per quarter from the First Quarter of Calendar Year 2015 to the most recent complete quarter by component of the criminal justice system.</p>
+<p>These charts represent funds from federal sources including the Office of Justice Programs (OJP), the Office for Victims of Crime (OVC), and the United States Department of Justice (DOJ).</p>
+<p>Federal programs represented include:</p>
+<ul>
+<li>Justice Assistance Grants (OJP)</li>
+<li>the Coverdell National Forensic Science Improvement Grants Program (OJP)</li>
+<li>Project Safe Neighborhoods (OJP)</li>
+<li>Residential Substance Abuse Treatment for State Prisoners (OJP)</li>
+<li>Sex Offender Registration and Notification Act (DOJ)</li>
+<li>Victim Assistance Discretionary Grant Training Program (OVC)</li>
+<li>the Violence Against Women Act (DOJ)</li>
+<li>the Victims of Crime Act (DOJ)</li>
+</ul>
+
+<p>
+Also included is the State of Illinois’s Adult Redeploy Illinois program.</p>
+</p>
+
+
+</div>
+
+
+<div class="col-md-1"></div>
+  <div class="col-md-11">
+      <div class="row well" >
+    <div class="col-md-2 hidden-xs hidden-sm" style="margin-left: -15px; padding-right: 10px;">
+      <div id="qPager" style="">
+        <ul>
+        <li><a data-slide-index="0" href="" >2015 Q1</a></li>
+        <li><a data-slide-index="1" href="" >2015 Q2</a></li>
+        <li><a data-slide-index="2" href="" >2015 Q3</a></li>
+        <li><a data-slide-index="3" href="" >2015 Q4</a></li>
+        <li><div style="border-top: 1px solid #ccc; margin-left: -20px; margin-top: 25px; margin-bottom: 25px;"></div></li>
+        <li><a data-slide-index="4" href="" >2016 Q1</a></li>
+        <li><a data-slide-index="5" href="" >2016 Q2</a></li>
+
+      </ul>
+      </div>
+    </div>
+
+    <div class="col-md-10 graphPack leftRule" style="">
+
+
+
+  <ul class="qSlider">
+
+
+
+        <li class="slideGrey">
+
+          <div id="2015Q1" class="chart2" data-description="This chart illustrates all funds designated to grant programs during the First Quarter of Calanedar Year 2015 by criminal justice system component." style="">
+
+          </div>
+          <div class="qDescription text-center animated zoomIn hidden-xs hidden-sm"></div>
+
+
+        </li>
+
+
+        <li class="slideGrey">
+          <div id="2015Q2" class="chart2" data-description="This chart illustrates all funds designated to grant programs during the Second Quarter of Calanedar Year 2015 by criminal justice system component." style="">
+
+          </div>
+
+        </li>
+
+        <li class="slideGrey">
+          <div id="2015Q3" class="chart2" data-description="This chart illustrates all funds designated to grant programs during the Third Quarter of Calanedar Year 2015 by criminal justice system component." style="">
+
+          </div>
+
+      </li>
+
+
+      <li class="slideGrey">
+        <div id="2015Q4" class="chart2" data-description="This chart illustrates all funds designated to grant programs during the Fourth Quarter of Calanedar Year 2015 by criminal justice system component." style="">
+
+        </div>
+
+      </li>
+
+
+      <li class="slideGrey">
+        <div id="2016Q1" class="chart2" data-description="This chart illustrates all funds designated to grant programs during the First Quarter of Calanedar Year 2016 by criminal justice system component." style="">
+
+        </div>
+
+      </li>
+
+
+      <li class="slideGrey">
+        <div id="2016Q2" class="chart2" data-description="This chart illustrates all funds designated to grant programs during the Second Quarter of Calanedar Year 2015 by criminal justice system component." style="">
+
+        </div>
+      </li>
+
+
+
+
+
+      </ul>
+
+      <p style="border-top: 1px solid #bbb; padding-top: 15px; font-family: 'Lato', sans-serif; font-size: 11px; color: #777" class="text-center"><span style="font-weight: 900">Q1</span> = January, Febrary, and March. <span style="font-weight: 900">Q2</span> = April, May, and June. <span style="font-weight: 900">Q3</span> = July, August, and September. <span style="font-weight: 900">Q4</span> = October, November, and December.</p>
+
+
+      <!-- -->
+
+</div>
+</div>
+</div>
+
+
+
+</div>
+
+
+
+
+</section>
+
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- jquery lazy: http://jquery.eisbehr.de/lazy/ -->
+
+
+    <script src="js/gata.js"></script>
+
+
+  </body>
+</html>
