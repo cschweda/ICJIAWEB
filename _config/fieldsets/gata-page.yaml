@@ -58,6 +58,10 @@ fields:
   #     - 'top'
   #     - 'bottom'
 
+  lastUpdate:
+    display: Last update
+    type: date
+
   summary:
     display: Page summary (Summary displays in search results)
     required: false
