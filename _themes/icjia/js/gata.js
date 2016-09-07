@@ -136,6 +136,10 @@ $(document).ready(function() {
 
         onSlideBefore: function($slideElement, oldIndex, newIndex) {
             $(".qDescription").remove();
+            // chartToAnimate = $slideElement.find(".highcharts-container");
+            // $(chartToAnimate).removeClass('animated zoomIn');
+            // $(chartToAnimate).addClass('animated zoomIn');
+
 
         },
         onSlideAfter: function($slideElement, oldIndex, newIndex) {
@@ -143,8 +147,10 @@ $(document).ready(function() {
             $('.chart2').after('<div class="text-center qDescription animated zoomIn hidden-xs hidden-sm"></div>');
             $(".qDescription").html($slideElement.find("div").data("description"));
 
-            console.log ($slideElement.find("div").data("description"));
-
+            //console.log ($slideElement.find("div").data("description"));
+          //   console.log ($slideElement.find("div").attr("id"));
+          //   chartToAnimate = $slideElement.find(".highcharts-container");
+          // $(chartToAnimate).addClass('animated fadeIn');
         }
     });
 
