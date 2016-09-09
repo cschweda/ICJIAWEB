@@ -130,3 +130,7 @@
 /clientsurvey:
   url: /sites/clientsurvey
   type: 301
+
+/typography:
+  url: /sandbox/typography
+  type: 301
