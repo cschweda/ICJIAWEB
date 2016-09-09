@@ -124,20 +124,27 @@
 
 		<link href="{{ theme:asset src='js/special/bigfoot-number/dist/bigfoot-number.css' }}" rel="stylesheet" property="stylesheet">
 
-		<script type="text/javascript" src="{{ theme:asset src='vendor/fusioncharts-suite-xt/js/fusioncharts.js'}}"></script>
+		<!-- <script type="text/javascript" src="{{ theme:asset src='vendor/fusioncharts-suite-xt/js/fusioncharts.js'}}"></script>
 		<script type="text/javascript" src="{{ theme:asset src='vendor/fusioncharts-suite-xt/js/themes/fusioncharts.theme.ocean.js'}}"></script>
 
-		<script type="text/javascript" src="{{ theme:asset src='vendor/fusioncharts-jquery-plugin-master/package/fusioncharts-jquery-plugin.min.js'}}"></script>
+		<script type="text/javascript" src="{{ theme:asset src='vendor/fusioncharts-jquery-plugin-master/package/fusioncharts-jquery-plugin.min.js'}}"></script> -->
 
 
-			<script src="{{ theme:asset src='bower_components/moment/min/moment.min.js' }}"></script>
+			<!-- <script src="{{ theme:asset src='bower_components/moment/min/moment.min.js' }}"></script> -->
 
 
 
 
+			<!-- OWL carousel -->
 			<link rel="stylesheet" href="	{{ theme:asset src='vendor/owl.carousel.2.1.0/new/owl.carousel.css'}}">
-    <link rel="stylesheet" href="	{{ theme:asset src='vendor/owl.carousel.2.1.0/new/owl.theme.default.css'}}">
+    	<link rel="stylesheet" href="	{{ theme:asset src='vendor/owl.carousel.2.1.0/new/owl.theme.default.css'}}">
 		  <script src="{{ theme:asset src='vendor/owl.carousel.2.1.0/new/owl.carousel.js'}}"></script>
+
+			<!-- jquery-lazy: http://jquery.eisbehr.de/lazy/ -->
+			<script src="{{ theme:asset src='bower_components/jquery-lazy/jquery.lazy.min.js'}}"></script>
+			<script src="{{ theme:asset src='bower_components/jquery-lazy/jquery.lazy.plugins.min.js'}}"></script>
+
+
 
 
 	</head>
@@ -201,6 +208,16 @@
 		<link href="//cdn.datatables.net/responsive/1.0.6/css/dataTables.responsive.css" property="stylesheet" rel="stylesheet">
 		<script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
 		<script src="//cdn.datatables.net/responsive/1.0.6/js/dataTables.responsive.js"></script>
+
+
+		<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+
+
+		<script src="//cdn.datatables.net/plug-ins/1.10.12/sorting/datetime-moment.js"></script>
+
+		<script>
+		$.fn.dataTable.moment( 'YYYY-MMM' );
+		</script>
 
 
 		<!-- Bootstrap modal lightbox -->
