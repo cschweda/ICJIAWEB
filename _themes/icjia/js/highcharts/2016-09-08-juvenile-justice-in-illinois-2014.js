@@ -40,7 +40,7 @@ $(function () {
         series: [{
             name: 'Other',
             data: [6, 1, 1, 12],
-            color: '#24664B'
+            color: '#3aa277'
         },
         {
             name: 'Black',
