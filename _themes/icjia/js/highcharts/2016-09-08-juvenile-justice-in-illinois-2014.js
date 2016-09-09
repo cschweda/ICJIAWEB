@@ -7,7 +7,7 @@ $(function () {
             text: 'Juvenile Arrests, Detention, and Corrections Admissions in Illinois, 2014 by Race'
         },
         xAxis: {
-            categories: ['Population (youth 10-17)', 'Arrests (n=36,196)', 'Detention Admissions (n=12,039)', 'Correction Admissions (n=878)']
+            categories: ['Population<br>(youth 10-17)', 'Arrests<br>(n=36,196)', 'Detention Admissions<br>(n=12,039)', 'Correction Admissions<br>(n=878)']
         },
         yAxis: {
             min: 0,
@@ -24,7 +24,10 @@ $(function () {
                     stacking: 'normal',
                     dataLabels: {
                         enabled: true,
-                        color: 'black',
+                        color: '#fff',
+                        style: {
+                    			textShadow: false
+                				},
                        format: "{point.y:,.0f}%"
 
                     }
@@ -37,17 +40,17 @@ $(function () {
         series: [{
             name: 'Other',
             data: [6, 1, 1, 12],
-            color: 'DarkSeaGreen'
+            color: '#24664B'
         },
         {
             name: 'Black',
             data: [18, 61, 64, 65],
-            color: 'LightBlue'
+            color: '#285270'
 
         },{
             name: 'White',
             data: [76, 38, 35, 23 ],
-            color: '#FFDAB9'
+            color: '#245159'
         }  ]
     });
 });
