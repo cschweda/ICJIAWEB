@@ -1,8 +1,9 @@
+
 $(function () {
     $('#hc-fig1').highcharts({
         chart: {
             type: 'column',
-            
+
         },
         title: {
             text: 'Juvenile Arrests, Detention, and Corrections Admissions in Illinois, 2014 by Race'

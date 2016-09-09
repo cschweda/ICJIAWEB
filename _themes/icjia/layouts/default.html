@@ -144,8 +144,9 @@
 			<script src="{{ theme:asset src='bower_components/jquery-lazy/jquery.lazy.min.js'}}"></script>
 			<script src="{{ theme:asset src='bower_components/jquery-lazy/jquery.lazy.plugins.min.js'}}"></script>
 
-
-
+			 <link rel="stylesheet" href="{{ theme:asset src='bower_components/animate.css/animate.min.css'}}">
+			 <!-- jquery appear -->
+	 		<script src="{{ theme:asset src='bower_components/jquery_appear/jquery.appear.js' }}"></script>
 
 	</head>
 
@@ -217,7 +218,6 @@
 
 
 		<!-- Bootstrap modal lightbox -->
-
 		<script src="{{ theme:asset src='bower_components/ekko-lightbox/dist/ekko-lightbox.min.js' }}"></script>
 
 		<!-- https://github.com/saribe/eModal -->
@@ -236,10 +236,15 @@
 
 
 
+
+
+
 		{{if jsFile}}
 		<script src="{{ theme:asset src='bower_components/highcharts-release/highcharts.src.js' }}"></script>
     <script src="{{ theme:asset src='bower_components/highcharts-release/modules/exporting.js' }}"></script>
+		<script src="{{ theme:asset src='js/highcharts/highchartsDeferRender.js'}}"></script>
 		<script src="{{ theme:asset src='js/highcharts/{{jsFile}}'}}"></script>
+
 		{{/if}}
 
 
@@ -275,8 +280,6 @@
 {{theme:partial src="google-tracking"}}
 
 {{theme:partial src="sticky-social-sidebar"}}
-
-
 
 
 
