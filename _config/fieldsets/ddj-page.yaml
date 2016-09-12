@@ -1,4 +1,4 @@
-title: Gata Page
+title: Data Drive Justice Page
 
 fields:
   _template:
@@ -7,7 +7,7 @@ fields:
 
   _layout:
     type: hidden
-    default: gata-default
+    default: ddj-default
 
   keywords:
     display: Keywords
@@ -17,7 +17,7 @@ fields:
 
   upload:
     type: file
-    destination: assets/gata/pdf/
+    destination: assets/ddj/pdf/
     allowed: ['pdf']
 
   breadcrumbs:
