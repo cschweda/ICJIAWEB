@@ -102,12 +102,21 @@ module.exports = function(grunt) {
 			},
 			css: {
 				files: ['less/**/*.less'],
-				tasks: ['less'],
+				tasks: ['less:development'],
+				options: {
+					livereload: true,
+					nospawn: true
+				}
+			},
+			ddjCss: {
+				files: ['less/**/*.less','js/ddj/*.js'],
+				tasks: ['less:ddj','concat:ddj'],
 				options: {
 					livereload: true,
 					nospawn: true
 				}
 			}
+
 		}
 
 
@@ -126,7 +135,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('default', ['concat', 'less', 'watch']);
 	grunt.registerTask('deploy', ['concat', 'uglify', 'less', 'watch']);
-	grunt.registerTask('ddj', ['concat:ddj', 'less:ddj', 'watch']);
+	grunt.registerTask('ddj', ['concat:ddj', 'less:ddj', 'watch:ddjCss']);
 
 
 };

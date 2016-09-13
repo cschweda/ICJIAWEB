@@ -15,6 +15,8 @@ lastUpdate: 2016-09-12
 ---
 
 <style>
+
+.lightText {color: #ffffff}
 .text-slide {padding-top: 25%; padding-left: 20px; padding-right: 30px}
 
 .ddjMain {color: red}
@@ -24,18 +26,23 @@ lastUpdate: 2016-09-12
 .medHeading {font-family: 'Roboto', sans-serif; font-weight: 900; letter-spacing: -1.5px; text-transform: none; font-size: 36px;
 
 
-.container-fluid.full-width {
-  margin-left: 0;
+
+.row.no-gutters {
   margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-    overflow-x: hidden;
+  margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
 }
 
-.container-full {
-  margin: 0 auto;
-  width: 100%;
-}
+.ddjAccent {#81d742}
+
+/*.ddjAccent {#81d742}*/
+
+
+
 
 
 </style>
@@ -52,59 +59,72 @@ lastUpdate: 2016-09-12
 {{theme:partial src="ddj-nav"}}
 
 
-<section style="background: #fff; margin-top: -50px; border-bottom: 1px solid #ccc">
+<section style="background: #181A1E; margin-top: -50px; border-bottom: 1px solid #ccc">
 
 
-<div class="container-fluid full-width" style="margin-left: -15px; margin-right: -15px;">
+<div class="container-fluid" style="margin-left: -25px; margin-right: -25px">
+  <div class="row no-gutters">
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
       <div class="img-slide">
-      <img class="img-responsive" src="/assets/ddj/img/fw_il_019_01.jpg"/>
+        <img class="img-responsive" src="/assets/ddj/img/hero03.jpg"/>
+      </div>
     </div>
-    </div>
+
 
 
     <div class="col-md-6">
 
       <div class="text-slide">
 
-          <h1 style="font-family: 'Roboto', sans-serif; font-weight: 900; letter-spacing: -1px; text-transform: none; border-bottom: 3px solid red; padding-bottom: 8px" class="animated flipInX">Data-Driven Health & Justice Conference</h1>
-          <p style="font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 24px" class="animated fadeIn">Friday, December 9, 2016</p>
+          <h1 style="font-family: 'Roboto', sans-serif; font-weight: 900; letter-spacing: -1px; text-transform: none; border-bottom: 3px solid #81d742; padding-bottom: 8px; color: #fff" class="animated flipInX">Data-Driven Health & Justice Conference</h1>
+          <p style="font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 24px; color: #fff" class="animated fadeIn">Friday, December 9, 2016</p>
 
-          <p style="font-family: 'Roboto', sans-serif; font-weight: 300; color: #666" class="animated fadeIn">Hosted by Illinois Criminal Justice Information Authority and the Illinois Health and Hospital Association</p>
+          <p style="font-family: 'Roboto', sans-serif; font-weight: 300; color: #aaa" class="animated fadeIn">Hosted by <span style="color: #fff">Illinois Criminal Justice Information Authority</span> and the <span style="color: #fff">Illinois Health and Hospital Association</span></p>
 
       </div>
 
     </div>
+  </div>
 </div>
 
 </section>
 
 
-<section style="background: #fff; padding-top: 25px; padding-bottom: 25px">
+<section style="background: #fff; padding-top: 35px; padding-bottom: 35px">
 
   <div class="container">
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 
-      <h2 style="font-family: 'Roboto', sans-serif; font-weight: 900; letter-spacing: -1px; text-transform: none; border-bottom: 1px solid red; padding-bottom: 8px; font-size: 48px" class="animated flipInX">Save the Date</h2>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div style="font-size: 14px; font-weight: 700; color: #81d742; text-transform: uppercase; border-bottom: 2px solid #81d742; padding-bottom: 5px;"></div>
+  </div>
+
+
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="padding-top: 15px;">
+
+
+      <h2 style="font-family: 'Roboto', sans-serif; font-weight: 900; letter-spacing: -1px; text-transform: none;  font-size: 48px; margin-top: 0px" class="animated flipInX">Save the Date</h2>
+
+      <h3>Friday, December 9, 2016</h3>
+
+      <h4 style="line-height: 30px; color: #777"> Carle Foundation Auditorium<br>611 W. Park St.<br>Urbana, IL 61801</h4>
 
 
     </div>
 
 
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="padding-top: 15px;">
 
   <!-- <h2 style="font-family: 'Roboto', sans-serif; font-weight: 900; letter-spacing: -1px; text-transform: none; font-size: 36px" >Data-Driven Health & Justice Conference</h2> -->
 
-  <p>Hosted by Illinois Criminal Justice Information Authority and the Illinois Health and Hospital Association</p>
 
-  Friday, December 9, 2016
-  Carle Foundation Auditorium
-  611 W. Park St., Urbana, IL
-  Urbana, IL 61801
 
-  Data Drive Justice is a national bipartisan initiative organized by the White House’s Office of Science and Technology Policy. The initiative focuses on how local jurisdictions can use data-driven strategies to safely reduce the overreliance on incarceration of superutilizers, that is, people who have mental illness and/or substance abuse disorders and cycle repeatedly through justice and healthcare systems at great cost to taxpayers.
 
-  The state of Illinois and several individual counties, including Cook, Champaign, Lake, and McLean, joined Data Driven Justice Initiative in 2016.
+
+  <p><strong>Data Drive Justice</strong> is a national bipartisan initiative organized by the White House’s Office of Science and Technology Policy. The initiative focuses on how local jurisdictions can use data-driven strategies to safely reduce the overreliance on incarceration of <em>superutilizers</em>, that is, people who have mental illness and/or substance abuse disorders and cycle repeatedly through justice and healthcare systems at great cost to taxpayers.</p>
+
+  <p>The state of Illinois and several individual counties, including Cook, Champaign, Lake, and McLean, joined Data Driven Justice Initiative in 2016.</p>
+
+
 
 
     </div>
@@ -115,11 +135,97 @@ lastUpdate: 2016-09-12
 
 
 
-<section style="background: #ccc">
+<section style="background: #181A1E; padding-top: 35px; padding-bottom: 35px">
+  <div class="container">
 
-  <div style="height: 700px;">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<div style="font-size: 12px; font-weight: 700; color: red; text-transform: uppercase; border-bottom: 2px solid #81d742; padding-bottom: 5px;">&nbsp;</div>
+</div>
 
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-top: 15px;">
+
+
+  <h2 style="font-family: 'Roboto', sans-serif; font-weight: 900; letter-spacing: -1px; text-transform: none;  font-size: 48px; margin-top: 0px; margin-bottom: 10px; color: #fff" class="animated flipInX">About the Conference</h2>
+
+  <p class="lightText" style="font-weight: 900; margin-bottom: 35px;">Data-Driven Health & Justice Conference will:</p>
+
+</div>
+
+
+
+
+
+<div class="row" style="margin-top: 30px">
+<div class="col-md-6 lightText">
+  <div class="wrapper" style="width: 100%">
+      <div class="leftcolumn" style="display: inline; float: left; width: 15%">
+          <i class="fa fa-hospital-o fa-4x" style="color: #81d742" aria-hidden="true"></i>
+      </div>
+      <div class="rightcolumn" style="display: inline;float: left; width: 85%">
+          <p class="lightText">Educate Illinois criminal justice and health/hospital stakeholders about superutilizers, providing both a high-level and a detailed overview and analysis of how this population cycles through local and state systems.</p>
+      </div>
 
   </div>
 
+
+</div>
+<div class="col-md-6 lightText"><div class="wrapper" style="width: 100%">
+    <div class="leftcolumn" style="display: inline; float: left; width: 15%">
+        <i class="fa fa-database fa-4x" style="color: #81d742" aria-hidden="true"></i>
+    </div>
+    <div class="rightcolumn" style="display: inline;float: left; width: 85%">
+        <p class="lightText">Introduce data-driven, collaborative strategies that jurisdictions can use to improve outcomes before superutilizers are arrested and enter the justice system.</p>
+    </div>
+
+</div>
+</div>
+</div>
+
+
+<div class="row" style="margin-top: 30px">
+<div class="col-md-6 lightText">
+  <div class="wrapper" style="width: 100%">
+      <div class="leftcolumn" style="display: inline; float: left; width: 15%">
+          <i class="fa fa-user fa-4x" style="color: #81d742" aria-hidden="true"></i>
+      </div>
+      <div class="rightcolumn" style="display: inline;float: left; width: 85%">
+          <p class="lightText"> Inspire Illinois justice and health/hospital systems to implement collaborative data-driven strategies.</p>
+      </div>
+
+  </div>
+
+
+</div>
+<div class="col-md-6 lightText"><div class="wrapper" style="width: 100%">
+    <div class="leftcolumn" style="display: inline; float: left; width: 15%">
+        <i class="fa fa-university fa-4x" style="color: #81d742" aria-hidden="true"></i>
+    </div>
+    <div class="rightcolumn" style="display: inline;float: left; width: 85%">
+        <p class="lightText">Help establish informal/formal network of Illinois jurisdictions whose health/hospital and justice systems are interested in collaborating to improve outcomes.</p>
+    </div>
+
+</div>
+</div>
+</div>
+
+<div class="row" style="margin-top: 30px">
+  <div class="col-md-12">
+    <p class="lightText" style="font-weight: 900">This event is open to participating DDJ local sites and other stakeholders: sheriffs, local hospital administrators and staff, police chiefs, community-based organizations, county administrators, and others. </p>
+  </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
 </section>
