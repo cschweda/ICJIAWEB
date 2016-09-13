@@ -40,19 +40,19 @@ $(function () {
             shared: true
         },
         series: [{
-            name: 'Other',
-            data: [6, 1, 1, 12],
-            color: '#3aa277'
-        },
-        {
-            name: 'Black',
-            data: [18, 61, 64, 65],
-            color: '#285270'
+              name: 'Other',
+              data: [6, 1, 3, 12],
+              color: '#3aa277'
+          },
+          {
+              name: 'Black',
+              data: [18, 61, 62, 66],
+              color: '#285270'
 
-        },{
-            name: 'White',
-            data: [76, 38, 35, 23 ],
-            color: '#245159'
-        }  ]
+          },{
+              name: 'White',
+              data: [76, 37, 35, 23 ],
+              color: '#245159'
+          }  ]
     });
 });

@@ -75,7 +75,20 @@ module.exports = function(grunt) {
 					"css/ddj.css": "less/ddj-main.less"
 
 					// destination file and source file
-				}
+				},
+			},
+			ddj: {
+				options: {
+					compress: true,
+					yuicompress: true,
+					optimization: 2
+				},
+				files: {
+
+					"css/ddj.css": "less/ddj-main.less"
+
+					// destination file and source file
+				},
 			}
 		},
 
@@ -113,6 +126,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('default', ['concat', 'less', 'watch']);
 	grunt.registerTask('deploy', ['concat', 'uglify', 'less', 'watch']);
+	grunt.registerTask('ddj', ['concat:ddj', 'less:ddj', 'watch']);
 
 
 };

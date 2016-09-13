@@ -193,7 +193,7 @@ a.back-to-top {
     display: none;
     text-transform: uppercase
 }
-
+ 
 
 
 /******* breadcrumbs ***********************/
@@ -317,22 +317,42 @@ footer h3.h4 {font-weight: 700; color: #fff}
 
 
 
-    .intro-header {
 
-      margin-bottom: 30px;
-      text-align: center;
-      color: #f8f8f8;
-      background: url(/assets/mvtpc/img/mvtpc-car-01.jpg) no-repeat center center;
-      background-size: cover;
-      height: 600px;
-    }
-    .intro-message {
-      position: relative;
-      padding-top: 20%;
-      padding-bottom: 10%;
-    }
-    .intro-message > h1 {
-      margin: 0;
-      text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
-      font-size: 4em;
-    }
+
+.btSuperTitle {
+      font-family: "Roboto";
+      color: red;
+  }
+
+
+  .btSuperTitle {
+    font-family: "Roboto";
+    font-size: 14px;
+    letter-spacing: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    line-height: 15px;
+    color: red;
+    -webkit-backface-visibility: hidden;
+    clear: both;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+}
+
+
+
+.btSuperTitle:after {
+		content: '';
+		clear: both;
+		padding-bottom: .35em;
+		flex-grow: 1;
+    margin-left: 10px;
+		border-top: 1px solid red
+	}
