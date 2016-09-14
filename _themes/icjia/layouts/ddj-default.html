@@ -1,107 +1,85 @@
-
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Data Drive Justice {{if title}}| {{ title }}{{endif}}</title>
-		<meta name="description" content="{{if summary}}{{summary|striptags}}{{else}}{{ defaultDescriptionDDJ }}{{endif}}">
-		<meta name="keywords" content="{{defaultKeywordsDDJ}}">
-		<meta name="date" content="{{ current_date }}">
-		<link rel="canonical" href="{{ permalink }}">
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Data Drive Justice {{if title}}| {{ title }}{{endif}}</title>
+	<meta name="description" content="{{if summary}}{{summary|striptags}}{{else}}{{ defaultDescriptionDDJ }}{{endif}}">
+	<meta name="keywords" content="{{defaultKeywordsDDJ}}">
+	<meta name="date" content="{{ current_date }}">
+	<link rel="canonical" href="{{ permalink }}">
 
 
-		<!-- Facebook metatags -->
-				<meta property="og:title" content="{{ title }}" />
-				<meta property="og:site_name" content="{{ defaultSiteNameDDJ }}"/>
-				<meta property="og:url" content="{{ permalink }}" />
-				<meta property="og:description" content="{{if summary }}{{ summary|striptags }} {{else}} {{defaultdescriptionDDJ }} {{endif}}" />
-				<meta property="fb:app_id" content="{{facebookAppId}}" />
-				<meta property="og:type" content="{{facebokContentType}}" />
-				<meta property="og:locale" content="en_US" />
-				<meta property="article:author" content="{{ facebookAuthorURLDDJ }}" />
-				<meta property="og:image" content="{{socialMediaImageDDJ}}" />
-		<!-- // Facebook metatags -->
+	<!-- Facebook metatags -->
+	<meta property="og:title" content="{{ title }}" />
+	<meta property="og:site_name" content="{{ defaultSiteNameDDJ }}" />
+	<meta property="og:url" content="{{ permalink }}" />
+	<meta property="og:description" content="{{if summary }}{{ summary|striptags }} {{else}} {{defaultdescriptionDDJ }} {{endif}}" />
+	<meta property="fb:app_id" content="{{facebookAppId}}" />
+	<meta property="og:type" content="{{facebokContentType}}" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="article:author" content="{{ facebookAuthorURLDDJ }}" />
+	<meta property="og:image" content="{{socialMediaImageDDJ}}" />
+	<!-- // Facebook metatags -->
 
 
-		<!-- Twitter metatags -->
-			<meta name="twitter:card" content="summary" />
-			<meta name="twitter:site" content="@ICJIA_Illinois" />
-			<meta name="twitter:title" content="{{title}}" />
-			<meta name="twitter:description" content="{{if summary }}{{ summary|striptags }} {{else}} {{defaultdescriptionDDJ }} {{endif}}" />
-			<meta name="twitter:image" content="{{socialMediaImageDDJ}}" />
-			<meta name="twitter:url" content="{{ permalink }}" />
-		<!-- //Twitter metatags -->
-
-
-
-
-<link rel="apple-touch-icon" sizes="57x57" href="{{ theme:img src="icons/apple-icon-57x57.png"}}">
-<link rel="apple-touch-icon" sizes="60x60" href="{{ theme:img src="icons//apple-icon-60x60.png"}}">
-<link rel="apple-touch-icon" sizes="72x72" href="{{ theme:img src="icons//apple-icon-72x72.png"}}">
-<link rel="apple-touch-icon" sizes="76x76" href="{{ theme:img src="icons//apple-icon-76x76.png"}}">
-<link rel="apple-touch-icon" sizes="114x114" href="{{ theme:img src="icons//apple-icon-114x114.png"}}">
-<link rel="apple-touch-icon" sizes="120x120" href="{{ theme:img src="icons//apple-icon-120x120.png"}}">
-<link rel="apple-touch-icon" sizes="144x144" href="{{ theme:img src="icons//apple-icon-144x144.png"}}">
-<link rel="apple-touch-icon" sizes="152x152" href="{{ theme:img src="icons//apple-icon-152x152.png"}}">
-<link rel="apple-touch-icon" sizes="180x180" href="{{ theme:img src="icons//apple-icon-180x180.png"}}">
-<link rel="icon" type="image/png" sizes="192x192"  href="{{ theme:img src="icons//android-icon-192x192.png"}}">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ theme:img src="icons//favicon-32x32.png"}}">
-<link rel="icon" type="image/png" sizes="96x96" href="{{ theme:img src="icons//favicon-96x96.png"}}">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ theme:img src="icons//favicon-16x16.png"}}">
-<link rel="manifest" href="{{ theme:img src="icons//manifest.json"}}">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="{{ theme:img src="icons//ms-icon-144x144.png"}}">
-<meta name="theme-color" content="#ffffff">
+	<!-- Twitter metatags -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@ICJIA_Illinois" />
+	<meta name="twitter:title" content="{{title}}" />
+	<meta name="twitter:description" content="{{if summary }}{{ summary|striptags }} {{else}} {{defaultdescriptionDDJ }} {{endif}}" />
+	<meta name="twitter:image" content="{{socialMediaImageDDJ}}" />
+	<meta name="twitter:url" content="{{ permalink }}" />
+	<!-- //Twitter metatags -->
 
 
 
 
+	<link rel="apple-touch-icon" sizes="57x57" href="{{ theme:img src=" icons/apple-icon-57x57.png "}}">
+	<link rel="apple-touch-icon" sizes="60x60" href="{{ theme:img src=" icons//apple-icon-60x60.png "}}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{{ theme:img src=" icons//apple-icon-72x72.png "}}">
+	<link rel="apple-touch-icon" sizes="76x76" href="{{ theme:img src=" icons//apple-icon-76x76.png "}}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{{ theme:img src=" icons//apple-icon-114x114.png "}}">
+	<link rel="apple-touch-icon" sizes="120x120" href="{{ theme:img src=" icons//apple-icon-120x120.png "}}">
+	<link rel="apple-touch-icon" sizes="144x144" href="{{ theme:img src=" icons//apple-icon-144x144.png "}}">
+	<link rel="apple-touch-icon" sizes="152x152" href="{{ theme:img src=" icons//apple-icon-152x152.png "}}">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ theme:img src=" icons//apple-icon-180x180.png "}}">
+	<link rel="icon" type="image/png" sizes="192x192" href="{{ theme:img src=" icons//android-icon-192x192.png "}}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ theme:img src=" icons//favicon-32x32.png "}}">
+	<link rel="icon" type="image/png" sizes="96x96" href="{{ theme:img src=" icons//favicon-96x96.png "}}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ theme:img src=" icons//favicon-16x16.png "}}">
+	<link rel="manifest" href="{{ theme:img src=" icons//manifest.json "}}">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="{{ theme:img src=" icons//ms-icon-144x144.png "}}">
+	<meta name="theme-color" content="#ffffff">
+
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Oswald:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&subset=latin-ext" rel="stylesheet">
 
 
 
-		<!-- Google Fonts -->
-		<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900" />
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" />
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900" />
-		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic,400italic' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'> -->
-
-<!-- <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Roboto:100,300,400,700,700i,900,900i|Special+Elite" rel="stylesheet"> -->
-
-    <!--<link href='https://fonts.googleapis.com/css?family=Cardo:400,700,400italic' rel='stylesheet' type='text/css'> -->
+	<script src="{{ theme:asset src='bower_components/jquery/dist/jquery.min.js' }}"></script>
+	<script src="{{ theme:asset src='bower_components/jquery-easing-original/jquery.easing.min.js' }}"></script>
 
 
-
-		<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Oswald:300,400,700" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<script src="https://use.fontawesome.com/389ef7729c.js"></script>
 
 
-		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&subset=latin-ext" rel="stylesheet">
-			  <!-- <link href='https://fonts.googleapis.com/css?family=Raleway:300,700,900,500' rel='stylesheet' type='text/css'>
-				<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Oswald:300,400,700" rel="stylesheet"> -->
-<!-- <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet"> -->
-
-		<!-- End Google Fonts -->
-
-
-			<script src="{{ theme:asset src='bower_components/jquery/dist/jquery.min.js' }}"></script>
-			<script src="{{ theme:asset src='bower_components/jquery-easing-original/jquery.easing.min.js' }}"></script>
-
-
-<script src="https://use.fontawesome.com/389ef7729c.js"></script>
-
-
-		<!-- jasny bootstrap -->
-		<link href="{{theme:asset src='bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css'}}" rel="stylesheet">
-		<script src="{{theme:asset src='bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js'}}"></script>
-		<script src="{{theme:asset src='bower_components/jasny-bootstrap/js/offcanvas.js'}}"></script>
+	<!-- jasny bootstrap -->
+	<link href="{{theme:asset src='bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css'}}" rel="stylesheet">
+	<script src="{{theme:asset src='bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js'}}"></script>
+	<script src="{{theme:asset src='bower_components/jasny-bootstrap/js/offcanvas.js'}}"></script>
 
 
 
@@ -109,66 +87,47 @@
 
 
 
-<!-- Animate CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<!-- Animate CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
 
 
 
 
-<link href="{{ theme:asset src='css/ddj.css' }}" rel="stylesheet" property="stylesheet">
+	<link href="{{ theme:asset src='css/ddj.css' }}" rel="stylesheet" property="stylesheet">
 
 
 
-	</head>
+</head>
 
-	<body>
+<body>
 
 
-    <div id="page-top"></div>
-		<!--[if lt IE 10]>
+	<div id="page-top"></div>
+	<!--[if lt IE 10]>
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 
 
 
-
-
-					<!-- ////////////////////////////////////////////////// content-start \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-					<div id="content-wrap-ddj">
-		      {{ layout_content }}
-					</div>
-					<!-- ////////////////////////////////////////////////// content-end \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-
+	<!-- ////////////////////////////////////////////////// content-start \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+	<div id="content-wrap-ddj">
+		{{ layout_content }}
+	</div>
+	<!-- ////////////////////////////////////////////////// content-end \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 
 
 
+	<script src="{{ theme:asset src='bower_components/bootstrap/dist/js/bootstrap.min.js' }}"></script>
+
+	<script src="{{ theme:asset src='js/ddj.js' }}"></script>
 
 
-
-
-
-		<script src="{{ theme:asset src='bower_components/bootstrap/dist/js/bootstrap.min.js' }}"></script>
-
-		<script src="{{ theme:asset src='js/ddj.js' }}"></script>
-
-
-
-		<!-- Touch Swipe JS File Version - 1.6.15 -->
-		<script src="{{ theme:assets src='vendor/paradise/js/jquery.touchSwipe.min.js}}"></script>
-
-		<!-- Paradise Slider Main JS File -->
-		<script src="{{ theme:assets src='vendor/paradise/js/paradise_slider_min.js}}"></script>
-
-
-
-
-
-		{{theme:partial src="google-analytics"}}
-
-		{{theme:partial src="google-tracking"}}
+	{{theme:partial src="google-analytics"}}
+	{{theme:partial src="google-tracking"}}
 
 
 
 </body>
+
 </html>
