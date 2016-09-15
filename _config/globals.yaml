@@ -17,7 +17,7 @@ defaultDescription: 'Created in 1983, the Illinois Criminal Justice Information 
 defaultDescriptionIFVCC: 'Illinois Family Violence Coordinating Councils, at both the state and local/circuit levels, provide a forum to improve the institutional, professional and community response to family violence including child abuse, domestic abuse, and elder abuse.'
 defaultDescriptionTVPP: 'The Illinois Criminal Justice Information Authority’s Targeted Violence Prevention Program (TVPP) uses a public health approach to preventing ideologically inspired targeted violence. TVPP works with interested communities in building and sustaining community-level programs that can prevent individuals from being recruited to commit ideologically inspired targeted violence, and to help off-ramp individuals who have begun down the path ideologically inspired targeted violence but have not yet committed a crime.'
 defaultDescriptionGATA: GATA confirms ICJIA's commitment to the Federal Uniform Guidance 2 CFR 200, which went into effect in December 2014.  The Uniform Guidance already applies to all federal grants and federal pass-through funds.
-defaultDescriptionDDJ: 'Data Drive Justice is a national bipartisan initiative organized by the White House’s Office of Science and Technology Policy. The initiative focuses on how local jurisdictions can use data-driven strategies to safely reduce the overreliance on incarceration of superutilizers, that is, people who have mental illness and/or substance abuse disorders and cycle repeatedly through justice and healthcare systems at great cost to taxpayers.The state of Illinois and several individual counties, including Cook, Champaign, Lake, and McLean, joined Data Driven Justice Initiative in 2016. '
+defaultDescriptionDDJ: 'Data Driven Justice is a national bipartisan initiative organized by the White House’s Office of Science and Technology Policy. The initiative focuses on how local jurisdictions can use data-driven strategies to safely reduce the overreliance on incarceration of superutilizers, that is, people who have mental illness and/or substance abuse disorders and cycle repeatedly through justice and healthcare systems at great cost to taxpayers.The state of Illinois and several individual counties, including Cook, Champaign, Lake, and McLean, joined Data Driven Justice Initiative in 2016. '
 
 
 
@@ -28,7 +28,7 @@ defaultPageTitle: 'Illinois Criminal Justice Information Authority'
 defaultPageTitleIFVCC: 'Illinois Family Violence Coordinating Councils'
 defaultPageTitleTVPP: 'Illinois Targeted Violence Prevention Program'
 defaultPageTitleGATA: 'ICJIA GATA Information'
-defaultPageTitleDDJ: 'Data Drive Justice'
+defaultPageTitleDDJ: 'Data Driven Justice'
 
 #default site names
 
