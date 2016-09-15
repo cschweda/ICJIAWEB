@@ -36,7 +36,7 @@ defaultSiteName: 'Illinois Criminal Justice Information Authority'
 defaultSiteNameIFVCC: 'Illinois Family Violence Coordinating Councils'
 defaultSiteNameTVPP: 'Targeted Violence Prevention Programs'
 defaultSiteNameGATA: 'ICJIA GATA Information'
-defaultSiteNameDDJ: 'Data Drive Justice'
+defaultSiteNameDDJ: 'Data Driven Justice'
 
 #default site keywords
 
@@ -44,7 +44,7 @@ defaultKeywords: 'ICJIA, Criminal Justice, Illinois, Authority, Reform, Illinois
 defaultKeywordsIFVCC: 'IFVCC, ICJIA, Criminal Justice, Illinois, Illinois Family Violence Coordinating Councils, elder abuse, family violence, child abuse, domestic abuse'
 defaultKeywordsTVPP: 'TVPP, ICJIA, Illinois Criminal Justice Information Authority, Junaid Afeef, ISIS, extremism, Illinois, terrorism, Targeted Violence Prenvetion Program, DHS, neo-nazi skinheads, community-based, faith-based, Al Qaeda, Ku Klux Klan, homeland security'
 defaultKeywordsGATA: 'ICJIA, GATA, grants, funding, grant opportunities, Criminal Justice, Illinois, Authority, Reform, Illinois Criminal Justice Information Authority, VOCA, VAWA'
-defaultKeywordsDDJ: 'ICJIA, data, data drive justice, white house, health, stakeholders'
+defaultKeywordsDDJ: 'ICJIA, data, data driven justice, Office of Science and Technology Policy, health, stakeholders, mental illness, substance abuse, Illinois'
 
 
 
