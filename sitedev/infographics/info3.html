@@ -59,10 +59,10 @@
     <section class="section third">
       <div class="container">
         <div class="row">
-          <div class="col-sm-3 col-sm-offset-3 is-animated">
+          <div class="col-sm-3 col-sm-offset-3 is-animated" data-animation="fadeInRightBig" data-delay=".3s">
             <img class="img-responsive" src="http://placehold.it/300x350">
           </div>
-          <div class="col-sm-3 is-animated">
+          <div class="col-sm-3 is-animated" data-animation="fadeInLeftBig" data-delay=".6s">
             <img class="img-responsive" src="http://placehold.it/300x350">
           </div>
            <!-- <div class="col-xs-12 text-center is-animated__single">
@@ -110,15 +110,16 @@
   'use strict';
 
   // variables
-  var $isAnimatedSecond = $('.second .is-animated'),
-      $isAnimatedSecondSingle = $('.second .is-animated__single'),
-      $isAnimatedThird = $('.third .is-animated'),
-      $isAnimatedThirdSingle = $('.third .is-animated__single'),
-      $isAnimatedFourth = $('.fourth .is-animated'),
-      $isAnimatedFourthSingle = $('.fourth .is-animated__single');
+  // var $isAnimatedSecond = $('.second .is-animated'),
+  //     $isAnimatedSecondSingle = $('.second .is-animated__single'),
+  //     $isAnimatedThird = $('.third .is-animated'),
+  //     $isAnimatedThirdSingle = $('.third .is-animated__single'),
+  //     $isAnimatedFourth = $('.fourth .is-animated'),
+  //     $isAnimatedFourthSingle = $('.fourth .is-animated__single');
 
 
   var $secondSection = $('.second').find( ".is-animated")
+  var $thirdSection = $('.third').find( ".is-animated")
   var $fourthSection = $('.fourth').find( ".is-animated")
 
   // initialize fullPage
@@ -155,9 +156,15 @@
 
       // second animation
       else if( index == 2 && direction == 'down' ) {
-        $isAnimatedThird.eq(0).addClass('animated fadeInRightBig').css('animation-delay', '.3s');
-        $isAnimatedThird.eq(1).addClass('animated fadeInLeftBig').css('animation-delay', '.6s');
-        $isAnimatedThirdSingle.addClass('animated bounceInDown').css('animation-delay', '1.2s');
+        // $isAnimatedThird.eq(0).addClass('animated fadeInRightBig').css('animation-delay', '.3s');
+        // $isAnimatedThird.eq(1).addClass('animated fadeInLeftBig').css('animation-delay', '.6s');
+        // $isAnimatedThirdSingle.addClass('animated bounceInDown').css('animation-delay', '1.2s');
+
+        $thirdSection.each(function(index) {
+
+          $(this).addClass('animated ' + $(this).data('animation')).css('animation-delay', $(this).data('delay'));
+        })
+
       }
 
 
