@@ -23,12 +23,120 @@
 
         #fullpage {display: none}
 
+        .header {
+          width: 100%;
+          padding: 15px;
+          position: fixed;
+          top: 0;
+          z-index: 1000;
+          background: #00174f;
+          box-shadow: rgba(0, 0, 0, 1) 0 0 7px;
+        }
+
+        .main-nav {
+        }
+
+        .main-nav ul {
+          margin: 0 -15px;
+          padding: 0;
+          list-style: none;
+        }
+
+        .main-nav li {
+          display: inline-block;
+          margin-right: -4px;
+          padding: 0 15px;
+        }
+
+        .main-nav a {
+          display: block;
+          font-size: 16px;
+          color: #fff;
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+
+        .main-nav .active a {
+          color: #ffd200;
+        }
+
+        .fp-controlArrow.fp-prev {
+            left: 80px;
+            width: 0;
+            border-width: 38.5px 34px 38.5px 0;
+            border-color: transparent #fff transparent transparent;
+          }
+
+          .fp-controlArrow.fp-next {
+              right: 80px;
+              border-width: 38.5px 0 38.5px 34px;
+              border-color: transparent transparent transparent #fff;
+            }
+
+            .fp-controlArrow {top: 50%}
+
+            #fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background: white;
+    width: 12px;
+    height: 12px;
+    margin: -6px 0 0 -6px;
+}
+
+#fp-nav ul li, .fp-slidesNav ul li {
+    display: block;
+    width: 14px;
+    height: 13px;
+    margin: 16px;
+    position: relative;
+}
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    background: #000;
+    box-sizing: border-box;
+    border: 2px solid #24221F;
+}
+
+
         </style>
 
     </head>
 
     <body>
-      <div id="fullpage">
+
+      <!-- <div class="header">
+        <nav class="main-nav">
+          <ul>
+            <li data-menuanchor="firstSection">
+              <a href="#firstSection">Section 1</a>
+            </li>
+            <li data-menuanchor="secondSection">
+              <a href="#secondSection">Section 2</a>
+            </li>
+            <li data-menuanchor="thirdSection">
+              <a href="#thirdSection">Section 3</a>
+            </li>
+            <li data-menuanchor="fourthSection">
+              <a href="#fourthSection">Section 4</a>
+            </li>
+            <li data-menuanchor="fifthSection">
+              <a href="#fifthSection">Section 5</a>
+            </li>
+          </ul>
+        </nav>
+      </div> -->
+
+
+
+
+
+  <div id="fullpage">
     <section class="section">
      <div class="container">
        <div class="row">
@@ -85,12 +193,26 @@
       </div><!--end of container-->
     </section>
 
-    <!-- <div class="section">
-    <div class="slide" data-anchor="slide1"> Slide 1 </div>
-    <div class="slide" data-anchor="slide2"> Slide 2 </div>
-    <div class="slide" data-anchor="slide3"> Slide 3 </div>
-    <div class="slide" data-anchor="slide4"> Slide 4 </div>
-</div> -->
+    <section class="section fifth">
+      <div class="slide is-animated-slide" data-animation="flipInX" data-delay=".6s" data-anchor="slide1">
+        <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <p class="text-center">Slide 1</p>
+          </div>
+         </div>
+       </div>
+     </div>
+      <div class="slide is-animated-slide" data-animation="flipInX" data-delay=".6s" data-anchor="slide2">
+        <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <p class="text-center">Slide 2</p>
+          </div>
+         </div>
+       </div></div>
+
+    </section>
 
 
 </div>
@@ -111,26 +233,41 @@
     var $secondSection = $('.second')
     var $thirdSection = $('.third')
     var $fourthSection = $('.fourth')
+    var $fifthSection = $('.fifth')
+
+    function animate (el) {
+      el.addClass('animated ' + el.data('animation')).css('animation-delay', el.data('delay')).removeClass('is-animated');
+    }
 
     // initialize fullPage
     $('#fullpage').fullpage({
 
         navigation: true,
-
+        anchors:['firstSection', 'secondSection', 'thirdSection','fourthSection','fifthSection'],
 
         sectionsColor: ['#0F2980', '#ffd200', '#c1c1c1', '#ccc', '#aaa'],
+
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+
+          console.log('slideIndex:' + slideIndex);
+          console.log('---');
+
+        },
+
+        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
+
+
+
+        },
+
         onLeave: function(index, nextIndex, direction) {
 
-
-            function animate (el) {
-              el.addClass('animated ' + el.data('animation')).css('animation-delay', el.data('delay')).removeClass('is-animated');
-            }
-
+          // fire animation on sections
 
             if (direction === 'down') {
               switch (index) {
                 // 0-based index.
-                
+
                 case 1:
                   $secondSection.find(".is-animated").each(function(index) {
                         animate($(this));
@@ -149,6 +286,13 @@
                           animate($(this));
 
                     })
+                    break;
+                case 4:
+                      $fifthSection.find(".is-animated").each(function(index) {
+                              animate($(this));
+
+                        })
+                        break;
 
             }
           }
