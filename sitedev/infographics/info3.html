@@ -41,14 +41,14 @@
     <section class="section second">
       <div class="container">
         <div class="row">
-          <div class="col-xs-4 is-animated" data-animation="flipInX" data-delay=".3s">
+          <div class="col-xs-4 is-animated section2" data-animation="fadeInUpBig" data-delay=".3s">
             <img class="img-responsive" src="http://placehold.it/300x350">
           </div>
-          <div class="col-xs-4 is-animated" data-animation="flipInX" data-delay=".6s">
+          <div class="col-xs-4 is-animated section2" data-animation="fadeInUpBig" data-delay=".6s">
           <img class="img-responsive" src="http://placehold.it/300x350">
           </div>
 
-          <div class="col-xs-4 is-animated" data-animation="flipInX" data-delay=".9s">
+          <div class="col-xs-4 is-animated section2" data-animation="fadeInUpBig" data-delay=".9s">
           <img class="img-responsive" src="http://placehold.it/300x350">
           </div>
 
@@ -77,12 +77,10 @@
           <div class="col-xs-12 is-animated" data-animation="flipInX" data-delay=".6s">
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
           </div>
-          <div class="col-xs-12 is-animated" data-animation="flipInY" data-delay="1.2s">
+          <div class="col-xs-12 is-animated" data-animation="fadeIn" data-delay="1.2s">
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
           </div>
-          <div class="col-xs-12 text-center is-animated__single">
-             <button type="button" class="btn btn-lg">Button</button>
-          </div>
+
         </div><!--end of row-->
       </div><!--end of container-->
     </section>
@@ -107,92 +105,67 @@
 <script>
 (function($) {
 
-  'use strict';
-
-  // variables
-  // var $isAnimatedSecond = $('.second .is-animated'),
-  //     $isAnimatedSecondSingle = $('.second .is-animated__single'),
-  //     $isAnimatedThird = $('.third .is-animated'),
-  //     $isAnimatedThirdSingle = $('.third .is-animated__single'),
-  //     $isAnimatedFourth = $('.fourth .is-animated'),
-  //     $isAnimatedFourthSingle = $('.fourth .is-animated__single');
+    'use strict';
 
 
-  var $secondSection = $('.second').find( ".is-animated")
-  var $thirdSection = $('.third').find( ".is-animated")
-  var $fourthSection = $('.fourth').find( ".is-animated")
+    var $secondSection = $('.second')
+    var $thirdSection = $('.third')
+    var $fourthSection = $('.fourth')
 
-  // initialize fullPage
-  $('#fullpage').fullpage({
+    // initialize fullPage
+    $('#fullpage').fullpage({
 
-    navigation: true,
-
-
-    sectionsColor: ['#0F2980', '#ffd200', '#c1c1c1','#ccc', '#aaa'],
-    onLeave: function(index, nextIndex, direction) {
+        navigation: true,
 
 
-
-      // first animation
-
-
-      if( index == 1 && direction == 'down' ) {
-        // $isAnimatedSecond.addClass('animated fadeInUpBig');
-        // $isAnimatedSecond.eq(0).css('animation-delay', '.3s');
-        // $isAnimatedSecond.eq(1).css('animation-delay', '.6s');
-        // $isAnimatedSecond.eq(2).css('animation-delay', '.9s');
-        // $isAnimatedSecondSingle.addClass('animated rollIn').css('animation-delay', '1.7s');
-
-        $secondSection.each(function(index) {
-
-          $(this).addClass('animated ' + $(this).data('animation')).css('animation-delay', $(this).data('delay'));
-        })
+        sectionsColor: ['#0F2980', '#ffd200', '#c1c1c1', '#ccc', '#aaa'],
+        onLeave: function(index, nextIndex, direction) {
 
 
+            function animate (el) {
+              el.addClass('animated ' + el.data('animation')).css('animation-delay', el.data('delay')).removeClass('is-animated');
+            }
 
-      }
 
+            if (direction === 'down') {
+              switch (index) {
+                // 0-based index.
+                
+                case 1:
+                  $secondSection.find(".is-animated").each(function(index) {
+                        animate($(this));
+                    })
+                    break;
 
+                case 2:
+                  $thirdSection.find(".is-animated").each(function(index) {
+                        animate($(this));
 
-      // second animation
-      else if( index == 2 && direction == 'down' ) {
-        // $isAnimatedThird.eq(0).addClass('animated fadeInRightBig').css('animation-delay', '.3s');
-        // $isAnimatedThird.eq(1).addClass('animated fadeInLeftBig').css('animation-delay', '.6s');
-        // $isAnimatedThirdSingle.addClass('animated bounceInDown').css('animation-delay', '1.2s');
+                    })
+                  break;
 
-        $thirdSection.each(function(index) {
+                case 3:
+                  $fourthSection.find(".is-animated").each(function(index) {
+                          animate($(this));
 
-          $(this).addClass('animated ' + $(this).data('animation')).css('animation-delay', $(this).data('delay'));
-        })
+                    })
 
-      }
+            }
+          }
 
 
 
-      // third animation
-    else if( index == 3 && direction == 'down' ) {
+        }
 
-        $fourthSection.each(function(index) {
+    });
 
-          $(this).addClass('animated ' + $(this).data('animation')).css('animation-delay', $(this).data('delay'));
-        })
-
-
-      }
-    }
-
-  });
-
-  $(document).ready(function() {
-    $('#fullpage').show();
+    $(document).ready(function() {
+        $('#fullpage').show();
 
 
 
 
-
-
-
-      });
+    });
 
 })(jQuery);
 </script>
