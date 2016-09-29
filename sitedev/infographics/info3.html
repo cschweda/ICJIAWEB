@@ -1,0 +1,195 @@
+
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Fullpage.js</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.6/jquery.fullPage.min.css">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+
+
+        <link rel="stylesheet" href="css/info2.css">
+
+
+        <style>
+
+        #fullpage {display: none}
+
+        </style>
+
+    </head>
+
+    <body>
+      <div id="fullpage">
+    <section class="section">
+     <div class="container">
+       <div class="row">
+         <div class="col-sm-8 col-sm-offset-2">
+           <p class="text-center">Scroll down to trigger the animations</p>
+         </div>
+        </div>
+      </div>
+    </section>
+    <section class="section second">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-4 is-animated" data-animation="flipInX" data-delay=".3s">
+            <img class="img-responsive" src="http://placehold.it/300x350">
+          </div>
+          <div class="col-xs-4 is-animated" data-animation="flipInX" data-delay=".6s">
+          <img class="img-responsive" src="http://placehold.it/300x350">
+          </div>
+
+          <div class="col-xs-4 is-animated" data-animation="flipInX" data-delay=".9s">
+          <img class="img-responsive" src="http://placehold.it/300x350">
+          </div>
+
+
+        </div><!--end of row-->
+      </div><!--end of container-->
+    </section>
+    <section class="section third">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 col-sm-offset-3 is-animated">
+            <img class="img-responsive" src="http://placehold.it/300x350">
+          </div>
+          <div class="col-sm-3 is-animated">
+            <img class="img-responsive" src="http://placehold.it/300x350">
+          </div>
+           <!-- <div class="col-xs-12 text-center is-animated__single">
+             <button type="button" class="btn btn-lg">A Simple Button</button>
+          </div> -->
+        </div><!--end of row-->
+      </div><!--end of container-->
+    </section>
+    <section class="section fourth">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 is-animated" data-animation="flipInX" data-delay=".6s">
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+          </div>
+          <div class="col-xs-12 is-animated" data-animation="flipInY" data-delay="1.2s">
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+          </div>
+          <div class="col-xs-12 text-center is-animated__single">
+             <button type="button" class="btn btn-lg">Button</button>
+          </div>
+        </div><!--end of row-->
+      </div><!--end of container-->
+    </section>
+
+    <!-- <div class="section">
+    <div class="slide" data-anchor="slide1"> Slide 1 </div>
+    <div class="slide" data-anchor="slide2"> Slide 2 </div>
+    <div class="slide" data-anchor="slide3"> Slide 3 </div>
+    <div class="slide" data-anchor="slide4"> Slide 4 </div>
+</div> -->
+
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.6/jquery.fullPage.min.js"></script>
+
+
+
+
+<script>
+(function($) {
+
+  'use strict';
+
+  // variables
+  var $isAnimatedSecond = $('.second .is-animated'),
+      $isAnimatedSecondSingle = $('.second .is-animated__single'),
+      $isAnimatedThird = $('.third .is-animated'),
+      $isAnimatedThirdSingle = $('.third .is-animated__single'),
+      $isAnimatedFourth = $('.fourth .is-animated'),
+      $isAnimatedFourthSingle = $('.fourth .is-animated__single');
+
+
+  var $secondSection = $('.second').find( ".is-animated")
+  var $fourthSection = $('.fourth').find( ".is-animated")
+
+  // initialize fullPage
+  $('#fullpage').fullpage({
+
+    navigation: true,
+
+
+    sectionsColor: ['#0F2980', '#ffd200', '#c1c1c1','#ccc', '#aaa'],
+    onLeave: function(index, nextIndex, direction) {
+
+
+
+      // first animation
+
+
+      if( index == 1 && direction == 'down' ) {
+        // $isAnimatedSecond.addClass('animated fadeInUpBig');
+        // $isAnimatedSecond.eq(0).css('animation-delay', '.3s');
+        // $isAnimatedSecond.eq(1).css('animation-delay', '.6s');
+        // $isAnimatedSecond.eq(2).css('animation-delay', '.9s');
+        // $isAnimatedSecondSingle.addClass('animated rollIn').css('animation-delay', '1.7s');
+
+        $secondSection.each(function(index) {
+
+          $(this).addClass('animated ' + $(this).data('animation')).css('animation-delay', $(this).data('delay'));
+        })
+
+
+
+      }
+
+
+
+      // second animation
+      else if( index == 2 && direction == 'down' ) {
+        $isAnimatedThird.eq(0).addClass('animated fadeInRightBig').css('animation-delay', '.3s');
+        $isAnimatedThird.eq(1).addClass('animated fadeInLeftBig').css('animation-delay', '.6s');
+        $isAnimatedThirdSingle.addClass('animated bounceInDown').css('animation-delay', '1.2s');
+      }
+
+
+
+      // third animation
+    else if( index == 3 && direction == 'down' ) {
+
+        $fourthSection.each(function(index) {
+
+          $(this).addClass('animated ' + $(this).data('animation')).css('animation-delay', $(this).data('delay'));
+        })
+
+
+      }
+    }
+
+  });
+
+  $(document).ready(function() {
+    $('#fullpage').show();
+
+
+
+
+
+
+
+      });
+
+})(jQuery);
+</script>
+
+
+    </body>
+</html>
