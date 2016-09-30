@@ -279,44 +279,46 @@
 
         onLeave: function(index, nextIndex, direction) {
 
-          // fire animation on sections
+          if( index == 1 && nextIndex == 2 ) {
+              $secondSection.find(".is-animated").each(function(index) {
+                  animate($(this));
+                })
+              }
 
-            if (direction === 'down') {
-              switch (index) {
-                // 0-based index.
 
-                case 1:
-                  $secondSection.find(".is-animated").each(function(index) {
-                        animate($(this));
-                    })
-                    break;
+          if( ( index == 1 || index == 2) && nextIndex == 3 ) {
+              $thirdSection.find(".is-animated").each(function(index) {
+                animate($(this));
+              })
 
-                case 2:
-                  $thirdSection.find(".is-animated").each(function(index) {
-                        animate($(this));
+          }
 
-                    })
-                  break;
 
-                case 3:
-                  $fourthSection.find(".is-animated").each(function(index) {
-                          animate($(this));
+          if( ( index == 1 || index == 2 || index == 3) && nextIndex == 4 ) {
+              $fourthSection.find(".is-animated").each(function(index) {
+                animate($(this));
+              })
 
-                    })
-                    break;
-                case 4:
-                      $fifthSection.find(".is-animated").each(function(index) {
-                              animate($(this));
+          }
 
-                        })
-                        break;
 
-            }
+          if( ( index == 1 || index == 2 || index == 3 || index == 4) && nextIndex == 5 ) {
+              $fifthSection.find(".is-animated").each(function(index) {
+                animate($(this));
+              })
+
           }
 
 
 
+
         }
+
+
+
+
+
+
 
     });
 
