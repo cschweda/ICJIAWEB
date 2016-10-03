@@ -106,7 +106,7 @@ top: -7px;
 
   -webkit-animation-duration: 3s;
   -moz-animation-delay: 2s;
-  animation-iteration-count: 2;
+  animation-iteration-count: 1;
 
 }
 
@@ -366,7 +366,8 @@ h1 {font-family: 'Oswald', sans-serif; font-size: 95px; font-weight: 700; text-t
 
           //console.log('Loaded ' + anchorLink + ' Index: ' + index);
 
-          $('.fp-controlArrow').data('animation','bounce').data('duration','.6s').addClass('is-animated nav-arrow-bounce')
+          $('.fp-controlArrow').data('animation','fadeInUpBig').data('duration','.6s').addClass('is-animated')
+          //.addClass('is-animated nav-arrow-bounce')
 
 
         },
