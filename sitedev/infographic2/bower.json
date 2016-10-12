@@ -1,0 +1,17 @@
+{
+  "name": "ICJIA_Infographic",
+  "description": "",
+  "main": "",
+  "authors": [
+    "cschweda <cschweda@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/cschweda/ICJIAWEB",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
