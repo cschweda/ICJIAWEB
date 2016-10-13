@@ -34,7 +34,13 @@ jQuery(document).ready(function($) {
     // Materialize options: http://materializecss.com/
 
     $('.modal-trigger').leanModal();
-    $('.parallax').parallax();
+    // $('.parallax').parallax();
+    // $('.scrollspy').scrollSpy(
+    //     {
+    //       throttle: 1600,
+    //       scrollOffset: 69
+    //     }
+    //   );
 
     // AJAX modal includes: custom
     var promise = $.ajax("./dist/includes/inc.html");
@@ -54,13 +60,38 @@ jQuery(document).ready(function($) {
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
                     $('html, body').animate({
-                        scrollTop: target.offset().top - 69
+                        scrollTop: target.offset().top - 70
                     }, 1000);
                     return false;
                 }
             }
         });
     });
+
+    // Click handler for toggling active on navbar
+
+    // $('a.smooth').click(function(e){
+    //   //e.preventDefault();
+    //   $('#navlinks li').each(function(){
+    //     $(this).removeClass('active');
+    //   });
+    //   $(this).parent().addClass('active');
+    //
+    // });
+
+
+
+                // var waypoints = $('.scrollspy').waypoint({
+                //           handler: function(direction) {
+                //             var $this = this.id;
+                //             console.log($this);
+                //             $('ul#navLinks li').each(function(){
+                //               $(this).removeClass('active');
+                //             });
+                //             $('#navLinks a[href=#' + $this +' ]').parent().addClass('active');
+                //           },
+                //           offset: 69
+                //       });
 
 
 
