@@ -1,3 +1,5 @@
+@import "./bower_components/animate.css/animate.min.css";
+
 @import "../bourbon/bourbon"; // http://bourbon.io/
 
 @import '../partials/variables'; // colors, fonts etc...
@@ -276,6 +278,7 @@ header {
 	padding: 1em;
 	box-shadow: 0 3px 0 darken($background, 5%);
 	@include clearfix;
+	
 
 	h2 {
 		color: $color-1;
