@@ -8,7 +8,16 @@
 
 @import '../partials/layout'; // responsive grid and media queries
 
-// @import '../materialize-src/sass/materialize.scss';
+@import '../materialize-src/sass/materialize.scss';
+
+
+
+
+
+
+
+
+
 
 /* --------------------------------
 
@@ -97,18 +106,18 @@ header {
 
 
 		h1 {
-			@include font-size(75px);
+			@include font-size(36px);
 		}
 	}
 }
 
 
 #section-1 {background: $section-1; }
-#section-2 {background: $section-2; }
-#section-3 {background: $section-3; }
+#section-2 {background: $section-2; margin-top: 3px; }
+#section-3 {background: $section-3; margin-top: 3px; }
 
 
-#cd-timeline-1, #cd-timeline-2 {
+#cd-timeline-1, #cd-timeline-2, #cd-timeline-3 {
 	position: relative;
 	padding: 3em 0 3em 0;
 	margin: {
@@ -456,13 +465,58 @@ footer h1 {
 
 }
 
+.section-title {
+		font-family: 'Lato', sans-serif;
+		font-weight: 700;
+		padding-top: 30px;
+		padding-bottom: 12px;
+		text-transform: uppercase;
+		font-size: 36px;
+		color: #fff;
+
+
+	}
+
+	.section-arrow {
+
+
+
+		}
+
 
 
 // Materialize overrides //
 
+nav .brand-logo {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: .8rem;
+		letter-spacing: 1.1px;
+    padding: 0;
+    white-space: nowrap;
+		text-transform: uppercase;
+		font-weight: 900;
+		padding-left: 20px;
+		padding-right: 20px;
+		font-family: 'Lato', sans-serif;
+		background: #424242;
+}
+
+nav ul.right {padding-right: 15px;}
+
+
+
 .modal.bottom-sheet {
 
-    max-height: 85%;
+    max-height: 65%;
+
+
+}
+
+.modal {
+
+    overflow-y: scroll;
 
 }
 
@@ -472,8 +526,8 @@ blockquote {
     border-left: 5px solid $font-light;
 }
 
-.nav-wrapper {padding-left: 20px; padding-right: 20px;}
-
+// .nav-wrapper {padding-left: 20px; padding-right: 20px;}
+//
 
 
 // .table-of-contents.fixed {
@@ -507,42 +561,118 @@ blockquote {
 //     border-left: 2px solid #ea4a4f
 // }
 
-nav ul a:hover {
-    background-color: transparent;
-		color: #fff;
-}
+// nav ul a:hover {
+//     background-color: transparent;
+// 		color: #fff;
+// }
 
-.table-of-contents.fixed {
-    position: fixed
-}
+// .table-of-contents.fixed {
+//     position: fixed
+// }
+//
+// .table-of-contents li {
+//     padding: 2px 0px;
+// 		text-transform: uppercase;
+// }
+//
+// .table-of-contents a {
+//     display: inline-block;
+//     font-weight: 300;
+//     color: #fff;
+//     padding-left: 20px;
+//     height: 1.5rem;
+//     line-height: 1.5rem;
+//     letter-spacing: .4;
+//     display: inline-block
+// }
+//
+// .table-of-contents a:hover {
+//     color: #fff;
+//     padding-left: 20px;
+//     border-left: 0px solid #ea4a4f;
+// 		border-bottom: 1px solid #fff;
+// 		padding-bottom: 6px;
+// 		font-weight: 700;
+// }
+//
+// .table-of-contents a.active {
+//     font-weight: 900;
+//     padding-left: 20px;
+//     border-left: 0px solid #ea4a4f
+// }
 
-.table-of-contents li {
-    padding: 2px 0px;
-		text-transform: uppercase;
-}
 
-.table-of-contents a {
-    display: inline-block;
-    font-weight: 300;
+
+
+// .hero {
+//     width: 100%;
+//     background-image: url('http://www.delwinvriend.com/examples/hero/hero.jpg');
+//     background-size: auto 100%;
+//     background-position: center top;
+//     background-repeat: no-repeat;
+// }
+// .hero_spacer {
+//    width: 100%;
+//    max-width: 960px;
+//    margin: 0 auto;
+// }
+// .hero_spacer img {
+//     width: 100%;
+// }
+
+
+// nav ul a:hover {
+//     font-weight: 700;
+// }
+
+
+
+.hero {
+	height: 500px;
+  background: url('../img/hero2.jpg') no-repeat center center;
+  background-size: cover;
+	margin-top: -31px;
+	margin-bottom: 2px;
+
+
+  .intro {
+    // padding: 3rem;
+    position: relative;
+    top: 67%;
+    transform: translateY(-50%);
+
+  }
+
+	.hero-band {padding-right: 30px; padding-bottom: 20px; width: 100%; background: #222; opacity: .6}
+
+  h1 {
     color: #fff;
-    padding-left: 20px;
-    height: 1.5rem;
-    line-height: 1.5rem;
-    letter-spacing: .4;
-    display: inline-block
-}
-
-.table-of-contents a:hover {
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    letter-spacing: -0.025em;
+    font-weight: 400;
+    text-align: center;
+		font-family: 'Oswald', sans-serif;
+  }
+  p {
     color: #fff;
-    padding-left: 20px;
-    border-left: 0px solid #ea4a4f;
-		border-bottom: 1px solid #fff;
-		padding-bottom: 6px;
-		font-weight: 700;
-}
+    line-height: 1.75em;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 2rem;
+		font-family: 'Lato', sans-serif;
+  }
 
-.table-of-contents a.active {
-    font-weight: 900;
-    padding-left: 20px;
-    border-left: 0px solid #ea4a4f
+  @media only screen and (min-width: 40.063em) {
+
+    h1 {
+      padding-top: 4.5rem;
+      text-align: right;
+      font-size: 2.5rem;
+			font-family: 'Oswald', sans-serif;
+    }
+    p {
+      text-align: right;
+    }
+  }
 }

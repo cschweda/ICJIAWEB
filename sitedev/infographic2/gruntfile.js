@@ -25,8 +25,24 @@ module.exports = function(grunt) {
 			js: {
 				files: 'src/js/*.js',
 				tasks: ['uglify']
-			}
+			},
+			// html: {
+			// 	files: 'src/**/*.html',
+			// 	tasks: ['copy']
+			// }
+
 		},
+
+		copy: {
+  		images: {
+    		expand: true,
+    		cwd: 'src/img/',
+    		src: '**',
+    		dest: 'dist/img/',
+    		flatten: true,
+    		filter: 'isFile',
+  		},
+},
 
 
 	uglify: {
@@ -48,5 +64,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.registerTask('default',['sass','uglify','watch']);
+	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.registerTask('default',['copy','sass','uglify','watch']);
 };
