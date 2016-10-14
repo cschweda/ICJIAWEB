@@ -5,18 +5,28 @@
             $('a.page-scroll').bind('click', function(event) {
                 var $anchor = $(this);
                 $('html, body').stop().animate({
-                    scrollTop: $($anchor.attr('href')).offset().top - 70
+                    scrollTop: $($anchor.attr('href')).offset().top + 10
                 }, 1500, 'easeInOutExpo');
                 event.preventDefault();
             });
         });
+
+
         // hide .navbar first
         //$(".navbar").hide();
         // fade in .navbar
+
+        $('.expandText').readmore({
+            speed: 1000,
+            collapsedHeight: 430,
+            moreLink: '<a href="#" class="readMore">MORE&nbsp;&raquo;</a>',
+            lessLink: '<a href="#" class="readMore">&laquo&nbsp;LESS</a>'
+          });
+
         $(function() {
             $(window).scroll(function() {
                 // set distance user needs to scroll before we fadeIn navbar
-                if ($(this).scrollTop() > 150) {
+                if ($(this).scrollTop() > 75) {
                     $(".navbar-fixed-top").addClass("top-nav-collapse");
                     $("#navContainer").removeClass("container");
                     // $(".navbar-collapse > ul").removeClass("pull-right");
