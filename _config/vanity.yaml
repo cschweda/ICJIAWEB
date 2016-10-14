@@ -15,10 +15,6 @@
     url: /grants/overview
     type: 301
 
-# /ilfvccdev:
-#     url: /ilfvccdev/home
-#     type: 301
-
 /statute:
     url: /statutesearch
     type: 301
@@ -141,4 +137,8 @@
 
 /sornanofo:
   url: /sites/sornanofo
+  type: 301
+
+/ddhj:
+  url: /ddj
   type: 301

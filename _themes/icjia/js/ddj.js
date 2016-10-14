@@ -16,11 +16,11 @@
         //$(".navbar").hide();
         // fade in .navbar
 
-        $('.expandText').readmore({
+        $('.expandText.dark').readmore({
             speed: 1000,
             collapsedHeight: 430,
-            moreLink: '<a href="#" class="readMore">MORE&nbsp;&raquo;</a>',
-            lessLink: '<a href="#" class="readMore">&laquo&nbsp;LESS</a>'
+            moreLink: '<a href="#" class="readMore" style="color: #ccc">MORE&nbsp;&raquo;</a>',
+            lessLink: '<a href="#" class="readMore" style="color: #ccc">&laquo&nbsp;LESS</a>'
           });
 
         $(function() {
