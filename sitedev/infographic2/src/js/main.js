@@ -42,7 +42,7 @@ jQuery(document).ready(function($) {
     //     }
     //   );
 
-  
+
     // AJAX modal includes: custom
     var promise = $.ajax("./dist/includes/inc.html");
     promise.then(function(data) {
@@ -61,7 +61,7 @@ jQuery(document).ready(function($) {
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
                     $('html, body').animate({
-                        scrollTop: target.offset().top - 64
+                        scrollTop: target.offset().top - 63
                     }, 1000);
                     return false;
                 }
