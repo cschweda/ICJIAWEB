@@ -9,7 +9,7 @@ socialMediaImage: 'http://www.icjia.state.il.us/assets/img/icjia-default.jpg'
 socialMediaImageIFVCC: 'http://www.icjia.state.il.us/assets/ifvcc/img/logo3-purple-black.png'
 socialMediaImageTVPP: 'http://www.icjia.state.il.us/assets/tvpp/img/banner03.jpg'
 socialMediaImageGATA: 'http://www.icjia.state.il.us/assets/img/icjia-default.jpg'
-socialMediaImageDDJ: 'http://www.icjia.state.il.us/assets/ddj/img/hero05.jpg'
+socialMediaImageDDJ: 'http://www.icjia.state.il.us/assets/ddj/img/hero10.jpg'
 
 #default meta content
 
@@ -28,7 +28,7 @@ defaultPageTitle: 'Illinois Criminal Justice Information Authority'
 defaultPageTitleIFVCC: 'Illinois Family Violence Coordinating Councils'
 defaultPageTitleTVPP: 'Illinois Targeted Violence Prevention Program'
 defaultPageTitleGATA: 'ICJIA GATA Information'
-defaultPageTitleDDJ: 'Data Driven Justice'
+defaultPageTitleDDJ: 'Illinois Data Driven Health & Justice'
 
 #default site names
 
@@ -36,7 +36,7 @@ defaultSiteName: 'Illinois Criminal Justice Information Authority'
 defaultSiteNameIFVCC: 'Illinois Family Violence Coordinating Councils'
 defaultSiteNameTVPP: 'Targeted Violence Prevention Programs'
 defaultSiteNameGATA: 'ICJIA GATA Information'
-defaultSiteNameDDJ: 'Data Driven Justice'
+defaultSiteNameDDJ: 'Illinois Data Driven Health & Justice'
 
 #default site keywords
 
@@ -44,7 +44,7 @@ defaultKeywords: 'ICJIA, Criminal Justice, Illinois, Authority, Reform, Illinois
 defaultKeywordsIFVCC: 'IFVCC, ICJIA, Criminal Justice, Illinois, Illinois Family Violence Coordinating Councils, elder abuse, family violence, child abuse, domestic abuse'
 defaultKeywordsTVPP: 'TVPP, ICJIA, Illinois Criminal Justice Information Authority, Junaid Afeef, ISIS, extremism, Illinois, terrorism, Targeted Violence Prenvetion Program, DHS, neo-nazi skinheads, community-based, faith-based, Al Qaeda, Ku Klux Klan, homeland security'
 defaultKeywordsGATA: 'ICJIA, GATA, grants, funding, grant opportunities, Criminal Justice, Illinois, Authority, Reform, Illinois Criminal Justice Information Authority, VOCA, VAWA'
-defaultKeywordsDDJ: 'ICJIA, data, data driven justice, Office of Science and Technology Policy, health, stakeholders, mental illness, substance abuse, Illinois'
+defaultKeywordsDDJ: 'ICJIA, data, data driven justice, health, hospitals, Office of Science and Technology Policy, health, stakeholders, mental illness, substance abuse, Illinois'
 
 
 
