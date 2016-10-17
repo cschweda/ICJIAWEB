@@ -63,21 +63,16 @@
         //           offset: 69
         //   });
 
-//         $('.isAnimated').each(function() {
-//             var $element = $(this);
-//             var $animation = $element.data('animation');
-//             // console.log($element.data('animation'));
-//             $element.waypoint(function() {
-//               $element.addClass('animated').addClass($animation);
-//               this.destroy();
-//               console.log ('Animation:',$element, $animation);
-//             }, {
-//               offset: 69
-//             });
-// });
-
-
-
+        $('.isAnimated').each(function() {
+            var $element = $(this);
+            var $animation = $element.data('animation');
+            // console.log($element.data('animation'));
+            $element.waypoint(function() {
+              $element.css('visibility','visible').addClass('animated').addClass($animation);
+              // this.destroy();
+              console.log ('Animation:',$element, $animation);
+            }, {offset: '85%'});
+          });
 
 
 
