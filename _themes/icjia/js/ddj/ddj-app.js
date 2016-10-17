@@ -19,7 +19,7 @@
         $('.expandText.dark').readmore({
             speed: 1000,
             collapsedHeight: 430,
-            moreLink: '<a href="#" class="readMore" style="color: #ccc">MORE&nbsp;&raquo;</a>',
+            moreLink: '<a href="#" class="readMore animated slideInRight" style="color: #ccc">MORE&nbsp;&raquo;</a>',
             lessLink: '<a href="#" class="readMore" style="color: #ccc">&laquo&nbsp;LESS</a>'
           });
 
@@ -45,11 +45,41 @@
                 }
             });
         });
+
+
         $('a.back-to-top').click(function() {
             $('body, html').animate({
                 scrollTop: 0
             }, 1200);
             return false;
         });
+
+        // var waypoints = $('.isAnimated').waypoint({
+        //           handler: function(direction) {
+        //             var $this = this.element.data('animation');
+        //             console.log($this);
+        //
+        //           },
+        //           offset: 69
+        //   });
+
+//         $('.isAnimated').each(function() {
+//             var $element = $(this);
+//             var $animation = $element.data('animation');
+//             // console.log($element.data('animation'));
+//             $element.waypoint(function() {
+//               $element.addClass('animated').addClass($animation);
+//               this.destroy();
+//               console.log ('Animation:',$element, $animation);
+//             }, {
+//               offset: 69
+//             });
+// });
+
+
+
+
+
+
     });
 }(jQuery));
