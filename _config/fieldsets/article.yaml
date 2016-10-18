@@ -17,6 +17,12 @@ fields:
     required: false
     type: tags
 
+  authorviz:
+    display: Suppress list of authors at end of article?
+    type: select
+    options:
+      false: No, do not suppress the list. Display the authors.
+      true: Yes, suppress the list of authors. Do not display.
 
   # related:
   #   display: Related Articles
