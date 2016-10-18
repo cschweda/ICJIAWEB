@@ -70,9 +70,20 @@
             $element.waypoint(function() {
               $element.css('visibility','visible').addClass('animated').addClass($animation);
               // this.destroy();
-              console.log ('Animation:',$element, $animation);
+              //console.log ('Animation:',$element, $animation);
             }, {offset: '85%'});
           });
+
+
+          // Close mobile nav on item select: http://stackoverflow.com/questions/14203279/bootstrap-close-responsive-menu-on-click
+          $(function () {
+            $('.navbar-collapse ul li a:not(.dropdown-toggle)').bind('click touchstart', function () {
+                    $('.navbar-toggle:visible').click();
+            });
+
+
+
+    });
 
 
 
