@@ -1,0 +1,9 @@
+{
+      "store": [
+          {"name":"handlebars - the nice way","isbn":"112234AB3A"},
+          {"name":"Javascript - the sommer guide","isbn":"87877878t"},
+          {"name":"1d - the nice way","isbn":"dd"},
+          {"name":"Javascript","isbn":"8744877878t"}
+
+      ]
+  }

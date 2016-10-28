@@ -1,0 +1,31 @@
+{ "people":
+    [
+        {
+            "family": "Lopez",
+            "name": "Hugo",
+            "title": "leader",
+            "place": "Paris (France)",
+            "introduction": "WP:Map workshop's Dino, GIS, Gdal & D3js lightener",
+            "photo": "WikiAtlas_Lopez_Hugo_Yug.png",
+            "twitter": "http://www.twitter.com/Hugo_lz"
+        },
+        {
+            "family": "Ganesh",
+            "name": "Arun",
+            "title": "co-leader",
+            "place": "Dharamsala (India)",
+            "introduction": "GIS, D3js enthusiast, interactions designers & wikidata tinker",
+            "photo": "WikiAtlas_Ganesh_Arun_Planemad.jpg",
+            "twitter": "http://www.twitter.com/planemad"
+        },
+        {
+            "family": "Lopez",
+            "name": "Edouard",
+            "title": "Hero",
+            "place": "Bordeaux (France)",
+            "introduction": "Backend admin & Frontend professional webdev, scripts & stack consulting",
+            "photo": "WikiAtlas_Lopez_Edouard_Lyhana8.png",
+            "twitter": "http://wwww.twitter.com/edouard_lopez"
+        }
+    ]
+}

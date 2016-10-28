@@ -1,0 +1,7 @@
+{
+  "posts": [
+    { "id": 1, "title": "json-server", "author": "typicode" },
+    { "id": 2, "title": "node", "author": "node.js" },
+    { "id": 3, "title": "javascript", "author": "js" }
+  ]
+}

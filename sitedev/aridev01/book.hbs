@@ -1,0 +1,18 @@
+<ul>
+    {{#store}}
+    <li>{{name}} - {{isbn}}</li>
+    {{/store}}
+</ul>
+
+
+
+---
+
+<ul class="people_list">
+{{#each (limit store 2)}}
+
+  <li>Index is {{@index}} - element is {{this.name}} - {{this.isbn}}</li>
+
+  {{/each}}
+
+</ul>
