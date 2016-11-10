@@ -234,11 +234,17 @@
 
 
 		{{if jsFile}}
-		<script src="{{ theme:asset src='bower_components/highcharts-release/highcharts.src.js' }}"></script>
+		<!-- <script src="{{ theme:asset src='bower_components/highcharts-release/highcharts.src.js' }}"></script>
     <script src="{{ theme:asset src='bower_components/highcharts-release/modules/exporting.js' }}"></script>
-		<script src="{{ theme:asset src='bower_components/highcharts-release/modules/data.js' }}"></script>
+		<script src="{{ theme:asset src='bower_components/highcharts-release/modules/data.js' }}"></script> -->
 		<!-- <script src="{{ theme:asset src='js/highcharts/highchartsDeferRender.js'}}"></script> -->
-	
+
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+		<script src="http://code.highcharts.com/maps/modules/exporting.js"></script>
+		<script src="http://code.highcharts.com/maps/modules/map.js"></script>
+		<script src="http://code.highcharts.com/maps/modules/data.js"></script>
+		<script src="https://code.highcharts.com/mapdata/countries/us/us-il-all.js"></script>
+
 		<script src="{{ theme:asset src='js/highcharts/{{jsFile}}'}}"></script>
 
 		{{/if}}
