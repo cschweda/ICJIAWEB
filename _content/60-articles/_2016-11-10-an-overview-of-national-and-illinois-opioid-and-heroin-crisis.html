@@ -58,86 +58,113 @@ jsFile: 2016-11-10-an-overview-of-national-and-illinois-opioid-and-heroin-crisis
 <!--
 <p><a href="http://jsfiddle.net/liamhanninen/khLqbsmp/">http://jsfiddle.net/liamhanninen/khLqbsmp/</a>
 -->
+<div id="hc-fig1" style="min-width: 100%; height: 400px; margin: 0 auto">
+</div>
+<table class="datatable table table-hover table-striped" id="table1">
+<thead>
+<tr>
+	<th>
+	</th>
+	<th>Heroin
+	</th>
+	<th>Prescription Opioid
+	</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>2002
+	</td>
+	<td>285041
+	</td>
+	<td>45595
+	</td>
+</tr>
+<tr>
+	<td>2003
+	</td>
+	<td>274431
+	</td>
+	<td>52758
+	</td>
+</tr>
+<tr>
+	<td>2004
+	</td>
+	<td>262430
+	</td>
+	<td>60847
+	</td>
+</tr>
+<tr>
+	<td>2005
+	</td>
+	<td>260654
+	</td>
+	<td>71331
+	</td>
+</tr>
+<tr>
+	<td>2006
+	</td>
+	<td>268376
+	</td>
+	<td>84955
+	</td>
+</tr>
+<tr>
+	<td>2007
+	</td>
+	<td>262710
+	</td>
+	<td>100625
+	</td>
+</tr>
+<tr>
+	<td>2008
+	</td>
+	<td>281410
+	</td>
+	<td>124407
+	</td>
+</tr>
+<tr>
+	<td>2009
+	</td>
+	<td>286959
+	</td>
+	<td>145502
+	</td>
+</tr>
+<tr>
+	<td>2010
+	</td>
+	<td>266048
+	</td>
+	<td>167626
+	</td>
+</tr>
+<tr>
+	<td>2011
+	</td>
+	<td>283092
+	</td>
+	<td>194583
+	</td>
+</tr>
+<tr>
+	<td>2012
+	</td>
+	<td>285451
+	</td>
+	<td>169868
+	</td>
+</tr>
+</tbody>
+</table>
 
-<div id="hc-fig1" style="min-width: 100%; height: 400px; margin: 0 auto"></div>
 
-<table class="datatable table table-hover table-striped" id="table1" style="">
-
-<thead><tr><th> </th><th>Heroin</th><th>Prescription Opioid</th></tr></thead><tbody>
- <tr><td>2002</td><td>285041</td><td>45595</td></tr>
- <tr><td>2003</td><td>274431</td><td>52758</td></tr>
- <tr><td>2004</td><td>262430</td><td>60847</td></tr>
- <tr><td>2005</td><td>260654</td><td>71331</td></tr>
- <tr><td>2006</td><td>268376</td><td>84955</td></tr>
- <tr><td>2007</td><td>262710</td><td>100625</td></tr>
- <tr><td>2008</td><td>281410</td><td>124407</td></tr>
- <tr><td>2009</td><td>286959</td><td>145502</td></tr>
- <tr><td>2010</td><td>266048</td><td>167626</td></tr>
- <tr><td>2011</td><td>283092</td><td>194583</td></tr>
- <tr><td>2012</td><td>285451</td><td>169868</td></tr>
-</tbody></table>
-
-<table class="datatable table table-hover table-striped" id="table_view" style="">
-
-<thead><tr><th> </th><th>Heroin</th><th>Prescription Opioid</th></tr></thead><tbody>
- <tr><td>2002</td><td>285,041</td><td>45,595</td></tr>
- <tr><td>2003</td><td>274,431</td><td>52,758</td></tr>
- <tr><td>2004</td><td>262,430</td><td>60,847</td></tr>
- <tr><td>2005</td><td>260,654</td><td>71,331</td></tr>
- <tr><td>2006</td><td>268,376</td><td>84,955</td></tr>
- <tr><td>2007</td><td>262,710</td><td>100,625</td></tr>
- <tr><td>2008</td><td>281,410</td><td>124,407</td></tr>
- <tr><td>2009</td><td>286,959</td><td>145,502</td></tr>
- <tr><td>2010</td><td>266,048</td><td>167,626</td></tr>
- <tr><td>2011</td><td>283,092</td><td>194,583</td></tr>
- <tr><td>2012</td><td>285,451</td><td>169,868</td></tr>
-</tbody></table>
-
-<script>
-$(function() {
-  $('#hc-fig1').highcharts({
-
-    chart: {
-      type: 'line'
-    },
-
-    data: {
-      table: 'table1'
-    },
-    title: {
-      text: 'Figure 1',
-      x: -20 //center
-    },
-    subtitle: {
-      text: 'National heroin and prescription opioid treatment admissions',
-      x: -20
-    },
-    xAxis: {
-      categories: ['2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012']
-    },
-    yAxis: {
-      min: 0,
-      title: {
-        text: ''
-      },
-    },
-    tooltip: {
-      formatter: function() {
-        return 'The value for <b>' + this.x + '</b> is <b>' + this.y + '</b>, in series ' + this.series.name;
-      }
-    },
-
-    plotOptions: {
-      series: {
-        stacking: ''
-      }
-    },
-  });
-});
-</script>
-
-
-</p><p>Data source: Treatment Episode Data Set (TEDS), Center for Behavioral Health Statistics and Quality, Substance Abuse and Mental Health Services Administration.
+<p>Data source: Treatment Episode Data Set (TEDS), Center for Behavioral Health Statistics and Quality, Substance Abuse and Mental Health Services Administration.
 </p>
 <h3 id="fentanyl-a-synthetic-prescription-opioid">Fentanyl: A synthetic prescription opioid</h3>
 <p><a href="http://pub.lucidpress.com/NDEWSFentanyl/">Fentanyl is one of the most powerful legal pain killers available at 30 to 50 times more potent than heroin and 100 times more potent than morphine</a>. Fentanyl is administered to cancer patients on chemotherapy and people recovering from surgery who are experiencing extreme pain. Fentanyl comes in pill, injection, and patch form.
@@ -180,7 +207,7 @@ $(function() {
 	Rate of heroin overdose-related deaths in Illinois with interstates [ADD MAP 3 HERE]
 </p>
 <h3 id="conclusion">Conclusion</h3>
-<p>Heroin and other opioid availability and use have increased in in the past 10 years. Research has documented a link between prescription opioid drugs and the increase in individuals with heroin use disorders. The United States and Illinois have experienced increased overdoses and deaths due to heroin and other opioids and Fentanyl has contributed to the number of deaths. In response, communities, the criminal justice system, public health professionals, and legislators have tried to reduce influx of drugs in the community that contributes to abuse, addiction, and overdose, as well as increase access to substance abuse treatment, inducing harm reduction tactics.
+<p>Heroin and other opioid availability and use have increased in in the past 10 years. Research has documented a link between prescription opioid drugs and the increase in individuals with heroin use disorders. The United States and Illinois have experienced increased overdoses and deaths due to heroin and other opioids and Fentanyl has contributed to the number of deaths. In response, communities, the criminal justice system, public health professionals, and legislators have tried to reduce influx of drugs in the community that contributes to abuse, addiction, and overdose, as well as increase access to substance abuse treatment, including harm reduction tactics.
 </p>
 <p>This article provided an overview of the opioid crisis and the extent of the problem. This information can educate individuals in all communities in Illinois about the seriousness of the epidemic. The data indicates a need for increased monitoring of opioid prescriptions and to help individuals with opioid use disorders get the treatment they need.
 </p>
@@ -197,10 +224,10 @@ $(function() {
 		<li id="fn:8">Drug Enforcement Administration. (2015). <em>National drug threat assessment summary 2014</em>. Washington, D.C. <a href="#fnref:8" title="Return to article" class="reversefootnote">↩</a></li>
 		<li id="fn:9">Drug Enforcement Administration. (2015). <em>National drug threat assessment summary 2015</em>. Washington, D.C. <a href="#fnref:9" title="Return to article" class="reversefootnote">↩</a></li>
 		<li id="fn:10">Ciccarone, D., Unick, G. J., & Kraus, A. (2009). Impact of South American heroin on the US market 1993-2004. <em>International Journal of Drug Policy</em>, 20, 329-401.; National drug threat assessment. (2011). National Drug Intelligence Center. <a href="#fnref:10" title="Return to article" class="reversefootnote">↩</a></li>
-		<li id="fn:11">National drug threat assessment. (2011). National Drug Intelligence Center <a href="#fnref:11" title="Return to article" class="reversefootnote">↩</a></li>
+		<li id="fn:11">National Drug Intelligence Center (2011). <em>National drug threat assessment 2011.</em> Washington DC: author. <a href="#fnref:11" title="Return to article" class="reversefootnote">↩</a></li>
 		<li id="fn:12">National Drug Intelligence Center. (2011). <em>Chicago high intensity drug trafficking area: Drug market analysis 2011</em>. No. 2011-R0813-008, Washington, D.C. <a href="#fnref:12" title="Return to article" class="reversefootnote">↩</a></li>
 		<li id="fn:13">Maxwell, J. C. (2015). The pain reliever and heroin epidemic in the United States: Shifting winds in the perfect storm. <em>Journal of Addictive Diseases</em>, 34, 127-140. <a href="#fnref:13" title="Return to article" class="reversefootnote">↩</a></li>
-		<li id="fn:14">National Institute on Drug Abuse. (2014). Heroin. Retrieved from <a href="http://www.drugabuse.gov/publications/drugfacts/heroin">http://www.drugabuse.gov/publications/drugfacts/heroin</a> <a href="#fnref:14" title="Return to article" class="reversefootnote">↩</a></li>
+		<li id="fn:14">National Institute on Drug Abuse. (2014). <em>Heroin</em>. Retrieved from <a href="http://www.drugabuse.gov/publications/drugfacts/heroin">http://www.drugabuse.gov/publications/drugfacts/heroin</a> <a href="#fnref:14" title="Return to article" class="reversefootnote">↩</a></li>
 		<li id="fn:15">Volkow, N. D. (2014). <em>America’s addiction to opioids: Heroin and prescription drug abuse</em> [Lecture]. Retrieved from <a href="https://www.drugabuse.gov/about-nida/legislative-activities/testimony-to-congress/2015/americas-addiction-to-opioids-heroin-prescription-drug-abuse">https://www.drugabuse.gov/about-nida/legislative-activities/testimony-to-congress/2015/americas-addiction-to-opioids-heroin-prescription-drug-abuse</a> <a href="#fnref:15" title="Return to article" class="reversefootnote">↩</a></li>
 		<li id="fn:16">Boyd, C. J., Esteban, S., & Teter, C. J. (2006). Medical and nonmedical use of prescription pain medication by youth in a Detroit-area public school district. <em>Drug and Alcohol Dependence</em>, 81(1), 37–45. Retrieved from <a href="http://doi.org/10.1016/j.drugalcdep.2005.05.017">http://doi.org/10.1016/j.drugalcdep.2005.05.017</a> <a href="#fnref:16" title="Return to article" class="reversefootnote">↩</a></li>
 		<li id="fn:17">Sham, M. K. (2010). Down on the pharm: The juvenile prescription drug abuse epidemic and the necessity of holding parents criminally liable for making drugs accessible in their homes. <em>Journal of Contemporary Health Law & Policy</em>, 27, 426-452.  <a href="#fnref:17" title="Return to article" class="reversefootnote">↩</a></li>
