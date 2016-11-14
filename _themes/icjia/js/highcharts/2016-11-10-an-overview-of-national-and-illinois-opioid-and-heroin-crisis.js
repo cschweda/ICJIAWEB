@@ -1,6 +1,7 @@
 
-$('#table_view1').hide()
-$('#table1').hide()
+
+// $('#table1').hide()
+// $('#table2').hide()
 
 $(function() {
   $('#hc-fig1').highcharts({
@@ -43,8 +44,8 @@ $(function() {
   });
 });
 
-$('#table_view2').hide()
-$('#table2').hide()
+
+
 
 
 $(function() {
@@ -199,7 +200,7 @@ $(function() {
     // Initiate the chart
     $('#hc-fig3').highcharts('Map', {
 
-      enableMouseWheelZoom: false,
+
       title: {
         text: 'Rate of heroin-related overdose deaths per 100,000'
       },
@@ -210,6 +211,7 @@ $(function() {
 
       mapNavigation: {
         enabled: true,
+        enableMouseWheelZoom: false,
         buttonOptions: {
           verticalAlign: 'bottom'
         }
@@ -232,6 +234,7 @@ $(function() {
         //    },
       series: [{
         data: data,
+        enableMouseTracking: false,
         mapData: Highcharts.maps['countries/us/us-il-all'],
         joinBy: 'fips',
         name: 'County',
