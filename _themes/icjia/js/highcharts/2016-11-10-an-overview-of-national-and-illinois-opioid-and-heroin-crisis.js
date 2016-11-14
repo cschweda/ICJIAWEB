@@ -14,11 +14,11 @@ $(function() {
       table: 'table1'
     },
     title: {
-      text: 'Figure 1',
+      text: '',
       x: -20 //center
     },
     subtitle: {
-      text: 'National heroin and prescription opioid treatment admissions',
+      text: '',
       x: -20
     },
     xAxis: {
@@ -59,11 +59,11 @@ $(function() {
       table: 'table2'
     },
     title: {
-      text: 'Figure 2',
+      text: '',
       x: -20 //center
     },
     subtitle: {
-      text: 'National drug overdose deaths by drug, 1999-2014',
+      text: '',
       x: -20
     },
     xAxis: {
@@ -202,11 +202,11 @@ $(function() {
 
 
       title: {
-        text: 'Rate of heroin-related overdose deaths per 100,000'
+        text: ''
       },
 
       subtitle: {
-        text: 'Age 12 and older in Illinois, 2014'
+        text: ''
       },
 
       mapNavigation: {
