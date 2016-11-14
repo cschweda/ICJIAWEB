@@ -234,7 +234,7 @@ $(function() {
         //    },
       series: [{
         data: data,
-        enableMouseTracking: false,
+        enableMouseTracking: true,
         mapData: Highcharts.maps['countries/us/us-il-all'],
         joinBy: 'fips',
         name: 'County',
