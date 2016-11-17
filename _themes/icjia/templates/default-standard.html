@@ -10,6 +10,11 @@ breadcrumbs: true
 
       <h2 class="h3" style="border-bottom: 1px solid #ccc; padding-bottom: 8px">{{title}}</h2>
 
+      {{ if subheading }}
+      <p style="margin-top: 25px; margin-bottom: 25px; font-size: 20px;"
+      class="text-center"><em>{{subheading}}</em></p>
+      {{ /if }}
+
       {{ content|widont }}
 
 

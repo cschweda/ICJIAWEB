@@ -37,12 +37,18 @@ fields:
       - Press Release
       - Media Advisory
 
+  subheading:
+    display: Subheading
+    required: false
+    default:
+    type: text
+
   summary:
     display: Page summary
     required: false
     default:
     type: redactor
-    
+
   siteDisplay:
     display: Display news item on which site(s)?
     required: true
