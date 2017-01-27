@@ -142,3 +142,7 @@
 /ddhj:
   url: /ddj
   type: 301
+
+/soortf:
+  url: https://soortf.icjia.cloud
+  type: 301
