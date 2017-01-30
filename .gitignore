@@ -17,10 +17,10 @@ _logs/*
 
 # ICJIA-specific #
 ##################
-assets/pdf/*
-assets/excel/*
-assets/webinar/*
-assets/word/*
+# assets/pdf/*
+# assets/excel/*
+# assets/webinar/*
+# assets/word/*
 redeploy/*
 cjreform2015/*
 drone/*
