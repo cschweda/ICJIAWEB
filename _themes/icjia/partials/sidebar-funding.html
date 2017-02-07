@@ -3,14 +3,25 @@
   <div class="separator-line" style="margin-bottom: 35px"></div>
 
 
-
+  <div class="panel panel-danger">
+    <div class="panel-heading">
+      <h3 class="panel-title" style="line-height: 24px;">GATA REGISTRATION REQUIRED FOR ALL GRANT APPLICANTS</h3>
+    </div>
+    <div class="panel-body">
+      ICJIA will only review grant applications from agencies which have registered
+      with GATA and have an approved GATA ICQ.  ICQs approvals are valid for one year.
+      <div class="text-center">
+      <a class="btn btn-danger" style="font-family: 'Lato', sans-serif; text-transform: uppercase; font-weight: 700; margin-top: 25px; margin-bottom: 30px" href="https://www.illinois.gov/sites/GATA/Grantee/Pages/default.aspx">Register now</a>
+    </div>
+    </div>
+  </div>
 
 {{entries:listing folder="grant-opportunities" show_past="false" show_future="true" conditions="icjiagrant:ICJIA" sort_dir="asc"}}
 
 {{ if no_results }}
-    <p class="text-center">
+    <!-- <p class="text-center">
         There are no Authority funding opportunities available at this time.
-    </p>
+    </p> -->
 {{ else }}
 <h4 class="h5" style="font-weight: 900; line-height: 25px;">
   <a href="{{if directURL}}{{directURL}}{{else}}{{url}}{{endif}}">{{title}}&nbsp;&raquo;</a></h4>
