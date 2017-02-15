@@ -1,5 +1,7 @@
 # Installation
 
+Needs PHP 5.6. Not 7.x.
+
 ## Clone repository
 
 ```
@@ -17,13 +19,41 @@ npm install -g grunt-cli
 In  ```_themes/icjia/```:
 
 ```
-npm Install
+npm install
 ```
 
-# Run Statamic server check:
+## Run Statamic server check:
 
 ```
-http://<your-host>/check/check.
+http://<your-host>/check/check.php.
 ```
 
 Make sure ```mod_rewrite``` is installed.
+
+# Running Ubuntu 16.10/Apache2:
+
+Clone site into ```/var/www/```.
+
+In ```/etc/apache2/```:
+
+```sudo nano apache2.conf```
+
+Locate:
+
+```
+<Directory /var/www/>
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted
+</Directory>
+```
+
+Change to:
+
+```
+<Directory /var/www/>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+</Directory>
+```
