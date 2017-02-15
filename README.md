@@ -1,4 +1,4 @@
-# Installation
+# Basic installation:
 
 Needs PHP 5.6. Not 7.x.
 
@@ -30,9 +30,13 @@ http://<your-host>/check/check.php.
 
 Make sure ```mod_rewrite``` is installed.
 
-# Running Ubuntu 16.10/Apache2:
+# Running Ubuntu 16.10/Apache2.2:
 
 Clone site into ```/var/www/```.
+
+Make sure mod_rewrite is installed:
+
+```a2enmod rewrite```
 
 In ```/etc/apache2/```:
 
@@ -56,4 +60,10 @@ Change to:
         AllowOverride All
         Require all granted
 </Directory>
+```
+
+Restart Apache:
+
+```
+service apache2 restart
 ```
