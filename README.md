@@ -15,10 +15,10 @@ git clone https://github.com/ICJIA/icjia-public-website.git
 ## Run Statamic server check:
 
 ```
-http://localhost/Check/check.php.
+http://localhost/Check/check.php
 ```
 
-** Make sure ```mod_rewrite``` is installed. **
+**Make sure ```mod_rewrite``` is installed.**
 
 ## Install Grunt:
 
@@ -34,7 +34,7 @@ In  ```_themes/icjia/```:
 npm install
 ```
 
-Grunt tasks:
+## Grunt tasks:
 
 ```
 # Build all sites (scss/less, concat, watch)
@@ -111,7 +111,7 @@ service apache2 restart
 Run Statamic server check:
 
 ```
-http://localhost/Check/check.php.
+http://localhost/Check/check.php
 ```
 
 # More information on Statamic v1.x:
