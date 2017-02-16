@@ -23,9 +23,9 @@ assets/webinar/*
 assets/word/*
 redeploy/*
 cjreform2015/*
-drone/*
-allsites2014/*
-allsites2015/*
+#drone/*
+#allsites2014/*
+#allsites2015/*
 claris/*
 default/*
 coe/*
@@ -35,12 +35,12 @@ IERTF/*
 ILFVCC/*
 iijis/*
 infonets/*
-leadership2013/*
+#leadership2013/*
 mars/*
 sac/instantatlas/*
 spac/*
 spacadmin/*
 strategy2010/*
-training2014/*
+#training2014/*
 VAWAMDTRFA/*
 assets/img/resized/victims-s-w125-h125-q100-m1440527206.jpg
