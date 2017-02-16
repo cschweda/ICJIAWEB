@@ -100,7 +100,7 @@ Run Statamic server check:
 
 ```
 http://localhost/Check/check.php.
-```
+``` 
 
 # More information on Statamic v1.x:
 
