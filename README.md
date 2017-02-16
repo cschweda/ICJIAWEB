@@ -12,6 +12,14 @@ Information on downgrading to PHP 5.6: [http://askubuntu.com/questions/761713/ho
 git clone https://github.com/ICJIA/icjia-public-website.git
 ```
 
+## Run Statamic server check:
+
+```
+http://localhost/Check/check.php.
+```
+
+** Make sure ```mod_rewrite``` is installed. **
+
 ## Install Grunt:
 
 ```
@@ -26,15 +34,10 @@ In  ```_themes/icjia/```:
 npm install
 ```
 
-## Run Statamic server check:
 
-```
-http://<your-host>/check/check.php.
-```
-
-Make sure ```mod_rewrite``` is installed.
 
 # Notes on running Ubuntu 16.10/Apache2.2:
+
 
 Clone site into ```/var/www/```:
 
@@ -91,6 +94,12 @@ Restart Apache:
 
 ```
 service apache2 restart
+```
+
+Run Statamic server check:
+
+```
+http://localhost/Check/check.php.
 ```
 
 # More information on Statamic v1.x:
