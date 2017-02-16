@@ -34,6 +34,18 @@ In  ```_themes/icjia/```:
 npm install
 ```
 
+Grunt tasks:
+
+```
+# Build all sites (scss/less, concat, watch)
+
+grunt
+
+# Build all sites for deployment (scss/less, concat, uglify, watch)
+
+grunt deploy
+
+```
 
 
 # Notes on running Ubuntu 16.10/Apache2.2:
@@ -44,7 +56,7 @@ Clone site into ```/var/www/```:
 ```
 git clone https://github.com/ICJIA/icjia-public-website.git
 ```
-Then: 
+Then:
 
 ```
 cd /etc/apache2/sites-available/
