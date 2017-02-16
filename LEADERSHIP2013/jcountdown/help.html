@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="help.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div id="content">
+   	  <div class="page header">
+       		<div class="title">jCountdown v1.1.1</div>
+            <div class="content">
+	       		<div class="infomation">
+                	Created: 17/11/2012<br />
+                    By: Jason
+				</div>
+	       		<div class="thanks">
+                	Thank you for purchasing my theme. If you have any questions that are   beyond the scope of this help file, please feel free to email via <a href="http://codecanyon.net/user/ufoufoufo">my user page contact form here</a>. Thanks so much!
+                </div>
+                <div class="footer"></div>
+            </div>
+      </div>
+   	  <div class="page">
+   	    <div class="title">Update Log</div>
+        <ul>
+            <li>
+                <div class="title">v1.1.1 02/12/2012</div>
+                <div class="content">
+                	<ul>
+                    	<li>fix bug about can't correctly parse some timeText format</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="title">v1.1  27/11/2012</div>
+                <div class="content">
+                	<ul>
+                    	<li>1.Add new property <span class="highlight">width (Number)</span></li>
+                    	<li>2. Add new property <span class="highlight">displayLabel (Boolean)</span></li>
+                    	<li>3. Now texts won't warp, all texts will  display in one line</li>
+                    </ul>
+                </div>
+            </li>
+          </li>
+        </ul>
+      </div>
+   	  <div class="page">
+   	    <div class="title">Quick Start</div>
+   	    <ul>
+   	      <li>
+   	        <div class="content">open the <span class="highlight">example.html</span> in your html editor to  edit the setting, 
+   	          and  test it in your browser</div>
+          </li>
+   	      <li> </li>
+        </ul>
+      </div>
+   	  <div class="page">
+   		<div class="title">How to use it</div>
+			<ul>
+            	<li>
+                    <div class="title">1. copy the jCountdown files</div>
+                    <div class="content">copy the <span class="highlight">jCountdown folder</span> to <span class="highlight">the folder where you put your html file</span></div>
+            	<li>
+                    <div class="title">2. open your html file and include the js and css files between the &lt;head&gt; tag</div>
+            	</li>
+            	<li>
+            	  <div class="content">
+            	    &lt;head&gt;<br />
+            	    <br />
+            	    <span class="highlight">&lt;script src=&quot;jquery/jquery-1.8.2.min.js&quot;&gt;&lt;/script&gt;<br />
+           	        &lt;link href=&quot;jcountdown/jcountdown.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;<br />
+           	        &lt;script src=&quot;jcountdown/jquery.jcountdown.min.js&quot;&gt;&lt;/script&gt;<br />
+           	        <br /></span>
+            	    &lt;/head&gt;
+           	        <br />
+           	        <br />
+           	        PS: If
+                  you want to use jCountdown in many html pages,<br />
+                  you can put the jCountdown floder to  root folder of yoursite<br />
+                  <br />
+                  e.g. http://yoursite.com/<span class="highlight">jcountdown</span><br />
+                  <br />
+and <span class="title">include</span> these code<br />
+                  <br />&lt;script src=&quot;jquery/jquery-1.8.2.min.js&quot;&gt;&lt;/script&gt;<br />
+&lt;link href=&quot;<span class="highlight">http://yoursite.com/jcountdown/jcountdown.css</span>&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;<br />
+&lt;script src=&quot;<span class="highlight">http://yoursite.com/jcountdown/jquery.jcountdown.min.js</span>&quot;&gt;&lt;/script&gt;</div>
+          	  </li>
+            	<li>
+                    <div class="title">3. add a div to create the countdown between the &lt;body&gt; tag</div>
+                    <div class="content">&lt;body&gt;<br />
+                      <br />
+                        <span class="highlight">&lt;div id=&quot;DIV_TO_PLACE_COUNTDOWN&quot;&gt;&lt;/div&gt;</span><br />
+                        <br />
+                        &lt;/body&gt;
+                    </div>
+            	</li>
+            	<li> </li>
+            	<li> </li>
+            	<li>
+                    <div class="title">4. add these scripts  between the &lt;body&gt; tag to create the countdown</div>
+                    <div class="content">
+                    	<textarea><script>
+	jQuery(document).ready(function(){
+		jQuery("#DIV_TO_PLACE_COUNTDOWN").jCountdown({
+			timeText:"2020/01/01 00:00:00",
+			timeZone:8,
+			style:"flip",
+			color:"black",
+			width:0,
+			textGroupSpace:15,
+			textSpace:0,
+			reflection:true,
+			reflectionOpacity:10,
+			reflectionBlur:0,
+			dayTextNumber:4,
+			displayDay:true,
+			displayHour:true,
+			displayMinute:true,
+			displaySecond:true,
+			displayLabel:true,
+			onFinish:function(){
+				alert("finish");
+			}
+		});
+	});
+</script></textarea><br /><br />
+                  		<span class="highlight">you can scroll down to check the properties details inforamtion</span>
+                  </div>
+              </li>
+              <li>
+                  <div class="title">5. start, stop, or destroy countdown</div>
+                  <div class="content">
+                      jQuery(&quot;#DIV_TO_PLACE_COUNTDOWN&quot;).jCountdown(&quot;start&quot;);<br /><br />
+                      jQuery(&quot;#DIV_TO_PLACE_COUNTDOWN&quot;).jCountdown(&quot;stop&quot;);<br /><br />
+                      jQuery(&quot;#DIV_TO_PLACE_COUNTDOWN&quot;).jCountdown(&quot;destroy&quot;);
+                  </div>
+              </li>
+          </ul>
+      </div>
+   	  <div class="page">
+   	    <div class="title">How to change the font size, color and others </div>
+   	    <ul>
+   	      <li>
+   	        <div class="content">you can find all source psd file in the <span class="highlight">folder psd</span><br />
+   	          you can edit it in the photoshop, and after you finish the change<br />
+   	          save it to a png
+   	          and just put it in the <span class="highlight">folder jcountdown</span> to replace the original style png file<br />
+   	          <br />
+   	          i.e. if you want to change the font color
+   	          for style <span class="highlight">crystal</span><br />
+   	          just open the <span class="highlight">crystal_black.psd </span>and<span class="highlight"> crystal_white.psd</span><br />
+   	          and change the font color in photoshop<br />
+   	          and save it 
+   	          to <span class="highlight">folder jcountdown</span>, replace the <span class="highlight">jcountdown_crystal_black.png</span> and <span class="highlight">jcountdown_crystal_white.png</span><br />
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="page">
+       	<div class="title">Properities</div>
+   		  <ul>
+           	  <li>
+                  <div class="title">timeText (String)</div>
+                  <div class="content">Year/Month/Date Hour:Minute:Second</div>
+              </li>
+           	  <li>
+                  <div class="title">timeZone (Number)</div>
+                  <div class="content">GMT number</div>
+              </li>
+           	  <li>
+                  <div class="title">style (<span class="content">String</span>)</div>
+                  <div class="content">Flip, Slide, Metal or Crystal</div>
+              </li>
+           	  <li>
+           	    <div class="title">color (String)</div>
+                <div class="content">Black or White</div>
+              </li>
+           	  <li>
+           	    <div class="title">width (Number)</div>
+                <div class="content">0~n (unlimited, default 0) (if you don't want to resize, it please set it to 0)</div>
+              </li>
+           	  <li>
+                  <div class="title">textGroupSpace (Number)</div>
+                  <div class="content">0~n (unlimited, default 15)</div>
+              </li>
+           	  <li>
+                  <div class="title">textSpace (Number)</div>
+                  <div class="content">0~n (unlimited, default 0)</div>
+              </li>
+           	  <li>
+                  <div class="title">reflection (Boolean)</div>
+                  <div class="content">true or false (default true) (this setting works in Firefox, Chrome, Safari, Opera and most mobile browser)</div>
+              </li>
+           	  <li>
+                  <div class="title">reflection Opacity (Number)</div>
+                  <div class="content">0~100 (default 10) (this setting works in Firefox, Chrome, Safari, Opera and most mobile browser)</div>
+              </li>
+           	  <li>
+                  <div class="title">reflection Blur (Number)</div>
+                  <div class="content">0~10 (default 0) (this setting works in Firefox, Chrome, Safari and most mobile browser)</div>
+              </li>
+           	  <li>
+                  <div class="title">dayTextNumber (Number)</div>
+                  <div class="content">2~n (unlimited, default 2)</div>
+              </li>
+           	  <li>
+                  <div class="title">displayDay (Boolean)</div>
+                  <div class="content">true or false (default true)</div>
+              </li>
+           	  <li>
+                  <div class="title">displayHour (Boolean)</div>
+                  <div class="content">true or false (default true)</div>
+              </li>
+           	  <li>
+                  <div class="title">displayMinute (Boolean)</div>
+                  <div class="content">true or false (default true)</div>
+              </li>
+           	  <li>
+                  <div class="title">displaySecond (Boolean)</div>
+                  <div class="content">true or false, (default true)</div>
+              </li>
+           	  <li>
+                  <div class="title">displayLabel (Boolean)</div>
+                  <div class="content">true or false, (default true)</div>
+              </li>
+           	  <li>
+                  <div class="title">onFinish (function)</div>
+                  <div class="content">execute some scripts when time's up</div>
+           	  </li>
+   		  </ul>
+        </div>
+      <div class="page">
+        <div class="title">Methods</div>
+        <ul>
+          <li>
+            <div class="title">create</div>
+            <div class="content">create countdown<br />
+              <br />
+              <textarea name="textarea">jQuery(&quot;#DIV_TO_PLACE_COUNTDOWN&quot;).jCountdown({
+    timeText:&quot;2020/01/01 00:00:00&quot;,
+    timeZone:8,
+    style:&quot;flip&quot;,
+    color:&quot;black&quot;,
+    width:0,
+    textGroupSpace:15,
+    textSpace:0,
+    reflection:true,
+    reflectionOpacity:.1,
+    reflectionBlur:0,
+    dayTextNumber:4,
+    displayDay:true,
+    displayHour:true,
+    displayMinute:true,
+    displaySecond:true,
+    displayLabel:true,
+    onFinish:function(){
+    	alert(&quot;finish&quot;);
+    }
+});</textarea>
+            </div>
+          </li>
+          <li>
+            <div class="title">destroy</div>
+            <div class="content"> destroy countdown<br />
+              <br />
+              jQuery(&quot;#DIV_TO_PLACE_COUNTDOWN&quot;).jCountdown(&quot;destroy&quot;); </div>
+          </li>
+          <li>
+            <div class="title">stop</div>
+            <div class="content"> stop countdown<br />
+              <br />
+              jQuery(&quot;#DIV_TO_PLACE_COUNTDOWN&quot;).jCountdown(&quot;stop&quot;); </div>
+          </li>
+          <li>
+            <div class="title">start</div>
+            <div class="content"> start countdown<br />
+              <br />
+              jQuery(&quot;#DIV_TO_PLACE_COUNTDOWN&quot;).jCountdown(&quot;start&quot;); </div>
+          </li>
+        </ul>
+      </div>
+	</div>
+</body>
+</html>
