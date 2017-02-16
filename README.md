@@ -4,7 +4,8 @@ The ICJIA public site is built on [Statamic version 1.x](https://v1.statamic.com
 
 **PHP 5.6 is required -- not 7.x.**
 
-Information on downgrading to PHP 5.6: [http://askubuntu.com/questions/761713/how-can-i-downgrade-from-php-7-to-php-5-6-on-ubuntu-16-04](http://askubuntu.com/questions/761713/how-can-i-downgrade-from-php-7-to-php-5-6-on-ubuntu-16-04)
+Information on downgrading to PHP 5.6:
+-[http://askubuntu.com/questions/761713/how-can-i-downgrade-from-php-7-to-php-5-6-on-ubuntu-16-04](http://askubuntu.com/questions/761713/how-can-i-downgrade-from-php-7-to-php-5-6-on-ubuntu-16-04)
 
 ## Clone repository
 
