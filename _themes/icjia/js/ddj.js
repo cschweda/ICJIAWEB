@@ -1,2 +1,91 @@
-!function(a){a(document).ready(function(){a(function(){a("a.page-scroll").bind("click",function(b){var c=a(this);a("html, body").stop().animate({scrollTop:a(c.attr("href")).offset().top+5},1500,"easeInOutExpo"),b.preventDefault()})}),a(".expandText.dark").readmore({speed:1e3,collapsedHeight:430,moreLink:'<a href="#" class="readMore animated slideInRight" style="color: #ccc">MORE&nbsp;&raquo;</a>',lessLink:'<a href="#" class="readMore" style="color: #ccc">&laquo&nbsp;LESS</a>'}),a(function(){a(window).scroll(function(){a(this).scrollTop()>75?(a(".navbar-fixed-top").addClass("top-nav-collapse"),a("#navContainer").removeClass("container"),a(".offCanvasButton").show(),a(".navbar-default").css({background:"#fff"}),a(".navbar-default .navbar-nav > .active > a").css({"background-color":"#aa3c3e",color:"#fff"}),a(".navbar").fadeIn()):a(".navbar").fadeOut()})}),a("a.back-to-top").click(function(){return a("body, html").animate({scrollTop:0},1200),!1}),a(".isAnimated").each(function(){var b=a(this),c=b.data("animation");b.waypoint(function(){b.css("visibility","visible").addClass("animated").addClass(c)},{offset:"85%"})}),a(function(){a(".navbar-collapse ul li a:not(.dropdown-toggle)").bind("click touchstart",function(){a(".navbar-toggle:visible").click()})})})}(jQuery);
-//# sourceMappingURL=ddj.js.map
+(function($) {
+    $(document).ready(function() {
+        //jQuery for page scrolling feature - requires jQuery Easing plugin
+        $(function() {
+            $('a.page-scroll').bind('click', function(event) {
+                var $anchor = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: $($anchor.attr('href')).offset().top + 5
+                }, 1500, 'easeInOutExpo');
+                event.preventDefault();
+            });
+        });
+
+
+        // hide .navbar first
+        //$(".navbar").hide();
+        // fade in .navbar
+
+        $('.expandText.dark').readmore({
+            speed: 1000,
+            collapsedHeight: 430,
+            moreLink: '<a href="#" class="readMore animated slideInRight" style="color: #ccc">MORE&nbsp;&raquo;</a>',
+            lessLink: '<a href="#" class="readMore" style="color: #ccc">&laquo&nbsp;LESS</a>'
+          });
+
+        $(function() {
+            $(window).scroll(function() {
+                // set distance user needs to scroll before we fadeIn navbar
+                if ($(this).scrollTop() > 75) {
+                    $(".navbar-fixed-top").addClass("top-nav-collapse");
+                    $("#navContainer").removeClass("container");
+                    // $(".navbar-collapse > ul").removeClass("pull-right");
+                    //$(".top-bar").fadeOut(100);
+                    $(".offCanvasButton").show();
+                    $('.navbar-default').css({
+                        "background": "#fff"
+                    });
+                    $(".navbar-default .navbar-nav > .active > a").css({
+                        "background-color": "#aa3c3e",
+                        "color": "#fff"
+                    });
+                    $('.navbar').fadeIn();
+                } else {
+                    $('.navbar').fadeOut();
+                }
+            });
+        });
+
+
+        $('a.back-to-top').click(function() {
+            $('body, html').animate({
+                scrollTop: 0
+            }, 1200);
+            return false;
+        });
+
+        // var waypoints = $('.isAnimated').waypoint({
+        //           handler: function(direction) {
+        //             var $this = this.element.data('animation');
+        //             console.log($this);
+        //
+        //           },
+        //           offset: 69
+        //   });
+
+        $('.isAnimated').each(function() {
+            var $element = $(this);
+            var $animation = $element.data('animation');
+            // console.log($element.data('animation'));
+            $element.waypoint(function() {
+              $element.css('visibility','visible').addClass('animated').addClass($animation);
+              // this.destroy();
+              //console.log ('Animation:',$element, $animation);
+            }, {offset: '85%'});
+          });
+
+
+          // Close mobile nav on item select: http://stackoverflow.com/questions/14203279/bootstrap-close-responsive-menu-on-click
+          $(function () {
+            $('.navbar-collapse ul li a:not(.dropdown-toggle)').bind('click touchstart', function () {
+                    $('.navbar-toggle:visible').click();
+            });
+
+
+
+    });
+
+
+
+    });
+}(jQuery));
