@@ -114,6 +114,10 @@ Run Statamic server check:
 http://localhost/Check/check.php
 ```
 
+Adding SFTP to Laravel Forge provisioned server:
+
+- [https://murze.be/2016/03/let-your-clients-use-sftp-on-a-forge-provisioned-server/] (https://murze.be/2016/03/let-your-clients-use-sftp-on-a-forge-provisioned-server/)
+
 # More information on Statamic v1.x:
 
 - https://v1.statamic.com/
