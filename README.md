@@ -87,10 +87,6 @@ Restart Apache:
 service apache2 restart
 ```
 
-Check site:
-
-```http://127.0.0.1/```
-
 # More information on Statamic v1.x:
 
 - https://v1.statamic.com/
