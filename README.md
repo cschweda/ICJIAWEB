@@ -44,7 +44,7 @@ Clone site into ```/var/www/```:
 ```
 git clone https://github.com/ICJIA/icjia-public-website.git
 ```
-Then:
+Then: 
 
 ```
 cd /etc/apache2/sites-available/
@@ -100,7 +100,7 @@ Run Statamic server check:
 
 ```
 http://localhost/Check/check.php.
-``` 
+```
 
 # More information on Statamic v1.x:
 
