@@ -118,6 +118,8 @@ Adding SFTP to Laravel Forge provisioned server:
 
 - [https://murze.be/2016/03/let-your-clients-use-sftp-on-a-forge-provisioned-server/] (https://murze.be/2016/03/let-your-clients-use-sftp-on-a-forge-provisioned-server/)
 
+- [https://debian-administration.org/article/590/OpenSSH_SFTP_chroot_with_ChrootDirectory] (https://debian-administration.org/article/590/OpenSSH_SFTP_chroot_with_ChrootDirectory)
+
 # More information on Statamic v1.x:
 
 - https://v1.statamic.com/
