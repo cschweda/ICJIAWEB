@@ -126,3 +126,16 @@ Adding SFTP to Laravel Forge provisioned server:
 # More information on Statamic v1.x:
 
 - https://v1.statamic.com/
+
+# Laravel Forge deployment notes:
+
+- Admin not found error fix under Nginx:
+
+Add to Nginx config:
+
+```
+location / {
+       rewrite ^/admin.php.*$ /admin.php;
+       try_files $uri $uri/ /index.php?$query_string;
+   }
+```
