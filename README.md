@@ -121,6 +121,8 @@ Adding SFTP to Laravel Forge provisioned server:
 
 - [https://debian-administration.org/article/590/OpenSSH_SFTP_chroot_with_ChrootDirectory] (https://debian-administration.org/article/590/OpenSSH_SFTP_chroot_with_ChrootDirectory)
 
+- [http://askubuntu.com/questions/143700/granting-a-sftp-user-access-to-a-var-www-directory] (http://askubuntu.com/questions/143700/granting-a-sftp-user-access-to-a-var-www-directory)
+
 # More information on Statamic v1.x:
 
 - https://v1.statamic.com/
