@@ -14,9 +14,11 @@ _cache/*
 !_cache/index.html
 _logs/*
 !_logs/index.html
+ assets/img/resized/*
 
 # ICJIA-specific #
 ##################
+
 assets/pdf/*
 assets/excel/*
 assets/webinar/*
