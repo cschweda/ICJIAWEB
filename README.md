@@ -2,6 +2,10 @@
 
 The ICJIA public site is built on [Statamic version 1.x](https://v1.statamic.com/).
 
+##More information on Statamic v1.x:
+
+- https://v1.statamic.com/
+
 **PHP 5.6 is required -- not 7.x.**
 
 Information on downgrading to PHP 5.6:
@@ -50,7 +54,6 @@ grunt deploy
 
 
 # Notes on running Ubuntu 16.10/Apache2.2:
-
 
 Clone site into ```/var/www/```:
 
@@ -123,13 +126,9 @@ Adding SFTP to Laravel Forge provisioned server:
 
 - [http://askubuntu.com/questions/143700/granting-a-sftp-user-access-to-a-var-www-directory] (http://askubuntu.com/questions/143700/granting-a-sftp-user-access-to-a-var-www-directory)
 
-# More information on Statamic v1.x:
+# Notes on Laravel Forge deployment (to Digital Ocean Ubuntu droplet)
 
-- https://v1.statamic.com/
-
-# Laravel Forge deployment notes:
-
-Admin not found error fix under Nginx:
+##Admin not found error fix under Nginx
 
 Edit Nginx config:
 
