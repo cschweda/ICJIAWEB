@@ -131,7 +131,7 @@ Adding SFTP to Laravel Forge provisioned server:
 
 Admin not found error fix under Nginx:
 
-Nginx config:
+Edit Nginx config:
 
 ```
 location / {
@@ -139,3 +139,5 @@ location / {
        try_files $uri $uri/ /index.php?$query_string;
    }
 ```
+
+[https://lodge.statamic.com/questions/1805-nginxconf-for-use-on-forge](https://lodge.statamic.com/questions/1805-nginxconf-for-use-on-forge)
