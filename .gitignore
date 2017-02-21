@@ -14,7 +14,6 @@ _cache/*
 !_cache/index.html
 _logs/*
 !_logs/index.html
- assets/img/resized/*
 
 # ICJIA-specific #
 ##################
