@@ -6,13 +6,8 @@ The ICJIA public site is built on [Statamic version 1.x](https://v1.statamic.com
 
 - https://v1.statamic.com/
 
-<strike>PHP 5.6 is required -- not 7.x.</strike>
-**PHP 7.1 is required**
+PHP 5.6+ is required.
 
-
-
-Information on downgrading to PHP 5.6:
--[http://askubuntu.com/questions/761713/how-can-i-downgrade-from-php-7-to-php-5-6-on-ubuntu-16-04](http://askubuntu.com/questions/761713/how-can-i-downgrade-from-php-7-to-php-5-6-on-ubuntu-16-04)
 
 ## Clone repository
 
@@ -25,8 +20,6 @@ git clone https://github.com/ICJIA/icjia-public-website.git
 ```
 http://localhost/Check/check.php
 ```
-
-**Make sure ```mod_rewrite``` is installed.**
 
 ## Install Grunt:
 
@@ -57,14 +50,20 @@ grunt deploy
 
 # Notes on running Windows Server 2012R2/IIS 8.5:
 
-- Use Microsoft's ```Web Platform Installer``` to install PHP 7.1
-- Clone Github repo: ```git clone https://github.com/ICJIA/icjia-public-website.git```
+- Use Microsoft's ```Web Platform Installer``` to install PHP 7.1 (5.6 works, too.)
+- Clone Github repo in web directory: ```git clone https://github.com/ICJIA/icjia-public-website.git```
 - Update permissions on ```/admin```
 - Install ColdFusion (for legacy sites).
 - Install legacy databases via ODBC DataSoures (32-bit)
 - Use ColdFusion administrator -- ```http://127.0.0.1/CFIDE/administrator/index.cfm``` -- to install databases in ColdFusion.
+- For legacy Center of Excellence and SPAC sites, deploy ColdFusion config ```jakarta``` as a virtual directory in each site. Depending on where CF installed, something like: ```C:\ColdFusionxx\config\wsconfig\1```
+
 
 # Notes on running Ubuntu 16.10/Apache2.2:
+
+Information on downgrading to PHP 5.6:
+-[http://askubuntu.com/questions/761713/how-can-i-downgrade-from-php-7-to-php-5-6-on-ubuntu-16-04](http://askubuntu.com/questions/761713/how-can-i-downgrade-from-php-7-to-php-5-6-on-ubuntu-16-04)
+
 
 Clone site into ```/var/www/```:
 
@@ -129,13 +128,6 @@ Run Statamic server check:
 http://localhost/Check/check.php
 ```
 
-Adding SFTP to Laravel Forge provisioned server:
-
-- [https://murze.be/2016/03/let-your-clients-use-sftp-on-a-forge-provisioned-server/] (https://murze.be/2016/03/let-your-clients-use-sftp-on-a-forge-provisioned-server/)
-
-- [https://debian-administration.org/article/590/OpenSSH_SFTP_chroot_with_ChrootDirectory] (https://debian-administration.org/article/590/OpenSSH_SFTP_chroot_with_ChrootDirectory)
-
-- [http://askubuntu.com/questions/143700/granting-a-sftp-user-access-to-a-var-www-directory] (http://askubuntu.com/questions/143700/granting-a-sftp-user-access-to-a-var-www-directory)
 
 # Notes on Laravel Forge deployment (to Digital Ocean Ubuntu droplet)
 
@@ -151,3 +143,11 @@ location / {
 ```
 
 [https://lodge.statamic.com/questions/1805-nginxconf-for-use-on-forge](https://lodge.statamic.com/questions/1805-nginxconf-for-use-on-forge)
+
+Adding SFTP to Laravel Forge provisioned server:
+
+- [https://murze.be/2016/03/let-your-clients-use-sftp-on-a-forge-provisioned-server/] (https://murze.be/2016/03/let-your-clients-use-sftp-on-a-forge-provisioned-server/)
+
+- [https://debian-administration.org/article/590/OpenSSH_SFTP_chroot_with_ChrootDirectory] (https://debian-administration.org/article/590/OpenSSH_SFTP_chroot_with_ChrootDirectory)
+
+- [http://askubuntu.com/questions/143700/granting-a-sftp-user-access-to-a-var-www-directory] (http://askubuntu.com/questions/143700/granting-a-sftp-user-access-to-a-var-www-directory)
