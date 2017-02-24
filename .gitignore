@@ -31,8 +31,8 @@ claris/*
 default/*
 coe/*
 egmis/*
-integrated2013/*
-IERTF/*
+#integrated2013/*
+#IERTF/*
 ILFVCC/*
 iijis/*
 infonets/*
