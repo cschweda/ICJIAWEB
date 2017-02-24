@@ -5,11 +5,9 @@ The ICJIA public site is built on [Statamic version 1.x](https://v1.statamic.com
 ##More information on Statamic v1.x:
 
 - https://v1.statamic.com/
+- PHP 5.6+ is required.
 
-PHP 5.6+ is required.
-
-
-## Clone repository
+## Clone repository:
 
 ```
 git clone https://github.com/ICJIA/icjia-public-website.git
@@ -27,7 +25,7 @@ http://localhost/Check/check.php
 npm install -g grunt-cli
 ```
 
-## Install dependencies
+## Install dependencies:
 
 In  ```_themes/icjia/```:
 
@@ -128,8 +126,7 @@ Run Statamic server check:
 http://localhost/Check/check.php
 ```
 
-
-# Notes on Laravel Forge deployment (to Digital Ocean Ubuntu droplet)
+# Notes on Laravel Forge deployment:
 
 ##Admin not found error fix under Nginx
 
