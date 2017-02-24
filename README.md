@@ -6,7 +6,10 @@ The ICJIA public site is built on [Statamic version 1.x](https://v1.statamic.com
 
 - https://v1.statamic.com/
 
-**PHP 5.6 is required -- not 7.x.**
+<strike>PHP 5.6 is required -- not 7.x.</strike>
+**PHP 7.1 is required**
+
+
 
 Information on downgrading to PHP 5.6:
 -[http://askubuntu.com/questions/761713/how-can-i-downgrade-from-php-7-to-php-5-6-on-ubuntu-16-04](http://askubuntu.com/questions/761713/how-can-i-downgrade-from-php-7-to-php-5-6-on-ubuntu-16-04)
@@ -52,6 +55,14 @@ grunt deploy
 
 ```
 
+# Notes on running Windows Server 2012R2/IIS 8.5:
+
+- Use Microsoft's ```Web Platform Installer``` to install PHP 7.1
+- Clone Github repo: ```git clone https://github.com/ICJIA/icjia-public-website.git```
+- Update permissions on ```/admin```
+- Install ColdFusion (for legacy sites).
+- Install legacy databases via ODBC DataSoures (32-bit)
+- Use ColdFusion administrator -- ```http://127.0.0.1/CFIDE/administrator/index.cfm``` -- to install databases in ColdFusion.
 
 # Notes on running Ubuntu 16.10/Apache2.2:
 
