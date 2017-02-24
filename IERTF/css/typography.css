@@ -1,0 +1,144 @@
+/*body
+{
+	font: 13.5px/1.5 "myriad-pro-1","myriad-pro-2", Helvetica, Arial, sans-serif;
+}*/
+
+
+body {
+  font: 11px/1.5 Arial, sans-serif;
+  background-color: #cccccc;
+  color: #42423a;
+}
+
+
+
+hr {
+  border: 0;
+  height: 0px;
+  border-top: 1px solid #cccccc;
+  margin: 0;
+  padding: 0;
+}
+
+/* =Headings
+--------------------------------------------------------------------------------*/
+
+h1 {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 20px;
+}
+h2 {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 20px;
+}
+h3 {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+h4
+{
+	font-size: 14px;
+	
+}
+
+h5
+{
+	font-size: 12px;
+}
+
+h6
+{
+	font-size: 10px;
+}
+
+/* =Spacing
+--------------------------------------------------------------------------------*/
+
+ol
+{
+	list-style: decimal;
+}
+
+ul
+{
+	list-style: square;
+}
+
+li
+{
+	margin-left: 30px;
+}
+
+p,
+dl,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+pre,
+table,
+address,
+fieldset
+{
+	margin-bottom: 10px;
+}
+
+
+
+/* paragraphs, quotes and lists
+----------------------------------------------- */
+p {
+	margin-bottom:1em;
+}
+
+
+blockquote {
+	/*font-family: Georgia, 'Times New Roman', serif;
+	font-size:1.2em;*/
+	padding-left:2em;
+	/*border-left:4px solid #ccc;*/
+}
+
+
+blockquote cite {
+	font-size:.9em;
+}
+ul, ol {
+	padding-top:0;
+}
+
+
+
+/* default anchors
+----------------------------------------------- */
+a {
+  color: #0b2986;
+  text-decoration: none;
+  font-weight: bold;
+  outline: 0;
+  
+}
+
+a:focus
+{
+	outline: 0;
+}
+
+
+a:hover { color: #42423a; text-decoration: underline; }
+
+
+
+
+
+
+.error {color: red}

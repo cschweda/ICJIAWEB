@@ -1,0 +1,499 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Git CSS3 Buttons</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<!--Bold Buttons css-->
+	<link rel="stylesheet" href="gitbuttons.css" type="text/css">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+		strong.title { font-size: 25px; font-weight: bold; color:#3072b3; } 
+		/* ------------------------------------------------------------------------------------------------------------- TEMPLATE */
+
+        body { font: 14px/1.333 sans-serif; color: #444; background: #eee; }
+
+        a { color: #980905; }
+        a:hover, a:focus, a:active { text-decoration: none; }
+
+        h1 { margin: 0 0 0.5em; font-size: 29px; }
+        h2 { margin: 0 0 0.75em; font-size: 21px; }
+        h3 { margin: 0 0 0.333em; font-size: 16px; font-weight: normal; }
+        p { margin: 0 0 1.333em; }
+        em { font-style: italic; }
+        table { border-collapse: separate; border-spacing: 0; margin: 0; vertical-align: middle; }
+        th { font-weight: bold; }
+        th, td { padding: 5px 25px 5px 5px; text-align: left; vertical-align: middle; }
+        pre, code { font-family: monospace, sans-serif; font-size: 1em; color:#080; }
+		/* ------------------------------------------------------------------------------------------------------------- TEMPLATE */
+
+        .container { position:relative; overflow:hidden; width: 800px; padding: 40px 60px; border: 1px solid #ccc; margin: 40px auto 20px; background: #fff; -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.1); -moz-box-shadow: 0 0 15px rgba(0,0,0,0.1); box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+
+        .container pre,
+        .container .prettyprint { padding: 0; border: 0; margin: 0 0 20px; font-size: 13px; background: #fff; }
+
+        .ribbon { position: absolute; top: -1px; right: -1px; opacity: 0.9; }
+        .ribbon:hover, .ribbon:focus, .ribbon:active { opacity: 1; }
+        .ribbon img { display: block; border: 0; }
+
+        .header { padding-right:80px; }
+
+        .section { margin: 40px 0 20px; }
+
+        .example { padding: 20px; border: 1px solid #ccc; margin: 10px -20px 20px; }
+		
+		.dark { padding: 20px; background: #111; border: 1px solid #000; border-right: 1px solid #353535; border-bottom: 1px solid #353535;	-webkit-border-radius: 5px;	-moz-border-radius: 5px;border-radius: 5px; }
+
+        .footer { margin: 20px 0 50px; font-size: 11px; color: #666; text-align: center; }
+        .footer a { color: #666; }
+	</style>
+	<!-- prettyify -->
+    <link rel="stylesheet" href="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css"> 
+    <script src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script> 
+</head>
+
+
+<body onload="prettyPrint()">
+	<div class="container">
+	
+		<h3 class="center alt">Git CSS3 Buttons Documentation by Kyle King v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">Git CSS3 Buttons</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 5/5/2011<br>
+					By: Kyle King<br>
+					Email: <a href="mailto:kyle.king@highergroundstudio.com">kyle.king@highergroundstudio.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing Git CSS3 Buttons from Higher Ground Studio. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/HigherGroundStudio">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#overview">Overview</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#browsercomp">Browser Compatibility</a></li>
+			<li><a href="#howtouse">How to use</a></li>
+				<ol>
+					<li><a href="#sbuttons">Standard Buttons</a></li>
+					<li><a href="#positive">Positive Buttons</a></li>
+					<li><a href="#negative">Negative Buttons</a></li>
+					<li><a href="#disabled">Disabled Buttons</a></li>
+					<li><a href="#black">Black Buttons</a></li>
+					<li><a href="#orange">Orange Buttons</a></li>
+					<li><a href="#size">Different Sized Buttons</a></li>
+					<li><a href="#bold">Bold is Beautiful</a></li>
+					<li><a href="#rotate">Rotate Buttons</a></li>
+					<li><a href="#bbbb">Big, Bold and Beautiful Buttons</a></li>
+					<li><a href="#grouped">Grouped Buttons</a></li>
+					<li><a href="#mixed">Mixed Groups</a></li>
+					<li><a href="#controlp">Control Panel Buttons</a></li>
+					<li><a href="#darkbg">Buttons on dark background</a></li>
+				</ol>
+			<li><a href="#customize">BONUS: Customize - create custom css classes</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="overview"><strong class='title'>A) Overview</strong> - <a href="#toc">top</a></h3>
+		<p>Git CSS3 Buttons helps you easily create GitHub-style buttons from links, buttons, and inputs.
+		Git CSS3 Buttons has been designed to be as easy and flexible as possible. </p>
+		
+		<hr>
+
+		<h3 id="cssFiles"><strong class='title'>B) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>All you need to do is link the gitbuttons.css file.</p>
+		 <div class="example">
+            <pre class="prettyprint"><code>&lt;link rel="stylesheet" href="gitbuttons.css" type="text/css"></code></pre>
+        </div>
+		
+		<hr>
+		
+		<h3 id="browsercomp"><strong class='title'>C) Browser Compatibility</strong> - <a href="#toc">top</a></h3>
+		<p>Firefox 3+, Google Chrome, Safari 4+, IE 6+, Opera 10+.</p>
+        <p><strong>Note:</strong> Some CSS3 features are not supported in older versions of Opera and versions of Internet Explorer prior to IE 8. Also there are a few position issues with ie6</p>
+		
+		<hr>
+		
+		<h3 id="howtouse"><strong class='title'>D) How to use</strong> - <a href="#toc">top</a></h3>
+		<p>It is very easy to learn how to use Git CSS3 Buttons. All you need to do is add at least <code>class="gbutton"</code> to either a link, button, or input. </p>
+    <div class="section">
+        <h2 id="sbuttons">Standard Buttons - <a href="#toc">top</a></h2>
+        <p>The "buttons" can be created by adding <code>class="gbutton"</code> to any appropriate <code>&lt;a></code>, <code>&lt;button></code>, or <code>&lt;input></code> element.</p>
+
+        <div class="example">
+            <pre class="code prettyprint"><code>&lt;a href="#" class="gbutton">Post comment &#40;link&#41;&lt;/a>
+&lt;input class="gbutton" type="submit" value="Post comment &#40;input&#41;">
+&lt;button class="gbutton" type="submit">Post comment &#40;button&#41;&lt;/button>
+			</code></pre>
+            <form>
+                <a href="#button" class="gbutton">Post comment (link)</a>
+                <input class="gbutton" type="submit" value="Post comment (input)">
+                <button class="gbutton" type="submit">Post comment (button)</button>
+            </form>
+        </div>
+        <p>Add a further class of <code>pill</code> to create a button pill-like button.</p>
+        <div class="example">
+            <pre class="prettyprint"><code>&lt;a href="#" class="gbutton pill">This is a pill button&lt;/a></code></pre>
+            <a href="#button" class="gbutton pill">This is a pill button</a>
+        </div>
+		<p>Add a further class of <code>active</code> to make the button active and you can use it as indicator.</p>
+		<div class="example">
+            <pre class="prettyprint"><code>&lt;a href="#" class="gbutton active">Publish post&lt;/a> </code></pre>
+            <a href="#button" class="gbutton active">Publish post</a>
+        </div>
+    </div>
+	
+	<div class="section">
+        <h2 id="positive">Buttons with positive actions - <a href="#toc">top</a></h2>
+        <p>If you have a button that needs to indicate a visual positive action, like funds being available, this can be indicated by adding the class <code>positive</code>.</p>
+        <div class="example">
+            <pre class="prettyprint"><code>&lt;a href="#" class="gbutton positive">Funds Available&lt;/a></code></pre>
+            <a href="#button" class="gbutton positive">Funds Available</a>
+        </div>
+		<p>You can add the class <code>active</code> on to the end of any color style such as positive, negative, black, orange, or any style you create with the style creator.</p>
+		 <div class="example">
+			<pre class="prettyprint"><code>&lt;a href="#" class="gbutton positive active">Funds Available&lt;/a></code></pre>
+            <a href="#button" class="gbutton positive active">Funds Available</a>
+        </div>
+    </div>
+	
+	<div class="section">
+        <h2 id="negative">Buttons with negative actions - <a href="#toc">top</a></h2>
+        <p>If you have a button that needs to indicate a visual negative action, like funds not being available, this can be indicated by adding the class <code>negative</code>.</p>
+        <div class="example">
+            <pre class="prettyprint"><code>&lt;a href="#" class="gbutton negative">Funds Not Available&lt;/a></code></pre>
+            <a href="#button" class="gbutton negative">Funds Not Available</a>
+        </div>
+		<p>You can add the class <code>active</code> on to the end of any color style such as positive, negative, black, orange, or any style you create with the style creator.</p>
+		 <div class="example">
+			<pre class="prettyprint"><code>&lt;a href="#" class="gbutton negative active">Funds Not Available&lt;/a></code></pre>
+            <a href="#button" class="gbutton negative active">Funds Not Available</a>
+        </div>
+    </div>
+	
+	<div class="section">
+        <h2 id="disabled">Disabled buttons - <a href="#toc">top</a></h2>
+        <p>If you wish to disable a specific action and show it you can add the class <code>disable</code>.</p>
+        
+        <div class="example">
+            <pre class="prettyprint"><code>&lt;a href="#" class="gbutton disable">Fork Project&lt;/a></code></pre>
+            <a href="#button" class="gbutton disable">Fork Project</a>
+        </div>
+    </div>
+	
+	<div class="section">
+        <h2 id="black">Black buttons - <a href="#toc">top</a></h2>
+        <p>If you wish to have a black button you can add the class <code>black</code>.</p>
+		<p>This style was created with the style creator</p>
+        
+        <div class="example">
+            <pre class="prettyprint"><code>&lt;a href="#" class="gbutton black">New Repository&lt;/a></code></pre>
+            <a href="#button" class="gbutton black">New Repository</a>
+        </div>
+		<p>You can add the class <code>active</code> on to the end of any color style such as positive, negative, black, orange, or any style you create with the style creator.</p>
+		<div class="example">
+            <pre class="prettyprint"><code>&lt;a href="#" class="gbutton black active">New Repository&lt;/a></code></pre>
+            <a href="#button" class="gbutton black active">New Repository</a>
+        </div>
+    </div>
+	
+	<div class="section">
+        <h2 id="orange">Orange buttons - <a href="#toc">top</a></h2>
+        <p>If you wish to have a orange button you can add the class <code>orange</code>.</p>
+		<p>This style was created with the style creator</p>
+        <div class="example">
+            <pre class="prettyprint"><code>&lt;a href="#" class="gbutton orange">New Repository&lt;/a></code></pre>
+            <a href="#button" class="gbutton orange">New Repository</a>
+        </div>
+		<p>You can add the class <code>active</code> on to the end of any color style such as positive, negative, black, orange, or any style you create with the style creator.</p>
+		<div class="example">
+            <pre class="prettyprint"><code>&lt;a href="#" class="gbutton orange active">New Repository&lt;/a></code></pre>
+            <a href="#button" class="gbutton orange active">New Repository</a>
+        </div>
+    </div>
+	
+	<div class="section">
+        <h2 id="size">Different size buttons - <a href="#toc">top</a></h2>
+        <p>If you wish to emphasize a specific action you can add one the classes <code>huge, big, large, medium</code>.</p>
+        
+        <div class="example">
+            <pre class="prettyprint"><code>&lt;a href="#" class="gbutton huge">Create Huge Project&lt;/a></code></pre>
+            <a href="#button" class="gbutton huge">Create Huge Project</a>
+        </div>
+		<div class="example">
+            <pre class="prettyprint"><code>&lt;a href="#" class="gbutton big">Create Big Project&lt;/a></code></pre>
+            <a href="#button" class="gbutton big">Create Big Project</a>
+        </div>
+		<div class="example">
+            <pre class="prettyprint"><code>&lt;a href="#" class="gbutton large">Create Large Project&lt;/a></code></pre>
+            <a href="#button" class="gbutton large">Create Large Project</a>
+        </div>
+		<div class="example">
+            <pre class="prettyprint"><code>&lt;a href="#" class="gbutton medium">Create Medium Project&lt;/a></code></pre>
+            <a href="#button" class="gbutton medium">Create Medium Project</a>
+        </div>
+    </div>
+	
+	<div class="section">
+        <h2 id="bold">Bold is Beautiful - <a href="#toc">top</a></h2>
+        <p>If you wish to make the text bold you can add the class <code>bold</code>.</p>
+        
+        <div class="example">
+            <pre class="prettyprint"><code>&lt;a href="#" class="gbutton bold">Admin&lt;/a></code></pre>
+            <a href="#button" class="gbutton bold">Admin</a>
+        </div>
+    </div>
+	
+	<div class="section">
+        <h2 id="rotate">Rotate Buttons - <a href="#toc">top</a></h2>
+        <p>If you wish to rotate the button you can add the class <code>rotate90</code> or <code>rotateNeg90</code>.</p>
+        
+        <div class="example">
+            <pre class="prettyprint"><code>&lt;a href="#" class="gbutton rotate90">Side Tab&lt;/a></code></pre>
+            <a href="#button" class="gbutton rotate90">Side tab</a>
+        </div>
+		<div class="example">
+            <pre class="prettyprint"><code>&lt;a href="#" class="gbutton rotateNeg90">Side Tab&lt;/a></code></pre>
+            <a href="#button" class="gbutton rotateNeg90">Side Tab</a>
+        </div>
+    </div>
+	
+	<div class="section">
+        <h2 id="bbbb">Big Bold and Beautiful buttons - <a href="#toc">top</a></h2>
+        <p>You can mix classes to create custom awesome buttons, like mixing classes <code>bold, big, negative</code>.</p>
+        
+        <div class="example">
+            <pre class="prettyprint"><code>&lt;a href="#" class="gbutton bold big negative active">Big Bold and Beautiful&lt;/a></code></pre>
+            <a href="#button" class="gbutton bold big negative active">Big Bold and Beautiful</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 id="grouped">Grouped buttons - <a href="#toc">top</a></h2>
+        <p>Groups of buttons can be created by wrapping them in an element given a class of <code>gbutton-group</code>. A less important group of buttons can be marked out by adding a further class, <code>minor-group</code>.</p>
+        
+        <div class="example">
+<pre class="prettyprint"><code>&lt;div class="gbutton-group">
+    &lt;a href="#" class="gbutton bold">Dashboard&lt;/a>
+    &lt;a href="#" class="gbutton">Inbox&lt;/a>
+    &lt;a href="#" class="gbutton">Account&lt;/a>
+    &lt;a href="#" class="gbutton">Logout&lt;/a>
+&lt;/div></code></pre>
+            <div class="gbutton-group">
+                <a href="#button" class="gbutton bold">Dashboard</a>
+                <a href="#button" class="gbutton">Inbox</a>
+                <a href="#button" class="gbutton">Account</a>
+                <a href="#button" class="gbutton">Logout</a>
+            </div>
+        </div>
+        
+        <div class="example">
+<pre class="prettyprint"><code>&lt;ul class="gbutton-group">
+    &lt;li>&lt;a href="#" class="gbutton bold pill">Dashboard&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#" class="gbutton pill">Inbox&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#" class="gbutton pill">Account&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#" class="gbutton pill">Logout&lt;/a>&lt;/li>
+&lt;/ul></code></pre>    
+            <ul class="gbutton-group">
+                <li><a href="#button" class="gbutton bold pill">Dashboard</a></li>
+                <li><a href="#button" class="gbutton pill">Inbox</a></li>
+                <li><a href="#button" class="gbutton pill">Account</a></li>
+                <li><a href="#button" class="gbutton pill">Logout</a></li>
+            </ul>
+        </div>
+        
+        <div class="example">
+<pre class="prettyprint"><code>&lt;div class="gbutton-group <b>minor-group</b>">&hellip;&lt;/div></code></pre>
+            <div class="gbutton-group minor-group">
+                <a href="#button" class="gbutton bold">Dashboard</a>
+                <a href="#button" class="gbutton">Inbox</a>
+                <a href="#button" class="gbutton">Account</a>
+                <a href="#button" class="gbutton">Logout</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 id="mixed">Mixed groups - <a href="#toc">top</a></h2>
+        <p>Displaying a mixture of grouped and standalone buttons, as might be seen in a toolbar, can be done by adding another wrapping element with the class <code>gbutton-container</code>.</p>
+        
+        <div class="example">
+<pre class="prettyprint"><code>&lt;div class="actions <b>gbutton-container</b>">
+    &lt;a href="#" class="gbutton bold">Compose new&lt;/a>
+    
+    &lt;div class="gbutton-group">
+        &lt;a href="#" class="gbutton bold">Archive&lt;/a>
+        &lt;a href="#" class="gbutton">Report spam&lt;/a>
+        &lt;a href="#" class="gbutton negative">Delete&lt;/a>
+    &lt;/div>
+                        
+    &lt;div class="gbutton-group minor-group">
+        &lt;a href="#" class="gbutton">Move to&lt;/a>
+        &lt;a href="#" class="gbutton">Labels&lt;/a>
+    &lt;/div>
+&lt;/div></code></pre>
+            <div class="actions gbutton-container">
+                <a href="#button" class="gbutton bold">Compose new</a>
+                
+                <div class="gbutton-group">
+                    <a href="#button" class="gbutton bold">Archive</a>
+                    <a href="#button" class="gbutton">Report spam</a>
+                    <a href="#button" class="gbutton negative">Delete</a>
+                </div>
+                                    
+                <div class="gbutton-group minor-group">
+                    <a href="#button" class="gbutton">Move to</a>
+                    <a href="#button" class="gbutton">Labels</a>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<div class="section">
+        <h2 id="controlp">Control Panel buttons - <a href="#toc">top</a></h2>
+		<p>You can create groups of buttons or individual buttons that can give indications such as, accounts paid or if a user has downloaded a product</p>
+        
+        <div class="example">
+<pre class="prettyprint"><code>&lt;div class="gbutton-group">
+    &lt;a href="#" class="gbutton large bold">User Id 64<&lt;/a>
+    &lt;a href="#" class="gbutton large bold positive active">Acccount Paid&lt;/a>
+    &lt;a href="#" class="gbutton large bold positive active">App Downloaded&lt;/a>
+    &lt;a href="#" class="gbutton large bold negative active">User Logged in&lt;/a>
+&lt;/div></code></pre>
+            <div class="gbutton-group">
+                <a href="#button" class="gbutton large bold">User id: 64</a>
+                <a href="#button" class="gbutton large bold positive active">Acccount Paid</a>
+                <a href="#button" class="gbutton large bold positive active">App Downloaded</a>
+                <a href="#button" class="gbutton large bold negative active">User Logged in</a>
+            </div>
+        </div>
+		<p>Mixed groups can be used effectively to put indication and control in the same button container</p>
+		<div class="example">
+<pre class="prettyprint"><code>&lt;div class="actions <b>gbutton-container</b>">
+    &lt;a href="#" class="gbutton bold">User id: 64&lt;/a>
+    
+    &lt;div class="gbutton-group">
+        &lt;a href="#" class="gbutton positive active">Account Paid&lt;/a>
+        &lt;a href="#" class="gbutton positive active">App Downloaded&lt;/a>
+        &lt;a href="#" class="gbutton negative active">User Logged in&lt;/a>
+    &lt;/div>
+                        
+    &lt;div class="gbutton-group minor-group">
+        &lt;a href="#" class="gbutton">Edit User&lt;/a>
+        &lt;a href="#" class="gbutton negative">Delete User&lt;/a>
+    &lt;/div>
+&lt;/div></code></pre>
+            <div class="actions gbutton-container">
+                <a href="#button" class="gbutton bold">User id: 64</a>
+                
+                <div class="gbutton-group">
+                    <a href="#button" class="gbutton positive active">Account Paid</a>
+                    <a href="#button" class="gbutton positive active">App Downloaded</a>
+                    <a href="#button" class="gbutton negative active">User Logged in</a>
+                </div>
+                                    
+                <div class="gbutton-group minor-group">
+                    <a href="#button" class="gbutton">Edit User</a>
+                    <a href="#button" class="gbutton negative">Delete User</a>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<div class="section">
+        <h2 id="darkbg">Buttons on dark background - <a href="#toc">top</a></h2>
+        <p>All of the buttons look awesome even on a dark background</p>
+        
+        <div class="example">
+			<div class='dark'>
+				<a href="#button" class="gbutton">Regular</a>
+				<a href="#" class="gbutton pill">Pill Button</a>
+				<a href="#button" class="gbutton positive">Positive</a>
+				<a href="#button" class="gbutton negative">Negative</a>
+				<a href="#button" class="gbutton disable">Disabled</a>
+				<a href="#button" class="gbutton black">Black</a>
+				<a href="#button" class="gbutton orange">Orange</a>
+				<br><br>
+				<a href="#button" class="gbutton active">Regular Active</a>
+				<a href="#button" class="gbutton positive active">Positive Active</a>
+				<a href="#button" class="gbutton negative active">Negative Active</a>
+				<a href="#button" class="gbutton black active">Black Active</a>
+				<a href="#button" class="gbutton orange active">Orange Active</a>
+				<br><br>
+				<div class="gbutton-group">
+					<a href="#" class="gbutton bold">Dashboard</a>
+					<a href="#" class="gbutton">Inbox</a>
+					<a href="#" class="gbutton">Account</a>
+					<a href="#" class="gbutton">Logout</a>
+				</div>
+				<br><br>
+				<div class="actions gbutton-container">
+					<a href="#" class="gbutton bold">64</a>
+					
+					<div class="gbutton-group">
+						<a href="#" class="gbutton positive active">Account Paid</a>
+						<a href="#" class="gbutton positive active">App Downloaded</a>
+						<a href="#" class="gbutton negative active">User Logged in</a>
+					</div>
+										
+					<div class="gbutton-group minor-group">
+						<a href="#" class="gbutton">Edit User</a>
+						<a href="#" class="gbutton negative">Delete User</a>
+					</div>
+				</div>
+				<br><br>
+				<a href="#button" class="gbutton bold big negative active">Big Bold and Beautiful</a>
+				<a href="#button" class="gbutton bold big positive">Big Bold and Beautiful</a>
+			</div>
+        </div>
+    </div>
+
+<hr>
+		<h3 id="customize"><strong class='title'>E) BONUS: Customize - create custom css classes</strong> - <a href="#toc">top</a></h3>
+			<p>There are two ways to create customized Git Button classes:</p>
+
+			<h2>Style Creator Web App</h2>
+				<p>
+				Go to
+				<a href="http://www.stylebuilder.highergroundstudio.com/" target="_blank">stylebuilder.highergroundstudio.com</a>. Your access code is: <strong>GitMyButtons</strong>
+				</p>
+			
+			<h2>Customize CSS Style Sheet</h2>
+				<p>
+				Go to
+				<a href="http://www.stylebuilder.highergroundstudio.com/" target="_blank">stylebuilder.highergroundstudio.com</a>. Your access code is: <strong>GitMyButtons</strong>
+				<br>
+				There is a download link once you login at the bottom of the form below the submit buttons.
+				</p>
+			<br>
+			<p>If you want your custom classes to be added to Git CSS3 Buttons you can email me at <a href="mailto:kyle.king@highergroundstudio.com?subject=Custom Class">kyle.king@highergroundstudio.com</a> with the subject "Custom Class" and with the class (as it is output by the style creator) as the message text.</p>
+			
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the css on CodeCanyon, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Kyle King, Higher Ground Studio</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
