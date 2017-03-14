@@ -146,3 +146,11 @@
 /soortf:
   url: https://soortf.icjia.cloud
   type: 301
+
+/violentcrime:
+  url: https://violentcrime2015.icjia.cloud
+  type: 301
+
+/violentcrime2015:
+  url: https://violentcrime2015.icjia.cloud
+  type: 301
