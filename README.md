@@ -128,7 +128,7 @@ http://localhost/Check/check.php
 
 # Notes on Laravel Forge deployment:
 
-##Admin not found error fix under Nginx
+## Admin not found error fix under Nginx
 
 Edit Nginx config:
 
@@ -139,12 +139,12 @@ location / {
    }
 ```
 
-[https://lodge.statamic.com/questions/1805-nginxconf-for-use-on-forge](https://lodge.statamic.com/questions/1805-nginxconf-for-use-on-forge)
+https://lodge.statamic.com/questions/1805-nginxconf-for-use-on-forge
 
 Adding SFTP to Laravel Forge provisioned server:
 
-- [https://murze.be/2016/03/let-your-clients-use-sftp-on-a-forge-provisioned-server/] (https://murze.be/2016/03/let-your-clients-use-sftp-on-a-forge-provisioned-server/)
+- https://murze.be/2016/03/let-your-clients-use-sftp-on-a-forge-provisioned-server/
 
-- [https://debian-administration.org/article/590/OpenSSH_SFTP_chroot_with_ChrootDirectory] (https://debian-administration.org/article/590/OpenSSH_SFTP_chroot_with_ChrootDirectory)
+- https://debian-administration.org/article/590/OpenSSH_SFTP_chroot_with_ChrootDirectory
 
-- [http://askubuntu.com/questions/143700/granting-a-sftp-user-access-to-a-var-www-directory] (http://askubuntu.com/questions/143700/granting-a-sftp-user-access-to-a-var-www-directory)
+- http://askubuntu.com/questions/143700/granting-a-sftp-user-access-to-a-var-www-directory
