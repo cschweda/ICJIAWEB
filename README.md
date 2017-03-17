@@ -2,7 +2,7 @@
 
 The ICJIA public site is built on [Statamic version 1.x](https://v1.statamic.com/).
 
-##More information on Statamic v1.x:
+## More information on Statamic v1.x:
 
 - https://v1.statamic.com/
 - PHP 5.6+ is required.
@@ -141,7 +141,7 @@ location / {
 
 https://lodge.statamic.com/questions/1805-nginxconf-for-use-on-forge
 
-Adding SFTP to Laravel Forge provisioned server:
+## Adding SFTP to Laravel Forge provisioned server:
 
 - https://murze.be/2016/03/let-your-clients-use-sftp-on-a-forge-provisioned-server/
 
