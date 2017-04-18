@@ -28,10 +28,22 @@ breadcrumbs: 'true'
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
-      <div class="alert alert-danger alert-dismissible text-center" role="alert" style="font-family: 'Lato', sans-serif;">
+      <!-- <div class="alert alert-danger alert-dismissible text-center" role="alert" style="font-family: 'Lato', sans-serif;">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
   <strong>GATA Registration required for all grant applicants</strong><div style="margin-top: 10px;">Register now at the <a href="https://www.illinois.gov/sites/GATA/Grantee/Pages/default.aspx">State of Illinois GATA page</a>.</div>
+</div> -->
+
+<div class="alert alert-danger alert-dismissible text-center" role="alert" style="margin-bottom: 55px; font-family: 'Lato', sans-serif;">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<strong>GATA Registration, Pre-Qualification and an approved ICQ is required for all grant applicants</strong>
+
+<div style="margin-top: 10px;"><p>
+ICJIA will only review grant application from agencies which are in compliance with the GATA requirements.</p><p><a href="https://gata.icjia.cloud/ "><strong>Please review ICJIA’s GATA website</strong></a> for information on how to comply with the GATA requirements and additional helpful grant information.</p>
 </div>
+</div>
+
+
+
     </div>
   </div>
 </div>
@@ -55,7 +67,7 @@ breadcrumbs: 'true'
                    </p>
                {{ else }}
                <h4 class="h6">
-                 <a href="{{contact}}">{{title}}</a></h4>
+                   <a href="{{if directURL}}{{directURL}}{{else}}{{url}}{{endif}}">{{title}}&nbsp;&raquo;</a></h4>
                  <p>Deadline: {{date}}</p>
 
                {{if !last}}
