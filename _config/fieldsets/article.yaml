@@ -6,11 +6,17 @@ fields:
     default: article
 
 
+  # splash:
+  #   display: Splash Photo
+  #   type: file
+  #   allowed: [png, jpg, jpeg]
+  #   destination: assets/img/splash/
+
   splash:
-    display: Splash Photo
-    type: file
-    allowed: [png, jpg, jpeg]
-    destination: assets/img/splash/
+    display: Directory path containing splash photo
+    instructions: For example: /assets/img/splash
+    required: false
+    type: text
 
   authors:
     display: Authors
