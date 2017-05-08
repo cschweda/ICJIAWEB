@@ -164,13 +164,13 @@
   type: 301
 
 /gata:
-  url: https://gata.icjia.cloud
+  url: https://grants.icjia.cloud
   type: 301
 
 /sites/rsat-nofo-residential-substance-abuse-treatment-and-aftercare:
-  url: https://gata.icjia.cloud/grants/201704rsat-nofo
+  url: https://grants.icjia.cloud/grants/201704rsat-nofo
   type: 301
 
 /sites/jag-law-enforcement-response-to-drugs-nofo:
-  url: https://gata.icjia.cloud/grants/jag-comprehensive-response
+  url: https://grants.icjia.cloud/grants/jag-comprehensive-response
   type: 301
