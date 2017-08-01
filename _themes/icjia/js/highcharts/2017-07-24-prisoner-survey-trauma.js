@@ -1,10 +1,10 @@
 $(function() {
-  $('#hc-fig1').highcharts({
+    Highcharts.chart('hc-fig1', {
     chart: {
         type: 'bar'
     },
     title: {
-        text: 'PTSD symptoms reported by respondents having probable PTSD (n=136)'
+        text: 'PTSD SYMPTOMS REPORTED BY RESPONDENTS HAVING PROBABLE PTSD (n=136)'
     },
     subtitle: {
         text: ''
@@ -26,21 +26,19 @@ $(function() {
         }
     },
     tooltip: {
-        valueSuffix: ' percent'
+        valueSuffix: ' %'
     },
     plotOptions: {
         bar: {
             dataLabels: {
-                enabled: true
+                enabled: false
             }
         }
     },
     legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'top',
+    	enabled: false,
         x: -40,
-        y: 80,
+        y: 100,
         floating: true,
         borderWidth: 1,
         backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
@@ -50,11 +48,8 @@ $(function() {
         enabled: false
     },
     series: [{
-        name: '',
+        name: 'Respondents',
         data: [38, 41, 42, 43, 50, 52, 53, 54, 55, 56, 57, 63, 65, 67, 68, 71, 73]
-    }, {
-        name: '',
-        data: []
     }, {
         name: '',
         data: []
@@ -63,12 +58,12 @@ $(function() {
 });
 
 $(function() {
-  $('#hc-fig2').highcharts({
+    Highcharts.chart('hc-fig2', {
     chart: {
         type: 'column'
     },
     title: {
-        text: 'Percentage of sample with probable PTSD and troubled by alcohol or drug problems (n=111)'
+        text: 'PERCENTAGE OF SAMPLE WITH PROBABLE PTSD AND TROUBLED BY ALCOHOL OR DRUG PROBLEMS (n=111)'
     },
     subtitle: {
         text: ''
@@ -94,7 +89,7 @@ $(function() {
     tooltip: {
         headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
         pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+            '<td style="padding:0"><b>{point.y:1f} %</b></td></tr>',
         footerFormat: '</table>',
         shared: true,
         useHTML: true
@@ -112,14 +107,6 @@ $(function() {
     }, {
         name: 'Drug problems',
         data: [43, 9, 12, 12, 24]
-
-    }, {
-        name: '',
-        data: []
-
-    }, {
-        name: '',
-        data: []
 
     }]
   });
