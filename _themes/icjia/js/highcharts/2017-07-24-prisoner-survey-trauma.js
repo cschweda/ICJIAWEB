@@ -4,7 +4,7 @@ $(function() {
         type: 'bar'
     },
     title: {
-        text: 'PTSD SYMPTOMS REPORTED BY RESPONDENTS HAVING PROBABLE PTSD (n=136)'
+        text: ''
     },
     subtitle: {
         text: ''
@@ -17,8 +17,9 @@ $(function() {
     },
     yAxis: {
         min: 0,
+        max: 100,
         title: {
-            text: '',
+            text: 'Percentage of respondents',
             align: 'high'
         },
         labels: {
@@ -30,15 +31,17 @@ $(function() {
     },
     plotOptions: {
         bar: {
-            dataLabels: {
+            dataLabels: { 
                 enabled: false
             }
         }
     },
     legend: {
-    	enabled: false,
+        layout: '',
+        align: 'bottom',
+        verticalAlign: 'bottom',
         x: -40,
-        y: 100,
+        y: 80,
         floating: true,
         borderWidth: 1,
         backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
@@ -48,12 +51,16 @@ $(function() {
         enabled: false
     },
     series: [{
-        name: 'Respondents',
+        name: '% of respondents',
         data: [38, 41, 42, 43, 50, 52, 53, 54, 55, 56, 57, 63, 65, 67, 68, 71, 73]
     }, {
         name: '',
         data: []
-    }]
+    }, {
+        name: '',
+        data: []
+
+}]
   });
 });
 
@@ -63,7 +70,7 @@ $(function() {
         type: 'column'
     },
     title: {
-        text: 'PERCENTAGE OF SAMPLE WITH PROBABLE PTSD AND TROUBLED BY ALCOHOL OR DRUG PROBLEMS (n=111)'
+        text: ''
     },
     subtitle: {
         text: ''

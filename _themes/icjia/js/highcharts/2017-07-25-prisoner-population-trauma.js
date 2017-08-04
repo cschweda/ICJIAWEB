@@ -4,7 +4,7 @@ $(function() {
         type: 'bar'
     },
     title: {
-        text: 'PREVALENCE OF PTSD BY POPULATION'
+        text: ''
     },
     subtitle: {
         text: ''
@@ -17,8 +17,9 @@ $(function() {
     },
     yAxis: {
         min: 0,
+        max: 100,
         title: {
-            text: '',
+            text: 'Percentage in population',
             align: 'high'
         },
         labels: {
@@ -26,19 +27,22 @@ $(function() {
         }
     },
     tooltip: {
-        valueSuffix: ' millions'
+        valueSuffix: ' %'
     },
     plotOptions: {
+    	series: {
+      	pointWidth: 25
+      },
         bar: {
             dataLabels: {
-                enabled: true
+                enabled: false
             }
         }
     },
     legend: {
         layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'top',
+        align: 'bottom',
+        verticalAlign: 'bottom',
         x: -40,
         y: 80,
         floating: true,
@@ -50,7 +54,7 @@ $(function() {
         enabled: false
     },
     series: [{
-        name: 'Percent',
+        name: 'Percent prevalence',
         data: [61, 30, 23, 21, 21, 13, 5, 3]
     }, {
         name: '',
@@ -58,7 +62,6 @@ $(function() {
     }, {
         name: '',
         data: []
-
     }]
   });
 });
