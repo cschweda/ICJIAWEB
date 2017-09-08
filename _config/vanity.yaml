@@ -174,3 +174,7 @@
 /sites/jag-law-enforcement-response-to-drugs-nofo:
   url: https://grants.icjia.cloud/grants/jag-comprehensive-response
   type: 301
+
+/tvpp:
+    url: https://www.illinoistvpp.org/
+    type: 301
