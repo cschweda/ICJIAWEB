@@ -33,6 +33,9 @@ table p {text-indent: 0;}
 <div class="container-fluid">
 
 
+
+
+{{ if !dashboard}}
 	<div class="col-md-3 no-print hidden-xs hidden-sm" style="margin-top: 50px;">
 		  <div class="bs-sidebar hidden-print" role="complementary" data-spy="affix" data-offset-top="400" data-offset-bottom="550">
 
@@ -85,11 +88,19 @@ table p {text-indent: 0;}
 	</div>
 <!--/left-->
 
+{{else}}
+
+<div class="col-md-1" style="margin-top: 50px;"></div>
+
+{{endif}}
 
 
-
-
+{{if !dashboard}}
 <div class="col-md-7" id="content">
+{{else}}
+<div class="col-md-10" id="content">
+	{{endif}}
+
 
 	<div class="article">
 		<span class="article-publication-type">

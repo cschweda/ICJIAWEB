@@ -112,6 +112,15 @@ fields:
     type: textarea
     height: 100
 
+  dashboard:
+    display: Is this a dashboard?
+    instructons: If true, the left column will be removed.
+    type: select
+    options:
+      false: No, this is not a dashboard
+      true: Yes, this is a dashboard
+
+
   paragraphType:
     display: Paragraphs Indent or Block
     type: select
@@ -130,7 +139,7 @@ fields:
     display: Page Content
     required: false
     default:
-    type: redactor
+    type: textarea
 
 
   disclaimer:
