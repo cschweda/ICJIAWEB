@@ -35,7 +35,7 @@ super_positive_keywords:
   - PMP
   - monitoring
 ---
-<!-- <h1 id="illinois-opioid-prescription-data">Illinois Opioid Prescription Data</h1> -->
+<script type=" text/javascript " src="https://public.tableau.com/javascripts/api/tableau-2.min.js "></script>
 <p>Healthcare practitioners wrote 259 million prescriptions for opioid pain medication in 2012, enough for almost a full bottle of pills for every adult in the country.<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> Illinois opioid prescribing
     rates are relatively low compared to other states. According to the Centers for Disease Control and Prevention, Illinois ranked 41st out of 50 states and the District of Columbia on opioid prescription rates.
 	<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>    A great deal of variation exists in the rate of opioid prescription across Illinois regions and between counties, however.
@@ -47,55 +47,16 @@ super_positive_keywords:
 <p>This interactive data dashboard illustrates opioid prescribing practices in Illinois between 2008 and 2016 and drug overdose deaths from 2013 to 2016.
 </p>
 
-<!-- EMBED START -->
+
 
 <div id="divElement-1">
     <div id="vizElement-1"></div>
 </div>
 
-<script type=" text/javascript " src="https://public.tableau.com/javascripts/api/tableau-2.min.js "></script>
-<script type="text/javascript ">
-    (function initViz() {
-        var divElement = document.getElementById("divElement-1")
-        var vizElement = document.getElementById("vizElement-1")
-
-         if (divElement.offsetWidth > 900) {
-                    vizElement.style.width = '1000px';
-                    vizElement.style.height = '827px';
-                    vizElement.style.marginLeft = '-80px';
-                } else
-                    if (divElement.offsetWidth > 800) {
-                        vizElement.style.width = '1000px';
-                        vizElement.style.height = '827px';
-                        vizElement.style.marginLeft = '-70px';
-                    }
-                     else
-                        if (divElement.offsetWidth > 500) {
-                            vizElement.style.width = '700px';
-                            vizElement.style.height = '927px';
-                            vizElement.style.marginLeft = '-50px';
-                        }
-                        // else {
-                        //     vizElement.style.width = '350px';
-                        //     vizElement.style.height = '927px';
-                        //     divElement.style.height = '927px';
-                        //     vizElement.style.marginLeft = '0px';
-                        // }
-        var url = "https://public.tableau.com/views/OpioidPrescriptionsandOverdoseDeathsinIllinois/FullDash?:embed=y&:display_cont=yes"
-        var options = {
-                hideTabs: true,
-                onFirstInteractive: function () {
-                    console.log("Tableau loaded. ");
-                }
-            };
-
-        // Create a viz object and embed it in the container div.
-        var viz = new tableau.Viz(vizElement, url, options);
-    })()
-</script>
 
 
-<!-- EMBED END -->
+
+
 
 
 <h4 id="data-notes">Data Notes</h4>
@@ -145,3 +106,40 @@ super_positive_keywords:
 	</li>
 </ol>
 </section>
+
+
+
+<script type="text/javascript ">
+    (function initViz() {
+        var divElement = document.getElementById("divElement-1")
+        var vizElement = document.getElementById("vizElement-1")
+
+         if (divElement.offsetWidth > 900) {
+                    vizElement.style.width = '1000px';
+                    vizElement.style.height = '827px';
+                    vizElement.style.marginLeft = '-80px';
+                } else
+                    if (divElement.offsetWidth > 800) {
+                        vizElement.style.width = '1000px';
+                        vizElement.style.height = '827px';
+                        vizElement.style.marginLeft = '-70px';
+                    }
+                     else
+                        if (divElement.offsetWidth > 500) {
+                            vizElement.style.width = '700px';
+                            vizElement.style.height = '927px';
+                            vizElement.style.marginLeft = '-50px';
+                        }
+
+        var url = "https://public.tableau.com/views/OpioidPrescriptionsandOverdoseDeathsinIllinois/FullDash?:embed=y&:display_cont=yes"
+        var options = {
+                hideTabs: true,
+                onFirstInteractive: function () {
+                    console.log("Tableau loaded. ");
+                }
+            };
+
+
+        var viz = new tableau.Viz(vizElement, url, options);
+    })()
+</script>
