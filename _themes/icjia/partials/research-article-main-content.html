@@ -27,62 +27,6 @@
 
 
 
-    {{entries:listing folder="biographies" conditions="title:{authors|option_list}"}}
-    {{if total_found}}
-    {{ if first}}
-    <span class="article-about-the-author">
-
-    {{/if}}
-    {{/if}}
-    {{/entries:listing}}
-
-
-      <p>
-
-
-
-    {{ entries:listing folder="biographies" conditions="title:{authors|option_list}" sort_by="sortField" }}
-    {{if total_found}}
-
-    {{if content}}
-
-    <h6><a href="{{url}}">{{title}}{{degrees}}{{if total_found}}, {{/if}}{{name}}{{/degrees}}</a></h6>
-
-    <div style="margin-left: 15px">
-      <p>{{if authorPhoto}}<img src="{{ transform src="{authorPhoto}" height="75"}}"
-          style="float: left; padding-right: 14px;" />{{endif}}	{{content}}</p>
-
-
-
-
-          <p style="margin-left: 0px">
-
-
-
-
-          {{theme:partial src="author-social" use_context="true"}}</p>
-
-
-
-
-
-
-
-        </div>
-
-
-        {{/if}}
-      {{/if}}
-    {{ /entries:listing }}
-
-
-
-    </p>
-
-  </span>
-
-
-
 {{if pdf_uploads}}
   <!--   <hr/>
 
