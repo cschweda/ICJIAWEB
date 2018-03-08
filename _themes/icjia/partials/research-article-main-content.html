@@ -4,7 +4,7 @@
 
 
 
-    <!-- <div class="article-keywords no-print" >
+    <div class="article-keywords no-print" >
 
       <h5 style="line-height: 1.4em">
       Keywords: {{ keywords_sentence_url_list }}</h5>
@@ -84,7 +84,22 @@
 
 
 {{if pdf_uploads}}
+  <!--   <hr/>
 
+
+  <div class="well white" style="font-family: Lato, sans-serif; padding: 30px 25px 30px 25px; font-size: 14px; color: #555;">
+
+    <div style="font-size: 20px; margin-bottom: 20px;">{{tab2}}</div>
+
+  <ul>
+      {{pdf_uploads}}
+      <li>
+      <a href="{{pdf}}" class="track article-download-link">{{title}}</a>&nbsp;&nbsp;<i class="fa fa-file-pdf-o" style="margin-bottom: .3em"></i>
+      </li>
+      {{/pdf_uploads}}
+  </ul>
+
+    </div> -->
 {{endif}}
 
 
@@ -94,10 +109,9 @@
 
 
 
--->
+
 </div>
 
-<!--
 {{if seriesExtro}}
 
 <div class="article-series">
@@ -106,4 +120,4 @@
   </h6>
   {{seriesExtro}}
   </div>
-{{endif}} -->
+{{endif}}
