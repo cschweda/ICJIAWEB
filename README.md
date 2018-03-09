@@ -48,13 +48,14 @@ grunt deploy
 
 # Notes on running Windows Server 2012R2/IIS 8.5:
 
-- Use Microsoft's ```Web Platform Installer``` to install PHP 7.1 (5.6 works, too.)
+- Use Microsoft's ```Web Platform Installer``` to install PHP 7.0 (5.6 works, too.)
 - Clone Github repo in web directory: ```git clone https://github.com/ICJIA/icjia-public-website.git```
 - Update permissions on ```/admin```
 - Install ColdFusion (for legacy sites).
 - Install legacy databases via ODBC DataSoures (32-bit)
 - Use ColdFusion administrator -- ```http://127.0.0.1/CFIDE/administrator/index.cfm``` -- to install databases in ColdFusion.
 - For legacy Center of Excellence and SPAC sites, deploy ColdFusion config ```jakarta``` as a virtual directory in each site. Depending on where CF installed, something like: ```C:\ColdFusionxx\config\wsconfig\1```
+- Adjust ```php.ini``` memory usage for image processing: ```memory_limit = 2056M```
 
 
 # Notes on running Ubuntu 16.10/Apache2.2:
@@ -117,7 +118,7 @@ Change to:
 Restart Apache:
 
 ```
-service apache2 restart
+sudo service apache2 restart
 ```
 
 Run Statamic server check:
@@ -130,7 +131,7 @@ http://localhost/Check/check.php
 
 ## Admin not found error fix under Nginx
 
-Edit Nginx config:
+Edit Nginx config for admin redirect:
 
 ```
 location / {
