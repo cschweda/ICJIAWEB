@@ -35,7 +35,7 @@ table p {text-indent: 0;}
 
 
 
-{{ if !dashboard}}
+{{ if !dashboard || dashboard=='false'}}
 	<div class="col-md-3 no-print hidden-xs hidden-sm" style="margin-top: 50px;">
 		  <div class="bs-sidebar hidden-print" role="complementary" data-spy="affix" data-offset-top="400" data-offset-bottom="550">
 
@@ -95,7 +95,7 @@ table p {text-indent: 0;}
 {{endif}}
 
 
-{{if !dashboard}}
+{{if !dashboard || dashboard=='false'}}
 <div class="col-md-7" id="content">
 {{else}}
 <div class="col-md-10" id="content">
