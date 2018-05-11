@@ -1,0 +1,662 @@
+---
+title: 'Opioid Prescribing in Illinois: Examining Prescription Drug Monitoring Program Data'
+_template: article
+authorviz: 'false'
+dashboard: 'false'
+paragraphType: indent
+tabviz: 'false'
+tab1: Overview
+tab2: Full Report
+disclaimer: '<p>This project was supported by Grant # 12-DJ-BX-0203, awarded to the Illinois Criminal Justice Information Authority by the U.S. Department of Justice Office of Justice Programs’ Bureau of Justice Assistance. Points of view or opinions contained within this document are those of the authors and do not necessarily represent the official position or policies of the U.S. Department of Justice.</p>'
+authors:
+  - Jessica Reichert
+  - Alysson Gatens
+  - Elizabeth Salisbury-Afshar
+area:
+  - Prescription Drug Use
+pubtype:
+  - Article
+teaser: Excessive opioid prescribing increases exposure to the drugs and increases their volume in communities. Over-prescribing has been associated with growing rates of opioid use disorder, overdose, and death. Opioid prescription rates are relatively low in Illinois compared to other states; however, prescription rates varies greatly by county, city, and medical practitioner. This article summarizes Illinois opioid prescription data from the Illinois Prescription Monitoring Program.
+summary: Excessive opioid prescribing increases exposure to the drugs and increases their volume in communities. Over-prescribing has been associated with growing rates of opioid use disorder, overdose, and death. Opioid prescription rates are relatively low in Illinois compared to other states; however, prescription rates varies greatly by county, city, and medical practitioner. This article summarizes Illinois opioid prescription data from the Illinois Prescription Monitoring Program.
+keywords:
+  - prescription
+  - prescription drugs
+  - prescription drug monitoring
+  - PMP
+  - ILPMP
+  - opioid
+  - opioid crisis
+  - opioid epidemic
+super_positive_keywords:
+  - prescription
+  - prescription drugs
+  - prescription drug monitoring
+  - PMP
+  - ILPMP
+  - opioid
+  - opioid crisis
+  - opioid epidemic
+leftColumn: |
+  <h5 style="color: rgb(68, 68, 68); text-transform: uppercase; padding-bottom: 8px; font-weight: 900; margin-bottom: 10px; margin-left: 10px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;">Article Contents</h5>
+  <ul class="nav">
+  	<li><a class="scrollclass" data-target="#content-wrap">Introduction</a></li>
+  	<li><a class="scrollclass" data-target="#opioid-prescription-risks">Opioid Prescription Risks</a></li>
+  	<li><a class="scrollclass" data-target="#illinois-prescription-drug-monitoring-program">Illinois Prescription Drug Monitoring Program</a></li>
+      <li><a class="scrollclass" data-target="#illinois-opioid-prescribing-practices">Illinois Opioid Prescribing Practices</a></li>
+      <li><a class="scrollclass" data-target="#conclusion">Conclusion</a></li>
+      <li><a class="scrollclass" data-target="#implications-for-the-criminal-justice-system">Implications for the Criminal Justice System</a></li>
+  </ul>
+splash: /assets/img/splash/iStock-629757208_1.jpg
+jsFile: 2018-05-09-pmp-article.js
+---
+<!-- <h1 id="opioid-prescribing-in-illinois-examining-prescription-drug-monitoring-program-data">Opioid Prescribing in Illinois: Examining Prescription Drug Monitoring Program Data</h1> -->
+<style>
+.spacer {margin-top: 50px; margin-bottom: 50px}
+</style>
+<style>
+.highchart {margin-top: 50px; margin-bottom: 50px}
+</style>
+
+<style type="text/css">
+<!--
+.style1 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14
+}
+
+.container {
+	min-width: 310px;
+	max-width: 800px;
+	height: 400px;
+	margin: 0 auto
+}
+
+-->
+</style>
+
+<h2 id="introduction">Introduction</h2>
+<p>Almost three times as many opioids are prescribed in the United States today as compared to 1999.<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> Health care practitioners wrote 259 million prescriptions for opioid pain medication in
+    2012, which is enough to provide a full bottle of pills for almost every adult in the country.<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup> An estimated one in five patients with pain symptoms who go to their doctor’s office receive
+    an opioid prescription.<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup> In a 2015 national survey, 13 percent of adults who report taking prescription opioids also reported misuse (defined as non-medical use). Of those, 41 percent
+    obtained opioids for free from friends or relatives.<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup></p>
+<p>Illinois opioid prescribing is relatively low compared to other states. According to the Centers for Disease Control and Prevention, Illinois ranked 41st out of 50 states and District of Columbia on opioid prescription rates.<sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup>    However, prescription rates vary greatly by county, city, and medical practitioner.<sup class="footnote-ref"><a href="#fn6" id="fnref6">[6]</a></sup> This article describes Illinois opioid prescription practices using Illinois Prescription Monitoring
+    Program (ILPMP) data, focusing on trends and prescribing variations by county. A review of available research on the association between opioid prescribing, opioid misuse, and opioid use disorders also is summarized. Policy and practice implications
+    also are included.</p>
+<br>
+
+                <div class="container-fluid" style="margin: 0; padding: 0;">
+                <div class="row" style="background-color:#aaa;">
+                <div class="col-xs-12 style1">
+    <h4 id="reasons-for-increased-opioid-prescribing">Reasons for Increased Opioid Prescribing</h4>
+<p>Increased U.S. opioid prescribing along with the use and/or misuse can be attributed in part to the following:</p>
+<ul>
+    <li>The belief that pain was undertreated and opioids carried low risk of addiction contributed to the medical community embracing increased opioid prescribing for pain conditions. This belief was not based on rigorous empirical evidence and there was
+        an exaggeration of the potential benefits of long-term opioid treatment.<sup class="footnote-ref"><a href="#fn7" id="fnref7">[7]</a></sup></li>
+    <li>Patient satisfaction based in part on federally-mandated patient satisfaction surveys asking patients to rate hospital staff on their efforts toward pain management.<sup class="footnote-ref"><a href="#fn8" id="fnref8">[8]</a></sup></li>
+    <li>Drug companies’ aggressive tactics for selling opioid medications and the introduction in 1995 of OxyContin (a long-acting formulation of oxycodone) and subsequent unethical marketing practices employed by Purdue Pharma.<sup class="footnote-ref"><a href="#fn9" id="fnref9">[9]</a></sup></li>
+    <li>Unethical medical practice models, in some states sometimes referred to as “pill mills”, where patients could pay out of pocket to receive prescriptions for large volumes of opioids with minimal to no medical history or examination.<sup class="footnote-ref"><a href="#fn10" id="fnref10">[10]</a></sup></li>
+</ul>
+  </div>
+</div>
+</div>
+<br />
+
+
+
+<!-- <h4 id="text-box-reasons-for-increased-opioid-prescribing">[Text Box] Reasons for Increased Opioid Prescribing</h4>
+<p>Increased U.S. opioid prescribing along with the use and/or misuse can be attributed in part to the following:</p>
+<ul>
+    <li>The belief that pain was undertreated and opioids carried low risk of addiction contributed to the medical community embracing increased opioid prescribing for pain conditions. This belief was not based on rigorous empirical evidence and there was
+        an exaggeration of the potential benefits of long-term opioid treatment.<sup class="footnote-ref"><a href="#fn7" id="fnref7">[7]</a></sup></li>
+    <li>Patient satisfaction based in part on federally-mandated patient satisfaction surveys asking patients to rate hospital staff on their efforts toward pain management.<sup class="footnote-ref"><a href="#fn8" id="fnref8">[8]</a></sup></li>
+    <li>Drug companies’ aggressive tactics for selling opioid medications and the introduction in 1995 of OxyContin (a long-acting formulation of oxycodone) and subsequent unethical marketing practices employed by Purdue Pharma.<sup class="footnote-ref"><a href="#fn9" id="fnref9">[9]</a></sup></li>
+    <li>Unethical medical practice models, in some states sometimes referred to as “pill mills”, where patients could pay out of pocket to receive prescriptions for large volumes of opioids with minimal to no medical history or examination.<sup class="footnote-ref"><a href="#fn10" id="fnref10">[10]</a></sup></li>
+</ul>
+<h4 id="end-text-box">[End Text Box]</h4> -->
+
+<h2 id="opioid-prescription-risks">Opioid Prescription Risks</h2>
+<p>Prescription opioids, similar to heroin, affect the reward regions of the brain and can produce a sense of well-being and pleasure, creating intrinsic risk for misuse.<sup class="footnote-ref"><a href="#fn11" id="fnref11">[11]</a></sup> Research indicates
+    that individuals prescribed opioids for pain have a chance of continued use. In one study, 14 percent of those with an eight-day prescription, and 30 percent of those with a 30+ day opioid prescription were found to have opioids still being prescribed
+    to them one year later.<sup class="footnote-ref"><a href="#fn12" id="fnref12">[12]</a></sup></p>
+<p>It is important to note, however, that the relationship between prescription opioid use, opioid misuse, and opioid use disorders is complicated. Most who rely on opioid use over an extended period of time for treatment of chronic pain never misuse opioids
+    or develop opioid use disorders. Others who do misuse prescription opioids will never develop a disorder or progress to heroin use. A small percentage, however, will misuse, develop an opioid use disorder, and/or progress to heroin use.<sup class="footnote-ref"><a href="#fn13" id="fnref13">[13]</a></sup></p>
+<p>Twenty percent of those aged 12 and older in the United States have misused drugs in their lifetime.<sup class="footnote-ref"><a href="#fn14" id="fnref14">[14]</a></sup> Misuse includes taking the drug in ways other than those prescribed such as snorting
+    or injecting crushed pills, taking more than prescribed, and combining with other drugs or alcohol. Some may transition to heroin use, which is cheaper and in many areas of the country more readily available. In a national study, 80 percent of heroin
+    users reported non-medical use of prescription opioids before transitioning to heroin.<sup class="footnote-ref"><a href="#fn15" id="fnref15">[15]</a></sup> A majority of opioid misusers are poly-substance users—they use other drugs in addition to
+    opioids. One national study found 59 percent of heroin-related overdose deaths involved at least one other drug.<sup class="footnote-ref"><a href="#fn16" id="fnref16">[16]</a></sup></p>
+<p>Opioid misuse and use disorder also increases risk for criminal justice involvement. The U.S. Department of Justice estimates about half of state and federal prisoners have substance use disorders.<sup class="footnote-ref"><a href="#fn17" id="fnref17">[17]</a></sup>    Data on opioid misuse and use disorder among Illinois’ justice-involved indicate opioids are frequently an area of concern. In 2016, 2,241 prisoners indicated opioids was their primary substance of misuse (53 percent of them were residing in one of
+    the three Illinois correctional facilities offering substance use disorder treatment). In 2017, nine Illinois drug and mental health courts, reported one-third of their participants had an opioid use related diagnosis (n=42).<sup class="footnote-ref"><a href="#fn18" id="fnref18">[18]</a></sup>    In an <a href="http://www.icjia.state.il.us/articles/study-of-self-reported-prescription-drug-use-among-a-sample-of-illinois-prisoners">ICJIA survey</a> of 573 Illinois prison inmates, 46 percent reported using prescription drugs to get high at some
+    point in their lives prior to incarceration (n=262).</p>
+<p>People suffering with opioid use disorder may resort to criminal activity as the need for money increases with escalating addictive behaviors. Opioid prescriptions may be illegally shared and/or sold for profit by patients and their friends and families.
+    National estimates suggest that approximately 3 to 5 percent who misuse prescription opioids will transition to heroin as a part of the progression of their addiction.<sup class="footnote-ref"><a href="#fn19" id="fnref19">[19]</a></sup> Those purchasing
+    drugs from the illicit heroin drug market are more likely to commit additional drug-related crimes.<sup class="footnote-ref"><a href="#fn20" id="fnref20">[20]</a></sup></p>
+<br>
+
+                <div class="container-fluid" style="margin: 0; padding: 0;">
+                <div class="row" style="background-color:#aaa;">
+                <div class="col-xs-12 style1">
+<h4 id="consequences-of-continued-prescription-opioid-use">Consequences of Continued Prescription Opioid Use</h4>
+<p>Continued regular use of opioids will lead to:</p>
+<ul>
+    <li>Tolerance or diminished effects of the same dose of the drug over time.</li>
+    <li>Physical dependence, or the development withdrawal symptoms upon abrupt cessation of use.<sup class="footnote-ref"><a href="#fn21" id="fnref21">[21]</a></sup></li>
+</ul>
+<p>With high-dose opioid use, some may be at risk for:</p>
+<ul>
+    <li>Opioid use disorders, which are diagnosed by a set of behaviors around drug use as outlined by clinical diagnostic criteria.<sup class="footnote-ref"><a href="#fn22" id="fnref22">[22]</a></sup></li>
+    <li>Opioid overdose or death, which are accidental and may occur with short-term use.</li>
+</ul>
+  </div>
+</div>
+</div>
+<br>
+
+<!-- <h4 id="text-box-consequences-of-continued-prescription-opioid-use">[Text Box] Consequences of Continued Prescription Opioid Use</h4>
+<p>Continued regular use of opioids will lead to:</p>
+<ul>
+    <li>Tolerance or diminished effects of the same dose of the drug over time.</li>
+    <li>Physical dependence, or the development withdrawal symptoms upon abrupt cessation of use.<sup class="footnote-ref"><a href="#fn21" id="fnref21">[21]</a></sup></li>
+</ul>
+<p>With high-dose opioid use, some may be at risk for:</p>
+<ul>
+    <li>Opioid use disorders, which are diagnosed by a set of behaviors around drug use as outlined by clinical diagnostic criteria.<sup class="footnote-ref"><a href="#fn22" id="fnref22">[22]</a></sup></li>
+    <li>Opioid overdose or death, which are accidental and may occur with short-term use.</li>
+</ul>
+<h4 id="end-text-box">[End Text Box]</h4> -->
+
+<h2 id="illinois-prescription-drug-monitoring-program">Illinois Prescription Drug Monitoring Program</h2>
+<p>Prescription Drug Monitoring Programs or PDMPs are state-operated electronic database systems containing information on dispensed retail prescriptions that are federally classified as controlled substances (Schedules II-V). PDMPs are designed to assist
+    in detecting and preventing misuse and diversion of controlled substances.<sup class="footnote-ref"><a href="#fn23" id="fnref23">[23]</a></sup> PDMP data has been used to identify trends in prescription patterns, high-risk patterns of prescription
+    drug use among recipients, and associations with opioid-related outcomes.<sup class="footnote-ref"><a href="#fn24" id="fnref24">[24]</a></sup> Some research indicates PDMPs may reduce prescribing behavior<sup class="footnote-ref"><a href="#fn25" id="fnref25">[25]</a></sup>    and prescription drug overdoses<sup class="footnote-ref"><a href="#fn26" id="fnref26">[26]</a></sup>, it remains unknown if PDMPs reduce overall opioid deaths. In addition, the need exists to improve accuracy, accessibility, and interpretability of
+    the data.<sup class="footnote-ref"><a href="#fn27" id="fnref27">[27]</a></sup> To date, <a href="http://www.nascsa.org/rxMonitoring.htm">every state, including Illinois, has enacted a PDMP</a>.</p>
+<p><a href="https://www.ilpmp.org/">Illinois Prescription Monitoring Program</a> (ILPMP) legislation was enacted in 1961 and the program was operational in 1968. ILPMP is funded through the U.S. Department of Justice’s Office of Justice Programs’ Harold
+    Rogers Prescription Drug Monitoring Program and operated by the Illinois Department of Human Services. Data is entered daily by pharmacies and dispensing practitioners for all controlled substances scheduled as II to V. The program’s mission is to
+    enhance a prescriber’s and dispenser’s capacity to review a patient’s prescription history to assist in the effective treatment of patients.<sup class="footnote-ref"><a href="#fn28" id="fnref28">[28]</a></sup> A new law effective January 1, 2018,
+    requires most licensed controlled substance prescribers to register with and attempt to access patient information in the ILPMP when providing an initial opioid prescription for Schedule II narcotics such as opioids [Public Act 100-0564].<sup class="footnote-ref"><a href="#fn29" id="fnref29">[29]</a></sup>    Some de-identified <a href="https://www.ilpmp.org/Dashboard.php">ILPMP data</a> are published online. <em>Figure 1</em> depicts the flow of ILPMP data.</p>
+<br>
+
+<!-- <h5 id="figure-1">FIGURE 1</h5>
+<h5 id="flow-of-data-of-illinois-prescription-monitoring-program">FLOW OF DATA OF ILLINOIS PRESCRIPTION MONITORING PROGRAM</h5> -->
+
+
+<h4 align="center">FIGURE 1 <br><br>FLOW OF DATA OF ILLINOIS PRESCRIPTION MONITORING PROGRAM</h4>
+
+<center><img class='img-responsive' alt=”figure1” src="/assets/img/articles/Figure1-PMPArticle-050918.jpg"></center>
+
+
+<!-- <p>[INSERT FIGURE 1 HERE]</p> -->
+<br>
+
+<h2 id="illinois-opioid-prescribing-practices">Illinois Opioid Prescribing Practices</h2>
+<p>In 2016, for every 10 Illinois residents, 1.56 individuals filled at least one opioid prescription (<em>Figure 2</em>). This number is slightly lower than that recorded in previous years in Illinois. Compared to bordering states, Illinois opioid prescribing
+    rates are similar to those of Wisconsin and Iowa, but lower than those in Indiana, Kentucky, and Missouri.<sup class="footnote-ref"><a href="#fn30" id="fnref30">[30]</a></sup></p>
+<br>
+
+<!-- <h5 id="figure-2">FIGURE 2</h5>
+<h5 id="individuals-filling-an-opioid-prescription-in-illinois-by-population-2016">INDIVIDUALS FILLING AN OPIOID PRESCRIPTION IN ILLINOIS BY POPULATION, 2016</h5>
+<p>[INSERT FIGURE 2 HERE]</p> -->
+
+<h4 align="center">FIGURE 2<br><br>INDIVIDUALS FILLING AN OPIOID PRESCRIPTION IN ILLINOIS BY POPULATION, 2016</h4>
+
+<center><img class='img-responsive' alt=”figure2” src="/assets/img/articles/Figure2-PMPArticle-050918.jpg"></center>
+<h6 id="data-source-illinois-prescription-drug-monitoring-database">Data Source: Illinois Prescription Drug Monitoring Database</h6>
+<br>
+
+<p>As <em>Figure 3</em> shows, several major changes were seen in opioid prescription filling patterns between 2008 and 2016. The total number of opioid prescriptions filled in Illinois continued to decline in 2016, with a 16.5 percent decrease after peaking
+    in 2014. The number of individuals filling at least one opioid prescription in Illinois remained comparatively consistent each year from 2008 to 2015, but did show a decrease between 2015 and 2016, dipping below 200,000 patients for the first time
+    during the period studied. This was consistent with national trends and due in part to enhanced use of prescription drug monitoring programs as well as greater knowledge of opioid risks by prescribers and those receiving the prescriptions.<sup class="footnote-ref"><a href="#fn31" id="fnref31">[31]</a></sup></p>
+
+       <div class=”spacer”> 
+<div class="highchart"  class="container">
+<h4 align="center" id="figure-3">FIGURE 3</h4>
+<h4 align="center" id="number-of-illinois-opioid-prescriptions-filled-2008-2016">NUMBER OF ILLINOIS OPIOID PRESCRIPTIONS FILLED, 2008-2016<sup class="footnote-ref"><a href="#fn32" id="fnref32">[32]</a></sup></h4>
+	<div id="hc-fig3">
+	</div>	
+<!-- <p>Highcharts link: <a href="https://jsfiddle.net/agatens/qvncru5h/">https://jsfiddle.net/agatens/qvncru5h/</a></p> -->
+	</div>
+    <br />
+
+
+<h6 id="data-source-illinois-prescription-drug-monitoring-database">Data Source: Illinois Prescription Drug Monitoring Database</h6>
+
+<p>Of particular concern are individuals who receive multiple prescriptions for opioids within a short period of time as this may indicate potential misuse of prescription opioids, opioid use disorders, and/or higher risk for overdose.<sup class="footnote-ref"><a href="#fn33" id="fnref33">[33]</a></sup>    These individuals are sometimes referred to as “opioid shoppers.” Researchers define “opioid shoppers” as individuals receiving opioid prescriptions from three or more prescribers and three or more pharmacies in a 90-day period. Analysis of multi-state
+    data from 2015 found opioid shoppers accounted for 0.1 percent of all patients filling an opioid prescription.<sup class="footnote-ref"><a href="#fn34" id="fnref34">[34]</a></sup> The ILPMP showed individuals who met the definition of opioid shopper
+    during the same period made up 2.6 percent of all individuals filling at least one opioid prescription (<em>Figure 4</em>). The number of individuals filling prescriptions that meet the definition of an opioid shopper remained relatively consistent
+    from 2008 to 2015, but showed a modest decrease from 2015 to 2016.<sup class="footnote-ref"><a href="#fn35" id="fnref35">[35]</a></sup> One possible explanation for this decrease, based on national data, is an increased awareness of the risks associated
+    with opioid use, as well as reduced prescription with the adoption and use of new policies and practices governing prescription drug monitoring programs.<sup class="footnote-ref"><a href="#fn36" id="fnref36">[36]</a></sup></p>
+
+<h4 align="center" id="figure-4">FIGURE 4</h4>
+<h4 align="center" id="patients-with-3-opioid-prescriptions-andor-filling-at-3-pharmacies-in-illinois">PATIENTS WITH 3+ OPIOID PRESCRIPTIONS AND/OR FILLING AT 3+ PHARMACIES IN ILLINOIS</h4>
+
+<p>Highcharts link: <a href="https://jsfiddle.net/agatens/cztg565d/">https://jsfiddle.net/agatens/cztg565d/</a></p>
+
+
+
+<h6 id="data-source-illinois-prescription-drug-monitoring-database">Data Source: Illinois Prescription Drug Monitoring Database</h6>
+
+<p><em>Figure 5</em> represents a subset of those in <em>Figure 4</em> and depicts the number of patients who received opioid prescriptions from six or more prescribers and/or filled prescriptions at six or more pharmacies. The term “doctor shopping” refers
+    to the behavior of seeing multiple clinicians for multiple controlled substances. This practice has been associated with increased risk for misuse, but this pattern of behavior can be complex.<sup class="footnote-ref"><a href="#fn37" id="fnref37">[37]</a></sup>    Patients report doctor shopping for its convenience, to address symptom persistence, for treatment for multiple conditions, and to seek opioids due to an opioid use disorder.<sup class="footnote-ref"><a href="#fn38" id="fnref38">[38]</a></sup> Patients
+    also report doctor shopping due to long doctor office waiting times; inconvenient office locations and hours; poor or limited time for communication with their doctors; and doctors appearing stringent, stern, or strict.<sup class="footnote-ref"><a href="#fn39" id="fnref39">[39]</a></sup></p>
+
+<h4 align="center" id="figure-5">FIGURE 5</h4>
+<h4 align="center" id="patients-with-6-opioid-prescriptions-andor-filling-at-6-pharmacies-in-illinois-2008-2016">PATIENTS WITH 6+ OPIOID PRESCRIPTIONS AND/OR FILLING AT 6+ PHARMACIES IN ILLINOIS, 2008-2016</h4>
+
+<p>Highcharts Link: <a href="https://jsfiddle.net/agatens/wjga3x1r/">https://jsfiddle.net/agatens/wjga3x1r/</a></p>
+
+<h6 id="data-source-illinois-prescription-drug-monitoring-database">Data Source: Illinois Prescription Drug Monitoring Database</h6>
+
+<h3 id="opioid-prescription-trends-by-county">Opioid Prescription Trends by County</h3>
+<p><em>Map 1</em> depicts the total number of opioid prescriptions filled at a rate per 1,000 residents in each county in Illinois between 2008 and 2016. For example, if one person filled 12 prescriptions in a year, each of those prescriptions would be included
+    in the calculation. The intervals in the scale are in five sections (quantiles), with each color representing 20 percent of the total distribution. Rates of opioid prescriptions per population were high in several southern and rural counties. This
+    is consistent with the characteristics identified by the CDC; counties with moderate population density (having small cities or large towns) with primarily white residents were more likely to have higher opioid prescription rates.<sup class="footnote-ref"><a href="#fn40" id="fnref40">[40]</a></sup></p>
+<br>
+
+<!-- <h5 id="map-1">MAP 1</h5>
+<h5 id="average-rate-of-illinois-opioid-prescriptions-per-1000-population-by-county-2008-2016">AVERAGE RATE OF ILLINOIS OPIOID PRESCRIPTIONS PER 1,000 POPULATION BY COUNTY, 2008-2016</h5>
+<p>[INSERT MAP 1 HERE]</p> -->
+
+<h4 align="center">MAP 1 <br><br>AVERAGE RATE OF ILLINOIS OPIOID PRESCRIPTIONS PER 1,000 POPULATION BY COUNTY, 2008-2016</h4>
+<center><img class='img-responsive' alt=”figure1” src="/assets/img/articles/Map1-PMPArticle-050918.jpg"></center>
+<h6 id="data-source-illinois-prescription-drug-monitoring-database">Data Source: Illinois Prescription Drug Monitoring Database</h6>
+<br>
+
+<p><em>Map 2</em> depicts the same data using standard deviations. The standard deviation is used to explore the distribution of the data and is sometimes used by researchers to identify instances in which a data point is well above or below the average.
+    In this case, standard deviations were used to identify which county rates notably higher or lower than the state average. The map showed Cook, Jo Daviess, and Kane county opioid prescription rates for 2008 to 2016 were well below the state average;
+    conversely, rural and southern Franklin, Gallatin, Hardin, Saline, Williamson, and Union counties demonstrated rates notably higher than the rest of Illinois.</p>
+<br>
+
+<!-- <h5 id="map-2">MAP 2</h5>
+<h5 id="average-rate-of-illinois-opioid-prescriptions-per-1000-population-by-county-2008-2016">AVERAGE RATE OF ILLINOIS OPIOID PRESCRIPTIONS PER 1,000 POPULATION BY COUNTY, 2008 - 2016</h5>
+<p>[INSERT MAP 2 HERE]</p> -->
+
+<h4 align="center">MAP 2 <br><br>AVERAGE RATE OF ILLINOIS OPIOID PRESCRIPTIONS PER 1,000 POPULATION BY COUNTY, 2008 - 2016</h4>
+<center><img class='img-responsive' alt=”map2” src="/assets/img/articles/Map2-PMPArticle-050918.jpg"></center>
+<h6 id="data-source-illinois-prescription-drug-monitoring-database">Data Source: Illinois Prescription Drug Monitoring Database</h6>
+<br>
+
+
+<h3 id="prescription-trends-by-drug-type">Prescription Trends by Drug Type</h3>
+<p>Opioid pain relievers include:</p>
+<ul>
+    <li><strong>Naturally occurring opiates</strong> from the opium poppy flower, e.g., morphine and codeine (heroin is also a naturally occurring opiate).</li>
+    <li><strong>Semi-synthetic opioids</strong> e.g. hydrocodone and oxycodone.</li>
+    <li><strong>Fully-synthetic opioids</strong> that are man-made, e.g. methadone, tramadol, and fentanyl.</li>
+</ul>
+<p>According to the U.S. <a href="https://www.law.cornell.edu/uscode/text/21/812">Controlled Substance Act</a>, the U.S. Drug Enforcement Administration classifies drugs into categories or schedules depending upon the drug’s acceptable medical use and misuse
+    potential. <em>Figure 6</em> shows the schedules of the opioid medications reported in the ILPMP.</p>
+<br>
+
+<h4 align="center" id="figure-6">FIGURE 6<br>FEDERAL SCHEDULES OF OPIOID MEDICATIONS REPORTED IN ILPMP</h4>
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>Schedule</th>
+            <th>Drug Names</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Schedule II</td>
+            <td>Codeine Fetanyl- Ublimaze® Hydrocodone- Vicodin®, Lortab®, Lortab ASA®, Hycomine®, Vicoprofen® Hydromorphone–Dilaudid® Meperidine- Demerol® Methadone Morphine- MSContin® Opium- Opium tincture (laudanum) Oxycodone- OxyContin®, Percocet®, Percodan®
+                Oxymorphone- Numorphan® Tapentodol</td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap">Schedule III</td>
+          <td>Codine (mixed with aspirin or acetaminophen)-Tylenol #3® Buprenorphine- Buprenex® Buprenorphine/naloxone- Suboxone®, Subutex®Morphine (some combination products)</td>
+        </tr>
+        <tr>
+            <td nowrap="nowrap">Schedule IV</td>
+          <td>Butorphanol- Stadol® Dihydrocodeine Pentazocine- Talwin injectable Propoxyphene- Darvon®, Darvocet®Tramadol</td>
+        </tr>
+        <tr>
+            <td>Schedule V</td>
+            <td>Codeine cough suppressant Hydrocodone cough suppressant</td>
+        </tr>
+    </tbody>
+</table>
+<h6 id="source-ilpmp-data-showing-the-top-20-most-commonly-prescribed-opioids">Source: ILPMP data showing the top 20 most commonly prescribed opioids.</h6>
+<h6 id="note-schedule-i-opioid-drug-is-heroin-and-not-available-by-prescription-schedule-ii-drugs-are-not-able-to-be-prescribed-with-refills-but-can-be-obtained-with-a-new-prescription-schedule-iii-v-are-available-to-be-prescribed-with-refills">Note: Schedule I opioid drug is heroin and not available by prescription; Schedule II drugs are not able to be prescribed with refills but can be obtained with a new prescription; Schedule III-V are available to be prescribed with refills.</h6>
+<h6 id="note-methadone-is-approved-by-the-us-food-and-drug-administration-for-treatment-of-pain-when-written-as-a-prescription-it-can-be-dispensed-from-federally-monitored-programs-for-the-treatment-of-opioid-use-disorder-when-dispensed-from-those-programs-is-not-captured-in-the-ilpmp-buprenorphine-comes-in-a-variety-of-formulations-and-some-are-approved-for-pain-ie-butrans-patch-others-are-approved-for-treatment-of-opioid-use-disorder-ie-suboxone-and-subutex">Note: Methadone is approved by the U.S. Food and Drug Administration for treatment of pain when written as a prescription. It can be dispensed from federally monitored programs for the treatment of opioid use disorder. When dispensed from those programs,
+    is not captured in the ILPMP. Buprenorphine comes in a variety of formulations and some are approved for pain (i.e. butrans patch). Others are approved for treatment of opioid use disorder (i.e. Suboxone and Subutex).</h6>
+<br>
+    
+<p><em>Figure 7</em> shows the five most commonly filled opioid prescriptions in Illinois from 2008 through 2016. The overall decrease in opioid prescription in the state can be largely attributed to reductions in hydrocodone prescribing, which accounted
+    for nearly 90 percent of the statewide reduction from 2014 to 2016. The U.S. Drug Enforcement Administration (DEA) reclassified hydrocodone from Schedule III to a more restrictive Schedule II controlled substance because of its high addictive potential.
+    The notable increase from 2011 to 2012 in opioid prescriptions was driven primarily by a prescribing surge in the drug tramadol. However, Illinois pharmacies and dispensers were not required to report tramadol prescriptions until January 1, 2012.
+    <sup
+        class="footnote-ref"><a href="#fn41" id="fnref41">[41]</a></sup>
+</p>
+<p>It is important to note that data on methadone administered for opioid use disorder treatment through certified opioid treatment programs is not captured by the ILPMP. Data on methadone prescribed for pain is captured by the ILPMP. The category “other
+    opioids” combines all other types of opioid prescriptions.</p>
+
+<h4 align="center" id="figure-7">FIGURE 7</h4>
+<h4 align="center" id="number-of-opioid-prescriptions-filled-in-illinois-by-drug-type-2008-2016">NUMBER OF OPIOID PRESCRIPTIONS FILLED IN ILLINOIS BY DRUG TYPE, 2008-2016</h4>
+
+<p>Highcharts Link: <a href="https://jsfiddle.net/agatens/L0jo849L/">https://jsfiddle.net/agatens/L0jo849L/</a></p>
+
+<h6 id="data-source-illinois-prescription-drug-monitoring-database">Data Source: Illinois Prescription Drug Monitoring Database</h6>
+
+<p>Over the nine year period examined, <a href="https://medlineplus.gov/druginfo/meds/a614045.html">hydrocodone</a> accounted for about 60 percent of all opioids prescribed in Illinois. Hydrocodone is available in multiple generic and brand name drug versions,
+    including Lortab, Norco, and Vicodin. In 2011, the Drug Abuse Warning Network (DAWN) indicated 100,000 emergency department visits in the United States were related to misuse of hydrocodone pain relievers.<sup class="footnote-ref"><a href="#fn42" id="fnref42">[42]</a></sup>    In 2014, hydrocodone was reclassified from a Schedule III to a more restrictive Schedule II.<sup class="footnote-ref"><a href="#fn43" id="fnref43">[43]</a></sup> In Illinois, Schedule III, IV, and V prescriptions are allowed to be written with refills,
+    but Schedule II are not. The hydrocodone prescription reduction in Illinois after the rescheduling was consistent with national trends. Nationally, there were 26.3 million fewer hydrocodone prescriptions and 1.1 billion fewer hydrocodone pills dispensed
+    one year after the rescheduling.<sup class="footnote-ref"><a href="#fn44" id="fnref44">[44]</a></sup> In Illinois, there were 703,221 fewer prescriptions for hydrocodone in the year following the rescheduling.</p>
+<p>In 2012, tramadol prescriptions started being reported in the ILPMP (<em>Figure 7</em>). In the past five years, tramadol has accounted for nearly 20 percent of all opioids prescribed in Illinois. The FDA originally considered tramadol to be safer than
+    other opioid pain medications, approving it for use in 1995 without recommending controlled substance classification. Prescribers viewed tramadol as having limited misuse potential.<sup class="footnote-ref"><a href="#fn45" id="fnref45">[45]</a></sup>    However, after evidence increased regarding its misuse potential, the DEA made tramadol a Schedule IV drug in 2014. DAWN data indicate that roughly 20,000 emergency department visits in the United States were related to tramadol misuse in 2011.
+    <sup
+        class="footnote-ref"><a href="#fn46" id="fnref46">[46]</a></sup> According to the National Survey on Drug Use and Health, in 2012, 3.2 million people in the United States aged 12 or older misused tramadol.<sup class="footnote-ref"><a href="#fn47" id="fnref47">[47]</a></sup></p>
+<h3 id="prescription-opioids-and-overdose-deaths">Prescription Opioids and Overdose Deaths</h3>
+<p>The CDC <a href="http://www.addictionpolicy.org/single-post/2017/12/21/174-a-Day-Understanding-the-Numbers">reported</a> in 2017 that approximately 116 Americans die from opioid-related overdoses every day. Of those, <a href="https://wonder.cdc.gov/">nearly half involve a prescription opioid</a>.
+    Drug overdose deaths in Illinois have risen, with a marked increase from 2015 to 2016 (<em>Figure 8</em>). The 2016 Illinois rate of opioid overdose was higher than the national rate, at 15.2 per 100,000 residents and 12.1 per 100,000 residents, respectively.
+    <sup
+        class="footnote-ref"><a href="#fn48" id="fnref48">[48]</a></sup> In 2014, 61 percent of all U.S. overdose deaths involved some type of opioid compared to 70 percent in Illinois.<sup class="footnote-ref"><a href="#fn49" id="fnref49">[49]</a></sup></p>
+
+<h4 id="figure-8">FIGURE 8</h4>
+<h4 align="center" id="illinois-drug-overdose-deaths-by-drug-type-2013-2016">ILLINOIS DRUG OVERDOSE DEATHS BY DRUG TYPE, 2013-2016<sup class="footnote-ref"><a href="#fn50" id="fnref50">[50]</a></sup></h4>
+
+<p>Highcharts Link: <a href="https://jsfiddle.net/agatens/1xgnx6jt/">https://jsfiddle.net/agatens/1xgnx6jt/</a></p>
+
+<h6 id="data-source-illinois-department-of-public-health-comprehensive-opioid-data-report">Data Source: <a href="http://dph.illinois.gov/sites/default/files/publications/publicationsdoil-opioid-data-report.pdf">Illinois Department of Public Health Comprehensive Opioid Data Report</a></h6>
+
+<p><em>Figure 8</em> illustrates Illinois opioid-related overdose deaths by opioid type. These data were collected from death certificates. Because more than one type of opioid could have been a contributing factor in an overdose at the time of death, categories
+    are not mutually exclusive. The category “Any Natural/Semi-synthetic Opioid” indicates overdose deaths involving buprenorphine, hydrocodone, hydromorphone, morphine, oxycodone, or oxymorphone. After a heroin overdose, the most commonly found substance
+    on toxicology is morphine (a breakdown product of heroin), causing some overdose deaths to be incorrectly categorized as morphine-related deaths and included in the natural/semi-synthetic opioid category.<sup class="footnote-ref"><a href="#fn51" id="fnref51">[51]</a></sup>    Therefore, the number of heroin-related overdoses may be higher than what the data indicate. In addition, the data suggest the vast majority of fentanyl overdoses are due to illicitly manufactured fentanyl rather than fentanyl originating from a prescription/pharmacy.
+    <sup class="footnote-ref"><a href="#fn52" id="fnref52">[52]</a></sup></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Illinois medical practitioners prescribed fewer opioids compared to many other states.<sup class="footnote-ref"><a href="#fn53" id="fnref53">[53]</a></sup> Moreover, ILPMP data indicate opioid prescriptions are declining in Illinois, although the drop
+    is still somewhat small relative to prescription growth over the past decade. The number of opioid prescriptions filled increased 25 percent from 2008 to 2014 and then decreased 21 percent from 2014 to 2016. A more recent decline in the number of
+    individuals filling opioid prescriptions was also found, with the number of individuals filling at least one opioid prescription slightly decreasing from 2015 to 2016.</p>
+<p>Prescription rates in Illinois varied by county, and counties with higher prescription rates between 2008 and 2016 tended to be rural and located in the southern part of the state. Hydrocodone and tramadol were the most commonly prescribed opioids in
+    Illinois during the period examined.</p>
+<p>Heroin and illicit fentanyl-related overdoses are increasing in Illinois and available data suggest fentanyl overdoses are from illicit markets rather than prescriptions.<sup class="footnote-ref"><a href="#fn54" id="fnref54">[54]</a></sup> Despite modest
+    reductions in prescription rates, the state’s criminal justice, public health, and human services departments should continue to work on prescription drug safety and reducing opioid overprescribing, especially considering that most people who misuse
+    opioids report obtaining them from friends and family for free.<sup class="footnote-ref"><a href="#fn55" id="fnref55">[55]</a></sup> To tackle issues related to prescribing and the opioid crisis, the <a href="http://dph.illinois.gov/sites/default/files/publications/Illinois-Opioid-Action-Plan-Sept-6-2017-FINAL.pdf">State of Illinois Opioid Action Plan</a>    recommends increased use of the ILPMP by providers in conjunction with provider education and promotion of prescribing guidelines, such as the <a href="https://www.cdc.gov/mmwr/volumes/65/rr/rr6501e1.htm">CDC’s guidelines for prescribing opioids for chronic pain</a>.</p>
+<h2 id="implications-for-the-criminal-justice-system">Implications for the Criminal Justice System</h2>
+<p>The following are some implications for the criminal justice system related to opioid misuse and prescribing practices.</p>
+<h3 id="ensure-safe-disposal-of-prescription-medications">Ensure Safe Disposal of Prescription Medications</h3>
+<p>Public awareness of the dangers of prescription drugs can help prevent opioid misuse, opioid use disorders, overdose, and death.<sup class="footnote-ref"><a href="#fn56" id="fnref56">[56]</a></sup> Citizens are encouraged to take their unused, unwanted,
+    and expired opioid and other prescription medicine to authorized collectors for disposal to reduce chances they will be accidentally or purposely misused or sold. The DEA’s website lists <a href="https://apps.deadiversion.usdoj.gov/pubdispsearch/spring/main?execution=e1s1">public disposal locations</a>.
+    The DEA also holds a <a href="https://www.deadiversion.usdoj.gov/drug_disposal/takeback/index.html">National Prescription Drug Take Back Day</a> each April and October through local law enforcement departments. In October 2017, <a href="https://www.dea.gov/divisions/hq/2017/hq110717.shtml">456 tons of prescription drugs were collected at the 4,200 law enforcement sites</a>    nationwide.</p>
+<p>In state fiscal year 2018, ICJIA administered Prescription Pill and Drug Disposal (P2D2) program funds to the Illinois Sheriff’s Association. Illinois’ <a href="https://www.prevention.org/">Prevention First </a>organization offers free materials through
+    their Guard and Discard campaign to raise public awareness of the importance of safe use, storage and disposal of prescription drugs in preventing opioid misuse.</p>
+<h3 id="enhance-and-continue-current-law-enforcement-efforts">Enhance and Continue Current Law Enforcement Efforts</h3>
+<p>Law enforcement personnel have embraced new roles as the opioid crisis continues in the United States. Officers are <a href="http://www.icjia.state.il.us/articles/exploring-effective-post-opioid-overdose-reversal-responses-for-law-enforcement-and-other-first-responders">carrying and using naloxone</a>,
+    a medication that can be administered at the time of an opioid overdose to save a life. Law enforcement agencies across the country are connecting <a href="http://www.icjia.state.il.us/articles/rethinking-law-enforcement-s-role-on-drugs-community-drug-intervention-and-diversion-efforts">community members suffering from opioid use disorders to substance use treatment</a>
+    <sup
+        class="footnote-ref"><a href="#fn57" id="fnref57">[57]</a></sup>. Some jails and prisons are offering effective <a href="http://www.icjia.state.il.us/articles/an-overview-of-medication-assisted-treatment-for-opioid-use-disorders-for-criminal-justice-involved-individuals">medication-assisted treatment</a>        for opioid use disorders prescribing buprenorphine, methadone, and injectable extended-release naltrexone in conjunction with behavioral therapy.</p>
+<p>Medical professionals suspected of inappropriately prescribing medication can and should be investigated and prosecuted. Prescribers who are engaging in unethical behavior, such as prescribing high volumes of controlled substances without providing appropriate
+    medical examinations or offering alternative therapies, like physical therapy, can face charges or lose their licenses if outside of appropriate medical practice.<sup class="footnote-ref"><a href="#fn58" id="fnref58">[58]</a></sup> The <a href="https://www.justice.gov/opa/pr/national-health-care-fraud-takedown-results-charges-against-over-412-individuals-responsible">Department of Justice recently arrested 120 health care and treatment providers for opioid-related crimes</a>.
+    State and local law enforcement should investigate all reports or indications of illegal medical practice.</p>
+<p>PDMP data is available to law enforcement to aid in active investigations of suspected controlled substance diversion for profit, as well as questionable prescribing and dispensing practices.<sup class="footnote-ref"><a href="#fn59" id="fnref59">[59]</a></sup>    Law enforcement may be unaware of how they can use PDMP data in their work. According to the PDMP Center of Excellence at Brandeis University, “education initiatives targeted to law enforcement agencies on the value and use of PDMPs are also needed
+    to help encourage increased utilization in diversion investigations.”<sup class="footnote-ref"><a href="#fn60" id="fnref60">[60]</a></sup></p>
+<p>Research suggests fentanyl overdoses are due to illicit, non-prescription fentanyl.<sup class="footnote-ref"><a href="#fn61" id="fnref61">[61]</a></sup> Rather than focus on the diversion of prescription fentanyl, efforts should be concentrated on illicitly-manufactured
+    fentanyl primarily. Much of the global supply is produced in China and brought in through Mexico. A Schedule II drug, fentanyl is lethal and 50 times stronger than heroin. Individuals buying illicit heroin are often unaware that the drug they receive
+    contains fentanyl. Fentanyl is cheap, easy to produce, and smaller in volume than heroin, which makes it easier to transport.<sup class="footnote-ref"><a href="#fn62" id="fnref62">[62]</a></sup> Collaborative efforts between federal and local law
+    enforcement and with public health officials to investigate the illegal trafficking and sale of fentanyl could curb its misuse in communities. Law enforcement personnel, canine units, and drug crime lab workers who come into contact with fentanyl
+    should take precautions against exposure, as fentanyl can be absorbed through the skin or accidentally inhaled and with large volumes can cause overdose. The DEA offers a <a href="https://www.dea.gov/druginfo/DEA%20Targets%20Fentanyl%20%20A%20Real%20Threat%20to%20Law%20Enforcement%20(2016).pdf">brief guide to officers on how to reduce threat of fentanyl</a>    exposure.</p>
+<h3 id="utilize-illinois-prescription-monitoring-data-for-research-purposes">Utilize Illinois Prescription Monitoring Data for Research Purposes</h3>
+<p>Researchers, as well as public health officials, should continue to examine data and share prescribing trends with criminal justice professionals. In some states, such as <a href="http://www.pdmpassist.org/pdf/PPTs/17-04B_Young_Land_Analyzing_Opioid_Problem.pdf">Massachusetts</a>,
+    PDMPs have provided identifiable data that can be linked to other data for a more in-depth and nuanced understanding of prescribing practices. However, states typically provide de-identified data, such as those used in this article, to researchers
+    for analysis. Regularly providing all available, non-identifiable PDMP data variables to researchers for analysis can provide early indicators of problems related to prescription drugs and guide community prevention efforts.<sup class="footnote-ref"><a href="#fn63" id="fnref63">[63]</a></sup>    As stated in the <a href="http://dph.illinois.gov/sites/default/files/publications/Illinois-Opioid-Action-Plan-Sept-6-2017-FINAL.pdf">State of Illinois Opioid Action Plan</a>, a “future step is to facilitate increased sharing of ILPMP data with relevant
+    stakeholders, including researchers, to allow for better-informed policymaking, program evaluations, and other data-driven activities at all levels.”<sup class="footnote-ref"><a href="#fn64" id="fnref64">[64]</a></sup></p>
+<!-- <pre><code>This project was supported by Grant # 12-DJ-BX-0203, awarded to the Illinois Criminal Justice Information Authority by the U.S. Department of Justice Office of Justice Programs’ Bureau of Justice Assistance. Points of view or opinions contained within this document are those of the authors and do not necessarily represent the official position or policies of the U.S. Department of Justice.</code></pre> -->
+<p><strong>Suggested citation</strong>: Reichert, J., Gatens, A., &amp; Salisbury-Afshar, E. (2018). <em>Opioid prescribing in Illinois: Examining prescription drug monitoring program data.</em> Chicago, IL: Illinois Criminal Justice Information Authority.</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+    <ol class="footnotes-list">
+        <li id="fn1" class="footnote-item">
+            <p>Guy, F. P., Zhang, K., Bohm, M. K., Losby, J., Lewis, B., Young, R., Murphy, L., &amp; Dowell, D. (2017). Vital signs: Changes in opioid prescribing in the United States, 2006-2015. <em>Morbidity and Mortality Weekly Report</em>, 66(26), 697-704.
+                <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn2" class="footnote-item">
+            <p>Paulozzi, L. J., Mack, K. A., Hockenberry, J. M. (2014). Vital signs: variation among states in prescribing of opioid pain relievers and benzodiazepines—United States, 2012. <em>Morbidity and Mortality Weekly Report</em>, 63, 563–8. <a href="#fnref2"
+                    class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn3" class="footnote-item">
+            <p>Daubresse M., Chang H. Y., Yu Y., Viswanathan, S., Shah, N. D., Stafford, R. S., Kruszewski, S. P., &amp; Alexander, G. C. (2013). Ambulatory diagnosis and treatment of nonmalignant pain in the United States, 2000-2010. <em>Medical Care</em>,
+                51, 870–8. <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn4" class="footnote-item">
+            <p>Han, B., Compton, W. M., Blanco, C., Crane, E., Lee, J., &amp; Jones, C. M. (2017). Prescription opioid use, misuse, and use disorders in U.S. adults: 2015 National Survey on Drug Use and Health. <em>Annals of Internal Medicine</em>, 167(5),
+                293-301. <a href="#fnref4" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn5" class="footnote-item">
+            <p>Centers for Disease Control and Prevention. (n.d.). <em>U.S. state prescribing rates, 2016</em>. Retrieved from <a href="https://www.cdc.gov/drugoverdose/maps/rxstate2016.html">https://www.cdc.gov/drugoverdose/maps/rxstate2016.html</a>
+                <a
+                    href="#fnref5" class="footnote-backref">↩︎</a>
+            </p>
+        </li>
+        <li id="fn6" class="footnote-item">
+            <p>Centers for Disease Control and Prevention. (2017). <em>Opioid prescribing: Where you live matters</em>. Atlanta, GA. Retrieved from <a href="https://www.cdc.gov/vitalsigns/pdf/2017-07-vitalsigns.pdf">https://www.cdc.gov/vitalsigns/pdf/2017-07-vitalsigns.pdf</a>                <a href="#fnref6" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn7" class="footnote-item">
+            <p>Note: A five-sentence letter in the New England Journal of Medicine was uncritically and highly cited as evidence that addiction was rare with long-term opioid therapy. See Leung, P. T. M., Macdonald, E. M., Stanbrook, M. N., Dhalia, I. A.,
+                &amp; Juurlink, D. N. (2017). A 1980 letter on the risk of opioid addiction. <em>New England Journal of Medicine</em>, 376, 2194-2195.; Wachholtz, A., Gonzalex, G., Boyer, E., Nagvi, Z. N., Rosenbaum, C., &amp; Ziedonis, D. (2011). Intersection
+                of chronic pain treatment and opioid analgesic misuse: Causes, treatments, and policy strategies. <em>Substance Abuse Rehabilitation</em>, 2, 145-162. <a href="#fnref7" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn8" class="footnote-item">
+            <p>Note: In 1995, the American Pain Society introduced a campaign of “Pain as the Fifth Vital Sign.” <a href="#fnref8" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn9" class="footnote-item">
+            <p>Kolodny, A., Courtwrithgt, D T, Hwang, C. A., Kreiner, P., Eadie, J. L., Clark, T. W., &amp; Alexander, G. C. (2015). The prescription opioid and heroin crisis: A public health approach to an epidemic of addiction. <em>Annual Review of Public Health</em>,
+                36, 559-574.; Note: In 2007, Purdue Pharma, the manufacturer of OxyContin and three senior executives pleaded guilty to federal criminal charges that they misled regulators, doctors, and patients about the risk of addiction associated
+                with the drug. See Meier, B. (May 10, 2007). “In guilty plea, OxyContin maker to pay $600 million.” <em>New York Times</em>. Retrieved from <a href="http://www.nytimes.com/2007/05/10/business/11drug-web.html">http://www.nytimes.com/2007/05/10/business/11drug-web.html</a>                <a href="#fnref9" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn10" class="footnote-item">
+            <p>Kennedy-Hendricks, A., Richey, M., McGinty, E. E., Stuart, E. A., Barry, C. L., &amp; Webster, D. W. (2016). Opioid overdose deaths and Florida’s crackdown on pill mills. <em>American Journal of Public Health</em>, (0), e1-e8. <a href="#fnref10"
+                    class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn11" class="footnote-item">
+            <p>Volkow, N. D. (2014). <em>America’s addiction to opioids: Heroin and prescription drug abuse.</em> Presented at United States Senate Caucus on International Narcotics Control.; Substance Abuse and Mental Health Services Administration, Center
+                for Behavioral Health Statistics and Quality. (2014). <em>Treatment episode data set, 2002–2012: national admissions to substance abuse treatment services. BHSIS series S-71, HHS publication no. (SMA) 14-4850.</em> Rockville, MD. Retrieved
+                from <a href="http://www.samhsa.gov/data/sites/default/files/2002_2012_TEDS_National/2002_2012_Treatment_Episode_Data_Set_National.pdf">http://www.samhsa.gov/data/sites/default/files/2002_2012_TEDS_National/2002_2012_Treatment_Episode_Data_Set_National.pdf</a>                <a href="#fnref11" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn12" class="footnote-item">
+            <p>Shah, A., Hayes, C. J., &amp; Martin, B. C. (2017). Characteristics of initial prescription episodes and likelihood of long-term opioid use — United States, 2006–2015. <em>Morbidity and Mortality Weekly Report</em>, 66, 265–269. <a href="#fnref12"
+                    class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn13" class="footnote-item">
+            <p>Grau, L. E., Dasgupta, N., Harvey A. P., Irwin, K., Givens, A., Kinzly, M. L., &amp; Heimer, R. (2007). Illicit use of opioids: Is OxyContin a “gateway drug”? <em>American Journal of Addiction</em>, 16, 166-173.; Muhuri, P. K., Gfroerer, J.
+                C., &amp; Davies, M. C. (2013). <em>Associations of nonmedical pain reliever use and initiation of heroin use in the United States.</em> Rockville, MD: Substance Abuse and Mental Health Services Administration, Center for Behavioral Health
+                Statistics and Quality. <a href="#fnref13" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn14" class="footnote-item">
+            <p>Center for Behavioral Health Statistics and Quality. (2015). <em>2014 National Survey on Drug Use and Health: Detailed Tables.</em> Substance Abuse and Mental Health Services Administration, Rockville, MD. <a href="#fnref14" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn15" class="footnote-item">
+            <p>Jones, C. M. (2013). Heroin use and heroin use risk behaviors among nonmedical users of prescription opioid pain relievers – United States, 2002-2004 and 2008-2010. <em>Drug &amp; Alcohol Dependence</em>, 132(1-2):95-100.; Muhuri P. K., Gfroerer,
+                J. C., &amp; Davies M. C. (n.d.) Associations of nonmedical pain reliever use and initiation of heroin use in the United States. <em>CBHSQ Data Review.</em> Substance Abuse and Mental Health Services Administration. <a href="#fnref15"
+                    class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn16" class="footnote-item">
+            <p>Centers for Disease Control and Prevention. (2014). <em>Wide-ranging online data for epidemiologic research (WONDER).</em> Atlanta, GA: CDC, National Center for Health Statistics. <a href="#fnref16" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn17" class="footnote-item">
+            <p>Mumola, C.J., &amp; Karberg, J. C. (2006). <em>Bureau of Justice Statistics special report: Drug use and dependence, state and federal prisoners.</em> Washington, DC: U.S. Department of Justice, Office of Justice Programs; 2006. <a href="https://www.bjs.gov/content/pub/pdf/dudsfp04.pdf">https://www.bjs.gov/content/pub/pdf/dudsfp04.pdf</a>                <a href="#fnref17" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn18" class="footnote-item">
+            <p>L. Mock, personal communication, February 28, 2018. <a href="#fnref18" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn19" class="footnote-item">
+            <p>Crompton, W. M., Jones, C. M., &amp; Baldwin, G. T. (2016). Relationship between nonmedical prescription-opioid use and heroin use. <em>The New England Journal of Medicine</em>, 374, 154-163. <a href="#fnref19" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn20" class="footnote-item">
+            <p>Bennet, T., &amp; Wright, R. (1986). The impact of prescribing on the crimes of opioid users. <em>Addiction</em>, 81(2), 265-273. <a href="#fnref20" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn21" class="footnote-item">
+            <p>Younger, J. W., Chu, L. F., D’Arcy, N. T., Trott, K. E., Jastrzab, L. E., &amp; Mackey, S. C. (2011). Prescription opioid analgesics rapidly change the human brain. <em>Pain</em>, 152, 1803-1810. <a href="#fnref21" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn22" class="footnote-item">
+            <p>Note: Diagnosis of an opioid use disorder is based on the American Psychology Association’s Diagnostic and Statistics Manual (DSM-5) criteria. <a href="#fnref22" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn23" class="footnote-item">
+            <p>Blumenschein, K., Fink, J. L., Freeman, P. R., James, K., Kirsh, K. L., Steinke, D. T., &amp; Talbert, J. (2010). <em>Review of prescription drug monitoring programs in the United States.</em> Kentucky All Schedule Prescription Electronic
+                Reporting Program (KASPER) Evaluation Team and Lexington, KY: Institute for Pharmaceutical Outcomes and Policy, Department of Pharmacy Practice and Science, College of Pharmacy, University of Kentucky. <a href="#fnref23" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn24" class="footnote-item">
+            <p>O’ Kane, N., Hallvik, S. E., Marino, M., Van Otterloo, J., Hildebran, C., Leichtling, G., &amp; Deyo, R. A. (2016). Preparing a prescription drug monitoring program data set for research purposes. <em>Pharmacoepidemiology and Drug Safety</em>,
+                25(9), 993-997. <a href="#fnref24" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn25" class="footnote-item">
+            <p>Bao, Y., Pan, Y., Taylor, A., Radakrishnan, S., Luo, F., Pincus, H. A., &amp; Schackman, B. R. (2016). Prescription drug monitoring programs are associated with sustained reductions in opioid prescribing by physicians. <em>Health Affairs</em>,
+                35(6), 1045-1051.; Moyo, P., Simoni-Wastila L., Griffin B. A., Onukwugha E., Harrington D., Alexander G. C., &amp; Palumbo, F. (2017 October). Impact of prescription drug monitoring programs (PDMPs) on opioid utilization among Medicare
+                beneficiaries in 10 U.S. States. <em>Addiction</em>, (10), 1784-1796.; Wen, H., Schackman, B. R., Aden, B., Bao, Y. (1 April, 2017). States with prescription drug monitoring mandates saw a reduction in opioids prescribed to Medicaid enrollees.
+                <em>Health Affairs</em>, 36(4), 733-741. <a href="#fnref25" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn26" class="footnote-item">
+            <p>Pardo, B. (2017). Do more robust prescription drug monitoring programs reduce prescription opioid overdose? <em>Addiction</em>, 112(10), 1773-1783.; Patrick, S. W., Fry, C. E., Jones, T. F., &amp; Buntin, M. B. (2016). Implementation of prescription
+                drug monitoring programs associated with reductions in opioid-related death rates. <em>Health Affairs</em>, 35(7), 1324-1332. <a href="#fnref26" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn27" class="footnote-item">
+            <p>Griggs, C. A., Weiner, S. G., &amp; Geldman, J. A. (2015). Prescription drug monitoring programs: Examining limitations and future approaches. <em>Western Journal of Emerging Medicine</em>, 16(1), 67-70. <a href="#fnref27" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn28" class="footnote-item">
+            <p>State of Illinois, Department of Human Services. (n.d.). <em>Illinois prescription monitoring program</em>. Springfield, IL.; See 720 ILCS 570/316 and 720 ILCS 570/318. <a href="#fnref28" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn29" class="footnote-item">
+            <p>Note: In November 2017, there were 36,940 users registered with the Illinois PMP system; following the new legislation, the total number of registered users has increased to 64,651 as of March 2018 (the most recent month for which data are
+                available). <a href="#fnref29" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn30" class="footnote-item">
+            <p>Centers for Disease Control and Prevention. (n.d.). <em>U.S. state prescribing rates, 2016.</em> Retrieved from <a href="https://www.cdc.gov/drugoverdose/maps/rxstate2016.html">https://www.cdc.gov/drugoverdose/maps/rxstate2016.html</a>
+                <a
+                    href="#fnref30" class="footnote-backref">↩︎</a>
+            </p>
+        </li>
+        <li id="fn31" class="footnote-item">
+            <p>Bao, Y., Pan, Y., Taylor, A., Radakrishnan, S., Luo, F., Pincus, H. A., &amp; Schackman, B. R. (2016). Prescription drug monitoring programs are associated with sustained reductions in opioid prescribing by physicians. <em>Health Affairs</em>,
+                35(6), 1045-1051.; Schuchat, A., Houry, D., &amp; Guy, G. P. (2017). New data on opioid use and prescribing in United States. <em>Journal of American Medical Association</em>, 318(5), 425-426. <a href="#fnref31" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn32" class="footnote-item">
+            <p>Note: The totals reported for the number of prescriptions filled in the present article may differ from totals presented in other sources published by the Illinois Department of Public Health due to a recent change in the definition of “new
+                prescriptions.” Specifically, refill prescriptions, including those that require a new written prescription from a doctor, are no longer counted as unique prescriptions. Complete data that reflect the new definition were not available
+                to ICJIA prior to the publication of this article. <a href="#fnref32" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn33" class="footnote-item">
+            <p>Yang, Z., Wilsey, B., Bohm, M., Weyrich, M., Roy, K., Ritley, D., Jones, C., &amp; Melnikow, J. (2015). Defining risk of prescription opioid overdose: pharmacy shopping and overlapping prescriptions among long-term opioid users in medicaid.
+                <em>Journal of Pain</em>, 16(5), 445-453. <a href="#fnref33" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn34" class="footnote-item">
+            <p>Chang, H. Y., Murimi, I. B., Jones, C. M., &amp; Alexander, G. C. (2017). Relationship between high‐risk patients receiving prescription opioids and high‐volume opioid prescribers. <em>Addiction</em>. doi: 10.1111/add.14068. [Epub ahead of
+                print] <a href="#fnref34" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn35" class="footnote-item">
+            <p>Simeone, R. (2017). Doctor shopping behavior and the diversion of prescription opioids. <em>Substance Abuse: Research and Treatment</em>, 11. <a href="#fnref35" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn36" class="footnote-item">
+            <p>Bao, Y., Pan, Y., Taylor, A., Radakrishnan, S., Luo, F., Pincus, H. A., &amp; Schackman, B. R. (2016). Prescription drug monitoring programs are associated with sustained reductions in opioid prescribing by physicians. <em>Health Affairs</em>,
+                35(6), 1045-1051.; Schuchat, A., Houry, D., &amp; Guy, G. P. (2017). New data on opioid use and prescribing in United States. <em>Journal of American Medical Association</em>, 318(5), 425-426. <a href="#fnref36" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn37" class="footnote-item">
+            <p>Sansone, R. A., &amp; Sansone, L. A. (2012). Doctor shopping: A phenomenon of many themes. <em>Innovations in Clinical Neuroscience</em>, 9 (11-12), 42-46. <a href="#fnref37" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn38" class="footnote-item">
+            <p>Sansone, R. A., &amp; Sansone, L. A. (2012). Doctor shopping: A phenomenon of many themes. <em>Innovations in Clinical Neuroscience</em>, 9 (11-12), 42-46. <a href="#fnref38" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn39" class="footnote-item">
+            <p>Sansone, R. A., &amp; Sansone, L. A. (2012). Doctor shopping: A phenomenon of many themes. <em>Innovations in Clinical Neuroscience</em>, 9 (11-12), 42-46. <a href="#fnref39" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn40" class="footnote-item">
+            <p>Centers for Disease Control and Prevention. (2017). <em>Opioid prescribing: Where you live matters</em>. Atlanta, GA. Retrieved from <a href="https://www.cdc.gov/vitalsigns/pdf/2017-07-vitalsigns.pdf">https://www.cdc.gov/vitalsigns/pdf/2017-07-vitalsigns.pdf</a>                <a href="#fnref40" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn41" class="footnote-item">
+            <p>See Illinois Controlled Substances Act [720 <em>ILCS</em> 570]. Personal communication, S. Pointer, January 19, 2018. <a href="#fnref41" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn42" class="footnote-item">
+            <p>Center for Behavioral Health Statistics and Quality, Substance Abuse and Mental Health Services Administration. (2013). <em>The DAWN Report: Highlights of the 2011 Drug Abuse Warning Network (DAWN) findings on drug-related emergency department visits</em>.
+                Retrieved from <a href="http://www.samhsa.gov/data/sites/default/files/DAWN127/DAWN127/sr127-DAWN-highlights.htm;">http://www.samhsa.gov/data/sites/default/files/DAWN127/DAWN127/sr127-DAWN-highlights.htm;</a> Note: Hydrocodone is typically
+                prescribed in combination with non-opioid pain relievers. <a href="#fnref42" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn43" class="footnote-item">
+            <p>Drug Enforcement Administration, Department of Justice. (2014). Schedules of controlled substances: rescheduling of hydrocodone combination products from schedule III to schedule II: Final rule. <em>Federal Register</em>, 79(163), 49,661-49,682.
+                <a href="#fnref43" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn44" class="footnote-item">
+            <p>Jones, C. M., Lurie, P. G., &amp; Throckmorton, D. C. (2016). Effect of U.S. Drug Enforcement Administration’s rescheduling of hydrocodone combination analgesic products on opioid analgesic prescribing. <em>Journal of the American Medical Association Internal Medicine</em>,
+                176(3), 399–402. <a href="#fnref44" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn45" class="footnote-item">
+            <p>Babalonis, S., Lofwall, M. R., Nuzzo, P. A., Siegel, A. J., &amp; Walsh, S. L. (2013). Abuse liability and reinforcing efficacy of oral tramadol in humans. <em>Drug &amp; Alcohol Dependence</em>, 129(1-2), 116-124. <a href="#fnref45" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn46" class="footnote-item">
+            <p>Center for Behavioral Health Statistics and Quality, Substance Abuse and Mental Health Services Administration. (2013). <em>The DAWN Report: Highlights of the 2011 Drug Abuse Warning Network (DAWN) findings on drug-related emergency department visits</em>.
+                Retrieved from <a href="http://www.samhsa.gov/data/sites/default/files/DAWN127/DAWN127/sr127-DAWN-highlights.htm">http://www.samhsa.gov/data/sites/default/files/DAWN127/DAWN127/sr127-DAWN-highlights.htm</a> <a href="#fnref46" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn47" class="footnote-item">
+            <p>Hughes, A., Williams, M. R., Lipari, R. N., Bose, J. Copello, E. A. P, &amp; Kroutil, L. A. (2016). Prescription drug use and misuse in the United States: Results from the 2015 national survey on drug use and health. <em>NSDUH Data Review.</em>                <a href="#fnref47" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn48" class="footnote-item">
+            <p>Centers for Disease Control. <em>Provisional counts of drug overdose deaths, as of 8/6/2017</em>. Atlanta, GA. Retrieved from <a href="https://www.cdc.gov/nchs/data/health_policy/monthly-drug-overdose-death-estimates.pdf.;">https://www.cdc.gov/nchs/data/health_policy/monthly-drug-overdose-death-estimates.pdf.;</a>                Illinois Department of Public Health. (2017). <em>State of Illinois comprehensive opioid data report</em>. Chicago, IL. <a href="#fnref48" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn49" class="footnote-item">
+            <p>Starner, C. I., &amp; Gleason, P. P. (2016). Short acting, long acting and abuse-deterrent opioid utilization patterns among 15 million commercially insured members. <em>Prime Therapeutics</em>. Retrieved from <a href="https://www.primetherapeutics.com/content/dam/corporate/Documents/Newsroom/PrimeInsights/2016/AMCP16FL-opioids.pdf">https://www.primetherapeutics.com/content/dam/corporate/Documents/Newsroom/PrimeInsights/2016/AMCP16FL-opioids.pdf</a>                <a href="#fnref49" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn50" class="footnote-item">
+            <p>2016 data is presently considered “provisional” as the records are still being reviewed and reporting may not yet be complete. Data for 2013-2015 are finalized and considered “complete.” <a href="#fnref50" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn51" class="footnote-item">
+            <p>Illinois Department of Public Health Division of Health Data and Policy (2017). <em>Drug overdose deaths by sex, age group, race/ethnicity and county, Illinois residents, 2013-2016. (Data Notes)</em>. Retrieved from <a href="http://www.dph.illinois.gov/sites/default/files/publications/Drug-Overdose-Deaths-December2017.pdf">http://www.dph.illinois.gov/sites/default/files/publications/Drug-Overdose-Deaths-December2017.pdf</a>                <a href="#fnref51" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn52" class="footnote-item">
+            <p>Sommerville, N. J., O’Donnell, J., Gladden, R. M., Zibbell, J. E., Green, T. C., Younkin, M., Ruiz, S., Babakhanlou-Chase, H., Chan, M., Callis, B. P., Kuramoto-Crawford, J., Nields, H. M., &amp; Walley, A. Y. (2017). Characteristics of fentanyl
+                overdose — Massachusetts, 2014–2016. <em>Morbidity and Mortality Weekly Report</em>, 66, 382-386. <a href="#fnref52" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn53" class="footnote-item">
+            <p>Centers for Disease Control and Prevention. (n.d.). <em>U.S. state prescribing rates, 2016</em>. Retrieved from <a href="https://www.cdc.gov/drugoverdose/maps/rxstate2016.html">https://www.cdc.gov/drugoverdose/maps/rxstate2016.html</a>
+                <a
+                    href="#fnref53" class="footnote-backref">↩︎</a>
+            </p>
+        </li>
+        <li id="fn54" class="footnote-item">
+            <p>Sommerville, N. J., O’Donnell, J., Gladden, R. M., Zibbell, J. E., Green, T. C., Younkin, M., Ruiz, S., Babakhanlou-Chase, H., Chan, M., Callis, B. P., Kuramoto-Crawford, J., Nields, H. M., &amp; Walley, A. Y. (2017). Characteristics of fentanyl
+                overdose — Massachusetts, 2014–2016. Morbidity and Mortality Weekly Report, 66, 382-386. <a href="#fnref54" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn55" class="footnote-item">
+            <p>Han, B., Compton, W. M., Blanco, C., Crane, E., Lee, J., &amp; Jones, C. M. (2017). Prescription opioid use, misuse, and use disorders in U.S. adults: 2015 National Survey on Drug Use and Health. <em>Annals of Internal Medicine</em>, 167(5),
+                293-301. <a href="#fnref55" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn56" class="footnote-item">
+            <p>See the Centers for Disease Control and Prevention’s Rx Awareness Campaign at <a href="https://www.cdc.gov/rxawareness/index.html">https://www.cdc.gov/rxawareness/index.html</a> <a href="#fnref56" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn57" class="footnote-item">
+            <p>Reichert, J. (2017). <em>Fighting the opioid crisis through substance use disorder treatment: A study of a police program model in Illinois</em>. Chicago, IL: Illinois Criminal Justice Information Authority.; Reichert, J. (2017). <em>Police-led referrals to treatment for substance use disorders in rural Illinois: An examination of the Safe Passage initiative</em>.
+                Chicago, IL: Illinois Criminal Justice Information Authority. <a href="#fnref57" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn58" class="footnote-item">
+            <p>Reidenberg, M. M., &amp; Willis, O. (2007). Prosecution of physicians for prescribing opioids to patients. <em>Clinical Pharmacology &amp; Therapeutics</em>, 81, 903-906. <a href="#fnref58" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn59" class="footnote-item">
+            <p>Prescription Drug Monitoring Program Center of Excellence. (2001). <em>Perspective from Kentucky: using PDMP data in drug diversion investigations. Notes from the Field 2.3.</em> Waltham, MA: Heller School, Brandeis University. <a href="#fnref59"
+                    class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn60" class="footnote-item">
+            <p>Clark, T., Eadie, J., Knue, P., Kreiner, P., &amp; Strickler, G. (2012). <em>Prescription drug monitoring programs: An assessment of the evidence and best practices.</em> Waltham, MA: Heller School, Brandeis University. <a href="#fnref60"
+                    class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn61" class="footnote-item">
+            <p>Sommerville, N. J., O’Donnell, J., Gladden, R. M., Zibbell, J. E., Green, T. C., Younkin, M., Ruiz, S., Babakhanlou-Chase, H., Chan, M., Callis, B. P., Kuramoto-Crawford, J., Nields, H. M., &amp; Walley, A. Y. (2017). Characteristics of fentanyl
+                overdose — Massachusetts, 2014–2016. <em>Morbidity and Mortality Weekly Report</em>, 66, 382-386. <a href="#fnref61" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn62" class="footnote-item">
+            <p>The PEW Charitable Trusts. (2017). As fentanyl spreads, states step up responses. <em>Stateline</em>. Retrieved from <a href="http://www.pewtrusts.org/en/research-and-analysis/blogs/stateline/2017/05/08/as-fentanyl-spreads-states-step-up-responses">http://www.pewtrusts.org/en/research-and-analysis/blogs/stateline/2017/05/08/as-fentanyl-spreads-states-step-up-responses</a>                <a href="#fnref62" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn63" class="footnote-item">
+            <p>PEW Charitable Trusts. (2016). <em>Prescription drug monitoring programs: Evidence-based practices to optimize prescriber use</em>. Philadelphia, PA. Retrieved from <a href="http://www.pewtrusts.org/~/media/assets/2016/12/prescription_drug_monitoring_programs.pdf;">http://www.pewtrusts.org/~/media/assets/2016/12/prescription_drug_monitoring_programs.pdf;</a>                Prescription Drug Monitoring Program Center of Excellence. (2012). <em>Notes from the field—Project Lazarus: Using PDMP data to mobilize and measure community drug abuse prevention</em>. Waltham, MA: Brandeis University. <a href="#fnref63"
+                    class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn64" class="footnote-item">
+            <p>No Author. (2017). <em>State of Illinois opioid action plan. Springfield, IL: State of Illinois.</em> Retrieved from <a href="http://dph.illinois.gov/sites/default/files/publications/Illinois-Opioid-Action-Plan-Sept-6-2017-FINAL.pdf">http://dph.illinois.gov/sites/default/files/publications/Illinois-Opioid-Action-Plan-Sept-6-2017-FINAL.pdf</a>                <a href="#fnref64" class="footnote-backref">↩︎</a></p>
+        </li>
+    </ol>
+</section>
+
+
+<!-- Article Contents links under the side section
+<h5 style="color: rgb(68, 68, 68); text-transform: uppercase; padding-bottom: 8px; font-weight: 900; margin-bottom: 10px; margin-left: 10px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;">Article Contents</h5>
+<ul class="nav">
+	<li><a class="scrollclass" data-target="#content-wrap">Introduction</a></li>
+	<li><a class="scrollclass" data-target="#opioid-prescription-risks">Opioid Prescription Risks</a></li>
+	<li><a class="scrollclass" data-target="#illinois-prescription-drug-monitoring-program">Illinois Prescription Drug Monitoring Program</a></li>
+    <li><a class="scrollclass" data-target="#illinois-opioid-prescribing-practices">Illinois Opioid Prescribing Practices</a></li>
+    <li><a class="scrollclass" data-target="#conclusion">Conclusion</a></li>
+    <li><a class="scrollclass" data-target="#implications-for-the-criminal-justice-system">Implications for the Criminal Justice System</a></li>
+</ul> -->
