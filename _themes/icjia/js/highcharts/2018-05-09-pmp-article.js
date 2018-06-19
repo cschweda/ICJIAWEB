@@ -68,15 +68,15 @@
 })();
 
 
-$(function () {
-    Highcharts.chart('hc-fig4', {
-Highcharts.setOptions({
-    lang: {
-        thousandsSep: ','
-    }
-});
+(function() {
 
-Highcharts.chart('container', {
+  Highcharts.setOptions({
+    lang: {
+      thousandsSep: ','
+    }
+  });
+
+  Highcharts.chart('hc-fig4', {
 
     title: {
         text: null
@@ -138,68 +138,69 @@ Highcharts.chart('container', {
 })();
 
 	
-$(function () {
-    Highcharts.chart('hc-fig5', {
-Highcharts.setOptions({
-    lang: {
+(function() {
+
+    Highcharts.setOptions({
+      lang: {
         thousandsSep: ','
-    }
-});
+      }
+    });
+  
+    Highcharts.chart('hc-fig5', {
+  
 
-Highcharts.chart('container', {
-
-    title: {
-        text: null
-    },
-
-    subtitle: {
-        text: null
-    },
-
-    yAxis: {
         title: {
-            text: null 
-            
-        }
-    },
-    legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'middle',
-        itemStyle: {
-      			width: "100px",
-            textOverflow: null
-    		}
-    },
-
-    plotOptions: {
-        series: {
-            label: {
-                connectorAllowed: false
-            },
-            pointStart: 2008
-        }
-    },
-
-    series: [{
-        name: '6+ Prescribers OR 6+ Pharmacies',
-        data: [225632, 245326, 254454, 256768, 303021, 262931, 298690, 360042, 322957]
-    }, {
-        name: '6+ Prescribers AND 6+ Pharmacies',
-        data: [55394, 56539, 55335, 53493, 60743, 50369, 54592, 61285, 43618]
-    }],
-
-    responsive: {
-        rules: [{
-            condition: {
-                maxWidth: 500
-            },
-            chartOptions: {
-                legend: {
-                    layout: 'horizontal',
-                    align: 'bottom',
-                    verticalAlign: 'bottom'
+            text: null
+        },
+    
+        subtitle: {
+            text: null
+        },
+    
+        yAxis: {
+            title: {
+                text: null 
+                
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            itemStyle: {
+                      width: "100px",
+                textOverflow: null
                 }
+        },
+    
+        plotOptions: {
+            series: {
+                label: {
+                    connectorAllowed: false
+                },
+                pointStart: 2008
+            }
+        },
+    
+        series: [{
+            name: '6+ Prescribers OR 6+ Pharmacies',
+            data: [3848, 2945, 3039, 2826, 3220, 2336, 2874, 3737, 2733]
+        }, {
+            name: '6+ Prescribers AND 6+ Pharmacies',
+            data: [1718, 1052, 872, 696, 743, 482, 525, 507, 269]
+        }],
+    
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'bottom',
+                        verticalAlign: 'bottom'
+                    }
             }
         }]
     }
@@ -208,16 +209,16 @@ Highcharts.chart('container', {
 })();
 
 
-$(function () {
-    Highcharts.chart('hc-fig7', {
-Highcharts.setOptions({
-    lang: {
+(function() {
+
+    Highcharts.setOptions({
+      lang: {
         thousandsSep: ','
-    }
-});
-
-Highcharts.chart('container', {
-
+      }
+    });
+  
+    Highcharts.chart('hc-fig7', {
+  
     title: {
         text: null
     },
@@ -289,17 +290,16 @@ Highcharts.chart('container', {
 })
 })();
 
+(function() {
 
-$(function () {
-    Highcharts.chart('hc-fig8', {
-Highcharts.setOptions({
-    lang: {
+    Highcharts.setOptions({
+      lang: {
         thousandsSep: ','
-    }
-});
-
-Highcharts.chart('container', {
-
+      }
+    });
+  
+    Highcharts.chart('hc-fig8', {
+  
     title: {
         text: null
     },
