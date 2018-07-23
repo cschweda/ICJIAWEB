@@ -36,6 +36,18 @@ fields:
     options:
       true: Active
       false: Inactive
+  
+  # isApplication:
+  #   display: Is this an application?
+  #   required: true
+  #   default: 
+  #   type: select
+  #   options:
+  #     false: No, this is not an application.
+  #     true: Yes, this is an application.
+
+ 
+      
 
   keywords:
     display: Keywords
@@ -104,6 +116,11 @@ fields:
     required:
     default:
 
+  applicationLink:
+    Display: Full URL of application
+    type: text
+    required:
+    default:
 
   positive_keywords:
     display: Positive Search Keywords

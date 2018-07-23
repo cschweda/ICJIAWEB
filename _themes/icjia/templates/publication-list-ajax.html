@@ -52,11 +52,15 @@
             <i class="fa fa-file-pdf-o fa-block" style="vertical-align: middle;margin-top: -0.425em"></i>
           </a>
 
-          {{endif}} {{if articleLink}}
+          {{endif}} {{if articleLink }}
           <a type="button" style="margin-bottom: 4px; font-size: 10px; text-transform: uppercase; font-family: 'Oswald', sans-serif;"
             class="btn btn-danger btn-xs" href="{{articleLink}}" target="_blank">Article&nbsp;&nbsp;
             <i class="fa fa-external-link fa-block" style="vertical-align: middle;margin-top: -0.425em"></i>
-          </a>&nbsp; {{endif}}
+          </a>&nbsp; {{endif}} {{if applicationLink}}
+          <a type="button" style="margin-bottom: 4px; font-size: 10px; text-transform: uppercase; font-family: 'Oswald', sans-serif;"
+            class="btn btn-success btn-xs" href="{{applicationLink}}" target="_blank">LAUNCH&nbsp;&nbsp;
+            <i class="fa fa-external-link fa-block" style="vertical-align: middle;margin-top: -0.425em"></i>
+          </a>&nbsp;{{endif}}
 
         </span>
 
