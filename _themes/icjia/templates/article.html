@@ -16,6 +16,83 @@ table p {text-indent: 0;}
 
 {{endif}}
 
+/* article pull quotes */
+
+.pullquote {
+    width: 65%;
+    border-top: 8px solid #666;
+    border-bottom: 8px solid #666;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 26px;
+    color: #666;
+}
+
+/* .pullquote:before {
+    content: "\201C";
+    font-size: 32px;
+    top: -20px;
+} */
+
+/* .pullquote:after {
+    content: '\201D';
+    font-size: 32px;
+    top: -20px;
+} */
+
+.pullquote.right {
+    float: right;
+    margin-right: -100px;
+    margin-left: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.pullquote.left {
+    float: left;
+    margin-left: -100px;
+    margin-right: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.pullquote a.quotelink {
+    color: #e28642;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.pullquote a.quotelink:after {
+    font-family: FontAwesome;
+    content: "\f08e";
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+.pullquote a.quotelink.right {
+    float: right;
+}
+
+.pullquote a.quotelink.left {
+    float: left;
+}
+
+.pullquote .quoter {
+    color: #aaa;
+    margin-top: 20px;
+}
+
+.pullquote .quoter.right {
+    float: right;
+}
+
+.pullquote .quoter.left {
+    float: left;
+}
+
+/* end article quotes */
+
 
 </style>
 
