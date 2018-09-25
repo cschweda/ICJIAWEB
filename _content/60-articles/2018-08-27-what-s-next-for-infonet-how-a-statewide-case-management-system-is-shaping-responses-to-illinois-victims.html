@@ -1,0 +1,369 @@
+---
+title: What’s Next for InfoNet? How a Statewide Case Management System is Shaping Responses to Illinois Victims
+_template: article
+authors:
+  - Jaclyn Houston-Kolnik
+  - Jennifer Hiselman
+authorviz: 'false'
+area:
+  - Victimization
+pubtype:
+  - Article
+dashboard: 'false'
+paragraphType: indent
+tabviz: 'false'
+tab1: Overview
+tab2: Full Report
+leftColumn: |
+  <h5 style="color: rgb(68, 68, 68); text-transform: uppercase; padding-bottom: 8px; font-weight: 900; margin-bottom: 10px; margin-left: 10px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;">Article Contents</h5>
+  <ul class="nav">
+  	<li><a class="scrollclass" data-target="#content-wrap">Introduction</a></li>
+  	<li><a class="scrollclass" data-target="#victimization-data-in-illinois">Victimization Data in Illinois</a></li>
+  	<li><a class="scrollclass" data-target="#infonet-data-collection">InfoNet Data Collection</a></li>    
+  	<li><a class="scrollclass" data-target="#utility-of-infonet-data">Utility of InfoNet Data</a></li>
+      <li><a class="scrollclass" data-target="#limitations-of-infonet">Limitations of InfoNet</a></li>
+      <li><a class="scrollclass" data-target="#infonets-growth">InfoNet’s Growth</a></li>
+  </ul>
+teaser: InfoNet is a web-based, centralized statewide case management system for domestic and sexual violence centers maintained by the Illinois Criminal Justice Information Authority (ICJIA). This article demonstrates InfoNet’s strengths and utility and how its data contribute knowledge about victimization and victim services. Also highlighted are the system’s future directions for growth, new functionalities, and broader applications to address victimization in Illinois.
+summary: InfoNet is a web-based, centralized statewide case management system for domestic and sexual violence centers maintained by the Illinois Criminal Justice Information Authority (ICJIA). This article demonstrates InfoNet’s strengths and utility and how its data contribute knowledge about victimization and victim services. Also highlighted are the system’s future directions for growth, new functionalities, and broader applications to address victimization in Illinois.
+splash: /assets/img/splash/InfoNetWriteUp_082018_iStock-903505508.jpg
+jsFile: 2018-08-01-InfoNetWriteUp.js
+keywords:
+  - Victimization
+  - InfoNet
+  - Sexual Assault
+  - Domestic Violence
+super_positive_keywords:
+  - Victimization
+  - InfoNet
+  - Sexual assault
+  - domestic violence
+---
+<!-- <h1 id="whats-next-for-infonet-how-a-statewide-case-management-system-is-shaping-responses-to-illinois-victims">What’s Next for InfoNet?: How a Statewide Case Management System is Shaping Responses to Illinois Victims</h1> -->
+
+<style>
+.spacer {margin-top: 50px; margin-bottom: 50px}
+.highchart {margin-top: 50px; margin-bottom: 50px}
+</style>
+
+<style>
+.style1 {
+    background: #cccccc; 
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+}
+
+</style>
+
+<!-- <p>InfoNet is a web-based, centralized statewide case management system for domestic and sexual violence centers maintained by the Illinois Criminal Justice Information Authority (ICJIA). This article demonstrates InfoNet’s strengths and utility and how its data contribute knowledge about victimization and victim services. Also highlighted are the system’s future directions for growth, new functionalities, and broader applications to address victimization in Illinois.</p> -->
+
+
+<p>Most state-level data on domestic and sexual violence are limited to incidents reported to police, which researchers estimate include less than half of all victimizations.<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> A few states,
+    including Illinois, have a resource containing data about domestic and sexual violence victims, many of whom chose not to report their experiences to police. Maintained by the Illinois Criminal Justice Information Authority (ICJIA), InfoNet is a web-based,
+    centralized statewide case management system that houses data about victims who receive services from domestic and sexual violence centers in Illinois. With its wealth of non-personally identifying data about victim characteristics, incidents, needs,
+    services received, and interactions with healthcare and legal systems, InfoNet informs state and local stakeholders on funding priorities, programming needs, policies, and even legislation.<!-- This article summarizes the strengths and utility of InfoNet
+    and what is known about victim service seeking in Illinois. Also highlighted are the system’s unique data collection capabilities and plans for future application to address victimization in Illinois. --></p>
+
+<h2 id="introduction">Introduction</h2>
+<p>The consequences of experiencing a crime can be multifaceted and numerous. Experiencing at least one violent incident can:</p>
+<ul>
+    <li>Elevate a person’s risk of being victimized again.<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></li>
+    <li>Contribute to poor physical, mental, and emotional health outcomes.<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></li>
+    <li>For children, increase the likelihood of committing a crime.<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup></li>
+    <li>Negatively impact overall quality of life.<sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup></li>
+</ul>
+
+<p>Accounting for these numerous impacts, research suggests victimization has both tangible (e.g., medical care, property damage, time missed from work) and intangible (e.g., distress, pain and suffering, psychological stress) costs. Using the number of
+    violent index offenses (i.e., murder, rape, aggravated assault, and robbery) reported to Illinois law enforcement agencies in 2016<sup class="footnote-ref"><a href="#fn6" id="fnref6">[6]</a></sup> and cost estimates (both tangible and intangible)
+    associated with these crimes,<sup class="footnote-ref"><a href="#fn7" id="fnref7">[7]</a></sup> these incidents alone are estimated to have cost Illinois more than $20 billion that same year.<sup class="footnote-ref"><a href="#fn8" id="fnref8">[8]</a></sup></p>
+<p>To improve state and local responses to violence and promote victim healing, data sources on the extent and nature of victimization, as well as crime victims’ characteristics, needs, and experiences, are critical. This article summarizes the utility and
+    strengths of InfoNet and what is known about victim services in Illinois. Also highlighted are the system’s unique data collection capabilities and plans for future application to address victimization in Illinois.</p>
+
+<h2 id="victimization-data-in-illinois">Victimization Data in Illinois</h2>
+<p>Data sources most often referenced to better understand victimization are law enforcement data and victimization surveys. While law enforcement data will show total crime incidents reported and arrests made, data on incidents involving victimization are
+    largely under-represented. Research indicates most victims do not report their experiences to police and crimes reported do not always result in arrest.<sup class="footnote-ref"><a href="#fn9" id="fnref9">[9]</a></sup> Illinois’ law enforcement data
+    collection is further constrained by the limitations of Illinois’ Uniform Crime Reporting system (I-UCR), as the system collects only aggregate crime counts from local police and sheriff’s agencies. Detailed information on incidents, victims, and
+    alleged offender characteristics for most crime types is not collected, with exceptions for homicides and offenses occurring among intimate partners, family, or household members. Efforts are under way in Illinois to transition to a more detailed
+    crime reporting system known as the <a href="https://ucr.fbi.gov/nibrs-overview">National Incident Based Reporting System (NIBRS)</a>,<sup class="footnote-ref"><a href="#fn10" id="fnref10">[10]</a></sup> but a timeline and plan for full system implementation
+    is unknown.</p>
+<p>Victimization surveys attempt to reveal a more precise estimation of crime by collecting information from individuals about incidents they experienced, and whether or not they reported to police. The National Crime Victimization Survey (NCVS) is the nation’s
+    primary source, collecting data each year from a nationally representative sample of about 135,000 households comprising nearly 225,000 persons.</p>
+<p>NVCS data are collected on the frequency, characteristics, and consequences of crime victimization. The 2016 NCVS survey indicated 42 percent of all violent victimizations (e.g., robbery, assault, domestic violence) were reported to the police that year,
+    with sexual assault victims having the lowest reporting rate (23 percent).<sup class="footnote-ref"><a href="#fn11" id="fnref11">[11]</a></sup> Reasons for not reporting to police include the desire to deal with the matter in another way (25 percent),
+    belief that the police would not or could not help (21 percent), or fear of reprisal or getting the offender in trouble (19 percent).<sup class="footnote-ref"><a href="#fn12" id="fnref12">[12]</a></sup> Although the NCVS offers national estimates
+    of victimization prevalence, incident details, and victim and offender characteristics, most data cannot be used to generate state level estimates.</p>
+<p>To gain state level estimates, some states have embarked on their own victimization surveys.<sup class="footnote-ref"><a href="#fn13" id="fnref13">[13]</a></sup> ICJIA conducted two Illinois victim surveys years apart and with different data collection
+    methods. In 2003, a mail survey was administered to a random sample of Illinois residents about victimizations experienced in 2002. This survey produced statewide and regional estimates in Illinois, although low frequency of certain crime categories
+    and subpopulations limited its utility for more specific analyses. The second was completed in 2016 by Aeffect, Inc. on ICJIA’s behalf. The 2016 survey documented both recent and lifetime victimization experiences and produced state and regional estimates
+    of crime victimization. However, its Internet-only data collection method limited generalizability and yielded low frequency counts for some crime types and victim subpopulations.</p>
+<p>InfoNet offers a slightly different perspective on victimization and victim needs than law enforcement data and victimization surveys. It is a web-based application containing standardized, non-personally identifying data about victims who receive services
+    from state-funded domestic and sexual violence centers in Illinois, whether or not they report to police. Participating service providers enter data on each victim (client) who receives services, including individual victim characteristics, needs
+    of those individuals after victimization, provider services, and the individuals’ interactions with healthcare and legal systems, creating a history of services and events for each victim.<sup class="footnote-ref"><a href="#fn14" id="fnref14">[14]</a></sup>    As the State’s only detailed source of information about victimization, InfoNet’s management and oversight are provided through state and non-profit partnerships between ICJIA, Illinois Coalition Against Domestic Violence (ICADV), Illinois Coalition
+    Against Sexual Assault (ICASA), Illinois Department of Human Services (IDHS), and Child Advocacy Centers of Illinois (CACI).</p>
+<p>The system also produces standardized funding and program reports to demonstrate the impact of different funding streams and inform strategic planning. Although not all crime victims seek and receive services, InfoNet provides valuable insight about the
+    impact of victimization and the resulting needs that vary across individuals, crime types, and regions of the state. InfoNet data informs funding priorities, programming, policies, and even legislation for state and local stakeholders. Illinois is
+    just one of a few states with a centralized, statewide data repository for victim services.</p>
+
+<h2 id="infonet-data-collection">InfoNet Data Collection</h2>
+<p>Victim service providers use InfoNet to gather individual characteristics of their clients, needs of those individuals after victimization, each service received from the provider, and client interactions with healthcare and legal systems. Data
+    collected are specific to services received by victims of two crime types: sexual violence and domestic violence.</p>
+<p><strong>Sexual Violence.</strong> InfoNet data show in 2017, Illinois rape crisis centers served 9,866 victims of sexual assault and just more than 1,000 significant others of victims. Most clients identified as female (89 percent) and were between the
+    ages of 12 and 29 (52 percent). Over the past few years, men have consistently comprised about 10 percent of clients served annually.</p>
+<p>The data show an increasing number of Hispanic/Latino victims receiving sexual violence services, increasing 10 percent from 2016 to 2017 and 17 percent since 2013. In fact, Hispanic/Latino victims comprised more than one quarter (26 percent) of those
+    served in 2017.<sup class="footnote-ref"><a href="#fn15" id="fnref15">[15]</a></sup> Black victims of sexual assault comprised 20 percent of those served in 2017. Both Hispanic/Latino and Black victims of sexual assault were overrepresented among
+    victims who received help compared to their makeup in the general population, at 17 and 15 percent, respectively.<sup class="footnote-ref"><a href="#fn16" id="fnref16">[16]</a></sup></p>
+<p>A recent national study indicated those who identify as lesbian, gay, or bisexual reported higher rates of sexual and intimate partner violence than those who identify as heterosexual.<sup class="footnote-ref"><a href="#fn17" id="fnref17">[17]</a></sup>    To better capture the extent to which sexual minorities are receiving services in Illinois, <em>Sexual Orientation</em> was added as a new InfoNet data field in 2015. A picture is already emerging of a marginalized group. In 2017, rape crisis centers
+    documented sexual orientation data from 83 percent of victims age 18 or older (n=5,739). Nearly 14 percent of these clients identified with non-heterosexual orientations such as gay, lesbian, bisexual, and queer.</p>
+<p>Beyond victim characteristics, InfoNet offers insight on the nature of victimization experiences among those who receive services. Most perpetrators of sexual violence were someone the victim knew, with family (25 percent), acquaintances (36 percent),
+    and former or current intimate partners (12 percent) accounting for the largest percentage of known perpetrators (<em>Figure 1</em>).<sup class="footnote-ref"><a href="#fn18" id="fnref18">[18]</a></sup> InfoNet data for the past five years show similar
+    patterns. The National Intimate Partner and Sexual Violence Survey also reflects those trends with recent estimates suggesting 81 percent of perpetrators were known to the victim.<sup class="footnote-ref"><a href="#fn19" id="fnref19">[19]</a></sup></p>
+<br>
+
+<div class="highchart">
+<h4 align="center">Figure 1: <br>Offender Relationships to Victims who Received Services from Illinois Rape Crisis Centers, CY17</h4><sup class="footnote-ref"><a href="#fn20" id="fnref20">[20]</a></sup>
+<!-- <p><a href="https://jsfiddle.net/8dL5k1oj/3/">https://jsfiddle.net/8dL5k1oj/3/</a></p> -->
+	<div id="hc-fig1">
+	</div>
+    	</div>
+<br>
+
+<p>InfoNet also records how much time occurs between a victimization incident (or series of incidents) and when a victim receives services from a rape crisis center. This information may be particularly interesting given the impacts of violence; the resulting
+    needs individuals have can a rise or shift at different time periods.<sup class="footnote-ref"><a href="#fn21" id="fnref21">[21]</a></sup></p>
+<p>A common mental health impact of violence is post-traumatic stress disorder (PTSD) and researchers have estimated 45 percent of women and 65 percent of men who have been raped meet criteria for PTSD.<sup class="footnote-ref"><a href="#fn22" id="fnref22">[22]</a></sup>    PTSD may arise immediately following victimization or develop years after a traumatic experience. In Illinois, rape crisis centers collected victimization incident date(s) from more than half of victims who received services for the first time in
+    2017 (56 percent). Of these nearly 3,200 individuals, 62 percent received services within one week of experiencing sexual violence, and many received services the same day. Eight percent of new clients served in 2017 received services between one
+    and five years post-victimization, 3 percent received services between five and 10 years later, and 6 percent received services more than a full decade after the victimization.<sup class="footnote-ref"><a href="#fn23" id="fnref23">[23]</a></sup></p>
+<p><strong>Domestic Violence.</strong> InfoNet data reveals in 2017, just more than 50,400 Illinois domestic violence victims and their children received services to address their victimization. Of the adult clients served (42,531), the majority identified
+    as female (92 percent) and were between the ages of 20 and 39 (52 percent). Additional client demographics captured in InfoNet showed overrepresentation among both Hispanic (22 percent) and black victims of domestic violence (28 percent) compared
+    to their makeup in the general population, at 17 and 15 percent, respectively.</p>
+<p>One notable trend is the rising number of victims age 60 years and older receiving services. The dynamics of elder abuse make the needs of older victims unique, as they may have endured abuse over many years, even decades, and often have different health
+    care, financial, and legal needs compared to younger victims.<sup class="footnote-ref"><a href="#fn24" id="fnref24">[24]</a></sup> In 2017, domestic violence programs served nearly 2,100 victims aged 60 years and older, comprising 4 percent of all
+    clients who received services that year. This number has gradually increased over the past several years, growing by 30 percent since 2013.</p>
+<p>Illinois’ Domestic Violence Act (IDVA)<sup class="footnote-ref"><a href="#fn25" id="fnref25">[25]</a></sup> broadly defines domestic violence to include abusive relationships between intimate partners, other family and household relationship, and even
+    personal caretakers. Several other states<sup class="footnote-ref"><a href="#fn26" id="fnref26">[26]</a></sup> and the U.S. Office on Violence Against Women<sup class="footnote-ref"><a href="#fn27" id="fnref27">[27]</a></sup> define domestic violence
+    as occurring only among intimate partners. But according to InfoNet data, while most victims served by Illinois domestic violence programs are intimate partner violence victims, those who experienced domestic violence by others close to them also
+    seek services. In 2017, these clients included victims who experienced abuse by their own children or grandchildren (3 percent), their parents or a parent’s intimate partner (3 percent), or other family and household members (7 percent).</p>
+<p>While it is common for abusers to use multiple forms of violence – physical, sexual, and emotional – to gain power and control,<sup class="footnote-ref"><a href="#fn28" id="fnref28">[28]</a></sup> InfoNet collects more detailed information on physical
+    violence experienced. Service providers employ the Conflict Tactics Scales (CTS1) to assess their clients’ risk for physical violence.<sup class="footnote-ref"><a href="#fn29" id="fnref29">[29]</a></sup> Research shows pregnant victims of intimate
+    partner violence often experience an increased frequency and severity of abuse by their male perpetrators and are at increased risk of homicide.<sup class="footnote-ref"><a href="#fn30" id="fnref30">[30]</a></sup> InfoNet data collected on pregnant
+    victims in 2017 showed they were significantly more likely to experience certain severe forms of physical violence, including being choked or beat up, than victims who were not pregnant (<em>Figure 2</em>).</p>
+<br>
+
+<div class="highchart">
+<h4 align="center">Figure 2. <br>Comparison of Forms of Violence Experienced by Pregnant<br>Clients and Clients Who Were Not Pregnant, CY17.</h4>
+<!-- <p><a href="https://jsfiddle.net/gdpqbsjk/15/">https://jsfiddle.net/gdpqbsjk/15/</a></p> -->
+	<div id="hc-fig2">
+	</div>
+    	</div>
+<br>
+
+<p>InfoNet also tracks victims’ needs at initial point of contact with a domestic violence program. Needs most commonly reported in 2017 included emotional support (68 percent), legal advocacy (64 percent), and crisis intervention (35 percent). Clients also
+    reported the need for legal services from a licensed attorney (18 percent), emergency shelter (15 percent), and securing longer-term housing (10 percent). While these needs have not changed much over the past five years, they often vary among subpopulations
+    (e.g. by age group, parental status, employment status). The data show that clients with children have higher needs at intake for multiple types of services, including childcare, crisis intervention, shelter, financial assistance, medical care, legal
+    services, and transportation.<sup class="footnote-ref"><a href="#fn31" id="fnref31">[31]</a></sup></p>
+
+<h2 id="utility-of-infonet-data">Utility of InfoNet Data</h2>
+<p>While InfoNet is used as a case management system to coordinate and address needs of individuals seeking victim services across the state, another important function of InfoNet data collection is to inform local and state strategic planning efforts, programming,
+    policy, and research.</p>
+<p><strong>Strategic Planning.</strong> ICJIA promotes and facilitates the use of InfoNet data for research and strategic planning. In FY17, InfoNet data was compiled and analyzed to provide a more holistic view of victimization in Illinois, including the
+    characteristics of victims who accessed services. This information, along with further research conducted by ICJIA staff, was considered when developing funding priorities for federal Victims of Crime Act (VOCA) and Violence Against Women Act (VAWA)
+    funds administered by ICJIA. The research process resulted in twelve priorities approved by ICJIA’s Ad Hoc Victim Services Committee, and subsequently the Authority’s Board, to inform VOCA and VAWA grant-making over the next three years. <a href="http://www.icjia.state.il.us/publications/ad-hoc-victim-services-committee-research-report">ICJIA’s Ad Hoc Victim Services Committee Research report is available here</a>.</p>
+<p>ICJIA encourages external agencies and stakeholders to take advantage of InfoNet data to better understand victim service delivery in specific areas, such as geographic location, or victim characteristics, such as employment status or gender identity.
+    In FY17, ICJIA responded to nearly 100 external requests for data from the Illinois Attorney General’s Office, Chicago Metropolitan Battered Women’s Network (CMBWN), Chicago Department of Public Health, Chicago Justice Project, Heartland Alliance,
+    IDHS, ICADV, ICASA, and others.</p>
+<p><strong>Programming.</strong> At the local level, agencies use InfoNet data to monitor program performance and strengthen services. Providers have compared their client data to general population or census data of their service area. Findings are used
+    to prompt more targeted outreach and tailor services to better meet needs of underrepresented groups of clients. Local agencies use InfoNet’s client referral source data to provide training on victimization and outreach services to referral networks
+    (e.g., police departments, healthcare organizations, schools). Further, they can assess the impact of these efforts by tracking clients who were referred from those organizations where efforts were targeted. In addition, agencies use InfoNet to monitor
+    and manage staff caseloads, improving staff efficiencies and organizational management.</p>
+<p><strong>Policy.</strong> InfoNet data helps inform victim service policies and challenge flawed legislation. The unintended consequence of a 2015 crime-free housing ordinance was that it jeopardized the housing stability of domestic violence victims.
+    <sup
+        class="footnote-ref"><a href="#fn32" id="fnref32">[32]</a></sup> The ordinance required landlords to evict tenants upon multiple instances of alleged criminal activity and/or calls for police service to the property. Thus, victims who called police too often seeking protection
+        from their abusers risked losing their homes.<sup class="footnote-ref"><a href="#fn33" id="fnref33">[33]</a></sup> A search of InfoNet data indicated most victims were living in rental properties just prior to receiving emergency shelter services,
+        demonstrating the scope of those negatively impacted by the ordinance. The data were used to support Senate Bill 1547, which stopped local governments from punishing tenants and landlords when police are called for domestic or sexual violence
+        and other emergency situations.<sup class="footnote-ref"><a href="#fn34" id="fnref34">[34]</a></sup></p>
+<p><strong>Research.</strong> InfoNet data also have been used to help assess the impact services are having on victims’ lives. Most recently, CMBWN worked with researchers from Loyola University Chicago on a project assessing longer term impacts of domestic
+    violence services, including how client needs may have changed over time. Researchers surveyed clients three months after receiving services from a domestic violence service provider. These survey responses were then linked with each respondent’s
+    corresponding InfoNet data, including their demographics, services received, and service needs collected at their initial contact with the provider. This study showed for most clients surveyed, immediate safety was no longer a primary concern, and
+    that many were seeking longer term counseling to help recover from the emotional impacts of domestic violence. The majority of respondents also reported they were satisfied with services they received. While this project aimed to assess the impact
+    of services overall, some service providers collected enough surveys to generate findings specific to their organization. <a href="http://batteredwomensnetwork.org/wp-content/uploads/2016/09/Final-DV-Outcome-Report-9-24-16-Final-revisions.pdf">The full report is available here</a>.</p>
+<p>In 2013, ICJIA supported a multisite evaluation conducted by University of Illinois at Springfield researchers on four Illinois multidisciplinary victim response teams. The teams were federally funded by ICJIA to better coordinate local services for victims
+    of sexual and domestic violence in their counties. To examine program impact, researchers analyzed InfoNet data to measure changes in numbers of clients served, referral sources, legal advocacy services received, and the likelihood a victim sought
+    or secured an order of protection. <a href="http://www.icjia.state.il.us/publications/multisite-evaluation-of-the-multidisciplinary-team-(mdt)-approach-to-violence-against-women-in-illinois">The evaluation can be found here</a>.</p>
+
+<h2 id="limitations-of-infonet">Limitations of InfoNet</h2>
+<p>While InfoNet has been used to improve victim services by lending its utility to effective programming, strategic planning, smart policy, and research support in Illinois, no data collection system is without limitations. InfoNet data can offer information
+    on services received by victims, but data cannot be captured on those who do not seek services or on those who seek and never receive services. While some victims may choose not to seek help, others may be unable to access services due to barriers,
+    such as lack of transportation, limited service capacity, (e.g. long waiting lists, lack of funding) or language barriers.</p>
+<p>With the law enforcement shift to crime reporting via National Incident-Based Reporting System (NIBRS), incident-based law enforcement data at local, state, and federal levels will be collected, giving researchers a better understanding of both victimization
+    and help-seeking. Comparing characteristics of help-seekers within sexual or domestic violence agencies to those who report their victimizations to police may yield insights that can inform public awareness, outreach, and engagement to strengthen
+    the response and support for victims of crime in Illinois.</p>
+
+<h2 id="infonets-growth">InfoNet’s Growth</h2>
+<p>In part with a $250,000 technology award from the U.S. Office for Victims of Crime, ICJIA recently completed a project to rebuild the InfoNet application on a new technology platform. This project substantially improved the system’s utility and cost efficiency.
+    InfoNet 2.0 launched in the April 2018 with features allowing faster data entry and navigation, more data validations to improve data quality, and a more robust reporting utility offering greater flexibility and options to extract data.</p>
+<p>Updating InfoNet 2.0’s new technology platform also presents a fresh opportunity to evolve the system to meet data collection and reporting needs by working with providers and funders to identify information most meaningful and informative, as well as
+    incorporating more outcome measures that can speak to how services can assist victims in achieving safety and well-being. It also offers the potential to expand InfoNet to track service seeking of victims of other crimes such as those impacted by
+    community violence, impaired driving, and other violent victimizations. The expansion will not only help improve service delivery at the local level, but also increase the State’s knowledge of needs and gaps across all victimization forms. Continued
+    investment and support of InfoNet is a worthy and crucial investment to understanding victimization in Illinois and the victim services field.</p>
+
+<br>
+                <div class="container-fluid style1" style="margin: 0; padding: 0;">
+                <div class="row" style="background-color:#D9D9D9">
+                <div class="col-xs-12 " style="style1">
+<br>This project was supported by Grants #2015-VA-GX-0049 and #2016-VA-GX-0027, awarded to the Illinois Criminal Justice Information Authority by the U.S. Department of Justice Office of Justice Programs’ Office for Victims of Crime. Points of view or opinions contained within this document are those of the authors and do not necessarily represent the official position or policies of the U.S. Department of Justice.<br>
+<hr>
+<strong>Suggested citation:</strong> Houston-Kolnik, J. & Hiselman, J. (2018). <em>What’s Next for InfoNet? How a Statewide Case Management System is Shaping Responses to Illinois Victims.</em> Chicago, IL: Illinois Criminal Justice Information Authority.<br>
+<br>
+  </div>
+</div>
+</div>
+<br>
+
+<hr class="footnotes-sep">
+<section class="footnotes">
+    <ol class="footnotes-list">
+        <li id="fn1" class="footnote-item">
+            <p>Morgan, R. E. &amp; Kena, G. (2017). <em>Criminal victimization, 2016</em> (NCJ Publication No. 250180). Washington D.C: U.S. Department of Justice, Office of Justice Programs, Bureau of Justice Statistics. Available at: <a href="http://bit.ly/2Ns0vk5">http://bit.ly/2Ns0vk5</a>.
+                <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn2" class="footnote-item">
+            <p>Finkelhor, D., Ormrod, R.K., &amp; Turner, H.A. (2007). Re-victimization patterns in a national longitudinal sample of children and youth. <em>Child Abuse &amp; Neglect, 31</em>(5), 479-502. Retrieved from <a href="http://bit.ly/2MGCwRW">http://bit.ly/2MGCwRW</a>;
+                Trickett, P.K., Noll, J.G., &amp; Putnam, F.W. (2011). The impact of sexual abuse on female development: lessons from a multigenerational, longitudinal research study. <em>Development and Psychopathology, 23</em>(2), 453-476. Hamby, S.,
+                Finkelhor, D., &amp; Turner, H. (2012). Teen dating violence: co-occurrence with other victimizations in the National Survey of Children’s Exposure to Violence (NatSCEV). <em>Psychology of Violence, 2</em>(2), 111-124. Retrieved from
+                <a
+                    href="http://bit.ly/2wqJqk2">http://bit.ly/2wqJqk2</a> <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn3" class="footnote-item">
+            <p>Felitti, V.J., Anda, R.F., Nordenberg, D., Williamson, D.F., Spitz, A.M., Edwards, V., &amp; Marks, J.S. (1998). Relationship of childhood abuse and household dysfunction to many of the leading causes of death in adults: The Adverse Child
+                Experiences (ACE) Study. <em>American Journal of Preventive Medicine, 14</em>(4), 245-258. <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn4" class="footnote-item">
+            <p>National Institute of Justice, U.S. Department of Justice. (2001). <em>Childhood Victimization and Delinquency, Adult Criminality, and Violent Criminal Behavior: A Replication and Extension, Final Report</em> (NCJ 192291). Retrieved from
+                <a
+                    href="http://bit.ly/2wrmqBl">http://bit.ly/2wrmqBl</a>; Office of Juvenile Justice and Delinquency Prevention, U.S. Department of Justice. (2013). <em>Children’s Exposure to Violence and the Intersection Between Delinquency and Victimization</em>                    (NCJ 240555). Retrieved from <a href="http://bit.ly/2Pjo0fM">http://bit.ly/2Pjo0fM</a> <a href="#fnref4" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn5" class="footnote-item">
+            <p>Hanson, R.F., Sawyer, G.K., Begle, A.M., &amp; Hubel, G.S. (2010). The impact of crime victimization on quality of life. <em>Journal of Traumatic Stress, 23</em>(2), 189-197. Retrieved from <a href="http://bit.ly/2BYpSbV">http://bit.ly/2BYpSbV</a>                <a href="#fnref5" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn6" class="footnote-item">
+            <p>Data source: Illinois Uniform Crime Reporting (UCR) System, Illinois State Police. Retrieved from: <a href="http://bit.ly/2wxPBD1">http://bit.ly/2wxPBD1</a>. <a href="#fnref6" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn7" class="footnote-item">
+            <p>McCollister, K.E., French, M.T., &amp; Fang, H. (2010). The cost of crime to society: New crime-specific estimates for policy and program evaluation. <em>Drug and Alcohol Dependence, 108</em>(1-2), 98-109; Max, W., Rice, D.P., Finkelstein,
+                E., Bardwell, R.A., &amp; Leadbetter, S. (2004). The economic toll of intimate partner violence against women in the United States. <em>Violence and Victims, 19</em>(3), 259-272. <a href="#fnref7" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn8" class="footnote-item">
+            <p>2008 cost estimates were adjusted to reflect 2015 and 2016 dollars using the U.S. Bureau of Labor Statistics’ Consumer Price Index Inflation Calculator: <a href="http://bit.ly/2PLW8BI">http://bit.ly/2PLW8BI</a>.
+                <a href="#fnref8" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn9" class="footnote-item">
+            <p>Morgan, R. E. &amp; Kena, G. (2017). <em>Criminal victimization, 2016</em> (NCJ Publication No. 250180). Washington D.C: U.S. Department of Justice, Office of Justice Programs, Bureau of Justice Statistics. Available at: <a href="http://bit.ly/2Ns0vk5">http://bit.ly/2Ns0vk5</a>                <a href="#fnref9" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn10" class="footnote-item">
+            <p>U.S. Department of Justice, Federal Bureau of Investigation, 2017. NIBRS Overview. Retrieved from: <a href="http://bit.ly/2MCqvN2">http://bit.ly/2MCqvN2</a>. <a href="#fnref10" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn11" class="footnote-item">
+            <p>Morgan, R. E. &amp; Kena, G. (2017). <em>Criminal victimization, 2016</em> (NCJ Publication No. 250180). Washington D.C: U.S. Department of Justice, Office of Justice Programs, Bureau of Justice Statistics. Available at: <a href="http://bit.ly/2Ns0vk5">http://bit.ly/2Ns0vk5</a>.
+                <a href="#fnref11" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn12" class="footnote-item">
+            <p>Langton, L., Berzofsky, M., Krebs, C. &amp; Smiley-McDonald, H. (2012). <em>Victimizations not reported to the police, 2006-2010</em> (NCJ Pub No. 238536). Washington, DC: Department of Justice, Bureau of Justice Statistics. <a href="#fnref12"
+                    class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn13" class="footnote-item">
+            <p>Orchowsky, S. (2014). <em>Characteristics of SAC Victimization Surveys.</em> Washington, DC: Justice Research &amp; Statistics Association. Retrieved from: <a href="http://bit.ly/2PTKWmX">http://bit.ly/2PTKWmX</a>.
+                <a href="#fnref13" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn14" class="footnote-item">
+            <p>While InfoNet yields unduplicated counts of individuals who received services from one service provider agency some persons may be duplicated when data are aggregated to include multiple service providers. This is because a small portion of
+                victims may receive services from multiple provider agencies, and no one agency will share personally identifying information about clients with anyone outside their organization. <a href="#fnref14" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn15" class="footnote-item">
+            <p>Ethnicity data was collected for 89 percent of all victims who received services from rape crisis centers in 2017. <a href="#fnref15" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn16" class="footnote-item">
+            <p>United States Census Bureau (2017). <em>Quickfacts: Illinois</em>. Retrieved from <a href="http://bit.ly/2opAYNu">http://bit.ly/2opAYNu</a>. <a href="#fnref16" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn17" class="footnote-item">
+            <p>Walters, M.L., Chen, J., &amp; Breiding, M.J. (2013). <em>The National Intimate Partner and Sexual Violence Survey (NISVS): 2010 Findings on Victimization by Sexual Orientation.</em> Atlanta, GA: National Center for Injury Prevention and Control,
+                Centers for Disease Control and Prevention. <a href="#fnref17" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn18" class="footnote-item">
+            <p>The relationship with the offender was known for 59 percent of sexual violence victims served in 2017. <a href="#fnref18" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn19" class="footnote-item">
+            <p>Smith, S.G., Chen, J., Basile, K.C., Gilbert, L.K., Merrick, M.T., Patel, N., Walling, M., &amp; Jain, A. (2017). <em>The National Intimate Partner and Sexual Violence Survey (NISVS): 2010-2012 State Report</em>. Atlanta, GA: National Center
+                for Injury Prevention and Control, Centers for Disease Control and Prevention. Retrieved from: <a href="http://bit.ly/2N4Afz7">http://bit.ly/2N4Afz7</a>.
+                <a href="#fnref19" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn20" class="footnote-item">
+            <p>The 87% of non-stranger offender relationships can be further separated: Friend/acquaintance neighbor/coworker, 36.2%; Family (excl. current/former spouses) 24.8%; Current/former spouse/intimate partner, 12.2%; Spouse/partner of parent, 7.5%;
+                Position of authority/trust, 3.1%; Unrelated &amp; shares household, 1.6%; Other, 1.7%. <a href="#fnref20" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn21" class="footnote-item">
+            <p>Houston-Kolnik, J., Vasquez, A., Alderden, M., &amp; Hiselman, J. (2017). <em>Ad hoc victim services committee research report</em>. Chicago, IL: Illinois Criminal Justice Information Authority. Retrieved from <a href="http://bit.ly/2PmnZHL">http://bit.ly/2PmnZHL</a>.
+                <a href="#fnref21" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn22" class="footnote-item">
+            <p>Kessler, R.C., Sonnega, A., Bromet, E., Hughes, M., &amp; Nelson, C.B. (1995). Posttraumatic stress disorder in the National Comorbidity Survey. <em>Archives of General Psychiatry, 52</em>, 1048-1060. <a href="#fnref22" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn23" class="footnote-item">
+            <p>Number of victims receiving services several years after an incident are likely under-represented in these data, because InfoNet had more missing and unknown victimization dates for adult clients who received services due to experiencing sexual
+                violence as children. <a href="#fnref23" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn24" class="footnote-item">
+            <p>Biermann, T., Dippel, O., Bergner, M., Keller, J., Coffey, C., Sperling, W., Bleich, S. &amp; Kornhuber, J., &amp; Reulbach, U. (2011). Assaults in the elderly—A population‐based study with victim and perpetrator characteristics. <em>Journal of Forensic Sciences, 56</em>(3),
+                669-673. doi:10.1111/j.1556-4029.2011.01712.x; Dong, X., Chang, E. S., Wong, E., &amp; A. Simon, M. (2014). Perceived barriers and facilitators to implement elder abuse intervention for victims and perpetrators: views from US Chinese older
+                adults. <em>The Journal of Adult Protection, 16</em>(5), 307-321. <a href="#fnref24" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn25" class="footnote-item">
+            <p>Illinois Domestic Violence Act of 1986 (750 ILCS 60/), Retrieved from: <a href="http://bit.ly/2wtFyxM">http://bit.ly/2wtFyxM</a>.
+                <a
+                    href="#fnref25" class="footnote-backref">↩︎</a>
+            </p>
+        </li>
+        <li id="fn26" class="footnote-item">
+            <p>National Conference of State Legislatures, 2015, Domestic Violence/Domestic abuse definitions and relationships. Retrieved from: <a href="http://bit.ly/2PmozFs">http://bit.ly/2PmozFs</a>.
+                <a href="#fnref26" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn27" class="footnote-item">
+            <p>U.S. Department of Justice, Office on Violence Against Women. What is Domestic Violence? Retrieved from: <a href="http://bit.ly/2wuQfko">http://bit.ly/2wuQfko</a>. <a href="#fnref27" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn28" class="footnote-item">
+            <p>Follingstad, D. R., Rutledge, L. L., Berg, B. J., Hause, E. S., &amp; Polek, D. S. (1990). The role of emotional abuse in physically abusive relationships. <em>Journal of Family Violence, 5</em>, 107-120. <a href="#fnref28" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn29" class="footnote-item">
+            <p>Straus, M.A. (1979). Measuring intrafamily conflict and violence: The Conflict Tactics Scales. <em>Journal of Marriage and the Family, 41</em>, 75-88. <a href="#fnref29" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn30" class="footnote-item">
+            <p>Burch, R.L. &amp; Gallup, G.G. (2004). Pregnancy as a Stimulus for Domestic Violence. <em>Journal of Family Violence, 19</em>(4), 243-247.; Campbell, J. C., Webster, D., Koziol-McLain, J., Block, C., Campbell, D., Curry, M. A., Gary, F., Glass,
+                N., McFarlane, J., Sachs, C. &amp; Sharps, P. (2003). Risk factors for femicide in abusive relationships: Results from a multisite case control study. <em>American Journal of Public Health, 93</em>(7), 1089–1097. <a href="#fnref30" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn31" class="footnote-item">
+            <p>Chi-square analyses available upon request. <a href="#fnref31" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn32" class="footnote-item">
+            <p>Kadner, P. (2015, February 26th). Victims of crime hurt by crime-free laws. Retrieved from <a href="https://trib.in/2wt6lLz">https://trib.in/2wt6lLz</a>                <a href="#fnref32" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn33" class="footnote-item">
+            <p>Chicago Tribune (2015, September 21st). New law prevents domestic abuse victims from being evicted under ‘nuisance’ laws. Retrieved from <a href="https://trib.in/2Pmpl59">https://trib.in/2Pmpl59</a>                <a href="#fnref33" class="footnote-backref">↩︎</a></p>
+        </li>
+        <li id="fn34" class="footnote-item">
+            <p>Retrieved from: <a href="http://bit.ly/2LGcuc3">http://bit.ly/2LGcuc3</a>.
+                <a href="#fnref34" class="footnote-backref">↩︎</a></p>
+        </li>
+    </ol>
+</section>
+
+
+
+
+<!-- Article Contents links under the side section
+<h5 style="color: rgb(68, 68, 68); text-transform: uppercase; padding-bottom: 8px; font-weight: 900; margin-bottom: 10px; margin-left: 10px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;">Article Contents</h5>
+<ul class="nav">
+	<li><a class="scrollclass" data-target="#content-wrap">Introduction</a></li>
+	<li><a class="scrollclass" data-target="#victimization-data-in-illinois">Victimization Data in Illinois</a></li>
+	<li><a class="scrollclass" data-target="#infonet-data-collection">InfoNet Data Collection</a></li>    
+	<li><a class="scrollclass" data-target="#utility-of-infonet-data">Utility of InfoNet Data</a></li>
+    <li><a class="scrollclass" data-target="#limitations-of-infonet">Limitations of InfoNet</a></li>
+    <li><a class="scrollclass" data-target="#infonets-growth">InfoNet’s Growth</a></li>
+</ul> -->
