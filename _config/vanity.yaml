@@ -10,106 +10,105 @@
 
 #/promo: /contests/win-a-free-ipad
 
-
 /grants:
-    url: /grants/overview
-    type: 301
+  url: /grants/overview
+  type: 301
 
 /statute:
-    url: /statutesearch
-    type: 301
+  url: /statutesearch
+  type: 301
 
 /research:
-    url: /research/overview
-    type: 301
+  url: /research/overview
+  type: 301
 
 /public/pdf:
-    url: /research/publications
-    type: 301
+  url: /research/publications
+  type: 301
 
 /about:
-    url: /about/overview
-    type: 301
+  url: /about/overview
+  type: 301
 
 /systems:
-    url: /systems/overview
-    type: 301
+  url: /systems/overview
+  type: 301
 
 /reduceviolentcrime2015:
-    url: /sites/reduce-violent-crime-2015
-    type: 301
+  url: /sites/reduce-violent-crime-2015
+  type: 301
 
 /reduceviolentcrime2015/pdf/Reduce_Gun_Violence_2015_agenda.pdf:
-    url: /assets/sites/Reduce_Gun_Violence_2015_agenda.pdf
-    type: 301
+  url: /assets/sites/Reduce_Gun_Violence_2015_agenda.pdf
+  type: 301
 
 /mv:
-    url: http://cyberdriveillinois.com/
-    type: 301
+  url: http://cyberdriveillinois.com/
+  type: 301
 
 /mvtpc:
-    url: http://cyberdriveillinois.com/
-    type: 301
+  url: http://cyberdriveillinois.com/
+  type: 301
 
 /infonet:
-    url: /systems/infonet
-    type: 301
+  url: /systems/infonet
+  type: 301
 
 /infonets:
-    url: /systems/infonet
-    type: 301
+  url: /systems/infonet
+  type: 301
 
 /authoritymembershandbook:
-    url: /about/authority-members-handbook
-    type: 301
+  url: /about/authority-members-handbook
+  type: 301
 
 /rss/grant-ops.xml:
-    url: /feed
-    type: 301
+  url: /feed
+  type: 301
 
 /rss/grant-ops.cfm:
-    url: /feed
-    type: 301
+  url: /feed
+  type: 301
 
 /research-and-analysis:
-    url: /research/overview
-    type: 301
+  url: /research/overview
+  type: 301
 
 /federal-and-state-grants:
-    url: /grants/overview
-    type: 301
+  url: /grants/overview
+  type: 301
 
 /human-resources:
-    url: /biographies#tab_authority-staff
-    type: 301
+  url: /biographies#tab_authority-staff
+  type: 301
 
 /office-of-administrative-services:
-    url: /biographies#tab_authority-staff
-    type: 301
+  url: /biographies#tab_authority-staff
+  type: 301
 
 /office-of-executive-director:
-    url: /biographies#tab_authority-staff
-    type: 301
+  url: /biographies#tab_authority-staff
+  type: 301
 
 /information-systems:
-    url: /systems/overview
-    type: 301
+  url: /systems/overview
+  type: 301
 
 /office-of-general-counsel:
-    url: /biographies#tab_authority-staff
-    type: 301
+  url: /biographies#tab_authority-staff
+  type: 301
 
 /trauma-and-ptsd:
   url: /sites/trauma-and-ptsd
   type: 301
 
 /contact:
-    url: /about/contact
-    type: 301
+  url: /about/contact
+  type: 301
 
 /vocanofo:
-    url: /sites/vocanofo
-    type: 301
+  url: /sites/vocanofo
+  type: 301
 
 /opioidnofo:
   url: /sites/opioidnofo
@@ -176,5 +175,9 @@
   type: 301
 
 /tvpp:
-    url: https://www.illinoistvpp.org/
-    type: 301
+  url: https://www.illinoistvpp.org/
+  type: 301
+
+/lgbtq:
+  url: /research/lgbtq
+  type: 301
