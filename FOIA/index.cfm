@@ -392,7 +392,7 @@
 <p>FOIA requests should be sent via Fax, U.S. Mail, special carrier, or email to:</p>
 <blockquote>
 <p>FOIA Officer<br/>
-Abraham Zisook<br/>
+
 Illinois Criminal Justice Information Authority<br/>
 300 W. Adams St., Suite 200<br/>
 Chicago, IL 60606<br/>
@@ -402,7 +402,7 @@ email: <a href="mailto:CJA.FOIA@illinois.gov">CJA.FOIA@illinois.gov</a></p>
 
 <p>Please submit your name, address, state, city, zip code, telephone number, and a detailed list of the documents that you are requesting.
 </p>
-<p>Any inquiries should be directed to Abraham Zisook at (312) 793-8550.</p>
+<p>Any inquiries should be directed to FOIA Officer at (312) 793-8550.</p>
 
 
 
@@ -412,7 +412,7 @@ email: <a href="mailto:CJA.FOIA@illinois.gov">CJA.FOIA@illinois.gov</a></p>
 
 
 
-				</div>
+			  </div>
 			</div>
 		</div>
 
