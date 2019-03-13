@@ -7,7 +7,7 @@ roles:
 email: email@example.com
 password: ""
 _uid: QHvFq6558aa70a9284e4JkWLqtn
-password_hash: $2a$08$3i8PoJYp1/NKes9OI8E3i.YCK4rkTtGhsf/k2t.Y1QsdfDKbXLv1y
+password_hash: $2a$08$q5s/O05qPFvn2QmLF7YI/eO7j06dLcf0wghMVpIIUq/E9/KqMt6Dq
 ---
 Have no fears, your password, while plain text to start, will be encrypted upon first login. If ever you need to manually reset a password you can wipe out the password fields and start anew.
 
