@@ -158,6 +158,14 @@
   url: https://ariallsites2017.icjia.cloud
   type: 301
 
+/ariallsites2018:
+  url: https://ariallsites2018.icjia.cloud
+  type: 301
+
+/ariallsites2019:
+  url: https://ariallsites2019.icjia.cloud
+  type: 301
+
 /cjdispatch:
   url: https://visitor.r20.constantcontact.com/manage/optin?v=001MqUcqqvjwLCJXlLMSWbTe3zHHmEQgFeBuHvBcJWTbwgrxFbDSGx4HSUPpI6DJWMUPgbljtLxffqIcGFTgCnr-auak88ybvRxpoJlTMGPtZs%3D
   type: 301
@@ -175,9 +183,25 @@
   type: 301
 
 /tvpp:
-  url: https://www.illinoistvpp.org/
+  url: https://tvpp.icjia.cloud/
   type: 301
 
 /lgbtq:
   url: /research/lgbtq
+  type: 301
+
+/cjcc:
+  url: https://ilcjcc.org/
+  type: 301
+
+/sudcontinuum:
+  url: https://sudcontinuum.icjia.cloud/
+  type: 301
+
+/mhcontinuum:
+  url: https://sudcontinuum.icjia.cloud/
+  type: 301
+
+/ifvccdev:
+  url: https://ifvcc.icjia.cloud/
   type: 301
