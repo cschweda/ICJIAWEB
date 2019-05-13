@@ -205,3 +205,15 @@
 /ifvccdev:
   url: https://ifvcc.icjia.cloud/
   type: 301
+
+/ilheals:
+  url: https://ilheals.com/
+  type: 301
+
+/markdown:
+  url: https://markdown.icjia.cloud/
+  type: 301
+
+/calendar:
+  url: https://calendar.icjia.cloud/
+  type: 301
