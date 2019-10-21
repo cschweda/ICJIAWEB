@@ -82,22 +82,12 @@ breadcrumbs: true
 
 <!-- TODO: Add lightbox for author photo -->
 
-
-{{ entries:listing folder="articles" conditions="authors:{title}"}}
-  {{ if no_results }}
-
-  {{ else }}
-
-	{{ if first}}
-	<hr/>
-	<h4 style="text-transform: uppercase; margin-bottom: 15px;">Articles</h4>
-	{{endif}}
-    {{ theme:partial src="article-snippet" use_context="true" }}
-  {{ endif }}
-{{ /entries:listing }}
+<!-- <div class="text-center" style="margin-top: 30px">
+Find {{title}} on the Research Hub&nbsp;&raquo;
+</div> -->
 
 
-</p>
+
 
 </div>
 </div>
