@@ -11,7 +11,7 @@
   "dependencies": {
     "animate.css": "^3.5.2",
     "grunt-contrib-copy": "^1.0.0",
-    "handlebars": "^4.0.5",
+    "handlebars": "^4.5.3",
     "imagemin-mozjpeg": "^6.0.0",
     "jquery": "1.12.4",
     "materialize-css": "^0.97.7",
